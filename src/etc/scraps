@@ -1,0 +1,65 @@
+
+/*
+
+    enum slotOffsets {
+        stackOffset(4),
+        srcoffset(4),;
+
+        slotOffsets(final int size) {
+
+            this.size = size;
+            init();
+        }
+
+        private void init() {
+            offset = recordLen;
+            recordLen += this.size;
+        }
+
+        private final int size;
+        static int recordLen = 0;
+        private int offset;
+    }
+
+    enum
+            vol_header {
+        */
+/**
+         * uri
+         * 0-terminated strings up to 255 len
+         */
+/*
+        uri(256),
+        tableOffsets(4 * slotOffsets.values().length),
+
+        tabledata(0),;
+
+        vol_header(final int size) {
+
+            this.size = size;
+            init();
+        }
+
+        private void init() {
+            offset = recordLen;
+            recordLen += this.size;
+        }
+
+        private final int size;
+        static int recordLen = 0;
+        private int offset;
+    }
+
+    enum indexLayout {
+
+
+        ;
+
+        private final int size;
+
+
+        indexLayout(final int size) {
+
+            this.size = size;
+        }}
+*/

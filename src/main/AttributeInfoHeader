@@ -1,0 +1,2749 @@
+import inc.glamdring.util.*;
+import java.lang.reflect.*;
+import java.nio.*;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+import org.aspectj.lang.annotation.*;
+import static inc.glamdring.util.stdlib.*;
+import static javax.swing.JOptionPane.*;
+ class JppOut {
+
+
+ enum attribute_info   {
+
+
+
+    attribute_name_index(2),
+
+
+
+    attribute_length(4) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+                int len = src.getInt();
+                int data = src.position();
+            src.position(data + len);
+        }
+
+    };
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (attribute_info m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+
+        int size;
+
+
+    attribute_info(    int size) {
+        this.size = size;
+    }
+
+}
+
+
+ enum ClassFileSlot   {
+
+
+
+    magic(4),
+
+
+
+
+    minor_version(2),
+
+
+
+    major_version(2),
+
+
+
+
+
+
+
+    constant_pool(2) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+            super.subIndex(src,register, stack);
+
+                int count = (short) (src.getShort() & 0xffff);
+            stack.put(count);
+
+            System.out.println("found " + count + " constpool");
+
+            for (int i = 1; i < count; i++) {
+                ConstantPoolRef .index(src, register, stack);
+            }
+
+        }
+
+    },
+
+
+
+
+    access_flags(2) {
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            field_access_flag.index(src, register, stack);
+        }
+    },
+
+
+
+
+    this_class(2),
+
+
+
+
+    super_class(2),
+
+
+
+
+    interfaces(2) {
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+                int count = (short) (src.getShort() & 0xffff);
+            stack.put(count);
+            for (int i = 0; i < count; i++) {
+                    int offset = src.getShort() & 0xffff;
+                    int cons = register[constant_pool.ordinal()];
+                    int iface = stack.get(cons + offset);
+                stack.put(iface);
+            }
+        }
+    },
+
+
+
+
+
+    fields(2) {
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+                int count = (short) (src.getShort() & 0xffff);
+            stack.put(count);
+            for (int i = 0; i < count; i++) {
+                field_info.index(src, register, stack);
+            }
+        }},
+
+
+
+
+    methods(2) {
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+                int count = (short) (src.getShort() & 0xffff);
+            stack.put(count);
+            for (int i = 0; i < count; i++) {
+                method_info.index(src, register, stack);
+            }
+        }
+    },
+
+
+
+
+    attributes(2) {
+        void next(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int count = (int) src.getShort() & 0xffff;
+            stack.put(count);
+            for (int i = 0; i < count; i++) {
+                attribute_info.index(src, register, stack);
+            }
+        }
+
+
+    };
+
+
+    static void indexClassFile(ByteBuffer src, int[] register, IntBuffer stack) {
+
+        for (ClassFileSlot slot : values()) {
+
+            slot.index(src, register, stack);
+        }
+    }
+
+
+
+
+
+
+        static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+        for (ClassFileSlot classFileSlot : ClassFileSlot.values()) {
+
+
+            int stackPointer = classFileSlot.seek + classFileSlot.ordinal();
+            stack.put(stackPointer, src.position());
+            System.err.println(classFileSlot.getClass().getCanonicalName() + "." + classFileSlot.name() + "->" + classFileSlot.getClass().getCanonicalName() + "." + classFileSlot.name() + ": srcPos:stacKpos " + src.position() + ":" + stackPointer);
+
+
+            SlotTableIndexes indexes = null;
+            try {
+                indexes = SlotTableIndexes.valueOf(classFileSlot.name());
+            } catch (IllegalArgumentException e) {
+
+            }
+
+
+            if (indexes != null) {
+                int position = ( indexes.seek) / 4;
+
+                System.err.println(classFileSlot.getClass().getCanonicalName() + "." + classFileSlot.name() + "->" + indexes.getClass().getCanonicalName() + "." + classFileSlot.name() + ": srcPos:stacKpos " + src.position() + ":" + position);
+
+                stack.position(position);
+
+
+                classFileSlot.subIndex(src, register, stack);
+            }
+
+
+            register[classFileSlot.ordinal()] = stack.position();
+
+        }
+    }
+
+
+
+
+
+
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+        int stackPtr = stack.position();
+        System.err.println(getClass().getCanonicalName() + "." + name() + ": srcPos:stacKpos " + src.position() + ":" + stackPtr);
+        stack.put(stackPtr,src.position());
+
+    }
+
+
+    ClassFileSlot(    int size) {
+        this.size = size;
+    }
+
+    static int genericGetInt(    ByteBuffer src,     int len) {
+        return len == 4 ? src.getInt() :
+                ((len == 2 ? src.getShort() :
+                        src.get()) & 0xffff);
+    }
+
+    static int genericPeekInt(    ByteBuffer src,     int len) {
+        return len == 4 ? src.getInt(src.position()) :
+                ((len == 2 ? src.getShort(src.position()) :
+                        src.get(src.position())) & 0xffff);
+    }
+
+
+
+
+
+
+
+    public ClassFileSlot(int size, Class... clazz) {
+
+        this.size = size;
+        init();
+
+
+
+
+    }
+
+
+
+
+    static public int recordLen;
+
+
+
+
+    public     int size;
+
+
+
+
+    public int seek;
+
+
+    public void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+
+}
+
+
+class ClassFileSlotInstance {
+    ByteBuffer buffer;
+
+    ClassFileSlotInstance(ByteBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+
+
+
+    int getMagic() {
+        return buffer.getInt(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.magic.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setMagic(    int magic) {
+        buffer.putInt(buffer.position() + ClassFileSlot.magic.seek, magic);
+        return this;
+    }
+
+
+
+
+    short getMinor_version() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.minor_version.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setMinor_version(    short minor_version) {
+        buffer.putShort(buffer.position() + ClassFileSlot.minor_version.seek, minor_version);
+        return this;
+    }
+
+
+
+
+    short getMajor_version() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.major_version.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setMajor_version(    short major_version) {
+        buffer.putShort(buffer.position() + ClassFileSlot.major_version.seek, major_version);
+        return this;
+    }
+
+
+
+
+    short getConstant_pool() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.constant_pool.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setConstant_pool(    short constant_pool) {
+        buffer.putShort(buffer.position() + ClassFileSlot.constant_pool.seek, constant_pool);
+        return this;
+    }
+
+
+
+
+    short getAccess_flags() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.access_flags.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setAccess_flags(    short access_flags) {
+        buffer.putShort(buffer.position() + ClassFileSlot.access_flags.seek, access_flags);
+        return this;
+    }
+
+
+
+
+    short getThis_class() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.this_class.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setThis_class(    short this_class) {
+        buffer.putShort(buffer.position() + ClassFileSlot.this_class.seek, this_class);
+        return this;
+    }
+
+
+
+
+    short getSuper_class() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.super_class.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setSuper_class(    short super_class) {
+        buffer.putShort(buffer.position() + ClassFileSlot.super_class.seek, super_class);
+        return this;
+    }
+
+
+
+
+    short getInterfaces() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.interfaces.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setInterfaces(    short interfaces) {
+        buffer.putShort(buffer.position() + ClassFileSlot.interfaces.seek, interfaces);
+        return this;
+    }
+
+
+
+
+    short getFields() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.fields.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setFields(    short fields) {
+        buffer.putShort(buffer.position() + ClassFileSlot.fields.seek, fields);
+        return this;
+    }
+
+
+
+
+    short getMethods() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.methods.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setMethods(    short methods) {
+        buffer.putShort(buffer.position() + ClassFileSlot.methods.seek, methods);
+        return this;
+    }
+
+
+
+
+    short getAttributes() {
+        return buffer.getShort(buffer.position() + inc.glamdring.bitecode.classfile.structure.ClassFileSlot.attributes.seek );
+    }
+
+
+
+
+    ClassFileSlotInstance setAttributes(    short attributes) {
+        buffer.putShort(buffer.position() + ClassFileSlot.attributes.seek, attributes);
+        return this;
+    }
+
+}
+
+
+enum Code_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+
+    attribute_length(4) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+                int len = src.getInt();
+                int data = src.position();
+            src.position(data + len);
+        }
+
+    },
+
+
+
+
+    max_stack(2),
+
+
+
+
+
+
+    max_locals(2),
+
+
+
+
+    code_length(4) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+                int len = src.getInt();
+                int data = src.position();
+            src.position(data + len);
+        }
+
+    },
+
+
+
+
+
+    exception_table_length(2),
+
+
+
+
+    attributes_count(2),;
+    public     int size;
+
+
+
+    Code_attribute(    int size) {
+        this.size = size;
+    } ;
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (Code_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+
+ enum ConstantPoolRef   {
+
+    srcPosition(4),
+
+
+
+    subType(2),
+
+
+
+
+    utf8Bitmap(1),
+
+
+
+    tag(1),
+    ;
+
+
+
+
+
+
+
+    public ConstantPoolRef(int size, Class... clazz) {
+
+        this.size = size;
+        this.clazz = guessIntTypes(size, clazz);
+        init();
+
+
+
+
+
+    }
+
+
+    public void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+
+
+
+
+
+    static public int recordLen;
+
+
+
+
+    public     int size;
+
+
+
+
+
+    public int seek;
+
+
+
+    public     Class clazz;
+
+
+    public static Class guessIntTypes(int size, Class... clazz) {
+        Class ConstantPoolRef_clazz;
+        if (clazz.length == 0) {
+            switch (size) {
+                case 1:
+                    ConstantPoolRef_clazz = byte.class;
+                    break;
+                case 2:
+                    ConstantPoolRef_clazz = short.class;
+                    break;
+                case 4:
+                    ConstantPoolRef_clazz = int.class;
+                    break;
+                case 8:
+                    ConstantPoolRef_clazz = long.class;
+                    break;
+                default:
+                    ConstantPoolRef_clazz = byte[].class;
+                    break;
+            }
+        } else {
+            ConstantPoolRef_clazz = clazz[0];
+        }
+        return ConstantPoolRef_clazz;
+    }
+
+
+
+
+
+    static void main(String[] a) {
+            HashMap<Class<?>, Pair<String, String>> nc = new LinkedHashMap<Class<?>, Pair<String, String>>();
+
+        {
+            nc.put(char.class, new Pair<String, String>("Char", "char"));
+            nc.put(int.class, new Pair<String, String>("Int", "int"));
+            nc.put(long.class, new Pair<String, String>("Long", "long"));
+            nc.put(short.class, new Pair<String, String>("Short", "short"));
+            nc.put(double.class, new Pair<String, String>("Double", "double"));
+            nc.put(byte[].class, new Pair<String, String>("", "byte[]"));
+            nc.put(byte.class, new Pair<String, String>("", "byte"));
+        }
+
+
+            String pkgName = ConstantPoolRef.class.getPackage().getName();
+        String vname = ConstantPoolRef.class.getCanonicalName();
+
+
+
+
+            String baseName = showInputDialog("please type in the Basename", "XRecord");
+        if (baseName.length() < 4)
+            return;
+
+
+        String s = genHeader(pkgName, vname, baseName);
+        s += genRecordInterface(nc, vname, baseName);
+        JTextPane message;
+        message = new JTextPane();
+        message.setText(s);
+            String s1 = showInputDialog(message);
+
+
+        s = genHeader(pkgName, vname, baseName);
+        s += genRecordClass(nc, vname, baseName);
+        message = new JTextPane();
+        message.setText(s);
+            String x = showInputDialog(message);
+
+
+    }
+
+    public static String genHeader(String pkgName, String vname, String baseName) {
+        String s = "" + "\n\n\npackage " + "" + pkgName + ";" + "\n\nimport static " + vname + ".*;" + "\n" + "\n" + "import java.nio.*;";
+
+        s += MessageFormat.format("\n/**************************************************************************/" +
+                "\n\n/**\n\n" +
+                "\t<p>total size record: {1}\n\n<table><tr>", pkgName, ConstantPoolRef.recordLen);
+
+
+        s += MessageFormat.format("<th>name</th><th>offset</th><th>size</th><th>Class</th></tr>", s);
+
+        for (ConstantPoolRef ConstantPoolRef : values()) {
+            s += MessageFormat.format("<tr>" +
+                    "<th>\n\n{0}</th>" +
+                    "<td>{1}</td>" +
+                    "<td>{2}</td>" +
+                    "<td>{3}</td>" +
+                    "</tr>",
+                    ConstantPoolRef.name(),
+                    ConstantPoolRef.seek,
+                    ConstantPoolRef.size,
+                    ConstantPoolRef.clazz.getName());
+        }
+        s += "\t</table>\n\n\n\n";
+
+
+        for (ConstantPoolRef ConstantPoolRef : values()) {
+            s += "\t\n@see " + vname + "#" + ConstantPoolRef.name();
+        }
+
+        s += "\n\n*/";
+        return s;
+    }
+
+    public static String genRecordClass(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+        String s = "\n\npublic class " + baseName + "Instance implements " + baseName + "<" + baseName + "Instance> {\n" + "\tByteBuffer buffer;\n";
+        s += "\n\tpublic " + baseName + "Instance (ByteBuffer buffer){this.buffer=buffer;}";
+
+        for (ConstantPoolRef ConstantPoolRef : values()) {
+
+                String lname = ConstantPoolRef.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = ConstantPoolRef.clazz.getCanonicalName();
+
+
+                String upType = nc.get(ConstantPoolRef.clazz).getFirst();
+                String primType = nc.get(ConstantPoolRef.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + ConstantPoolRef.name() + " */";
+            if (ConstantPoolRef.clazz == byte[].class)
+                s += MessageFormat.format("\n\tpublic byte[] {0}() {1}\n\t\tbyte {2}[] = new byte[ConstantPoolRef.{2}.size/*" + ConstantPoolRef.size + "*/];\n\t\tbuffer.get({2}, buffer.position() + ConstantPoolRef.{2}.seek, ConstantPoolRef.{2}.size);\n\t\treturn {2};\n\t}", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\tpublic {0} {1}() {5}\n\t\treturn buffer.get{2}(buffer.position() + ConstantPoolRef.{3}.seek /*{4}*/);\n\t}\n", primType, getterName, upType, lname, ConstantPoolRef.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + ConstantPoolRef.name() + " */";
+            if (ConstantPoolRef.clazz == byte[].class) {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    byte[] {1}) {2}\n\t\tbuffer.put({3}, buffer.position() + ConstantPoolRef.{4}.seek, ConstantPoolRef.{5}.size);\n\t\treturn this;\n\t}\n", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    {1} {2}) {3}\n\t\tbuffer.put{4}(buffer.position() + ConstantPoolRef.{5}.seek,  {6});\n\t\treturn this;\n\t}\n", setterName, primType, lname, '{', upType, lname, lname);
+
+
+            }
+        }
+
+        return s += "\n}\n";
+    }
+
+    public static String genRecordInterface(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+        String s = "\n\n  interface " + baseName + "<T extends " + baseName + " >{\n";
+
+
+        for (ConstantPoolRef ConstantPoolRef : values()) {
+
+                String lname = ConstantPoolRef.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = ConstantPoolRef.clazz.getCanonicalName();
+
+
+                String upType = nc.get(ConstantPoolRef.clazz).getFirst();
+                String primType = nc.get(ConstantPoolRef.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + ConstantPoolRef.name() + " */";
+            if (ConstantPoolRef.clazz == byte[].class)
+                s += MessageFormat.format("\n\t  byte[] {0}();", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\t  {0} {1}() ;", primType, getterName, upType, lname, ConstantPoolRef.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + ConstantPoolRef.name() + " */";
+            if (ConstantPoolRef.clazz == byte[].class) {
+                s += MessageFormat.format("\n\t  T  {0}(    byte[] {1});", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\t  T  {0}(    {1} {2});", setterName, primType, lname, '{', upType, lname, lname);
+            }
+        }
+        s += "\n\t}";
+        return s;
+    }
+
+    static void index(ByteBuffer src, int[] register, IntBuffer stack) {
+    }
+}
+
+
+ enum ConstantPoolRefInstance   {
+
+    INVALID(Error.class, (byte) -1) {
+        void subIndex(    ByteBuffer srcf,     int[] registers,     IntBuffer stack) {
+            throw new UnsupportedOperationException();
+        }},
+
+
+
+
+    ByteArray_(CONSTANT_Utf8_info.class, (byte) 0) {
+        void subIndex(    ByteBuffer src, int[] registers,     IntBuffer stack) {
+            CONSTANT_Utf8_info.index(src, registers, stack);
+        }
+    },
+    UNUSED(Error.class, (byte) 0) {
+        void subIndex(    ByteBuffer srcf,     int[] registers,     IntBuffer stack) {
+            throw new UnsupportedOperationException();
+        }},
+    IntegerConstant(int.class, (byte) 0, 4),
+    FloatConstant(float.class, (byte) 0, 4),
+    Long_(long.class, (byte) 0, 8),
+    Double_(double.class, (byte) 0, 8),
+
+
+
+    Class_(Class.class, (byte) 1, 2),
+
+
+
+
+
+
+    String_(String.class, (byte) 1, 2),
+
+
+
+    Field_(CONSTANT_Fieldref_info.class, (byte) 0, 4) {
+        void subIndex(ByteBuffer src, int[] registers, IntBuffer stack) {
+            CONSTANT_Fieldref_info.index(src, registers, stack);
+        }},
+
+
+
+    Method_(CONSTANT_Methodref_info.class, (byte) 0, 4) {
+        void subIndex(ByteBuffer src, int[] registers, IntBuffer stack) {
+            CONSTANT_Methodref_info.index(src, registers, stack);
+        }
+    },
+
+
+
+
+    InterfaceMethod_(CONSTANT_InterfaceMethodref_info.class, (byte) 0, 4) {
+        void subIndex
+                (ByteBuffer src, int[] registers, IntBuffer stack) {
+            CONSTANT_InterfaceMethodref_info.next(src, registers, stack);
+        }
+    },
+
+
+
+
+    NameAndType(CONSTANT_NameAndType_info.class, (byte) 3, 4) {
+        void subIndex(ByteBuffer src, int[] registers, IntBuffer stack) {
+            CONSTANT_NameAndType_info.next(src, registers, stack);
+        }
+
+    },;
+
+        int size;
+    public     Class valueType;
+
+
+
+
+
+
+
+        byte utf8Bitmap;
+
+    ConstantPoolRefInstance(    Class valueType,     byte utf8Bitmap,     int... size) {
+        this.valueType = valueType;
+        this.utf8Bitmap = utf8Bitmap;
+        this.size = size.length == 0 ? 0 : size[0];
+    }
+
+    Class getValueType() {
+        return valueType;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+        for (ConstantPoolRefInstance m : values()) {
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+            m.subIndex(src, register, stack);
+        }
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int stackPtr = src.position();
+
+        src.position(stackPtr + size);
+    }
+}
+
+
+ enum ConstantValue_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+
+    attribute_length(4),
+    constantvalue_index(2),;
+    public     int size;
+
+    ConstantValue_attribute(    int size) {
+        this.size = size;
+    }
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (ConstantValue_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+
+}
+
+
+enum CONSTANT_Fieldref_info   {
+
+
+
+
+    class_index(2),
+
+
+
+
+    name_and_type_index(2),;
+    public     int size;
+
+    CONSTANT_Fieldref_info(    int size) {
+
+        this.size = size;
+    }
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (CONSTANT_Fieldref_info m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+enum CONSTANT_InterfaceMethodref_info   {
+
+
+
+    class_index(2),
+
+
+
+
+    name_and_type_index(2),;
+    public     int size;
+
+    CONSTANT_InterfaceMethodref_info(    int size) {
+        this.size = size;
+    }
+
+    static void next(ByteBuffer src, int[] results, IntBuffer key) {
+        for (CONSTANT_InterfaceMethodref_info info : values()) {
+            results[info.ordinal()] = ClassFileSlot.genericGetInt(src, info.size);
+        }
+    }
+}
+
+
+enum CONSTANT_Methodref_info   {
+
+
+
+
+    class_index(2),
+    name_and_type_index(2);
+
+    public     int size;
+
+    CONSTANT_Methodref_info(    int size) {
+        this.size = size;
+    }
+
+    static void index(ByteBuffer src, int[] results, IntBuffer key) {
+        int skip = 0;
+        for (CONSTANT_Methodref_info info : values()) {
+            skip += info.size;
+        }
+        src.position(skip + src.position());
+    }
+}
+
+
+enum CONSTANT_NameAndType_info   {
+
+
+
+
+
+    name_index(2),
+
+
+
+
+    descriptor_index(2),;
+    public     int size;
+
+    CONSTANT_NameAndType_info(    int size) {
+
+        this.size = size;
+    }
+    static void next(ByteBuffer src, int[] results, IntBuffer key) {
+        for (CONSTANT_NameAndType_info info : values()) {
+            results[info.ordinal()] = ClassFileSlot.genericGetInt(src, info.size);
+        }
+    }
+}
+
+
+
+enum CONSTANT_Utf8_info   {
+
+
+
+
+
+    length(2),;
+    public     int size;
+
+    CONSTANT_Utf8_info(    int size) {
+        this.size = size;
+    }
+
+    static void index(    ByteBuffer src, int[] registers,     IntBuffer stack) {
+
+            int aShort = (src.getShort() & 0xffff);
+
+            String s = c_str(src, src.position(), src.position() + aShort);
+        System.out.println("utf8: " + s);
+        src.position(src.position() + aShort);
+    }
+}
+
+
+ class ConstPoolRefInstance {
+    ByteBuffer buffer;
+
+    ConstPoolRefInstance(ByteBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+
+
+
+    int getSrcPosition() {
+        return buffer.getInt(buffer.position() + ConstantPoolRef.srcPosition.seek );
+    }
+
+
+
+
+    ConstPoolRefInstance setSrcPosition(    int srcPosition) {
+        buffer.putInt(buffer.position() + ConstantPoolRef.srcPosition.seek, srcPosition);
+        return this;
+    }
+
+
+
+
+    short getSubType() {
+        return buffer.getShort(buffer.position() + ConstantPoolRef.subType.seek );
+    }
+
+
+
+
+    ConstPoolRefInstance setSubType(    short subType) {
+        buffer.putShort(buffer.position() + ConstantPoolRef.subType.seek, subType);
+        return this;
+    }
+
+
+
+
+    byte getUtf8Bitmap() {
+        return buffer.get(buffer.position() + ConstantPoolRef.utf8Bitmap.seek );
+    }
+
+
+
+
+    ConstPoolRefInstance setUtf8Bitmap(    byte utf8Bitmap) {
+        buffer.put(buffer.position() + ConstantPoolRef.utf8Bitmap.seek, utf8Bitmap);
+        return this;
+    }
+
+
+
+
+    byte getTag() {
+        return buffer.get(buffer.position() + ConstantPoolRef.tag.seek );
+    }
+
+
+
+
+    ConstPoolRefInstance setTag(    byte tag) {
+        buffer.put(buffer.position() + ConstantPoolRef.tag.seek, tag);
+  return this;
+ }
+
+}
+
+
+enum
+        Deprecated_attribute {
+
+
+
+attribute_name_index(2),
+
+
+
+
+attribute_length(4),;
+public     int size;
+
+Deprecated_attribute(    int size) {
+
+    this.size = size;
+}
+
+ static void next(ByteBuffer src, int[] results, int... key) {
+
+    for (Deprecated_attribute info : values()) {
+        results[info.ordinal()] = ClassFileSlot.genericGetInt(src, info.size);
+    }
+        int pos = src.position();
+    src.position(pos + (results[attribute_length.ordinal()] * 2));
+}
+}
+
+enum Exceptions_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+
+    attribute_length(4),
+
+
+
+
+    number_of_exceptions(2),;
+    public     int size;
+
+
+
+
+
+
+    Exceptions_attribute(    int size) {
+        this.size = size;
+    }
+}
+
+enum exception_table   {
+
+
+
+    start_pc(2),
+
+
+
+
+    end_pc(2),
+
+
+
+    handler_pc(2),
+
+
+
+
+    catch_type(2),;
+    public     int size;
+
+    exception_table(    int size) {
+        this.size = size;
+    }
+}
+
+
+ enum field_access_flag   {
+
+
+
+    public_(0x0001),
+
+
+
+    private_(0x0002),
+
+
+
+    protected_(0x0004),
+
+
+
+    static_(0x0008),
+
+
+
+    final_(0x0010),
+
+
+
+    super_(0x0020),
+
+
+
+    volatile_(0x0040),
+
+
+
+    transient_(0x0080),
+
+
+
+    interface_(0x0200),
+
+
+
+    abstract_(0x0400),;
+        int flag;
+
+    field_access_flag(    int flag) {
+        this.flag = flag;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int i = src.getShort() & 0xffff;
+            field_access_flag[] access_flags1 = field_access_flag.values();
+
+        String s = "a:";
+        for (field_access_flag field_acces : access_flags1) {
+                int i1 = field_acces.flag;
+            if ((i1 & i) != 0) s += "" + field_acces.name();
+
+        }
+
+        System.out.println(s);
+    }
+
+}
+
+
+ enum field_info   {
+    access_flags(2) {
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            field_access_flag.index(src, register, stack);
+        }
+
+
+    },
+
+
+
+    name_index(2),
+
+
+
+    descriptor_index(2),
+
+
+
+    attributes_count(2) {
+
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+                short attr = src.getShort();
+            for (int i = 0; i < attr; i++) {
+                attribute_info.index(src, register, stack);
+            }
+        }
+
+    };
+    public     int size;
+
+    field_info(    int size) {
+        this.size = size;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (field_info m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+interface Index_ {
+    void init();
+
+    void subIndex(ByteBuffer src, int[] register, IntBuffer stack);
+
+    int getSize();
+
+    int getSeek();
+
+    void setSeek(public int seek);
+
+    Class<Enum> getClazz();
+    void setClazz(Class<Enum> clazz);
+}
+
+
+ class Indexer  {
+
+
+
+
+
+    static public int recordLen;
+
+
+
+
+        int size;
+
+
+
+
+
+    public int seek;
+    Class<Enum> clazz;
+    public Indexer(int size, Class... clazz) {
+
+        this.size = size;
+        init();
+
+
+
+
+
+    }
+
+
+    void init() {
+        setSeek(getRecordLen());
+        setRecordLen(getRecordLen() + size);
+    }
+    static <T extends Enum<T>> Iterable<T> values(Class<T> tClass) {
+        try {
+                Method valuesMethod = tClass.getMethod("index", new Class[0]);
+            return Arrays.asList((T[]) valuesMethod.invoke(null));
+        }
+        catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    static <T extends Enum<T>> void index(Class<T> clazz, ByteBuffer src, int[] register, IntBuffer stack) {
+
+        for (Enum target : values(clazz)) {
+            Indexer indexer = Indexer.class.cast(target);
+            indexer.subIndex(src, register, stack);
+        }
+
+    }
+
+    void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+
+        if (getClazz() != null) {
+                Method valuesMethod;
+            try {
+                valuesMethod = getClazz().getMethod("index");
+                valuesMethod.invoke(null, getClazz(), src, register, stack);
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+
+
+        } else
+            stack.position(getSeek() + getSize());
+
+    }
+
+    static int getRecordLen() {
+        return recordLen;
+    }
+
+    static void setRecordLen(public int recordLen) {
+        Indexer.recordLen = recordLen;
+    }
+
+    int getSize() {
+        return size;
+    }
+
+    int getSeek() {
+        return seek;
+    }
+
+    void setSeek(public int seek) {
+        this.seek = seek;
+    }
+
+    Class<Enum> getClazz() {
+        return clazz;
+    }
+
+    void setClazz(Class<Enum> clazz) {
+        this.clazz = clazz;
+    }
+}
+
+
+enum InnerClasses_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+
+    attribute_length(4),
+
+
+
+
+    number_of_classes(2),;
+    public     int size;
+
+    InnerClasses_attribute(    int size) {
+
+        this.size = size;
+    }
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (InnerClasses_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+
+}
+
+
+enum inner_inner_class_meta   {
+
+
+
+    inner_class_info_index(2),
+
+
+
+
+    outer_class_info_index(2),
+
+
+
+
+    inner_name_index(2),
+
+
+
+
+    inner_class_access_flags(2),;
+    public     int size;
+
+    inner_inner_class_meta(    int size) {
+        this.size = size;
+    }
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (inner_inner_class_meta m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+enum lineNr   {
+
+
+
+
+    start_pc(2),
+
+
+
+
+
+    line_number(2),;
+    public     int size;
+
+    lineNr(    int size) {
+
+
+        this.size = size;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (lineNr m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+enum LineNumberTable_attribute   {
+    attribute_name_index(2),
+    attribute_length(4),
+
+
+
+
+    line_number_table_length(2) {
+
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+                int aShort = src.getShort() & 0xffff;
+            for (int i = 0; i < aShort; i++)
+                lineNr.index(src, register, stack);
+        }
+    };
+
+
+    public     int size;
+
+
+    LineNumberTable_attribute(    int size) {
+        this.size = size;
+    }
+
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (LineNumberTable_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+enum LocalVariableTable_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+    attribute_length(4),
+
+
+
+    local_variable_table_length(2);
+    public     int size;
+
+    LocalVariableTable_attribute(    int size) {
+
+        this.size = size;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (LocalVariableTable_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+            int i = src.position();
+        src.position(i + size);
+    }
+
+}
+
+
+enum method_access_flag   {
+
+
+       public_(0x0001),
+
+
+       private_(0x0002),
+
+
+       protected_(0x0004),
+
+
+       static_(0x0008),
+
+
+       final_(0x0010),
+
+
+       synchronized_(0x0020),
+
+
+       native_(0x0100),
+
+
+       abstract_(0x0400),
+
+
+       strict_(0x0800),;
+    public     int flag;
+
+    method_access_flag(    int flag) {
+
+        this.flag = flag;
+    }
+    static void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int i = src.getShort() & 0xffff;
+
+        String s = "ma:";
+        for (method_access_flag acces : method_access_flag.values()) {
+                int i1 = acces.flag;
+            if ((i1 & i) != 0) s += "" + acces.name();
+
+        }
+
+        System.out.println(s);
+    }
+}
+
+
+ enum method_info   {
+
+
+
+    access_flags(2) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            method_access_flag.subIndex(src, register, stack);
+        }
+    },
+
+
+
+
+    name_index(2) {
+    },
+
+
+
+    descriptor_index(2),
+
+
+
+    attributes_count(2) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int count = (int) src.getShort() & 0xffff;
+            stack.put(count);
+            for (int i = 0; i < count; i++) {
+                attribute_info.index(src, register, stack);
+            }
+
+        }},;
+    public     int size;
+
+    method_info(    int size) {
+        this.size = size;
+    }
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (method_info m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int i = src.position();
+        src.position(i + size);
+    }
+}
+
+
+
+
+ enum SlotTableIndexes   {
+    constant_pool(ConstantPoolRef.recordLen*0x4000),
+    interfaces(0x40000),
+    fields(0x40000),
+    methods(0x40000),
+    attributes(0x40000),;
+
+
+
+
+    static public int recordLen;
+
+
+
+
+        int size;
+
+
+
+
+
+    public int seek;
+
+
+
+    public     Class clazz;
+
+
+
+
+
+
+
+    public SlotTableIndexes(int size, Class... clazz) {
+
+        this.size = size;
+        this.clazz = guessIntTypes(size, clazz);
+        init();
+
+
+
+
+
+    }
+
+
+    public void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+    public static Class guessIntTypes(int size, Class... clazz) {
+        Class layout_clazz;
+        if (clazz.length == 0) {
+            switch (size) {
+                case 1:
+                    layout_clazz = byte.class;
+                    break;
+                case 2:
+                    layout_clazz = short.class;
+                    break;
+                case 4:
+                    layout_clazz = int.class;
+                    break;
+                case 8:
+                    layout_clazz = long.class;
+                    break;
+                default:
+                    layout_clazz = byte[].class;
+                    break;
+            }
+        } else {
+            layout_clazz = clazz[0];
+        }
+        return layout_clazz;
+    }
+
+
+
+
+
+    static void main(String[] a) {
+            HashMap<Class<?>, Pair<String, String>> nc = new LinkedHashMap<Class<?>, Pair<String, String>>();
+
+        {
+            nc.put(char.class, new Pair<String, String>("Char", "char"));
+            nc.put(int.class, new Pair<String, String>("Int", "int"));
+            nc.put(long.class, new Pair<String, String>("Long", "long"));
+            nc.put(short.class, new Pair<String, String>("Short", "short"));
+            nc.put(double.class, new Pair<String, String>("Double", "double"));
+            nc.put(byte[].class, new Pair<String, String>("", "byte[]"));
+            nc.put(byte.class, new Pair<String, String>("", "byte"));
+        }
+
+
+            String pkgName = SlotTableIndexes.class.getPackage().getName();
+        String vname = SlotTableIndexes.class.getCanonicalName();
+
+
+
+
+            String baseName = javax.swing.JOptionPane.showInputDialog("please type in the Basename", "XRecord");
+        if (baseName.length() < 4)
+            return;
+
+
+        String s = genHeader(pkgName, vname, baseName);
+        s += genRecordInterface(nc, vname, baseName);
+        JTextPane message;
+        message = new JTextPane();
+        message.setText(s);
+            String s1 = javax.swing.JOptionPane.showInputDialog(message);
+
+
+        s = genHeader(pkgName, vname, baseName);
+        s += genRecordClass(nc, vname, baseName);
+        message = new JTextPane();
+        message.setText(s);
+            String x = javax.swing.JOptionPane.showInputDialog(message);
+
+
+    }
+
+    public static String genHeader(String pkgName, String vname, String baseName) {
+        String s = "" + "\n\n\npackage " + "" + pkgName + ";" + "\n\nimport static " + vname + ".*;" + "\n" + "\n" + "import java.nio.*;";
+
+        s += MessageFormat.format("\n/**************************************************************************/" +
+                "\n\n/**\n\n" +
+                "\t<p>total size record: {1}\n\n<table><tr>", pkgName, SlotTableIndexes.recordLen);
+
+
+        s += MessageFormat.format("<th>name</th><th>offset</th><th>size</th><th>Class</th></tr>", s);
+
+        for (SlotTableIndexes slotTableIndexes : values()) {
+            s += MessageFormat.format("<tr>" +
+                    "<th>\n\n{0}</th>" +
+                    "<td>{1}</td>" +
+                    "<td>{2}</td>" +
+                    "<td>{3}</td>" +
+                    "</tr>",
+                    slotTableIndexes.name(),
+                    slotTableIndexes.seek,
+                    slotTableIndexes.size,
+                    slotTableIndexes.clazz.getName());
+        }
+        s += "\t</table>\n\n\n\n";
+
+
+        for (SlotTableIndexes slotTableIndexes : values()) {
+            s += "\t\n@see " + vname + "#" + slotTableIndexes.name();
+        }
+
+        s += "\n\n*/";
+        return s;
+    }
+
+    public static String genRecordClass(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+        String s = "\n\npublic class " + baseName + "Instance implements " + baseName + "<" + baseName + "Instance> {\n" + "\tByteBuffer buffer;\n";
+        s += "\n\tpublic " + baseName + "Instance (ByteBuffer buffer){this.buffer=buffer;}";
+
+        for (SlotTableIndexes slotTableIndexes : values()) {
+
+                String lname = slotTableIndexes.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = slotTableIndexes.clazz.getCanonicalName();
+
+
+                String upType = nc.get(slotTableIndexes.clazz).getFirst();
+                String primType = nc.get(slotTableIndexes.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + slotTableIndexes.name() + " */";
+            if (slotTableIndexes.clazz == byte[].class)
+                s += MessageFormat.format("\n\tpublic byte[] {0}() {1}\n\t\tbyte {2}[] = new byte[SlotTableIndexes.{2}.size/*" + slotTableIndexes.size + "*/];\n\t\tbuffer.get({2}, buffer.position() + SlotTableIndexes.{2}.seek, SlotTableIndexes.{2}.size);\n\t\treturn {2};\n\t}", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\tpublic {0} {1}() {5}\n\t\treturn buffer.get{2}(buffer.position() + SlotTableIndexes.{3}.seek /*{4}*/);\n\t}\n", primType, getterName, upType, lname, slotTableIndexes.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + slotTableIndexes.name() + " */";
+            if (slotTableIndexes.clazz == byte[].class) {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    byte[] {1}) {2}\n\t\tbuffer.put({3}, buffer.position() + SlotTableIndexes.{4}.seek, SlotTableIndexes.{5}.size);\n\t\treturn this;\n\t}\n", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    {1} {2}) {3}\n\t\tbuffer.put{4}(buffer.position() + SlotTableIndexes.{5}.seek,  {6});\n\t\treturn this;\n\t}\n", setterName, primType, lname, '{', upType, lname, lname);
+
+
+            }
+        }
+
+        return s += "\n}\n";
+    }
+
+    public static String genRecordInterface(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+        String s = "\n\n  interface " + baseName + "<T extends " + baseName + " >{\n";
+
+
+        for (SlotTableIndexes slotTableIndexes : values()) {
+
+                String lname = slotTableIndexes.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = slotTableIndexes.clazz.getCanonicalName();
+
+
+                String upType = nc.get(slotTableIndexes.clazz).getFirst();
+                String primType = nc.get(slotTableIndexes.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + slotTableIndexes.name() + " */";
+            if (slotTableIndexes.clazz == byte[].class)
+                s += MessageFormat.format("\n\t  byte[] {0}();", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\t  {0} {1}() ;", primType, getterName, upType, lname, slotTableIndexes.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + slotTableIndexes.name() + " */";
+            if (slotTableIndexes.clazz == byte[].class) {
+                s += MessageFormat.format("\n\t  T  {0}(    byte[] {1});", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\t  T  {0}(    {1} {2});", setterName, primType, lname, '{', upType, lname, lname);
+            }
+        }
+        s += "\n\t}";
+        return s;
+    }
+
+
+}
+
+
+
+
+
+
+
+ class SlotTableInstance {
+    ByteBuffer buffer;
+
+    SlotTableInstance(ByteBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+
+
+
+    byte[] getConstant_pool() {
+        byte constant_pool[] = new byte[SlotTableIndexes.constant_pool.size ];
+        buffer.get(constant_pool, buffer.position() + SlotTableIndexes.constant_pool.seek, SlotTableIndexes.constant_pool.size);
+        return constant_pool;
+    }
+
+
+
+
+    SlotTableInstance setConstant_pool(    byte[] constant_pool) {
+        buffer.put(constant_pool, buffer.position() + SlotTableIndexes.constant_pool.seek, SlotTableIndexes.constant_pool.size);
+        return this;
+    }
+
+
+
+
+    byte[] getIfaces() {
+        byte ifaces[] = new byte[SlotTableIndexes.interfaces.size ];
+        buffer.get(ifaces, buffer.position() + SlotTableIndexes.interfaces.seek, SlotTableIndexes.interfaces.size);
+        return ifaces;
+    }
+
+
+
+
+    SlotTableInstance setIfaces(    byte[] ifaces) {
+        buffer.put(ifaces, buffer.position() + SlotTableIndexes.interfaces.seek, SlotTableIndexes.interfaces.size);
+        return this;
+    }
+
+
+
+
+    byte[] getFields() {
+        byte fields[] = new byte[SlotTableIndexes.fields.size ];
+        buffer.get(fields, buffer.position() + SlotTableIndexes.fields.seek, SlotTableIndexes.fields.size);
+        return fields;
+    }
+
+
+
+
+    SlotTableInstance setFields(    byte[] fields) {
+        buffer.put(fields, buffer.position() + SlotTableIndexes.fields.seek, SlotTableIndexes.fields.size);
+        return this;
+    }
+
+
+
+
+    byte[] getMethods() {
+        byte methods[] = new byte[SlotTableIndexes.methods.size ];
+        buffer.get(methods, buffer.position() + SlotTableIndexes.methods.seek, SlotTableIndexes.methods.size);
+        return methods;
+    }
+
+
+
+
+    SlotTableInstance setMethods(    byte[] methods) {
+        buffer.put(methods, buffer.position() + SlotTableIndexes.methods.seek, SlotTableIndexes.methods.size);
+        return this;
+    }
+
+
+
+
+    byte[] getAttributes() {
+        byte attributes[] = new byte[SlotTableIndexes.attributes.size ];
+        buffer.get(attributes, buffer.position() + SlotTableIndexes.attributes.seek, SlotTableIndexes.attributes.size);
+        return attributes;
+    }
+
+
+
+
+    SlotTableInstance setAttributes(    byte[] attributes) {
+        buffer.put(attributes, buffer.position() + SlotTableIndexes.attributes.seek, SlotTableIndexes.attributes.size);
+  return this;
+ }
+}
+
+
+
+
+
+
+
+
+ enum SourceFile_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+    attribute_length(4) ,
+    sourcefile_index(2);
+    ;
+    public     int size;
+
+    SourceFile_attribute(    int size) {
+        this.size = size;
+    }
+
+}
+
+
+enum Synthetic_attribute   {
+
+
+
+    attribute_name_index(2),
+
+
+
+
+    attribute_length(4) {
+
+        void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+                int len = src.getInt();
+                int data = src.position();
+            src.position(data + len);
+        }
+
+    };
+
+    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+
+
+
+        for (Synthetic_attribute m : values()) {
+
+
+                int i = stack.position();
+            System.out.println("sp:offset\t" + i + ":" + (i - register[ClassFileSlot.constant_pool.ordinal()]) + "\ts:v:a " + m.size + ":" + ClassFileSlot.genericPeekInt(src, m.size) + ":\t" + m.name());
+
+            m.subIndex(src, register, stack);
+        }
+    }
+
+    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+            int i = src.position();
+        src.position(i + size);
+    }
+
+    public     int size;
+
+    Synthetic_attribute(    int size) {
+        this.size = size;
+    }
+}
+
+
+
+
+
+
+ enum VolHeader   {
+
+
+
+
+
+    srcUri(256),
+
+
+
+    srcSlotVector(4 * ClassFileSlot.values().length) {
+
+
+    },
+    indexSlotVector(4 * ClassFileSlot.values().length),
+    tableOffsets(SlotTableIndexes.recordLen),
+    tabledata(4),;
+
+
+
+
+
+    static public int recordLen;
+
+
+
+
+        int size;
+
+
+
+
+
+    public int seek;
+    public VolHeader(int size, Class... clazz) {
+
+        this.size = size;
+
+        init();
+
+
+
+
+
+    }
+
+
+    public void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+
+    static void index(MappedByteBuffer src, int[] register, IntBuffer stack) {
+
+
+        for (VolHeader volHeader : values()) {
+            String hdr = volHeader.name();
+            System.out.println("hdr:pos " + hdr + ":" + stack.position());
+            volHeader.subIndex(src, register, stack);
+        }
+
+
+    }
+
+    void subIndex(MappedByteBuffer src, int[] register, IntBuffer stack) {
+        stack.position(seek + size);
+    }
+
+
+}
+
+
+ class VolHeaderInstance {
+    ByteBuffer buffer;
+
+    VolHeaderInstance(ByteBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+
+
+
+    byte[] getSrcUri() {
+        byte srcUri[] = new byte[VolHeader.srcUri.size ];
+        buffer.get(srcUri, buffer.position() + VolHeader.srcUri.seek, VolHeader.srcUri.size);
+        return srcUri;
+    }
+
+
+
+
+    VolHeaderInstance setSrcUri(    byte[] srcUri) {
+
+        buffer.put(srcUri, buffer.position() + VolHeader.srcUri.seek, srcUri.length);
+        buffer.put(buffer.position() + VolHeader.srcUri.seek+ srcUri.length+1, (byte) 0);
+        return this;
+    }
+
+
+
+
+    byte[] getSrcSlotVector() {
+        byte srcSlotVector[] = new byte[VolHeader.srcSlotVector.size ];
+        buffer.get(srcSlotVector,
+                buffer.position() + VolHeader.srcSlotVector.seek,
+                VolHeader.srcSlotVector.size
+        );
+        return srcSlotVector;
+    }
+
+
+
+
+    VolHeaderInstance setSrcSlotVector(    byte[] srcSlotVector) {
+        buffer.put(srcSlotVector, buffer.position() + VolHeader.srcSlotVector.seek, VolHeader.srcSlotVector.size);
+        return this;
+    }
+
+
+
+
+    byte[] getIndexSlotVector() {
+        byte indexSlotVector[] = new byte[VolHeader.indexSlotVector.size ];
+        buffer.get(indexSlotVector, buffer.position() + VolHeader.indexSlotVector.seek, VolHeader.indexSlotVector.size);
+        return indexSlotVector;
+    }
+
+
+
+
+    VolHeaderInstance setIndexSlotVector(    byte[] indexSlotVector) {
+        buffer.put(indexSlotVector, buffer.position() + VolHeader.indexSlotVector.seek, VolHeader.indexSlotVector.size);
+        return this;
+    }
+
+
+
+
+    byte[] getTableOffsets() {
+        byte tableOffsets[] = new byte[VolHeader.tableOffsets.size ];
+        buffer.get(tableOffsets, buffer.position() + VolHeader.tableOffsets.seek, VolHeader.tableOffsets.size);
+        return tableOffsets;
+    }
+
+
+
+
+    VolHeaderInstance setTableOffsets(    byte[] tableOffsets) {
+        buffer.put(tableOffsets, buffer.position() + VolHeader.tableOffsets.seek, VolHeader.tableOffsets.size);
+        return this;
+    }
+
+
+
+
+    int getTabledata() {
+        return buffer.getInt(buffer.position() + VolHeader.tabledata.seek );
+    }
+
+
+
+
+    VolHeaderInstance setTabledata(    int tabledata) {
+        buffer.putInt(buffer.position() + VolHeader.tabledata.seek, tabledata);
+  return this;
+ }
+
+}
+
+ class ByteRange<T> {
+    int begin,end;
+}
+
+
+
+
+
+
+ enum Layout {
+
+
+
+    hash(1),
+
+
+
+
+    span(4),
+
+
+
+    padding4(4 - (span.seek % 4) - 1),
+
+
+
+
+
+
+    offset(4),
+
+
+
+    left(4),
+
+
+
+    right(4),
+
+
+
+
+    value(4);
+
+
+
+
+    static public int recordLen;
+
+
+
+
+    public     int size;
+
+
+
+
+
+    public int seek;
+
+
+
+    public     Class clazz;
+
+
+
+
+
+
+
+    public Layout(int size, Class... clazz) {
+
+        this.size = size;
+        this.clazz = guessIntTypes(size, clazz);
+        init();
+
+
+
+
+
+    }
+
+
+    public void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+    public static Class guessIntTypes(int size, Class... clazz) {
+        Class layout_clazz;
+        if (clazz.length == 0) {
+            switch (size) {
+                case 1:
+                    layout_clazz = byte.class;
+                    break;
+                case 2:
+                    layout_clazz = short.class;
+                    break;
+                case 4:
+                    layout_clazz = int.class;
+                    break;
+                case 8:
+                    layout_clazz = long.class;
+                    break;
+                default:
+                    layout_clazz = byte[].class;
+                    break;
+            }
+        } else {
+            layout_clazz = clazz[0];
+        }
+        return layout_clazz;
+    }
+
+
+
+
+
+    static void main(String[] a) {
+            HashMap<Class<?>, Pair<String, String>> nc = new LinkedHashMap<Class<?>, Pair<String, String>>();
+
+        {
+            nc.put(char.class, new Pair<String, String>("Char", "char"));
+            nc.put(int.class, new Pair<String, String>("Int", "int"));
+            nc.put(long.class, new Pair<String, String>("Long", "long"));
+            nc.put(short.class, new Pair<String, String>("Short", "short"));
+            nc.put(double.class, new Pair<String, String>("Double", "double"));
+            nc.put(byte[].class, new Pair<String, String>("", "byte[]"));
+            nc.put(byte.class, new Pair<String, String>("", "byte"));
+        }
+
+
+            String pkgName = Layout.class.getPackage().getName();
+        String vname = Layout.class.getCanonicalName();
+
+
+
+
+            String baseName = showInputDialog("please type in the Basename", "XRecord");
+        if (baseName.length() < 4)
+            return;
+
+
+        String s = genHeader(pkgName, vname, baseName);
+        s += genRecordInterface(nc, vname, baseName);
+        JTextPane message;
+        message = new JTextPane();
+        message.setText(s);
+            String s1 = showInputDialog(message);
+
+
+        s = genHeader(pkgName, vname, baseName);
+        s += genRecordClass(nc, vname, baseName);
+        message = new JTextPane();
+        message.setText(s);
+            String x = showInputDialog(message);
+
+
+    }
+
+    public static String genHeader(String pkgName, String vname, String baseName) {
+        String s = "" + "\n\n\npackage " + "" + pkgName + ";" + "\n\nimport static " + vname + ".*;" + "\n" + "\n" + "import java.nio.*;";
+
+        s += MessageFormat.format("\n/**************************************************************************/" +
+                "\n\n/**\n\n" +
+                "\t<p>total size record: {1}\n\n<table><tr>", pkgName, Layout.recordLen);
+
+
+        s += MessageFormat.format("<th>name</th><th>offset</th><th>size</th><th>Class</th></tr>", s);
+
+        for (Layout layout : values()) {
+            s += MessageFormat.format("<tr>" +
+                    "<th>\n\n{0}</th>" +
+                    "<td>{1}</td>" +
+                    "<td>{2}</td>" +
+                    "<td>{3}</td>" +
+                    "</tr>",
+                    layout.name(),
+                    layout.seek,
+                    layout.size,
+                    layout.clazz.getName());
+        }
+        s += "\t</table>\n\n\n\n";
+
+
+        for (Layout layout : values()) {
+            s += "\t\n@see " + vname + "#" + layout.name();
+        }
+
+        s += "\n\n*/";
+        return s;
+    }
+
+    public static String genRecordClass(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+        String s = "\n\npublic class " + baseName + "Instance implements " + baseName + "Iface<" + baseName + "Instance> {\n" + "\tByteBuffer buffer;\n";
+        s += "\n\tpublic " + baseName + "Instance (ByteBuffer buffer){this.buffer=buffer;}";
+
+        for (Layout layout : values()) {
+                String lname = layout.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = layout.clazz.getCanonicalName();
+
+
+                String upType = nc.get(layout.clazz).getFirst();
+                String primType = nc.get(layout.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + layout.name() + " */";
+            if (layout.clazz == byte[].class)
+                s += MessageFormat.format("\n\tpublic byte[] {0}() {1}\n\t\tbyte {2}[] = new byte[Layout.{2}.size/*" + layout.size + "*/];\n\t\tbuffer.get({2}, buffer.position() + Layout.{2}.seek, Layout.{2}.size);\n\t\treturn {2};\n\t}", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\tpublic {0} {1}() {5}\n\t\treturn buffer.get{2}(buffer.position() + Layout.{3}.seek /*{4}*/);\n\t}\n", primType, getterName, upType, lname, layout.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + layout.name() + " */";
+            if (layout.clazz == byte[].class) {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    byte[] {1}) {2}\n\t\tbuffer.put({3}, buffer.position() + Layout.{4}.seek, Layout.{5}.size);\n\t\treturn this;\n\t}\n", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    {1} {2}) {3}\n\t\tbuffer.put{4}(buffer.position() + Layout.{5}.seek,  {6});\n\t\treturn this;\n\t}\n", setterName, primType, lname, '{', upType, lname, lname);
+
+
+            }
+        }
+
+        return s += "\n}\n";
+    }
+
+    public static String genRecordInterface(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+            String name1 = baseName+"Iface";
+        String s = "\n\n  interface " + name1 + "<T extends " + name1 + " >{\n";
+
+
+        for (Layout layout : values()) {
+
+                String lname = layout.name();
+                char cap = lname.toUpperCase().charAt(0);
+                String cn = cap + lname.substring(1);
+                String getterName = "get" + cn;
+                String setterName = "set" + cn;
+
+                String typeName = layout.clazz.getCanonicalName();
+
+
+                String upType = nc.get(layout.clazz).getFirst();
+                String primType = nc.get(layout.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + layout.name() + " */";
+            if (layout.clazz == byte[].class)
+                s += MessageFormat.format("\n\t  byte[] {0}();", getterName, '{', lname);
+            else
+                s += MessageFormat.format("\n\t  {0} {1}() ;", primType, getterName, upType, lname, layout.seek, '{');
+
+            s += "\n\t/** @see " + vname + "#" + layout.name() + " */";
+            if (layout.clazz == byte[].class) {
+                s += MessageFormat.format("\n\t  T  {0}(    byte[] {1});", setterName, lname, '{', lname, lname, lname);
+            } else {
+                s += MessageFormat.format("\n\t  T  {0}(    {1} {2});", setterName, primType, lname, '{', upType, lname, lname);
+            }
+        }
+        s += "\n\t}";
+        return s;
+    }
+}
+
+
+
+
+
+
+
+     class Pair<K, V> implements Map.Entry<K, V> {
+        public Object[] kv;
+
+    Pair(    K k,     V v) {
+        kv = new Object[]{k, v};
+    }
+
+    Pair(    Object... two) {
+        kv = two;
+    }
+
+    K getFirst() {
+        return (K) kv[0];
+    }
+
+    V getSecond() {
+        return (V) kv[1];
+    }
+    K getKey() {
+        return (K) kv[0];
+    }
+    V getValue() {
+        return (V) kv[1];
+    }
+
+
+    Object setValue(    Object value) {
+        throw new UnsupportedOperationException();
+    }
+
+        int hashCode() {
+        return getKey().hashCode()<<16 + getValue().hashCode()&0xffff;
+
+    }
+
+}
+
+
+
+ class stdlib {
+
+    static String c_str(ByteBuffer view, int... params) {
+            int end = params.length > 1 ? params[1] : view.limit();
+            int begin = params.length > 0 ? params[0] : view.position();
+            CharBuffer charBuffer = CharBuffer.allocate(end - begin);
+        for (int i = begin; i < end; i++) {
+            charBuffer.put((char) (view.get(i) & 0xff));
+        }
+            String s = charBuffer.flip().toString();
+        return s;
+    }
+
+}
