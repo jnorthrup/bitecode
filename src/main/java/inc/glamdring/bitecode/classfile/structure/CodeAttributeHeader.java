@@ -1,65 +1,112 @@
 package inc.glamdring.bitecode.classfile.structure;
-
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * @version $Id$
- * @user jim
- * @created Mar 10, 2008 8:59:32 PM
- * @copyright Glamdring Incorporated Enterprises.  All rights reserved
- * @license this header must remain in this file at all times and credit due to its author may not be removed.
- * Permission is granted for teaching and instructional purposes, learning, and non-commercial use provided that
- * copyright and license notice remain unaltered.  Please contact author for matters of inclusion in commercial or
- * for-profit software and products.
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> MaxStack</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> MaxLocals</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> CodeLength</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> ExceptionTableLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> attributes_count</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ *
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#AttributeLength
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#MaxStack
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#MaxLocals
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#CodeLength
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#ExceptionTableLength
+ * @see inc.glamdring.bitecode.classfile.structure.CodeAttributeHeader#attributes_count
+ * </table>
  */
-public enum CodeAttributeHeader {
-    /**
-     * The value of the Utf8Index item must be a valid index into the ConstantPoolRecord table. The ConstantPoolRecord entry at that index must be a Utf8_ (§4.4.7) structure representing the string "Code".
-     */
-    Utf8Index(2),
-    /**
-     * The value of the AttributeLength item indicates the length of the attribute, excluding the initial six bytes.
-     */
-    AttributeLength,
-
-    /**
-     * The value of the max_stack item gives the maximum depth (§3.6.2) of the operand stack of this method at any point during execution of the method.
-     */
-    MaxStack(2),
-
-    /**
-     * The value of the max_locals item gives the number of local variables in the local variable array allocated upon invocation of this method, including the local variables used to pass parameters to the method on its invocation.
-     * <p/>
-     * The greatest local variable index for a value of type long or double is max_locals-2. The greatest local variable index for a value of any other type is max_locals-1.
-     */
-    MaxLocals(2),
-
-    /**
-     * The value of the code_length item gives the number of bytes in the code array for this method. The value of code_length must be greater than zero; the code array must not be empty.
-     */
-    CodeLength
-   ,
-
-
-    /**
-
-     */
-    ExceptionTableLength(2),
-
-    /**
-
-     */
-    attributes_count(2),;
-     public int size,seek;
-    static public int recordLen;
-
-    CodeAttributeHeader(int size ) {
-
-        this.size = size;
+public  enum CodeAttributeHeader{
+Utf8Index	{{
+		size=2;
+	}}
+,AttributeLength	{{
+		size=4;
+	}}
+,MaxStack	{{
+		size=2;
+	}}
+,MaxLocals	{{
+		size=2;
+	}}
+,CodeLength	{{
+		size=4;
+	}}
+,ExceptionTableLength	{{
+		size=2;
+	}}
+,attributes_count	{{
+		size=2;
+	}}
+;
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=true;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	CodeAttributeHeader()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
+        }
     }
 
-    CodeAttributeHeader() {
-        size=4;
-
+    void init() {
+        seek = recordLen;
+        recordLen += size;
     }
-}
+
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (CodeAttributeHeader CodeAttributeHeader_ : values()) {
+            String hdr = CodeAttributeHeader_.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            CodeAttributeHeader_.subIndex(src, register, stack);
+        }
+    }
+
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endCodeAttributeHeader

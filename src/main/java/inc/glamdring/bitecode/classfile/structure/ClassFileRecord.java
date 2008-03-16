@@ -4,7 +4,7 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ClassResourceUri</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ClassResourceUri</th><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> FileSlotRecord</th><td>0</td><td>0</td><td>{@link inc.glamdring.bitecode.classfile.structure.FileSlotRecord}</td></tr>
  * <tr><th> TableRecord</th><td>1572864</td><td>0</td><td>{@link inc.glamdring.bitecode.classfile.structure.TableRecord}</td></tr>
  *
@@ -14,7 +14,17 @@ import java.lang.reflect.*;
  * </table>
  */
 public  enum ClassFileRecord{
-ClassResourceUri{{size=256;}},FileSlotRecord,TableRecord;
+ClassResourceUri	{{
+		size=256;
+	}}
+,FileSlotRecord	{{
+		subRecord=class inc.glamdring.bitecode.classfile.structure.FileSlotRecord;
+	}}
+,TableRecord	{{
+		size=1572864;
+		subRecord=class inc.glamdring.bitecode.classfile.structure.TableRecord;
+	}}
+;
 	public static int recordLen;
 	public int size;
 	public int seek;
@@ -25,7 +35,7 @@ ClassResourceUri{{size=256;}},FileSlotRecord,TableRecord;
 	final static public boolean isHeader=false;
 	final static public boolean isRef=false;
 	final static public boolean isInfo=false;
-	ClassFileRecord()	{
+	ClassFileRecord()	{      
             init();
             if (subRecord == null) {
             final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
@@ -64,7 +74,7 @@ ClassResourceUri{{size=256;}},FileSlotRecord,TableRecord;
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) {
+        if (isRecord && subRecord != null) { 
             try {
                 final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

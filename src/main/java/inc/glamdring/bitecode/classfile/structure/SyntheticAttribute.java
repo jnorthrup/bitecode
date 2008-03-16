@@ -1,51 +1,89 @@
 package inc.glamdring.bitecode.classfile.structure;
-
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * The <code>Synthetic</code> attribute<a href="#88570"><sup>6</sup></a> is a fixed-length attribute in the <code>attributes</code> table of
- * <code>FileSlotRecord</code> <a href="FileSlotRecord.doc.html#74353">(§4.1)</a>, <code>FieldInfoHeader</code> <a href="FileSlotRecord.doc.html#2877">(§4.5)</a>, and <code>MethodInfo</code> <a href="FileSlotRecord.doc.html#1513">(§4.6)</a> structures. A
- * class member that does not appear in the source code must be marked using a <code>Synthetic
- * <p/>
- * </code> attribute.
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ *
+ * @see inc.glamdring.bitecode.classfile.structure.SyntheticAttribute#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.SyntheticAttribute#AttributeLength
+ * </table>
  */
-public enum SyntheticAttribute {
-    /**
-     * The value of the <code>Utf8Index</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="FileSlotRecord.doc.html#7963">(§4.4.7)</a> structure representing the string <code>"Synthetic"</code>.
-     */
-    Utf8Index(2),
+public  enum SyntheticAttribute{
+Utf8Index	{{
+		size=2;
+	}}
+,AttributeLength	{{
+		size=4;
+	}}
+;
+	public java.lang.Class clazz;
 
-    /**
-     * The value of the AttributeLength item is zero.
-     */
-    AttributeLength  ;
-
-    SyntheticAttribute() {
-        size=4;
-    }
-
-    static void index(ByteBuffer src, int[] register, IntBuffer stack) {
-
-//        Logger.getAnonymousLogger().info("Stack: " + stack.position());
-
-        for (SyntheticAttribute m : values()) {
-
-
-            int i = stack.position();
-            System.out.println("sp:offset\t" + i + ":" + (i - register[FileSlotRecord.ConstantPoolRecord.ordinal()]) + "\ts:v:a " + m.size + ":" + FileSlotRecord.genericPeekInt(src, m.size) + ":\t" + m.name());
-//            FileSlotRecord.genericGetInt(buf, m.size );
-            m.subIndex(src, register, stack);
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=false;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	SyntheticAttribute()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
         }
     }
 
-    void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
-        int i = src.position();
-        src.position(i + size);
+    void init() {
+        seek = recordLen;
+        recordLen += size;
     }
 
-     public int size;public Class clazz;
-
-    SyntheticAttribute(  int size) {
-        this.size = size;
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (SyntheticAttribute SyntheticAttribute_ : values()) {
+            String hdr = SyntheticAttribute_.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            SyntheticAttribute_.subIndex(src, register, stack);
+        }
     }
-}
+
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endSyntheticAttribute

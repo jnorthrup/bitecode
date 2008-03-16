@@ -1,73 +1,89 @@
 package inc.glamdring.bitecode.classfile.structure;
-
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * The  {@link NameAndType_}  structure is used to represent a field or
- * method, without indicating which class or interface type it belongs to:
- * <p/>
- * <p></p><pre><br><a name="1328"></a>&nbsp;&nbsp;&nbsp;&nbsp;<code>NameAndType_ {
- * </code>&nbsp;&nbsp;&nbsp;&nbsp;<code>	u1 tag;
- * </code>&nbsp;&nbsp;&nbsp;&nbsp;<code>	u2 nameIndex;
- * </code>&nbsp;&nbsp;&nbsp;&nbsp;<code>	u2 DescriptorIndex;
- * </code><a name="1332"></a>&nbsp;&nbsp;&nbsp;&nbsp;<code>}
- * </code><br></pre><a name="9390"></a>
- * The items of the  {@link NameAndType_}  structure are as follows:
- * <p><a name="1334"></a>
- * </p><dl><dt><code>tag</code>
- * </dt><dd> The <code>tag</code> item of the  {@link NameAndType_}  structure has the value <code>CONSTANT_NameAndType</code> (<code>12</code>).<p>
- * <p/>
- * <a name="1336"></a>
- * </p></dd><dt><code>nameIndex</code>
- * </dt><dd> The value of the <code>nameIndex</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="ClassFile.doc.html#7963">(§4.4.7)</a> structure representing either a valid field or method name <a href="Concepts.doc.html#21272">(§2.7)</a> stored as a simple name <a href="Concepts.doc.html#21410">(§2.7.1)</a>, that is, as a Java programming language identifier <a href="Concepts.doc.html#25339">(§2.2)</a> or as the special method name <code>&lt;init&gt;</code> <a href="Overview.doc.html#12174">(§3.9)</a>.<p>
- * <p/>
- * <a name="1338"></a>
- * </p></dd><dt><code>DescriptorIndex</code>
- * </dt><dd> The value of the <code>DescriptorIndex</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="ClassFile.doc.html#7963">(§4.4.7)</a> structure representing a valid field descriptor <a href="ClassFile.doc.html#14152">(§4.3.2)</a> or method descriptor <a href="ClassFile.doc.html#7035">(§4.3.3)</a>.<p>
- * <p/>
- * <a name="7963"></a>
- * </p></dd></dl>
- * <h3>4.4.7    The  {@link Utf8_}  Structure</h3>
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> DescriptorIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @version $Id$
- * @user jim
- * @created Mar 10, 2008 4:13:05 PM
- * @copyright Glamdring Incorporated Enterprises.  All rights reserved
- * @license this header must remain in this file at all times and credit due to its author may not be removed.
- * Permission is granted for teaching and instructional purposes, learning, and non-commercial use provided that
- * copyright and license notice remain unaltered.  Please contact author for matters of inclusion in commercial or
- * for-profit software and products.
+ * @see inc.glamdring.bitecode.classfile.structure.NameAndType_#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.NameAndType_#DescriptorIndex
+ * </table>
  */
-public enum NameAndType_ {
+public  enum NameAndType_{
+Utf8Index	{{
+		size=2;
+	}}
+,DescriptorIndex	{{
+		size=2;
+	}}
+;
+	public java.lang.Class clazz;
 
-
-    /**
-     * The value of the <code>nameIndex</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="ClassFile.doc.html#7963">(§4.4.7)</a> structure representing either a valid field or method name <a href="Concepts.doc.html#21272">(§2.7)</a> stored as a simple name <a href="Concepts.doc.html#21410">(§2.7.1)</a>, that is, as a Java programming language identifier <a href="Concepts.doc.html#25339">(§2.2)</a> or as the special method name <code>&lt;init&gt;</code> <a href="Overview.doc.html#12174">(§3.9)</a>.
-     */
-    Utf8Index(2),
-
-    /**
-     * The value of the <code>DescriptorIndex</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="ClassFile.doc.html#7963">(§4.4.7)</a> structure representing a valid field descriptor <a href="ClassFile.doc.html#14152">(§4.3.2)</a> or method descriptor <a href="ClassFile.doc.html#7035">(§4.3.3)</a>.
-     */
-    DescriptorIndex(2),;
-     public int size;public Class clazz;
-
-    NameAndType_(  int size) {
-
-        this.size = size;
-    }
-
-    /**
-     * @param buf     the buffer
-     * @param results return vlaues which will be
-     *                Utf8Index,
-     *                AttributeLength,
-     *                line_number_table_length
-     * @param key     const table (optional)
-     */
-     static void next(ByteBuffer src, int[] results, IntBuffer key) {
-        for (NameAndType_ info : values()) {
-            results[info.ordinal()] = FileSlotRecord.genericGetInt(src, info.size);
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=false;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	NameAndType_()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
         }
     }
-}
+
+    void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (NameAndType_ NameAndType__ : values()) {
+            String hdr = NameAndType__.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            NameAndType__.subIndex(src, register, stack);
+        }
+    }
+
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endNameAndType_

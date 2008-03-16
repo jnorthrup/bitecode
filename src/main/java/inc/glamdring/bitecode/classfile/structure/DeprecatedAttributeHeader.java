@@ -1,46 +1,89 @@
 package inc.glamdring.bitecode.classfile.structure;
-
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * The <code>Deprecated</code> attribute<a href="#78236"><sup>7</sup></a> is an optional fixed-length attribute in the <code>attributes</code>
- * table of <code>FileSlotRecord</code> <a href="FileSlotRecord.doc.html#74353">(§4.1)</a>, <code>FieldInfoHeader</code> <a href="FileSlotRecord.doc.html#2877">(§4.5)</a>, and <code>MethodInfo</code> <a href="FileSlotRecord.doc.html#1513">(§4.6)</a> structures.
- * A class, interface, method, or field may be marked using a <code>Deprecated</code>
- * <p/>
- * attribute to indicate that the class, interface, method, or field has been superseded. A
- * runtime interpreter or tool that reads the <code>class</code> file format, such as a compiler, can
- * use this marking to advise the user that a superseded class, interface, method, or
- * field is being referred to. The presence of a <code>Deprecated</code> attribute does not alter the
- * semantics of a class or interface.
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ *
+ * @see inc.glamdring.bitecode.classfile.structure.DeprecatedAttributeHeader#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.DeprecatedAttributeHeader#AttributeLength
+ * </table>
  */
-public enum
-        DeprecatedAttributeHeader {
-    /**
-     * The value of the <code>Utf8Index</code> item must be a valid index into the <code>ConstantPoolRecord</code> table. The <code>ConstantPoolRecord</code> entry at that index must be a  {@link Utf8_}  <a href="FileSlotRecord.doc.html#7963">(§4.4.7)</a> structure representing the string <code>"Deprecated"</code>.
-     */
-    Utf8Index(2),
+public  enum DeprecatedAttributeHeader{
+Utf8Index	{{
+		size=2;
+	}}
+,AttributeLength	{{
+		size=4;
+	}}
+;
+	public java.lang.Class clazz;
 
-    /**
-     * The value of the AttributeLength item is zero.
-     */
-    AttributeLength ,;
-     public int size;public Class clazz;
-
-    DeprecatedAttributeHeader(  int size) {
-
-        this.size = size;
-    }
-
-    DeprecatedAttributeHeader() {
-        size=4;
-    }
-
-    static void next(ByteBuffer src, int[] results, int... key) {
-
-        for (DeprecatedAttributeHeader info : values()) {
-            results[info.ordinal()] = FileSlotRecord.genericGetInt(src, info.size);
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=true;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	DeprecatedAttributeHeader()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
         }
-        int pos = src.position();
-        src.position(pos + (results[AttributeLength.ordinal()] * 2));
     }
-}
+
+    void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
+
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (DeprecatedAttributeHeader DeprecatedAttributeHeader_ : values()) {
+            String hdr = DeprecatedAttributeHeader_.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            DeprecatedAttributeHeader_.subIndex(src, register, stack);
+        }
+    }
+
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endDeprecatedAttributeHeader

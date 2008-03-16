@@ -1,69 +1,94 @@
 package inc.glamdring.bitecode.classfile.structure;
+import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * The <code>SourceFile</code> attribute is an optional fixed-length attribute in the <code>attributes</code>
- * <p/>
- * table of the <code>FileSlotRecord</code> <a href="FileSlotRecord.doc.html#74353">(§4.1)</a> structure. There can be no more than one
- * <code>SourceFile</code>  attribute in the <code>attributes</code> table of a given <code>FileSlotRecord</code> structure.
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> sourcefileIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ *
+ * @see inc.glamdring.bitecode.classfile.structure.SourceFileAttribute#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.SourceFileAttribute#AttributeLength
+ * @see inc.glamdring.bitecode.classfile.structure.SourceFileAttribute#sourcefileIndex
+ * </table>
  */
- public enum SourceFileAttribute {
-    /**
-     * The value of the Utf8Index item must be a valid index into the ConstantPoolRecord table. The ConstantPoolRecord entry at that index must be a Utf8_ (§4.4.7) structure representing the string "SourceFile".
-     */
-    Utf8Index(2),
-    /**
-     * The value of the AttributeLength item of a SourceFileAttribute structure must be 2.
-     */
-    AttributeLength /* {
+public  enum SourceFileAttribute{
+Utf8Index	{{
+		size=2;
+	}}
+,AttributeLength	{{
+		size=4;
+	}}
+,sourcefileIndex	{{
+		size=2;
+	}}
+;
+	public java.lang.Class clazz;
 
-        void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
-
-                int len = src.getInt();
-                int data = src.position();
-            src.position(data + len);
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=false;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	SourceFileAttribute()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
         }
+    }
 
-    }*/,
-    /**
-     * The value of the sourcefileIndex item must
-     * be a valid index into the ConstantPoolRecord table. The
-     * constant pool entry at that index must be a Utf8_ (§4.4.7) structure representing a string.
-     * <p/>
-     * The string referenced by the sourcefileIndex item will be interpreted as indicating the name of the source file from which this
-     * class file was compiled. It will not be interpreted as indicating the name of a directory containing the file or an absolute path name for the file; such platform-specific additional information must be supplied by the runtime interpreter or development tool at the time the file name is actually used.
-     */
-    sourcefileIndex(2);
-    ;/*
-    static void index(    ByteBuffer src,     int[] register,     IntBuffer stack) {
+    void init() {
+        seek = recordLen;
+        recordLen += size;
+    }
 
-//        Logger.getAnonymousLogger().info("Stack: " + stack.position());
-
-        for (SourceFileAttribute m : values()) {
-
-
-                int i = stack.position();
-            System.out.println("sp:offset\t" + i + ":" + (i - register[FileSlotRecord.ConstantPoolRecord.ordinal()]) + "\ts:v:a " + m.size + ":" + FileSlotRecord.genericPeekInt(src, m.size) + ":\t" + m.name());
-//            FileSlotRecord.genericGetInt(src, m.size );
-            m.subIndex(src, register, stack);
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (SourceFileAttribute SourceFileAttribute_ : values()) {
+            String hdr = SourceFileAttribute_.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            SourceFileAttribute_.subIndex(src, register, stack);
         }
-
-
     }
 
-    void subIndex(    ByteBuffer src,     int[] register,     IntBuffer stack) {
-
-
-            int i = src.position();
-        src.position(i + size);
-    }*/
-
-     public int size;public Class clazz;
-
-    SourceFileAttribute(  int size) {
-        this.size = size;
-    }
-
-    SourceFileAttribute() {
-        size=4;
-    }
-}
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endSourceFileAttribute

@@ -1,66 +1,91 @@
 package inc.glamdring.bitecode.classfile.structure;
-
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- * The <code>LineNumberTable</code> attribute is an optional variable-length attribute in the
- * <code>attributes</code> table of a <code>Code</code> <a href="FileSlotRecord.doc.html#1546">(§4.7.3)</a> attribute. It may be used by debuggers to
- * determine which part of the Java virtual machine <code>code</code> array corresponds to a given
- * line number in the original source file. If <code>LineNumberTable</code> attributes are present
- * in the <code>attributes</code> table of a given <code>Code</code> attribute, then they may appear in any
- * order. Furthermore, multiple <code>LineNumberTable</code> attributes may together represent a
- * given line of a source file; that is, <code>LineNumberTable</code> attributes need not be one-to-one with source lines.
+ 	<p>recordSize: 0
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> LineNumberCount</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ *
+ * @see inc.glamdring.bitecode.classfile.structure.LineNumberHeader#Utf8Index
+ * @see inc.glamdring.bitecode.classfile.structure.LineNumberHeader#AttributeLength
+ * @see inc.glamdring.bitecode.classfile.structure.LineNumberHeader#LineNumberCount
+ * </table>
  */
-public enum LineNumberHeader {
-    Utf8Index(2),
-    AttributeLength ,
+public  enum LineNumberHeader{
+Utf8Index	{{
+		size=2;
+	}}
+,AttributeLength,LineNumberCount	{{
+		size=2;
+	}}
+;
+	public java.lang.Class clazz;
 
-    /**
-     *
-     */
-    LineNumberCount(2) {
-
-
-        void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
-            int aShort = src.getShort() & 0xffff;
-            for (int i = 0; i < aShort; i++)
-                LineNumberValue.index(src, register, stack);
+	public static int recordLen;
+	public int size;
+	public int seek;
+	public Class<? extends Enum> subRecord;
+	public java.lang.Class valueClazz;
+	final static public boolean isRecord=false;
+	final static public boolean isValue=false;
+	final static public boolean isHeader=true;
+	final static public boolean isRef=false;
+	final static public boolean isInfo=false;
+	LineNumberHeader()	{      
+            init();
+            if (subRecord == null) {
+            final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String string : strings) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalAccessException e) {
+                    } catch (NoSuchFieldException e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException
+                        e) {
+                }
+            }
         }
-    };
-
-
-     public int size;public Class clazz;
-
-
-    LineNumberHeader(  int size) {
-        this.size = size;
     }
 
-    LineNumberHeader() {
-        //To change body of created methods use File | Settings | File Templates.
+    void init() {
+        seek = recordLen;
+        recordLen += size;
     }
 
-
-    static void index(ByteBuffer src, int[] register, IntBuffer stack) {
-
-//        Logger.getAnonymousLogger().info("Stack: " + stack.position());
-
-        for (LineNumberHeader m : values()) {
-
-
-            int i = stack.position();
-            System.out.println("sp:offset\t" + i + ":" + (i - register[FileSlotRecord.ConstantPoolRecord.ordinal()]) + "\ts:v:a " + m.size + ":" + FileSlotRecord.genericPeekInt(src, m.size) + ":\t" + m.name());
-//            FileSlotRecord.genericGetInt(src, m.size );
-            m.subIndex(src, register, stack);
+    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (LineNumberHeader LineNumberHeader_ : values()) {
+            String hdr = LineNumberHeader_.name();
+            System.err.println("hdr:pos " + hdr + ':' + stack.position());
+            LineNumberHeader_.subIndex(src, register, stack);
         }
-
-
     }
 
-    void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
-
-
-        int i = src.position();
-        src.position(i + size);
-    }
-}
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    final Method method = subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+//@@ #endLineNumberHeader
