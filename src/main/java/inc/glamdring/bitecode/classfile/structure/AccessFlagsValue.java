@@ -55,6 +55,7 @@ public enum AccessFlagsValue {
     abstract_(0x0400),;
   public   int flag;
 
+ public    static int recordLen=2;
     AccessFlagsValue(int flag) {
         this.flag = flag;
     }

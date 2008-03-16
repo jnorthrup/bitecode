@@ -18,6 +18,7 @@ public class ExtractValuesTest extends TestCase {
     private static final String EOLOC = ";\n\t";
     private static final String EOLOC2 = EOLOC + "\t";
     private static final FastMap M = new FastMap();
+    private static final String[] ASSOCIATION_STRINGS = new String[]{"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
 
 
     static {
@@ -71,12 +72,11 @@ public class ExtractValuesTest extends TestCase {
                     first = false;
                     try {
                         final Field[] fields = enumClazz.getFields();
-
                         String s1 = "";
                         for (Field field : fields) {
                             String z = field.getName().replaceAll(enumClazz.getCanonicalName(), "");
 
-                            if (field.getType() != enumClazz) {
+                            if (field.getType() != enumClazz && (field.getModifiers() & Modifier.STATIC) == 0) {
                                 final Object o = field.get(instance);
                                 if (o != null && !o.equals(0))
                                     s1 += "\n\t\t" + z + "=" + o + ";";
@@ -128,61 +128,117 @@ public class ExtractValuesTest extends TestCase {
             }
 
             final String trClass = TableRecord.class.getCanonicalName();
-            String constructor = "\n" +
+//            String constructor = "\n" +
+            display += "\t" + enumName + "()\t{" +
+                    new String("      \n" +
+                            "            init();\n" +
+                            "            if (subRecord == null) {\n" +
+                            "            final String[] strings = {\"\", \"s\", \"_\", \"Index\", \"Value\", \"Ref\", \"Header\", \"Info\"};\n"+
+                            "            for (String string : strings) {\n" +
+                            "                try {\n" +
+                            "                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);\n" +
+                            "                    try {\n" +
+                            "                        size = subRecord.getField(\"recordLen\").getInt(null);\n" +
+                            "                    } catch (IllegalAccessException e) {\n" +
+                            "                    } catch (NoSuchFieldException e) {\n" +
+                            "                    }\n" +
+                            "                    break;\n" +
+                            "                } catch (ClassNotFoundException\n" +
+                            "                        e) {\n" +
+                            "                }\n" +
+                            "            }\n" +
+                            "        }\n" +
+                            "    }\n" +
+                            "\n" +
+                            "    void init() {\n" +
+                            "        seek = recordLen;\n" +
+                            "        recordLen += size;\n" +
+                            "    }\n" +
+                            "\n" +
+                            "    static void index\n" +
+                            "            (ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+                            "        for (" + enumName + " " + enumName + "_ : values()) {\n" +
+                            "            String hdr = " + enumName + "_.name();\n" +
+                            "            System.err.println(\"hdr:pos \" + hdr + ':' + stack.position());\n" +
+                            "            " + enumName + "_.subIndex(src, register, stack);\n" +
+                            "        }\n" +
+                            "    }\n" +
+                            "\n" +
+                            "    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+                            "        System.err.println(name() + \":subIndex src:stack\" + src.position() + ':' + stack.position());\n" +
+                            "        int begin = src.position();\n" +
+                            "        int stackPtr = stack.position();\n" +
+                            "        stack.put(begin);\n" +
+                            "        if (isRecord && subRecord != null) { \n" +
+                            "            try {\n" +
+                            "                final "+ TableRecord.class.getCanonicalName()+" table = "+TableRecord.class.getCanonicalName()+".valueOf(subRecord.getSimpleName());\n" +
+                            "                if (table != null) {\n" +
+                            "                    //stow the original location\n" +
+                            "                    int mark = stack.position();\n" +
+                            "                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
+                            "                    final Method method = subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class);\n" +
+                            "                    //resume the lower stack activities\n" +
+                            "                    stack.position(mark);\n" +
+                            "                }\n" +
+                            "            } catch (Exception e) {\n" +
+                            "                throw new Error(e.getMessage());\n" +
+                            "            }\n" +
+                            "        }\n" +
+                            "    }");
+//                    "\t" + enumName + "()\t{";
+//            constructor += "\t\t if(  isRecord &&subRecord == null) " +
+//                    "\t\tif (subRecord == null) {\n" +
+//                    "\t\t    try {\n" +
+//                    "\t\t        subRecord =   Class.forName(getClass().getPackage() +'.'+ name());" +
+//                    "\t\t        if(subRecord==null) subRecord =   Class.forName(getClass().getPackage() +'.'+ name()+\"Index\");" +
+//                    "\t\t        if(subRecord==null) subRecord =   Class.forName(getClass().getPackage() +'.'+ name()+\"Value\");" +
+//                    "\t\t        size=subRecord.getField(\"recordLen\").getInt(null);\n" +
+//                    "\t\t    } catch ( Exception e) {\n" +
+//                    "\t\t    }\n";
+//            constructor += "\t\tinit();\n" +
+//                    "\t}}\n" +
+//                    "\n" + "";
+//            display += constructor;
+//            display += ((String) "\tvoid init() {\n" +
+//                    "\t\tseek = recordLen;\n" +
+//                    "\t\trecordLen += size;\n" +
+//                    "\t}\n" +
+//                    "\n" + "");
+//            final String indexMethod = "\tstatic void index(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+//                    "\t\tfor (" + enumName + " " + enumName + " : values()) {\n" +
+//                    "\t\t    String hdr = " + enumName + ".name();\n" +
+//                    "\t\t    System.err.println(\"hdr:pos \" + hdr + ':' + stack.position());\n" +
+//                    "\t\t    " + enumName + ".subIndex(src, register, stack);\n" +
+//                    "\t\t}\n" +
+//                    "\t}\n" +
+//                    "\n" + "";
+//            display += indexMethod;
+//            final String subIndexMethod = "\tprivate void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+//                    "\t\t" + "\t\t   System.err.println(name()+\":subIndex src:stack\" + src.position()+ ':' + stack.position());" + EOL +//
+//                    "\n" +
+//                    "\t\t int begin = src.position();\n" +
+//                    "\t\t int stackPtr = stack.position();\n" +
+//                    "\t\tstack.put(begin);\n" +
+//                    "\n" +
+//                    "\t\tif (isRecord&&subRecord != null) {\n" +
+//                    "//            if(subRecord!=" + trClass + ")\n" +
+//                    "//            else\n" +
+//                    "\t\t    try {\n" +
+//                    "\t\t        final " + TableRecord.class.getCanonicalName() + " table = TableRecord.valueOf(subRecord.getSimpleName());" + EOL +
+//                    "\t\t        if (table != null) {\n" +
+//                    "\t\t            //stow the original location\n" +
+//                    "\t\t            int mark = stack.position();\n" +
+//                    "\t\t            stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek)/4);\n" +
+//                    "\t\t            final Method method = subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class);\n" +
+//                    "\t\t            //resume the lower stack activities\n" +
+//                    "\t\t            stack.position(mark);\n" +
+//                    "\t\t\t\t}\n" +
+//                    "\t\t\t}catch ( Exception e) {\n" +
+//                    "\t\t\t\tthrow new Error(e.getMessage());\n" +
+//                    "\t\t\t}\n" +
+//                    "\t\t}\n" +
+//                    "\t}\n";
 
-
-                    "\t" + enumName + "()\t{";
-            constructor += "\t\t if(  isRecord &&subRecord == null) " +
-                    "\t\tif (subRecord == null) {\n" +
-                    "\t\t    try {\n" +
-                    "\t\t        subRecord =   Class.forName(getClass().getPackage() +'.'+ name()) "    +
-                    "\t\t        size=subRecord.getField(\"recordLen\").getInt(null);\n" +
-                    "\t\t    } catch ( Exception e) {\n" +
-                    "\t\t    }\n";
-            constructor += "\t\tinit();\n" +
-                    "\t}}\n" +
-                    "\n" + "";
-            display += constructor;
-            display += ((String) "\tvoid init() {\n" +
-                    "\t\tseek = recordLen;\n" +
-                    "\t\trecordLen += size;\n" +
-                    "\t}\n" +
-                    "\n" + "");
-            final String indexMethod = "\tstatic void index(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
-                    "\t\tfor (" + enumName + " " + enumName + " : values()) {\n" +
-                    "\t\t    String hdr = " + enumName + ".name();\n" +
-                    "\t\t    System.err.println(\"hdr:pos \" + hdr + ':' + stack.position());\n" +
-                    "\t\t    " + enumName + ".subIndex(src, register, stack);\n" +
-                    "\t\t}\n" +
-                    "\t}\n" +
-                    "\n" + "";
-            display += indexMethod;
-            final String subIndexMethod = "\tprivate void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
-                    "\t\t" + "\t\t   System.err.println(name()+\":subIndex src:stack\" + src.position()+ ':' + stack.position());" + EOL +//
-                    "\n" +
-                    "\t\t int begin = src.position();\n" +
-                    "\t\t int stackPtr = stack.position();\n" +
-                    "\t\tstack.put(begin);\n" +
-                    "\n" +
-                    "\t\tif (isRecord&&subRecord != null) {\n" +
-                    "//            if(subRecord!=" + trClass + ")\n" +
-                    "//            else\n" +
-                    "\t\t    try {\n" +
-                    "\t\t        final " + TableRecord.class.getCanonicalName() + " table = TableRecord.valueOf(subRecord.getSimpleName());" + EOL +
-                    "\t\t        if (table != null) {\n" +
-                    "\t\t            //stow the original location\n" +
-                    "\t\t            int mark = stack.position();\n" +
-                    "\t\t            stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek)/4);\n" +
-                    "\t\t            final Method method = subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class);\n" +
-                    "\t\t            //resume the lower stack activities\n" +
-                    "\t\t            stack.position(mark);\n" +
-                    "\t\t\t\t}\n" +
-                    "\t\t\t}catch ( Exception e) {\n" +
-                    "\t\t\t\tthrow new Error(e.getMessage());\n" +
-                    "\t\t\t}\n" +
-                    "\t\t}\n" +
-                    "\t}\n";
-            display += subIndexMethod + "";
             final String postScript = display += "}\n" +
                     "//@@ #end" + enumName + "";
 
@@ -205,26 +261,7 @@ public class ExtractValuesTest extends TestCase {
         }
         return display;
     }
-
-    private <T extends Enum<T>> String createConstructor(String enumName) {
-        return "\n" +
-
-
-                "\t" + enumName + "\t{" +
-                "\t\t if(  this.isRecord=name().endsWith(\"Record\"&&subRecord == null);" +
-                "\t\tif (subRecord == null) {\n" +
-                "\t\t    try {\n" +
-                "\t\t        subRecord = (Class<? extends Enum>) Class.forName(getClass().getCanonicalName());\n" +
-                "\t\t        size=subRecord.getField(\"recordLen\").getInt(subRecord);\n" +
-                "\t\t    } catch ( Exception e) {\n" +
-                "\t\t    }\n" +
-
-                "\t\tinit();\n" +
-                "\t}}\n" +
-                "\n";
-    }
-
-    public static String genHeader(Class<? extends Enum> docEnum) {
+    public String genHeader(Class<? extends Enum> docEnum) {
 
 
         final String thePackage = docEnum.getPackage().getName();
@@ -233,60 +270,63 @@ public class ExtractValuesTest extends TestCase {
         String s = "";
 
 
-        Enum[] enums = null;
-        enums = docEnum.getEnumConstants()/*.invoke(null)*/;
+        final Enum[] enums = docEnum.getEnumConstants()/*.invoke(null)*/;
         int seek = 0;
         int recordLen = 0;
         try {
             recordLen = (Integer) docEnum.getField("recordLen").get(null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        s += "\n/**************************************************************************/" + "\n\n/**\n\n" + "\t<p>recordSize: " + recordLen + "\n\n<table><tr>" +
-                "<th>name</th><th>offset</th><th>size</th><th>Sub-Index</th></tr>";
+        s += "\n\n/**\n " + "\t<p>recordSize: " + recordLen + "\n * <table><tr>" +
+                " * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr>";
         for (Enum theSlot : enums) {
             int size = 0;
             try {
                 size = (Integer) theSlot.getDeclaringClass().getField("size").get(theSlot);
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            } catch (Exception e) {
             }
             try {
                 seek = (Integer) theSlot.getDeclaringClass().getField("seek").get(theSlot);
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            } catch (Exception e) {
             }
             final String name = theSlot.name();
             Class<?> subRecord = ByteBuffer.class;
-            try {
-                subRecord = Class.forName(thePackage + '.' + name);
-            } catch (ClassNotFoundException e) {
+            for (String string : ASSOCIATION_STRINGS) {
+                try {
+                    subRecord = Class.forName(docEnum.getPackage().getName() + '.' + theSlot.name() + string);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+
+                    } catch (Exception e) {
+                    } 
+                } catch (Exception e) {
+                }
+                if (subRecord != ByteBuffer.class) break;
             }
 
             s +=
-                    "<tr>" +
-                            "<th>\n\n" + name + "</th>" +
+                    " * <tr>" +
+                            "<th> " + name + "</th>" +
                             "<td>" + size + "</td>" +
                             "<td>" + seek + "</td>" +
                             "<td>{@link " + subRecord.getCanonicalName() + "}</td>" +
-                            "</tr>";
+                            "</tr>\n";
 
         }
         s += " *\n";
         for (Enum theSlot : enums) {
             s += " * @see " + docEnum.getCanonicalName() + "#" + theSlot.name() + '\n';
         }
-        s += " *</table>\n";
+        s += " * </table>\n";
 
         s += " */\n";
 
 
         return s;
     }
-} 
+
+    private String name() {
+        return null;
+    }
+}

@@ -28,7 +28,7 @@ public enum AttributeHeader {
 
     AttributeHeader() {
     }
-
+          static public int recordLen;
     static void index(ByteBuffer src, int[] register, IntBuffer stack) {
 
 //        Logger.getAnonymousLogger().info("Stack: " + stack.position());
