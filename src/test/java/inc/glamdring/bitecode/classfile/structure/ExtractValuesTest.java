@@ -1,6 +1,7 @@
 package inc.glamdring.bitecode.classfile.structure;
 
 
+import inc.glamdring.util.*;
 import javolution.util.*;
 import junit.framework.*;
 
@@ -17,15 +18,15 @@ public class ExtractValuesTest extends TestCase {
     private static final String EOL = "\n";
     private static final String EOLOC = ";\n\t";
     private static final String EOLOC2 = EOLOC + "\t";
-    private static final FastMap M = new FastMap();
+    private static final FastMap<CharSequence, String> M = new FastMap<CharSequence, String>();
     private static final String[] ASSOCIATION_STRINGS = new String[]{"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
 
 
     static {
 
         M.put("recordLen", "public static int recordLen;");
-        M.put("size", "public int size;");
-        M.put("seek", "public int seek;");
+        M.put("size", "final public int size;");
+        M.put("seek", "final public int seek;");
         M.put("subRecord", "public Class<? extends Enum> subRecord;");
         M.put("valueClazz", "public java.lang.Class valueClazz;");
 
@@ -57,12 +58,7 @@ public class ExtractValuesTest extends TestCase {
 
             boolean first = true;
 
-            Map<Enum, Class> subRecords = new EnumMap(enumClazz);
-            Map<Enum, Integer> sizes = new EnumMap(enumClazz);
             for (Enum instance : parentEnum) {
-                String instanceSimpleName = null;
-
-
                 try {
                     String pname = getClass().getPackage().getName();
                     String symbol = instance.name();
@@ -76,10 +72,10 @@ public class ExtractValuesTest extends TestCase {
                         for (Field field : fields) {
                             String z = field.getName().replaceAll(enumClazz.getCanonicalName(), "");
 
-                            if (field.getType() != enumClazz && (field.getModifiers() & Modifier.STATIC) == 0) {
+                            if (field.getType() != enumClazz && (field.getModifiers() & (Modifier.STATIC|Modifier.FINAL)) == 0) {
                                 final Object o = field.get(instance);
                                 if (o != null && !o.equals(0))
-                                    s1 += "\n\t\t" + z + "=" + o + ";";
+                                    s1 += "\n\t\t" + z + "=" + (field.getType() == Class.class ? ((Class) o).getCanonicalName() + ".class" : String.valueOf(o)) + ";";
                             }
                         }
                         if (s1.length() > 4)
@@ -107,19 +103,14 @@ public class ExtractValuesTest extends TestCase {
                 if (s1.length() > 4)
                     display += s1 + EOL;
 
-                final boolean isRecord = enumClazz.getSimpleName().endsWith("Record");
-                M.put("isRecord", "final static public boolean isRecord=" + isRecord + ';');
-                final boolean isValue = enumClazz.getSimpleName().endsWith("Value");
-                M.put("isValue", "final static public boolean isValue=" + isValue + ';');
-                final boolean isHeader = enumClazz.getSimpleName().endsWith("Header");
-                M.put("isHeader", "final static public boolean isHeader=" + isHeader + ';');
-                final boolean isRef = enumClazz.getSimpleName().endsWith("Ref");
-                M.put("isRef", "final static public boolean isRef=" + isRef + ';');
-                final boolean isInfo = enumClazz.getSimpleName().endsWith("Info");
-                M.put("isInfo", "final static public boolean isInfo=" + isInfo + ';');
+                M.put("isRecord", "final static public boolean isRecord=" + enumClazz.getSimpleName().endsWith("Record") + ';');
+                M.put("isValue", "final static public boolean isValue=" + enumClazz.getSimpleName().endsWith("Value") + ';');
+                M.put("isHeader", "final static public boolean isHeader=" + enumClazz.getSimpleName().endsWith("Header") + ';');
+                M.put("isRef", "final static public boolean isRef=" + enumClazz.getSimpleName().endsWith("Ref") + ';');
+                M.put("isInfo", "final static public boolean isInfo=" + enumClazz.getSimpleName().endsWith("Info") + ';');
 
 
-                for (Object field : M.values()) {
+                for (String field : M.values()) {
 
                     display += "\t" + field + EOL;
                 }
@@ -128,63 +119,76 @@ public class ExtractValuesTest extends TestCase {
             }
 
             final String trClass = TableRecord.class.getCanonicalName();
-//            String constructor = "\n" +
-            display += "\t" + enumName + "()\t{" +
-                    new String("      \n" +
-                            "            init();\n" +
-                            "            if (subRecord == null) {\n" +
-                            "            final String[] strings = {\"\", \"s\", \"_\", \"Index\", \"Value\", \"Ref\", \"Header\", \"Info\"};\n"+
-                            "            for (String string : strings) {\n" +
-                            "                try {\n" +
-                            "                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + string);\n" +
-                            "                    try {\n" +
-                            "                        size = subRecord.getField(\"recordLen\").getInt(null);\n" +
-                            "                    } catch (IllegalAccessException e) {\n" +
-                            "                    } catch (NoSuchFieldException e) {\n" +
-                            "                    }\n" +
-                            "                    break;\n" +
-                            "                } catch (ClassNotFoundException\n" +
-                            "                        e) {\n" +
-                            "                }\n" +
-                            "            }\n" +
-                            "        }\n" +
-                            "    }\n" +
-                            "\n" +
-                            "    void init() {\n" +
-                            "        seek = recordLen;\n" +
-                            "        recordLen += size;\n" +
-                            "    }\n" +
-                            "\n" +
-                            "    static void index\n" +
-                            "            (ByteBuffer src, int[] register, IntBuffer stack) {\n" +
-                            "        for (" + enumName + " " + enumName + "_ : values()) {\n" +
-                            "            String hdr = " + enumName + "_.name();\n" +
-                            "            System.err.println(\"hdr:pos \" + hdr + ':' + stack.position());\n" +
-                            "            " + enumName + "_.subIndex(src, register, stack);\n" +
-                            "        }\n" +
-                            "    }\n" +
-                            "\n" +
-                            "    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
-                            "        System.err.println(name() + \":subIndex src:stack\" + src.position() + ':' + stack.position());\n" +
-                            "        int begin = src.position();\n" +
-                            "        int stackPtr = stack.position();\n" +
-                            "        stack.put(begin);\n" +
-                            "        if (isRecord && subRecord != null) { \n" +
-                            "            try {\n" +
-                            "                final "+ TableRecord.class.getCanonicalName()+" table = "+TableRecord.class.getCanonicalName()+".valueOf(subRecord.getSimpleName());\n" +
-                            "                if (table != null) {\n" +
-                            "                    //stow the original location\n" +
-                            "                    int mark = stack.position();\n" +
-                            "                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
-                            "                    final Method method = subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class);\n" +
-                            "                    //resume the lower stack activities\n" +
-                            "                    stack.position(mark);\n" +
-                            "                }\n" +
-                            "            } catch (Exception e) {\n" +
-                            "                throw new Error(e.getMessage());\n" +
-                            "            }\n" +
-                            "        }\n" +
-                            "    }");
+
+            display += "\t" + enumName + " " +
+                    "(int... dimensions) {\n" +
+                    "        seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));\n" +
+                    "    }\n" +
+                    "\n" +
+                    "    private int initRecordLen(int size) {\n" +
+                    "        int rl = recordLen;\n" +
+                    "        recordLen += init() == size ? size : size;\n" +
+                    "        return rl;\n" +
+                    "    }\n" +
+                    "\n" +
+                    "    int init() {\n" +
+                    "        int size = 0;\n" +
+                    "        if (/*isRecord&&*/subRecord == null) {\n" +
+                    "            final String[] indexPrefixes = {\"\", \"s\", \"_\", \"Index\", \"Value\", \"Ref\", \"Header\", \"Info\"};\n" +
+                    "            for (String indexPrefix : indexPrefixes) {\n" +
+                    "                try {\n" +
+                    "                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);\n" +
+                    "                    try {\n" +
+                    "                        size = subRecord.getField(\"recordLen\").getInt(null);\n" +
+                    "                    } catch (Exception e) {\n" +
+                    "                    }\n" +
+                    "                    break;\n" +
+                    "                } catch (ClassNotFoundException e) {\n" +
+                    "                }\n" +
+                    "                final String[] vPrefixes = {\"_\", \"\", \"$\"};\n" +
+                    "                final String[] names = {name().toLowerCase(), name(),};\n" +
+                    "                if (valueClazz == null && (isRef | isValue))\n" +
+                    "                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)\n" +
+                    "                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)\n" +
+                    "                            if (names[i1].endsWith(vPrefixes[i]))\n" +
+                    "                                try {\n" +
+                    "                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));\n" +
+                    "                                } catch (ClassNotFoundException e) {\n" +
+                    "                                }\n" +
+                    "            }\n" +
+                    "        }\n" +
+                    "        return size;\n" +
+                    "    }\n" +
+                    "    static void index\n" +
+                    "            (ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+                    "        for (" + enumName + " " + enumName + "_ : values()) {\n" +
+                    "            String hdr = " + enumName + "_.name();\n" +
+                    "            System.err.println(\"hdr:pos \" + hdr + ':' + stack.position());\n" +
+                    "            " + enumName + "_.subIndex(src, register, stack);\n" +
+                    "        }\n" +
+                    "    }\n" +
+                    "\n" +
+                    "    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {\n" +
+                    "        System.err.println(name() + \":subIndex src:stack\" + src.position() + ':' + stack.position());\n" +
+                    "        int begin = src.position();\n" +
+                    "        int stackPtr = stack.position();\n" +
+                    "        stack.put(begin);\n" +
+                    "        if (isRecord && subRecord != null) { \n" +
+                    "            try {\n" +
+                    "                final " + TableRecord.class.getCanonicalName() + " table = " + TableRecord.class.getCanonicalName() + ".valueOf(subRecord.getSimpleName());\n" +
+                    "                if (table != null) {\n" +
+                    "                    //stow the original location\n" +
+                    "                    int mark = stack.position();\n" +
+                    "                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
+                    "                    subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);\n" +
+                    "                    //resume the lower stack activities\n" +
+                    "                    stack.position(mark);\n" +
+                    "                }\n" +
+                    "            } catch (Exception e) {\n" +
+                    "                throw new Error(e.getMessage());\n" +
+                    "            }\n" +
+                    "        }\n" +
+                    "    }";
 //                    "\t" + enumName + "()\t{";
 //            constructor += "\t\t if(  isRecord &&subRecord == null) " +
 //                    "\t\tif (subRecord == null) {\n" +
@@ -261,48 +265,62 @@ public class ExtractValuesTest extends TestCase {
         }
         return display;
     }
+
     public String genHeader(Class<? extends Enum> docEnum) {
 
-
-        final String thePackage = docEnum.getPackage().getName();
+//        final String thePackage = docEnum.getPackage().getName();
 
 
         String s = "";
 
 
         final Enum[] enums = docEnum.getEnumConstants()/*.invoke(null)*/;
-        int seek = 0;
+        int size = 0, seek = 0;
         int recordLen = 0;
         try {
-            recordLen = (Integer) docEnum.getField("recordLen").get(null);
+            recordLen = (Integer) docEnum.getDeclaredField("recordLen").get(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
         s += "\n\n/**\n " + "\t<p>recordSize: " + recordLen + "\n * <table><tr>" +
                 " * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr>";
-        for (Enum theSlot : enums) {
-            int size = 0;
-            try {
-                size = (Integer) theSlot.getDeclaringClass().getField("size").get(theSlot);
-            } catch (Exception e) {
-            }
-            try {
-                seek = (Integer) theSlot.getDeclaringClass().getField("seek").get(theSlot);
-            } catch (Exception e) {
-            }
-            final String name = theSlot.name();
-            Class<?> subRecord = ByteBuffer.class;
-            for (String string : ASSOCIATION_STRINGS) {
-                try {
-                    subRecord = Class.forName(docEnum.getPackage().getName() + '.' + theSlot.name() + string);
-                    try {
-                        size = subRecord.getField("recordLen").getInt(null);
 
+        String name = "";
+        for (Enum theSlot : enums) {
+            name = theSlot.name();
+            Class aClass = null;
+            try {
+                try {
+                    aClass = (Class<ByteBuffer>) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
+                } catch (Exception e) {
+                    final Pair<Class<? extends Enum>, Integer> record = getSubRecord(name);
+                    aClass = (Class) record.getFirst();
+                    size = record.getSecond();
+                }
+            } catch (Exception e) {
+            }
+
+            if (aClass == null) {
+                try {
+                    try {
+                        aClass = (Class<ByteBuffer>) theSlot.getDeclaringClass().getDeclaredField("valueClass").get(theSlot);
                     } catch (Exception e) {
-                    } 
+                        aClass = getValueClass(name);
+                    }
                 } catch (Exception e) {
                 }
-                if (subRecord != ByteBuffer.class) break;
+            }
+            if (size == 0) {
+                try {
+                    size = (Integer) theSlot.getDeclaringClass().getDeclaredField("size").get(theSlot);
+                } catch (Exception e) {
+                }
+            }
+
+            try {
+                seek = (Integer) theSlot.getDeclaringClass().getDeclaredField("seek").get(theSlot);
+            } catch (Exception e) {
+
             }
 
             s +=
@@ -310,11 +328,11 @@ public class ExtractValuesTest extends TestCase {
                             "<th> " + name + "</th>" +
                             "<td>" + size + "</td>" +
                             "<td>" + seek + "</td>" +
-                            "<td>{@link " + subRecord.getCanonicalName() + "}</td>" +
+                            "<td>{@link " + (aClass == null ? ByteBuffer.class : aClass).getCanonicalName() + "}</td>" +
                             "</tr>\n";
-
         }
         s += " *\n";
+
         for (Enum theSlot : enums) {
             s += " * @see " + docEnum.getCanonicalName() + "#" + theSlot.name() + '\n';
         }
@@ -326,7 +344,39 @@ public class ExtractValuesTest extends TestCase {
         return s;
     }
 
-    private String name() {
+
+    private Pair<Class<? extends Enum>, Integer> getSubRecord(String name) {
+        final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+        for (String indexPrefix : indexPrefixes) {
+            try {
+                return new Pair<Class<? extends Enum>, Integer>(Class.forName(getClass().getPackage().getName() + '.' + name + indexPrefix), Class.forName(getClass().getPackage().getName() + '.' + name + indexPrefix).getField("recordLen").getInt(null));
+            } catch (Exception e) {
+            }
+            break;
+        }
         return null;
+    }
+
+    private Class<?> getValueClass(String name) {
+        final String[] vPrefixes = {"_", "", "$"};
+        final String[] packages = {"",
+                Object.class.getPackage().getName() + ".",
+                List.class.getPackage().getName() + ".",
+                getClass().getPackage().getName() + "."
+        };
+        final String[] names = {name.toLowerCase(), name,};
+
+        Class<?> valueClazz = null;
+        for (int i = 0; i < vPrefixes.length; i++)
+            for (int i1 = 0; i1 < names.length; i1++)
+                if (names[i1].endsWith(vPrefixes[i]))
+                    for (String aPackage : packages) {
+                        try {
+                            valueClazz = Class.forName(aPackage + "." + names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
+                            return valueClazz;
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
+        return valueClazz;
     }
 }

@@ -1,7 +1,5 @@
 package inc.glamdring.bitecode.classfile.structure;
 
-import javolution.util.*;
-
 import java.io.*;
 import java.lang.reflect.*;
 import java.net.*;
@@ -13,9 +11,7 @@ public class ExtractValues {
 
     public Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
         String packageName = getClass().getPackage().getName();
-        Map<Class<? extends Enum>, Iterable<? extends Enum>> map = new FastMap<Class<? extends Enum>, Iterable<? extends Enum>>();
-
-
+        Map<Class<? extends Enum>, Iterable<? extends Enum>> map = new HashMap<Class<? extends Enum>, Iterable<? extends Enum>>();
         for (Class<? extends Enum> aClass : getClassessOfParent(packageName, Enum.class)) {
             Enum[] constants = aClass.getEnumConstants();
             map.put(aClass, Arrays.asList(constants));
@@ -23,11 +19,11 @@ public class ExtractValues {
         return map;
     }
 
-    public static List<Class<? extends Object>> getClassesForPackage(String pckgname)
+    public static List<Class> getClassesForPackage(String pckgname)
             throws ClassNotFoundException {
         // This will hold a list of directories matching the pckgname.
         //There may be more than one if a package is split over multiple jars/paths
-        List<Class<? extends Object>> classes = new ArrayList<Class<? extends Object>>();
+        List<Class > classes = new ArrayList< Class>();
         ArrayList<File> directories = new ArrayList<File>();
         try {
 
@@ -75,7 +71,7 @@ public class ExtractValues {
                     if (file.endsWith(".class")) {
                         // removes the .class extension
                         classes.add(
-                                (Class<Object>) Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
+                                Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
                     }
                 }
             } else {

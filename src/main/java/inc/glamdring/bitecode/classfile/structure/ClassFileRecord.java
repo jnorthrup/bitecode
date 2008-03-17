@@ -1,9 +1,10 @@
 package inc.glamdring.bitecode.classfile.structure;
-import java.nio.*;
+
 import java.lang.reflect.*;
+import java.nio.*;
 
 /**
- 	<p>recordSize: 0
+ * <p>recordSize: 0
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ClassResourceUri</th><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> FileSlotRecord</th><td>0</td><td>0</td><td>{@link inc.glamdring.bitecode.classfile.structure.FileSlotRecord}</td></tr>
  * <tr><th> TableRecord</th><td>1572864</td><td>0</td><td>{@link inc.glamdring.bitecode.classfile.structure.TableRecord}</td></tr>
@@ -11,33 +12,31 @@ import java.lang.reflect.*;
  * @see inc.glamdring.bitecode.classfile.structure.ClassFileRecord#ClassResourceUri
  * @see inc.glamdring.bitecode.classfile.structure.ClassFileRecord#FileSlotRecord
  * @see inc.glamdring.bitecode.classfile.structure.ClassFileRecord#TableRecord
- * </table>
+ *      </table>
  */
-public  enum ClassFileRecord{
-ClassResourceUri	{{
-		size=256;
-	}}
-,FileSlotRecord	{{
-		subRecord=class inc.glamdring.bitecode.classfile.structure.FileSlotRecord;
-	}}
-,TableRecord	{{
-		size=1572864;
-		subRecord=class inc.glamdring.bitecode.classfile.structure.TableRecord;
-	}}
-;
-	public static int recordLen;
-	public int size;
-	public int seek;
-	public Class<? extends Enum> subRecord;
-	public java.lang.Class valueClazz;
-	final static public boolean isRecord=true;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=false;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=false;
-	ClassFileRecord()	{      
-            init();
-            if (subRecord == null) {
+public enum ClassFileRecord {
+    ClassResourceUri {{
+        size = 256;
+    }}, FileSlotRecord {{
+    subRecord = inc.glamdring.bitecode.classfile.structure.FileSlotRecord.class;
+}}, TableRecord {{
+    size = 1572864;
+    subRecord = inc.glamdring.bitecode.classfile.structure.TableRecord.class;
+}};
+    public static int recordLen;
+    public int size;
+    public int seek;
+    public Class<? extends Enum> subRecord;
+    public java.lang.Class valueClazz;
+    final static public boolean isRecord = true;
+    final static public boolean isValue = false;
+    final static public boolean isHeader = false;
+    final static public boolean isRef = false;
+    final static public boolean isInfo = false;
+
+    ClassFileRecord() {
+        init();
+        if (subRecord == null) {
             final String[] strings = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String string : strings) {
                 try {
@@ -74,7 +73,7 @@ ClassResourceUri	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.classfile.structure.TableRecord table = inc.glamdring.bitecode.classfile.structure.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
@@ -89,5 +88,6 @@ ClassResourceUri	{{
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endClassFileRecord
