@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ConstantPoolRef</th><td>4</td><td>0</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
- * <tr><th> subType</th><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> utf8Bitmap</th><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> tag</th><td>4</td><td>7</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> ConstantPoolRef</td><td>4</td><td>0</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
+ * <tr><td> subType</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> utf8Bitmap</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> tag</td><td>4</td><td>7</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
  * @see inc.glamdring.bitecode.ConstantPoolRecord#subType
@@ -27,7 +27,7 @@ ConstantPoolRef(0x4)	{{
 	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	public static final boolean isRecord=false;
+	public static final boolean isRecord=true;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;

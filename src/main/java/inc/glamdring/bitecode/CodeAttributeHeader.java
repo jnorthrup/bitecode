@@ -4,13 +4,13 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 18
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxStack</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxLocals</th><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> CodeLength</th><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ExceptionTableLength</th><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> attributes_count</th><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> MaxStack</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> MaxLocals</td><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> CodeLength</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> ExceptionTableLength</td><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> attributes_count</td><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.CodeAttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.CodeAttributeHeader#AttributeLength
@@ -24,15 +24,15 @@ import java.lang.reflect.*;
 public enum CodeAttributeHeader { 
 Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4),ExceptionTableLength(0x2),attributes_count(0x2);
 	public static int recordLen;
-	final public int size;
-	final public int seek;
+	public final int size;
+	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	final static public boolean isRecord=false;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=true;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=false;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
 	CodeAttributeHeader (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }
@@ -45,7 +45,7 @@ Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4)
 
     int init() {
         int size = 0;
-        if ( subRecord == null) {
+        if (subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -57,21 +57,33 @@ Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4)
                     break;
                 } catch (ClassNotFoundException e) {
                 }
-                final String[] vPrefixes = {"_", "", "$"};
-                final String[] names = {name().toLowerCase(), name(),};
-                if (valueClazz == null && (isRef | isValue))
-                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)
-                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)
-                            if (names[i1].endsWith(vPrefixes[i]))
-                                try {
-                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
-                                } catch (ClassNotFoundException e) {
-                                }
+
+            }
+        }
+
+        for (String vPrefixe1 : new String[]{"_", "", "$"}) {
+            if (valueClazz != null) break;
+            String vPrefixe = vPrefixe1;
+            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+                if (valueClazz != null) break;
+                final String trailName = name1;
+                if (trailName.endsWith(vPrefixe))
+                    for (String aPackage1 : new String[]{"",
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
+                    }) {
+                        if (valueClazz != null) break;
+
+                        try {
+                            valueClazz = Class.forName(aPackage1 + "." + trailName.replaceAll(trailName + vPrefixe, trailName));
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
             }
         }
         return size;
-    }
-    static void index
+    }    static void index
             (ByteBuffer src, int[] register, IntBuffer stack) {
         for (CodeAttributeHeader CodeAttributeHeader_ : values()) {
             String hdr = CodeAttributeHeader_.name();

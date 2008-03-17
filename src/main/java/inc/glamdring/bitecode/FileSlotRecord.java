@@ -4,17 +4,17 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 24
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> magic</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> minor_version</th><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> major_version</th><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ConstantPoolRecord</th><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><th> AccessFlagsValue</th><td>4</td><td>10</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><th> ClassIndex</th><td>4</td><td>12</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> SuperClassIndex</th><td>4</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> InterFaceTableRecord</th><td>4</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> FieldRecord</th><td>4</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MethodsRecord</th><td>4</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributesRecord</th><td>4</td><td>22</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> minor_version</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> major_version</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> ConstantPoolRecord</td><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>4</td><td>10</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> ClassIndex</td><td>4</td><td>12</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> SuperClassIndex</td><td>4</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> InterFaceTableRecord</td><td>4</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> FieldRecord</td><td>4</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> MethodsRecord</td><td>4</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AttributesRecord</td><td>4</td><td>22</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.FileSlotRecord#magic
  * @see inc.glamdring.bitecode.FileSlotRecord#minor_version
@@ -40,15 +40,15 @@ magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
 	public java.lang.Class clazz;
 
 	public static int recordLen;
-	final public int size;
-	final public int seek;
+	public final int size;
+	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	final static public boolean isRecord=true;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=false;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=false;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
 	FileSlotRecord (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }
@@ -61,7 +61,7 @@ magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
 
     int init() {
         int size = 0;
-        if ( subRecord == null) {
+        if (subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -73,21 +73,33 @@ magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
                     break;
                 } catch (ClassNotFoundException e) {
                 }
-                final String[] vPrefixes = {"_", "", "$"};
-                final String[] names = {name().toLowerCase(), name(),};
-                if (valueClazz == null && (isRef | isValue))
-                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)
-                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)
-                            if (names[i1].endsWith(vPrefixes[i]))
-                                try {
-                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
-                                } catch (ClassNotFoundException e) {
-                                }
+
+            }
+        }
+
+        for (String vPrefixe1 : new String[]{"_", "", "$"}) {
+            if (valueClazz != null) break;
+            String vPrefixe = vPrefixe1;
+            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+                if (valueClazz != null) break;
+                final String trailName = name1;
+                if (trailName.endsWith(vPrefixe))
+                    for (String aPackage1 : new String[]{"",
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
+                    }) {
+                        if (valueClazz != null) break;
+
+                        try {
+                            valueClazz = Class.forName(aPackage1 + "." + trailName.replaceAll(trailName + vPrefixe, trailName));
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
             }
         }
         return size;
-    }
-    static void index
+    }    static void index
             (ByteBuffer src, int[] register, IntBuffer stack) {
         for (FileSlotRecord FileSlotRecord_ : values()) {
             String hdr = FileSlotRecord_.name();

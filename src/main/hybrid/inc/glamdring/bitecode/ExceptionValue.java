@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> start_pc</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> end_pc</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> handler_pc</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> catch_type</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> end_pc</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> handler_pc</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> catch_type</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.ExceptionValue#start_pc
  * @see inc.glamdring.bitecode.ExceptionValue#end_pc
@@ -25,7 +25,7 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
+	public static final boolean isValue=true;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;

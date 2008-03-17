@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 6
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> AccessFlagsValue</th><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><th> Utf8Index</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> DescriptorIndex</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> attributes_count</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> AccessFlagsValue</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> Utf8Index</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> DescriptorIndex</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> attributes_count</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.FieldInfoHeader#AccessFlagsValue
  * @see inc.glamdring.bitecode.FieldInfoHeader#Utf8Index
@@ -29,7 +29,7 @@ AccessFlagsValue(0x2)	{{
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
+	public static final boolean isHeader=true;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;
 	FieldInfoHeader (int... dimensions) {

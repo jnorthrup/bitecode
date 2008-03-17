@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> InnerClassInfoIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> OuterClassInfoIndex</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> inner_nameIndex</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AccessFlagsValue</th><td>2</td><td>6</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> InnerClassInfoIndex</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> OuterClassInfoIndex</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> inner_nameIndex</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>2</td><td>6</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
  *
  * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
  * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex
@@ -20,17 +20,18 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
 		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
 	}}
 ;
-	public java.lang.Class clazz; 
+	public java.lang.Class clazz;
+
 	public static int recordLen;
-	final public int size;
-	final public int seek;
+	public final int size;
+	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	final static public boolean isRecord=false;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=false;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=true;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
 	InnerClassInfo (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }
@@ -43,7 +44,7 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
 
     int init() {
         int size = 0;
-        if ( subRecord == null) {
+        if (subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -55,21 +56,33 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
                     break;
                 } catch (ClassNotFoundException e) {
                 }
-                final String[] vPrefixes = {"_", "", "$"};
-                final String[] names = {name().toLowerCase(), name(),};
-                if (valueClazz == null && (isRef | isValue))
-                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)
-                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)
-                            if (names[i1].endsWith(vPrefixes[i]))
-                                try {
-                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
-                                } catch (ClassNotFoundException e) {
-                                }
+
+            }
+        }
+
+        for (String vPrefixe1 : new String[]{"_", "", "$"}) {
+            if (valueClazz != null) break;
+            String vPrefixe = vPrefixe1;
+            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+                if (valueClazz != null) break;
+                final String trailName = name1;
+                if (trailName.endsWith(vPrefixe))
+                    for (String aPackage1 : new String[]{"",
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
+                    }) {
+                        if (valueClazz != null) break;
+
+                        try {
+                            valueClazz = Class.forName(aPackage1 + "." + trailName.replaceAll(trailName + vPrefixe, trailName));
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
             }
         }
         return size;
-    }
-    static void index
+    }    static void index
             (ByteBuffer src, int[] register, IntBuffer stack) {
         for (InnerClassInfo InnerClassInfo_ : values()) {
             String hdr = InnerClassInfo_.name();

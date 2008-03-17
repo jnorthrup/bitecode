@@ -4,19 +4,19 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 38
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> INVALID</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Utf8_</th><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
- * <tr><th> UNUSED</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Integer_</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Float_</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Long_</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Double_</th><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Class_</th><td>2</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> String_</th><td>2</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> Field_</th><td>2</td><td>22</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
- * <tr><th> Method_</th><td>2</td><td>26</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
- * <tr><th> InterfaceMethod_</th><td>2</td><td>30</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
- * <tr><th> NameAndType_</th><td>2</td><td>34</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Utf8_</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
+ * <tr><td> UNUSED</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Integer_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Float_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Long_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Double_</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Class_</td><td>2</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> String_</td><td>2</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> Field_</td><td>2</td><td>22</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
+ * <tr><td> Method_</td><td>2</td><td>26</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
+ * <tr><td> InterfaceMethod_</td><td>2</td><td>30</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
+ * <tr><td> NameAndType_</td><td>2</td><td>34</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
  *
  * @see inc.glamdring.bitecode.ConstantPoolRef#INVALID
  * @see inc.glamdring.bitecode.ConstantPoolRef#Utf8_
@@ -60,7 +60,7 @@ INVALID,Utf8_(0x2)	{{
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
+	public static final boolean isRef=true;
 	public static final boolean isInfo=false;
 	ConstantPoolRef (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));

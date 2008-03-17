@@ -4,16 +4,16 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> public_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> private_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> protected_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> static_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> final_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> super_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> volatile_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> transient_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> interface_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> abstract_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> private_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> protected_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> static_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> final_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> super_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> volatile_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> transient_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> interface_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> abstract_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.AccessFlagsValue#public_
  * @see inc.glamdring.bitecode.AccessFlagsValue#private_
@@ -67,7 +67,7 @@ public_	{{
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
+	public static final boolean isValue=true;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;

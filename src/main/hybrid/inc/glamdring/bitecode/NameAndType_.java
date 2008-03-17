@@ -4,8 +4,8 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 4
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> DescriptorIndex</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> DescriptorIndex</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.NameAndType_#Utf8Index
  * @see inc.glamdring.bitecode.NameAndType_#DescriptorIndex

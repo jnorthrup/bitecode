@@ -4,8 +4,8 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 6
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.DeprecatedAttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.DeprecatedAttributeHeader#AttributeLength
@@ -22,7 +22,7 @@ Utf8Index(0x2),AttributeLength(0x4);
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
+	public static final boolean isHeader=true;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;
 	DeprecatedAttributeHeader (int... dimensions) {

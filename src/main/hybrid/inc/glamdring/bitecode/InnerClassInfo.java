@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> InnerClassInfoIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> OuterClassInfoIndex</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> inner_nameIndex</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AccessFlagsValue</th><td>2</td><td>6</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> InnerClassInfoIndex</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> OuterClassInfoIndex</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> inner_nameIndex</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>2</td><td>6</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
  *
  * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
  * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex
@@ -31,7 +31,7 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
+	public static final boolean isInfo=true;
 	InnerClassInfo (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }

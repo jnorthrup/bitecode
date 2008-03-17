@@ -1,32 +1,32 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
 import java.lang.reflect.*;
-import java.util.*;
 
 /**
  	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ExceptionsCount</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> ExceptionsCount</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.ExceptionTableHeader#Utf8Index
  * @see inc.glamdring.bitecode.ExceptionTableHeader#AttributeLength
  * @see inc.glamdring.bitecode.ExceptionTableHeader#ExceptionsCount
  * </table>
  */
-public enum ExceptionTableHeader {
+public enum ExceptionTableHeader { 
 Utf8Index(0x2),AttributeLength(0x4),ExceptionsCount(0x2);
 	public java.lang.Class clazz;
+
 	public static int recordLen;
-	final public int size;
-	final public int seek;
+	public final int size;
+	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	final static public boolean isRecord=false;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=true;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=false;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
 	ExceptionTableHeader (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }
@@ -63,9 +63,9 @@ Utf8Index(0x2),AttributeLength(0x4),ExceptionsCount(0x2);
                 final String trailName = name1;
                 if (trailName.endsWith(vPrefixe))
                     for (String aPackage1 : new String[]{"",
-                            Object.class.getPackage().getName() + ".",
-                            java.util.List.class.getPackage().getName() + ".",
-                            getClass().getPackage().getName() + "."
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
                     }) {
                         if (valueClazz != null) break;
 
@@ -91,7 +91,7 @@ Utf8Index(0x2),AttributeLength(0x4),ExceptionsCount(0x2);
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) {
+        if (isRecord && subRecord != null) { 
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

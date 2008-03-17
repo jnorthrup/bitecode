@@ -85,7 +85,7 @@
       <file leaf-file-name="MethodAccessValue.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/MethodAccessValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="4" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.17098446">
+            <state line="29" column="4" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
@@ -94,7 +94,7 @@
       <file leaf-file-name="AccessFlagsValue.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.34455958">
+            <state line="29" column="12" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
@@ -103,16 +103,16 @@
       <file leaf-file-name="AttributeHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.34196892">
+            <state line="13" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="725" selection-end="725" vertical-scroll-proportion="0.34455958">
+            <state line="18" column="6" selection-start="852" selection-end="852" vertical-scroll-proportion="0.4183938">
               <folding />
             </state>
           </provider>
@@ -121,7 +121,7 @@
       <file leaf-file-name="CodeAttributeHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/CodeAttributeHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="12" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.33290157">
+            <state line="23" column="12" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
@@ -130,7 +130,7 @@
       <file leaf-file-name="ConstantPoolRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="822" selection-end="822" vertical-scroll-proportion="0.33290157">
+            <state line="17" column="12" selection-start="822" selection-end="822" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
@@ -139,10 +139,8 @@
       <file leaf-file-name="ConstantPoolRef.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="14" selection-start="3383" selection-end="3383" vertical-scroll-proportion="1.7668394">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="77" column="14" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.02849741">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,7 +148,7 @@
       <file leaf-file-name="ExceptionTableHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ExceptionTableHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="37" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.19170985">
+            <state line="66" column="37" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.42875648">
               <folding />
             </state>
           </provider>
@@ -159,16 +157,16 @@
       <file leaf-file-name="TableRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/TableRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.12305699">
+            <state line="23" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.02849741">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NameAndType_.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NameAndType_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/NameAndType_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="12" selection-start="3535" selection-end="3535" vertical-scroll-proportion="1.1968912">
+            <state line="55" column="23" selection-start="1947" selection-end="1947" vertical-scroll-proportion="1.5388601">
               <folding />
             </state>
           </provider>
@@ -486,7 +484,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="3" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" order="1" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28016528" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22644629" order="1" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="6" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="12" />
@@ -573,72 +571,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/MethodAccessValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="4" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.17098446">
+        <state line="29" column="4" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.02849741">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.34455958">
+        <state line="29" column="12" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.02849741">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.34196892">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="725" selection-end="725" vertical-scroll-proportion="0.34455958">
+        <state line="13" column="12" selection-start="515" selection-end="515" vertical-scroll-proportion="0.02849741">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/CodeAttributeHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="12" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.33290157">
+        <state line="23" column="12" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.02849741">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="822" selection-end="822" vertical-scroll-proportion="0.33290157">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ExceptionTableHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="37" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.19170985">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/TableRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.12305699">
+        <state line="17" column="12" selection-start="822" selection-end="822" vertical-scroll-proportion="0.02849741">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="14" selection-start="3383" selection-end="3383" vertical-scroll-proportion="1.7668394">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="77" column="14" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.02849741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ExceptionTableHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="37" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.42875648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/TableRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.02849741">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/NameAndType_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="12" selection-start="3535" selection-end="3535" vertical-scroll-proportion="1.1968912">
+        <state line="55" column="23" selection-start="1947" selection-end="1947" vertical-scroll-proportion="1.5388601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="852" selection-end="852" vertical-scroll-proportion="0.4183938">
           <folding />
         </state>
       </provider>

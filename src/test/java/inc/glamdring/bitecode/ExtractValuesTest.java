@@ -119,7 +119,7 @@ public class ExtractValuesTest extends TestCase {
                     display += s1 + EOL;
 
                 for (String isaref : ISAREFS) {
-                    M.put("is" + isaref, ISA_MODS + " boolean " + "is"+isaref + "=" + enumClazz.getSimpleName().endsWith('"'+ isaref + '"') + ';');
+                    M.put("is" + isaref, ISA_MODS + " boolean " + "is"+isaref + "=" + enumClazz.getSimpleName().endsWith(  isaref  ) + ';');
                 }
 
 
@@ -299,7 +299,7 @@ public class ExtractValuesTest extends TestCase {
 
             s +=
                     " * <tr>" +
-                            "<th> " + name + "</th>" +
+                            "<td> " + name + "</td>" +
                             "<td>" + size + "</td>" +
                             "<td>" + seek + "</td>" +
                             "<td>{@link " + (aClass == null ? ByteBuffer.class : aClass).getCanonicalName() + "}</td>" +

@@ -4,13 +4,13 @@ import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 18
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxStack</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxLocals</th><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> CodeLength</th><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ExceptionTableLength</th><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> attributes_count</th><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> MaxStack</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> MaxLocals</td><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> CodeLength</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> ExceptionTableLength</td><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><td> attributes_count</td><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.CodeAttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.CodeAttributeHeader#AttributeLength
@@ -30,7 +30,7 @@ Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4)
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
+	public static final boolean isHeader=true;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;
 	CodeAttributeHeader (int... dimensions) {
