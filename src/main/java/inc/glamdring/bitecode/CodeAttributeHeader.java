@@ -1,27 +1,28 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 18
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxStack</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MaxLocals</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> CodeLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ExceptionTableLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> attributes_count</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> MaxStack</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> MaxLocals</th><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> CodeLength</th><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> ExceptionTableLength</th><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> attributes_count</th><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see CodeAttributeHeader#Utf8Index
- * @see CodeAttributeHeader#AttributeLength
- * @see CodeAttributeHeader#MaxStack
- * @see CodeAttributeHeader#MaxLocals
- * @see CodeAttributeHeader#CodeLength
- * @see CodeAttributeHeader#ExceptionTableLength
- * @see CodeAttributeHeader#attributes_count
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#Utf8Index
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#AttributeLength
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#MaxStack
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#MaxLocals
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#CodeLength
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#ExceptionTableLength
+ * @see inc.glamdring.bitecode.CodeAttributeHeader#attributes_count
  * </table>
  */
 public enum CodeAttributeHeader { 
-Utf8Index(2),AttributeLength(4),MaxStack(2),MaxLocals(2),CodeLength(4),ExceptionTableLength(2),attributes_count(2);
+Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4),ExceptionTableLength(0x2),attributes_count(0x2);
 	public static int recordLen;
 	final public int size;
 	final public int seek;
@@ -44,7 +45,7 @@ Utf8Index(2),AttributeLength(4),MaxStack(2),MaxLocals(2),CodeLength(4),Exception
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -86,7 +87,7 @@ Utf8Index(2),AttributeLength(4),MaxStack(2),MaxLocals(2),CodeLength(4),Exception
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

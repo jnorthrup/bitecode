@@ -1,23 +1,24 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 1573144
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ClassResourceUri</th><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> FileSlotRecord</th><td>256</td><td>0</td><td>{@link FileSlotRecord}</td></tr>
- * <tr><th> TableRecord</th><td>256</td><td>0</td><td>{@link TableRecord}</td></tr>
+ * <tr><th> FileSlotRecord</th><td>256</td><td>256</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
+ * <tr><th> TableRecord</th><td>256</td><td>280</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
  *
- * @see ClassFileRecord#ClassResourceUri
- * @see ClassFileRecord#FileSlotRecord
- * @see ClassFileRecord#TableRecord
+ * @see inc.glamdring.bitecode.ClassFileRecord#ClassResourceUri
+ * @see inc.glamdring.bitecode.ClassFileRecord#FileSlotRecord
+ * @see inc.glamdring.bitecode.ClassFileRecord#TableRecord
  * </table>
  */
 public enum ClassFileRecord { 
-ClassResourceUri(0x100),FileSlotRecord	{{
-		subRecord= FileSlotRecord.class;
+ClassResourceUri(0x100),FileSlotRecord(0x18)	{{
+		subRecord=inc.glamdring.bitecode.FileSlotRecord.class;
 	}}
 ,TableRecord(0x180000)	{{
-		subRecord= TableRecord.class;
+		subRecord=inc.glamdring.bitecode.TableRecord.class;
 	}}
 ;
 	public static int recordLen;
@@ -42,7 +43,7 @@ ClassResourceUri(0x100),FileSlotRecord	{{
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -84,7 +85,7 @@ ClassResourceUri(0x100),FileSlotRecord	{{
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final inc.glamdring.bitecode.TableRecord table =inc.glamdring.bitecode. TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

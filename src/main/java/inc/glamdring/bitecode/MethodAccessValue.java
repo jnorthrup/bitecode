@@ -1,5 +1,6 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 0
@@ -13,15 +14,15 @@ import java.nio.*;
  * <tr><th> abstract_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> strict_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see MethodAccessValue#public_
- * @see MethodAccessValue#private_
- * @see MethodAccessValue#protected_
- * @see MethodAccessValue#static_
- * @see MethodAccessValue#final_
- * @see MethodAccessValue#synchronized_
- * @see MethodAccessValue#native_
- * @see MethodAccessValue#abstract_
- * @see MethodAccessValue#strict_
+ * @see inc.glamdring.bitecode.MethodAccessValue#public_
+ * @see inc.glamdring.bitecode.MethodAccessValue#private_
+ * @see inc.glamdring.bitecode.MethodAccessValue#protected_
+ * @see inc.glamdring.bitecode.MethodAccessValue#static_
+ * @see inc.glamdring.bitecode.MethodAccessValue#final_
+ * @see inc.glamdring.bitecode.MethodAccessValue#synchronized_
+ * @see inc.glamdring.bitecode.MethodAccessValue#native_
+ * @see inc.glamdring.bitecode.MethodAccessValue#abstract_
+ * @see inc.glamdring.bitecode.MethodAccessValue#strict_
  * </table>
  */
 public enum MethodAccessValue { 
@@ -48,7 +49,7 @@ public_,private_,protected_,static_,final_,synchronized_,native_,abstract_,stric
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -90,7 +91,7 @@ public_,private_,protected_,static_,final_,synchronized_,native_,abstract_,stric
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

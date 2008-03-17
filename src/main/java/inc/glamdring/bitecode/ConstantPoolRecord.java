@@ -1,30 +1,25 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ConstantPoolRef</th><td>4</td><td>0</td><td>{@link ConstantPoolRef}</td></tr>
+ 	<p>recordSize: 8
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> ConstantPoolRef</th><td>4</td><td>0</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
  * <tr><th> subType</th><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> utf8Bitmap</th><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> tag</th><td>4</td><td>7</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see ConstantPoolRecord#ConstantPoolRef
- * @see ConstantPoolRecord#subType
- * @see ConstantPoolRecord#utf8Bitmap
- * @see ConstantPoolRecord#tag
+ * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
+ * @see inc.glamdring.bitecode.ConstantPoolRecord#subType
+ * @see inc.glamdring.bitecode.ConstantPoolRecord#utf8Bitmap
+ * @see inc.glamdring.bitecode.ConstantPoolRecord#tag
  * </table>
  */
 public enum ConstantPoolRecord { 
-ConstantPoolRef(4)	{{
-		subRecord= ConstantPoolRef.class;
+ConstantPoolRef(0x4)	{{
+		subRecord=inc.glamdring.bitecode.ConstantPoolRef.class;
 	}}
-,subType(2)	{{
-	}}
-,utf8Bitmap(1)	{{
-	}}
-,tag(1)	{{
-	}}
-;
+,subType(0x2),utf8Bitmap(0x1),tag(0x1);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -49,7 +44,7 @@ ConstantPoolRef(4)	{{
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -91,7 +86,7 @@ ConstantPoolRef(4)	{{
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

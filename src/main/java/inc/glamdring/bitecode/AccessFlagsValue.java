@@ -1,5 +1,6 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
  	<p>recordSize: 0
@@ -14,16 +15,16 @@ import java.nio.*;
  * <tr><th> interface_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><th> abstract_</th><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see AccessFlagsValue#public_
- * @see AccessFlagsValue#private_
- * @see AccessFlagsValue#protected_
- * @see AccessFlagsValue#static_
- * @see AccessFlagsValue#final_
- * @see AccessFlagsValue#super_
- * @see AccessFlagsValue#volatile_
- * @see AccessFlagsValue#transient_
- * @see AccessFlagsValue#interface_
- * @see AccessFlagsValue#abstract_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#public_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#private_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#protected_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#static_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#final_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#super_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#volatile_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#transient_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#interface_
+ * @see inc.glamdring.bitecode.AccessFlagsValue#abstract_
  * </table>
  */
 public enum AccessFlagsValue { 
@@ -82,7 +83,7 @@ public_	{{
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -124,7 +125,7 @@ public_	{{
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

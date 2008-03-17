@@ -1,17 +1,18 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 4
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> start_pc</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> line_number</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> line_number</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see LineNumberValue#start_pc
- * @see LineNumberValue#line_number
+ * @see inc.glamdring.bitecode.LineNumberValue#start_pc
+ * @see inc.glamdring.bitecode.LineNumberValue#line_number
  * </table>
  */
 public enum LineNumberValue { 
-start_pc(2),line_number(2);
+start_pc(0x2),line_number(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -36,7 +37,7 @@ start_pc(2),line_number(2);
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -78,7 +79,7 @@ start_pc(2),line_number(2);
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

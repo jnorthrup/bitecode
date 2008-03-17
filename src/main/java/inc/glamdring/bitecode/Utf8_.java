@@ -1,15 +1,16 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 2
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> length</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see Utf8_#length
+ * @see inc.glamdring.bitecode.Utf8_#length
  * </table>
  */
 public enum Utf8_ { 
-length(2);
+length(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -34,7 +35,7 @@ length(2);
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -76,7 +77,7 @@ length(2);
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

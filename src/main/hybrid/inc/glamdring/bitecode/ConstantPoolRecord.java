@@ -23,15 +23,15 @@ ConstantPoolRef(0x4)	{{
 	public java.lang.Class clazz;
 
 	public static int recordLen;
-	final public int size;
-	final public int seek;
+	public final int size;
+	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	final static public boolean isRecord=true;
-	final static public boolean isValue=false;
-	final static public boolean isHeader=false;
-	final static public boolean isRef=false;
-	final static public boolean isInfo=false;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
 	ConstantPoolRecord (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }
@@ -44,7 +44,7 @@ ConstantPoolRef(0x4)	{{
 
     int init() {
         int size = 0;
-        if ( subRecord == null) {
+        if (subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -56,21 +56,33 @@ ConstantPoolRef(0x4)	{{
                     break;
                 } catch (ClassNotFoundException e) {
                 }
-                final String[] vPrefixes = {"_", "", "$"};
-                final String[] names = {name().toLowerCase(), name(),};
-                if (valueClazz == null && (isRef | isValue))
-                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)
-                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)
-                            if (names[i1].endsWith(vPrefixes[i]))
-                                try {
-                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
-                                } catch (ClassNotFoundException e) {
-                                }
+
+            }
+        }
+
+        for (String vPrefixe1 : new String[]{"_", "", "$"}) {
+            if (valueClazz != null) break;
+            String vPrefixe = vPrefixe1;
+            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+                if (valueClazz != null) break;
+                final String trailName = name1;
+                if (trailName.endsWith(vPrefixe))
+                    for (String aPackage1 : new String[]{"",
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
+                    }) {
+                        if (valueClazz != null) break;
+
+                        try {
+                            valueClazz = Class.forName(aPackage1 + "." + trailName.replaceAll(trailName + vPrefixe, trailName));
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
             }
         }
         return size;
-    }
-    static void index
+    }    static void index
             (ByteBuffer src, int[] register, IntBuffer stack) {
         for (ConstantPoolRecord ConstantPoolRecord_ : values()) {
             String hdr = ConstantPoolRecord_.name();

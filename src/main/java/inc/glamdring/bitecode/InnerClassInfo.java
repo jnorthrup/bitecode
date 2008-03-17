@@ -1,26 +1,26 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 8
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> InnerClassInfoIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> OuterClassInfoIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> inner_nameIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AccessFlagsValue</th><td>2</td><td>0</td><td>{@link AccessFlagsValue}</td></tr>
+ * <tr><th> OuterClassInfoIndex</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> inner_nameIndex</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AccessFlagsValue</th><td>2</td><td>6</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
  *
- * @see InnerClassInfo#InnerClassInfoIndex
- * @see InnerClassInfo#OuterClassInfoIndex
- * @see InnerClassInfo#inner_nameIndex
- * @see InnerClassInfo#AccessFlagsValue
+ * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
+ * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex
+ * @see inc.glamdring.bitecode.InnerClassInfo#inner_nameIndex
+ * @see inc.glamdring.bitecode.InnerClassInfo#AccessFlagsValue
  * </table>
  */
 public enum InnerClassInfo { 
-InnerClassInfoIndex(2),OuterClassInfoIndex(2),inner_nameIndex(2),AccessFlagsValue(2)	{{
-		subRecord= AccessFlagsValue.class;
+InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFlagsValue(0x2)	{{
+		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
 	}}
 ;
-	public java.lang.Class clazz;
-
+	public java.lang.Class clazz; 
 	public static int recordLen;
 	final public int size;
 	final public int seek;
@@ -43,7 +43,7 @@ InnerClassInfoIndex(2),OuterClassInfoIndex(2),inner_nameIndex(2),AccessFlagsValu
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -85,7 +85,7 @@ InnerClassInfoIndex(2),OuterClassInfoIndex(2),inner_nameIndex(2),AccessFlagsValu
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

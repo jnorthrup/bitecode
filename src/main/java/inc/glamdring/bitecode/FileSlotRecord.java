@@ -1,41 +1,42 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 24
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> magic</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> minor_version</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> major_version</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> ConstantPoolRecord</th><td>4</td><td>0</td><td>{@link ConstantPoolRecord}</td></tr>
- * <tr><th> AccessFlagsValue</th><td>4</td><td>0</td><td>{@link AccessFlagsValue}</td></tr>
- * <tr><th> ClassIndex</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> SuperClassIndex</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> InterFaceTableRecord</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> FieldRecord</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> MethodsRecord</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributesRecord</th><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> minor_version</th><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> major_version</th><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> ConstantPoolRecord</th><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><th> AccessFlagsValue</th><td>4</td><td>10</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><th> ClassIndex</th><td>4</td><td>12</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> SuperClassIndex</th><td>4</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> InterFaceTableRecord</th><td>4</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> FieldRecord</th><td>4</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> MethodsRecord</th><td>4</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributesRecord</th><td>4</td><td>22</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see FileSlotRecord#magic
- * @see FileSlotRecord#minor_version
- * @see FileSlotRecord#major_version
- * @see FileSlotRecord#ConstantPoolRecord
- * @see FileSlotRecord#AccessFlagsValue
- * @see FileSlotRecord#ClassIndex
- * @see FileSlotRecord#SuperClassIndex
- * @see FileSlotRecord#InterFaceTableRecord
- * @see FileSlotRecord#FieldRecord
- * @see FileSlotRecord#MethodsRecord
- * @see FileSlotRecord#AttributesRecord
+ * @see inc.glamdring.bitecode.FileSlotRecord#magic
+ * @see inc.glamdring.bitecode.FileSlotRecord#minor_version
+ * @see inc.glamdring.bitecode.FileSlotRecord#major_version
+ * @see inc.glamdring.bitecode.FileSlotRecord#ConstantPoolRecord
+ * @see inc.glamdring.bitecode.FileSlotRecord#AccessFlagsValue
+ * @see inc.glamdring.bitecode.FileSlotRecord#ClassIndex
+ * @see inc.glamdring.bitecode.FileSlotRecord#SuperClassIndex
+ * @see inc.glamdring.bitecode.FileSlotRecord#InterFaceTableRecord
+ * @see inc.glamdring.bitecode.FileSlotRecord#FieldRecord
+ * @see inc.glamdring.bitecode.FileSlotRecord#MethodsRecord
+ * @see inc.glamdring.bitecode.FileSlotRecord#AttributesRecord
  * </table>
  */
 public enum FileSlotRecord { 
-magic(4),minor_version(2),major_version(2),ConstantPoolRecord(2)	{{
-		subRecord= ConstantPoolRecord.class;
+magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
+		subRecord=inc.glamdring.bitecode.ConstantPoolRecord.class;
 	}}
-,AccessFlagsValue(2)	{{
-		subRecord= AccessFlagsValue.class;
+,AccessFlagsValue(0x2)	{{
+		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
 	}}
-,ClassIndex(2),SuperClassIndex(2),InterFaceTableRecord(2),FieldRecord(2),MethodsRecord(2),AttributesRecord(2);
+,ClassIndex(0x2),SuperClassIndex(0x2),InterFaceTableRecord(0x2),FieldRecord(0x2),MethodsRecord(0x2),AttributesRecord(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -60,7 +61,7 @@ magic(4),minor_version(2),major_version(2),ConstantPoolRecord(2)	{{
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -102,7 +103,7 @@ magic(4),minor_version(2),major_version(2),ConstantPoolRecord(2)	{{
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

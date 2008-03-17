@@ -1,19 +1,20 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 4
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> LineNumberCount</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> LineNumberCount</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see LineNumberHeader#Utf8Index
- * @see LineNumberHeader#AttributeLength
- * @see LineNumberHeader#LineNumberCount
+ * @see inc.glamdring.bitecode.LineNumberHeader#Utf8Index
+ * @see inc.glamdring.bitecode.LineNumberHeader#AttributeLength
+ * @see inc.glamdring.bitecode.LineNumberHeader#LineNumberCount
  * </table>
  */
 public enum LineNumberHeader { 
-Utf8Index(2),AttributeLength,LineNumberCount(2);
+Utf8Index(0x2),AttributeLength,LineNumberCount(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -38,7 +39,7 @@ Utf8Index(2),AttributeLength,LineNumberCount(2);
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -80,7 +81,7 @@ Utf8Index(2),AttributeLength,LineNumberCount(2);
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

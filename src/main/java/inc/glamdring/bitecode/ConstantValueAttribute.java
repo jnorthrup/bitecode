@@ -1,19 +1,20 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 8
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> constantvalueIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> constantvalueIndex</th><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see ConstantValueAttribute#Utf8Index
- * @see ConstantValueAttribute#AttributeLength
- * @see ConstantValueAttribute#constantvalueIndex
+ * @see inc.glamdring.bitecode.ConstantValueAttribute#Utf8Index
+ * @see inc.glamdring.bitecode.ConstantValueAttribute#AttributeLength
+ * @see inc.glamdring.bitecode.ConstantValueAttribute#constantvalueIndex
  * </table>
  */
 public enum ConstantValueAttribute { 
-Utf8Index(2),AttributeLength(4),constantvalueIndex(2);
+Utf8Index(0x2),AttributeLength(0x4),constantvalueIndex(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -38,7 +39,7 @@ Utf8Index(2),AttributeLength(4),constantvalueIndex(2);
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -80,7 +81,7 @@ Utf8Index(2),AttributeLength(4),constantvalueIndex(2);
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

@@ -1,24 +1,25 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> AccessFlagsValue</th><td>2</td><td>0</td><td>{@link AccessFlagsValue}</td></tr>
- * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> DescriptorIndex</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> attributes_count</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ 	<p>recordSize: 6
+ * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> AccessFlagsValue</th><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><th> Utf8Index</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> DescriptorIndex</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> attributes_count</th><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see FieldInfoHeader#AccessFlagsValue
- * @see FieldInfoHeader#Utf8Index
- * @see FieldInfoHeader#DescriptorIndex
- * @see FieldInfoHeader#attributes_count
+ * @see inc.glamdring.bitecode.FieldInfoHeader#AccessFlagsValue
+ * @see inc.glamdring.bitecode.FieldInfoHeader#Utf8Index
+ * @see inc.glamdring.bitecode.FieldInfoHeader#DescriptorIndex
+ * @see inc.glamdring.bitecode.FieldInfoHeader#attributes_count
  * </table>
  */
 public enum FieldInfoHeader { 
-AccessFlagsValue(2)	{{
-		subRecord= AccessFlagsValue.class;
+AccessFlagsValue(0x2)	{{
+		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
 	}}
-,Utf8Index(2),DescriptorIndex,attributes_count(2);
+,Utf8Index(0x2),DescriptorIndex,attributes_count(0x2);
 	public java.lang.Class clazz;
 
 	public static int recordLen;
@@ -43,7 +44,7 @@ AccessFlagsValue(2)	{{
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -85,7 +86,7 @@ AccessFlagsValue(2)	{{
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

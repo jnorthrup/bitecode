@@ -1,18 +1,18 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
+ 	<p>recordSize: 6
  * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><th> Utf8Index</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><th> AttributeLength</th><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <tr><th> AttributeLength</th><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
- * @see SyntheticAttribute#Utf8Index
- * @see SyntheticAttribute#AttributeLength
+ * @see inc.glamdring.bitecode.SyntheticAttribute#Utf8Index
+ * @see inc.glamdring.bitecode.SyntheticAttribute#AttributeLength
  * </table>
  */
 public enum SyntheticAttribute { 
-Utf8Index(2),AttributeLength(4);
-	public java.lang.Class clazz;
+Utf8Index(0x2),AttributeLength(0x4);
 
 	public static int recordLen;
 	final public int size;
@@ -36,7 +36,7 @@ Utf8Index(2),AttributeLength(4);
 
     int init() {
         int size = 0;
-        if (/*isRecord&&*/subRecord == null) {
+        if ( subRecord == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
             for (String indexPrefix : indexPrefixes) {
                 try {
@@ -78,7 +78,7 @@ Utf8Index(2),AttributeLength(4);
         stack.put(begin);
         if (isRecord && subRecord != null) { 
             try {
-                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();

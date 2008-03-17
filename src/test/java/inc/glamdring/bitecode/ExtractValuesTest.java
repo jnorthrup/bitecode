@@ -16,20 +16,23 @@ public class ExtractValuesTest extends TestCase {
 
     ExtractValues extractValues = new ExtractValues();
     private static final String EOL = "\n";
-    private static final String EOLOC = ";\n\t";
-    private static final String EOLOC2 = EOLOC + "\t";
     private static final FastMap<CharSequence, String> M = new FastMap<CharSequence, String>();
-    private static final String[] ASSOCIATION_STRINGS = new String[]{"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+    private static final String[] ISAREFS = new String[]{"Record", "Value", "Header", "Ref", "Info"};
+    private static final String ISA_MODS = Modifier.toString(Modifier.STATIC | Modifier.FINAL | Modifier.PUBLIC);
 
 
     static {
 
-        M.put("recordLen", "public static int recordLen;");
-        M.put("size", "final public int size;");
-        M.put("seek", "final public int seek;");
+
+        M.put("recordLen", Modifier.toString(Modifier.STATIC | Modifier.PUBLIC) + " int recordLen;");
+        M.put("size", Modifier.toString(  Modifier.FINAL | Modifier.PUBLIC) + " int size;");
+        M.put("seek", Modifier.toString(  Modifier.FINAL | Modifier.PUBLIC) + " int seek;");
         M.put("subRecord", "public Class<? extends Enum> subRecord;");
         M.put("valueClazz", "public java.lang.Class valueClazz;");
 
+        for (String isaref : ISAREFS) {
+            M.put("is" + isaref, "");
+        }
     }
 
     public <T extends Enum<T>> String testGetEnumsStructsForPackage() throws Exception {
@@ -104,14 +107,20 @@ public class ExtractValuesTest extends TestCase {
                         s1 += "\t" + z + ";" + EOL;
                 }
 
-                if (s1.length() > 4)
-                    display += s1 + EOL;
-
-                M.put("isRecord", "final static public boolean isRecord=" + enumClazz.getSimpleName().endsWith("Record") + ';');
+/*
+                M.put("isRecord", "final static public boolean is
                 M.put("isValue", "final static public boolean isValue=" + enumClazz.getSimpleName().endsWith("Value") + ';');
                 M.put("isHeader", "final static public boolean isHeader=" + enumClazz.getSimpleName().endsWith("Header") + ';');
                 M.put("isRef", "final static public boolean isRef=" + enumClazz.getSimpleName().endsWith("Ref") + ';');
                 M.put("isInfo", "final static public boolean isInfo=" + enumClazz.getSimpleName().endsWith("Info") + ';');
+
+*/
+                if (s1.length() > 4)
+                    display += s1 + EOL;
+
+                for (String isaref : ISAREFS) {
+                    M.put("is" + isaref, ISA_MODS + " boolean " + "is"+isaref + "=" + enumClazz.getSimpleName().endsWith('"'+ isaref + '"') + ';');
+                }
 
 
                 for (String field : M.values()) {
@@ -122,7 +131,7 @@ public class ExtractValuesTest extends TestCase {
             } catch (Exception e) {
             }
 
-            final String trClass = TableRecord.class.getCanonicalName();
+            final String trClass = inc.glamdring.bitecode.TableRecord.class.getCanonicalName();
 
             display += "\t" + enumName + " " +
                     "(int... dimensions) {\n" +
@@ -137,7 +146,7 @@ public class ExtractValuesTest extends TestCase {
                     "\n" +
                     "    int init() {\n" +
                     "        int size = 0;\n" +
-                    "        if ( subRecord == null) {\n" +
+                    "        if (subRecord == null) {\n" +
                     "            final String[] indexPrefixes = {\"\", \"s\", \"_\", \"Index\", \"Value\", \"Ref\", \"Header\", \"Info\"};\n" +
                     "            for (String indexPrefix : indexPrefixes) {\n" +
                     "                try {\n" +
@@ -149,20 +158,33 @@ public class ExtractValuesTest extends TestCase {
                     "                    break;\n" +
                     "                } catch (ClassNotFoundException e) {\n" +
                     "                }\n" +
-                    "                final String[] vPrefixes = {\"_\", \"\", \"$\"};\n" +
-                    "                final String[] names = {name().toLowerCase(), name(),};\n" +
-                    "                if (valueClazz == null && (isRef | isValue))\n" +
-                    "                    for (int i = 0; valueClazz == null && i < vPrefixes.length; i++)\n" +
-                    "                        for (int i1 = 0; valueClazz == null && i1 < names.length; i1++)\n" +
-                    "                            if (names[i1].endsWith(vPrefixes[i]))\n" +
-                    "                                try {\n" +
-                    "                                    valueClazz = Class.forName(names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));\n" +
-                    "                                } catch (ClassNotFoundException e) {\n" +
-                    "                                }\n" +
+                    "\n" +
+                    "            }\n" +
+                    "        }\n" +
+                    "\n" +
+                    "        for (String vPrefixe1 : new String[]{\"_\", \"\", \"$\"}) {\n" +
+                    "            if (valueClazz != null) break;\n" +
+                    "            String vPrefixe = vPrefixe1;\n" +
+                    "            for (String name1 : new String[]{name().toLowerCase(), name(),}) {\n" +
+                    "                if (valueClazz != null) break;\n" +
+                    "                final String trailName = name1;\n" +
+                    "                if (trailName.endsWith(vPrefixe))\n" +
+                    "                    for (String aPackage1 : new String[]{\"\",\n" +
+                    "                           getClass().getPackage().getName() + \".\",\n" +
+                    "                           \"java.lang.\",\n" +
+                    "                           \"java.util.\",\n" +
+                    "                    }) {\n" +
+                    "                        if (valueClazz != null) break;\n" +
+                    "\n" +
+                    "                        try {\n" +
+                    "                            valueClazz = Class.forName(aPackage1 + \".\" + trailName.replaceAll(trailName + vPrefixe, trailName));\n" +
+                    "                        } catch (ClassNotFoundException e) {\n" +
+                    "                        }\n" +
+                    "                    }\n" +
                     "            }\n" +
                     "        }\n" +
                     "        return size;\n" +
-                    "    }\n" +
+                    "    }" +
                     "    static void index\n" +
                     "            (ByteBuffer src, int[] register, IntBuffer stack) {\n" +
                     "        for (" + enumName + " " + enumName + "_ : values()) {\n" +
@@ -244,7 +266,8 @@ public class ExtractValuesTest extends TestCase {
                 try {
                     aClass = (Class<ByteBuffer>) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
                 } catch (Exception e) {
-                    final Pair<Class<? extends Enum>, Integer> record = getSubRecord(name);
+                    final inc.glamdring.util.Pair<Class<? extends Enum>, Integer> record;
+                    record = getSubRecord(name);
                     aClass = (Class) record.getFirst();
                     size = record.getSecond();
                 }
