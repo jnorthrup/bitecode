@@ -20,11 +20,6 @@
             <artifactId>javolution</artifactId>
             <version>5.2.6</version>
         </dependency>
-        <dependency>
-            <groupId>velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.5</version>
-        </dependency>
     </dependencies>
     <build>
         <pluginManagement>
@@ -34,7 +29,7 @@
                     <artifactId>maven-jxr-plugin</artifactId>
                     <configuration>
                         <include>
-                            **/java/*.java
+                            **.java
                         </include>
                     </configuration>
 
@@ -61,31 +56,34 @@
                         <downloadJavadocs>true</downloadJavadocs>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>maven</groupId>
-                    <artifactId>maven-pmd-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <configuration>
-                        <include>
-                            **/java/*.java
-                        </include>
-                    </configuration>
-                </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
     <reporting>
-        <plugins>
+        <plugins>    
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <configuration>
+                        <include>
+                            **.java
+                        </include>
+                    </configuration>
+                </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.0</version>
-            </plugin>
+            </plugin><!--
+            <plugin>
+                <groupId>maven-plugins</groupId>
+                <artifactId>maven-doxygen-plugin</artifactId>
+                --><!--<version>1.0</version>--><!--
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
+                <version>LATEST</version>
                 <configuration>
                     <!-- Two rule sets that come bundled with PMD -->
                     <ruleset>/rulesets/braces.xml</ruleset>
