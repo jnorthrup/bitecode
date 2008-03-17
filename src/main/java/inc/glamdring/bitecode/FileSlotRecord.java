@@ -5,17 +5,17 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 24
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> magic</td><td>0x4</td><td>0x0</td><td> (int) magic=src.{@link java.nio.ByteBuffer#getInt}(0x0)</td><td>{@link FileSlotRecordVisitor#magic(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> minor_version</td><td>0x2</td><td>0x4</td><td> (short) minor_version=src.{@link java.nio.ByteBuffer#getShort}(0x4) & 0xffff</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> major_version</td><td>0x2</td><td>0x6</td><td> (short) major_version=src.{@link java.nio.ByteBuffer#getShort}(0x6) & 0xffff</td><td>{@link FileSlotRecordVisitor#major_version(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> ConstantPoolRecord</td><td>0x2</td><td>0x8</td><td> (short) ConstantPoolRecord=src.{@link java.nio.ByteBuffer#getShort}(0x8) & 0xffff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0xa</td><td> (short) AccessFlagsValue=src.{@link java.nio.ByteBuffer#getShort}(0xa) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td> ClassIndex</td><td>0x2</td><td>0xc</td><td> (short) ClassIndex=src.{@link java.nio.ByteBuffer#getShort}(0xc) & 0xffff</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> SuperClassIndex</td><td>0x2</td><td>0xe</td><td> (short) SuperClassIndex=src.{@link java.nio.ByteBuffer#getShort}(0xe) & 0xffff</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> InterFaceTableRecord</td><td>0x2</td><td>0x10</td><td> (short) InterFaceTableRecord=src.{@link java.nio.ByteBuffer#getShort}(0x10) & 0xffff</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> FieldRecord</td><td>0x2</td><td>0x12</td><td> (short) FieldRecord=src.{@link java.nio.ByteBuffer#getShort}(0x12) & 0xffff</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> MethodsRecord</td><td>0x2</td><td>0x14</td><td> (short) MethodsRecord=src.{@link java.nio.ByteBuffer#getShort}(0x14) & 0xffff</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AttributesRecord</td><td>0x2</td><td>0x16</td><td> (short) AttributesRecord=src.{@link java.nio.ByteBuffer#getShort}(0x16) & 0xffff</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> magic</td><td>0x4</td><td>0x0</td><td> (int) magic=src.getInt(0x0)</td><td>{@link FileSlotRecordVisitor#magic(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> minor_version</td><td>0x2</td><td>0x4</td><td> (short) minor_version=src.getShort(0x4) & 0xffff</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> major_version</td><td>0x2</td><td>0x6</td><td> (short) major_version=src.getShort(0x6) & 0xffff</td><td>{@link FileSlotRecordVisitor#major_version(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ConstantPoolRecord</td><td>0x2</td><td>0x8</td><td> (short) ConstantPoolRecord=src.getShort(0x8) & 0xffff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0xa</td><td> (short) AccessFlagsValue=src.getShort(0xa) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> ClassIndex</td><td>0x2</td><td>0xc</td><td> (short) ClassIndex=src.getShort(0xc) & 0xffff</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> SuperClassIndex</td><td>0x2</td><td>0xe</td><td> (short) SuperClassIndex=src.getShort(0xe) & 0xffff</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> InterFaceTableRecord</td><td>0x2</td><td>0x10</td><td> (short) InterFaceTableRecord=src.getShort(0x10) & 0xffff</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> FieldRecord</td><td>0x2</td><td>0x12</td><td> (short) FieldRecord=src.getShort(0x12) & 0xffff</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> MethodsRecord</td><td>0x2</td><td>0x14</td><td> (short) MethodsRecord=src.getShort(0x14) & 0xffff</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributesRecord</td><td>0x2</td><td>0x16</td><td> (short) AttributesRecord=src.getShort(0x16) & 0xffff</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.FileSlotRecord#magic
  * @see inc.glamdring.bitecode.FileSlotRecord#minor_version

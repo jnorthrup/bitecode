@@ -5,11 +5,11 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 1572864
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> ConstantPoolRecord</td><td>0x80000</td><td>0x0</td><td> (byte) ConstantPoolRecord=src.{@link java.nio.ByteBuffer#get}(0x0) & 0xff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><td> interfaces</td><td>0x40000</td><td>0x80000</td><td> (byte) interfaces=src.{@link java.nio.ByteBuffer#get}(0x80000) & 0xff</td><td>{@link TableRecordVisitor#interfaces(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> fields</td><td>0x40000</td><td>0xc0000</td><td> (byte) fields=src.{@link java.nio.ByteBuffer#get}(0xc0000) & 0xff</td><td>{@link TableRecordVisitor#fields(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> methods</td><td>0x40000</td><td>0x100000</td><td> (byte) methods=src.{@link java.nio.ByteBuffer#get}(0x100000) & 0xff</td><td>{@link TableRecordVisitor#methods(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> attributes</td><td>0x40000</td><td>0x140000</td><td> (byte) attributes=src.{@link java.nio.ByteBuffer#get}(0x140000) & 0xff</td><td>{@link TableRecordVisitor#attributes(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ConstantPoolRecord</td><td>0x80000</td><td>0x0</td><td> (byte) ConstantPoolRecord=src.get(0x0) & 0xff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td> interfaces</td><td>0x40000</td><td>0x80000</td><td> (byte) interfaces=src.get(0x80000) & 0xff</td><td>{@link TableRecordVisitor#interfaces(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> fields</td><td>0x40000</td><td>0xc0000</td><td> (byte) fields=src.get(0xc0000) & 0xff</td><td>{@link TableRecordVisitor#fields(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> methods</td><td>0x40000</td><td>0x100000</td><td> (byte) methods=src.get(0x100000) & 0xff</td><td>{@link TableRecordVisitor#methods(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> attributes</td><td>0x40000</td><td>0x140000</td><td> (byte) attributes=src.get(0x140000) & 0xff</td><td>{@link TableRecordVisitor#attributes(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.TableRecord#ConstantPoolRecord
  * @see inc.glamdring.bitecode.TableRecord#interfaces

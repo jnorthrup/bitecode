@@ -5,7 +5,7 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 2
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> length</td><td>0x2</td><td>0x0</td><td> (short) length=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link Utf8_Visitor#length(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> length</td><td>0x2</td><td>0x0</td><td> (short) length=src.getShort(0x0) & 0xffff</td><td>{@link Utf8_Visitor#length(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.Utf8_#length
  * </table>

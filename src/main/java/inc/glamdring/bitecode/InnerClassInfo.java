@@ -5,10 +5,10 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td> (short) InnerClassInfoIndex=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td> (short) OuterClassInfoIndex=src.{@link java.nio.ByteBuffer#getShort}(0x2) & 0xffff</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> inner_nameIndex</td><td>0x2</td><td>0x4</td><td> (short) inner_nameIndex=src.{@link java.nio.ByteBuffer#getShort}(0x4) & 0xffff</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0x6</td><td> (short) AccessFlagsValue=src.{@link java.nio.ByteBuffer#getShort}(0x6) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td> (short) InnerClassInfoIndex=src.getShort(0x0) & 0xffff</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td> (short) OuterClassInfoIndex=src.getShort(0x2) & 0xffff</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> inner_nameIndex</td><td>0x2</td><td>0x4</td><td> (short) inner_nameIndex=src.getShort(0x4) & 0xffff</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0x6</td><td> (short) AccessFlagsValue=src.getShort(0x6) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
  * 
  * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
  * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex

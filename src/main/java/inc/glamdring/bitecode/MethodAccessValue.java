@@ -5,15 +5,15 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: -9
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> public_</td><td>0xffffffff</td><td>0x0</td><td> (byte) public_=src.{@link java.nio.ByteBuffer#get}(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> private_</td><td>0xffffffff</td><td>0xffffffff</td><td> (byte) private_=src.{@link java.nio.ByteBuffer#get}(0xffffffff) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> protected_</td><td>0xffffffff</td><td>0xfffffffe</td><td> (byte) protected_=src.{@link java.nio.ByteBuffer#get}(0xfffffffe) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> static_</td><td>0xffffffff</td><td>0xfffffffd</td><td> (byte) static_=src.{@link java.nio.ByteBuffer#get}(0xfffffffd) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> final_</td><td>0xffffffff</td><td>0xfffffffc</td><td> (byte) final_=src.{@link java.nio.ByteBuffer#get}(0xfffffffc) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> synchronized_</td><td>0xffffffff</td><td>0xfffffffb</td><td> (byte) synchronized_=src.{@link java.nio.ByteBuffer#get}(0xfffffffb) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> native_</td><td>0xffffffff</td><td>0xfffffffa</td><td> (byte) native_=src.{@link java.nio.ByteBuffer#get}(0xfffffffa) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> abstract_</td><td>0xffffffff</td><td>0xfffffff9</td><td> (byte) abstract_=src.{@link java.nio.ByteBuffer#get}(0xfffffff9) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> strict_</td><td>0xffffffff</td><td>0xfffffff8</td><td> (byte) strict_=src.{@link java.nio.ByteBuffer#get}(0xfffffff8) & 0xff</td><td>{@link MethodAccessValueVisitor#strict_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> public_</td><td>0xffffffff</td><td>0x0</td><td> (byte) public_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> private_</td><td>0xffffffff</td><td>0xffffffff</td><td> (byte) private_=src.get(0xffffffff) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> protected_</td><td>0xffffffff</td><td>0xfffffffe</td><td> (byte) protected_=src.get(0xfffffffe) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> static_</td><td>0xffffffff</td><td>0xfffffffd</td><td> (byte) static_=src.get(0xfffffffd) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> final_</td><td>0xffffffff</td><td>0xfffffffc</td><td> (byte) final_=src.get(0xfffffffc) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> synchronized_</td><td>0xffffffff</td><td>0xfffffffb</td><td> (byte) synchronized_=src.get(0xfffffffb) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> native_</td><td>0xffffffff</td><td>0xfffffffa</td><td> (byte) native_=src.get(0xfffffffa) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> abstract_</td><td>0xffffffff</td><td>0xfffffff9</td><td> (byte) abstract_=src.get(0xfffffff9) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> strict_</td><td>0xffffffff</td><td>0xfffffff8</td><td> (byte) strict_=src.get(0xfffffff8) & 0xff</td><td>{@link MethodAccessValueVisitor#strict_(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.MethodAccessValue#public_
  * @see inc.glamdring.bitecode.MethodAccessValue#private_

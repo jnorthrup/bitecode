@@ -5,10 +5,10 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 5
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0x0</td><td> (short) AccessFlagsValue=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td> Utf8Index</td><td>0x2</td><td>0x2</td><td> (short) Utf8Index=src.{@link java.nio.ByteBuffer#getShort}(0x2) & 0xffff</td><td>{@link FieldInfoHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> DescriptorIndex</td><td>0xffffffff</td><td>0x4</td><td> (byte) DescriptorIndex=src.{@link java.nio.ByteBuffer#get}(0x4) & 0xff</td><td>{@link FieldInfoHeaderVisitor#DescriptorIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> attributes_count</td><td>0x2</td><td>0x3</td><td> (short) attributes_count=src.{@link java.nio.ByteBuffer#getShort}(0x3) & 0xffff</td><td>{@link FieldInfoHeaderVisitor#attributes_count(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0x0</td><td> (short) AccessFlagsValue=src.getShort(0x0) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x2</td><td> (short) Utf8Index=src.getShort(0x2) & 0xffff</td><td>{@link FieldInfoHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> DescriptorIndex</td><td>0xffffffff</td><td>0x4</td><td> (byte) DescriptorIndex=src.get(0x4) & 0xff</td><td>{@link FieldInfoHeaderVisitor#DescriptorIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> attributes_count</td><td>0x2</td><td>0x3</td><td> (short) attributes_count=src.getShort(0x3) & 0xffff</td><td>{@link FieldInfoHeaderVisitor#attributes_count(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.FieldInfoHeader#AccessFlagsValue
  * @see inc.glamdring.bitecode.FieldInfoHeader#Utf8Index

@@ -85,10 +85,10 @@
       <file leaf-file-name="AccessFlagsValue.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="50" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.10119048">
+            <state line="25" column="50" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.10119048">
               <folding>
-                <marker date="1205777779562" expanded="true" signature="80:102" placeholder="/**...*/" />
-                <marker date="1205777779562" expanded="true" signature="6031:6038" placeholder="{...}" />
+                <marker date="1205779001401" expanded="true" signature="80:102" placeholder="/**...*/" />
+                <marker date="1205779001401" expanded="true" signature="5731:5738" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -97,19 +97,28 @@
       <file leaf-file-name="AttributeHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="853" selection-end="853" vertical-scroll-proportion="0.28333333">
+            <state line="15" column="25" selection-start="793" selection-end="793" vertical-scroll-proportion="0.28333333">
               <folding>
-                <marker date="1205777779530" expanded="true" signature="80:102" placeholder="/**...*/" />
-                <marker date="1205777779530" expanded="true" signature="3391:3398" placeholder="{...}" />
+                <marker date="1205779001361" expanded="true" signature="80:102" placeholder="/**...*/" />
+                <marker date="1205779001361" expanded="true" signature="3331:3338" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.30357143">
+            <state line="8" column="89" selection-start="501" selection-end="501" vertical-scroll-proportion="0.14166667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineNumberValue.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="79" selection-start="183" selection-end="183" vertical-scroll-proportion="0.10119048">
               <folding />
             </state>
           </provider>
@@ -553,27 +562,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="50" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.10119048">
+        <state line="25" column="50" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.10119048">
           <folding>
-            <marker date="1205777779562" expanded="true" signature="80:102" placeholder="/**...*/" />
-            <marker date="1205777779562" expanded="true" signature="6031:6038" placeholder="{...}" />
+            <marker date="1205779001401" expanded="true" signature="80:102" placeholder="/**...*/" />
+            <marker date="1205779001401" expanded="true" signature="5731:5738" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="853" selection-end="853" vertical-scroll-proportion="0.28333333">
+        <state line="15" column="25" selection-start="793" selection-end="793" vertical-scroll-proportion="0.28333333">
           <folding>
-            <marker date="1205777779530" expanded="true" signature="80:102" placeholder="/**...*/" />
-            <marker date="1205777779530" expanded="true" signature="3391:3398" placeholder="{...}" />
+            <marker date="1205779001361" expanded="true" signature="80:102" placeholder="/**...*/" />
+            <marker date="1205779001361" expanded="true" signature="3331:3338" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.30357143">
+        <state line="8" column="89" selection-start="501" selection-end="501" vertical-scroll-proportion="0.14166667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="79" selection-start="183" selection-end="183" vertical-scroll-proportion="0.10119048">
           <folding />
         </state>
       </provider>

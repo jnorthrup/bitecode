@@ -5,9 +5,9 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 3
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link LineNumberHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AttributeLength</td><td>0xffffffff</td><td>0x2</td><td> (byte) AttributeLength=src.{@link java.nio.ByteBuffer#get}(0x2) & 0xff</td><td>{@link LineNumberHeaderVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> LineNumberCount</td><td>0x2</td><td>0x1</td><td> (short) LineNumberCount=src.{@link java.nio.ByteBuffer#getShort}(0x1) & 0xffff</td><td>{@link LineNumberHeaderVisitor#LineNumberCount(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link LineNumberHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0xffffffff</td><td>0x2</td><td> (byte) AttributeLength=src.get(0x2) & 0xff</td><td>{@link LineNumberHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> LineNumberCount</td><td>0x2</td><td>0x1</td><td> (short) LineNumberCount=src.getShort(0x1) & 0xffff</td><td>{@link LineNumberHeaderVisitor#LineNumberCount(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.LineNumberHeader#Utf8Index
  * @see inc.glamdring.bitecode.LineNumberHeader#AttributeLength

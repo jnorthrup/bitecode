@@ -5,9 +5,9 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.{@link java.nio.ByteBuffer#getInt}(0x2)</td><td>{@link LocalVariableTableAttributeVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> local_variable_table_length</td><td>0x2</td><td>0x6</td><td> (short) local_variable_table_length=src.{@link java.nio.ByteBuffer#getShort}(0x6) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#local_variable_table_length(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link LocalVariableTableAttributeVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> local_variable_table_length</td><td>0x2</td><td>0x6</td><td> (short) local_variable_table_length=src.getShort(0x6) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#local_variable_table_length(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#Utf8Index
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#AttributeLength

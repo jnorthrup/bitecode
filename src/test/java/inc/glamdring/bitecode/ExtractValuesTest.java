@@ -316,10 +316,10 @@ public class ExtractValuesTest extends TestCase {
                     "<td> " + name + "</td>" +
                     "<td>0x" + Integer.toHexString(size) + "</td>" +
                     "<td>0x" + Integer.toHexString(seek) + "</td>" +
-                    "<td>" + ((valClazz == null) ? (" (" + pair.getSecond().getFirst() + ") " + name + "=src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(0x" + Integer.toHexString(seek) + ")" + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
+                    "<td>" + ((valClazz == null) ? (" (" + pair.getSecond().getFirst() + ") " + name + "=src.get" + pair.getFirst() + "(0x" + Integer.toHexString(seek) + ")" + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
                     "<td>{@link " + (aClass == null ? theSlot.getDeclaringClass().getSimpleName()
 
-                    + "Visitor#" + name + "(ByteBufferer, int[], IntBuffer)" : aClass.getCanonicalName()) + "}</td>" +
+                    +"Visitor#" + name + "(ByteBuffer, int[], IntBuffer)" : aClass.getCanonicalName()) + "}</td>" +
                     "</tr>\n";
         }
         display += " * \n";

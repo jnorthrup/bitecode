@@ -5,10 +5,10 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> start_pc</td><td>0x2</td><td>0x0</td><td> (short) start_pc=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link ExceptionValueVisitor#start_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> end_pc</td><td>0x2</td><td>0x2</td><td> (short) end_pc=src.{@link java.nio.ByteBuffer#getShort}(0x2) & 0xffff</td><td>{@link ExceptionValueVisitor#end_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> handler_pc</td><td>0x2</td><td>0x4</td><td> (short) handler_pc=src.{@link java.nio.ByteBuffer#getShort}(0x4) & 0xffff</td><td>{@link ExceptionValueVisitor#handler_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> catch_type</td><td>0x2</td><td>0x6</td><td> (short) catch_type=src.{@link java.nio.ByteBuffer#getShort}(0x6) & 0xffff</td><td>{@link ExceptionValueVisitor#catch_type(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> start_pc</td><td>0x2</td><td>0x0</td><td> (short) start_pc=src.getShort(0x0) & 0xffff</td><td>{@link ExceptionValueVisitor#start_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> end_pc</td><td>0x2</td><td>0x2</td><td> (short) end_pc=src.getShort(0x2) & 0xffff</td><td>{@link ExceptionValueVisitor#end_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> handler_pc</td><td>0x2</td><td>0x4</td><td> (short) handler_pc=src.getShort(0x4) & 0xffff</td><td>{@link ExceptionValueVisitor#handler_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> catch_type</td><td>0x2</td><td>0x6</td><td> (short) catch_type=src.getShort(0x6) & 0xffff</td><td>{@link ExceptionValueVisitor#catch_type(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.ExceptionValue#start_pc
  * @see inc.glamdring.bitecode.ExceptionValue#end_pc

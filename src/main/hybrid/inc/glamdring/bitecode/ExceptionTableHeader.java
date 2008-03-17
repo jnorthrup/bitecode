@@ -5,9 +5,9 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link ExceptionTableHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.{@link java.nio.ByteBuffer#getInt}(0x2)</td><td>{@link ExceptionTableHeaderVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> ExceptionsCount</td><td>0x2</td><td>0x6</td><td> (short) ExceptionsCount=src.{@link java.nio.ByteBuffer#getShort}(0x6) & 0xffff</td><td>{@link ExceptionTableHeaderVisitor#ExceptionsCount(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link ExceptionTableHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link ExceptionTableHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ExceptionsCount</td><td>0x2</td><td>0x6</td><td> (short) ExceptionsCount=src.getShort(0x6) & 0xffff</td><td>{@link ExceptionTableHeaderVisitor#ExceptionsCount(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.ExceptionTableHeader#Utf8Index
  * @see inc.glamdring.bitecode.ExceptionTableHeader#AttributeLength

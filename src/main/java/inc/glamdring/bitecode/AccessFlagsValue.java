@@ -5,16 +5,16 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: -10
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> public_</td><td>0xffffffff</td><td>0x0</td><td> (byte) public_=src.{@link java.nio.ByteBuffer#get}(0x0) & 0xff</td><td>{@link AccessFlagsValueVisitor#public_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> private_</td><td>0xffffffff</td><td>0xffffffff</td><td> (byte) private_=src.{@link java.nio.ByteBuffer#get}(0xffffffff) & 0xff</td><td>{@link AccessFlagsValueVisitor#private_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> protected_</td><td>0xffffffff</td><td>0xfffffffe</td><td> (byte) protected_=src.{@link java.nio.ByteBuffer#get}(0xfffffffe) & 0xff</td><td>{@link AccessFlagsValueVisitor#protected_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> static_</td><td>0xffffffff</td><td>0xfffffffd</td><td> (byte) static_=src.{@link java.nio.ByteBuffer#get}(0xfffffffd) & 0xff</td><td>{@link AccessFlagsValueVisitor#static_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> final_</td><td>0xffffffff</td><td>0xfffffffc</td><td> (byte) final_=src.{@link java.nio.ByteBuffer#get}(0xfffffffc) & 0xff</td><td>{@link AccessFlagsValueVisitor#final_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> super_</td><td>0xffffffff</td><td>0xfffffffb</td><td> (byte) super_=src.{@link java.nio.ByteBuffer#get}(0xfffffffb) & 0xff</td><td>{@link AccessFlagsValueVisitor#super_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> volatile_</td><td>0xffffffff</td><td>0xfffffffa</td><td> (byte) volatile_=src.{@link java.nio.ByteBuffer#get}(0xfffffffa) & 0xff</td><td>{@link AccessFlagsValueVisitor#volatile_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> transient_</td><td>0xffffffff</td><td>0xfffffff9</td><td> (byte) transient_=src.{@link java.nio.ByteBuffer#get}(0xfffffff9) & 0xff</td><td>{@link AccessFlagsValueVisitor#transient_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> interface_</td><td>0xffffffff</td><td>0xfffffff8</td><td> (byte) interface_=src.{@link java.nio.ByteBuffer#get}(0xfffffff8) & 0xff</td><td>{@link AccessFlagsValueVisitor#interface_(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> abstract_</td><td>0xffffffff</td><td>0xfffffff7</td><td> (byte) abstract_=src.{@link java.nio.ByteBuffer#get}(0xfffffff7) & 0xff</td><td>{@link AccessFlagsValueVisitor#abstract_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> public_</td><td>0xffffffff</td><td>0x0</td><td> (byte) public_=src.get(0x0) & 0xff</td><td>{@link AccessFlagsValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> private_</td><td>0xffffffff</td><td>0xffffffff</td><td> (byte) private_=src.get(0xffffffff) & 0xff</td><td>{@link AccessFlagsValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> protected_</td><td>0xffffffff</td><td>0xfffffffe</td><td> (byte) protected_=src.get(0xfffffffe) & 0xff</td><td>{@link AccessFlagsValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> static_</td><td>0xffffffff</td><td>0xfffffffd</td><td> (byte) static_=src.get(0xfffffffd) & 0xff</td><td>{@link AccessFlagsValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> final_</td><td>0xffffffff</td><td>0xfffffffc</td><td> (byte) final_=src.get(0xfffffffc) & 0xff</td><td>{@link AccessFlagsValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> super_</td><td>0xffffffff</td><td>0xfffffffb</td><td> (byte) super_=src.get(0xfffffffb) & 0xff</td><td>{@link AccessFlagsValueVisitor#super_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> volatile_</td><td>0xffffffff</td><td>0xfffffffa</td><td> (byte) volatile_=src.get(0xfffffffa) & 0xff</td><td>{@link AccessFlagsValueVisitor#volatile_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> transient_</td><td>0xffffffff</td><td>0xfffffff9</td><td> (byte) transient_=src.get(0xfffffff9) & 0xff</td><td>{@link AccessFlagsValueVisitor#transient_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> interface_</td><td>0xffffffff</td><td>0xfffffff8</td><td> (byte) interface_=src.get(0xfffffff8) & 0xff</td><td>{@link AccessFlagsValueVisitor#interface_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> abstract_</td><td>0xffffffff</td><td>0xfffffff7</td><td> (byte) abstract_=src.get(0xfffffff7) & 0xff</td><td>{@link AccessFlagsValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.AccessFlagsValue#public_
  * @see inc.glamdring.bitecode.AccessFlagsValue#private_

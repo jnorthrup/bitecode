@@ -5,8 +5,8 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 1
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.{@link java.nio.ByteBuffer#getShort}(0x0) & 0xffff</td><td>{@link AttributeHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
- * <tr><td> AttributeLength</td><td>0xffffffff</td><td>0x2</td><td> (byte) AttributeLength=src.{@link java.nio.ByteBuffer#get}(0x2) & 0xff</td><td>{@link AttributeHeaderVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link AttributeHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0xffffffff</td><td>0x2</td><td> (byte) AttributeLength=src.get(0x2) & 0xff</td><td>{@link AttributeHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.AttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.AttributeHeader#AttributeLength
