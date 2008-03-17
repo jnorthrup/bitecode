@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="52" tokens="356">
+<file line="75" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AccessFlagsValue.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AttributeHeader.java"/>
+<file line="37" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\CodeAttributeHeader.java"/>
+<file line="36" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRecord.java"/>
+<file line="66" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRef.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantValueAttribute.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\DeprecatedAttributeHeader.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionTableHeader.java"/>
+<file line="33" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionValue.java"/>
+<file line="27" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Field_.java"/>
+<file line="36" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FieldInfoHeader.java"/>
+<file line="53" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FileSlotRecord.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassesHeader.java"/>
+<file line="36" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassInfo.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InterfaceMethod_.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberHeader.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberValue.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LocalVariableTableAttribute.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Method_.java"/>
+<file line="41" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodAccessValue.java"/>
+<file line="34" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodInfo.java"/>
+<file line="29" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\NameAndType_.java"/>
+<file line="31" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SourceFileAttribute.java"/>
+<file line="27" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SyntheticAttribute.java"/>
+<file line="36" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\TableRecord.java"/>
+<file line="27" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Utf8_.java"/>
+<codefragment>
+<![CDATA[
+	Utf8_ (int... dimensions) {
+        seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
+    }
+
+    private int initRecordLen(int size) {
+        int rl = recordLen;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
+        return rl;
+    }
+    int init() {
+        int size = -1;
+        if (this.size==0&&subRecord == null) {            final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
+            for (String indexPrefix : indexPrefixes) {
+                try {
+                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
+                    try {
+                        size = subRecord.getField("recordLen").getInt(null);
+                    } catch (Exception e) {
+                    }
+                    break;
+                } catch (ClassNotFoundException e) {
+                }
+
+            }
+        }
+
+        for (String vPrefixe1 : new String[]{"_", "", "$"}) {
+            if (valueClazz != null) break;
+            String vPrefixe = vPrefixe1;
+            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+                if (valueClazz != null) break;
+                final String trailName = name1;
+                if (trailName.endsWith(vPrefixe))
+                    for (String aPackage1 : new String[]{"",
+                           getClass().getPackage().getName() + ".",
+                           "java.lang.",
+                           "java.util.",
+                    }) {
+                        if (valueClazz != null) break;
+
+                        try {
+                            valueClazz = Class.forName(aPackage1 + "." + trailName.replaceAll(trailName + vPrefixe, trailName));
+                        } catch (ClassNotFoundException e) {
+                        }
+                    }
+            }
+        }
+        return size;
+    }    static void index
+            (ByteBuffer src, int[] register, IntBuffer stack) {
+        for (Utf8_ Utf8__ : values()) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="203">
+<file line="129" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AccessFlagsValue.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AttributeHeader.java"/>
+<file line="101" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ClassFileRecord.java"/>
+<file line="91" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\CodeAttributeHeader.java"/>
+<file line="90" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRecord.java"/>
+<file line="120" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRef.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantValueAttribute.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\DeprecatedAttributeHeader.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionTableHeader.java"/>
+<file line="87" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionValue.java"/>
+<file line="81" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Field_.java"/>
+<file line="90" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FieldInfoHeader.java"/>
+<file line="107" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FileSlotRecord.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassesHeader.java"/>
+<file line="90" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassInfo.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InterfaceMethod_.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberHeader.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberValue.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LocalVariableTableAttribute.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Method_.java"/>
+<file line="95" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodAccessValue.java"/>
+<file line="88" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodInfo.java"/>
+<file line="83" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\NameAndType_.java"/>
+<file line="85" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SourceFileAttribute.java"/>
+<file line="81" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SyntheticAttribute.java"/>
+<file line="90" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\TableRecord.java"/>
+<file line="81" path="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Utf8_.java"/>
+<codefragment>
+<![CDATA[
+            Utf8__.subIndex(src, register, stack);
+        }
+    }
+
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+        System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
+        int begin = src.position();
+        int stackPtr = stack.position();
+        stack.put(begin);
+        if (isRecord && subRecord != null) { 
+            try {
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                if (table != null) {
+                    //stow the original location
+                    int mark = stack.position();
+                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
+                    //resume the lower stack activities
+                    stack.position(mark);
+                }
+            } catch (Exception e) {
+                throw new Error(e.getMessage());
+            }
+        }
+    }}
+]]>
+</codefragment>
+</duplication>
+<duplication lines="18" tokens="127">
+<file line="194" path="M:\work\bitecode\src\main\java\inc\glamdring\util\Layout.java"/>
+<file line="232" path="M:\work\bitecode\src\main\java\inc\glamdring\util\Layout.java"/>
+<codefragment>
+<![CDATA[
+        for (Layout layout : values()) {
+
+            String lname = layout.name();
+            char cap = lname.toUpperCase().charAt(0);
+            String cn = cap + lname.substring(1);
+            String getterName = "get" + cn;
+            String setterName = "set" + cn;
+
+            String typeName = layout.clazz.getCanonicalName();
+
+
+            String upType = nc.get(layout.clazz).getFirst();
+            String primType = nc.get(layout.clazz).getSecond();
+
+
+            s += "\n\t/** @see " + vname + "#" + layout.name() + " */";
+            if (layout.clazz == byte[].class)
+                s += MessageFormat.format("\n\t  byte[] {0}();", getterName, '{', lname);
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.1" timestamp="2008-03-17T11:17:37.273">
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AccessFlagsValue.java">
+<violation beginline="93" endline="94" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="96" endline="97" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="118" endline="119" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="136" endline="136" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\AttributeHeader.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ClassFileRecord.java">
+<violation beginline="57" endline="58" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="60" endline="61" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="82" endline="83" begincolumn="31" endcolumn="29" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="111" endline="111" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\CodeAttributeHeader.java">
+<violation beginline="55" endline="56" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="58" endline="59" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="80" endline="81" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="98" endline="98" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRecord.java">
+<violation beginline="54" endline="55" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="57" endline="58" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="79" endline="80" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="97" endline="97" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantPoolRef.java">
+<violation beginline="84" endline="85" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="87" endline="88" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="109" endline="110" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="127" endline="127" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ConstantValueAttribute.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\DeprecatedAttributeHeader.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionTableHeader.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\ExceptionValue.java">
+<violation beginline="51" endline="52" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="54" endline="55" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="76" endline="77" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="94" endline="94" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FieldInfoHeader.java">
+<violation beginline="54" endline="55" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="57" endline="58" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="79" endline="80" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="97" endline="97" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Field_.java">
+<violation beginline="45" endline="46" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="48" endline="49" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="70" endline="71" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\FileSlotRecord.java">
+<violation beginline="71" endline="72" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="96" endline="97" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="114" endline="114" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassInfo.java">
+<violation beginline="54" endline="55" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="57" endline="58" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="79" endline="80" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="97" endline="97" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InnerClassesHeader.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\InterfaceMethod_.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberHeader.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LineNumberValue.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\LocalVariableTableAttribute.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodAccessValue.java">
+<violation beginline="59" endline="60" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="62" endline="63" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="84" endline="85" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="102" endline="102" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\MethodInfo.java">
+<violation beginline="52" endline="53" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="55" endline="56" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="77" endline="78" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="95" endline="95" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Method_.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\NameAndType_.java">
+<violation beginline="47" endline="48" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="50" endline="51" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="72" endline="73" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SourceFileAttribute.java">
+<violation beginline="49" endline="50" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="52" endline="53" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="74" endline="75" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\SyntheticAttribute.java">
+<violation beginline="45" endline="46" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="48" endline="49" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="70" endline="71" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\TableRecord.java">
+<violation beginline="54" endline="55" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="57" endline="58" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="79" endline="80" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="97" endline="97" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\bitecode\Utf8_.java">
+<violation beginline="45" endline="46" begincolumn="23" endcolumn="21" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="48" endline="49" begincolumn="19" endcolumn="17" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="70" endline="71" begincolumn="27" endcolumn="25" rule="EmptyCatchBlock" ruleset="Basic Rules" package="inc.glamdring.bitecode" method="init" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.bitecode" method="subIndex" variable="stackPtr" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'stackPtr'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\util\Layout.java">
+<violation beginline="146" endline="146" begincolumn="16" endcolumn="17" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.util" method="main" variable="s1" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 's1'.
+</violation>
+<violation beginline="153" endline="153" begincolumn="16" endcolumn="16" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.util" method="main" variable="x" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'x'.
+</violation>
+<violation beginline="201" endline="201" begincolumn="20" endcolumn="27" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.util" method="genRecordClass" variable="typeName" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'typeName'.
+</violation>
+<violation beginline="240" endline="240" begincolumn="20" endcolumn="27" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="inc.glamdring.util" method="genRecordInterface" variable="typeName" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'typeName'.
+</violation>
+</file>
+<file name="M:\work\bitecode\src\main\java\inc\glamdring\util\Pair.java">
+<violation beginline="59" endline="59" begincolumn="16" endcolumn="25" rule="OverrideBothEqualsAndHashcode" ruleset="Basic Rules" package="inc.glamdring.util" class="Pair" method="hashCode" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#OverrideBothEqualsAndHashcode" priority="3">
+Ensure you override both equals() and hashCode()
+</violation>
+</file>
+</pmd>

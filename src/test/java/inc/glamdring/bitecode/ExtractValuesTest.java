@@ -30,7 +30,7 @@ public class ExtractValuesTest extends TestCase {
             bBufWrap.put(short.class, new Pair<String, Pair<String, String>>("Short", new Pair("short", " & 0xffff")));
             bBufWrap.put(double.class, new Pair<String, Pair<String, String>>("Double", new Pair("double", "")));
             bBufWrap.put(float.class, new Pair<String, Pair<String, String>>("Float", new Pair("float", "")));
-            bBufWrap.put(byte[].class, new Pair<String, Pair<String, String>>("", new Pair("byte[]", " & 0xff")));
+            bBufWrap.put(byte[].class, new Pair<String, Pair<String, String>>("", new Pair("byte", " & 0xff")));
             bBufWrap.put(byte.class, new Pair<String, Pair<String, String>>("", new Pair("byte", " & 0xff")));
 
 
@@ -47,7 +47,7 @@ public class ExtractValuesTest extends TestCase {
 
     }
 
-    public   String testGetEnumsStructsForPackage() throws Exception {
+    public String testGetEnumsStructsForPackage() throws Exception {
 
         Map<Class<? extends Enum>, Iterable<? extends Enum>> map = extractValues.getEnumsStructsForPackage();
 
@@ -144,22 +144,27 @@ public class ExtractValuesTest extends TestCase {
             }
 
             final String trClass = inc.glamdring.bitecode.TableRecord.class.getCanonicalName();
+            display += "    /** " + enumName + " templated Byte Struct \n" +
+                    "     * @param dimensions [0]=size,[1]= forced seek\n" +
+                    "     */\n";
 
-            display += "\t" + enumName + " " +
-                    "(int... dimensions) {\n" +
-                    "        seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));\n" +
+
+            display += "\t" + enumName + " ";
+
+            display += "(int... dimensions) {\n" +
+                    "        int[] dim = init(dimensions);\n" +
+                    "        size = dim[0];\n" +
+                    "        seek = dim[1];\n" +
+                    "\n" +
+                    "\n" +
                     "    }\n" +
                     "\n" +
-                    "    private int initRecordLen(int size) {\n" +
-                    "        int rl = recordLen;\n" +
-                    "        final int ns = init();\n" +
-                    "        recordLen += ns == -1 ? size : ns;\n" +
-                    "        return rl;\n" +
-                    "    }\n" +
-                    "    int init() {\n" +
-                    "        int size = 0;\n" +
+                    "    int[] init(int... dimensions) {\n" +
+                    "        int size = dimensions.length > 0 ? dimensions[0] : 0,\n" +
+                    "                seek = dimensions.length > 1 ? dimensions[1] : 0;\n" +
+                    "\n" +
                     "        if (subRecord == null) {\n" +
-                    "            final String[] indexPrefixes = {\"\", \"s\", \"_\", \"Index\", \"Value\", \"Ref\", \"Header\", \"Info\"};\n" +
+                    "            final String[] indexPrefixes = {\"\", \"s\", \"_\", \"Index\", \"Length\", \"Ref\", \"Header\", \"Info\", \"Table\"};\n" +
                     "            for (String indexPrefix : indexPrefixes) {\n" +
                     "                try {\n" +
                     "                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);\n" +
@@ -174,28 +179,32 @@ public class ExtractValuesTest extends TestCase {
                     "            }\n" +
                     "        }\n" +
                     "\n" +
-                    "        for (String vPrefixe1 : new String[]{\"_\", \"\", \"$\"}) {\n" +
+                    "        for (String vPrefixe1 : new String[]{\"_\", \"\", \"$\", \"Value\",}) {\n" +
                     "            if (valueClazz != null) break;\n" +
-                    "            String vPrefixe = vPrefixe1;\n" +
+                    "            String suffix = vPrefixe1;\n" +
                     "            for (String name1 : new String[]{name().toLowerCase(), name(),}) {\n" +
                     "                if (valueClazz != null) break;\n" +
                     "                final String trailName = name1;\n" +
-                    "                if (trailName.endsWith(vPrefixe))\n" +
+                    "                if (trailName.endsWith(suffix)) {\n" +
                     "                    for (String aPackage1 : new String[]{\"\",\n" +
-                    "                           getClass().getPackage().getName() + \".\",\n" +
-                    "                           \"java.lang.\",\n" +
-                    "                           \"java.util.\",\n" +
-                    "                    }) {\n" +
-                    "                        if (valueClazz != null) break;\n" +
-                    "\n" +
-                    "                        try {\n" +
-                    "                            valueClazz = Class.forName(aPackage1 + \".\" + trailName.replaceAll(trailName + vPrefixe, trailName));\n" +
-                    "                        } catch (ClassNotFoundException e) {\n" +
-                    "                        }\n" +
-                    "                    }\n" +
+                    "                            getClass().getPackage().getName() + \".\",\n" +
+                    "                            \"java.lang.\",\n" +
+                    "                            \"java.util.\",\n" +
+                    "                    })\n" +
+                    "                        if (valueClazz == null) break;\n" +
+                    "                        else\n" +
+                    "                            try {\n" +
+                    "                                valueClazz = Class.forName(aPackage1 + name().replace(suffix, \"\"));\n" +
+                    "                            } catch (ClassNotFoundException e) {\n" +
+                    "                            }\n" +
+                    "                }\n" +
                     "            }\n" +
                     "        }\n" +
-                    "        return size;\n" +
+                    "\n" +
+                    "        seek = recordLen;\n" +
+                    "        recordLen += size;\n" +
+                    "\n" +
+                    "        return new int[]{size, seek};\n" +
                     "    }" +
                     "    static void index\n" +
                     "            (ByteBuffer src, int[] register, IntBuffer stack) {\n" +
@@ -253,21 +262,16 @@ public class ExtractValuesTest extends TestCase {
 
     public String genHeader(Class<? extends Enum> docEnum) {
 
-//        final String thePackage = docEnum.getPackage().getName();
-
-
-        String s = "";
-
-
+        String display = "";
         final Enum[] enums = docEnum.getEnumConstants()/*.invoke(null)*/;
-        int size = 0, seek = 0;
+
         int recordLen = 0;
         try {
             recordLen = (Integer) docEnum.getDeclaredField("recordLen").get(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        s += "\n\n/**\n * <p>recordSize: " + recordLen + "\n * <table><tr> " +
+        display += "\n\n/**\n * <p>recordSize: " + recordLen + "\n * <table><tr> " +
                 "<th>name</th>" +
                 "<th>size</th>" +
                 "<th>seek</th>" +
@@ -277,29 +281,22 @@ public class ExtractValuesTest extends TestCase {
 
         String name = "";
         for (Enum theSlot : enums) {
+            int size = 0, seek = 0;
             name = theSlot.name();
             Class aClass = null;
+            Class bClass = null;
             try {
-                try {
-                    aClass = (Class) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
+                aClass = (Class) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
+            } catch (Exception e) {
 
-
-                } catch (Exception e) {
-
-                }
-                if ((aClass) == null) {
-
-                    Object[] record = getSubRecord(name);
-                    aClass = (Class) record[0];
-                    size = (Integer) record[1];
-                }
+            }
+            try {
+                bClass = (Class) theSlot.getDeclaringClass().getDeclaredField("valueClazz").get(theSlot);
             } catch (Exception e) {
             }
-            if (size == 0) {
-                try {
-                    size = (Integer) theSlot.getDeclaringClass().getDeclaredField("size").get(theSlot);
-                } catch (Exception e) {
-                }
+            try {
+                size = (Integer) theSlot.getDeclaringClass().getDeclaredField("size").get(theSlot);
+            } catch (Exception e) {
             }
 
             try {
@@ -309,36 +306,33 @@ public class ExtractValuesTest extends TestCase {
 
 
             Class valClazz = null;
-            Class bClass = null;
-            if (valClazz == null) {
-                bClass = null;
-                if (bClass == null) {
-                    bClass = guessIntTypes(size);
-                }
+
+            if (bClass == null) {
+                bClass = guessIntTypes(size);
             }
 
             final Pair<String, Pair<String, String>> pair = bBufWrap.get(bClass);
-            s += " * <tr>" +
+            display += " * <tr>" +
                     "<td> " + name + "</td>" +
                     "<td>0x" + Integer.toHexString(size) + "</td>" +
                     "<td>0x" + Integer.toHexString(seek) + "</td>" +
-                    "<td>" + ((valClazz == null) ? (pair.getSecond().getFirst() + name + " src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(" + Integer.toHexString(seek) + ")" + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
+                    "<td>" + ((valClazz == null) ? (" (" + pair.getSecond().getFirst() + ") " + name + "=src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(0x" + Integer.toHexString(seek) + ")" + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
                     "<td>{@link " + (aClass == null ? theSlot.getDeclaringClass().getSimpleName()
 
                     + "Visitor#" + name + "(ByteBufferer, int[], IntBuffer)" : aClass.getCanonicalName()) + "}</td>" +
                     "</tr>\n";
         }
-        s += " * \n";
+        display += " * \n";
 
         for (Enum theSlot : enums) {
-            s += " * @see " + docEnum.getCanonicalName() + "#" + theSlot.name() + '\n';
+            display += " * @see " + docEnum.getCanonicalName() + "#" + theSlot.name() + '\n';
         }
-        s += " * </table>\n";
+        display += " * </table>\n";
 
-        s += " */\n";
+        display += " */\n";
 
 
-        return s;
+        return display;
     }
 
 

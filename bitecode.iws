@@ -102,7 +102,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="74" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.96498597">
+            <state line="79" column="20" selection-start="3060" selection-end="3060" vertical-scroll-proportion="0.765625">
               <folding />
             </state>
           </provider>
@@ -111,7 +111,18 @@
       <file leaf-file-name="ExtractValuesTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValuesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="12" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.94829935">
+            <state line="18" column="51" selection-start="428" selection-end="428" vertical-scroll-proportion="0.3119266">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="4" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.15698268">
               <folding />
             </state>
           </provider>
@@ -171,12 +182,39 @@
   <component name="MavenCore">
     <option name="usePluginRegistry" value="true" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="myImporterSettings">
+      <MavenImporterSettings>
+        <option name="autoSync" value="true" />
+      </MavenImporterSettings>
+    </option>
+    <option name="myArtifactSettings">
+      <MavenArtifactSettings>
+        <option name="generateSources" value="ON_DEMAND" />
+      </MavenArtifactSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <option name="groupByDirectory" value="false" />
+    <option name="showIgnored" value="false" />
+  </component>
   <component name="MavenProjectsState">
     <option name="attachedPlugins">
       <map>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
-            <set />
+            <set>
+              <MavenId>
+                <option name="groupId" value="org.apache.maven.plugins" />
+                <option name="artifactId" value="maven-clover-plugin" />
+                <option name="version" value="2.4" />
+              </MavenId>
+              <MavenId>
+                <option name="groupId" value="org.apache.maven.plugins" />
+                <option name="artifactId" value="maven-jxr-plugin" />
+                <option name="version" value="2.1" />
+              </MavenId>
+            </set>
           </value>
         </entry>
       </map>
@@ -185,6 +223,8 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.6" />
     <option name="runMavenInBackground" value="true" />
+    <option name="skipTests" value="true" />
+    <option name="syncAfterBuild" value="false" />
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
@@ -374,6 +414,62 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
@@ -413,6 +509,35 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Unnamed">
+    <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myCoreSettings">
@@ -597,19 +722,19 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52584493" order="4" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283884" order="1" />
-      <window_info id="Maven Runner Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" order="8" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4682861" order="3" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793522" order="1" />
+      <window_info id="Maven Runner Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16194332" order="8" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3022942" order="3" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658568" order="8" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32591093" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40656063" order="6" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" order="3" />
+      <window_info id="Maven projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20874752" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32902583" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -713,15 +838,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="7" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="40" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.25663716">
           <folding />
         </state>
       </provider>
@@ -765,7 +881,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="47" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.018438177">
           <folding>
-            <marker date="1205762011469" expanded="true" signature="80:247" placeholder="/**...*/" />
+            <marker date="1205775178788" expanded="true" signature="80:102" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -779,15 +895,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="74" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.96498597">
+        <state line="79" column="20" selection-start="3060" selection-end="3060" vertical-scroll-proportion="0.765625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="4" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.15698268">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValuesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="12" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.94829935">
-          <folding />
+        <state line="18" column="51" selection-start="428" selection-end="428" vertical-scroll-proportion="0.3119266">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
