@@ -81,28 +81,7 @@
     <favorites_list name="hybrid" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DeprecatedAttributeHeader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/DeprecatedAttributeHeader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="43" selection-start="245" selection-end="245" vertical-scroll-proportion="0.1594203">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InnerClassInfo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/InnerClassInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="5" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.18599033">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -237,24 +216,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="hybrid" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="hybrid" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid\inc\glamdring\bitecode" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -566,15 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="43" selection-start="245" selection-end="245" vertical-scroll-proportion="0.1594203">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/InnerClassInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.18599033">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

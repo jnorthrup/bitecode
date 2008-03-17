@@ -47,7 +47,7 @@ public class ExtractValuesTest extends TestCase {
 
     }
 
-    public <T extends Enum<T>> String testGetEnumsStructsForPackage() throws Exception {
+    public   String testGetEnumsStructsForPackage() throws Exception {
 
         Map<Class<? extends Enum>, Iterable<? extends Enum>> map = extractValues.getEnumsStructsForPackage();
 

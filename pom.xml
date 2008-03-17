@@ -15,19 +15,81 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>maven</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>1.10</version>
+            <scope>report</scope>
+        </dependency>
+        <dependency>
             <groupId>org.javolution</groupId>
             <artifactId>javolution</artifactId>
-            <version>5.2.6</version> 
+            <version>5.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>maven</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>1.5</version>
         </dependency>
     </dependencies>
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jxr-plugin</artifactId>
+                    <configuration>
+
+                        <linkJavadoc>true</linkJavadoc>
+
+                        <javadocDir>target/site/apidocs</javadocDir>
+                        <!--<javadocDir>M:\work\bitecode\target\site\apidocs</javadocDir>
+                        <javadocDir>M:\work\bitecode\target\site\apidocs</javadocDir>
+                        -->
+
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <meminitial>2g</meminitial>
+                        <maxmem>2g</maxmem>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId> 
+                                              <version>2.0-beta-7-SNAPSHOT</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-idea-plugin</artifactId>
+                    <configuration>
+                        <downloadSources>true</downloadSources>
+                        <downloadJavadocs>true</downloadJavadocs>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
     <reporting>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <!-- Two rule sets that come bundled with PMD -->
+                    <ruleset>/rulesets/braces.xml</ruleset>
+                    <ruleset>/rulesets/naming.xml</ruleset>
+                    <!-- Custom local file system rule set -->
+                    <ruleset>/rulesets/strings.xml</ruleset>
+                    <!-- Custom remote rule set accessed via a URL -->
+                    <ruleset>/rulesets/design.xml</ruleset>
+                    <linkXref>true</linkXref>
+                    <sourceEncoding>utf-8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.6</targetJdk>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

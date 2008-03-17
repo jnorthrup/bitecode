@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project relativePaths="false" version="4">
+<project relativePaths="true" version="4">
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
@@ -21,9 +21,6 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="ClassPatternConfiguration">
-    <testPatterns />
-  </component>
   <component name="CodeStyleProjectProfileManger">
     <option name="PROJECT_PROFILE" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
@@ -131,7 +128,7 @@
     <option name="SORT_ALPHABETICALLY" value="false" />
     <option name="HIDE_CLASSES_WHERE_METHOD_NOT_IMPLEMENTED" value="false" />
   </component>
-  <component name="IdProvider" IDEtalkID="1A83846C49E7625A43D42727DE139D48" />
+  <component name="IdProvider" IDEtalkID="6C0AB6EB89CFF584DD9CEFCA60272591" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
@@ -140,40 +137,9 @@
       <profile version="1.0" is_locked="false">
         <option name="myName" value="Project Default" />
         <option name="myLocal" value="false" />
-        <inspection_tool class="JavadocReference" level="ERROR" enabled="false" />
       </profile>
     </profiles>
     <list size="0" />
-  </component>
-  <component name="JUnitClassTemplateConfiguration">
-    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="false" />
-    <option name="DONT_SHOW_METHODS_DIALOG_IF_ONLY_ONE_METHOD" value="false" />
-    <option name="LAST_TEMPLATE_NAME" />
-    <option name="TEST_TEMPLATES">
-      <value>
-        <list size="0" />
-      </value>
-    </option>
-  </component>
-  <component name="JUnitMethodTemplateConfiguration">
-    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="false" />
-    <option name="DONT_SHOW_METHODS_DIALOG_IF_ONLY_ONE_METHOD" value="false" />
-    <option name="LAST_TEMPLATE_NAME" />
-    <option name="TEST_TEMPLATES">
-      <value>
-        <list size="0" />
-      </value>
-    </option>
-  </component>
-  <component name="JUnitTestConfiguration">
-    <option name="IS_AUTO_TEST_CLASS_RENAME_ENABLED" value="true" />
-    <option name="IS_AUTO_TEST_CLASS_MOVE_ENABLED" value="true" />
-    <option name="IS_AUTO_TEST_CLASS_REFACTORING_ENABLED" value="true" />
-    <option name="IS_AUTO_TEST_METHODS_RENAME_ENABLED" value="true" />
-    <option name="IS_UNTESTED_METHOD_ICON_ENABLED" value="true" />
-    <option name="IS_GET_METHOD_ICONS_ENABLED" value="true" />
-    <option name="IS_SET_METHOD_ICONS_ENABLED" value="true" />
-    <option name="IS_UNIT_TEST_ENABLED" value="true" />
   </component>
   <component name="JavacSettings">
     <option name="DEBUGGING_INFO" value="true" />
@@ -206,13 +172,6 @@
     <option name="GENERATE_NO_WARNINGS" value="false" />
     <option name="IS_EMACS_ERRORS_MODE" value="true" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
-  </component>
-  <component name="MavenImporterState">
-    <option name="autoImport">
-      <set>
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
@@ -351,7 +310,9 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectModuleManager">
-    <modules />
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bitecode.iml" filepath="$PROJECT_DIR$/bitecode.iml" />
+    </modules>
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -396,6 +357,37 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -414,37 +406,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
       <envs />
     </configuration>
     <list size="0" />
