@@ -19,20 +19,32 @@ public class ExtractValuesTest extends TestCase {
     private static final FastMap<CharSequence, String> M = new FastMap<CharSequence, String>();
     private static final String[] ISAREFS = new String[]{"Record", "Value", "Header", "Ref", "Info"};
     private static final String ISA_MODS = Modifier.toString(Modifier.STATIC | Modifier.FINAL | Modifier.PUBLIC);
-
+    static Map<Class<?>, Pair<String, Pair<String, String>>> bBufWrap = new LinkedHashMap<Class<?>, Pair<String, Pair<String, String>>>();
 
     static {
 
+        {
+            bBufWrap.put(char.class, new Pair<String, Pair<String, String>>("Char", new Pair("char", "")));
+            bBufWrap.put(int.class, new Pair<String, Pair<String, String>>("Int", new Pair("int","")));
+            bBufWrap.put(long.class, new Pair<String, Pair<String, String>>("Long", new Pair("long","")));
+            bBufWrap.put(short.class, new Pair<String, Pair<String, String>>("Short", new Pair("short", " & 0xffff")));
+            bBufWrap.put(double.class, new Pair<String, Pair<String, String>>("Double", new Pair("double","")));
+            bBufWrap.put(float.class, new Pair<String, Pair<String, String>>("Float", new Pair("float","")));
+            bBufWrap.put(byte[].class, new Pair<String, Pair<String, String>>("", new Pair("byte[]", " & 0xff")));
+            bBufWrap.put(byte.class, new Pair<String, Pair<String, String>>("", new Pair("byte", " & 0xff")));
 
-        M.put("recordLen", Modifier.toString(Modifier.STATIC | Modifier.PUBLIC) + " int recordLen;");
-        M.put("size", Modifier.toString(  Modifier.FINAL | Modifier.PUBLIC) + " int size;");
-        M.put("seek", Modifier.toString(  Modifier.FINAL | Modifier.PUBLIC) + " int seek;");
-        M.put("subRecord", "public Class<? extends Enum> subRecord;");
-        M.put("valueClazz", "public java.lang.Class valueClazz;");
 
-        for (String isaref : ISAREFS) {
-            M.put("is" + isaref, "");
+            M.put("recordLen", Modifier.toString(Modifier.STATIC | Modifier.PUBLIC) + " int recordLen;");
+            M.put("size", Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int size;");
+            M.put("seek", Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int seek;");
+            M.put("subRecord", "public Class<? extends Enum> subRecord;");
+            M.put("valueClazz", "public java.lang.Class valueClazz;");
+
+            for (String isaref : ISAREFS) {
+                M.put("is" + isaref, "");
+            }
         }
+
     }
 
     public <T extends Enum<T>> String testGetEnumsStructsForPackage() throws Exception {
@@ -119,7 +131,7 @@ public class ExtractValuesTest extends TestCase {
                     display += s1 + EOL;
 
                 for (String isaref : ISAREFS) {
-                    M.put("is" + isaref, ISA_MODS + " boolean " + "is"+isaref + "=" + enumClazz.getSimpleName().endsWith(  isaref  ) + ';');
+                    M.put("is" + isaref, ISA_MODS + " boolean " + "is" + isaref + "=" + enumClazz.getSimpleName().endsWith(isaref) + ';');
                 }
 
 
@@ -255,8 +267,13 @@ public class ExtractValuesTest extends TestCase {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        s += "\n\n/**\n " + "\t<p>recordSize: " + recordLen + "\n * <table><tr>" +
-                " * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr>";
+        s += "\n\n/**\n" + " * <p>recordSize: " + recordLen + "\n * <table><tr>\n" +
+                " * <th>name</th>" +
+                "<th>size</th>" +
+                "<th>seek</th>" +
+                "<th>Value Class</th>" +
+                "<th>Sub-Index</th>" +
+                "</tr>";
 
         String name = "";
         for (Enum theSlot : enums) {
@@ -264,25 +281,19 @@ public class ExtractValuesTest extends TestCase {
             Class aClass = null;
             try {
                 try {
-                    aClass = (Class<ByteBuffer>) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
+                    aClass = (Class) theSlot.getDeclaringClass().getDeclaredField("subRecord").get(theSlot);
+
+
                 } catch (Exception e) {
-                    final inc.glamdring.util.Pair<Class<? extends Enum>, Integer> record;
-                    record = getSubRecord(name);
-                    aClass = (Class) record.getFirst();
-                    size = record.getSecond();
+
+                }
+                if ((aClass) == null) {
+
+                    Object[] record = getSubRecord(name);
+                    aClass = (Class) record[0];
+                    size = (Integer) record[1];
                 }
             } catch (Exception e) {
-            }
-
-            if (aClass == null) {
-                try {
-                    try {
-                        aClass = (Class<ByteBuffer>) theSlot.getDeclaringClass().getDeclaredField("valueClass").get(theSlot);
-                    } catch (Exception e) {
-                        aClass = getValueClass(name);
-                    }
-                } catch (Exception e) {
-                }
             }
             if (size == 0) {
                 try {
@@ -294,16 +305,30 @@ public class ExtractValuesTest extends TestCase {
             try {
                 seek = (Integer) theSlot.getDeclaringClass().getDeclaredField("seek").get(theSlot);
             } catch (Exception e) {
-
             }
 
-            s +=
-                    " * <tr>" +
-                            "<td> " + name + "</td>" +
-                            "<td>" + size + "</td>" +
-                            "<td>" + seek + "</td>" +
-                            "<td>{@link " + (aClass == null ? ByteBuffer.class : aClass).getCanonicalName() + "}</td>" +
-                            "</tr>\n";
+
+            Class valClazz = null;
+            Class bClass = null;
+            if (valClazz == null) {
+                bClass = null;
+                if (bClass == null) {
+                    bClass = guessIntTypes(size);
+                }
+            }
+
+            final Pair<String, Pair<String, String>> pair = bBufWrap.get(bClass);
+            s += " * <tr>" +
+                    "<td> " + name + "</td>" +
+                    "<td>" + size + "</td>" +
+                    "<td>" + seek + "</td>" +
+                    "<td>" + ((valClazz == null) ? (pair.getSecond().getFirst() + " " + name + " src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(" + seek + ")"+pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
+                    "<td>{@link " + (aClass == null ? theSlot.getDeclaringClass().
+
+                    getSimpleName()
+
+                    + "Visitor#" + name + "(ByteBufferer, int[], IntBuffer)" : aClass.getCanonicalName()) + "}</td>" +
+                    "</tr>\n";
         }
         s += " *\n";
 
@@ -319,38 +344,46 @@ public class ExtractValuesTest extends TestCase {
     }
 
 
-    private Pair<Class<? extends Enum>, Integer> getSubRecord(String name) {
+    private Object[] getSubRecord(String name) {
         final String[] indexPrefixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
         for (String indexPrefix : indexPrefixes) {
             try {
-                return new Pair<Class<? extends Enum>, Integer>(Class.forName(getClass().getPackage().getName() + '.' + name + indexPrefix), Class.forName(getClass().getPackage().getName() + '.' + name + indexPrefix).getField("recordLen").getInt(null));
+                final String p = getClass().getPackage().getName();
+                final String name1 = p + '.' + name + indexPrefix;
+                final Class<?> aClass = Class.forName(name1);
+                final int anInt = aClass.getField("recordLen").getInt(null);
+                if (aClass != null)
+                    return new Object[]{aClass, anInt};
             } catch (Exception e) {
             }
-            break;
         }
         return null;
     }
 
-    private Class<?> getValueClass(String name) {
-        final String[] vPrefixes = {"_", "", "$"};
-        final String[] packages = {"",
-                Object.class.getPackage().getName() + ".",
-                List.class.getPackage().getName() + ".",
-                getClass().getPackage().getName() + "."
-        };
-        final String[] names = {name.toLowerCase(), name,};
-
-        Class<?> valueClazz = null;
-        for (int i = 0; i < vPrefixes.length; i++)
-            for (int i1 = 0; i1 < names.length; i1++)
-                if (names[i1].endsWith(vPrefixes[i]))
-                    for (String aPackage : packages) {
-                        try {
-                            valueClazz = Class.forName(aPackage + "." + names[i1].replaceAll(names[i1] + vPrefixes[i], names[i1]));
-                            return valueClazz;
-                        } catch (ClassNotFoundException e) {
-                        }
-                    }
-        return valueClazz;
+    public static Class guessIntTypes(int size, Class... clazz) {
+        Class layout_clazz;
+        if (clazz.length == 0) {
+            switch (size) {
+                case 1:
+                    layout_clazz = byte.class;
+                    break;
+                case 2:
+                    layout_clazz = short.class;
+                    break;
+                case 4:
+                    layout_clazz = int.class;
+                    break;
+                case 8:
+                    layout_clazz = long.class;
+                    break;
+                default:
+                    layout_clazz = byte[].class;
+                    break;
+            }
+        } else {
+            layout_clazz = clazz[0];
+        }
+        return layout_clazz;
     }
+
 }

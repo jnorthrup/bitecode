@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> AccessFlagsValue</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <p>recordSize: 8
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> AccessFlagsValue</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
  * <tr><td> Utf8Index</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> DescriptorIndex</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> AttributeCount</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
@@ -29,7 +30,7 @@ AccessFlagsValue(0x2)	{{
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
+	public static final boolean isInfo=true;
 	MethodInfo (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));
     }

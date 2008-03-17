@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 24
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 24
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> minor_version</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> major_version</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> ConstantPoolRecord</td><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
@@ -44,7 +45,7 @@ magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
 	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	public static final boolean isRecord=false;
+	public static final boolean isRecord=true;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;

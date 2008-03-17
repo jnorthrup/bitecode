@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 38
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 38
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> Utf8_</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
  * <tr><td> UNUSED</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> Integer_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
@@ -60,7 +61,7 @@ INVALID,Utf8_(0x2)	{{
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
+	public static final boolean isRef=true;
 	public static final boolean isInfo=false;
 	ConstantPoolRef (int... dimensions) {
         seek = initRecordLen(size = (dimensions.length > 0 ? dimensions[0] : init()));

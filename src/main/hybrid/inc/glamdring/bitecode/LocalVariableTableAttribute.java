@@ -3,10 +3,11 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> local_variable_table_length</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 8
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>short Utf8Index src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>short AttributeLength src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> local_variable_table_length</td><td>2</td><td>6</td><td>short local_variable_table_length src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#local_variable_table_length(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#Utf8Index
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#AttributeLength

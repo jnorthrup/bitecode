@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 4
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 4
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> line_number</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  *
  * @see inc.glamdring.bitecode.LineNumberValue#start_pc
@@ -21,7 +22,7 @@ start_pc(0x2),line_number(0x2);
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
+	public static final boolean isValue=true;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;

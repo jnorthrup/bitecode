@@ -3,10 +3,11 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> classes_count</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 8
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>short Utf8Index src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link InnerClassesHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>short AttributeLength src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link InnerClassesHeaderVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> classes_count</td><td>2</td><td>6</td><td>short classes_count src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link InnerClassesHeaderVisitor#classes_count(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.InnerClassesHeader#Utf8Index
  * @see inc.glamdring.bitecode.InnerClassesHeader#AttributeLength

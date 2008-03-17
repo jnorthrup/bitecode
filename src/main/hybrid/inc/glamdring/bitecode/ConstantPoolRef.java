@@ -3,20 +3,21 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 38
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Utf8_</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
- * <tr><td> UNUSED</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Integer_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Float_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Long_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Double_</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Class_</td><td>2</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> String_</td><td>2</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Field_</td><td>2</td><td>22</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
- * <tr><td> Method_</td><td>2</td><td>26</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
- * <tr><td> InterfaceMethod_</td><td>2</td><td>30</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
- * <tr><td> NameAndType_</td><td>2</td><td>34</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
+ * <p>recordSize: 38
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>byte[] INVALID src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link ConstantPoolRefVisitor#INVALID(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8_</td><td>2</td><td>0</td><td>short Utf8_ src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
+ * <tr><td> UNUSED</td><td>2</td><td>2</td><td>short UNUSED src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#UNUSED(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Integer_</td><td>2</td><td>2</td><td>short Integer_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Integer_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Float_</td><td>2</td><td>2</td><td>short Float_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Float_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Long_</td><td>2</td><td>2</td><td>short Long_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Long_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Double_</td><td>2</td><td>10</td><td>short Double_ src.{@link java.nio.ByteBuffer#getShort}(10) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Double_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Class_</td><td>2</td><td>18</td><td>short Class_ src.{@link java.nio.ByteBuffer#getShort}(18) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Class_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> String_</td><td>2</td><td>20</td><td>short String_ src.{@link java.nio.ByteBuffer#getShort}(20) & 0xffff</td><td>{@link ConstantPoolRefVisitor#String_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Field_</td><td>2</td><td>22</td><td>short Field_ src.{@link java.nio.ByteBuffer#getShort}(22) & 0xffff</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
+ * <tr><td> Method_</td><td>2</td><td>26</td><td>short Method_ src.{@link java.nio.ByteBuffer#getShort}(26) & 0xffff</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
+ * <tr><td> InterfaceMethod_</td><td>2</td><td>30</td><td>short InterfaceMethod_ src.{@link java.nio.ByteBuffer#getShort}(30) & 0xffff</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
+ * <tr><td> NameAndType_</td><td>2</td><td>34</td><td>short NameAndType_ src.{@link java.nio.ByteBuffer#getShort}(34) & 0xffff</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
  *
  * @see inc.glamdring.bitecode.ConstantPoolRef#INVALID
  * @see inc.glamdring.bitecode.ConstantPoolRef#Utf8_

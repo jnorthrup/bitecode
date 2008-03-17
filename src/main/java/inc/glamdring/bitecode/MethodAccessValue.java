@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 0
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> private_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> protected_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> static_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
@@ -33,7 +34,7 @@ public_,private_,protected_,static_,final_,synchronized_,native_,abstract_,stric
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
+	public static final boolean isValue=true;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;

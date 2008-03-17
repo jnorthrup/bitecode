@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 2
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> length</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 2
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> length</td><td>2</td><td>0</td><td>short length src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link Utf8_Visitor#length(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.Utf8_#length
  * </table>

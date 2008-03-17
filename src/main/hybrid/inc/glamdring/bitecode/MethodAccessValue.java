@@ -3,16 +3,17 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> private_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> protected_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> static_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> final_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> synchronized_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> native_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> abstract_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> strict_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 0
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>byte[] public_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> private_</td><td>0</td><td>0</td><td>byte[] private_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> protected_</td><td>0</td><td>0</td><td>byte[] protected_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> static_</td><td>0</td><td>0</td><td>byte[] static_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> final_</td><td>0</td><td>0</td><td>byte[] final_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> synchronized_</td><td>0</td><td>0</td><td>byte[] synchronized_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> native_</td><td>0</td><td>0</td><td>byte[] native_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> abstract_</td><td>0</td><td>0</td><td>byte[] abstract_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> strict_</td><td>0</td><td>0</td><td>byte[] strict_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link MethodAccessValueVisitor#strict_(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.MethodAccessValue#public_
  * @see inc.glamdring.bitecode.MethodAccessValue#private_

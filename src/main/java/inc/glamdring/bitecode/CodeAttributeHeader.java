@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 18
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 18
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> MaxStack</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> MaxLocals</td><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
@@ -30,7 +31,7 @@ Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4)
 	public java.lang.Class valueClazz;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
+	public static final boolean isHeader=true;
 	public static final boolean isRef=false;
 	public static final boolean isInfo=false;
 	CodeAttributeHeader (int... dimensions) {

@@ -3,11 +3,12 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 8
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> end_pc</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> handler_pc</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> catch_type</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 8
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>short start_pc src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link ExceptionValueVisitor#start_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> end_pc</td><td>2</td><td>2</td><td>short end_pc src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ExceptionValueVisitor#end_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> handler_pc</td><td>2</td><td>4</td><td>short handler_pc src.{@link java.nio.ByteBuffer#getShort}(4) & 0xffff</td><td>{@link ExceptionValueVisitor#handler_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> catch_type</td><td>2</td><td>6</td><td>short catch_type src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link ExceptionValueVisitor#catch_type(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.ExceptionValue#start_pc
  * @see inc.glamdring.bitecode.ExceptionValue#end_pc

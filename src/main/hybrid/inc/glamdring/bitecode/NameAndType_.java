@@ -3,9 +3,10 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 4
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> DescriptorIndex</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 4
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>short Utf8Index src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link NameAndType_Visitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> DescriptorIndex</td><td>2</td><td>2</td><td>short DescriptorIndex src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link NameAndType_Visitor#DescriptorIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.NameAndType_#Utf8Index
  * @see inc.glamdring.bitecode.NameAndType_#DescriptorIndex

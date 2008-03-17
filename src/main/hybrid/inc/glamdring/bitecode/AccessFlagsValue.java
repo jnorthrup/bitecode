@@ -3,17 +3,18 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 0
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> private_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> protected_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> static_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> final_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> super_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> volatile_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> transient_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> interface_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> abstract_</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 0
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> public_</td><td>0</td><td>0</td><td>byte[] public_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#public_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> private_</td><td>0</td><td>0</td><td>byte[] private_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#private_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> protected_</td><td>0</td><td>0</td><td>byte[] protected_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#protected_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> static_</td><td>0</td><td>0</td><td>byte[] static_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#static_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> final_</td><td>0</td><td>0</td><td>byte[] final_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#final_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> super_</td><td>0</td><td>0</td><td>byte[] super_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#super_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> volatile_</td><td>0</td><td>0</td><td>byte[] volatile_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#volatile_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> transient_</td><td>0</td><td>0</td><td>byte[] transient_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#transient_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> interface_</td><td>0</td><td>0</td><td>byte[] interface_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#interface_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> abstract_</td><td>0</td><td>0</td><td>byte[] abstract_ src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link AccessFlagsValueVisitor#abstract_(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.AccessFlagsValue#public_
  * @see inc.glamdring.bitecode.AccessFlagsValue#private_

@@ -3,18 +3,19 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 24
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> minor_version</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> major_version</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> ConstantPoolRecord</td><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><td> AccessFlagsValue</td><td>4</td><td>10</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td> ClassIndex</td><td>4</td><td>12</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> SuperClassIndex</td><td>4</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> InterFaceTableRecord</td><td>4</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> FieldRecord</td><td>4</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> MethodsRecord</td><td>4</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributesRecord</td><td>4</td><td>22</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 24
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>int magic src.{@link java.nio.ByteBuffer#getInt}(0)</td><td>{@link FileSlotRecordVisitor#magic(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> minor_version</td><td>4</td><td>4</td><td>int minor_version src.{@link java.nio.ByteBuffer#getInt}(4)</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> major_version</td><td>4</td><td>6</td><td>int major_version src.{@link java.nio.ByteBuffer#getInt}(6)</td><td>{@link FileSlotRecordVisitor#major_version(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ConstantPoolRecord</td><td>4</td><td>8</td><td>int ConstantPoolRecord src.{@link java.nio.ByteBuffer#getInt}(8)</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>4</td><td>10</td><td>int AccessFlagsValue src.{@link java.nio.ByteBuffer#getInt}(10)</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> ClassIndex</td><td>4</td><td>12</td><td>int ClassIndex src.{@link java.nio.ByteBuffer#getInt}(12)</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> SuperClassIndex</td><td>4</td><td>14</td><td>int SuperClassIndex src.{@link java.nio.ByteBuffer#getInt}(14)</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> InterFaceTableRecord</td><td>4</td><td>16</td><td>int InterFaceTableRecord src.{@link java.nio.ByteBuffer#getInt}(16)</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> FieldRecord</td><td>4</td><td>18</td><td>int FieldRecord src.{@link java.nio.ByteBuffer#getInt}(18)</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> MethodsRecord</td><td>4</td><td>20</td><td>int MethodsRecord src.{@link java.nio.ByteBuffer#getInt}(20)</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributesRecord</td><td>4</td><td>22</td><td>int AttributesRecord src.{@link java.nio.ByteBuffer#getInt}(22)</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.FileSlotRecord#magic
  * @see inc.glamdring.bitecode.FileSlotRecord#minor_version

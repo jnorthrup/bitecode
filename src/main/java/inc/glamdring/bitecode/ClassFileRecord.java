@@ -3,8 +3,9 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 1573144
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> ClassResourceUri</td><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 1573144
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> ClassResourceUri</td><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
  * <tr><td> FileSlotRecord</td><td>256</td><td>256</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
  * <tr><td> TableRecord</td><td>256</td><td>280</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
  *
@@ -26,7 +27,7 @@ ClassResourceUri(0x100),FileSlotRecord(0x18)	{{
 	public final int seek;
 	public Class<? extends Enum> subRecord;
 	public java.lang.Class valueClazz;
-	public static final boolean isRecord=false;
+	public static final boolean isRecord=true;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
 	public static final boolean isRef=false;

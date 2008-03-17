@@ -3,10 +3,11 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 1573144
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> ClassResourceUri</td><td>256</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> FileSlotRecord</td><td>256</td><td>256</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
- * <tr><td> TableRecord</td><td>256</td><td>280</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
+ * <p>recordSize: 1573144
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> ClassResourceUri</td><td>256</td><td>0</td><td>byte[] ClassResourceUri src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link ClassFileRecordVisitor#ClassResourceUri(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> FileSlotRecord</td><td>256</td><td>256</td><td>byte[] FileSlotRecord src.{@link java.nio.ByteBuffer#get}(256) & 0xff</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
+ * <tr><td> TableRecord</td><td>256</td><td>280</td><td>byte[] TableRecord src.{@link java.nio.ByteBuffer#get}(280) & 0xff</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
  *
  * @see inc.glamdring.bitecode.ClassFileRecord#ClassResourceUri
  * @see inc.glamdring.bitecode.ClassFileRecord#FileSlotRecord

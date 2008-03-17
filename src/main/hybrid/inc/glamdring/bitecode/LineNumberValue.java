@@ -3,9 +3,10 @@ import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- 	<p>recordSize: 4
- * <table><tr> * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> line_number</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
+ * <p>recordSize: 4
+ * <table><tr>
+ * <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>short start_pc src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link LineNumberValueVisitor#start_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> line_number</td><td>2</td><td>2</td><td>short line_number src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link LineNumberValueVisitor#line_number(ByteBufferer, int[], IntBuffer)}</td></tr>
  *
  * @see inc.glamdring.bitecode.LineNumberValue#start_pc
  * @see inc.glamdring.bitecode.LineNumberValue#line_number
