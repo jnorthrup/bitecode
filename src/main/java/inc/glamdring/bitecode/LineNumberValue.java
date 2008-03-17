@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 4
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> line_number</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> start_pc</td><td>0x2</td><td>0x0</td><td>shortstart_pc src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link LineNumberValueVisitor#start_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> line_number</td><td>0x2</td><td>0x2</td><td>shortline_number src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link LineNumberValueVisitor#line_number(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.LineNumberValue#start_pc
  * @see inc.glamdring.bitecode.LineNumberValue#line_number
  * </table>
@@ -32,10 +32,10 @@ start_pc(0x2),line_number(0x2);
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

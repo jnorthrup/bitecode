@@ -4,19 +4,19 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 24
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> magic</td><td>4</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> minor_version</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> major_version</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> ConstantPoolRecord</td><td>4</td><td>8</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><td> AccessFlagsValue</td><td>4</td><td>10</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td> ClassIndex</td><td>4</td><td>12</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> SuperClassIndex</td><td>4</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> InterFaceTableRecord</td><td>4</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> FieldRecord</td><td>4</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> MethodsRecord</td><td>4</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributesRecord</td><td>4</td><td>22</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> magic</td><td>0x4</td><td>0x0</td><td>intmagic src.{@link java.nio.ByteBuffer#getInt}(0)</td><td>{@link FileSlotRecordVisitor#magic(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> minor_version</td><td>0x4</td><td>0x4</td><td>intminor_version src.{@link java.nio.ByteBuffer#getInt}(4)</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> major_version</td><td>0x4</td><td>0x6</td><td>intmajor_version src.{@link java.nio.ByteBuffer#getInt}(6)</td><td>{@link FileSlotRecordVisitor#major_version(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ConstantPoolRecord</td><td>0x4</td><td>0x8</td><td>intConstantPoolRecord src.{@link java.nio.ByteBuffer#getInt}(8)</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td> AccessFlagsValue</td><td>0x4</td><td>0xa</td><td>intAccessFlagsValue src.{@link java.nio.ByteBuffer#getInt}(a)</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> ClassIndex</td><td>0x4</td><td>0xc</td><td>intClassIndex src.{@link java.nio.ByteBuffer#getInt}(c)</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> SuperClassIndex</td><td>0x4</td><td>0xe</td><td>intSuperClassIndex src.{@link java.nio.ByteBuffer#getInt}(e)</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> InterFaceTableRecord</td><td>0x4</td><td>0x10</td><td>intInterFaceTableRecord src.{@link java.nio.ByteBuffer#getInt}(10)</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> FieldRecord</td><td>0x4</td><td>0x12</td><td>intFieldRecord src.{@link java.nio.ByteBuffer#getInt}(12)</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> MethodsRecord</td><td>0x4</td><td>0x14</td><td>intMethodsRecord src.{@link java.nio.ByteBuffer#getInt}(14)</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributesRecord</td><td>0x4</td><td>0x16</td><td>intAttributesRecord src.{@link java.nio.ByteBuffer#getInt}(16)</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.FileSlotRecord#magic
  * @see inc.glamdring.bitecode.FileSlotRecord#minor_version
  * @see inc.glamdring.bitecode.FileSlotRecord#major_version
@@ -56,10 +56,10 @@ magic(0x4),minor_version(0x2),major_version(0x2),ConstantPoolRecord(0x2)	{{
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

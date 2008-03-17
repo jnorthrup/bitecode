@@ -4,21 +4,21 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 38
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> INVALID</td><td>0</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Utf8_</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
- * <tr><td> UNUSED</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Integer_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Float_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Long_</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Double_</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Class_</td><td>2</td><td>18</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> String_</td><td>2</td><td>20</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> Field_</td><td>2</td><td>22</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
- * <tr><td> Method_</td><td>2</td><td>26</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
- * <tr><td> InterfaceMethod_</td><td>2</td><td>30</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
- * <tr><td> NameAndType_</td><td>2</td><td>34</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> INVALID</td><td>0x0</td><td>0x0</td><td>byte[]INVALID src.{@link java.nio.ByteBuffer#get}(0) & 0xff</td><td>{@link ConstantPoolRefVisitor#INVALID(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Utf8_</td><td>0x2</td><td>0x0</td><td>shortUtf8_ src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
+ * <tr><td> UNUSED</td><td>0x2</td><td>0x2</td><td>shortUNUSED src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#UNUSED(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Integer_</td><td>0x2</td><td>0x2</td><td>shortInteger_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Integer_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Float_</td><td>0x2</td><td>0x2</td><td>shortFloat_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Float_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Long_</td><td>0x2</td><td>0x2</td><td>shortLong_ src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Long_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Double_</td><td>0x2</td><td>0xa</td><td>shortDouble_ src.{@link java.nio.ByteBuffer#getShort}(a) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Double_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Class_</td><td>0x2</td><td>0x12</td><td>shortClass_ src.{@link java.nio.ByteBuffer#getShort}(12) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Class_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> String_</td><td>0x2</td><td>0x14</td><td>shortString_ src.{@link java.nio.ByteBuffer#getShort}(14) & 0xffff</td><td>{@link ConstantPoolRefVisitor#String_(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> Field_</td><td>0x2</td><td>0x16</td><td>shortField_ src.{@link java.nio.ByteBuffer#getShort}(16) & 0xffff</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
+ * <tr><td> Method_</td><td>0x2</td><td>0x1a</td><td>shortMethod_ src.{@link java.nio.ByteBuffer#getShort}(1a) & 0xffff</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
+ * <tr><td> InterfaceMethod_</td><td>0x2</td><td>0x1e</td><td>shortInterfaceMethod_ src.{@link java.nio.ByteBuffer#getShort}(1e) & 0xffff</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
+ * <tr><td> NameAndType_</td><td>0x2</td><td>0x22</td><td>shortNameAndType_ src.{@link java.nio.ByteBuffer#getShort}(22) & 0xffff</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.ConstantPoolRef#INVALID
  * @see inc.glamdring.bitecode.ConstantPoolRef#Utf8_
  * @see inc.glamdring.bitecode.ConstantPoolRef#UNUSED
@@ -69,10 +69,10 @@ INVALID,Utf8_(0x2)	{{
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

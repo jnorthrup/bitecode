@@ -25,11 +25,11 @@ public class ExtractValuesTest extends TestCase {
 
         {
             bBufWrap.put(char.class, new Pair<String, Pair<String, String>>("Char", new Pair("char", "")));
-            bBufWrap.put(int.class, new Pair<String, Pair<String, String>>("Int", new Pair("int","")));
-            bBufWrap.put(long.class, new Pair<String, Pair<String, String>>("Long", new Pair("long","")));
+            bBufWrap.put(int.class, new Pair<String, Pair<String, String>>("Int", new Pair("int", "")));
+            bBufWrap.put(long.class, new Pair<String, Pair<String, String>>("Long", new Pair("long", "")));
             bBufWrap.put(short.class, new Pair<String, Pair<String, String>>("Short", new Pair("short", " & 0xffff")));
-            bBufWrap.put(double.class, new Pair<String, Pair<String, String>>("Double", new Pair("double","")));
-            bBufWrap.put(float.class, new Pair<String, Pair<String, String>>("Float", new Pair("float","")));
+            bBufWrap.put(double.class, new Pair<String, Pair<String, String>>("Double", new Pair("double", "")));
+            bBufWrap.put(float.class, new Pair<String, Pair<String, String>>("Float", new Pair("float", "")));
             bBufWrap.put(byte[].class, new Pair<String, Pair<String, String>>("", new Pair("byte[]", " & 0xff")));
             bBufWrap.put(byte.class, new Pair<String, Pair<String, String>>("", new Pair("byte", " & 0xff")));
 
@@ -152,10 +152,10 @@ public class ExtractValuesTest extends TestCase {
                     "\n" +
                     "    private int initRecordLen(int size) {\n" +
                     "        int rl = recordLen;\n" +
-                    "        recordLen += init() == size ? size : size;\n" +
+                    "        final int ns = init();\n" +
+                    "        recordLen += ns == -1 ? size : ns;\n" +
                     "        return rl;\n" +
                     "    }\n" +
-                    "\n" +
                     "    int init() {\n" +
                     "        int size = 0;\n" +
                     "        if (subRecord == null) {\n" +
@@ -267,13 +267,13 @@ public class ExtractValuesTest extends TestCase {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        s += "\n\n/**\n" + " * <p>recordSize: " + recordLen + "\n * <table><tr>\n" +
-                " * <th>name</th>" +
+        s += "\n\n/**\n * <p>recordSize: " + recordLen + "\n * <table><tr> " +
+                "<th>name</th>" +
                 "<th>size</th>" +
                 "<th>seek</th>" +
                 "<th>Value Class</th>" +
                 "<th>Sub-Index</th>" +
-                "</tr>";
+                "</tr>\n";
 
         String name = "";
         for (Enum theSlot : enums) {
@@ -320,17 +320,15 @@ public class ExtractValuesTest extends TestCase {
             final Pair<String, Pair<String, String>> pair = bBufWrap.get(bClass);
             s += " * <tr>" +
                     "<td> " + name + "</td>" +
-                    "<td>" + size + "</td>" +
-                    "<td>" + seek + "</td>" +
-                    "<td>" + ((valClazz == null) ? (pair.getSecond().getFirst() + " " + name + " src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(" + seek + ")"+pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
-                    "<td>{@link " + (aClass == null ? theSlot.getDeclaringClass().
-
-                    getSimpleName()
+                    "<td>0x" + Integer.toHexString(size) + "</td>" +
+                    "<td>0x" + Integer.toHexString(seek) + "</td>" +
+                    "<td>" + ((valClazz == null) ? (pair.getSecond().getFirst() + name + " src.{@link " + (valClazz == null ? ByteBuffer.class : aClass).getCanonicalName() + "#get" + pair.getFirst() + "}(" + Integer.toHexString(seek) + ")" + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
+                    "<td>{@link " + (aClass == null ? theSlot.getDeclaringClass().getSimpleName()
 
                     + "Visitor#" + name + "(ByteBufferer, int[], IntBuffer)" : aClass.getCanonicalName()) + "}</td>" +
                     "</tr>\n";
         }
-        s += " *\n";
+        s += " * \n";
 
         for (Enum theSlot : enums) {
             s += " * @see " + docEnum.getCanonicalName() + "#" + theSlot.name() + '\n';

@@ -4,12 +4,12 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 8
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> ConstantPoolRef</td><td>4</td><td>0</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
- * <tr><td> subType</td><td>4</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> utf8Bitmap</td><td>4</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> tag</td><td>4</td><td>7</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> ConstantPoolRef</td><td>0x4</td><td>0x0</td><td>intConstantPoolRef src.{@link java.nio.ByteBuffer#getInt}(0)</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
+ * <tr><td> subType</td><td>0x4</td><td>0x4</td><td>intsubType src.{@link java.nio.ByteBuffer#getInt}(4)</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> utf8Bitmap</td><td>0x4</td><td>0x6</td><td>intutf8Bitmap src.{@link java.nio.ByteBuffer#getInt}(6)</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> tag</td><td>0x4</td><td>0x7</td><td>inttag src.{@link java.nio.ByteBuffer#getInt}(7)</td><td>{@link ConstantPoolRecordVisitor#tag(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
  * @see inc.glamdring.bitecode.ConstantPoolRecord#subType
  * @see inc.glamdring.bitecode.ConstantPoolRecord#utf8Bitmap
@@ -39,10 +39,10 @@ ConstantPoolRef(0x4)	{{
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

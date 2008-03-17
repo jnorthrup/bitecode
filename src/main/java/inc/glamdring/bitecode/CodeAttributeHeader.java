@@ -4,15 +4,15 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 18
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> MaxStack</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> MaxLocals</td><td>2</td><td>8</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> CodeLength</td><td>2</td><td>10</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> ExceptionTableLength</td><td>2</td><td>14</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> attributes_count</td><td>2</td><td>16</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td>shortUtf8Index src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0x2</td><td>0x2</td><td>shortAttributeLength src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> MaxStack</td><td>0x2</td><td>0x6</td><td>shortMaxStack src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#MaxStack(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> MaxLocals</td><td>0x2</td><td>0x8</td><td>shortMaxLocals src.{@link java.nio.ByteBuffer#getShort}(8) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#MaxLocals(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> CodeLength</td><td>0x2</td><td>0xa</td><td>shortCodeLength src.{@link java.nio.ByteBuffer#getShort}(a) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#CodeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> ExceptionTableLength</td><td>0x2</td><td>0xe</td><td>shortExceptionTableLength src.{@link java.nio.ByteBuffer#getShort}(e) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#ExceptionTableLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> attributes_count</td><td>0x2</td><td>0x10</td><td>shortattributes_count src.{@link java.nio.ByteBuffer#getShort}(10) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#attributes_count(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.CodeAttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.CodeAttributeHeader#AttributeLength
  * @see inc.glamdring.bitecode.CodeAttributeHeader#MaxStack
@@ -40,10 +40,10 @@ Utf8Index(0x2),AttributeLength(0x4),MaxStack(0x2),MaxLocals(0x2),CodeLength(0x4)
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

@@ -4,12 +4,12 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 8
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> start_pc</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> end_pc</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> handler_pc</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> catch_type</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> start_pc</td><td>0x2</td><td>0x0</td><td>shortstart_pc src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link ExceptionValueVisitor#start_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> end_pc</td><td>0x2</td><td>0x2</td><td>shortend_pc src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link ExceptionValueVisitor#end_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> handler_pc</td><td>0x2</td><td>0x4</td><td>shorthandler_pc src.{@link java.nio.ByteBuffer#getShort}(4) & 0xffff</td><td>{@link ExceptionValueVisitor#handler_pc(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> catch_type</td><td>0x2</td><td>0x6</td><td>shortcatch_type src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link ExceptionValueVisitor#catch_type(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.ExceptionValue#start_pc
  * @see inc.glamdring.bitecode.ExceptionValue#end_pc
  * @see inc.glamdring.bitecode.ExceptionValue#handler_pc
@@ -36,10 +36,10 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

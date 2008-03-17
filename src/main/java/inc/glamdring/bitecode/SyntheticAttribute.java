@@ -4,10 +4,10 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 6
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> Utf8Index</td><td>2</td><td>0</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributeLength</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x0</td><td>shortUtf8Index src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link SyntheticAttributeVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeLength</td><td>0x2</td><td>0x2</td><td>shortAttributeLength src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link SyntheticAttributeVisitor#AttributeLength(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.SyntheticAttribute#Utf8Index
  * @see inc.glamdring.bitecode.SyntheticAttribute#AttributeLength
  * </table>
@@ -30,10 +30,10 @@ Utf8Index(0x2),AttributeLength(0x4);
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {

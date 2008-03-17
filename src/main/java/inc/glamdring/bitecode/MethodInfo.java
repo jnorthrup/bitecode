@@ -4,12 +4,12 @@ import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 8
- * <table><tr>
- * <th>name</th><th>size</th><th>seek</th><th>Sub-Index</th></tr> * <tr><td> AccessFlagsValue</td><td>2</td><td>0</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td> Utf8Index</td><td>2</td><td>2</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> DescriptorIndex</td><td>2</td><td>4</td><td>{@link java.nio.ByteBuffer}</td></tr>
- * <tr><td> AttributeCount</td><td>2</td><td>6</td><td>{@link java.nio.ByteBuffer}</td></tr>
- *
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td> AccessFlagsValue</td><td>0x2</td><td>0x0</td><td>shortAccessFlagsValue src.{@link java.nio.ByteBuffer#getShort}(0) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td> Utf8Index</td><td>0x2</td><td>0x2</td><td>shortUtf8Index src.{@link java.nio.ByteBuffer#getShort}(2) & 0xffff</td><td>{@link MethodInfoVisitor#Utf8Index(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> DescriptorIndex</td><td>0x2</td><td>0x4</td><td>shortDescriptorIndex src.{@link java.nio.ByteBuffer#getShort}(4) & 0xffff</td><td>{@link MethodInfoVisitor#DescriptorIndex(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * <tr><td> AttributeCount</td><td>0x2</td><td>0x6</td><td>shortAttributeCount src.{@link java.nio.ByteBuffer#getShort}(6) & 0xffff</td><td>{@link MethodInfoVisitor#AttributeCount(ByteBufferer, int[], IntBuffer)}</td></tr>
+ * 
  * @see inc.glamdring.bitecode.MethodInfo#AccessFlagsValue
  * @see inc.glamdring.bitecode.MethodInfo#Utf8Index
  * @see inc.glamdring.bitecode.MethodInfo#DescriptorIndex
@@ -37,10 +37,10 @@ AccessFlagsValue(0x2)	{{
 
     private int initRecordLen(int size) {
         int rl = recordLen;
-        recordLen += init() == size ? size : size;
+        final int ns = init();
+        recordLen += ns == -1 ? size : ns;
         return rl;
     }
-
     int init() {
         int size = 0;
         if (subRecord == null) {
