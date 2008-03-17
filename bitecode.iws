@@ -102,7 +102,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="20" selection-start="3060" selection-end="3060" vertical-scroll-proportion="0.765625">
+            <state line="80" column="20" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.765625">
               <folding />
             </state>
           </provider>
@@ -122,7 +122,7 @@
       <file leaf-file-name="ClassFileRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="2" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.15698268">
+            <state line="50" column="2" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.15698268">
               <folding />
             </state>
           </provider>
@@ -881,7 +881,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="47" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.018438177">
           <folding>
-            <marker date="1205777928449" expanded="true" signature="80:102" placeholder="/**...*/" />
+            <marker date="1205779040455" expanded="true" signature="80:102" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -895,14 +895,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="20" selection-start="3060" selection-end="3060" vertical-scroll-proportion="0.765625">
+        <state line="80" column="20" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.765625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="2" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.15698268">
+        <state line="50" column="2" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.15698268">
           <folding />
         </state>
       </provider>
