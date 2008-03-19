@@ -1,19 +1,18 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: -9
+ * <p>recordSize: 0
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td> public_</td><td>0xffffffff</td><td>0x0</td><td> (byte) public_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> private_</td><td>0xffffffff</td><td>0xffffffff</td><td> (byte) private_=src.get(0xffffffff) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> protected_</td><td>0xffffffff</td><td>0xfffffffe</td><td> (byte) protected_=src.get(0xfffffffe) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> static_</td><td>0xffffffff</td><td>0xfffffffd</td><td> (byte) static_=src.get(0xfffffffd) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> final_</td><td>0xffffffff</td><td>0xfffffffc</td><td> (byte) final_=src.get(0xfffffffc) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> synchronized_</td><td>0xffffffff</td><td>0xfffffffb</td><td> (byte) synchronized_=src.get(0xfffffffb) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> native_</td><td>0xffffffff</td><td>0xfffffffa</td><td> (byte) native_=src.get(0xfffffffa) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> abstract_</td><td>0xffffffff</td><td>0xfffffff9</td><td> (byte) abstract_=src.get(0xfffffff9) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td> strict_</td><td>0xffffffff</td><td>0xfffffff8</td><td> (byte) strict_=src.get(0xfffffff8) & 0xff</td><td>{@link MethodAccessValueVisitor#strict_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>public_</td><td>0x0</td><td>0x0</td><td> (byte) public_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>private_</td><td>0x0</td><td>0x0</td><td> (byte) private_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>protected_</td><td>0x0</td><td>0x0</td><td> (byte) protected_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>static_</td><td>0x0</td><td>0x0</td><td> (byte) static_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>final_</td><td>0x0</td><td>0x0</td><td> (byte) final_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>synchronized_</td><td>0x0</td><td>0x0</td><td> (byte) synchronized_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>native_</td><td>0x0</td><td>0x0</td><td> (byte) native_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>abstract_</td><td>0x0</td><td>0x0</td><td> (byte) abstract_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>strictfp_</td><td>0x0</td><td>0x0</td><td> (byte) strictfp_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#strictfp_(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.MethodAccessValue#public_
  * @see inc.glamdring.bitecode.MethodAccessValue#private_
@@ -23,16 +22,71 @@ import java.lang.reflect.*;
  * @see inc.glamdring.bitecode.MethodAccessValue#synchronized_
  * @see inc.glamdring.bitecode.MethodAccessValue#native_
  * @see inc.glamdring.bitecode.MethodAccessValue#abstract_
- * @see inc.glamdring.bitecode.MethodAccessValue#strict_
+ * @see inc.glamdring.bitecode.MethodAccessValue#strictfp_
  * </table>
  */
 public enum MethodAccessValue { 
-public_(0xffffffff),private_(0xffffffff),protected_(0xffffffff),static_(0xffffffff),final_(0xffffffff),synchronized_(0xffffffff),native_(0xffffffff),abstract_(0xffffffff),strict_(0xffffffff);
+public_	{{
+		docString="may be accessed from outside its package.";
+		flags=1;
+	}}
+,private_	{{
+		docString="accessible only within the defining class.";
+		flags=2;
+	}}
+,protected_	{{
+		docString="may be accessed within subclasses.";
+		flags=4;
+	}}
+,static_	{{
+		docString="";
+		flags=8;
+	}}
+,final_	{{
+		docString="may not be overridden.";
+		flags=16;
+	}}
+,synchronized_	{{
+		docString="invocation is wrapped in a monitor lock.";
+		flags=32;
+	}}
+,native_	{{
+		docString="implemented in a language other than Java.";
+		flags=256;
+	}}
+,abstract_	{{
+		docString="no implementation is provided.";
+		flags=1024;
+	}}
+,strictfp_	{{
+		docString="floating-point mode is FP-strict";
+		flags=2048;
+	}}
+;
+	public java.lang.String docString;
+	public int flags;
+
+	/**
+     * the length of one record
+     */
 	public static int recordLen;
+	/**
+     * the size per field, if any
+     */
 	public final int size;
+	/**
+     * the offset from record-start of the field
+     */
 	public final int seek;
+	/**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
+     * offset into the stack.
+     */
 	public Class<? extends Enum> subRecord;
-	public java.lang.Class valueClazz;
+	/**
+     * a hint class for bean-wrapper access to data contained.
+     */
+	public Class valueClazz;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=true;
 	public static final boolean isHeader=false;
@@ -45,7 +99,6 @@ public_(0xffffffff),private_(0xffffffff),protected_(0xffffffff),static_(0xffffff
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
-
 
     }
 
@@ -65,7 +118,6 @@ public_(0xffffffff),private_(0xffffffff),protected_(0xffffffff),static_(0xffffff
                     break;
                 } catch (ClassNotFoundException e) {
                 }
-
             }
         }
 
@@ -95,7 +147,15 @@ public_(0xffffffff),private_(0xffffffff),protected_(0xffffffff),static_(0xffffff
         recordLen += size;
 
         return new int[]{size, seek};
-    }    static void index
+    }
+    /**
+     * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
+     *
+     * @param src      the ByteBuffer of the input file
+     * @param register array holding values pointing to Stack offsets
+     * @param stack    A stack of 32-bit pointers only to src positions
+     */
+    static void index
             (ByteBuffer src, int[] register, IntBuffer stack) {
         for (MethodAccessValue MethodAccessValue_ : values()) {
             String hdr = MethodAccessValue_.name();
@@ -104,6 +164,13 @@ public_(0xffffffff),private_(0xffffffff),protected_(0xffffffff),static_(0xffffff
         }
     }
 
+    /**
+     * Each of the Enums can override thier deault behavior of "seek-past"
+     *
+     * @param src      the ByteBuffer of the input file
+     * @param register array holding values pointing to Stack offsets
+     * @param stack    A stack of 32-bit pointers only to src positions
+     */
     private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
         System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
         int begin = src.position();

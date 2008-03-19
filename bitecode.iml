@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -35,58 +37,6 @@
         </JAVADOC>
         <SOURCES>
           <root url="jar://C:/Users/jim/.m2/repository/org/javolution/javolution/5.2.6/javolution-5.2.6-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="velocity:velocity:1.5">
-        <CLASSES>
-          <root url="jar://C:/Users/jim/.m2/repository/velocity/velocity/1.5/velocity-1.5.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://C:/Users/jim/.m2/repository/velocity/velocity/1.5/velocity-1.5-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://C:/Users/jim/.m2/repository/velocity/velocity/1.5/velocity-1.5-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="commons-collections:commons-collections:3.1">
-        <CLASSES>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="commons-lang:commons-lang:2.1">
-        <CLASSES>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-lang/commons-lang/2.1/commons-lang-2.1.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-lang/commons-lang/2.1/commons-lang-2.1-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://C:/Users/jim/.m2/repository/commons-lang/commons-lang/2.1/commons-lang-2.1-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="oro:oro:2.0.8">
-        <CLASSES>
-          <root url="jar://C:/Users/jim/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://C:/Users/jim/.m2/repository/oro/oro/2.0.8/oro-2.0.8-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://C:/Users/jim/.m2/repository/oro/oro/2.0.8/oro-2.0.8-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

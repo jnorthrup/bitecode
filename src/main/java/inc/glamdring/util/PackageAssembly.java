@@ -1,30 +1,32 @@
-package inc.glamdring.bitecode;
+package inc.glamdring.util;
 
 import java.io.*;
-import java.lang.reflect.*;
 import java.net.*;
 import java.util.*;
 import java.util.jar.*;
 import java.util.logging.*;
 
-public class ExtractValues {
+public class PackageAssembly {
+    public   Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
+        return getEnumsStructsForPackage(getClass().getPackage() );
+    }
 
-    public Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
-        String packageName = getClass().getPackage().getName();
+    public static Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage(final Package package_) throws Exception {
         Map<Class<? extends Enum>, Iterable<? extends Enum>> map = new HashMap<Class<? extends Enum>, Iterable<? extends Enum>>();
-        for (Class<? extends Enum> aClass : getClassessOfParent(packageName, Enum.class)) {
+        for (Class<? extends Enum> aClass : getClassessOfParent(package_, Enum.class)) {
             Enum[] constants = aClass.getEnumConstants();
             map.put(aClass, Arrays.asList(constants));
         }
         return map;
     }
 
-    public static List<Class> getClassesForPackage(String pckgname)
+    public static List<Class> getClassesForPackage(Package package_)
             throws ClassNotFoundException {
         // This will hold a list of directories matching the pckgname.
         //There may be more than one if a package is split over multiple jars/paths
         List<Class > classes = new ArrayList< Class>();
         ArrayList<File> directories = new ArrayList<File>();
+        String pckgname=package_.getName();
         try {
 
             ClassLoader cld = Thread.currentThread().getContextClassLoader();
@@ -83,7 +85,7 @@ public class ExtractValues {
     }
 
 
-    public static List<Class> getClassessOfInterface(String thePackage, Class theInterface) {
+    public List<Class> getClassessOfInterface(Package thePackage, Class theInterface) {
         List<Class> classList = new ArrayList<Class>();
         try {
             for (Class discovered : getClassesForPackage(thePackage)) {
@@ -93,13 +95,13 @@ public class ExtractValues {
             }
         }
         catch (ClassNotFoundException ex) {
-            Logger.getLogger(ExtractValues.class.getCanonicalName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(this.getClass().getCanonicalName()).log(Level.SEVERE, null, ex);
         }
 
         return classList;
     }
 
-    public static List<Class<? extends Enum>> getClassessOfParent(String thePackage, Class<? extends Enum> theParent) {
+    public static List<Class<? extends Enum>> getClassessOfParent(Package thePackage, Class<? extends Enum> theParent) {
         List<Class<? extends Enum>> classList = new ArrayList<Class<? extends Enum>>();
 
         try {
@@ -116,23 +118,12 @@ public class ExtractValues {
                 } while (discovered != null);
             }
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ExtractValues.class.getCanonicalName()).log(Level.SEVERE, null, ex);
+            Logger.getAnonymousLogger().log(Level.SEVERE, null, ex);
         }
         return classList;
     }
 
 
-    public void testPackage() throws Exception {
-        String packageName = getClass().getPackage().getName();
-        for (Class<? extends Enum> aClass : getClassessOfParent(packageName, Enum.class)) {
 
-            Field[] fields = aClass.getFields();
-            String[] fn = new String[fields.length];
 
-            for (int i = 0; i < fn.length; i++)
-                fn[i] = fields[i].toGenericString();
-
-            System.err.println(aClass.getSimpleName() + Arrays.toString(fn).replaceAll(",", ",\n\t").replaceAll(packageName + ".", ""));
-        }
-    }
 }

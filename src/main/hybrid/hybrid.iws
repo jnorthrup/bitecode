@@ -81,7 +81,82 @@
     <favorites_list name="hybrid" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="48" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5231144">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileSlotRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/FileSlotRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="62" selection-start="3019" selection-end="3019" vertical-scroll-proportion="0.2785888">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/TableRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="14" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.42335767">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MethodAccessValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/MethodAccessValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="45" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.5170316">
+              <folding>
+                <marker date="1205900495971" expanded="true" signature="7326:8061" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="12" selection-start="735" selection-end="735" vertical-scroll-proportion="0.26885644">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineNumberValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="810" selection-end="810" vertical-scroll-proportion="0.33090025">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineNumberHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="34" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.33090025">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessFlagsValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="50" selection-end="50" vertical-scroll-proportion="0.020681266">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -157,7 +232,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="inc.glamdring.bitecode.classfile.structure" />
+          <option name="myItemId" value="inc.glamdring.bitecode" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -209,13 +284,53 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid\inc\glamdring\util" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\hybrid\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="0.2" version="1" splitterProportion="0.5">
+    <navigator currentView="PackagesPane" proportions="0.2" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -261,6 +376,19 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -282,19 +410,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
     </configuration>
     <list size="0" />
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -347,25 +462,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1207" y="-3" width="1066" height="1636" extended-state="0" />
+    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958678" order="4" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" order="7" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="9" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" order="2" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731378" order="2" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="3" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" order="1" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41848907" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36650485" order="1" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="6" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="12" />
@@ -436,86 +551,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberHeader.java">
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/FileSlotRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/MethodAccessValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/CodeAttributeHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.016417911">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="83" selection-end="83" vertical-scroll-proportion="0.016417911">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ConstantPoolRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="10" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.18059702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ExceptionTableHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="37" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.19552238">
+        <state line="29" column="62" selection-start="3019" selection-end="3019" vertical-scroll-proportion="0.2785888">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/TableRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.016417911">
+        <state line="24" column="14" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.42335767">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/NameAndType_.java">
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.047761194">
+        <state line="17" column="34" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.33090025">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/DeprecatedAttributeHeader.java">
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/LineNumberValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="245" selection-end="245" vertical-scroll-proportion="0.1594203">
+        <state line="17" column="0" selection-start="810" selection-end="810" vertical-scroll-proportion="0.33090025">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/MethodAccessValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="89" selection-start="501" selection-end="501" vertical-scroll-proportion="0.14166667">
-          <folding />
+        <state line="25" column="45" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.5170316">
+          <folding>
+            <marker date="1205900495971" expanded="true" signature="7326:8061" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AttributeHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="793" selection-end="793" vertical-scroll-proportion="0.28333333">
+        <state line="14" column="12" selection-start="735" selection-end="735" vertical-scroll-proportion="0.26885644">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/AccessFlagsValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="50" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.10119048">
+        <state line="1" column="18" selection-start="50" selection-end="50" vertical-scroll-proportion="0.020681266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="48" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5231144">
           <folding />
         </state>
       </provider>

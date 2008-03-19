@@ -22,7 +22,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="ClassPatternConfiguration">
     <testPatterns>
-      <classPattern testedClass="$CLASS$" testClass="test/$CLASS$Test" />
+      <classPattern testedClass="src/main/java/$DIRECTORY$/$CLASS$" testClass="src/test/java/$DIRECTORY$/$CLASS$Test" />
     </testPatterns>
   </component>
   <component name="Commander">
@@ -99,37 +99,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="PackageAssemblyUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="-0.19710907">
+            <state line="286" column="70" selection-start="14891" selection-end="14891" vertical-scroll-proportion="0.46895787">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PackageAssemblyUtilTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="59" selection-start="215" selection-end="215" vertical-scroll-proportion="0.16684842">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldInfoHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/FieldInfoHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="8" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.32705098">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractValuesTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValuesTest.java">
+      <file leaf-file-name="MethodAccessValue.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="69" selection-start="2185" selection-end="2185" vertical-scroll-proportion="-3.2826087">
+            <state line="10" column="138" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-0.8292683">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractValues.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValues.java">
+      <file leaf-file-name="MethodAccessValueVisitor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValueVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.08695652">
+            <state line="4" column="70" selection-start="93" selection-end="93" vertical-scroll-proportion="0.074154854">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassFileRecord.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
+      <file leaf-file-name="LineNumberHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/LineNumberHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="2" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.19053708">
+            <state line="17" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.30155212">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.2827051">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessFlagsValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="59" selection-start="75" selection-end="75" vertical-scroll-proportion="0.050997782">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PackageAssembly.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssembly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="71" selection-start="429" selection-end="429" vertical-scroll-proportion="0.16962306">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourceFileAttribute.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/SourceFileAttribute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="129" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.7915743">
               <folding />
             </state>
           </provider>
@@ -148,7 +206,7 @@
     <option name="HIDE_CLASSES_WHERE_METHOD_NOT_IMPLEMENTED" value="false" />
   </component>
   <component name="JUnitClassTemplateConfiguration">
-    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="false" />
+    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="true" />
     <option name="DONT_SHOW_METHODS_DIALOG_IF_ONLY_ONE_METHOD" value="false" />
     <option name="LAST_TEMPLATE_NAME" value="Default Test Class.java" />
     <option name="TEST_TEMPLATES">
@@ -160,7 +218,7 @@
     </option>
   </component>
   <component name="JUnitMethodTemplateConfiguration">
-    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="false" />
+    <option name="DONT_SHOW_TEMPLATE_DIALOG_IF_ONLY_ONE_TEMPLATE" value="true" />
     <option name="DONT_SHOW_METHODS_DIALOG_IF_ONLY_ONE_METHOD" value="false" />
     <option name="LAST_TEMPLATE_NAME" value="Default Test Method.java" />
     <option name="TEST_TEMPLATES">
@@ -369,10 +427,6 @@
           <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java\inc\glamdring\bitecode" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -447,6 +501,44 @@
           <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java\inc\glamdring" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java\inc\glamdring\util" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\main\java\inc\glamdring\bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -507,33 +599,24 @@
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="inc.glamdring.bitecode" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="inc.glamdring.bitecode" />
       <recent name="inc.glamdring.bitecode.classfile.structure" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Unnamed">
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="JUnit.PackageAssemblyUtilTest.testGetEnumsStructsForPackage">
+    <tempConfiguration default="false" name="PackageAssemblyUtilTest.testGetEnumsStructsForPackage" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <pattern value="inc.glamdring.util.*" />
+      <module name="bitecode" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="inc.glamdring.util" />
+      <option name="MAIN_CLASS_NAME" value="inc.glamdring.util.PackageAssemblyUtilTest" />
+      <option name="METHOD_NAME" value="testGetEnumsStructsForPackage" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -544,9 +627,29 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51849" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" value="true" />
       </method>
+    </tempConfiguration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
@@ -583,6 +686,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -626,25 +742,35 @@
         </option>
       </MavenSettings>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
     <configuration default="false" name="Unnamed" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="bitecode" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="inc.glamdring.bitecode" />
-      <option name="MAIN_CLASS_NAME" value="inc.glamdring.bitecode.ExtractValuesTest" />
-      <option name="METHOD_NAME" value="testGetEnumsStructsForPackage" />
+      <option name="PACKAGE_NAME" value="inc.glamdring.util" />
+      <option name="MAIN_CLASS_NAME" value="inc.glamdring.util.PackageAssemblyUtil" />
+      <option name="METHOD_NAME" value="createEnumStructSourceFiles" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PARAMETERS" value="" />
@@ -661,13 +787,16 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PackageAssemblyUtilTest.testGetEnumsStructsForPackage" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -719,31 +848,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1066" height="1636" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1066" height="1606" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52584493" order="4" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793522" order="1" />
-      <window_info id="Maven Runner Output" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42442644" order="8" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3022942" order="3" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" order="1" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47658402" order="3" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32591093" order="8" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.303719" order="8" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33677685" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40656063" order="6" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2306163" order="3" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27634194" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3389662" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39944905" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298898" order="2" />
+      <window_info id="Maven Runner Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42442644" order="8" />
       <window_info id="Maven Build Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33715442" order="8" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -811,69 +940,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/Field_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="0.33295193">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ExceptionTableHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="29" selection-start="4581" selection-end="4581" vertical-scroll-proportion="2.0166414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ExceptionValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="26" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.033282906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="83" selection-end="83" vertical-scroll-proportion="0.087417215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/Layout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="3" selection-start="2500" selection-end="3144" vertical-scroll-proportion="0.018438177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://O:/opt/java/jdk1.6.0_10/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="4238" selection-end="4238" vertical-scroll-proportion="0.018438177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/LineNumberHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.018438177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/Utf8_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="83" selection-end="83" vertical-scroll-proportion="0.018438177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/CodeAttributeHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="49" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.018438177">
@@ -885,7 +951,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="47" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.018438177">
           <folding>
-            <marker date="1205779040455" expanded="true" signature="80:102" placeholder="/**...*/" />
+            <marker date="1205900495996" expanded="true" signature="80:102" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -897,30 +963,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="2" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.19053708">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.08695652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/bitecode/ExtractValuesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="69" selection-start="2185" selection-end="2185" vertical-scroll-proportion="-3.2826087">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="-0.19710907">
+        <state line="112" column="60" selection-start="0" selection-end="4458" vertical-scroll-proportion="1.4732143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ConstantPoolRef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="25" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.23756906">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ClassFileRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.33924612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/LineNumberHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.30155212">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="71" selection-start="429" selection-end="429" vertical-scroll-proportion="0.16962306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.2827051">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/FieldInfoHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.32705098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/SourceFileAttribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="129" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.7915743">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="59" selection-start="215" selection-end="215" vertical-scroll-proportion="0.16684842">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="286" column="70" selection-start="14891" selection-end="14891" vertical-scroll-proportion="0.46895787">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="59" selection-start="75" selection-end="75" vertical-scroll-proportion="0.050997782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValueVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="70" selection-start="93" selection-end="93" vertical-scroll-proportion="0.074154854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="138" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-0.8292683">
           <folding />
         </state>
       </provider>
