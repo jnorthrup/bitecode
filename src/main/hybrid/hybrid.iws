@@ -85,7 +85,7 @@
       <file leaf-file-name="ClassFileRecord.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5231144">
+            <state line="16" column="23" selection-start="977" selection-end="977" vertical-scroll-proportion="0.33090025">
               <folding />
             </state>
           </provider>
@@ -462,7 +462,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
+    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -604,7 +604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/glamdring/bitecode/ClassFileRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5231144">
+        <state line="16" column="23" selection-start="977" selection-end="977" vertical-scroll-proportion="0.33090025">
           <folding />
         </state>
       </provider>
