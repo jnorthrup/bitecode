@@ -1,53 +1,58 @@
 package inc.glamdring.bitecode;
+
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 8
- * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link LocalVariableTableAttributeVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>local_variable_table_length</td><td>0x2</td><td>0x6</td><td> (short) local_variable_table_length=src.getShort(0x6) & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#local_variable_table_length(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
+ * <p>recordSize: 8 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link
+ * LocalVariableTableAttributeVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link
+ * LocalVariableTableAttributeVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>local_variable_table_length</td><td>0x2</td><td>0x6</td><td> (short) local_variable_table_length=src.getShort(0x6)
+ * & 0xffff</td><td>{@link LocalVariableTableAttributeVisitor#local_variable_table_length(ByteBuffer, int[],
+ * IntBuffer)}</td></tr>
+ *
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#Utf8Index
  * @see inc.glamdring.bitecode.LocalVariableTableAttribute#AttributeLength
- * @see inc.glamdring.bitecode.LocalVariableTableAttribute#local_variable_table_length
- * </table>
+ * @see inc.glamdring.bitecode.LocalVariableTableAttribute#local_variable_table_length </table>
  */
-public enum LocalVariableTableAttribute { 
-Utf8Index(0x2),AttributeLength(0x4),local_variable_table_length(0x2);
-	public java.lang.Class clazz;
+public enum LocalVariableTableAttribute {
+    Utf8Index(0x2), AttributeLength(0x4), local_variable_table_length(0x2);
+    public java.lang.Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
+    public static int recordLen;
+    /**
      * the size per field, if any
      */
-	public final int size;
-	/**
+    public final int size;
+    /**
      * the offset from record-start of the field
      */
-	public final int seek;
-	/**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
-     * offset into the stack.
+    public final int seek;
+    /**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
+     * into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** LocalVariableTableAttribute templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * LocalVariableTableAttribute templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	LocalVariableTableAttribute (int... dimensions) {
+    LocalVariableTableAttribute(int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -100,6 +105,7 @@ Utf8Index(0x2),AttributeLength(0x4),local_variable_table_length(0x2);
 
         return new int[]{size, seek};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -128,7 +134,7 @@ Utf8Index(0x2),AttributeLength(0x4),local_variable_table_length(0x2);
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

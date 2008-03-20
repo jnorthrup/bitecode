@@ -1,58 +1,62 @@
 package inc.glamdring.bitecode;
+
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 8
- * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td> (short) InnerClassInfoIndex=src.getShort(0x0) & 0xffff</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td> (short) OuterClassInfoIndex=src.getShort(0x2) & 0xffff</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>inner_nameIndex</td><td>0x2</td><td>0x4</td><td> (short) inner_nameIndex=src.getShort(0x4) & 0xffff</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x6</td><td> (short) AccessFlagsValue=src.getShort(0x6) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * 
+ * <p>recordSize: 8 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td> (short) InnerClassInfoIndex=src.getShort(0x0) &
+ * 0xffff</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td> (short) OuterClassInfoIndex=src.getShort(0x2) &
+ * 0xffff</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>inner_nameIndex</td><td>0x2</td><td>0x4</td><td> (short) inner_nameIndex=src.getShort(0x4) &
+ * 0xffff</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x6</td><td> (short) AccessFlagsValue=src.getShort(0x6) &
+ * 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ *
  * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
  * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex
  * @see inc.glamdring.bitecode.InnerClassInfo#inner_nameIndex
- * @see inc.glamdring.bitecode.InnerClassInfo#AccessFlagsValue
- * </table>
+ * @see inc.glamdring.bitecode.InnerClassInfo#AccessFlagsValue </table>
  */
-public enum InnerClassInfo { 
-InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFlagsValue(0x2)	{{
-		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
-	}}
-;
-	public java.lang.Class clazz;
+public enum InnerClassInfo {
+    InnerClassInfoIndex(0x2), OuterClassInfoIndex(0x2), inner_nameIndex(0x2), AccessFlagsValue(0x2) {{
+    subRecord = inc.glamdring.bitecode.AccessFlagsValue.class;
+}};
+    public java.lang.Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
+    public static int recordLen;
+    /**
      * the size per field, if any
      */
-	public final int size;
-	/**
+    public final int size;
+    /**
      * the offset from record-start of the field
      */
-	public final int seek;
-	/**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
-     * offset into the stack.
+    public final int seek;
+    /**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
+     * into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=true;
-    /** InnerClassInfo templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = true;
+
+    /**
+     * InnerClassInfo templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	InnerClassInfo (int... dimensions) {
+    InnerClassInfo(int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -105,6 +109,7 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
 
         return new int[]{size, seek};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -133,7 +138,7 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

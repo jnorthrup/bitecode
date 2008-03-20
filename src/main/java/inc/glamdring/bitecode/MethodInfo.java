@@ -1,56 +1,60 @@
 package inc.glamdring.bitecode;
+
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 8
- * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x0</td><td> (short) AccessFlagsValue=src.getShort(0x0) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td>Utf8Index</td><td>0x2</td><td>0x2</td><td> (short) Utf8Index=src.getShort(0x2) & 0xffff</td><td>{@link MethodInfoVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>DescriptorIndex</td><td>0x2</td><td>0x4</td><td> (short) DescriptorIndex=src.getShort(0x4) & 0xffff</td><td>{@link MethodInfoVisitor#DescriptorIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AttributeCount</td><td>0x2</td><td>0x6</td><td> (short) AttributeCount=src.getShort(0x6) & 0xffff</td><td>{@link MethodInfoVisitor#AttributeCount(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
+ * <p>recordSize: 8 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x0</td><td> (short) AccessFlagsValue=src.getShort(0x0) &
+ * 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr> <tr><td>Utf8Index</td><td>0x2</td><td>0x2</td><td>
+ * (short) Utf8Index=src.getShort(0x2) & 0xffff</td><td>{@link MethodInfoVisitor#Utf8Index(ByteBuffer, int[],
+ * IntBuffer)}</td></tr> <tr><td>DescriptorIndex</td><td>0x2</td><td>0x4</td><td> (short)
+ * DescriptorIndex=src.getShort(0x4) & 0xffff</td><td>{@link MethodInfoVisitor#DescriptorIndex(ByteBuffer, int[],
+ * IntBuffer)}</td></tr> <tr><td>AttributeCount</td><td>0x2</td><td>0x6</td><td> (short)
+ * AttributeCount=src.getShort(0x6) & 0xffff</td><td>{@link MethodInfoVisitor#AttributeCount(ByteBuffer, int[],
+ * IntBuffer)}</td></tr>
+ *
  * @see inc.glamdring.bitecode.MethodInfo#AccessFlagsValue
  * @see inc.glamdring.bitecode.MethodInfo#Utf8Index
  * @see inc.glamdring.bitecode.MethodInfo#DescriptorIndex
- * @see inc.glamdring.bitecode.MethodInfo#AttributeCount
- * </table>
+ * @see inc.glamdring.bitecode.MethodInfo#AttributeCount </table>
  */
-public enum MethodInfo { 
-AccessFlagsValue(0x2)	{{
-		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
-	}}
-,Utf8Index(0x2),DescriptorIndex(0x2),AttributeCount(0x2);
-	/**
+public enum MethodInfo {
+    AccessFlagsValue(0x2) {{
+        subRecord = inc.glamdring.bitecode.AccessFlagsValue.class;
+    }}, Utf8Index(0x2), DescriptorIndex(0x2), AttributeCount(0x2);
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
+    public static int recordLen;
+    /**
      * the size per field, if any
      */
-	public final int size;
-	/**
+    public final int size;
+    /**
      * the offset from record-start of the field
      */
-	public final int seek;
-	/**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
-     * offset into the stack.
+    public final int seek;
+    /**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
+     * into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=true;
-    /** MethodInfo templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = true;
+
+    /**
+     * MethodInfo templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	MethodInfo (int... dimensions) {
+    MethodInfo(int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -103,6 +107,7 @@ AccessFlagsValue(0x2)	{{
 
         return new int[]{size, seek};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -131,7 +136,7 @@ AccessFlagsValue(0x2)	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

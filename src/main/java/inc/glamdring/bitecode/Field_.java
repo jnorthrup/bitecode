@@ -1,49 +1,52 @@
 package inc.glamdring.bitecode;
+
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 4
- * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>ClassIndex</td><td>0x2</td><td>0x0</td><td> (short) ClassIndex=src.getShort(0x0) & 0xffff</td><td>{@link Field_Visitor#ClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>NameAndTypeIndex</td><td>0x2</td><td>0x2</td><td> (short) NameAndTypeIndex=src.getShort(0x2) & 0xffff</td><td>{@link Field_Visitor#NameAndTypeIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
+ * <p>recordSize: 4 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>ClassIndex</td><td>0x2</td><td>0x0</td><td> (short) ClassIndex=src.getShort(0x0) & 0xffff</td><td>{@link
+ * Field_Visitor#ClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr> <tr><td>NameAndTypeIndex</td><td>0x2</td><td>0x2</td><td>
+ * (short) NameAndTypeIndex=src.getShort(0x2) & 0xffff</td><td>{@link Field_Visitor#NameAndTypeIndex(ByteBuffer, int[],
+ * IntBuffer)}</td></tr>
+ *
  * @see inc.glamdring.bitecode.Field_#ClassIndex
- * @see inc.glamdring.bitecode.Field_#NameAndTypeIndex
- * </table>
+ * @see inc.glamdring.bitecode.Field_#NameAndTypeIndex </table>
  */
-public enum Field_ { 
-ClassIndex(0x2),NameAndTypeIndex(0x2);
-	/**
+public enum Field_ {
+    ClassIndex(0x2), NameAndTypeIndex(0x2);
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
+    public static int recordLen;
+    /**
      * the size per field, if any
      */
-	public final int size;
-	/**
+    public final int size;
+    /**
      * the offset from record-start of the field
      */
-	public final int seek;
-	/**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
-     * offset into the stack.
+    public final int seek;
+    /**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
+     * into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** Field_ templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * Field_ templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	Field_ (int... dimensions) {
+    Field_(int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -96,6 +99,7 @@ ClassIndex(0x2),NameAndTypeIndex(0x2);
 
         return new int[]{size, seek};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -124,7 +128,7 @@ ClassIndex(0x2),NameAndTypeIndex(0x2);
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

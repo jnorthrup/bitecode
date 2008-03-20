@@ -3,6 +3,10 @@
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
+  <component name="Archetypes.Configuration">
+    <option name="archetypesFileLocation" value="archetypes.xml" />
+    <option name="workingDirectory" value="" />
+  </component>
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
@@ -48,6 +52,7 @@
       <entry name="?*.tld" />
     </wildcardResourcePatterns>
   </component>
+  <component name="CppTools.Loader" reportImplicitCastToBool="false" version="1" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />

@@ -1,58 +1,61 @@
 package inc.glamdring.bitecode;
+
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 58
- * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td> (byte) ConstantPoolRef=src.get(0x0) & 0xff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
- * <tr><td>subType</td><td>0x2</td><td>0x36</td><td> (short) subType=src.getShort(0x36) & 0xffff</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td> (byte) utf8Bitmap=src.get(0x38) & 0xff</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>tag</td><td>0x1</td><td>0x39</td><td> (byte) tag=src.get(0x39) & 0xff</td><td>{@link ConstantPoolRecordVisitor#tag(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
+ * <p>recordSize: 58 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td> (byte) ConstantPoolRef=src.get(0x0) & 0xff</td><td>{@link
+ * inc.glamdring.bitecode.ConstantPoolRef}</td></tr> <tr><td>subType</td><td>0x2</td><td>0x36</td><td> (short)
+ * subType=src.getShort(0x36) & 0xffff</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBuffer, int[],
+ * IntBuffer)}</td></tr> <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td> (byte) utf8Bitmap=src.get(0x38) &
+ * 0xff</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>tag</td><td>0x1</td><td>0x39</td><td> (byte) tag=src.get(0x39) & 0xff</td><td>{@link
+ * ConstantPoolRecordVisitor#tag(ByteBuffer, int[], IntBuffer)}</td></tr>
+ *
  * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
  * @see inc.glamdring.bitecode.ConstantPoolRecord#subType
  * @see inc.glamdring.bitecode.ConstantPoolRecord#utf8Bitmap
- * @see inc.glamdring.bitecode.ConstantPoolRecord#tag
- * </table>
+ * @see inc.glamdring.bitecode.ConstantPoolRecord#tag </table>
  */
-public enum ConstantPoolRecord { 
-ConstantPoolRef(0x36)	{{
-		subRecord=inc.glamdring.bitecode.ConstantPoolRef.class;
-	}}
-,subType(0x2),utf8Bitmap(0x1),tag(0x1);
-	public java.lang.Class clazz;
+public enum ConstantPoolRecord {
+    ConstantPoolRef(0x36) {{
+        subRecord = inc.glamdring.bitecode.ConstantPoolRef.class;
+    }}, subType(0x2), utf8Bitmap(0x1), tag(0x1);
+    public java.lang.Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
+    public static int recordLen;
+    /**
      * the size per field, if any
      */
-	public final int size;
-	/**
+    public final int size;
+    /**
      * the offset from record-start of the field
      */
-	public final int seek;
-	/**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
-     * offset into the stack.
+    public final int seek;
+    /**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
+     * into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=true;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** ConstantPoolRecord templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = true;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * ConstantPoolRecord templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	ConstantPoolRecord (int... dimensions) {
+    ConstantPoolRecord(int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -105,6 +108,7 @@ ConstantPoolRef(0x36)	{{
 
         return new int[]{size, seek};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -133,7 +137,7 @@ ConstantPoolRef(0x36)	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {

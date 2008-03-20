@@ -7,6 +7,7 @@ import javolution.util.*;
 
 import java.io.*;
 import static java.lang.Package.*;
+import static java.lang.System.*;
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.Map.*;
@@ -17,6 +18,7 @@ public class PackageAssemblyUtil {
     private static final String[] ISAREFS = new String[]{"Record", "Value", "Header", "Ref", "Info"};
     private static final String ISA_MODS = Modifier.toString(Modifier.STATIC | Modifier.FINAL | Modifier.PUBLIC);
     static Map<Class<?>, Pair<String, Pair<String, String>>> bBufWrap = new LinkedHashMap<Class<?>, Pair<String, Pair<String, String>>>();
+
 
     static {
         bBufWrap.put(char.class, new Pair<String, Pair<String, String>>("Char", new Pair<String, String>("char", "")));
@@ -283,8 +285,8 @@ public class PackageAssemblyUtil {
                                     tmpString += "\n\t\t" + attrName + "=" + (field.getType() == Class.class
                                             ? ((Class) o).getCanonicalName() + ".class" :
                                             field.getType() == String.class
-                                                    ? '"' + String.valueOf(o).trim() + '"'  :
-                                                    String.valueOf(o) )+ ";";
+                                                    ? '"' + String.valueOf(o).trim() + '"' :
+                                                    String.valueOf(o)) + ";";
                             }
                         }
                     }
@@ -436,4 +438,29 @@ public class PackageAssemblyUtil {
         }
     }
 
+    public static void main(String... args) throws Exception {
+        final String dirName = args.length > 0 ? "target/classes" : args[0];
+        final String indexName = (String) (args[0].length() > 0 ? new File(File.createTempFile("__BC__" + currentTimeMillis(), "bitecode" )) : args[1]);
+
+        File index = getIndexFile(indexName);
+
+    }
+
+    /**
+     * make a best-attempt at creating or opening an index file for later sizing
+     *
+     * @param indexName -
+     * @return a file for index writings/reads
+     * @throws FileNotFoundException
+     */
+    static File getIndexFile(String indexName) throws FileNotFoundException {
+        for (int i = 0; i < 2; i++)
+            try {
+                File raf = new File(indexName, "rw");
+                if (!raf.isFile()) {
+                    raf.getParentFile().mkdirs();
+                } else return raf;
+            } catch (Exception e) { System.err.println(""); }
+        return null;
+    }
 }

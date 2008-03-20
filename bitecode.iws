@@ -90,6 +90,11 @@
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
+  <component name="DynamicManagerImpl">
+    <option name="containingClasses">
+      <map />
+    </option>
+  </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="HIDE_WARNINGS" value="false" />
@@ -99,24 +104,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PackageAssemblyUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
+      <file leaf-file-name="PackageAssemblyUtilTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="70" selection-start="14891" selection-end="14891" vertical-scroll-proportion="0.46895787">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="10" column="19" selection-start="176" selection-end="176" vertical-scroll-proportion="0.012274369">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageAssemblyUtilTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
+      <file leaf-file-name="PackageAssemblyUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="59" selection-start="215" selection-end="215" vertical-scroll-proportion="0.16684842">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="463" column="15" selection-start="21184" selection-end="21188" vertical-scroll-proportion="0.027007299">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomAccessFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://O:/opt/java/jdk1.6.0_10/src.zip!/java/io/RandomAccessFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="13" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.012274369">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,34 +134,42 @@
       <file leaf-file-name="FieldInfoHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/FieldInfoHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.32705098">
-              <folding />
+            <state line="23" column="15" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.012408759">
+              <folding>
+                <marker date="1205950171410" expanded="false" signature="40:51" placeholder="..." />
+                <marker date="1205950171410" expanded="true" signature="53:1229" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="1286:1362" placeholder="{...}" />
+                <marker date="1205950171410" expanded="true" signature="1287:1361" placeholder="{...}" />
+                <marker date="1205950171410" expanded="true" signature="1464:1507" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="1545:1590" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="1622:1682" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="1714:1871" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="1920:1994" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="2272:2386" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="2426:2518" placeholder="{...}" />
+                <marker date="1205950171410" expanded="true" signature="2554:4402" placeholder="{...}" />
+                <marker date="1205950171410" expanded="true" signature="4408:4719" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="4804:5067" placeholder="{...}" />
+                <marker date="1205950171410" expanded="true" signature="5073:5364" placeholder="/**...*/" />
+                <marker date="1205950171410" expanded="true" signature="5440:6426" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MethodAccessValue.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MethodAccessValue.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="11" selection-start="3516" selection-end="3516" vertical-scroll-proportion="0.5465632">
+            <state line="108" column="12" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.012408759">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MethodAccessValueVisitor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValueVisitor.java">
+      <file leaf-file-name="stdlib.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/stdlib.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="70" selection-start="93" selection-end="93" vertical-scroll-proportion="0.074154854">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineNumberHeader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/LineNumberHeader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.30155212">
+            <state line="10" column="32" selection-start="334" selection-end="334" vertical-scroll-proportion="0.012408759">
               <folding />
             </state>
           </provider>
@@ -160,8 +178,23 @@
       <file leaf-file-name="AttributeHeader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.2827051">
-              <folding />
+            <state line="16" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.012408759">
+              <folding>
+                <marker date="1205950172715" expanded="false" signature="40:51" placeholder="..." />
+                <marker date="1205950172715" expanded="true" signature="53:694" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="806:849" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="887:932" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="964:1024" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="1056:1213" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="1262:1336" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="1614:1728" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="1768:1860" placeholder="{...}" />
+                <marker date="1205950172715" expanded="true" signature="1896:3744" placeholder="{...}" />
+                <marker date="1205950172715" expanded="true" signature="3750:4061" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="4146:4409" placeholder="{...}" />
+                <marker date="1205950172715" expanded="true" signature="4415:4706" placeholder="/**...*/" />
+                <marker date="1205950172715" expanded="true" signature="4782:5768" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,17 +202,22 @@
       <file leaf-file-name="AccessFlagsValue.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="59" selection-start="75" selection-end="75" vertical-scroll-proportion="0.050997782">
+            <state line="5" column="19" selection-start="76" selection-end="76" vertical-scroll-proportion="0.012408759">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageAssembly.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PackageAssembly.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssembly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="71" selection-start="429" selection-end="429" vertical-scroll-proportion="0.16962306">
-              <folding />
+            <state line="103" column="46" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.3328467">
+              <folding>
+                <marker date="1205950171077" expanded="true" signature="493:863" placeholder="{...}" />
+                <marker date="1205950171077" expanded="true" signature="976:4076" placeholder="{...}" />
+                <marker date="1205950171077" expanded="true" signature="4165:4666" placeholder="{...}" />
+                <marker date="1205950171077" expanded="true" signature="4787:5490" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,8 +225,23 @@
       <file leaf-file-name="SourceFileAttribute.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/SourceFileAttribute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="129" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.7915743">
-              <folding />
+            <state line="68" column="129" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.012408759">
+              <folding>
+                <marker date="1205950170928" expanded="false" signature="40:51" placeholder="..." />
+                <marker date="1205950170928" expanded="true" signature="53:990" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1128:1171" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1209:1254" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1286:1346" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1378:1535" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1584:1658" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="1937:2055" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="2099:2191" placeholder="{...}" />
+                <marker date="1205950170928" expanded="true" signature="2227:4075" placeholder="{...}" />
+                <marker date="1205950170928" expanded="true" signature="4081:4392" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="4477:4756" placeholder="{...}" />
+                <marker date="1205950170928" expanded="true" signature="4762:5053" placeholder="/**...*/" />
+                <marker date="1205950170928" expanded="true" signature="5129:6115" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -427,6 +480,44 @@
           <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java\inc\glamdring\util" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:M:\work\bitecode\src\test\java\inc\glamdring" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -639,67 +730,6 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myCoreSettings">
@@ -742,6 +772,54 @@
         </option>
       </MavenSettings>
     </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -759,6 +837,22 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <envs />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method>
         <option name="Make" value="true" />
@@ -795,8 +889,8 @@
       </method>
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PackageAssemblyUtilTest.testGetEnumsStructsForPackage" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.PackageAssemblyUtilTest.testGetEnumsStructsForPackage" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Unnamed" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -848,10 +942,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1066" height="1606" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1066" height="1606" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
+      <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="-1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52584493" order="4" />
@@ -861,12 +956,14 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.303719" order="8" />
+      <window_info id="CafeBabe" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
+      <window_info id="Dynamic properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901296" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33677685" order="7" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
+      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20538385" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40656063" order="6" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" order="3" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3389662" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38285145" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39944905" order="6" />
@@ -874,6 +971,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298898" order="2" />
       <window_info id="Maven Runner Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42442644" order="8" />
       <window_info id="Maven Build Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33715442" order="8" />
+      <window_info id="CodeDependency" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Maven Importer Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299595" order="8" />
@@ -940,22 +1038,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/CodeAttributeHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="49" selection-start="1849" selection-end="1849" vertical-scroll-proportion="0.018438177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/TableRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="47" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.018438177">
-          <folding>
-            <marker date="1205900495996" expanded="true" signature="80:102" placeholder="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/ConstantPoolRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="108" selection-start="310" selection-end="310" vertical-scroll-proportion="0.018438177">
@@ -984,77 +1066,154 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValueVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="39" selection-start="92" selection-end="92" vertical-scroll-proportion="0.012274369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/LineNumberHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.30155212">
+        <state line="18" column="24" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.01923077">
+          <folding>
+            <marker date="1205950172608" expanded="false" signature="40:51" placeholder="..." />
+            <marker date="1205950172608" expanded="true" signature="53:972" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1107:1150" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1188:1233" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1265:1325" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1357:1514" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1563:1637" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="1915:2030" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="2071:2163" placeholder="{...}" />
+            <marker date="1205950172608" expanded="true" signature="2199:4047" placeholder="{...}" />
+            <marker date="1205950172608" expanded="true" signature="4053:4364" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="4449:4716" placeholder="{...}" />
+            <marker date="1205950172608" expanded="true" signature="4722:5013" placeholder="/**...*/" />
+            <marker date="1205950172608" expanded="true" signature="5089:6075" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="176" selection-end="176" vertical-scroll-proportion="0.012274369">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssembly.java">
+    <entry file="jar://O:/opt/java/jdk1.6.0_10/src.zip!/java/io/RandomAccessFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="71" selection-start="429" selection-end="429" vertical-scroll-proportion="0.16962306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.2827051">
+        <state line="41" column="13" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.012274369">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/FieldInfoHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.32705098">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/SourceFileAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="129" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.7915743">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inc/glamdring/util/PackageAssemblyUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="215" selection-end="215" vertical-scroll-proportion="0.16684842">
+        <state line="23" column="15" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.012408759">
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1205950171410" expanded="false" signature="40:51" placeholder="..." />
+            <marker date="1205950171410" expanded="true" signature="53:1229" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="1286:1362" placeholder="{...}" />
+            <marker date="1205950171410" expanded="true" signature="1287:1361" placeholder="{...}" />
+            <marker date="1205950171410" expanded="true" signature="1464:1507" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="1545:1590" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="1622:1682" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="1714:1871" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="1920:1994" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="2272:2386" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="2426:2518" placeholder="{...}" />
+            <marker date="1205950171410" expanded="true" signature="2554:4402" placeholder="{...}" />
+            <marker date="1205950171410" expanded="true" signature="4408:4719" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="4804:5067" placeholder="{...}" />
+            <marker date="1205950171410" expanded="true" signature="5073:5364" placeholder="/**...*/" />
+            <marker date="1205950171410" expanded="true" signature="5440:6426" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="70" selection-start="14891" selection-end="14891" vertical-scroll-proportion="0.46895787">
+        <state line="108" column="12" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.012408759">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/stdlib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="334" selection-end="334" vertical-scroll-proportion="0.012408759">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AttributeHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.012408759">
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1205950172715" expanded="false" signature="40:51" placeholder="..." />
+            <marker date="1205950172715" expanded="true" signature="53:694" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="806:849" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="887:932" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="964:1024" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="1056:1213" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="1262:1336" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="1614:1728" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="1768:1860" placeholder="{...}" />
+            <marker date="1205950172715" expanded="true" signature="1896:3744" placeholder="{...}" />
+            <marker date="1205950172715" expanded="true" signature="3750:4061" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="4146:4409" placeholder="{...}" />
+            <marker date="1205950172715" expanded="true" signature="4415:4706" placeholder="/**...*/" />
+            <marker date="1205950172715" expanded="true" signature="4782:5768" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/AccessFlagsValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="59" selection-start="75" selection-end="75" vertical-scroll-proportion="0.050997782">
+        <state line="5" column="19" selection-start="76" selection-end="76" vertical-scroll-proportion="0.012408759">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValueVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/SourceFileAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="70" selection-start="93" selection-end="93" vertical-scroll-proportion="0.074154854">
+        <state line="68" column="129" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.012408759">
+          <folding>
+            <marker date="1205950170928" expanded="false" signature="40:51" placeholder="..." />
+            <marker date="1205950170928" expanded="true" signature="53:990" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1128:1171" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1209:1254" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1286:1346" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1378:1535" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1584:1658" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="1937:2055" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="2099:2191" placeholder="{...}" />
+            <marker date="1205950170928" expanded="true" signature="2227:4075" placeholder="{...}" />
+            <marker date="1205950170928" expanded="true" signature="4081:4392" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="4477:4756" placeholder="{...}" />
+            <marker date="1205950170928" expanded="true" signature="4762:5053" placeholder="/**...*/" />
+            <marker date="1205950170928" expanded="true" signature="5129:6115" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssemblyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="463" column="15" selection-start="21184" selection-end="21188" vertical-scroll-proportion="0.027007299">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/bitecode/MethodAccessValue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/inc/glamdring/util/PackageAssembly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="11" selection-start="3516" selection-end="3516" vertical-scroll-proportion="0.5465632">
-          <folding />
+        <state line="103" column="46" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.3328467">
+          <folding>
+            <marker date="1205950171077" expanded="true" signature="493:863" placeholder="{...}" />
+            <marker date="1205950171077" expanded="true" signature="976:4076" placeholder="{...}" />
+            <marker date="1205950171077" expanded="true" signature="4165:4666" placeholder="{...}" />
+            <marker date="1205950171077" expanded="true" signature="4787:5490" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -14,8 +14,7 @@ public enum Layout {
      */
     hash(1),
     /**
-     * pascal string allows 0-255 tokens.
-     * todo: should length==0 have a special meaning? if so what meaning?
+     * pascal string allows 0-255 tokens. todo: should length==0 have a special meaning? if so what meaning?
      */
     span(4),
     /**
@@ -25,8 +24,8 @@ public enum Layout {
     /**
      * The position of the key in its text file up to 4 gigs from start of ByteBuffer.
      * <p/>
-     * Key files can be larger than 4 gigs, but the segment of that file being
-     * indexed or mmap'd uses only 32 bits address space with nio.
+     * Key files can be larger than 4 gigs, but the segment of that file being indexed or mmap'd uses only 32 bits
+     * address space with nio.
      */
     offset(4),
     /**
@@ -51,13 +50,14 @@ public enum Layout {
     /**
      * field size.
      */
-    public int size;public Class clazz;
+    public int size;
+    public Class clazz;
 
 
     /**
      * position from byte 0 of record.
      */
-    public   int seek; 
+    public int seek;
 
     /**
      * ctor
@@ -130,9 +130,9 @@ public enum Layout {
         String pkgName = Layout.class.getPackage().getName();
         String vname = Layout.class.getCanonicalName();
 
-//        String s = genHeader(pkgName, vname, null);
-//        s += genRecordClass(nc, vname, null);
-//
+        //        String s = genHeader(pkgName, vname, null);
+        //        s += genRecordClass(nc, vname, null);
+        //
         String baseName = showInputDialog("please type in the Basename", "XRecord");
         if (baseName.length() < 4)
             return;
@@ -187,6 +187,7 @@ public enum Layout {
         s += "\n\n*/";
         return s;
     }
+
     public static String genRecordClass(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
         String s = "\n\npublic class " + baseName + "Instance implements " + baseName + "Iface<" + baseName + "Instance> {\n" + "\tByteBuffer buffer;\n";
         s += "\n\tpublic " + baseName + "Instance (ByteBuffer buffer){this.buffer=buffer;}";
@@ -216,8 +217,8 @@ public enum Layout {
                 s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    byte[] {1}) {2}\n\t\tbuffer.put({3}, buffer.position() + Layout.{4}.seek, Layout.{5}.size);\n\t\treturn this;\n\t}\n", setterName, lname, '{', lname, lname, lname);
             } else {
                 s += MessageFormat.format("\n\tpublic " + baseName + "Instance {0}(    {1} {2}) {3}\n\t\tbuffer.put{4}(buffer.position() + Layout.{5}.seek,  {6});\n\t\treturn this;\n\t}\n", setterName, primType, lname, '{', upType, lname, lname);
-//                    String s1 = MessageFormat.format("buffer.position() + {0}.{1}.seek, {2}", vname, lname, lname);
-//                s += MessageFormat.format("\tpublic\t"+baseName+"Instance\t{0}(   \t{1}\t{2})\t{\n\tbuffer.put{3}({4});\n\t\treturn\tthis;\n\t}\n", setterName, primType, lname, upType, s1);
+                //                    String s1 = MessageFormat.format("buffer.position() + {0}.{1}.seek, {2}", vname, lname, lname);
+                //                s += MessageFormat.format("\tpublic\t"+baseName+"Instance\t{0}(   \t{1}\t{2})\t{\n\tbuffer.put{3}({4});\n\t\treturn\tthis;\n\t}\n", setterName, primType, lname, upType, s1);
             }
         }
 
@@ -227,7 +228,7 @@ public enum Layout {
     public static String genRecordInterface(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
         String name1 = baseName + "Iface";
         String s = "\n\n  interface " + name1 + "<T extends " + name1 + " >{\n";
-//        s += "\n\t  " + baseName + "  (ByteBuffer buffer) ;";
+        //        s += "\n\t  " + baseName + "  (ByteBuffer buffer) ;";
 
         for (Layout layout : values()) {
 

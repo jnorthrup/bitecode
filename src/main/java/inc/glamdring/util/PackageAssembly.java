@@ -7,8 +7,8 @@ import java.util.jar.*;
 import java.util.logging.*;
 
 public class PackageAssembly {
-    public   Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
-        return getEnumsStructsForPackage(getClass().getPackage() );
+    public Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
+        return getEnumsStructsForPackage(getClass().getPackage());
     }
 
     public static Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage(final Package package_) throws Exception {
@@ -24,9 +24,9 @@ public class PackageAssembly {
             throws ClassNotFoundException {
         // This will hold a list of directories matching the pckgname.
         //There may be more than one if a package is split over multiple jars/paths
-        List<Class > classes = new ArrayList< Class>();
+        List<Class> classes = new ArrayList<Class>();
         ArrayList<File> directories = new ArrayList<File>();
-        String pckgname=package_.getName();
+        String pckgname = package_.getName();
         try {
 
             ClassLoader cld = Thread.currentThread().getContextClassLoader();
@@ -122,8 +122,6 @@ public class PackageAssembly {
         }
         return classList;
     }
-
-
 
 
 }
