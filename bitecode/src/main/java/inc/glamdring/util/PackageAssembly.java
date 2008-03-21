@@ -7,9 +7,6 @@ import java.util.jar.*;
 import java.util.logging.*;
 
 public class PackageAssembly {
-    public Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage() throws Exception {
-        return getEnumsStructsForPackage(getClass().getPackage());
-    }
 
     public static Map<Class<? extends Enum>, Iterable<? extends Enum>> getEnumsStructsForPackage(final Package package_) throws Exception {
         Map<Class<? extends Enum>, Iterable<? extends Enum>> map = new HashMap<Class<? extends Enum>, Iterable<? extends Enum>>();
@@ -20,11 +17,11 @@ public class PackageAssembly {
         return map;
     }
 
-    public static List<Class> getClassesForPackage(Package package_)
+    public static List<Class<Enum>> getEnumsForPackage(Package package_)
             throws ClassNotFoundException {
         // This will hold a list of directories matching the pckgname.
         //There may be more than one if a package is split over multiple jars/paths
-        List<Class> classes = new ArrayList<Class>();
+        List<Class<Enum>> classes = new ArrayList<Class<Enum>>();
         ArrayList<File> directories = new ArrayList<File>();
         String pckgname = package_.getName();
         try {
@@ -33,7 +30,6 @@ public class PackageAssembly {
             if (cld == null) {
                 throw new ClassNotFoundException("Can't get class loader.");
             }
-
             // Ask for all resources for the path
             Enumeration<URL> resources = cld.getResources(pckgname.replace('.', '/'));
             while (resources.hasMoreElements()) {
@@ -46,7 +42,7 @@ public class PackageAssembly {
                         if (e.getName().startsWith(pckgname.replace('.', '/')) && e.getName().endsWith(".class") && !e.getName().contains("$")) {
                             String className = e.getName().replace("/", ".").substring(0, e.getName().length() - 6);
                             System.out.println(className);
-                            classes.add(Class.forName(className));
+                            classes.add((Class<Enum>) Class.forName(className));
                         }
                     }
                 } else
@@ -73,7 +69,7 @@ public class PackageAssembly {
                     if (file.endsWith(".class")) {
                         // removes the .class extension
                         classes.add(
-                                Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
+                                (Class<Enum>) Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
                     }
                 }
             } else {
@@ -85,10 +81,10 @@ public class PackageAssembly {
     }
 
 
-    public List<Class> getClassessOfInterface(Package thePackage, Class theInterface) {
-        List<Class> classList = new ArrayList<Class>();
+    public List<Class<Enum>> getClassessOfInterface(Package thePackage, Class theInterface) {
+        List<Class<Enum>> classList = new ArrayList<Class<Enum>>();
         try {
-            for (Class discovered : getClassesForPackage(thePackage)) {
+            for (Class<Enum> discovered : getEnumsForPackage(thePackage)) {
                 if (Arrays.asList(discovered.getInterfaces()).contains(theInterface)) {
                     classList.add(discovered);
                 }
@@ -105,7 +101,7 @@ public class PackageAssembly {
         List<Class<? extends Enum>> classList = new ArrayList<Class<? extends Enum>>();
 
         try {
-            for (Class discovered : getClassesForPackage(thePackage)) {
+            for (Class discovered : getEnumsForPackage(thePackage)) {
 
                 do {
                     Class parent = discovered.getSuperclass();

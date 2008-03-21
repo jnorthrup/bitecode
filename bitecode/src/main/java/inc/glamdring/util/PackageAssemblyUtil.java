@@ -440,7 +440,7 @@ public class PackageAssemblyUtil {
 
     public static void main(String... args) throws Exception {
         final String dirName = args.length > 0 ? "target/classes" : args[0];
-        final String indexName = (String) (args[0].length() > 0 ? new File(File.createTempFile("__BC__" + currentTimeMillis(), "bitecode" )) : args[1]);
+        final String indexName = (String) (args[0].length() > 0 ? new File(File.createTempFile("__BC__" + currentTimeMillis(),"rw"), "bitecode" ) : args[1]);
 
         File index = getIndexFile(indexName);
 
