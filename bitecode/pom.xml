@@ -20,6 +20,13 @@
             <artifactId>javolution</artifactId>
             <version>5.2.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>cyc</groupId>
+            <artifactId>phase2</artifactId>
+            <version>1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <pluginManagement>
@@ -56,7 +63,6 @@
                         <downloadJavadocs>true</downloadJavadocs>
                     </configuration>
                 </plugin>
-
             </plugins>
         </pluginManagement>
     </build>

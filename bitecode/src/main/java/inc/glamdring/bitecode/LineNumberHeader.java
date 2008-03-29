@@ -1,6 +1,7 @@
 package inc.glamdring.bitecode;
 
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 8 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
@@ -69,6 +70,14 @@ public enum LineNumberHeader {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
                         size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalArgumentException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (NoSuchFieldException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (SecurityException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
                     } catch (Exception e) {
                     }
                     break;
@@ -128,7 +137,7 @@ public enum LineNumberHeader {
      * @param register array holding values pointing to Stack offsets
      * @param stack    A stack of 32-bit pointers only to src positions
      */
-    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
+    private void subIndex(Buffer src, int[] register, IntBuffer stack) {
         System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
         int begin = src.position();
         int stackPtr = stack.position();
@@ -144,6 +153,16 @@ public enum LineNumberHeader {
                     //resume the lower stack activities
                     stack.position(mark);
                 }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (SecurityException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();  //todo: verify for a purpose
             } catch (Exception e) {
                 throw new Error(e.getMessage());
             }

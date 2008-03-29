@@ -5,9 +5,9 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link InnerClassesHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link InnerClassesHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>classes_count</td><td>0x2</td><td>0x6</td><td> (short) classes_count=src.getShort(0x6) & 0xffff</td><td>{@link InnerClassesHeaderVisitor#classes_count(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link InnerClassesHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td>int</td><td>{@link InnerClassesHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>classes_count</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link InnerClassesHeaderVisitor#classes_count(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.InnerClassesHeader#Utf8Index
  * @see inc.glamdring.bitecode.InnerClassesHeader#AttributeLength

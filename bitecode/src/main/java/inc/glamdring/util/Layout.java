@@ -180,7 +180,7 @@ public enum Layout {
         s += "\t</table>\n\n\n\n";
 
 
-        for (Layout layout : Layout.values()) {
+        for (Enum layout : Layout.values()) {
             s += "\t\n@see " + vname + "#" + layout.name();
         }
 
@@ -188,7 +188,7 @@ public enum Layout {
         return s;
     }
 
-    public static String genRecordClass(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+    public static String genRecordClass(Map<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
         String s = "\n\npublic class " + baseName + "Instance implements " + baseName + "Iface<" + baseName + "Instance> {\n" + "\tByteBuffer buffer;\n";
         s += "\n\tpublic " + baseName + "Instance (ByteBuffer buffer){this.buffer=buffer;}";
 
@@ -225,7 +225,7 @@ public enum Layout {
         return s += "\n}\n";
     }
 
-    public static String genRecordInterface(HashMap<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
+    public static String genRecordInterface(Map<Class<?>, Pair<String, String>> nc, String vname, String baseName) {
         String name1 = baseName + "Iface";
         String s = "\n\n  interface " + name1 + "<T extends " + name1 + " >{\n";
         //        s += "\n\t  " + baseName + "  (ByteBuffer buffer) ;";

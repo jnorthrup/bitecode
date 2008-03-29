@@ -5,17 +5,17 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 80
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>magic</td><td>0x4</td><td>0x0</td><td> (int) magic=src.getInt(0x0)</td><td>{@link FileSlotRecordVisitor#magic(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>minor_version</td><td>0x2</td><td>0x4</td><td> (short) minor_version=src.getShort(0x4) & 0xffff</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>major_version</td><td>0x2</td><td>0x6</td><td> (short) major_version=src.getShort(0x6) & 0xffff</td><td>{@link FileSlotRecordVisitor#major_version(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>ConstantPoolRecord</td><td>0x3a</td><td>0x8</td><td> (byte) ConstantPoolRecord=src.get(0x8) & 0xff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
- * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x42</td><td> (short) AccessFlagsValue=src.getShort(0x42) & 0xffff</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * <tr><td>ClassIndex</td><td>0x2</td><td>0x44</td><td> (short) ClassIndex=src.getShort(0x44) & 0xffff</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>SuperClassIndex</td><td>0x2</td><td>0x46</td><td> (short) SuperClassIndex=src.getShort(0x46) & 0xffff</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>InterFaceTableRecord</td><td>0x2</td><td>0x48</td><td> (short) InterFaceTableRecord=src.getShort(0x48) & 0xffff</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>FieldRecord</td><td>0x2</td><td>0x4a</td><td> (short) FieldRecord=src.getShort(0x4a) & 0xffff</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>MethodsRecord</td><td>0x2</td><td>0x4c</td><td> (short) MethodsRecord=src.getShort(0x4c) & 0xffff</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AttributesRecord</td><td>0x2</td><td>0x4e</td><td> (short) AttributesRecord=src.getShort(0x4e) & 0xffff</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>magic</td><td>0x4</td><td>0x0</td><td>int</td><td>{@link FileSlotRecordVisitor#magic(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>minor_version</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link FileSlotRecordVisitor#minor_version(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>major_version</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link FileSlotRecordVisitor#major_version(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>ConstantPoolRecord</td><td>0x3a</td><td>0x8</td><td>byte[]</td><td>{@link inc.glamdring.bitecode.ConstantPoolRecord}</td></tr>
+ * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x42</td><td>short</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
+ * <tr><td>ClassIndex</td><td>0x2</td><td>0x44</td><td>short</td><td>{@link FileSlotRecordVisitor#ClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>SuperClassIndex</td><td>0x2</td><td>0x46</td><td>short</td><td>{@link FileSlotRecordVisitor#SuperClassIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>InterFaceTableRecord</td><td>0x2</td><td>0x48</td><td>short</td><td>{@link FileSlotRecordVisitor#InterFaceTableRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>FieldRecord</td><td>0x2</td><td>0x4a</td><td>short</td><td>{@link FileSlotRecordVisitor#FieldRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>MethodsRecord</td><td>0x2</td><td>0x4c</td><td>short</td><td>{@link FileSlotRecordVisitor#MethodsRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>AttributesRecord</td><td>0x2</td><td>0x4e</td><td>short</td><td>{@link FileSlotRecordVisitor#AttributesRecord(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.FileSlotRecord#magic
  * @see inc.glamdring.bitecode.FileSlotRecord#minor_version

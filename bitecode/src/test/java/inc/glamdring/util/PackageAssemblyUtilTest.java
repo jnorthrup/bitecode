@@ -4,14 +4,17 @@ package inc.glamdring.util;
  *
  */
 
+import com.cyc.tool.subl.jrtl.nativeCode.type.core.*;
 import inc.glamdring.bitecode.*;
 import junit.framework.*;
 
 public class PackageAssemblyUtilTest extends TestCase {
-    PackageAssemblyUtil packageAssemblyUtil = new PackageAssemblyUtil();
 
+   public void testGetSublObject() throws Exception {
+        SubLObjectPackageAssemblyUtil.createSubLObjectStructSourceFiles(SubLObject.class);
+    }
     public void testGetEnumsStructsForPackage() throws Exception {
-        packageAssemblyUtil.createEnumStructSourceFiles(TableRecord.class);
+        EnumPackageAssemblyUtil.createEnumStructSourceFiles(TableRecord.class);
     }
 }
 

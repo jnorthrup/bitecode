@@ -5,19 +5,19 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 54
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>INVALID</td><td>0x4</td><td>0x0</td><td> (int) INVALID=src.getInt(0x0)</td><td>{@link ConstantPoolRefVisitor#INVALID(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Utf8_</td><td>0x2</td><td>0x4</td><td> (short) Utf8_=src.getShort(0x4) & 0xffff</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
- * <tr><td>UNUSED</td><td>0x4</td><td>0x6</td><td> (int) UNUSED=src.getInt(0x6)</td><td>{@link ConstantPoolRefVisitor#UNUSED(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Integer_</td><td>0x4</td><td>0xa</td><td> (int) Integer_=src.getInt(0xa)</td><td>{@link ConstantPoolRefVisitor#Integer_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Float_</td><td>0x4</td><td>0xe</td><td> (int) Float_=src.getInt(0xe)</td><td>{@link ConstantPoolRefVisitor#Float_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Long_</td><td>0x8</td><td>0x12</td><td> (long) Long_=src.getLong(0x12)</td><td>{@link ConstantPoolRefVisitor#Long_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Double_</td><td>0x8</td><td>0x1a</td><td> (long) Double_=src.getLong(0x1a)</td><td>{@link ConstantPoolRefVisitor#Double_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Class_</td><td>0x2</td><td>0x22</td><td> (short) Class_=src.getShort(0x22) & 0xffff</td><td>{@link ConstantPoolRefVisitor#Class_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>String_</td><td>0x2</td><td>0x24</td><td> (short) String_=src.getShort(0x24) & 0xffff</td><td>{@link ConstantPoolRefVisitor#String_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Field_</td><td>0x4</td><td>0x26</td><td> (int) Field_=src.getInt(0x26)</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
- * <tr><td>Method_</td><td>0x4</td><td>0x2a</td><td> (int) Method_=src.getInt(0x2a)</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
- * <tr><td>InterfaceMethod_</td><td>0x4</td><td>0x2e</td><td> (int) InterfaceMethod_=src.getInt(0x2e)</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
- * <tr><td>NameAndType_</td><td>0x4</td><td>0x32</td><td> (int) NameAndType_=src.getInt(0x32)</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
+ * <tr><td>INVALID</td><td>0x4</td><td>0x0</td><td>int</td><td>{@link ConstantPoolRefVisitor#INVALID(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Utf8_</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
+ * <tr><td>UNUSED</td><td>0x4</td><td>0x6</td><td>int</td><td>{@link ConstantPoolRefVisitor#UNUSED(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Integer_</td><td>0x4</td><td>0xa</td><td>int</td><td>{@link ConstantPoolRefVisitor#Integer_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Float_</td><td>0x4</td><td>0xe</td><td>int</td><td>{@link ConstantPoolRefVisitor#Float_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Long_</td><td>0x8</td><td>0x12</td><td>long</td><td>{@link ConstantPoolRefVisitor#Long_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Double_</td><td>0x8</td><td>0x1a</td><td>long</td><td>{@link ConstantPoolRefVisitor#Double_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Class_</td><td>0x2</td><td>0x22</td><td>short</td><td>{@link ConstantPoolRefVisitor#Class_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>String_</td><td>0x2</td><td>0x24</td><td>short</td><td>{@link ConstantPoolRefVisitor#String_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Field_</td><td>0x4</td><td>0x26</td><td>int</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
+ * <tr><td>Method_</td><td>0x4</td><td>0x2a</td><td>int</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
+ * <tr><td>InterfaceMethod_</td><td>0x4</td><td>0x2e</td><td>int</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
+ * <tr><td>NameAndType_</td><td>0x4</td><td>0x32</td><td>int</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
  * 
  * @see inc.glamdring.bitecode.ConstantPoolRef#INVALID
  * @see inc.glamdring.bitecode.ConstantPoolRef#Utf8_

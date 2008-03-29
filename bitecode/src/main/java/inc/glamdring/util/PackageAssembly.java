@@ -31,15 +31,16 @@ public class PackageAssembly {
                 throw new ClassNotFoundException("Can't get class loader.");
             }
             // Ask for all resources for the path
-            Enumeration<URL> resources = cld.getResources(pckgname.replace('.', '/'));
+            final String resName = pckgname.replace('.', '/');
+            Enumeration<URL> resources = cld.getResources(resName);
             while (resources.hasMoreElements()) {
                 URL res = resources.nextElement();
-                if (res.getProtocol().equalsIgnoreCase("jar")) {
+                if (res.getProtocol().equalsIgnoreCase("jar")||res.getProtocol().equalsIgnoreCase("zip")) {
                     JarURLConnection conn = (JarURLConnection) res.openConnection();
                     JarFile jar = conn.getJarFile();
 
                     for (JarEntry e : Collections.list(jar.entries())) {
-                        if (e.getName().startsWith(pckgname.replace('.', '/')) && e.getName().endsWith(".class") && !e.getName().contains("$")) {
+                        if (e.getName().startsWith(resName) && e.getName().endsWith(".class") && !e.getName().contains("$")) {
                             String className = e.getName().replace("/", ".").substring(0, e.getName().length() - 6);
                             System.out.println(className);
                             classes.add((Class<Enum>) Class.forName(className));

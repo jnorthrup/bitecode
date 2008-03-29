@@ -5,10 +5,10 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 58
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td> (byte) ConstantPoolRef=src.get(0x0) & 0xff</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
- * <tr><td>subType</td><td>0x2</td><td>0x36</td><td> (short) subType=src.getShort(0x36) & 0xffff</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td> (byte) utf8Bitmap=src.get(0x38) & 0xff</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>tag</td><td>0x1</td><td>0x39</td><td> (byte) tag=src.get(0x39) & 0xff</td><td>{@link ConstantPoolRecordVisitor#tag(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td>byte[]</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
+ * <tr><td>subType</td><td>0x2</td><td>0x36</td><td>short</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>tag</td><td>0x1</td><td>0x39</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#tag(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
  * @see inc.glamdring.bitecode.ConstantPoolRecord#subType

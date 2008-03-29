@@ -5,15 +5,15 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 0
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>public_</td><td>0x0</td><td>0x0</td><td> (byte) public_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>private_</td><td>0x0</td><td>0x0</td><td> (byte) private_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>protected_</td><td>0x0</td><td>0x0</td><td> (byte) protected_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>static_</td><td>0x0</td><td>0x0</td><td> (byte) static_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>final_</td><td>0x0</td><td>0x0</td><td> (byte) final_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>synchronized_</td><td>0x0</td><td>0x0</td><td> (byte) synchronized_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>native_</td><td>0x0</td><td>0x0</td><td> (byte) native_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#native_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>abstract_</td><td>0x0</td><td>0x0</td><td> (byte) abstract_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>strictfp_</td><td>0x0</td><td>0x0</td><td> (byte) strictfp_=src.get(0x0) & 0xff</td><td>{@link MethodAccessValueVisitor#strictfp_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>public_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>private_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>protected_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>static_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>final_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>synchronized_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#synchronized_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>native_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#native_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>abstract_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>strictfp_</td><td>0x0</td><td>0x0</td><td>byte[]</td><td>{@link MethodAccessValueVisitor#strictfp_(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.MethodAccessValue#public_
  * @see inc.glamdring.bitecode.MethodAccessValue#private_

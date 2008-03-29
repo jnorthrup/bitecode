@@ -5,13 +5,13 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 18
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td> (short) Utf8Index=src.getShort(0x0) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td> (int) AttributeLength=src.getInt(0x2)</td><td>{@link CodeAttributeHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>MaxStack</td><td>0x2</td><td>0x6</td><td> (short) MaxStack=src.getShort(0x6) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#MaxStack(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>MaxLocals</td><td>0x2</td><td>0x8</td><td> (short) MaxLocals=src.getShort(0x8) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#MaxLocals(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>CodeLength</td><td>0x4</td><td>0xa</td><td> (int) CodeLength=src.getInt(0xa)</td><td>{@link CodeAttributeHeaderVisitor#CodeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>ExceptionTableLength</td><td>0x2</td><td>0xe</td><td> (short) ExceptionTableLength=src.getShort(0xe) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#ExceptionTableLength(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>attributes_count</td><td>0x2</td><td>0x10</td><td> (short) attributes_count=src.getShort(0x10) & 0xffff</td><td>{@link CodeAttributeHeaderVisitor#attributes_count(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>Utf8Index</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link CodeAttributeHeaderVisitor#Utf8Index(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>AttributeLength</td><td>0x4</td><td>0x2</td><td>int</td><td>{@link CodeAttributeHeaderVisitor#AttributeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>MaxStack</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link CodeAttributeHeaderVisitor#MaxStack(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>MaxLocals</td><td>0x2</td><td>0x8</td><td>short</td><td>{@link CodeAttributeHeaderVisitor#MaxLocals(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>CodeLength</td><td>0x4</td><td>0xa</td><td>int</td><td>{@link CodeAttributeHeaderVisitor#CodeLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>ExceptionTableLength</td><td>0x2</td><td>0xe</td><td>short</td><td>{@link CodeAttributeHeaderVisitor#ExceptionTableLength(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>attributes_count</td><td>0x2</td><td>0x10</td><td>short</td><td>{@link CodeAttributeHeaderVisitor#attributes_count(ByteBuffer, int[], IntBuffer)}</td></tr>
  * 
  * @see inc.glamdring.bitecode.CodeAttributeHeader#Utf8Index
  * @see inc.glamdring.bitecode.CodeAttributeHeader#AttributeLength

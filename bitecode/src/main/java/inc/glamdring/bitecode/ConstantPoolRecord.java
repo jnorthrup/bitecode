@@ -1,6 +1,7 @@
 package inc.glamdring.bitecode;
 
 import java.nio.*;
+import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 58 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
@@ -73,6 +74,14 @@ public enum ConstantPoolRecord {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
                         size = subRecord.getField("recordLen").getInt(null);
+                    } catch (IllegalArgumentException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (NoSuchFieldException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (SecurityException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
                     } catch (Exception e) {
                     }
                     break;
@@ -148,6 +157,16 @@ public enum ConstantPoolRecord {
                     //resume the lower stack activities
                     stack.position(mark);
                 }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (SecurityException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();  //todo: verify for a purpose
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();  //todo: verify for a purpose
             } catch (Exception e) {
                 throw new Error(e.getMessage());
             }

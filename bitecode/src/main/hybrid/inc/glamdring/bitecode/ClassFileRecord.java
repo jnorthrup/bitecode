@@ -5,9 +5,9 @@ import java.lang.reflect.*;
 /**
  * <p>recordSize: 1048970
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>ClassResourceUri</td><td>0x100</td><td>0x0</td><td> (byte) ClassResourceUri=src.get(0x0) & 0xff</td><td>{@link ClassFileRecordVisitor#ClassResourceUri(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>FileSlotRecord</td><td>0x50</td><td>0x100</td><td> (byte) FileSlotRecord=src.get(0x100) & 0xff</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
- * <tr><td>TableRecord</td><td>0x10003a</td><td>0x150</td><td> (byte) TableRecord=src.get(0x150) & 0xff</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
+ * <tr><td>ClassResourceUri</td><td>0x100</td><td>0x0</td><td>byte[]</td><td>{@link ClassFileRecordVisitor#ClassResourceUri(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * <tr><td>FileSlotRecord</td><td>0x50</td><td>0x100</td><td>byte[]</td><td>{@link inc.glamdring.bitecode.FileSlotRecord}</td></tr>
+ * <tr><td>TableRecord</td><td>0x10003a</td><td>0x150</td><td>byte[]</td><td>{@link inc.glamdring.bitecode.TableRecord}</td></tr>
  * 
  * @see inc.glamdring.bitecode.ClassFileRecord#ClassResourceUri
  * @see inc.glamdring.bitecode.ClassFileRecord#FileSlotRecord
