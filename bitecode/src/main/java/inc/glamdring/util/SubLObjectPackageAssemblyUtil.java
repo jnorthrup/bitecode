@@ -5,9 +5,9 @@ import inc.glamdring.bitecode.*;
 import javolution.util.*;
 
 import java.io.*;
+import static java.lang.Package.*;
+import static java.lang.System.*;
 import java.lang.reflect.*;
-import static java.lang.System.currentTimeMillis;
-import static java.lang.Package.getPackage;
 import java.net.*;
 import java.util.*;
 import java.util.jar.*;
@@ -377,7 +377,7 @@ public class SubLObjectPackageAssemblyUtil {
                 }
             }
 
-            int j=0;
+            int j = 0;
             subRecord = (Class) objects[j++];
             valClazz = (Class<Object>) objects[j++];
             size = (Integer) objects[j++];
@@ -418,7 +418,7 @@ public class SubLObjectPackageAssemblyUtil {
     }
 
 
-    private Object[] getSubRecord(Class<?extends  SubLObject >subLObj) {
+    private Object[] getSubRecord(Class<? extends SubLObject> subLObj) {
         final String[] suffixes = {"", "s", "_", "Index", "Value", "Ref", "Header", "Info"};
         for (String indexPrefix : suffixes) {
             try {
@@ -480,7 +480,7 @@ public class SubLObjectPackageAssemblyUtil {
             for (int i = 0; i < fn.length; i++)
                 fn[i] = fields[i].toGenericString();
 
-            System.err.println(aClass.getSimpleName() + Arrays.toString(fn).replaceAll(",", ",\n\t").replaceAll(packageName + ".", ""));
+//            System.err.println(aClass.getSimpleName() + Arrays.toString(fn).replaceAll(",", ",\n\t").replaceAll(packageName + ".", ""));
         }
     }
 
@@ -510,65 +510,108 @@ public class SubLObjectPackageAssemblyUtil {
             } catch (Exception e) { System.err.println(""); }
         return null;
     }
-    public static List<Class<SubLObject>> getSubLObjectsForPackage(Package package_)
-            throws ClassNotFoundException {
+
+    public static List<Class<? extends SubLObject>> getSubLObjectsForPackage(Package... p) throws ClassNotFoundException {
+
+//        Package.getPackages()
         // This will hold a list of directories matching the pckgname.
         //There may be more than one if a package is split over multiple jars/paths
-        List<Class<SubLObject>> classes = new ArrayList<Class<SubLObject>>();
+        List<Class<? extends SubLObject>> classes = new ArrayList<Class<? extends SubLObject>>();
         ArrayList<File> directories = new ArrayList<File>();
-        String pckgname = package_.getName();
-        try {
 
-            ClassLoader cld = Thread.currentThread().getContextClassLoader();
-            if (cld == null) {
-                throw new ClassNotFoundException("Can't get class loader.");
-            }
-            // Ask for all resources for the path
-            final String resName = pckgname.replace('.', '/');
-            Enumeration<URL> resources = cld.getResources(resName);
-            while (resources.hasMoreElements()) {
-                URL res = resources.nextElement();
-                if (res.getProtocol().equalsIgnoreCase("jar")||res.getProtocol().equalsIgnoreCase("zip")) {
-                    JarURLConnection conn = (JarURLConnection) res.openConnection();
-                    JarFile jar = conn.getJarFile();
+        for (Package package_ : Package.getPackages()) {
 
-                    for (JarEntry e : Collections.list(jar.entries())) {
-                        if (e.getName().startsWith(resName) && e.getName().endsWith(".class") && !e.getName().contains("$")) {
-                            String className = e.getName().replace("/", ".").substring(0, e.getName().length() - 6);
-                            System.out.println(className);
-                            classes.add((Class<SubLObject>) Class.forName(className));
-                        }
-                    }
-                } else
-                    directories.add(new File(URLDecoder.decode(res.getPath(), "UTF-8")));
-            }
-        } catch (NullPointerException x) {
-            throw new ClassNotFoundException(pckgname + " does not appear to be " +
-                    "a valid package (Null pointer exception)");
-        } catch (UnsupportedEncodingException encex) {
-            throw new ClassNotFoundException(pckgname + " does not appear to be " +
-                    "a valid package (Unsupported encoding)");
-        } catch (IOException ioex) {
-            throw new ClassNotFoundException("IOException was thrown when trying " +
-                    "to get all resources for " + pckgname);
-        }
 
-        // For every directory identified capture all the .class files
-        for (File directory : directories) {
-            if (directory.exists()) {
-                // Get the list of the files contained in the package
-                String[] files = directory.list();
-                for (String file : files) {
-                    // we are only interested in .class files
-                    if (file.endsWith(".class")) {
-                        // removes the .class extension
-                        classes.add(
-                                (Class<SubLObject>) Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
+            String pckgname = package_.getName();
+            try {
+
+                ClassLoader cld = Thread.currentThread().getContextClassLoader();
+                if (cld == null) {
+                    try {
+                        throw new ClassNotFoundException("Can't get class loader.");
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();  //todo: verify for a purpose
                     }
                 }
-            } else {
-                throw new ClassNotFoundException(pckgname + " (" + directory.getPath() +
-                        ") does not appear to be a valid package");
+                // Ask for all resources for the path
+                final String resName = pckgname.replace('.', '/');
+                Enumeration<URL> resources = cld.getResources(resName);
+                while (resources.hasMoreElements()) try {
+                    {
+                    URL res = resources.nextElement();
+                        if (res.getProtocol().equalsIgnoreCase("jar") || res.getProtocol().equalsIgnoreCase("zip")) {
+                            JarURLConnection conn = (JarURLConnection) res.openConnection();
+                            JarFile jar = conn.getJarFile();
+
+                            for (JarEntry e : Collections.list(jar.entries()))
+                                try {
+                                    {
+                                if (e.getName().startsWith(resName) && e.getName().endsWith(".class") && !e.getName().contains("$")) {
+                                            String className = e.getName().replace("/", ".").substring(0, e.getName().length() - 6);
+
+                                            try {
+                                                Class<?> aClass = null;
+                                                try {
+                                                    aClass = Class.forName(className);
+                                                if (aClass.isInstance(SubLObject.class)) {
+                                                    classes.add((Class<? extends SubLObject>) aClass);
+                                                    System.out.println(className);
+                                                }
+                                                } catch (java.lang.ExceptionInInitializerError e1) {
+//                                                    e1.printStackTrace();  //todo: verify for a purpose
+                                                }
+                                            } catch (Exception e1) {
+            //                                        e1.printStackTrace();  //todo: verify for a purpose
+                                            }
+
+                                        }
+                                    }
+                                } catch (Exception e1) {
+    //                                e1.printStackTrace();  //todo: verify for a purpose
+                                }
+                        } else
+                            directories.add(new File(URLDecoder.decode(res.getPath(), "UTF-8")));
+                    }
+                } catch ( Exception e) {
+//                    e.printStackTrace();  //todo: verify for a purpose
+                }
+            }/* catch (NullPointerException x) {
+                throw new ClassNotFoundException(pckgname + " does not appear to be " +
+                        "a valid package (Null pointer exception)");
+            } catch (UnsupportedEncodingException encex) {
+                throw new ClassNotFoundException(pckgname + " does not appear to be " +
+                        "a valid package (Unsupported encoding)");
+            } catch (IOException ioex) {
+                throw new ClassNotFoundException("IOException was thrown when trying " +
+                        "to get all resources for " + pckgname);
+            }*/
+            catch (IOException e) {}
+            ;
+
+            // For every directory identified capture all the .class files
+            for (File directory : directories) {
+                if (!directory.exists()) {
+                    throw new ClassNotFoundException(pckgname + " (" + directory.getPath() +
+                            ") does not appear to be a valid package");
+                } else {
+                    // Get the list of the files contained in the package
+                    String[] files = directory.list();
+                    for (String file : files) {
+                        // we are only interested in .class files
+                        if (file.endsWith(".class")) {
+                            // removes the .class extension
+                            /*try {*/
+                            try {
+                                classes.add((Class<? extends SubLObject>) Class.forName(pckgname + '.' + file.substring(0, file.length() - 6)));
+                            } catch (Throwable e) {
+
+                            }
+                            /*} catch (Exception e) {
+//                                e.printStackTrace();  //todo: verify for a purpose
+                            }*/
+                        }
+                    }
+                }
             }
         }
         return classes;
@@ -592,11 +635,11 @@ public class SubLObjectPackageAssemblyUtil {
             for (Class<? extends SubLObject> discovered : getSubLObjectsForPackage(thePackage)) {
                 do {
                     Class<? extends SubLObject> parent = (Class<? extends SubLObject>) discovered.getSuperclass();
-                    if (parent != theParent) {
-                        discovered = parent;
-                    } else {
+                    if (parent == theParent) {
                         classList.add(discovered);
                         break;
+                    } else {
+                        discovered = parent;
                     }
                 } while (discovered != null);
             }
@@ -610,17 +653,18 @@ public class SubLObjectPackageAssemblyUtil {
     public String getSubLObjectsStructsForPackage() throws Exception {
         return createSubLObjectStructSourceFiles(SubLObject.class);
     }
-    public static String createSubLObjectStructSourceFiles(final Class tableRecordClass) throws Exception {
 
-           Map<Class<? extends SubLObject>, Iterable<? extends SubLObject>> map = getSubLObjectsStructsForPackage(tableRecordClass.getPackage());
-           Set<Map.Entry<Class<? extends SubLObject>, Iterable<? extends SubLObject>>> entries = map.entrySet();
+    public static String createSubLObjectStructSourceFiles(final Class<? extends SubLObject> tableRecordClass) throws Exception {
 
-           String display = "";
-           String enumName = "";
-           for (Map.Entry<Class<? extends SubLObject>, Iterable<? extends SubLObject>> entry : entries)
-               display += genSubLObjectMiddle(SubLObject.class, entry);
-           return display;
-       }
+        Map<Class<? extends SubLObject>, Iterable<? extends SubLObject>> map = getSubLObjectsStructsForPackage(tableRecordClass.getPackage());
+        Set<Map.Entry<Class<? extends SubLObject>, Iterable<? extends SubLObject>>> entries = map.entrySet();
+
+        String display = "";
+        String enumName = "";
+        for (Map.Entry<Class<? extends SubLObject>, Iterable<? extends SubLObject>> entry : entries)
+            display += genSubLObjectMiddle(SubLObject.class, entry);
+        return display;
+    }
 
 }
 
