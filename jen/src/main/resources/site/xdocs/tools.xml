@@ -1,0 +1,213 @@
+<document>
+  <properties>
+    <author email="rosco@[nospam].roscopeco.co.uk">Ross Bamford</author>
+    <title>Jen Tools - Overview</title>
+  </properties>
+  <body>
+    <section name="Jen Tools - Overview">
+      <p>The optional <strong>Jen Tools</strong> library provides a number of Jen-based implementations
+      of common classworking tools, such as <em>dynamic proxies</em> and <em>mock implementations</em>.
+      Although all of the major features of the tools library can be found elsewhere, in all cases Jen
+      is able to provide an advantage in terms of integration and flexibility passed on from the
+      underlying <code>SoftClass</code> API. As with everything else in Jen, the driving force behind
+      the tools API design is a careful balance of performance, flexibility, and ease of use, 
+      with the result that a very wide range of requirements can be catered for in a very intuitive way.</p>
+
+      <p><strong>Note</strong> that the tools library is on a slightly different version schedule
+      to the core, since it was introduced at 0.20. New features will continue to be added to the
+      library throughout alpha development, with a more focused testing policy to cover this flux.
+      As a result of this there may be small changes in the public interface from version to version
+      to accomodate added features as well as fixes.</p>
+
+      <p>There follows a general description of the main features provided by the tools library,
+      together with links to further API contract and user documentation in the 
+      <a href='/nonav/docs/multiproject/jen-tools/apidocs/index.html'>Javadoc</a> and on the 
+      <a href='http://wiki.java.net/bin/view/Javatools/JenDocTools'>wiki</a> respectively.</p>
+
+      <subsection name="Dynamic Proxies">
+        <p>As you would expect, Jen provides support for <em>dynamic proxy</em> classes, arguably the
+        most common use-case for runtime class generation. Like <a href='http://cglib.sf.net/' target='_blank'>Cglib's</a>
+        <code>
+        <a href='http://cglib.sourceforge.net/apidocs/net/sf/cglib/proxy/Proxy.html' target='_blank'>Proxy</a>
+        </code> implementation, Jen's <code>
+        <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/SoftProxy.html' target='_blank'>SoftProxy</a></code> with
+        the <code>
+        <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/DefaultInvokerStrategy.html' target='_blank'>DefaultInvokerStrategy
+        </a></code> (see point one, below) generates proxy classes that are outwardly compatible with the Java(tm) 
+        SE platform proxies (generated with 
+        <code><a href='http://java.sun.com/j2se/1.5.0/docs/api/java/lang/reflect/Proxy.html' target='_blank'>
+        java.lang.reflect.Proxy</a></code>, in that method calls on the dynamic proxy are dispatched to a user-supplied <code>
+        <a href='http://java.sun.com/j2se/1.5.0/docs/api/java/lang/reflect/InvocationHandler.html' target='_blank'>
+        InvocationHandler</a></code> instance to be handled in an application-dependent way. Beneath the surface, 
+        however, Jen proxies have a number of features not present in the other implementations:</p>
+  
+        <ul>
+            <li>As indicated above, <code>SoftProxy</code> uses an <em>invoker generation strategy</em> to
+            create the instance-based invocation implementation of the generated proxy class. The default strategy
+            provides the entire platform-compatible proxy implementation, but can be easily switched out with
+            a custom implementation of the <code>
+            <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/InvokerGenerationStrategy.html' target='_blank'>
+            InvokerGenerationStrategy</a></code> interface to provide absolutely any implementation for
+            the instance initialization and proxy invocation methods that you need.
+            </li>
+            <p/>
+            <li>The default strategy includes functionality similar to that provided by Cglib's separate <code>
+            <a href='http://cglib.sourceforge.net/apidocs/net/sf/cglib/proxy/Enhancer.html' target='_blank'>Enhancer</a>
+            </code>,
+            and fully supports both abstract class / interface and concrete class proxies via the same API.
+            You can happily mix a superclass with implemented interfaces, and what's more, you can easily
+            and safely dispatch to the appropriate <code>super</code> method from your <code>InvocationHandler</code>
+            with a single method call. This high level of compatibility with the platform helps to ensure that
+            proxy-based code does not become fragile in the face of refactoring or a change of implementation.</li>
+            <p/>
+            <li>Since <code>SoftProxy</code> uses 
+            <code><a href='/nonav/docs/multiproject/jen-core/apidocs/jen/SoftClass.html'>SoftClass</a></code> for proxy
+            generation, as well as allowing proxy classes to be defined directly at runtime it supports 
+            generation of a byte array corresponding to the proxy <code>.class</code>. This could be
+            serialized to a file, or across the network, or used as the basis for further transformation,
+            to provide improved performance and advanced customization for those really tricky problems.
+            </li>
+        </ul>
+  
+        <p>These advanced features, together with the platform compatibility and flexible ease of use of Jen's
+        <code>SoftProxy</code>, allow Jen to provide a simpler, more productive development turnaround for
+        proxy-based code. Consider the following short example, which demonstrates the technique of calling
+        custom code before and after an original method (what a certain ill-fated 'implementation paradigm' 
+        would term 'around advice'):</p>        
+
+        <source>import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+import com.mycompany.app.complex.RefurbulationDevice;
+import com.mycompany.app.complex.StaticRefurbulator;
+import com.mycompany.app.complex.StaticRefurbulationDevice;
+
+import static com.mycompany.coverage.InvocationCollector.markEnter;
+import static com.mycompany.coverage.InvocationCollector.markExit;
+
+import static jen.tools.SoftProxy.newProxyInstance;
+import static jen.tools.Toolbox.invokeSuper;
+
+public class Examples {
+  /* Our invocation handler simply calls some static methods to log the invocation.
+     A certain ill-fated design paradigm would term this example 'around advice'. */
+  static class MyInvocationHandler implements InvocationHandler { 
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+
+      markEnter(proxy,method,args);
+      Object ret = invokeSuper(proxy,method,args);
+      markExit(proxy,method,ret);
+      
+      return ret;
+    }
+  }
+
+  public static void main(String[] args) {
+    RefurbulationDevice ref = newProxyInstance(StaticRefurbulationDevice.class,new MyInvocationHandler());
+    StaticRefurbulator.refurbulate(ref);
+
+    InvocationCollector.report(System.out);
+  }
+}</source>
+
+      <p>As you can see from this code, <code>SoftProxy</code> is just as easy to use as other contemporary
+      proxy implementations, and provides considerably enhanced functionality together with a more 
+      convenient API (thanks largely to the new Java(tm) 5 language features).</p>  
+      </subsection>
+  
+      <subsection name="Mock implementations">
+        <p>Mock implementations (often referred to generally as <em>mock objects</em>) are another mainstay of
+        dynamic class generation, and are in fact (in Jen at least) a special case of the <em>dynamic proxies</em>
+        discussed above. At present Jen doesn't support the extended expectation-based invocation constraints 
+        supported by, for example, JMock, but the basic mock handler design allows such support to be added
+        easily in a future version (as is planned).</p>
+
+        <p>The <code>
+        <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/MockProxyHandler.html' target='_blank'>
+        MockProxyHandler</a></code> class provides the central mock facilties, and is implemented as an
+        <code>InvocationHandler</code> implementation allowing it to be used with any of the platform-compatible
+        mock implementations, Jen-based or otherwise. We must supply a list or array of <code>
+        <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/MockMethod.html' target='_blank'>
+        MockMethod</a></code> instances, which are used to dispatch calls to the mock object's methods.
+        </p>
+
+        <p>Once a mock handler is instantiated, it can be passed to an appropriate proxy class constructor.
+        The resulting proxy instance will examine the list of methods on each method invocation, and
+        dispatch the invocation to the first <code>MockMethod</code> that indicates it can handle the
+        call. Default <code>MockMethod</code> implementations are provided to test constraints on the
+        proxy instance, method name, invocation arguments, and return type before invoking, and custom
+        implementations can be easily inserted to customise behaviour of the invocation itself.</p>
+
+        <p><code>MockProxyHandler</code> also provides static helper methods that wrap up the process
+        of instantiating a handler and creating a proxy instance. The following code fragment demonstrates
+        simple mock usage:</p>
+        
+        <source>import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+import com.mycompany.app.complex.RefurbulationDevice;
+import com.mycompany.app.complex.StaticRefurbulator;
+
+import jen.tools.MockMethod;
+import jen.tools.StubMock;
+
+import org.roscopeco.bloxx.juno.Constraint;
+
+import static jen.tools.MockProxyHandler.*;
+import static org.roscopeco.bloxx.juno.Constraints.*;
+
+public class Examples02 {
+  public static void reportFailure(String err) {
+    System.err.println(" >>> ERROR - TEST FAILED: "+err);
+    throw(new RuntimeException(err));
+  }
+
+  public static void main(String[] args) {
+    RefurbulationDevice ref = newMockInstance(RefurbulationDevice.class, new MockMethod[] {
+
+        new StubMock("invokeReticuloBlob",new Constraint[] { isEqual("output"), and(not(isEqual(5)),notNull()) },
+            returnValue("57 Chevy")),
+
+        new StubMock("invokeReticuloBlob",new Constraint[] { isEqual("input") },
+            returnValue("62 Olds")),
+
+        new StubMock("invokeReticuloBlobX2",new Constraint[] { isEqual("output"), isNull() },
+            new InvocationHandler() { 
+              public Object invoke(Object proxy, Method m, Object[] args) {
+                reportFailure("FAILED - Cannot X2 with null spiroambulator!");
+              }
+            }
+    });
+
+    StaticRefurbulator.refurbulate(ref);
+  }
+}</source>
+
+        <p>Of course, all the extra features available to vanilla Jen proxies are also available
+        with the mock invocation handler, so the above example could just have easily been mocking
+        a concrete class as an interface. Plus, if you do mock concrete classes you can use
+        the <code>Toolbox.callSuper()</code> method to return a standard mock stub that will
+        pass the invocation to the proxied method.</p>
+      </subsection>
+
+      <subsection name="Toolbox">
+        <p>The <code>
+        <a href='/nonav/docs/multiproject/jen-tools/apidocs/jen/tools/Toolbox.html' target='_blank'>
+        Toolbox</a></code> class provides a variety of static helpers and utility methods that
+        automate many common tasks when using the tools library. It's methods include:</p>
+
+        <ul>
+          <li>Type descriptor / Type / Class conversion.</li>
+          <li>Primitive type / class conversion and boxing.</li>
+          <li>Methods / language signature / descriptor conversion.</li>
+          <li>Concrete proxy forward invocation (<code>invokeSuper</code>).</li>
+          <li>Standard stubs for <code>StubMock</code> - return, throw, call super.</li>
+        </ul>
+
+        <p>As with much of the Jen API, the <code>Toolbox</code> methods are intended to be used with
+        the J5 <code>import static</code> statement, though of course they can be imported and invoked
+        in the 'traditional' way if you prefer.</p>
+      </subsection>
+    </section>
+  </body>
+</document>

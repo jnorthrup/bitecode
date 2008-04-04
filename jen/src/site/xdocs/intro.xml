@@ -1,0 +1,84 @@
+<document>
+  <properties>
+    <author email="rosco@[nospam].roscopeco.co.uk">Ross Bamford</author>
+    <title>Introduction</title>
+  </properties>
+  <body>
+    <section name="Introduction to Jen">
+      <p>Jen is a high-level, lightweight, high-performance Java classworking and bytecode manipulation
+      library based on the powerful <a href='http://asm.objectweb.org/'>ASM</a> library, 
+      and was written with the aim of providing more pleasant, intuitive development experience than,
+      for example, <a href='http://cglib.sf.net/'>Cglib</a>, allowing common use cases to be a
+      matter of a few method calls, while retaining the complete control and flexibility that's so
+      often the reason to turn to generated classes in the first place. Instead of aiming for ease
+      of use by simplification, Jen instead aims to provide a richly layered API that provides 
+      sensible defaults for <em>"ninety percent of the options, ninety percent of the time"</em>.
+      Jen provides a very short and shallow learning curve for newcomers, and successfully 
+      translates that into a carefully-designed ergonomic providing sophisticated utility for
+      those with more experience inside the JVM.</p>
+
+      <p>In some respects the Jen core is similar to the 
+      <a href='http://www.csg.is.titech.ac.jp/~chiba/javassist/'>Javassist</a> in that it's API revolves
+      around the actual members of the class, although it goes far futher in attempting to make the 
+      generation transparent where possible, for example by dealing in Java names and <code>java.lang.Class</code>
+      instances rather than internal names and type handles. Additionally, Jen provides a far richer
+      set of standard implementations, though this is due mainly to Javassist's more pure focus 
+      on tooling.</p>
+
+      <subsection name="Project goals">
+
+        <p>Jen aims to deliver the following:</p>
+        
+        <ul>
+          <li><strong>Works the way you do</strong>. Rather than requiring knowledge of the bare internals
+          of the JVM, Creating and transforming classes with Jen involves manipulation of high-level objects 
+          representing <i>Members</i> - classes, methods, and fields. Standard implementations of these types
+          provide for a wide range of common needs - getters and setters, constant fields, null constructors,
+          and so on, so many tasks can be achieved by simply plugging in these standard members.
+          </li><p/>
+          
+          <li><strong><code>java.lang.Class</code>-based transformation API</strong>. In Jen, everything 
+          revolves around the <i>SoftClass</i>, which can be instantiated with a Java Class to work with
+          existing classes, using bytecode from a file or the network, or empty to create a new class.
+          </li><p/>
+          
+          <li><strong>Gain complete control</strong>. Rename classes, modify constant fields, add, remove and
+          replace methods and constructors, even copy methods between classes, wrap their invocations,
+          or dispatch them dynamically to a (platform-compatible) proxy invocation handler. Jen makes
+          it as easy as 1-2-3.
+          </li><p/>
+          
+          <li><strong>A powerful toolkit</strong>. Jen provides a complete classworking toolkit complete with
+          all the usual suspects, from proxies to mocks. All the standard tools are built around the same 
+          easy-to-use core, placing an amazing amount of power right at your fingertips.
+          </li><p/>
+          
+          <li><strong>Full support for Java 5 features</strong>. Jen fully supports generation of classes
+          targeted at any specification version up to and including J5 (and beyond), and includes designed
+          in support for new features such as annotations, generics, and autoboxing.
+          </li><p/>
+          
+          <li><strong>Transparent integration</strong>. The <code>SoftClass</code> API is implemented on top
+          of ASM alone, and provides support for generation and transformation directly to and from bytecode,
+          as well as functioning with standard ASM <code>org.objectweb.asm.ClassVisitor</code>s. Thus, when
+          the control offered by the high-level API isn't enough you can still leverage the automatic member
+          generation, naming and removal features of Jen as part of your custom visitor chain.
+          </li><p/>
+        </ul>
+      </subsection>
+      
+      <p>Jen is a lightweight, low dependency library, relying at runtime only on the ASM 2.1 core, commons, 
+      attrs and tree libraries, together with <a href='http://roscopeco.co.uk/bloxx/multiproject/juno' target='_blank'>
+      Bloxx Juno</a> constraints library if the Jen-Tools mock functionality is used. 
+      Thanks to ASM's lightweight, high performance design, and the careful implementation of Jen's
+      functionality atop it, the net result is a small, fast library that can slot in almost anywhere.</p>
+
+      <p>Please see the <a href='/multiproject/jen-core/apidocs/index.html'>core</a>, 
+      <a href='/multiproject/jen-members/apidocs/index.html'>members</a> and 
+      <a href='/multiproject/jen-tools/apidocs/index.html'>tools</a> Javadocs 
+      for more detailed usage information. A number of examples can be found on the
+      <a href='http://wiki.java.net/bin/view/Javatools/JenSoftClass'>Wiki</a>.</p>
+
+    </section>
+  </body>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <pomVersion>1</pomVersion>
+    <name>Jen Instrumentation Demo</name>
+    <groupId>agent-demo</groupId>
+    <currentVersion>1.0</currentVersion>
+    <organization>
+        <name>Roscopeco Open Technologies</name>
+        <url>http://roscopeco.co.uk/</url>
+        <logo>http://roscopeco.co.uk/images/rpot-tiny.png</logo>
+    </organization>
+    <inceptionYear>2005</inceptionYear>
+    <package>jen.demo.instrument</package>
+    <shortDescription>Jen with J5 Instrumentation (DEMO)</shortDescription>
+    <url>http://jen.dev.java.net/</url>
+    <repository>
+        <connection>scm:cvs:pserver:guest@cvs.dev.java.net:/cvs:jen/demos/instrumentation</connection>
+        <developerConnection>scm:cvs:pserver:[username]@cvs.dev.java.net:/cvs:jen/demos/instrumentation</developerConnection>
+    </repository>
+    <developers>
+        <developer>
+            <name>Ross Bamford</name>
+            <id>rosco</id>
+            <email>rosco@nospam.roscopeco.co.uk</email>
+            <organization>Roscopeco Open Tech.</organization>
+            <url>http://roscopeco.blogspot.com/</url>
+            <timezone>GMT</timezone>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>Apache Software License, 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-tree</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-attrs</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-commons</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>jen</groupId>
+            <artifactId>jen</artifactId>
+            <version>0.14</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>${basedir}/src/agent/java</sourceDirectory>
+    </build>
+    <artifactId>agent-demo</artifactId>
+    <version>1.0</version>
+</project>
+

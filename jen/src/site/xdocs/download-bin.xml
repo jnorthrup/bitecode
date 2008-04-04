@@ -1,0 +1,23 @@
+<document>
+  <properties>
+    <author email="rosco@[nospam].roscopeco.co.uk">Ross Bamford</author>
+    <title>Downloading a snapshot or release</title>
+  </properties>
+  <body>
+    <section name="Downloading a snapshot or release">
+
+      <p><strong>To download a snapshot or release archive, visit the <a href='http://jen.dev.java.net/servlets/ProjectDocumentList?folderID=4077&amp;expandFolder=4077&amp;folderID=0'>
+	distribution directory</a> and select the version you require. Both source and binary
+	snapshots are available in both tarball and zip formats.</strong></p>  
+            
+      <p>If you are a <a href='http://maven.apache.org/'>Maven</a> user you can 
+      automatically download the dependencies required by your build by placing an entry like the following
+      in your <code>project.properties</code> file:</p>
+      
+      <source>maven.repo.remote=http://www.ibiblio.org/maven/,https://maven-repository.dev.java.net/repository/</source>
+      
+      <p>See the <a href='faq.html'>FAQ</a> for more information.</p>
+    </section>
+    
+  </body>
+</document>

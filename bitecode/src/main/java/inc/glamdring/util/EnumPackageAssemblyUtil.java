@@ -2,7 +2,6 @@ package inc.glamdring.util;
 
 
 import inc.glamdring.bitecode.*;
-import static inc.glamdring.util.PackageAssembly.*;
 import javolution.util.*;
 
 import java.io.*;
@@ -65,7 +64,7 @@ public class EnumPackageAssemblyUtil {
     }
     public static String createEnumStructSourceFiles(final Class tableRecordClass) throws Exception {
 
-           Map<Class<? extends Enum>, Iterable<? extends Enum>> map = inc.glamdring.util.PackageAssembly.getEnumsStructsForPackage(tableRecordClass.getPackage());
+           Map<Class<? extends Enum>, Iterable<? extends Enum>> map = PackageAssembly.getEnumsStructsForPackage(tableRecordClass.getPackage());
            Set<Entry<Class<? extends Enum>, Iterable<? extends Enum>>> entries = map.entrySet();
 
            String display = "";
@@ -460,7 +459,7 @@ public class EnumPackageAssemblyUtil {
 
     public void testPackage(Package... p) throws Exception {
         String packageName = (p.length > 0 ? p[0] : getClass().getPackage()).getName();
-        for (Class<? extends Enum> aClass : getEnumsForPackage(getPackage(packageName))) {
+        for (Class<? extends Enum> aClass : PackageAssembly.getEnumsForPackage(getPackage(packageName))) {
 
             Field[] fields = aClass.getFields();
             String[] fn = new String[fields.length];

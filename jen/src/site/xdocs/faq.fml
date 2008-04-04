@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright 2005 Roscopeco Open Technologies & The Contributors
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<faqs title="Frequently Asked Questions">
+
+  <part id="general">
+    <title>General</title>
+   
+    <faq id="whats-jen">
+      <question>
+				What is this 'Jen' thing anyway?
+      </question>
+      <answer>
+      	<p>Jen is a very easy to use, high level class generation and bytecode manipulation
+      	library for the JVM.</p>
+      </answer>
+    </faq>
+
+    <faq id="like-cglib">
+      <question>
+				What, like Cglib?
+      </question>
+      <answer>
+      	<p>Jen shares many similarities with Cglib, such as it's foundation on the ASM bytecode
+      	manipulation library, and the common goal of providing a higher-level of abstraction.
+      	However, Cglib is written as an extra layer on top of ASM, and works as an enhanced part
+      	of that API. Although it does go on to provide some utilities on top of ASM, the 
+      	fact remains that one must still 'think binary' to generate classes with Cglib, and it's
+      	very pure visitor implementation and lack of documentation also make it difficult to
+      	get started with.</p>
+      	
+      	<p>Jen, on the other hand, aims for a higher level of abstraction than both ASM and Cglib,
+      	and attempts to bridge the gap between the class as a stream of bytes, and the class as an
+      	entity in the Java programming language. Jen was designed from the ground up to permit
+      	the full power of ASM and generated code to be brought to bear while retaining a source-centric
+      	(generate this class, remove this method, add these fields) design paradigm.</p>
+      </answer>
+    </faq>
+
+    <faq id="why-need">
+      <question>
+        Oh, okay. So what do I want with it?
+      </question>
+      <answer>
+        <p>Bytecode manipulation can provide an elegant, high-performance solution to many 
+        problems that otherwise require techniques like Java Reflection, which carry 
+        performance penalties. Additionally, runtime class generation provides exciting
+        possibilities in sectors ranging from JVM-based scripting and unit testing to 
+        remote method invocation and complex value-based method dispatch. Unfortunately,
+        however, the percieved complexity of the JVM as a whole and <code>.class</code> files
+        in particular has traditionally created an artificial barrier for those who would generate
+        classes, and the available toolkits, while excellent in their function, are 
+        generally quite low-level and require extensive knowledge of the internals of
+        the virtual machine, and the general operation of so-called 'p-system' stack machines.</p>
+        
+        <p>If you've ever hit one of those situations where you just <i>knew</i> that the
+        problem in hand was crying out for generated code, but couldn't face the learning curve
+        involved, then Jen is for you. Jen makes easy all those tasks that <i>should be</i> 
+        but aren't, due to the vast differences between the Java language and it's actual binary
+        representation. By wrapping up bytecode generation inside a class-member-centric API, and
+        providing hooks back to the underlying ASM visitors when required, Jen allows you to easily 
+        manipulate classes in terms of their nested classes, methods , while retaining the flexibility to manually generate certain members 
+        according to your need.</p>
+        
+        <p>On top of the ability to generate and transform classes with ease, Jen provides the
+        entirely optional <em>Jen Tools</em> library, which provides Jen-based implementations
+        of the now-standard bytecode generation tools. This library can be used to gain easy access
+        to flexible, easy to use features like proxy class generation and mock implementation,
+        and makes full use of Jen's advanced design to provide many extra features and conveniences
+        that just aren't available with existing toolkits.</p>
+      </answer>
+    </faq>
+
+		<faq id="cglib-bcel-user">
+		  <question>
+		    I'm already familiar with ASM / Cglib / BCEL / etc - Should I bother with Jen?
+		  </question>
+		  
+		  <answer>
+		    <p>If you use ASM, you'll probably find Jen a valuable addition to your 
+		    programming toolkit thanks to it's implementation as a wrapper around the
+		    functionality provided by that library. Underneath the convenient layout
+		    of the <code>SoftClass</code> api, everything in Jen is done with familar
+		    ASM visitor and adapter implementations, basically allowing you to achieve
+		    your goals with less boilerplate code.</p>
+		    
+		    <p>The answer isn't so clear cut if you use a different library. Cglib is 
+		    of course based on ASM nowadays, but version inconsistencies are likely to
+		    cause problems for the time being (though you may be able to circumvent this
+		    in a limited way with the 'full' Cglib jar). BCEL users will find Jen quite
+		    different to what they're used to, and could well benefit from switching, 
+		    but making the two work together is likely to be a fruitless and thankless
+		    task.</p>
+		    
+		    <p>If you're a user of the Javassist library, and you're comfortable and happy
+		    with it, then there's probably little benefit to switching. In many ways Jen
+		    is quite similar to Javassist, though that library is slightly more low-level in
+		    it's implementation. This does however become less true the closer you come to
+		    cases covered by the standard <code>SoftMember</code> implementations, though
+		    it's likely that any experienced Javassist user will have a collection of 
+		    standard pieces in one form or another.</p>		    		      
+		  </answer>
+		</faq>    
+
+    <faq id="where-download">
+      <question>
+        Where can I download Jen?
+      </question>
+      <answer>
+        <p>See the distribution directory at 
+			  <a href='http://jen.dev.java.net/servlets/ProjectDocumentList?folderID=4077&amp;expandFolder=4077&amp;folderID=0'>
+			  Java.net</a>.</p>
+
+        <p>We also publish our artifacts in the <a href='http://maven-repository.dev.java.net/repository'>
+			  Java.net Maven Repository</a>. If you are a <a href='http://maven.apache.org/'>Maven</a> user you can 
+			  automatically download the dependencies required by your build by placing an entry like the following
+			  in your <code>project.properties</code> file:</p>
+			  
+			  <source>maven.repo.remote=http://www.ibiblio.org/maven/,https://maven-repository.dev.java.net/repository/</source>
+			  
+			  <p><strong>Note</strong> that, owing to https redirection issues, it's important you don't miss off the 
+			  trailing '/' on the java.net URL.</p>
+			  
+			  <p>You may find that Maven issues warnings about the last-modified time - this does not affect builds
+			  unless you're using SNAPSHOT versions, in which case they will always be downloaded whether changed or
+			  not.</p>
+      </answer>
+    </faq>
+
+    <faq id="where-cvs">
+      <question>
+        Where can I CVS-Checkout the source for Jen?
+      </question>
+      <answer>
+        <p>You can grab any version (or just the latest) of the Jen source from the
+        Java.net CVS repository. See <a href='cvs-usage.html'>CVS Usage</a> for more
+        information.</p>
+        
+        <p>Additionally, you can browse the CVS repository via the web at our 
+        <a href='http://jen.dev.java.net'>project homepage</a> on <a href='http://www.java.net/'>java.net</a>:
+			  <a href='http://jen.dev.java.net/source/browse/jen/'>http://jen.dev.java.net/source/browse/jen/</a>.</p>
+      </answer>
+    </faq>
+
+    <faq id="deps">
+      <question>
+        What jars do I need?
+      </question>
+      <answer>
+        <p>Jen is a low-dependency library, and requires only the <a href='http://asm.objectweb.org/'>ASM</a> 
+        libraries, plus the
+        <a href='http://juno.dev.java.net/'>Juno</a> constraints library if
+        using the <code>MockProxyHandler</code> or building from source (in which case you'll also need
+        <a href='http://junit.org/'>Junit</a> for the unit-tests).</p>
+        
+        <p>You can find a list of the exact jars and versions, together with links, on the 
+        <a href='dependencies.html'>dependencies page</a>.</p>        
+      </answer>
+    </faq>
+    
+    <faq id="what-about-tools">
+      <question>
+        What about the tools library? Where is that documented?
+      </question>
+      <answer>
+        <p>The tools library is a large enough topic that combining it's documentation with the core 
+        documentation would only serve to confuse both. See the 
+        <a href='/tools.html'>Tools Overview</a> for more information and links.</p>
+        
+        <p>You will also find more user-focused documentation and examples for using the tools
+        on the Wiki: 
+ 				<a href='http://wiki.java.net/bin/view/Javatools/JenSoftClass'>http://wiki.java.net/bin/view/Javatools/JenSoftClass</a>.</p>
+      </answer>
+    </faq>
+    
+    <faq id="where-more">
+      <question>
+        Where can I get more information?
+      </question>
+      <answer>
+        <p>As well as the Jen homepage at <a href='http://jen.dev.java.net/'>
+				http://jen.dev.java.net</a>, you can find (and even help with!) the 
+				most up-to-the-minute Jen documentation on our Wiki at
+ 				<a href='http://wiki.java.net/bin/view/Javatools/JenSoftClass'>http://wiki.java.net/bin/view/Javatools/JenSoftClass</a>.</p>
+      </answer>
+    </faq>
+  </part> 
+
+  <part id="usage">
+		<title>General Usage</title>
+    <faq id="new-classes">
+      <question>
+        Can I create new classes with Jen?
+      </question>
+      <answer>
+        <p>You most certainly can, and in fact this is really <em>all</em> you
+        can do with Jen - starting with an existing class simply gives you a 
+        generator that will (if called upon to do so with no modification) generate 
+        bytes in the <code>.class</code> file format that would represent that
+        class. So regardless of how you 'seed' the generator (with an existing 
+        <code>Class</code>, bytes from a <code>.class</code> file, or not at all)
+        the techniques you then use to modify the class remain the same.
+        </p>
+        
+        <p>The following code creates a very simple JavaBean:</p>        
+
+        <source>SoftClass sc = new SoftClass(Opcodes.ACC_PUBLIC,"com.mycompany.MyNewClass");    
+// We need a constructor. It'll just call through to &lt;init&gt;() on the super
+sc.putSoftMethod(new SimpleNullConstructor(sc));
+sc.putSoftField(new GeneratedSoftField(sc,"beanProp",String.class));
+sc.putSoftMethod(new BeanPropertyGetter(sc,"beanProp",String.class));
+sc.putSoftMethod(new BeanPropertySetter(sc,"beanProp",String.class));
+
+Class newClazz = sc.defineClass();
+Object o = newClazz.newInstance();</source>    
+
+      <p>The generated bean would have a single property with public accessor
+      methods, backed by a package-private String field.</p>
+      </answer>
+    </faq>		
+    
+    <faq id="existing-classes">
+      <question>
+        Can I modify existing classes with Jen?
+      </question>
+      <answer>
+        <p>Yes, although there is an important caveat to that, which is that you're unlikely
+        to be able to modify an existing class at runtime, and then replace the
+        original definition of that class with the new one right there in your
+        program. Jen's <code>SoftClass</code> doesn't aim to affect the way classes 
+        <em>look</em>, but rather the actual structure of the classes themselves. 
+        The <a href='/tools.html'>optional tools library</a> provides solutions
+        based upon that to support various partial workarounds, including <em>dynamic
+        proxies</em>.
+        </p>
+        
+        <p>A good way to remember what can and can't be done is to consider <code>SoftClass</code>
+        as a class <em>generator</em> that you happen to be able to populate with an image of
+        any existing class if you wish, but remember that, once the image is taken, the 
+        <code>SoftClass</code> keeps no reference to the original Class beyond the fact
+        that they share a name (to begin with).</p>
+      </answer>
+    </faq>		
+    
+    <faq id="class-files">
+      <question>
+        Can I work with <code>.class</code> files with Jen?
+      </question>
+      <answer>
+        <p>Absolutely. The ability to work with <code>java.lang.Class</code>es and define
+        classes at runtime is really utility wrapping around the (bytecode-to-)bytecode 
+        functionality offered by <code>SoftClass</code>.</p>
+        
+        <p>The following short program permenently adds a null constructor to a class,
+        both loading from and writing back to a file.</p>
+    		<source>public static void main(String[] args) throws Exception {
+  ClassReader rdr = new ClassReader(
+      new FileInputStream(
+          new File("target/classes/jen/tests/DemoClass.class")));
+    
+  SoftClass sc = new SoftClass(rdr);
+  sc.putSoftMethod(new SimpleNullConstructor(sc,"Constructor Arg"));    
+    
+  byte[] b = sc.generateBytecode();
+  FileOutputStream fos = new FileOutputStream(
+      new File("target/classes/jen/tests/DemoClass.class"));
+  fos.write(b);
+  fos.close();
+}</source>   
+
+      <p>Of course there would be no need to have the class available to the current 
+      JVM, and no need to ever define it, though if you wanted to you could simply 
+      call <code>defineClass()</code> either before or after writing the file.</p> 
+      </answer>     
+    </faq>      
+    
+    <faq id="illegal-state">
+      <question>
+        Why do I get <code>IllegalStateException</code>s when modifying SoftClasses?
+      </question>
+      <answer>
+      <p>Once bytecode is generated by a given SoftClass, it becomes <em>frozen</em>,
+      such that it (and any well behaved members defined on it) will disallow any
+      modification. This is more a safety feature than any internal limitation,
+      to allow a modicum of certainty that the byte array you generated matches the
+      SoftClass it came from, and can be overriden by calling one of the <code>thaw</code>
+      methods on the SoftClass instance. If you attempt to modify the properties of
+      a frozen SoftClass, or any of it's members, you'll get an <code>IllegalStateException</code>.</p>
+      
+      <p>When <code>generateBytecode</code> is called on a frozen SoftClass instance,
+      either directly or as a result of a call to <code>generateNode</code> or 
+      <code>defineClass</code>, the bytecode returned will actually come from a cache
+      maintained internally by that instance, since there <em>should</em> be no need
+      to regenerate the class.</p>
+      
+      <p>A well-behaved <code>SoftMember</code> implementation should <em>always</em> 
+      check that the associated SoftClass isn't frozen before allowing modification to
+      any custom properties. Failure to do so won't exactly break anything, but it will
+      lead to inconsistent bytecode being output (since your modification will be on the 
+      SoftClass but not on the bytecode in the cache), and could result in
+      <code>InconsistentSoftClassException</code> exceptions being thrown at indeterminate
+      times. Any implementations that extend <code>AbstractSoftMember</code> get this
+      safety almost for free - they need only call one of <code>canModify</code> of
+      <code>checkModify</code> before allowing modifications and they are assured of it.</p>      
+      </answer>
+    </faq>		    
+  </part> 
+
+  <part id="adv-troubleshoot">
+		<title>Implementation, design and concepts</title>
+    <faq id="how-works">
+      <question>
+        How does it work?
+      </question>
+      <answer>
+        <p>The heart of Jen is the <code>jen.SoftClass</code> class, which provides an easy-to-use,
+        class-centric API for modification and generation of new and existing Java classes.</p>
+        
+        <p>A very simple example might be:</p>
+        
+        <source>SoftClass c = new SoftClass(jen.SomeClass.class);
+c.setName("jen.SomeNewClass");
+c.addInterface(jen.SomeInterface.class.getName());
+c.putSoftMethod(new NullConstructor("argument for actual constructor"));
+Class someNewClass = c.defineClass();</source>
+
+      <p>Basically what happens here is that <code>SoftClass</code> goes off and tracks down
+      the original bytecode for <code>jen.SomeClass</code>. This is used to build up an in-memory
+      representation of the class, including creating <code>ASMSoftXXXX</code> instances for 
+      any existing members.</p>
+      
+      <p>The methods of <code>SoftClass</code> then allow this model to be manipulated in a 
+      controlled way, in this example adding a new interface and method (a null constructor).
+      The name is also changed to allow us to define the class in the same loader as the original
+      class.</p>
+      
+      <p>Finally the class is generated (directly to the current thread's context loader using
+      the no-arg overload of <code>defineClass</code>). <code>SoftClass</code> uses it's own
+      ASM-compatible visitor API to generate the bytecode, visiting each <code>SoftMember</code>
+      in turn to allow it to do it's stuff. Once that's done the class is simply defined by 
+      reflectively invoking the protected <code>defineClass</code> on a given classloader.</p>
+      
+      <p>The important point to note is that, in this example, <em>the generated class is <strong>not</strong>
+      assignable to, or in any way related to, the original class (other than happening to share
+      the same package)</em>. While it will declare everything declared by the original class, in all
+      cases these will be totally separate from the equivalent members on that class. If you <em>do</em>
+      require the generated class be assignable to the original you will probably want to generate
+      a <em>subclass</em> from scratch, changing behaviour only as required.</p>
+      
+			<p>There is of course far more to it that that, and for details of the actual <i>how</i> please see
+			the <a href='http://wiki.java.net/bin/view/Javatools/JenSoftClass'>Wiki</a>.</p>
+      </answer>
+    </faq>
+    
+		<faq id="slower-heavier">
+		  <question>
+		    Are generated classes larger than compiled ones? Do generated methods run slower than regular ones?
+		  </question>
+		  
+		  <answer>
+		    <p>The answer on both counts is 'no'. There is no fundamental difference between the bytes
+		    that come out of Jen and those from any other source, including <code>javac</code>.
+		    It <em>is</em> of course possible to <em>make</em> generated classes both larger and slower
+		    than compiled ones, since the onus is now on you to produce optimized (or optimizable - see
+		    'Hand optimized bytecode' on the wiki) code, but in general there is no automatic hit with 
+		    generated classes as there is with, say, reflection.</p>	
+		  </answer>
+		</faq>
+		
+		<faq id="runtime-requirements">
+		  <question>
+		    Do classes created with Jen have any runtime requirements?
+		  </question>
+		  
+		  <answer>
+		    <p>Beyond something to load, link and run them with (a JVM works well for this ;)),
+		    your generated classes will need exactly what you make them need, and no more.
+		    There is no mandatory runtime class or package in Jen, though there are possible
+		    plans to implement a number of standard members via an <strong>optional</strong> runtime API.</p>	
+		  </answer>
+		</faq>
+		
+		<faq id="replace-reflection">
+		  <question>
+		    Can I use Jen instead of Reflection to access members of a class?
+		  </question>
+		  
+		  <answer>
+		    <p>Well, if you mean 'is <code>jen.SoftClass</code> a viable alternative to <code>java.lang.Class</code>
+		    for getting information about a class at runtime', then the answer is probably not. Although informal
+		    performance testing with the 0.22 snapshot (which introduced a number of optimizations in the core
+		    <code>SoftClass</code> implementation) suggests that <code>getSoftMethod</code> and the other accessors
+		    on <code>SoftClass</code> are on average about twice as fast as the equivalent <code>Class</code> methods,
+		    the lack of any direct connection between a <code>SoftClass</code> and any instances of the class which
+		    it represents mean that the scope for it's usage is far more limited (e.g. to situations where you
+		    simply wish to extract information about number of fields or the return-type of a specific method).</p>	
+		    
+		    <p>If, on the other hand you mean 'Can I use Jen as part of a wider strategy to avoid using
+		    Reflection in my software', then you'll be happy to know that you can. All the good stuff
+		    you can do with libraries like Cglib, and ASM itself, you can also do with Jen, but
+		    of course it's often much easier to achieve what you need with a <code>SoftClass</code>.</p>
+		  </answer>
+		</faq>
+		
+		<faq id="mobile-use">
+		  <question>
+		    Is Jen suitable for use in embedded / mobile environments?
+		  </question>
+		  
+		  <answer>
+		    <p>This is another question that could be taken in two ways. If you mean actually 
+		    using Jen on, say, your mobile phone, then probably not, and for a number of reasons.
+		    First, the memory footprint for a <code>SoftClass</code> instance of reasonable complexity
+		    is fairly large when created from an existing class (Ranging from approximately 28k for a 
+		    'Hello World' class with one (static) method to 350-400k for java.lang.String, and beyond 
+		    as more, and more complex, methods enter the equation).</p>
+		    
+		    <p>Second, and more important in many cases, are the limitations imposed on
+		    basic operations vital to Jen (such as reading from files, defining new classes,
+		    and so on), from both engineering and security standpoints. Although you could
+		    probably create a class from scratch you'd likely be entirely unable to do
+		    anything with it.</p>
+		    
+		    <p>If, however, you mean can generated classes be used in such environments,
+		    then the answer is yes, providing the spec for that environment doesn't require
+		    any structural difference in the <code>.class</code> format. You'll want to ensure
+		    of course that you generate the appropriate class format version, and conform to
+		    any extra verification or linkage rules imposed by the specification you're targeting, but
+		    in general there should be no major barriers between the platforms.</p>	
+		  </answer>
+		</faq>		    
+  </part> 
+</faqs>

@@ -1,0 +1,24 @@
+<document>
+  <properties>
+    <author email="rosco@[nospam].roscopeco.co.uk">Ross Bamford</author>
+    <title>Downloading Jen</title>
+  </properties>
+  <body>
+    <section name="Downloading Jen">
+      <p>You can download both <strong>source</strong> and <strong>binary</strong>
+      snapshots from the release distribution directory at
+      <a href='http://jen.dev.java.net/servlets/ProjectDocumentList?folderID=4077&amp;expandFolder=4077&amp;folderID=0' target='_blank'>
+      our Java.net homepage</a>. Developers (and anyone else
+      with access to <code>CVS</code> binary) can also check out the <strong>source</strong>
+      for any particular release, or the latest development version, directly
+      from the Roscopeco Open Technologies CVS repository.</p>
+      
+      <p>Please choose from the following: <br />
+      <ul>
+        <li><a href="download-bin.html">Downloading a snapshot or release archive</a></li>
+        <li><a href="cvs-usage.html">Obtaining source via CVS</a></li>
+      </ul></p>
+    </section>
+    
+  </body>
+</document>

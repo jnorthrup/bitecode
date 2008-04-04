@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<document>
+  <properties>
+    <author email="rosco@[nospam]-roscopeco.co.uk">Ross Bamford</author>
+    <title>Language-centric bytecode generation</title>
+  </properties>
+  <head>
+    <meta name="description" content="Jen is a high-level bytecode transformation and generation library with an API based on classes, methods and fields."/>
+    <meta name="keywords" content="byte,code,generation,java,class,asm,cglib,bcel,engineering,transformation,instrumentation,unit,test,jvm"/>
+  </head>
+  <body>
+    <section name="Language-centric bytecode generation">
+
+      <p><strong>Jen</strong> is a fast, lightweight, and easy to use Java(tm) classworking and bytecode manipulation
+      library that provides a small (under 40k) language-centric core API permitting easy modification
+      of existing Java classes, generation of completely new ones from scratch or to spec, and supporting many 
+      advanced capabilities such as platform-compatible and custom-strategy proxies, dynamic 
+      constraints-based implementations (often referred to as <em>mocks</em>), and a complete runtime
+      classworking toolkit.</p>
+
+      <p>Please see the <a href='intro.html'>Introduction</a> for more information.</p>
+
+    </section>
+
+    <section name="Latest news">      
+      <script language="JavaScript" src="http://jade.mcli.dist.maricopa.edu/feed/feed2js.php?src=http%3A%2F%2Fjen.dev.java.net%2Fservlets%2FProjectNewsRSS&amp;num=5&amp;desc=250&amp;targ=y" type="text/javascript"/>
+      <noscript>
+        <ul>
+          Your browser does not support (or has disabled) Javascript support. You have the option to
+          <a href="https://jen.dev.java.net/servlets/ProjectNewsList" target="_blank">View latest news</a> (new window) or
+          <a href="http://jade.mcli.dist.maricopa.edu/feed/feed2js.php?src=http%3A%2F%2Fjen.dev.java.net%2Fservlets%2FProjectNewsRSS&amp;num=5&amp;desc=250&amp;targ=y&amp;html=y">View as RSS</a>.
+        </ul>
+      </noscript>
+    </section>
+
+    <section name="Download">
+      <p>Jen can be downloaded from:</p>
+
+      <ul>
+        <li><a href='http://jen.dev.java.net/servlets/ProjectDocumentList?folderID=4077&amp;expandFolder=4077&amp;folderID=0'>Milestone &amp; Release archives</a></li>
+        <li><code>cvs -d:pserver:guest@cvs.dev.java.net:/cvs co jen/main</code></li>
+      </ul>
+
+      <p>Please see the <a href='download.html'>Download</a> and <a href='cvs-usage.html'>CVS Usage</a>
+      pages for more information.</p>
+    </section>
+
+    <section name="Project information">
+
+      <p>Jen is licenced under the usual Roscopeco Open Source licence,
+      namely the Apache Software Licence, version 2.0. The full licence terms are
+      included <a href="license.html">here</a>.</p>
+
+      <p>Hosting, collaboration and development services are provided by
+        <a href="http://www.java.net">Java.net</a>.
+      </p>
+
+      <p align="center">
+        <a href="http://www.opensource.org" title="OpenSource Initiative approved OSS license" id="osiApproved"><img height="50" width="60" alt="" src="http://opensource.org/trademarks/osi-certified/web/transparent/osi-certified-60x50-t.png"/></a>
+        <a href="http://www.java.net" title="Java.net member project" id="javaNet"><img alt="Java.net member project" src="images/javanet_button_90.gif"/></a>
+      </p>
+    </section>
+
+  </body>
+</document>

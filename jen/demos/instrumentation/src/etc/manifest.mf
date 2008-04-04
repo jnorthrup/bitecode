@@ -1,0 +1,2 @@
+Premain-Class: jen.demo.instrument.SoftClassAgent
+Can-Redefine-Classes: true
