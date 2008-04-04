@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projectDescription>
+  <name>jen</name>
+  <comment>Jen is a very-high-level Java class generation API, built on top of ASM and Cglib. Jen provides a small, easy to use API covering common use-cases, while working with and giving access to the underlying APIs to allow total flexibility and control when required.</comment>
+  <projects>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+      <arguments>
+      </arguments>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

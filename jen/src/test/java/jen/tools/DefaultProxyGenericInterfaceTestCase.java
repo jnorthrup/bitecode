@@ -21,12 +21,15 @@
 
 package jen.tools;
 
-import junit.framework.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.TestCase;
+
 import static org.roscopeco.juno.Constraints.*;
 import static org.roscopeco.juno.converters.JUnitSupport.*;
-
-import java.lang.reflect.*;
-import java.util.*;
 
 public class DefaultProxyGenericInterfaceTestCase extends TestCase
 {
@@ -86,7 +89,7 @@ public class DefaultProxyGenericInterfaceTestCase extends TestCase
   
   public void testDefaultProxyWithGenericInterfaceDoesntCauseAbstractMethodErrorsOrThrowCheckCasts() {  
     @SuppressWarnings("unchecked")    
-    MyInter<String> mi = SoftProxy.newProxyInstance((Class<MyInter >)MyInter.class, myInterHandler);
+    MyInter<String> mi = SoftProxy.newProxyInstance((Class<MyInter<String>>)MyInter.class, myInterHandler);
     
     mi.setTheT("This is the t");
     assertThat(mi.returnOneT(),isEqual("This is the t"));    
@@ -110,7 +113,7 @@ public class DefaultProxyGenericInterfaceTestCase extends TestCase
   
   public void testDefaultProxyWithGenericInterfaceFailsCleanlyOnBadType() {  
     @SuppressWarnings("unchecked")    
-    MyInter<String> mi = SoftProxy.newProxyInstance(MyInter.class, new InvocationHandler() {
+    MyInter<String> mi = SoftProxy.newProxyInstance((Class<MyInter<String>>)MyInter.class, new InvocationHandler() {
       private Object t;
       
       public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {

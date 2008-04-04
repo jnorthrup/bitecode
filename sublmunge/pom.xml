@@ -27,16 +27,15 @@
 			<version>1.7.0</version>
 		</dependency>
 		<dependency>
-			<groupId>inc.glamdring</groupId>
+			<groupId>jen.java.net</groupId>
 			<artifactId>jen</artifactId>
-			<version>2.something</version>
+			<version>0.30</version>
 		</dependency>
 		<dependency>
 			<groupId>cyc</groupId>
 			<artifactId>phase2</artifactId>
 			<version>1</version>
 		</dependency>
-
 	</dependencies>
 
 </project>

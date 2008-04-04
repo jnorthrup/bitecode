@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="core/src/main/java"/>
+	<classpathentry kind="src" path="core/src/test/java"/>
+	<classpathentry kind="src" path="members/src/main/java"/>
+	<classpathentry kind="src" path="members/src/test/java"/>
+	<classpathentry kind="src" path="tools/src/main/java"/>
+	<classpathentry kind="src" path="tools/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="MAVEN_REPO/junit/jars/junit-3.8.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/juno/jars/juno-0.50.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/asm/jars/asm-2.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/asm/jars/asm-commons-2.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/asm/jars/asm-attrs-2.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/asm/jars/asm-tree-2.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/ant/jars/ant-1.6.2.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

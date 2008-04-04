@@ -1,78 +1,103 @@
-<?xml version="1.0"?>
-<project>
-	<parent>
-		<artifactId>bitecode-parent</artifactId>
-		<groupId>inc.glamdring</groupId>
-		<version>1.1</version>
-	</parent>
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>inc.glamdring</groupId>
-	<artifactId>jen</artifactId>
-	<name>A custom Jini service project</name>
-	<version>2.something</version>
-	<url>http://www.myorganization.org</url>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.jini.maven-jini-plugin</groupId>
-				<artifactId>maven-jini-plugin</artifactId>
-				<configuration>
-					<securityPolicy>service.policy</securityPolicy>
-					<securityDebug>true</securityDebug>
-					<serviceDebug>false</serviceDebug>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-	<dependencies>
-		<dependency>
-			<groupId>net.jini</groupId>
-			<artifactId>jsk-lib</artifactId>
-			<version>2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>net.jini</groupId>
-			<artifactId>jsk-platform</artifactId>
-			<version>2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>net.jini</groupId>
-			<artifactId>jsk-resources</artifactId>
-			<version>2.1</version>
-		</dependency><!--
-		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm</artifactId>
-			<version>3.1</version>
-		</dependency>-->
-		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm-all</artifactId>
-			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.ant</groupId>
-			<artifactId>ant</artifactId>
-			<version>1.7.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.japex.jdsl</groupId>
-			<artifactId>jdsl</artifactId>
-			<version>1.0.25</version>
-		</dependency>
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-			<version>2.1_3</version>
-		</dependency>
-		<dependency 	>
-			<groupId >juno</groupId>
-			<artifactId>juno</artifactId>
-			<version>0.50</version>
-			<scope>system</scope>
-			          <systemPath>
-			     m:\work\juno/repo/jars/juno-0.50.jar
-			</systemPath>
-			</dependency>
-	</dependencies>
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jen</groupId>
+  <artifactId>jen</artifactId>
+  <name>Jen</name>
+  <version>0.30</version>
+  <description>Jen is a very-high-level Java class generation API, built on top of ASM and Cglib. Jen provides a small, easy to use API covering common use-cases, while working with and giving access to the underlying APIs to allow total flexibility and control when required.</description>
+  <url>http://jen.dev.java.net/</url>
+  <issueManagement>
+    <url>http://jen.dev.java.net/servlets/ProjectIssues</url>
+  </issueManagement>
+  <inceptionYear>2005</inceptionYear>
+  <mailingLists>
+    <mailingList>
+      <name>Announcements List</name>
+      <subscribe>announce-subscribe@jen.dev.java.net</subscribe>
+      <unsubscribe>announce-unsubscribe@jen.dev.java.net</unsubscribe>
+      <archive>http://jen.dev.java.net/servlets/SummarizeList?listName=announce</archive>
+    </mailingList>
+    <mailingList>
+      <name>User discussion / help list</name>
+      <subscribe>users-subscribe@jen.dev.java.net</subscribe>
+      <unsubscribe>users-unsubscribe@jen.dev.java.net</unsubscribe>
+      <archive>http://jen.dev.java.net/servlets/SummarizeList?listName=users</archive>
+    </mailingList>
+    <mailingList>
+      <name>Issue Tracking List</name>
+      <subscribe>issues-subscribe@jen.dev.java.net</subscribe>
+      <unsubscribe>issues-unsubscribe@jen.dev.java.net</unsubscribe>
+      <archive>http://jen.dev.java.net/servlets/SummarizeList?listName=issues</archive>
+    </mailingList>
+    <mailingList>
+      <name>Developer discussion list</name>
+      <subscribe>dev-subscribe@jen.dev.java.net</subscribe>
+      <unsubscribe>dev-unsubscribe@jen.dev.java.net</unsubscribe>
+      <archive>http://jen.dev.java.net/servlets/SummarizeList?listName=dev</archive>
+    </mailingList>
+    <mailingList>
+      <name>CVS commit list</name>
+      <subscribe>cvs-subscribe@jen.dev.java.net</subscribe>
+      <unsubscribe>cvs-unsubscribe@jen.dev.java.net</unsubscribe>
+      <archive>http://jen.dev.java.net/servlets/SummarizeList?listName=cvs</archive>
+    </mailingList>
+  </mailingLists>
+  <developers>
+    <developer>
+      <id>roscopeco</id>
+      <name>Ross Bamford</name>
+      <email>rosco@roscopeco.co.uk</email>
+      <url>http://roscopeco.blogspot.com/</url>
+      <organization>Roscopeco Open Tech</organization>
+    </developer>
+    <developer>
+      <id>imageunion</id>
+      <name>William Lee</name>
+      <email>william@imageunion.com</email>
+      <url>www.imageunion.com</url>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>John McPeek</name>
+      <email>not@disclosed</email>
+    </contributor>
+  </contributors>
+  <licenses>
+    <license>
+      <name>Apache Software License, 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:cvs:pserver:guest@cvs.dev.java.net:/cvs:jen/main</connection>
+    <developerConnection>scm:cvs:pserver:[username]@cvs.dev.java.net:/cvs:jen/main</developerConnection>
+    <url>http://jen.dev.java.net/source/browse/jen/</url>
+  </scm>
+  <organization>
+    <name>Roscopeco Open Technologies</name>
+    <url>http://roscopeco.co.uk/</url>
+  </organization>
+  <dependencies>
+    <dependency>
+      <groupId>asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>asm</groupId>
+      <artifactId>asm-commons</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>asm</groupId>
+      <artifactId>asm-attrs</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>asm</groupId>
+      <artifactId>asm-tree</artifactId>
+      <version>2.1</version>
+    </dependency>
+  </dependencies>
 </project>

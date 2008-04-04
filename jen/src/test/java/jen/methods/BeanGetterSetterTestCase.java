@@ -57,7 +57,7 @@ public class BeanGetterSetterTestCase extends JunoTestCase
     sc.putSoftMethod(new BeanPropertySetter(sc,"beanProp",String.class));
     
     // Visit it manually for a change (no need for this really...)
-    ClassWriter writer = new ClassWriter(-1);
+    ClassWriter writer = new ClassWriter(true);
     sc.accept(writer);
     
     Class<?> newBeanClass = SoftUtils.defineClass(Thread.currentThread().getContextClassLoader(),writer.toByteArray());

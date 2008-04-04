@@ -21,11 +21,15 @@
 
 package jen;
 
-import junit.framework.*;
-import org.objectweb.asm.*;
-import org.objectweb.asm.tree.*;
+import java.util.ArrayList;
 
-import java.util.*;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.Opcodes;
+import org.objectweb.asm.Type;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.MethodNode;
+
+import junit.framework.TestCase;
 
 // THIS ALSO TESTS MOST OF ABSTRACTSOFTMETHOD
 public class ASMSoftMethodTestCase extends TestCase
@@ -39,7 +43,7 @@ public class ASMSoftMethodTestCase extends TestCase
   public ASMSoftMethodTestCase() throws Exception {
     ClassReader rdr = new ClassReader(SimpleDummy.class.getName());
     ClassNode n = new ClassNode();
-    rdr.accept(n,-1);
+    rdr.accept(n,false);
     void_method = (MethodNode)n.methods.get(4);
     throws_method = (MethodNode)n.methods.get(5);
     args_method = (MethodNode)n.methods.get(6);

@@ -55,7 +55,7 @@ public class SoftClassFreezeThawTestCase extends TestCase
     }
     
     
-    ClassVisitor v = new ClassWriter(-1);
+    ClassVisitor v = new ClassWriter(true);
 
     // can still visit?
     c.accept(v);    

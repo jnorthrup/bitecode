@@ -51,7 +51,7 @@ public class ASMSoftFieldTestCase extends JunoTestCase
     }
     
     ClassNode n = new ClassNode();
-    rdr.accept(n,-1);
+    rdr.accept(n,false);
     private_field = (FieldNode)n.fields.get(0);
     primitive_field = (FieldNode)n.fields.get(1);
   }

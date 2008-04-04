@@ -22,12 +22,15 @@
 package jen.tools;
 
 
-import static jen.SoftUtils.*;
-import org.roscopeco.juno.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.util.List;
 
-import java.lang.reflect.*;
-import static java.util.Arrays.*;
-import java.util.*;
+import org.roscopeco.juno.Constraint;
+
+import static java.util.Arrays.asList;
+
+import static jen.SoftUtils.nullSafeArg;
 
 /** 
  * {@link MockMethod} implementation that applies constraint-based invocation
@@ -230,7 +233,7 @@ public class StubMock extends ConstrainedMockMethod
    * on this {@code StubMock}.
    */
   public boolean invocationMatches(Object proxy, Method method, Object[] args) {
-    return (method.getName().equals(name) && super.invocationMatches(proxy, method, args));
+    return (method.getName().equals(name) ? super.invocationMatches(proxy,method,args) : false); 
   }
 
   /**

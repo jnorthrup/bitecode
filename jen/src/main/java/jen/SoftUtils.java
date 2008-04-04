@@ -21,13 +21,18 @@
 
 package jen;
 
-import org.objectweb.asm.*;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Type;
 
-import java.io.*;
-import java.lang.reflect.*;
-import java.util.*;
-import static java.util.Collections.*;
+import static java.util.Collections.emptyList;
 
 /** 
  * Provides general utility methods for working with SoftClass and generated 
@@ -398,7 +403,7 @@ public final class SoftUtils
    */
   public static void generateToStream(SoftClass sc, OutputStream stream)
   throws IOException {
-    ClassWriter writer = new ClassWriter(-1);
+    ClassWriter writer = new ClassWriter(true);
     sc.accept(writer);
     stream.write(writer.toByteArray());
   }

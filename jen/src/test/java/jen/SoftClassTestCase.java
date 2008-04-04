@@ -21,11 +21,14 @@
 
 package jen;
 
-import org.objectweb.asm.*;
-import org.objectweb.asm.tree.*;
-import org.roscopeco.juno.pre50.*;
+import java.net.URL;
+import java.net.URLClassLoader;
 
-import java.net.*;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.Opcodes;
+import org.objectweb.asm.tree.ClassNode;
+
+import org.roscopeco.juno.pre50.JunoTestCase;
 
 public class SoftClassTestCase extends JunoTestCase
 {
@@ -70,7 +73,7 @@ public class SoftClassTestCase extends JunoTestCase
    */
   public void testNewSoftClassClassNode() throws Exception {
     ClassNode node = new ClassNode();
-    rdr.accept(node,0);
+    rdr.accept(node,false);    
     SoftClass sc = new SoftClass(rdr);
     assertThat(sc.getName(),isEqual("jen.SimpleDummy"));
   }
@@ -126,7 +129,7 @@ public class SoftClassTestCase extends JunoTestCase
 
   public void testGetModifiers() {
     SoftClass sc = new SoftClass(SimpleDummy.class);    
-    assertThat(sc.getModifiers() & Opcodes.ACC_PUBLIC,gt(0));
+    assertThat(new Integer(sc.getModifiers() & Opcodes.ACC_PUBLIC),gt(new Integer(0)));
   }
 
   public void testGetName() {

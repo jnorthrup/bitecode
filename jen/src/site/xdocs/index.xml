@@ -1,53 +1,108 @@
-<?xml version="1.0"?>
 <document>
   <properties>
-    <author email="rosco@[nospam]-roscopeco.co.uk">Ross Bamford</author>
-    <title>Language-centric bytecode generation</title>
+    <author email="rosco@roscopeco.REMOVE.co.uk">Ross Bamford</author>
+    <title>Welcome to Juno</title>
   </properties>
   <head>
-    <meta name="description" content="Jen is a high-level bytecode transformation and generation library with an API based on classes, methods and fields."/>
-    <meta name="keywords" content="byte,code,generation,java,class,asm,cglib,bcel,engineering,transformation,instrumentation,unit,test,jvm"/>
+    <meta name="description" content="Juno is a simple lightweight constraints library."/>
+    <meta name="description" content="contraints,constrain,unit,test,junit,java,free,open,source,download"/>
   </head>
   <body>
-    <section name="Language-centric bytecode generation">
+    <section name="Welcome to Juno">
 
-      <p><strong>Jen</strong> is a fast, lightweight, and easy to use Java(tm) classworking and bytecode manipulation
-      library that provides a small (under 40k) language-centric core API permitting easy modification
-      of existing Java classes, generation of completely new ones from scratch or to spec, and supporting many 
-      advanced capabilities such as platform-compatible and custom-strategy proxies, dynamic 
-      constraints-based implementations (often referred to as <em>mocks</em>), and a complete runtime
-      classworking toolkit.</p>
+      <p><strong>Welcome to <strong>Juno</strong> - a simple, self-contained, 
+      zero-dependency (optional JUnit dependency for unit test integration) library 
+      that provides a simple API for working with constrained values, and a wide 
+      variety of ready-made constraint classes. Juno does exactly what it says on 
+      the tin, and was inspired by <a href='mailto:rosco@roscopeco.REMOVE.co.uk'>the author</a>
+      growing tired of porting mock object libraries into the runtime classpath. No 
+      additional libraries are required to use the basic constraints capabilities of
+      Juno, although Juno does support optional integration with both 
+      <a href='http://jmock.org/'>JMock</a> and <a href='http://picocontainer.codehaus.org'>
+      PicoContainer</a> parameter constraints, as well as <a href='http://junit.org/'>JUnit</a>
+      test integration.
+      </strong></p> 
+      
+      <p>Juno provides a simple abstract <code>Constraint</code> class that defines the
+	    basic behaviour required, and a number of standard implementations of this class
+      that implement various common constraints such as <i>equals</i>, <i>between</i>,
+      <i>smaller than</i>, and so on. These are complimented by a static utility class
+	    that provides (especially with JDK5 <code>import static</code>) as a more
+			expressive syntax for constraint definition. As well as this,
+      Juno provides <strong>standard converters</strong> that allow Juno 
+      constraints to be used as drop-in replacements for other constraints
+      libraries out there. This means that Juno can be used as a 'lowest-common-denominator'
+      when implementing custom constraints, and retains the flexibility of lightweight,
+      go anywhere constraints-based assertions.</p> 
 
-      <p>Please see the <a href='intro.html'>Introduction</a> for more information.</p>
+      <p>Juno is a lightweight, highly-focused component that was specifically designed
+      to fulfil the following requirements:</p>
+
+      <ul>
+        <li><p>As a general-purpose object-oriented way to define and apply constraints
+			  to values and objects in software, at build, test, and run time. Inline constraints
+        can provide a powerful and sophisticated solution to all kinds of common problems,
+        from parameter resolution and multiple conditional branching to subset selection
+        and filtering.
+        </p></li>
+
+				<li><p>As a more expressive way to handle assertions in Unit Tests. By either
+        subclassing the <code>JunoTestCase</code> rather than JUnit's regular <code>TestCase</code>,
+        or alternatively importing the static <code>assertThat</code> method from 
+        <code>JunoTestCase</code> alongside the <code>Constraints</code> methods (under
+        JSE 5.0 or later) you can write code such as:</p>
+
+        <source>assertThat(something,or(isNull(),lt(10));
+assertThat(something,not(equ("The World"));</source>
+
+				<p>The best part about this is that if the above assertions fail, you'll see 
+		    output like:</p>
+
+        <ul><code>AssertionFailedError: Value: 11; Expected: null or less than 10</code><br/>
+        <code>AssertionFailedError: Value: "The World"; Expected: not equal to "The World"</code></ul><p/>
+
+				<p>This is in contrast to the standard (none) message, which forces us to write
+			  a message for each assertion. This form of usage is well described in an
+			  entry on <a href='http://joe.truemesh.com/blog/'>Joe Walnes' Blog</a>, which 
+        discusses MockObject's constraints.</p></li>
+
+        <li><p>In situations where you are using several solutions each with their own constraints
+        classes, and want to consolidate your custom constraint logic to a single, easy to maintain 
+	      implementation, for example to share complex filtering constraints between your 
+        MockObjects-based unit tests, and your constraint-based Picocontainer tree.</p></li>
+  
+      </ul>
+
+      <p>Juno is fairly new, and we are very interested to hear your
+      comments, ideas, or to receive your contributions. Please contact us at 
+      <a href='mailto:owner@juno.dev.java.net'>owner@juno.dev.java.net</a>.</p>
+
+      <p>Please see the <a href='apidocs/'>Javadoc</a> for usage information.</p>
 
     </section>
 
-    <section name="Latest news">      
-      <script language="JavaScript" src="http://jade.mcli.dist.maricopa.edu/feed/feed2js.php?src=http%3A%2F%2Fjen.dev.java.net%2Fservlets%2FProjectNewsRSS&amp;num=5&amp;desc=250&amp;targ=y" type="text/javascript"/>
-      <noscript>
-        <ul>
-          Your browser does not support (or has disabled) Javascript support. You have the option to
-          <a href="https://jen.dev.java.net/servlets/ProjectNewsList" target="_blank">View latest news</a> (new window) or
-          <a href="http://jade.mcli.dist.maricopa.edu/feed/feed2js.php?src=http%3A%2F%2Fjen.dev.java.net%2Fservlets%2FProjectNewsRSS&amp;num=5&amp;desc=250&amp;targ=y&amp;html=y">View as RSS</a>.
-        </ul>
-      </noscript>
+    <section name="Compatibility">
+      <p>Juno is compiled for compatibility with JDK 1.3, although it is not tested
+      (or supported) below 1.4. We do provide a number of features specific to JSE 5.0
+      (a.k.a. 1.5), such as the static import classes, but in all cases these are
+      optional extensions and can usually be done without. The static-import syntax
+      sugar, for example, allows the sugar definition methods (<code>not</code>, 
+      <code>isNull()</code>, and so on) to be easily reused in other classes without
+      affecting any existing class hierarchy.</p>
     </section>
 
     <section name="Download">
-      <p>Jen can be downloaded from:</p>
+      <p>Juno can be downloaded from:</p>
 
       <ul>
-        <li><a href='http://jen.dev.java.net/servlets/ProjectDocumentList?folderID=4077&amp;expandFolder=4077&amp;folderID=0'>Milestone &amp; Release archives</a></li>
-        <li><code>cvs -d:pserver:guest@cvs.dev.java.net:/cvs co jen/main</code></li>
+        <li><a href='http://juno.dev.java.net/servlets/ProjectDocumentList'>Milestone &amp; Releases</a></li>
+        <li><code>cvs -d:pserver:guest@cvs.dev.java.net:/cvs co juno/main</code></li>
       </ul>
-
-      <p>Please see the <a href='download.html'>Download</a> and <a href='cvs-usage.html'>CVS Usage</a>
-      pages for more information.</p>
     </section>
 
     <section name="Project information">
 
-      <p>Jen is licenced under the usual Roscopeco Open Source licence,
+      <p>Juno is licenced under the usual Roscopeco Open Source licence,
       namely the Apache Software Licence, version 2.0. The full licence terms are
       included <a href="license.html">here</a>.</p>
 
@@ -60,6 +115,6 @@
         <a href="http://www.java.net" title="Java.net member project" id="javaNet"><img alt="Java.net member project" src="images/javanet_button_90.gif"/></a>
       </p>
     </section>
-
+    
   </body>
 </document>

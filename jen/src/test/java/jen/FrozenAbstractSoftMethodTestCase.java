@@ -41,7 +41,7 @@ public class FrozenAbstractSoftMethodTestCase extends TestCase
   public FrozenAbstractSoftMethodTestCase() throws Exception {
     ClassReader rdr = new ClassReader(SimpleDummy.class.getName());
     ClassNode n = new ClassNode();
-    rdr.accept(n,-1);
+    rdr.accept(n,false);
     throws_method = (MethodNode)n.methods.get(5);
   }
   

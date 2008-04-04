@@ -1,0 +1,120 @@
+<!--
+	This is basically providing convenience goals, and making sure that
+	the classes and artifacts from the project are in the right places.
+	
+	N.B. the subprojects also have maven.xml, with responsibility for 
+	copying their classes and jar to the top-level target dir post gen.
+  Apart from in 'clobber' (dep probs otherwise), theres no downward
+  dependency to the subprojects.
+-->
+<project default="install" xmlns:j="jelly:core" xmlns:m="jelly:maven" xmlns:ant="jelly:ant">
+
+  <goal name="clobber" description="Start afresh">
+    <attainGoal name="clean:clean"/>
+    <ant:delete dir="${topdir}/core/target"/>
+    <ant:delete dir="${topdir}/members/target"/>
+    <ant:delete dir="${topdir}/tools/target"/>
+
+    <!-- dependency probs :( -->
+    <!--<attainGoal name="multiproject:clean"/>-->
+  </goal>
+  
+  <goal name="all" description="Build software and documentation"
+        prereqs="install,docs"/>
+  
+  <goal name="test-off" description="Disable unit-tests for following goals">
+    <m:set plugin="maven-test-plugin" property="maven.test.skip" value="true"/>
+    <ant:echo message="Unit tests disabled"/>
+  </goal>
+    
+  <goal name="test-on" description="Enable unit-tests for following goals">
+    <m:set plugin="maven-test-plugin" property="maven.test.skip" value="false"/>
+    <ant:echo message="Unit tests enabled"/>
+  </goal>    
+    
+  <goal name="docs" description="Generate the documentation" prereqs="install">
+    <attainGoal name="multiproject:site"/>
+  </goal>
+    
+  <goal name="install" description="Build (and install) the Jars">
+    <attainGoal name="multiproject:install"/>
+    <attainGoal name="jar:install"/>
+  </goal>
+
+  <!-- developer goals --> 
+  <!-- ARTIFACT AND SITE DEPLOY REQUIRES JAVA.NET PLUGIN -->
+
+  <!-- TODO artifact deploy temporarily down while migrating to java.net -->
+  <goal name="jen:deploy" description="Developer goal (requires SSH key)">
+    <attainGoal name="install"/>
+    <m:set plugin="maven-multiproject-plugin" property="goal" value="javanet:deploy-jar"/>
+    <attainGoal name="multiproject:goal"/>
+    <attainGoal name="javanet:deploy-jar"/>
+  </goal>
+  
+  <goal name="jen:release" description="Developer goal (requires SSH key)"
+        prereqs="jen:deploy">
+    <!-- HOSTING DISTRIBUTIONS IN FRS FOR NOW -->
+    <!-- <attainGoal name="javanet:deploy-dist"/> -->
+    
+    <attainGoal name="javanet:dist"/>
+    <j:if test="${!pom.currentVersion.endsWith('SNAPSHOT')}">
+      <attainGoal name="multiproject:site"/>
+      <attainGoal name="javanet:site"/>
+    </j:if>
+  </goal>
+  
+  <!-- internal goals -->  
+  <!-- Set up topdir var -->
+  <postGoal name="build:start">
+	<!-- Set a var pointing to the top dir -->
+  	<j:set var="topdir" value="${basedir}"/>
+  	<j:if test="${!basedir.endsWith('jen')}"> <!-- up one if not in top-level -->
+	  	<j:set var="topdir" value="${basedir}/.."/>
+	</j:if>  	
+  </postGoal>  
+  
+  <!-- Makes sure top-level target/classes and test-classes exist --> 
+  <goal name="IMPL:init-top-target">  
+    <ant:mkdir dir="${topdir}/target/classes"/>
+    <ant:mkdir dir="${topdir}/target/test-classes"/>
+  </goal>
+
+  <!-- build install / docs -->
+  <preGoal name="dist:prepare-bin-filesystem">
+    <attainGoal name="install"/>    
+    <attainGoal name="docs"/>
+  </preGoal>
+    
+  <postGoal name="dist:prepare-bin-filesystem">
+  	<j:set var="temp.dist.dir" value="${topdir}/target/jen-${pom.currentVersion}/bin/jen-${pom.currentVersion}/"/>
+    
+    <ant:copy file="${topdir}/core/target/jen-core-${pom.currentVersion}.jar" todir="${temp.dist.dir}"/>
+    <ant:copy file="${topdir}/members/target/jen-members-${pom.currentVersion}.jar" todir="${temp.dist.dir}"/>
+    <ant:copy file="${topdir}/tools/target/jen-tools-${pom.currentVersion}.jar" todir="${temp.dist.dir}"/>
+  </postGoal>
+  
+  <!-- java.net plugin builds site itself and doesn't do multiproj, so make sure it's up -->
+  <preGoal name="javanet:site">
+    <attainGoal name="multiproject:site"/>
+  </preGoal>
+  
+  <!-- Fully override because by default it collects all projects together, for some reason ?!??! -->
+  <goal name="dist:prepare-src-filesystem">
+  	<j:set var="temp.dist.dir" value="${topdir}/target/jen-${pom.currentVersion}/src/jen-${pom.currentVersion}/"/>
+    <ant:mkdir dir="${temp.dist.dir}"/>
+    <ant:copy todir="${temp.dist.dir}">
+      <ant:fileset dir="${topdir}">
+        <ant:include name="**/*"/>
+        <ant:exclude name=".project"/>
+        <ant:exclude name=".settings/**"/>
+        <ant:exclude name=".classpath"/>
+        <ant:exclude name=".externalToolBuilders/**"/>
+        <ant:exclude name="**/target/**"/>
+        <ant:exclude name="**/CVS/*"/>
+        <ant:exclude name="**/velocity.log*"/>
+        <ant:exclude name="**/junit*.properties"/>
+      </ant:fileset>
+    </ant:copy>
+  </goal>    
+</project>

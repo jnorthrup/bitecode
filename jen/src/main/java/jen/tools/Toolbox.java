@@ -21,13 +21,15 @@
 
 package jen.tools;
 
-import static jen.SoftUtils.*;
-import org.objectweb.asm.Type;
-import org.objectweb.asm.commons.*;
-
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+
+import org.objectweb.asm.Type;
+import org.objectweb.asm.commons.GeneratorAdapter;
+
+import static jen.SoftUtils.nullSafeArg;
 
 /** 
  * General utility methods for working with the Jen Tools library. This class

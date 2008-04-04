@@ -21,17 +21,34 @@
 
 package jen;
 
-import static jen.SoftUtils.*;
-import org.objectweb.asm.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.objectweb.asm.Attribute;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.Method;
-import org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.FieldNode;
+import org.objectweb.asm.tree.InnerClassNode;
+import org.objectweb.asm.tree.MethodNode;
 
-import java.io.*;
-import java.lang.reflect.*;
-import java.util.ArrayList;
-import static java.util.Arrays.*;
-import java.util.*;
+import static java.util.Arrays.asList;
+
+import static jen.SoftUtils.typeForClassList;
+import static jen.SoftUtils.nullSafeArg;
+import static jen.SoftUtils.javaToBinary;
+import static jen.SoftUtils.binaryToJava;
 
 /**
  * A high level, mutable representation of a Java(tm) class. <code>SoftClass</code> holds
@@ -367,7 +384,7 @@ public class SoftClass extends AbstractSoftMember
   private static ClassNode classReaderCtorHelper(ClassReader reader,
       boolean skipDebug) {
     ClassNode node = new ClassNode();
-    reader.accept(node, -1);
+    reader.accept(node, skipDebug);
     return node;
   }
 
@@ -381,7 +398,7 @@ public class SoftClass extends AbstractSoftMember
       throw (new BytecodeUnavailableException(clazz));
     }
 
-    r.accept(node, -1);
+    r.accept(node, skipDebug);
     return node;
   }
 
@@ -1694,7 +1711,7 @@ public class SoftClass extends AbstractSoftMember
   protected ClassVisitor getDelegate() {
     if (generationDelegate == null) {
       if (!isFrozen()) {
-        generationDelegate = new ClassWriter(-1);
+        generationDelegate = new ClassWriter(true);
       } else {
         throw (new InconsistentSoftClassException(this));
       }
@@ -1739,7 +1756,7 @@ public class SoftClass extends AbstractSoftMember
    * @see #generateBytecode()
    */
   public void thaw() {
-    thaw(new ClassWriter(-1));
+    thaw(new ClassWriter(true));
   }
 
   /**

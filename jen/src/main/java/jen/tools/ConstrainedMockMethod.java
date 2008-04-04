@@ -141,7 +141,7 @@ public abstract class ConstrainedMockMethod implements MockMethod
       
       // first constraint that fails returns false
       Constraint argC = argConstraints.get(i);
-      if (argC != null && !argC.eval(args[ i ])) return false;
+      if ((argC != null) && (!argC.eval(args[i]))) return false;
     }
     
     // if we're here, it means we matched all the constraints we had, and 
