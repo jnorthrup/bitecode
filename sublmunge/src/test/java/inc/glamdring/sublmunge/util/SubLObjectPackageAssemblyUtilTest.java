@@ -49,10 +49,10 @@ public class SubLObjectPackageAssemblyUtilTest extends TestCase implements Opcod
 		}
 	}
 	public void testCreateSubLObjectStructSourceFiles() throws Exception {
-/*
+
 		ensureInitialized();
 		SubLObjectPackageAssemblyUtil.createSubLObjectStructSourceFiles(SubLObject.class);
-*/
+ 
 /*
 		final SourceInterpreter interpreter = new SourceInterpreter();
 		new Analyzer(interpreter);

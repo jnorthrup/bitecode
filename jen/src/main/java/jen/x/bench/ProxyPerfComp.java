@@ -21,7 +21,7 @@
 
 package jen.x.bench;
 
-import jen.tools.*;
+import jen.tools.*;import static jen.tools.SoftProxy.newProxyInstance;
 import org.roscopeco.juno.*;
 import static org.roscopeco.juno.Constraints.*;
 
@@ -44,7 +44,7 @@ public class ProxyPerfComp
 {
   static final Random rand = new Random();
   
-  static final net.sf.cglib.proxy.InvocationHandler cglhandler = new net.sf.cglib.proxy.InvocationHandler() {
+  static final  InvocationHandler cglhandler = new InvocationHandler() {
     public Object invoke(Object proxy, Method m, Object[] args) {
       return "CGLIB_INV_HANDLER";
     }
@@ -73,7 +73,7 @@ public class ProxyPerfComp
   
   // Already got a small productivity enhancement here =]
   final ProxyInter jri = (ProxyInter)
-      net.sf.cglib.proxy.Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
+   newProxyInstance(Thread.currentThread().getContextClassLoader(),
         new Class[] { ProxyInter.class },cglhandler);
   final ProxyInter jrmock = (ProxyInter)
     Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),

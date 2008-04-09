@@ -19,13 +19,17 @@
  * Author: Ross Bamford (rosco<at>roscopeco.co.uk)
  */
 
-package org.roscopeco.juno.converters;
+//package org.roscopeco.juno.converters;
 
 import org.roscopeco.juno.pre50.JunoTestCase;
 
+/*
 public class FailingConstraintsTestCase extends JunoTestCase
-{
+{*/
+/*
   public void testThatFails() {
     assertThat(new Integer(90),not(between(new Integer(80),new Integer(100))));
-  }
+  }*/
+/*
 }
+*/

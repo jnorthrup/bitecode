@@ -11,14 +11,12 @@ import java.lang.reflect.*;
 import java.util.*;
 import java.util.Map.*;
 
-public class EnumPackageAssemblyUtil {
-
+public class EnumPackageAssemblyUtil { 
     private static final String EOL = "\n";
     private static final Map<CharSequence, String> INTRINSICS = new FastMap<CharSequence, String>();
     private static final String[] ISAREFS = new String[]{"Record", "Value", "Header", "Ref", "Info"};
     private static final String ISA_MODS = Modifier.toString(Modifier.STATIC | Modifier.FINAL | Modifier.PUBLIC);
     static final Map<Class<?>, Pair<String, Pair<String, String>>> bBufWrap = new LinkedHashMap<Class<?>, Pair<String, Pair<String, String>>>();
-
 
     static {
         bBufWrap.put(char.class, new Pair<String, Pair<String, String>>("Char", new Pair<String, String>("char", "")));
@@ -368,9 +366,8 @@ public class EnumPackageAssemblyUtil {
             subRecord = (Class) objects[j++];
             valClazz = (Class) objects[j++];
             size = (Integer) objects[j++];
-            seek = (Integer) objects[j++];
-
-//            Class valClazz = null;
+            seek = (Integer) objects[j ];
+ 
 
             if (valClazz == null) {
                 valClazz = guessIntTypes(size);

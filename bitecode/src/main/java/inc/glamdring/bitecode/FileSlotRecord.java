@@ -115,11 +115,9 @@ public enum FileSlotRecord {
 
         for (String vPrefixe1 : new String[]{"_", "", "$", "Value",}) {
             if (valueClazz != null) break;
-            String suffix = vPrefixe1;
-            for (String name1 : new String[]{name().toLowerCase(), name(),}) {
+	        for (String name1 : new String[]{name().toLowerCase(), name(),}) {
                 if (valueClazz != null) break;
-                final String trailName = name1;
-                if (trailName.endsWith(suffix)) {
+	            if (name1.endsWith(vPrefixe1)) {
                     for (String aPackage1 : new String[]{"",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
@@ -128,7 +126,7 @@ public enum FileSlotRecord {
                         if (valueClazz == null) break;
                         else
                             try {
-                                valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
+                                valueClazz = Class.forName(aPackage1 + name().replace(vPrefixe1, ""));
                             } catch (ClassNotFoundException e) {
                             }
                 }

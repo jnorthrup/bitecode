@@ -23,7 +23,7 @@ package jen.japex.bench.softproxy.comp.invoc;
 
 import java.lang.reflect.Proxy;
 
-import jen.tools.SoftProxy;
+import jen.tools.SoftProxy;import static jen.tools.SoftProxy.newProxyInstance;
 import jen.x.bench.ProxyInter;
 import jen.x.bench.StaticInter;
 
@@ -62,7 +62,7 @@ public class InterProxyDriver extends AbstractInvocDriver
               new Class[] { ProxyInter.class },getMockHandler()); 
     } else if ("cglib-proxy".equals(s)) {
       return (ProxyInter)
-      net.sf.cglib.proxy.Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
+       newProxyInstance(Thread.currentThread().getContextClassLoader(),
           new Class[] { ProxyInter.class },getCglHandler());
     } else if ("static".equals(s)) {  
       // as close an approximation - will call through INVOKEINTERFACE

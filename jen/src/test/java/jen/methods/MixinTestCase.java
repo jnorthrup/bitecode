@@ -68,12 +68,11 @@ public class MixinTestCase extends TestCase
   
   public void testBasicMixin() throws Exception {
     SoftClass sc = new SoftClass(ArrayList.class);
-    sc.setName("java.util.AnotherArrayList");
+    sc.setName("tmp.java.util.AnotherArrayList");
     sc.addInterface(WithAnyMixin.class);
     sc.putSoftMethod(new StaticMixinMethod(sc,ANY_MIXIN,"basicMixin"));
-    
-    @SuppressWarnings("unchecked")
-    Class<WithAnyMixin> c = sc.defineClass();
+
+    Class<WithAnyMixin> c =(Class<WithAnyMixin> ) sc.defineClass();
         
     WithAnyMixin wm = c.newInstance();
     
@@ -91,7 +90,7 @@ public class MixinTestCase extends TestCase
     Class<WithStringMixin> c = sc.defineClass();
         
     WithStringMixin wm = c.newInstance();
-    List<String> l = (List<String>)wm;    
+    List<String> l = (List<String>) wm;    
     l.add("add");
     
     assertThat(wm.addMore("More"),isEqual("[add]More"));    
@@ -102,7 +101,7 @@ public class MixinTestCase extends TestCase
     sc.setName("jen.methods.AddableArrayList02");
     sc.putSoftMethod(new StaticMixinMethod(sc,GENERIC_MIXIN,SoftClass.ACC_PUBLIC | SoftClass.ACC_STATIC, "addMore"));
     
-    Class c = sc.defineClass();    
+    Class<? extends Object> c = sc.defineClass();
     assertThat(c.getMethod("addMore",Object.class).toGenericString(),
         isEqual("public <T> java.lang.String jen.methods.AddableArrayList02.addMore(java.util.List,T)"));
   }

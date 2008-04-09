@@ -140,6 +140,7 @@ public class GeneratedSoftField extends AbstractSoftField
    * @param signature The generic signature for this field, if any.
    * @param type The {@link org.objectweb.asm.Type} representing this field's
    *        type.
+   * @param initialValue
    */
   public GeneratedSoftField(SoftClass softClass, int modifiers, String name,
       String signature, Class type, Object initialValue) {
@@ -166,6 +167,7 @@ public class GeneratedSoftField extends AbstractSoftField
    * @param signature The generic signature for this field, if any.
    * @param type The {@link org.objectweb.asm.Type} representing this field's
    *        type.
+   * @param initialValue
    */
   // MAIN WORKER - The null behaviour is important!
   public GeneratedSoftField(SoftClass softClass, int modifiers, String name,

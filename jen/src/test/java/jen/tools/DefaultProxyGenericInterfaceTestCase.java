@@ -89,7 +89,7 @@ public class DefaultProxyGenericInterfaceTestCase extends TestCase
   
   public void testDefaultProxyWithGenericInterfaceDoesntCauseAbstractMethodErrorsOrThrowCheckCasts() {  
     @SuppressWarnings("unchecked")    
-    MyInter<String> mi = SoftProxy.newProxyInstance((Class<MyInter<String>>)MyInter.class, myInterHandler);
+    MyInter<String> mi = SoftProxy.newProxyInstance(MyInter.class, myInterHandler);
     
     mi.setTheT("This is the t");
     assertThat(mi.returnOneT(),isEqual("This is the t"));    
@@ -113,7 +113,7 @@ public class DefaultProxyGenericInterfaceTestCase extends TestCase
   
   public void testDefaultProxyWithGenericInterfaceFailsCleanlyOnBadType() {  
     @SuppressWarnings("unchecked")    
-    MyInter<String> mi = SoftProxy.newProxyInstance((Class<MyInter<String>>)MyInter.class, new InvocationHandler() {
+    MyInter<String> mi = SoftProxy.newProxyInstance(MyInter.class, new InvocationHandler() {
       private Object t;
       
       public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {

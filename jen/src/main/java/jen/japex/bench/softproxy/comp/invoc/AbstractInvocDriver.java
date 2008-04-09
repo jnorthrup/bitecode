@@ -49,7 +49,7 @@ public abstract class AbstractInvocDriver extends JapexDriverBase
       }
     );
   
-  static final net.sf.cglib.proxy.InvocationHandler cgl_handler = new net.sf.cglib.proxy.InvocationHandler() {
+  static final InvocationHandler cgl_handler = new  InvocationHandler() {
     public Object invoke(Object proxy, Method m, Object[] args) {
       return "CGLIB_INV_HANDLER";
     }
@@ -63,7 +63,7 @@ public abstract class AbstractInvocDriver extends JapexDriverBase
     return mock_handler;    
   }
   
-  protected static net.sf.cglib.proxy.InvocationHandler getCglHandler() {
+  protected static  InvocationHandler getCglHandler() {
     return cgl_handler;
   }  
 }
