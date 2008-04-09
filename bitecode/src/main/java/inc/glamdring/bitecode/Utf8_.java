@@ -1,52 +1,49 @@
 package inc.glamdring.bitecode;
-
 import java.nio.*;
 import java.lang.reflect.*;
 
 /**
- * <p>recordSize: 2 <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>length</td><td>0x2</td><td>0x0</td><td> (short) length=src.getShort(0x0) & 0xffff</td><td>{@link
- * Utf8_Visitor#length(ByteBuffer, int[], IntBuffer)}</td></tr>
- *
- * @see inc.glamdring.bitecode.Utf8_#length </table>
+ * <p>recordSize: 2
+ * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
+ * <tr><td>length</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link Utf8_Visitor#length(ByteBuffer, int[], IntBuffer)}</td></tr>
+ * 
+ * @see inc.glamdring.bitecode.Utf8_#length
+ * </table>
  */
-public enum Utf8_ {
-    length(0x2);
-    public java.lang.Class clazz;
+public enum Utf8_ { 
+length(0x2);
+	public java.lang.Class clazz;
 
-    /**
+	/**
      * the length of one record
      */
-    public static int recordLen;
-    /**
+	public static int recordLen;
+	/**
      * the size per field, if any
      */
-    public final int size;
-    /**
+	public final int size;
+	/**
      * the offset from record-start of the field
      */
-    public final int seek;
-    /**
-     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating offset
-     * into the stack.
+	public final int seek;
+	/**
+     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
+     * offset into the stack.
      */
-    public Class<? extends Enum> subRecord;
-    /**
+	public Class<? extends Enum> subRecord;
+	/**
      * a hint class for bean-wrapper access to data contained.
      */
-    public Class valueClazz;
-    public static final boolean isRecord = false;
-    public static final boolean isValue = false;
-    public static final boolean isHeader = false;
-    public static final boolean isRef = false;
-    public static final boolean isInfo = false;
-
-    /**
-     * Utf8_ templated Byte Struct
-     *
+	public Class valueClazz;
+	public static final boolean isRecord=false;
+	public static final boolean isValue=false;
+	public static final boolean isHeader=false;
+	public static final boolean isRef=false;
+	public static final boolean isInfo=false;
+    /** Utf8_ templated Byte Struct 
      * @param dimensions [0]=size,[1]= forced seek
      */
-    Utf8_(int... dimensions) {
+	Utf8_ (int... dimensions) {
         int[] dim = init(dimensions);
         size = dim[0];
         seek = dim[1];
@@ -64,14 +61,6 @@ public enum Utf8_ {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
                         size = subRecord.getField("recordLen").getInt(null);
-                    } catch (IllegalArgumentException e) {
-                        e.printStackTrace();  //todo: verify for a purpose
-                    } catch (NoSuchFieldException e) {
-                        e.printStackTrace();  //todo: verify for a purpose
-                    } catch (SecurityException e) {
-                        e.printStackTrace();  //todo: verify for a purpose
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();  //todo: verify for a purpose
                     } catch (Exception e) {
                     }
                     break;
@@ -107,7 +96,6 @@ public enum Utf8_ {
 
         return new int[]{size, seek};
     }
-
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -131,12 +119,12 @@ public enum Utf8_ {
      * @param register array holding values pointing to Stack offsets
      * @param stack    A stack of 32-bit pointers only to src positions
      */
-    private void subIndex(Buffer src, int[] register, IntBuffer stack) {
+    private void subIndex(ByteBuffer src, int[] register, IntBuffer stack) {
         System.err.println(name() + ":subIndex src:stack" + src.position() + ':' + stack.position());
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) {
+        if (isRecord && subRecord != null) { 
             try {
                 final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
@@ -147,16 +135,6 @@ public enum Utf8_ {
                     //resume the lower stack activities
                     stack.position(mark);
                 }
-            } catch (IllegalArgumentException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (SecurityException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();  //todo: verify for a purpose
             } catch (Exception e) {
                 throw new Error(e.getMessage());
             }

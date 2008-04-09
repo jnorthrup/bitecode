@@ -1,9 +1,5 @@
 package inc.glamdring.util;
 
-/**
- *
- */
-
 import inc.glamdring.bitecode.*;
 import junit.framework.*;
 import org.objectweb.asm.*;
@@ -35,9 +31,9 @@ public class PackageAssemblyUtilTest extends TestCase {
 	public void testPackage() throws Exception {
 		final File loFile = new File("target/classes");
 		final File[] loaFiles = loFile.listFiles();
-		SortedMap<CharSequence, ByteBuffer> loList = new ConcurrentSkipListMap<CharSequence, ByteBuffer>();
+		SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap = new ConcurrentSkipListMap<CharSequence, ByteBuffer>();
 		List<Callable<String>> loCallme = new ArrayList<Callable<String>>();
-		descend(loList, loCallme, loaFiles);
+		subnodes(charSequenceByteBufferSortedMap, loCallme, loFile, new File("../../cyc/system/src/main/resources/lib/cyc.jar"));
 
 
 		final ExecutorService loExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
@@ -49,56 +45,63 @@ public class PackageAssemblyUtilTest extends TestCase {
 			Logger.getAnonymousLogger().info(future.get());
 		}
 		Logger.getAnonymousLogger().info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
+
+		createClassReader(charSequenceByteBufferSortedMap);
+
+
 		return;
 	}
 
-	private void descend(final SortedMap<CharSequence, ByteBuffer> poOut, final List<Callable<String>> poCallme, File... poaFileCollection) throws IOException {
+	private void createClassReader(SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap) {
+		for (ByteBuffer buffer : charSequenceByteBufferSortedMap.values()) {
+
+			if(!buffer.hasArray()){
+			final ByteBuffer buf = ByteBuffer.allocate(buffer.limit());
+			         buf.put((ByteBuffer) buffer.rewind());
+			    buffer=buf;
+			}
+			final ClassReader classReader = new ClassReader(buffer.array());
+			final String s = classReader.getClassName();
+			Logger.getAnonymousLogger().info(s); 
+		}
+	}
+
+	private void subnodes(final SortedMap<CharSequence, ByteBuffer> poOut, final List<Callable<String>> poCallme, File... poaFileCollection) throws IOException {
 
 		for (final File file1 : poaFileCollection) {
 			if (file1.isDirectory()) {
-//				Callable<String> callable = new Callable<String>() {
-//					public String call() throws Exception {
-				descend(poOut, poCallme, file1.listFiles());
-//						return file1.getAbsolutePath();
-//					}
-//				};
-//				poCallme.add(callable);
-			} else if (file1.getName().endsWith(".class")) {
+ 				subnodes(poOut, poCallme, file1.listFiles());
+ 		} else if (file1.getName().endsWith(".class")) {
 				Callable<String> callable = new Callable<String>() {
 					public String call() throws Exception {
-				poOut.put(file1.getCanonicalPath(), new RandomAccessFile(file1, "rw").getChannel().map(FileChannel.MapMode.PRIVATE, 0, file1.length()));
+						poOut.put(file1.getCanonicalPath(), new RandomAccessFile(file1, "rw").getChannel().map(FileChannel.MapMode.PRIVATE, 0, file1.length()));
 						return file1.getAbsolutePath();
 					}
 				};
 				poCallme.add(callable);
 			} else if (file1.getName().endsWith(".jar") || file1.getName().endsWith(".zip")) {
-//				Callable<String> callable = new Callable<String>() {
-//					public String call() throws Exception {
-						final ZipFile loZ1 = new ZipFile(file1);
-						final Enumeration<? extends ZipEntry> loEnumeration = loZ1.entries();
-						while (loEnumeration.hasMoreElements()) {
-							Callable callable = new Callable() {
-								public Object call() throws Exception {
-									ZipEntry loZe = loEnumeration.nextElement();
-									final String lstrClname = loZe.getName();
-									if (lstrClname.endsWith(".class")) {
-										final long lnStreamsize = loZe.getSize();
-										ByteBuffer loBuffer = ByteBuffer.allocate((int) lnStreamsize);
-										final ReadableByteChannel loChannel = Channels.newChannel(loZ1.getInputStream(loZe));
-										while (loBuffer.hasRemaining() && loChannel.read(loBuffer) != -1)
-											;
-										poOut.put(lstrClname, loBuffer);
-									}
-									new ClassReader(lstrClname);
-									return lstrClname;
-								}
-							};
-							poCallme.add(callable);
+ 				final ZipFile loZ1 = new ZipFile(file1);
+				final Enumeration<? extends ZipEntry> loEnumeration = loZ1.entries();
+				while (loEnumeration.hasMoreElements()) {
+
+					final ZipEntry loZe = loEnumeration.nextElement();
+					Callable callable = new Callable() {
+						public Object call() throws Exception {
+							final String lstrClname = loZe.getName();
+							if (lstrClname.endsWith(".class")) {
+								final long lnStreamsize = loZe.getSize();
+								ByteBuffer loBuffer = ByteBuffer.allocate((int) lnStreamsize);
+								final ReadableByteChannel loChannel = Channels.newChannel(loZ1.getInputStream(loZe));
+								while (loBuffer.hasRemaining() && loChannel.read(loBuffer) != -1)
+									;
+								poOut.put(lstrClname, loBuffer);
+							}
+
+							return lstrClname;
 						}
-//						return file1.getAbsolutePath();
-//					}
-//				};
-//				poCallme.add(callable);
+					};
+					poCallme.add(callable);
+				}
 			}
 		}
 	}
