@@ -2,8 +2,12 @@ package inc.glamdring.util;
 
 import com.thoughtworks.xstream.*;
 import inc.glamdring.bitecode.*;
+import static javolution.lang.MathLib.*;
 import junit.framework.*;
+import org.dom4j.io.*;
 import org.objectweb.asm.*;
+import org.objectweb.asm.tree.*;
+import org.objectweb.asm.xml.*;
 
 import java.io.*;
 import java.nio.*;
@@ -14,7 +18,8 @@ import java.util.logging.*;
 import java.util.zip.*;
 
 public class PackageAssemblyUtilTest extends TestCase {
-	private XStream xStream=new XStream();
+	private XStream xStream = new XStream();
+	private static final Logger LOG = Logger.getAnonymousLogger();
 
 
 	public void testGetEnumsStructsForPackage() throws Exception {
@@ -30,34 +35,6 @@ public class PackageAssemblyUtilTest extends TestCase {
 			lstrDisplay += EnumPackageAssemblyUtil.genEnumMiddle(TableRecord.class, entry);
 	}
 
-	public void testPackage() throws Exception {
-		final File loFile = new File("target/classes");
-		final File[] loaFiles = loFile.listFiles();
-		SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap = new ConcurrentSkipListMap<CharSequence, ByteBuffer>();
-		List<Callable<String>> loCallme = new ArrayList<Callable<String>>();
-		buildnodes(charSequenceByteBufferSortedMap, loCallme, loFile, new File("../../cyc/system/src/main/resources/lib/cyc.jar"));
-
-
-		final ExecutorService loExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
-		final List<Future<String>> loFutures = loExecutorService.invokeAll(loCallme);
-		{
-			final long l = System.currentTimeMillis();
-
-			for (Future<String> future : loFutures) {
-				Logger.getAnonymousLogger().info(future.get());
-			}
-			Logger.getAnonymousLogger().info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
-		}
-
-		{
-			final long l = System.currentTimeMillis();
-
-			createClassReader(charSequenceByteBufferSortedMap);
-			Logger.getAnonymousLogger().info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
-		}
-		return;
-	}
-
 	private void createClassReader(SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap) {
 		for (ByteBuffer buffer : charSequenceByteBufferSortedMap.values()) {
 
@@ -66,14 +43,21 @@ public class PackageAssemblyUtilTest extends TestCase {
 				buf.put((ByteBuffer) buffer.rewind());
 				buffer = buf;
 			}
- 		final ClassReader classReader = new ClassReader(buffer.array());
-// 	final String s = classReader.getClassName()+Arrays.toString(classReader.getInterfaces());
-//			Logger.getAnonymousLogger().info(s);
+			final ClassReader classReader = new ClassReader(buffer.array());
+			// 	final String s = classReader.getClassName()+Arrays.toString(classReader.getInterfaces());
+			//			Logger.getAnonymousLogger().info(s);
+			//               ClassReader cr = new ClassReader(source);
+			ClassNode cn = new ClassNode();
+			classReader.accept(cn, ClassReader.EXPAND_FRAMES);
 
-			xStream.toXML(classReader,System.out);
+			final List methods = cn.methods;
+			for (Object method : methods) {
+				MethodNode m = (MethodNode) method;
 
+			}
 		}
 	}
+
 	private void buildnodes(final SortedMap<CharSequence, ByteBuffer> poOut, final List<Callable<String>> poCallme, File... poaFileCollection) throws IOException {
 
 		for (final File file1 : poaFileCollection) {
@@ -111,5 +95,82 @@ public class PackageAssemblyUtilTest extends TestCase {
 				}
 			}
 		}
+	}
+
+	public void testPackage() throws Exception {
+		final File loFile = new File("target/classes");
+		final File[] loaFiles = loFile.listFiles();
+		SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap = new ConcurrentSkipListMap<CharSequence, ByteBuffer>();
+		List<Callable<String>> loCallme = new ArrayList<Callable<String>>();
+		buildnodes(charSequenceByteBufferSortedMap, loCallme, loFile/*, new File("../../cyc/system/src/main/resources/lib/cyc.jar")*/);
+
+
+		final ExecutorService loExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+		final List<Future<String>> loFutures = loExecutorService.invokeAll(loCallme);
+		{
+			final long l = System.currentTimeMillis();
+
+			for (Future<String> future : loFutures) {
+				LOG.info(future.get());
+			}
+			LOG.info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
+		}
+
+		{
+			final long l = System.currentTimeMillis();
+
+			createClassReader(charSequenceByteBufferSortedMap);
+			LOG.info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
+		}
+
+		final int i = charSequenceByteBufferSortedMap.size();
+
+		final Random random = new Random();
+
+		final int i1 = abs(random.nextInt()) % i;
+		final Collection<ByteBuffer> byteBuffers = charSequenceByteBufferSortedMap.values();
+
+		//random-populace
+		final ByteBuffer[] rpop = byteBuffers.toArray(new ByteBuffer[byteBuffers.size()]);
+
+		ByteBuffer buffer = rpop[ i1 ];
+		{
+			final long l = System.currentTimeMillis();
+
+/*
+			for (ByteBuffer buffer : charSequenceByteBufferSortedMap.values()) {
+
+*/
+			if (!buffer.hasArray()) {
+				final ByteBuffer buf = ByteBuffer.allocate(buffer.limit());
+				buf.put((ByteBuffer) buffer.rewind());
+				buffer = buf;
+			}
+
+			final ClassReader classReader = new ClassReader(buffer.array());
+			// 	final String s = classReader.getClassName()+Arrays.toString(classReader.getInterfaces());
+			//			Logger.getAnonymousLogger().info(s);
+			//               ClassReader cr = new ClassReader(source);
+			final SAXEventRecorder eventRecorder = new SAXEventRecorder();
+			classReader.accept(new SAXClassAdapter(new XMLWriter(System.out, OutputFormat.createPrettyPrint()), true), ClassReader.EXPAND_FRAMES);
+
+/*
+			eventRecorder.writeExternal((ObjectOutput) new DataOutputStream(System.out));
+*/
+
+			
+			LOG.info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
+		}
+
+
+		return;
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
+		//////////////////////////////////////////////
 	}
 }

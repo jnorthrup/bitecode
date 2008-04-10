@@ -56,7 +56,7 @@ public class AsmToolTest extends TestCase {
 						Interpreter b;/*
                         b = new BasicVerifier();*/
 						b = new SimpleVerifier();
-						b = new BasicVerifier();
+//						b = new BasicVerifier();
 						//b = new SourceInterpreter();
 						Analyzer a = new Analyzer(b);
 						try {
