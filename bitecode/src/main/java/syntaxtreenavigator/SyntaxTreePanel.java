@@ -38,21 +38,14 @@
  */
 package syntaxtreenavigator;
 
-import com.sun.source.tree.CompilationUnitTree;
+import com.sun.source.tree.*;
 
-import java.awt.Font;
-import java.util.Iterator;
-import javax.swing.JLabel;
-import javax.swing.JTree;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.DefaultTreeSelectionModel;
-import javax.swing.tree.TreePath;
-import javax.swing.tree.TreeSelectionModel;
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticListener;
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.swing.tree.*;
+import javax.tools.*;
+import java.awt.*;
+import java.util.*;
 
 /**
  * @author Tim Boudreau
@@ -203,8 +196,8 @@ public class SyntaxTreePanel extends javax.swing.JPanel implements DiagnosticLis
 		tree.setModel(mdl);
 		tree.expandRow(0);
 		if (first != null) {
-			tree.getSelectionModel().setSelectionPath(new TreePath(new Object[]{mdl.getRoot(),
-			                                                                    first}));
+			tree.getSelectionModel()
+					.setSelectionPath(new TreePath(new Object[]{mdl.getRoot(),first}));
 		}
 		return first;
 	}

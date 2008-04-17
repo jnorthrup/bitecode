@@ -1,5 +1,8 @@
 package inc.glamdring.util;
 
+import com.sun.tools.javac.api.*;
+import com.sun.source.tree.*;
+import com.sun.source.util.*;
 import com.thoughtworks.xstream.*;
 import inc.glamdring.bitecode.*;
 import static javolution.lang.MathLib.*;
@@ -9,6 +12,7 @@ import org.objectweb.asm.*;
 import org.objectweb.asm.tree.*;
 import org.objectweb.asm.xml.*;
 
+import javax.tools.*;
 import java.io.*;
 import java.nio.*;
 import java.nio.channels.*;
@@ -20,6 +24,7 @@ import java.util.zip.*;
 public class PackageAssemblyUtilTest extends TestCase {
 	private XStream xStream = new XStream();
 	private static final Logger LOG = Logger.getAnonymousLogger();
+	private static final OutputFormat PRETTY_PRINT = OutputFormat.createPrettyPrint();
 
 
 	public void testGetEnumsStructsForPackage() throws Exception {
@@ -35,7 +40,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 			lstrDisplay += EnumPackageAssemblyUtil.genEnumMiddle(TableRecord.class, entry);
 	}
 
-	private void createClassReader(SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap) {
+	private void createClassNode(SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap) {
 		for (ByteBuffer buffer : charSequenceByteBufferSortedMap.values()) {
 
 			if (!buffer.hasArray()) {
@@ -50,11 +55,11 @@ public class PackageAssemblyUtilTest extends TestCase {
 			ClassNode cn = new ClassNode();
 			classReader.accept(cn, ClassReader.EXPAND_FRAMES);
 
-			final List methods = cn.methods;
-			for (Object method : methods) {
-				MethodNode m = (MethodNode) method;
+			/*		final MethodNode[] methodNodes = (MethodNode[]) cn.methods.toArray(new MethodNode[cn.methods.size()]);
+			for (MethodNode method : methodNodes) {
 
-			}
+				if(method!=null)method.accept(new MethodNode());
+			}*/
 		}
 	}
 
@@ -66,6 +71,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 			} else if (file1.getName().endsWith(".class")) {
 				Callable<String> callable = new Callable<String>() {
 					public String call() throws Exception {
+
 						poOut.put(file1.getCanonicalPath(), new RandomAccessFile(file1, "rw").getChannel().map(FileChannel.MapMode.PRIVATE, 0, file1.length()));
 						return file1.getPath();
 					}
@@ -119,7 +125,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 		{
 			final long l = System.currentTimeMillis();
 
-			createClassReader(charSequenceByteBufferSortedMap);
+			createClassNode(charSequenceByteBufferSortedMap);
 			LOG.info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
 		}
 
@@ -130,10 +136,25 @@ public class PackageAssemblyUtilTest extends TestCase {
 		final int i1 = abs(random.nextInt()) % i;
 		final Collection<ByteBuffer> byteBuffers = charSequenceByteBufferSortedMap.values();
 
-		//random-populace
-		final ByteBuffer[] rpop = byteBuffers.toArray(new ByteBuffer[byteBuffers.size()]);
+		//unify all naming conventions 
+		for (Map.Entry<CharSequence, ByteBuffer> entry : charSequenceByteBufferSortedMap.entrySet()) {
+			final CharSequence sequence = entry.getKey();
+			charSequenceByteBufferSortedMap.remove(sequence);
 
-		ByteBuffer buffer = rpop[ i1 ];
+			final ByteBuffer buffer = entry.getValue();
+			final byte[] b = buffer.hasArray()
+			?buffer.array():
+					ByteBuffer.allocate(buffer.limit()).put((ByteBuffer) buffer.rewind()).array();
+
+			final String s = new ClassReader(b).getClassName();
+			charSequenceByteBufferSortedMap.put(s, entry.getValue());
+		}
+		//random-populace
+//		final ByteBuffer[] rpop = byteBuffers.toArray(new ByteBuffer[byteBuffers.size()]);
+
+//		ByteBuffer buffer = rpop[ i1 ];
+
+		ByteBuffer buffer = charSequenceByteBufferSortedMap.get("inc/glamdring/bitecode/LocalVariableTableAttribute");
 		{
 			final long l = System.currentTimeMillis();
 
@@ -152,17 +173,45 @@ public class PackageAssemblyUtilTest extends TestCase {
 			//			Logger.getAnonymousLogger().info(s);
 			//               ClassReader cr = new ClassReader(source);
 			final SAXEventRecorder eventRecorder = new SAXEventRecorder();
-			classReader.accept(new SAXClassAdapter(new XMLWriter(System.out, OutputFormat.createPrettyPrint()), true), ClassReader.EXPAND_FRAMES);
+			XMLWriter writer = new XMLWriter(System.out, PRETTY_PRINT);
+			classReader.accept(new SAXClassAdapter(writer, true), ClassReader.EXPAND_FRAMES);
 
 /*
 			eventRecorder.writeExternal((ObjectOutput) new DataOutputStream(System.out));
 */
 
+			writer.close();
+
+			final String s = classReader.getClassName();
+
+			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+
+			final DiagnosticCollector<JavaFileObject> collector = new DiagnosticCollector<JavaFileObject>();
+			StandardJavaFileManager m = compiler.getStandardFileManager(collector, null, null);
+			Iterable<? extends JavaFileObject> toCompile =
+					m.getJavaFileObjects("src/main/java/inc/glamdring/bitecode/LocalVariableTableAttribute.java");
+
+
+			Iterable<? extends File> outdir =
+					Collections.singleton(new File(
+							System.getProperty("java.io.tmpdir"))); //NOI18N
+			m.setLocation(StandardLocation.CLASS_OUTPUT, outdir);
+
+			JavacTaskImpl task = (JavacTaskImpl) compiler.getTask(null,
+					m, null, null, null, toCompile);
+			{
+			for (CompilationUnitTree u : task.parse()) {
+				final Object o = u.accept(new TreeScanner<Object, Object>(), new Object());
+
+				xStream.toXML(u, System.out);
+			}
+
+			System.out.flush();/*.close();*/
+			}
 			
 			LOG.info(new StringBuilder("ms:").append((System.currentTimeMillis() - l)).toString());
 		}
-
-
+		
 		return;
 		//////////////////////////////////////////////
 		//////////////////////////////////////////////
