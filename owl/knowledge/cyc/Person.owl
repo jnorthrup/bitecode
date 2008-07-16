@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="http://sw.cyc.com/2006/07/27/cyc"
+    xmlns="http://sw.cyc.com/2006/07/27/cyc#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Class rdf:ID="Person">
+        <rdfs:label xml:lang="en">person</rdfs:label>
+        <rdfs:comment>A specialization of #$SocialBeing and #$IndividualAgent: the collection of all persons. Personhood is a vague, emotionally loaded yet extremely salient concept with respect to common-sense reasoning. Something is an instance of #$Person if it is an individual #$IntelligentAgent with perceptual sensibility, capable of complex social relationships, and possessing a certain moral sophistication and an intrinsic moral value, or -- if it lacks certain of these characteristics -- is a member of a distinct type of #$SocialBeing (usually a species) which generally possesses such characteristics and is therefore acknowledged by other members of that type as a person within their social systems. Most currently known instances of #$Person are instances of #$HomoSapiens but there is no reason why all need be (consider #$Hobbits in the fictional world of #$LordOfTheRings-Trilogy). They need not even be instances of #$BiologicalLivingObject (consider the possibility of a person-like AI). Also note that #$Person excludes non-human  legal persons , who are, however, included in the collection #$LegalAgent.</rdfs:comment>
+        <guid>bd588092-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#Concept_Nodes_For_Task_Type_Fn_intelligence_analysis_task_allotment"/>
+        <rdf:type rdf:resource="#Sample_Instance_Of_Type_For_Program_Fn_Specs_Fn_tangible_thing_Cyc_Analytic_Environment_The_Program"/>
+        <rdf:type rdf:resource="#Singleton_Collection_Fn_person"/>
+        <rdf:type rdf:resource="#Agents-Topic"/>
+        <rdf:type rdf:resource="#BBNEntityType"/>
+        <rdf:type rdf:resource="#CandidateKBCompletenessNode"/>
+        <rdf:type rdf:resource="#ClarifyingCollectionType"/>
+        <rdf:type rdf:resource="#ExistingObjectType"/>
+        <rdf:type rdf:resource="#FirstOrderCollection"/>
+        <rdf:type rdf:resource="#KEClarifyingCollectionType"/>
+        <rdf:type rdf:resource="#OrganismClassificationType"/>
+        <rdf:type rdf:resource="#TKBPersonTerroristToggle"/>
+        <rdfs:subClassOf rdf:resource="#Collection_Union_Fn_the_set_containing_person_and_group_of_people"/>
+        <rdfs:subClassOf rdf:resource="#Collection_Union_Fn_the_set_containing_person_and_animal"/>
+        <rdfs:subClassOf rdf:resource="#HomoSapiens"/>
+        <rdfs:subClassOf rdf:resource="#LegalAgent"/>
+        <rdfs:subClassOf rdf:resource="#NarrativeRole"/>
+        <rdfs:subClassOf rdf:resource="#Sentient"/>
+        <rdfs:subClassOf rdf:resource="#SocialBeing"/>
+        <owl:disjointWith rdf:resource="#Collection_Difference_Fn_animal_person"/>
+        <owl:disjointWith rdf:resource="#Collection_Difference_Fn_mammal_person"/>
+        <owl:disjointWith rdf:resource="#Dead_Physical_Remains_Fn_person"/>
+        <owl:disjointWith rdf:resource="#Imitation_Of_Collection_Fn_person"/>
+        <owl:disjointWith rdf:resource="#ConsumableProduct"/>
+        <owl:disjointWith rdf:resource="#Crystalline"/>
+        <owl:disjointWith rdf:resource="#DisposableProduct"/>
+        <owl:disjointWith rdf:resource="#FoodIngredientOnly"/>
+        <owl:disjointWith rdf:resource="#FoodOrDrink"/>
+        <owl:disjointWith rdf:resource="#IBTGeneration"/>
+        <owl:disjointWith rdf:resource="#MailableObject"/>
+        <owl:disjointWith rdf:resource="#MilitaryEquipment"/>
+        <owl:disjointWith rdf:resource="#PackagedObject"/>
+        <owl:disjointWith rdf:resource="#PhysicalDevice"/>
+        <owl:disjointWith rdf:resource="#TouristAttraction"/>
+    </owl:Class>
+</rdf:RDF>

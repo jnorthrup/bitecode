@@ -1,0 +1,20 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/N3/f2.ku
+# Nov/15/2002
+
+# "Formulae" example ala question
+
+    at view = doc {
+	at view = c1 {
+	    group1 := ? has firstname = "Ora"
+	    group2 := ? has title = "Moby Dick"
+	    group3 := group2 has author = ?
+	    group4 is group1 and group3
+	    group4 isa* existent
+	} # end view c1
+        c1 has type = falsehood  # group4 is nonexistent
+    } # end view = doc
+
+</XMP>
+</HTML>

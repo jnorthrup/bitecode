@@ -1,17 +1,22 @@
 package inc.glamdring.util;
 
 
-import inc.glamdring.bitecode.*;
-import javolution.util.*;
+import inc.glamdring.bitecode.TableRecord;
+import javolution.util.FastMap;
 
 import java.io.*;
-import static java.lang.Package.*;
-import static java.lang.System.*;
-import java.lang.reflect.*;
-import java.util.*;
-import java.util.Map.*;
+import static java.io.File.createTempFile;
+import static java.lang.Package.getPackage;
+import static java.lang.System.currentTimeMillis;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
-public class EnumPackageAssemblyUtil { 
+public class EnumPackageAssemblyUtil {
     private static final String EOL = "\n";
     private static final Map<CharSequence, String> INTRINSICS = new FastMap<CharSequence, String>();
     private static final String[] ISAREFS = new String[]{"Record", "Value", "Header", "Ref", "Info"};
@@ -44,7 +49,7 @@ public class EnumPackageAssemblyUtil {
                         Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int seek;");
         INTRINSICS.put("subRecord",
                 "/**\n" +
-                        "     * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating\n" +
+                        "     * a delegate class which will perform sub-indexing on behalf of a field once it has marked its initial starting\n" +
                         "     * offset into the stack.\n" +
                         "     */\n" +
                         "\tpublic Class<? extends Enum> subRecord;");
@@ -60,19 +65,21 @@ public class EnumPackageAssemblyUtil {
     public String getEnumsStructsForPackage() throws Exception {
         return createEnumStructSourceFiles(TableRecord.class);
     }
+
     public static String createEnumStructSourceFiles(final Class tableRecordClass) throws Exception {
 
-           Map<Class<? extends Enum>, Iterable<? extends Enum>> map = PackageAssembly.getEnumsStructsForPackage(tableRecordClass.getPackage());
-           Set<Entry<Class<? extends Enum>, Iterable<? extends Enum>>> entries = map.entrySet();
+        Map<Class<? extends Enum>, Iterable<? extends Enum>> map = PackageAssembly.getEnumsStructsForPackage(tableRecordClass.getPackage());
+        Set<Entry<Class<? extends Enum>, Iterable<? extends Enum>>> entries = map.entrySet();
 
-           String display = "";
-           String enumName = "";
-           for (Entry<Class<? extends Enum>, Iterable<? extends Enum>> entry : entries)
-               display += genEnumMiddle(tableRecordClass, entry);
-           return display;
-       }
+        String display = "";
+        String enumName = "";
+        for (Entry<Class<? extends Enum>, Iterable<? extends Enum>> entry : entries)
+            display += createEnumMiddle(tableRecordClass, entry);
+        return display;
+    }
 
-    static String genEnumMiddle(Class<TableRecord> tableRecordClass, Entry<Class<? extends Enum>, Iterable<? extends Enum>> entry) throws IOException {
+
+    static String createEnumMiddle(Class<TableRecord> tableRecordClass, Entry<Class<? extends Enum>, Iterable<? extends Enum>> entry) throws IOException {
 
         String display = "";
         String enumName;
@@ -85,7 +92,7 @@ public class EnumPackageAssemblyUtil {
         file.getParentFile().mkdirs();
         file.createNewFile();
         OutputStreamWriter ostream = new FileWriter(file);
-        System.err.println("*** Dumping " + file.getCanonicalPath() + "     " + file.toURI().toASCIIString());
+        System.err.println("*** Dumping " + file.getCanonicalPath() + "\t" + file.toURI().toASCIIString());
 
         display += "public enum " + enumName + " { " + EOL;
 
@@ -189,7 +196,7 @@ public class EnumPackageAssemblyUtil {
                 "                if (table != null) {\n" +
                 "                    //stow the original location\n" +
                 "                    int mark = stack.position();\n" +
-                "                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
+                "                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
                 "                    subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);\n" +
                 "                    //resume the lower stack activities\n" +
                 "                    stack.position(mark);\n" +
@@ -211,11 +218,11 @@ public class EnumPackageAssemblyUtil {
             t += "\n" + "import java.lang.reflect.*;";
 
 
-            display = t + genHeader(enumClazz) + display;
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();  //todo: verify for a purpose
+            String eclazz = genHeader(enumClazz);
+            display = t + eclazz + display;
+//        } catch (NoSuchFieldException e) {
         } catch (Exception e) {
-            throw new IOError(e);
+            e.printStackTrace();
         }
 
         ostream.write(display);
@@ -293,12 +300,6 @@ public class EnumPackageAssemblyUtil {
                     }
                     if (tmpString.length() > 4)
                         result += "\t{{" + tmpString + "\n\t}}" + EOL;
-                } catch (SecurityException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
-                } catch (IllegalArgumentException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -317,21 +318,14 @@ public class EnumPackageAssemblyUtil {
         int recordLen = 0;
         try {
             recordLen = (Integer) docEnum.getDeclaredField("recordLen").get(null);
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();  //todo: verify for a purpose
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();  //todo: verify for a purpose
-        } catch (SecurityException e) {
-            e.printStackTrace();  //todo: verify for a purpose
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();  //todo: verify for a purpose
         } catch (Exception e) {
-            e.printStackTrace();
+            recordLen = 0;
         }
         display += "\n\n/**\n * <p>recordSize: " + recordLen + "\n * <table><tr> " +
                 "<th>name</th>" +
                 "<th>size</th>" +
                 "<th>seek</th>" +
+                "<th>description</th>" +
                 "<th>Value Class</th>" +
                 "<th>Sub-Index</th>" +
                 "</tr>\n";
@@ -343,48 +337,54 @@ public class EnumPackageAssemblyUtil {
             Class subRecord = null;
             Class valClazz = null;
 
-            final String[] strings = {"subRecord", "valueClazz", "size", "seek"};
+            final String[] strings = {"subRecord", "valueClazz", "size", "seek", "docString"};
 
             final Object[] objects = new Object[strings.length];
             for (int i = 0; i < strings.length; i++) {
                 String string = strings[i];
                 try {
                     objects[i] = theSlot.getDeclaringClass().getDeclaredField(string).get(theSlot);
-                } catch (IllegalArgumentException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
-                } catch (NoSuchFieldException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
-                } catch (SecurityException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();  //todo: verify for a purpose
                 } catch (Exception e) {
                 }
             }
 
-            int j=0;
+            int j = 0;
             subRecord = (Class) objects[j++];
             valClazz = (Class) objects[j++];
-            size = (Integer) objects[j++];
-            seek = (Integer) objects[j ];
- 
+            try {
+                size = (Integer) objects[j++];
+            } catch (Exception e) {
+                size = 4;
+            }
+            try {
+                seek = (Integer) objects[j++];
+            } catch (Exception e) {
+                seek = 0;
+            }
+
+            String docString = "";
+            try {
+                docString = (String) objects[j++];
+            } catch (Exception e) {
+            }
 
             if (valClazz == null) {
                 valClazz = guessIntTypes(size);
             }
+
 
             final Pair<String, Pair<String, String>> pair = bBufWrap.get(valClazz);
             display += " * <tr>" +
                     "<td>" + name + "</td>" +
                     "<td>0x" + Integer.toHexString(size) + "</td>" +
                     "<td>0x" + Integer.toHexString(seek) + "</td>" +
+                    "<td>" + (docString==null?"":docString )+ "</td>" +
                     "<td>" + ((valClazz == null) ? (" (" + pair.getSecond().getFirst() + ") " +
                     name + "=src.get" + pair.getFirst()
                     + "(0x" + Integer.toHexString(seek) + ")"
                     + pair.getSecond().getSecond()) : (valClazz.getCanonicalName())) + "</td>" +
                     "<td>{@link "
                     + (subRecord == null ? theSlot.getDeclaringClass().getSimpleName()
-
                     + "Visitor#" + name + "(ByteBuffer, int[], IntBuffer)" : subRecord.getCanonicalName()) + "}</td>" +
                     "</tr>\n";
         }
@@ -412,16 +412,7 @@ public class EnumPackageAssemblyUtil {
                 final int anInt = aClass.getField("recordLen").getInt(null);
                 if (aClass != null)
                     return new Object[]{aClass, anInt};
-            } catch (IllegalArgumentException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (SecurityException e) {
-                e.printStackTrace();  //todo: verify for a purpose
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();  //todo: verify for a purpose
+
             } catch (Exception e) {
             }
         }
@@ -470,7 +461,8 @@ public class EnumPackageAssemblyUtil {
 
     public static void main(String... args) throws Exception {
         final String dirName = args.length > 0 ? "target/classes" : args[0];
-        final String indexName = (String) (args[0].length() > 0 ? new File(File.createTempFile("__BC__" + currentTimeMillis(), "rw"), "bitecode") : args[1]);
+        final String indexName = (String) ((args.length < 1) ?
+                new File(createTempFile("__BC__" + currentTimeMillis(), "rw"), "bitecode").getAbsolutePath() : args[1]);
 
         File index = getIndexFile(indexName);
 
@@ -490,7 +482,9 @@ public class EnumPackageAssemblyUtil {
                 if (!raf.isFile()) {
                     raf.getParentFile().mkdirs();
                 } else return raf;
-            } catch (Exception e) { System.err.println(""); }
+            } catch (Exception e) {
+                System.err.println("");
+            }
         return null;
     }
 }

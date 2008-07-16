@@ -1,0 +1,27 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/death.rel
+# Oct/5/2003
+# arraymode,arraykey  Aug/21/2005
+
+# automatic: 5 proposition/infon
+# meaning:   1 proposition/infon
+
+r_death is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, deathdate, deathplace, deathcause],
+    format=[person:1, time:2, space:3, cause:4],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_birth;
+#    meaning={
+#	$1 has deathdate=$2,deathplace=$3,deathcause=$4;
+#	#at space=$3,time=$2 {$1 do die with deathcause=$4 done;};
+#	};
+
+begin relation r_death; 
+Pauline Neal 1934, 1996/9/17, CA/Pioneer, liver disease;
+end relation r_death;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

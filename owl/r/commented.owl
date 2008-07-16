@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#">
+
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-lang-2or3.pt-br.html">
+		<!-- The translation refers to an outdated version, RI will try to get an update -->
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+</rdf:RDF>

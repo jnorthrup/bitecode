@@ -1,0 +1,29 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/divorce.rel
+# Oct/5/2003
+# arraymode,arraykey  Aug/21/2005
+
+# automatic: 5 proposition/infon
+# meaning:   1 proposition/infon
+
+r_divorce is relation with 
+    arraymode=gdbm,arraykey="$1_$2",
+    label=[husband, wife, divorcedate, divorceplace],
+    format=[person:1, person:2, time:3, space:4],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_marriage;
+#    meaning={
+#	$1_$2 has divorcedate=$3,divorceplace=$4;
+#	#$1 rel exspouse +=$2,spouse -=$2;
+#	#$2 rel exspouse +=$1,spouse -=$1;
+#	#at space=$4,time=$3 {$1,$2 do divorce done;};
+#	};
+
+begin relation r_divorce; 
+Carl Cates 1927, Pauline Neal 1934, 1977, NV;  
+end relation r_divorce;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

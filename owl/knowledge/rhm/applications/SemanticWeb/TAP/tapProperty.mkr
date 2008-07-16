@@ -1,0 +1,17 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/tapProperty.mkr
+# Jun/3/2003
+
+do read mcf from tapProperty.mcf done;
+
+do check od unknown done;
+
+Property isc* ?;
+
+! deletecomment od tapProperty.out to tapProperty.save done;
+
+do check od knit done;
+exit;
+</XMP>
+</HTML>

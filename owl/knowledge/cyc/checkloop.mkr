@@ -1,0 +1,7 @@
+# KEHOME/knowledge/cyc/checkloop.mkr
+# Feb/19/2007
+
+# check for infinite loops & multiple paths
+
+do check od loop done;
+exit;

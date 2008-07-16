@@ -1,0 +1,3 @@
+set echo=off,kbmode=tap;
+PropertyType isc**2 ?;
+exit;

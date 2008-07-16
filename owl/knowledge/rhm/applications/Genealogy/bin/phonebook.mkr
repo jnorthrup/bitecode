@@ -1,0 +1,35 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/phonebook.mkr
+# Aug/17/2005
+##debug := array;
+
+#=============================#
+# generate phonebook relation #
+#=============================#
+outfile := phonebook.rel;
+relname := r_phonebook;
+
+echo := off;
+#do clock od "generating phonebook relation" done;
+
+do read from family.ku done;  # load knowledge base
+
+! rm -f $outfile done;
+do print od "begin relation $relname;" to $outfile done;
+every p isu person; {
+	pid   := $p;
+	#phone := $p[phone];
+	#name  := $p[prefername];
+
+	phone := $p has phone=?;
+	name := $p has prefername=?;
+
+	do print od "${phone}, ${pid}, ${name};" to $outfile done;
+};
+do print od "end relation $relname;" to $outfile done;
+
+
+#do clock od "finished phonebook relation" done;
+echo := on;
+
+# </xmp></html>

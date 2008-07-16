@@ -1,0 +1,338 @@
+# clock <1999/07/23 14:25:29> # finished opening files
+# input  file <TREE.KU>
+# output file <tree.out>
+# error  file <tree.err>
+# log    file <tree.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Windows Icon version 9.3.1  1997/11/18
+# INFO: kversion = Knowledge Explorer version 3.8  1999/7/23
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/07/23 14:25:31> # finished loading tabula_rasa
+# command <!read kb/init.ku >
+##### Loading tabula_rasa definitions #####
+##### Loading ke definitions #####
+# clock <1999/07/23 14:25:36> # finished reading definitions
+# clock <1999/07/23 14:25:36> # finished menu
+# command <!read TREE.KU >
+# command <!read family.ku >
+# command <!psize person >
+9 # !psize person
+# assignment <hfocus = [ person , newstatement , newword ]>
+# assignment <debug = ARITY>
+# statement <ancestor is method with label = "name" , format = "person:*" , meaning = { echo = off ; every q in $* do ! cc $q ; ! print $q ; if $q has spouse fi ; if $q has exspouse fi ; if $q has parent then ! ancestor $parent fi ; done ; echo = on }>
+# statement <descendant is method with label = "name" , format = "person:*" , meaning = { echo = off ; every q in $* do ! cc $q ; ! print $q ; if $q has spouse fi ; if $q has exspouse fi ; if $q has child then ! descendant $child fi ; done ; echo = on }>
+# question <person ise* ?>
+person
+/  Bob McCullough
+/  Carl Cates
+/  Dick McCullough
+/  Homer McCullough
+/  Jane Doe
+/  Kay Stecker
+/  Pauline Neal
+/  Steven Cates
+/  unknown
+# command <!ancestor Steven Cates >
+Steven Cates
+Steven Cates has parent=Carl Cates,Pauline Neal
+Carl Cates
+Carl Cates has spouse=
+Carl Cates has exspouse=Pauline Neal
+Pauline Neal
+Pauline Neal has spouse=Dick McCullough
+Pauline Neal has exspouse=Carl Cates
+# command <!descendant Kay Stecker >
+Kay Stecker
+Kay Stecker has child=Bob McCullough,Dick McCullough
+Bob McCullough
+Dick McCullough
+Dick McCullough has spouse=Pauline Neal
+# command <!ancestor Jane Doe >
+Jane Doe
+Jane Doe has parent=unknown
+unknown
+# clock <1999/07/23 14:28:29> # finished reading knowledge
+############################################################
+################### PROCESSING KNOWLEDGE ###################
+knitlog
+  knit_tabula_rasa
+  knit_v_input
+chitlog
+  chit_CA/Pioneer_1996/9/17_v_input
+  chit_CA/Pioneer_1996_v_input
+  chit_CA_1955_v_input
+  chit_Internet/CNET download.com_1997/5/28_v_input
+  chit_KY/Ft. Knox_1954_v_input
+  chit_MA/Cambridge_1960_v_input
+  chit_NJ-IL-CA_1960_v_input
+  chit_NV/Stateline_1984_v_input
+  chit_NV_1977_v_input
+  chit_NY/Brooklyn_1967_v_input
+  chit_here_now_tabula_rasa
+
+############################################################
+########## CHECKING KNIT view = tabula_rasa ##########
+# genus count:        776 units, 0 errors
+# loop count:         776 units, 0 units with loops
+# link count:         776 units, 0 units with broken genus or unit links
+# link count:         776 units, 0 units with broken group or member links
+# newstatement count: 0
+# newword count:      0
+# chit count:         1
+# event count:        8
+# concept undefined: identify isa action
+# concept undefined: measure isa action
+# concept undefined: ~live isa action
+# concept undefined: ~move isa action
+# definition count:   776 units, 202 concepts with 0 bad genus, 4 undefined
+# definition count:   776 units, 575 prim. units with 0 bad genus, 457 undefined
+# alias count:        776 units, 23 units have 25 aliases
+# attribute count:    158 attributes total, 152 prim. with 39 unused
+# action count:       104 actions total, 97 prim.
+# value count:        335 char. total, 335 char. have 3 values
+# part count:         1 parts total, 1 prim. with 1 unused
+# enumeration count:  776 units, 9 enumerations
+# requisite count:    776 units, 0 requisites
+# set count:          776 units, 8 sets
+# sequence count:     776 units, 1 sequences
+# group count:        776 units, 6 groups
+# hierarchy count:    776 units, 0 hierarchies
+# lattice count:      776 units, 0 lattices
+#========== END KNIT view = tabula_rasa ==========
+#============================================================
+# clock <1999/07/23 14:28:30> # finished checking knit: view = tabula_rasa
+############################################################
+########## WRITING KNIT  view = tabula_rasa ##########
+!begin hierarchy
+nonexistent
+event
+group
+/  enumeration
+//    boolean
+//    enum_automatic
+//    enum_charformat
+//    enum_check
+//    enum_debug
+//    enum_echo
+//    enum_hformat
+//    enum_kformat
+//    yes-no
+/  hierarchy
+/  lattice
+/  requisite
+/  sequence
+//    knowledge
+///      knit
+////        knit_tabula_rasa
+/  set
+//    chit
+///      chit_here_now_tabula_rasa
+//    events
+//    existence
+//    identity
+//    infons
+//    partvalues
+//    phenomenon
+//    values
+newstatement
+newword
+person
+!end hierarchy
+#========== END KNIT  view = tabula_rasa ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = tabula_rasa ##########
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = birth ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = death ;
+}
+at space=here, time=now, view=tabula_rasa {
+knowledge := man do identify = identify*_021 (existent) ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = live*_092 ;
+}
+at space=here, time=now, view=tabula_rasa {
+measurement := man do measure = measure*_018 (characteristic) ;
+}
+at space=here, time=now, view=tabula_rasa {
+animal do move = move*_094 ;
+}
+at space=here, time=now, view=tabula_rasa {
+object do ~live = ~live*_098 ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant do ~move = ~move*_096 ;
+}
+#========== END CHIT  view = tabula_rasa ==========
+#============================================================
+# clock <1999/07/23 14:28:31> # finished writing knit: view = tabula_rasa
+
+############################################################
+########## CHECKING KNIT view = v_input ##########
+# genus error <2> <209-295-1365 isa [fax,
+    phone]>
+# genus error <2> <CA isa [space,
+    state]>
+# genus error <0> <school isa []>
+# genus error <3> <unknown isa [existent,
+    person,
+    time]>
+# genus count:        1212 units, 4 errors
+# loop count:         1212 units, 0 units with loops
+# link count:         1212 units, 0 units with broken genus or unit links
+# link count:         1212 units, 0 units with broken group or member links
+# newstatement count: 0
+# newword count:      7
+# chit count:         11
+# event count:        18
+# concept undefined: adopt isa action
+# concept undefined: city isa attribute
+# concept undefined: company isa attribute
+# concept undefined: country isa attribute
+# concept undefined: degree isa attribute
+# concept undefined: die isa action
+# concept undefined: divorce isa action
+# concept undefined: email isa attribute
+# concept undefined: fax isa attribute
+# concept undefined: graduate isa action
+# concept undefined: identify isa action
+# concept undefined: job isa attribute
+# concept undefined: list isa action
+# concept undefined: marry isa action
+# concept undefined: measure isa action
+# concept undefined: phone isa attribute
+# concept undefined: sex isa attribute
+# concept undefined: state isa attribute
+# concept undefined: street isa attribute
+# concept undefined: type isa attribute
+# primitive unit genus error:  unknown is [existent,
+    person,
+    time] with 
+    ~identified=[]
+# concept undefined: work for isa action
+# concept undefined: zip isa attribute
+# concept undefined: ~live isa action
+# concept undefined: ~move isa action
+# definition count:   1212 units, 231 concepts with 0 bad genus, 24 undefined
+# definition count:   1212 units, 982 prim. units with 1 bad genus, 869 undefined
+# alias count:        1212 units, 23 units have 25 aliases
+# attribute count:    291 attributes total, 272 prim. with 144 unused
+# action count:       130 actions total, 113 prim.
+# value count:        488 char. total, 488 char. have 4 values
+# part count:         1 parts total, 1 prim. with 1 unused
+# enumeration count:  1212 units, 9 enumerations
+# requisite count:    1212 units, 0 requisites
+# set count:          1212 units, 8 sets
+# sequence count:     1212 units, 1 sequences
+# group count:        1212 units, 6 groups
+# hierarchy count:    1212 units, 0 hierarchies
+# lattice count:      1212 units, 0 lattices
+#========== END KNIT view = v_input ==========
+#============================================================
+# clock <1999/07/23 14:28:34> # finished checking knit: view = v_input
+############################################################
+########## WRITING KNIT  view = v_input ##########
+!begin hierarchy
+nonexistent
+newstatement
+newword
+/  Althea Pauline Neal
+/  Dick
+/  Dr. Richard H. McCullough
+/  Pauline
+/  Pauline Cates
+/  Pauline McCullough
+/  Richard Homer McCullough
+person
+/  Bob McCullough
+/  Carl Cates
+/  Dick McCullough
+/  Homer McCullough
+/  Jane Doe
+/  Kay Stecker
+/  Pauline Neal
+/  Steven Cates
+/  unknown
+!end hierarchy
+#========== END KNIT  view = v_input ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = v_input ##########
+at space=CA, time=1955, view=v_input {
+Carl Cates,
+    Pauline Neal do adopt = adopt_315 (Steven Cates) ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = birth ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = death ;
+}
+at space=CA/Pioneer, time=1996/9/17, view=v_input {
+Pauline Neal do die = die_324 ;
+}
+at space=NV, time=1977, view=v_input {
+Carl Cates,
+    Pauline Neal do divorce = divorce_345 ;
+}
+at space=KY/Ft. Knox, time=1954, view=v_input {
+Dick McCullough do graduate = graduate_376 from school = Ft. Knox High School with degree = [ Valedictorian ];
+}
+at space=MA/Cambridge, time=1960, view=v_input {
+Dick McCullough do graduate = graduate_382 from school = MIT with degree = [ SBEE,SMEE ];
+}
+at space=NY/Brooklyn, time=1967, view=v_input {
+Dick McCullough do graduate = graduate_388 from school = Polytechnic University with degree = [ PhDEE ];
+}
+at space=here, time=now, view=tabula_rasa {
+knowledge := man do identify = identify*_021 (existent) ;
+}
+at space=Internet/CNET download.com, time=1997/5/28, view=v_input {
+Dick McCullough do list = list_355 (Knowledge Explorer 1.2) ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = live*_092 ;
+}
+at space=NV/Stateline, time=1984, view=v_input {
+Pauline Neal,
+    Dick McCullough do marry = marry_334 ;
+}
+at space=here, time=now, view=tabula_rasa {
+measurement := man do measure = measure*_018 (characteristic) ;
+}
+at space=here, time=now, view=tabula_rasa {
+animal do move = move*_094 ;
+}
+at space=NJ-IL-CA, time=1960, view=v_input {
+Dick McCullough do work for = work for_400 (Bell Labs) from time = 1960 to time = 1989;
+}
+at space=CA/Pioneer, time=1996, view=v_input {
+Dick McCullough do work for = work for_405 (self) from time = 1996 to time = unknown;
+}
+at space=here, time=now, view=tabula_rasa {
+object do ~live = ~live*_098 ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant do ~move = ~move*_096 ;
+}
+#========== END CHIT  view = v_input ==========
+#============================================================
+# clock <1999/07/23 14:28:34> # finished writing knit: view = v_input
+# command <!exit [] >
+# clock <1999/07/23 14:28:34> # finished checking and writing knowledge
+
+##### Goodbye. #####
+# clock <1999/07/23 14:28:34> # closing files

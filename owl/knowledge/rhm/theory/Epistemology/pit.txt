@@ -1,0 +1,102 @@
+# 1999/3/27
+
+#=======================#
+# perceptual unit (pit) #
+# knowledge unit (knit) #
+# ecr hierarchy         #
+# classify              #
+# identify              #
+#=======================#
+
+# Reference:
+# David Kelley, "The Evidence of the Senses",
+# Louisiana State University Press, 1986.
+
+
+#-----#
+# pit #
+#-----#
+My perceptual unit (pit) is what Kelley calls a
+perceptual judgment.  Using Kelley's terminology,
+a pit has the format
+
+	this_i isa kind_j
+	this_i has property_k
+
+where
+
+	this_i 		i = 1, 2, ...
+	kind_j 		j = 1, 2, ...
+	property_k	k = 1, 2, ...
+
+are the
+
+	present perceived entities
+	past abstract types
+	past abstract attributes
+
+
+#------#
+# knit #
+#------#
+My knowledge unit (knit) consists of the pits plus
+the conceptual judgments
+
+	kind_j isa concept_m
+	property_k isa concept_n
+	concept_p isa concept_q
+
+using the higher level concepts
+
+	concept_n	n = 1, 2, ...
+
+A knit may also include other judgments, e.g. definitions:
+
+	concept_p is concept_q with differentia
+
+A knit is denoted by a knit name (kname).
+
+
+#------------------------------------------#
+# entity-characteristic-relation hierarchy #
+#------------------------------------------#
+Defining "relation" to be the concept which subsumes
+all judgments, a knit can be visualized as an
+entity-characteristic-relation hierarchy.
+For example, using the higher level concepts
+
+	existent, entity, characteristic, relation
+	
+we have
+
+	existent
+	    entity
+		kind_1
+			this_1
+			...
+		...
+	    characteristic
+		property_1
+		...
+	    relation
+		[this_1 has property_1]
+		...
+
+The "isa" judgments determine the hierarchy structure,
+and are not explicitly shown under relation.  Any other
+judgments are explicitly shown.
+
+A particular ecr hierarchy is denoted by a view name
+
+	at view = vname
+
+
+#----------#
+# classify #
+# identify #
+#----------#
+My "classify" is the name of the human action that
+produces "isa" judgments.
+
+My "identify" is the name of the human action that
+produces all judgments, i.e., knowledge.

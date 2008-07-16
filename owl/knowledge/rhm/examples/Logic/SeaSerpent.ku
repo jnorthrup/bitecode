@@ -1,0 +1,28 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/ExamplesLogic/SeaSerpent.ku
+# 1999/4/30
+# new syntax Sep/29/2002
+
+#==============#
+# sea serpents #
+#==============#
+
+at view=reality
+#=============#
+serpent isa nonexistent
+
+at view=imagination
+#=================#
+serpent isa* existent
+
+serpent isa animal
+serpent do live done
+sea serpent is serpent with
+	live in the sea
+
+sea serpent do live in the sea done
+all sea serpent do live in the sea done
+some sea serpent do live in the sea done
+</XMP>
+</HTML>

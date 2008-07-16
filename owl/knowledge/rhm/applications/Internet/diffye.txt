@@ -1,0 +1,60 @@
+4c4
+< /	Yahoo
+---
+> /  Excite
+5a6
+> //    Search
+8,9c9,13
+< /	Arts
+< /	Business & Economy
+---
+> /      Autos
+> /      Careers
+> /      City Guides
+> /      Classifieds & Auctions
+> /      Communities
+13c17
+< /	Government
+---
+> /      Games
+15,21c19,26
+< /	News & Media
+< /	Recreation & Sports
+< /	Reference
+< /	Regional
+< /	Science
+< /	Social Science
+< /	Society & Culture
+---
+> /      Home & Real Estate
+> /      Lifestyle
+> /      Money & Investing
+> /      News
+> /      People & Chat
+> /      Shopping
+> /      Sports
+> /      Travel
+23c28,48
+< #!read internet/yahooCI.ho
+---
+> Search
+> /      Airline Tickets
+> /      Auctions
+> /      Chat
+> /      Daily Crossword
+> /      Email Lookup
+> /      Horoscopes
+> /      Hot! Excite Movies
+> /      Job Finder
+> /      Maps&Directions
+> /      More...
+> /      People Finder
+> /      Personals
+> /      Search Help
+> /      Stock Quotes
+> /      Weather
+> /      Web Site Guide
+> /      Yellow Pages
+> /      [ Movie Showtimes ]
+> 
+> #!read exciteCE.ho

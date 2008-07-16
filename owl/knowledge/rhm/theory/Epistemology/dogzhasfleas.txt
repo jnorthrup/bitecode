@@ -1,0 +1,25 @@
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "Richard S. Latimer" <latimer1@att.net>
+Cc: "Merlin Jetton" <mjetton@allstate.com>; ...
+Subject: dogz has fleas
+Date: Friday, July 26, 2002 3:45 PM
+
+Sticking with my definitions
+    dog  ise   Dutchess, Reno, ...
+    dogz isany Dutchess, Reno, ...  is any dog
+    dogs isall Dutchess, Reno, ...  is all dog
+
+we can now ask: what is the meaning of
+    dogz has fleas
+    dogs has fleas
+
+and the answer is
+    any Dutchess, Reno, ... has fleas
+    all Dutchess, Reno, ... has fleas
+
+or, in other words, both statements mean
+    every unit/instance/concrete has fleas
+
+=============== 
+Dick McCullough 
+knowledge := man do identify od existent done 

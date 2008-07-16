@@ -1,0 +1,51 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/BostonCeltics.html
+# Aug/23/2003
+</pre><H3><pre>
+
+
+# Who plays for the Boston Celtics?
+
+# tools used: MKE, TAP
+# Notes:
+# could have used "? isa SportsTeam with name = Boston Celtics;".
+
+
+ke$ set echo=off, kbmode=tap;
+ke$ ? has name=Boston Celtics;
+  SportsTeamBostonCeltics
+# has name = Boston Celtics
+ke$ set bc=SportsTeamBostonCeltics;
+ke$ $bc has ?;
+# SportsTeamBostonCeltics has
+  hasTeamCode = bos
+  label = Boston Celtics
+  locatedIn = CityBostonMA
+  plays = SportBasketball
+  type = BasketballTeam
+
+ke$ ? has arcs = $bc;
+  arcs
+  playsForTeam
+# has arcs = SportsTeamBostonCeltics
+
+ke$ ? has playsForTeam = $bc;
+  AthletePierce,Paul
+  AthleteHerren,_Chris
+  AthleteCarr,Chris
+  AthletePalacio,Milt
+  AthleteBrown,Randy
+  AthletePotapenko,Vitaly
+  AthleteGriffin,Adrian
+  AthleteBlount,Mark
+  AthleteMcCarty,Walter
+  AthleteWilliams,Eric
+  AthleteMoiso,Jerome
+  AthleteWalker,_Antoine
+  AthleteStith,Bryant
+  AthleteBattie,_Tony
+  AthleteAnderson,Kenny
+# has playsForTeam = SportsTeamBostonCeltics
+
+
+</pre></H3></HTML>

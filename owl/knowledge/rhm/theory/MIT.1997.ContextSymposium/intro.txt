@@ -1,0 +1,21 @@
+
+Who am I?
+=========
+I am Richard H. McCullough.
+I am an engineer/philosopher.
+I studied theory of knowledge.
+I designed Knowledge Representation language.
+I implemented Knowledge Explorer tool.
+
+What is context?
+================
+Context is all knowledge currently available.
+
+v := man do identify existent
+at space=s,time=t,view=v statement
+
+context of statement is
+  s  where action occurs
+  t  when  action occurs
+  v  knowledge unit of man
+	that makes statement

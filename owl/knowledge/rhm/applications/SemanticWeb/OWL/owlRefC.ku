@@ -1,0 +1,71 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/owlRefC.ku
+# May/7/2003
+
+# OWL Web Ontology Language Reference
+# W3C Working Draft 31 March 2003
+# This version: 
+# http://www.w3.org/TR/2003/WD-owl-ref-20030331/ 
+# Appendix C: OWL Quick Reference 
+
+
+# Classes defined by OWL: rdfs:Class 
+owl:Class isall
+	owl:AllDifferent ,
+	owl:Class ,
+	owl:DatatypeProperty ,
+	owl:DeprecatedClass ,
+	owl:DeprecatedProperty ,
+	owl:FunctionalProperty ,
+	owl:InverseFunctionalProperty ,
+	owl:Nothing ,
+	owl:ObjectProperty ,
+	owl:Ontology ,
+	owl:Restriction ,
+	owl:SymmetricProperty ,
+	owl:Thing ;
+
+# Properties defined by OWL: rdf:Property rdfs:domain rdfs:range 
+OWL Properties isa relation with
+	automatic = none,
+	format = [rdf:Property:1, rdfs:domain:2, rdfs:range:3],
+	meaning = {
+		$1 iss rdf:Property;
+		$1 has rdfs:domain = $2;
+		$1 has rdfs:range = $3;
+		$2 has $1 = $3;
+	}; 
+begin relation OWL Properties;
+	owl:allValuesFrom,owl:Restriction,rdfs:Class;
+	owl:backwardCompatibleWith,owl:Ontology,owl:Ontology;
+	owl:cardinality,owl:Restriction,xsd:nonNegativeInteger;
+	owl:complementOf,owl:Class,owl:Class;
+	owl:differentFrom,owl:Thing,owl:Thing;
+	owl:disjointWith,owl:Class,owl:Class;
+	owl:distinctMembers,owl:AllDifferent,rdf:List;
+	owl:equivalentClass,owl:Class,owl:Class;
+	owl:equivalentProperty,rdf:Property,rdf:Property;
+	owl:imports,owl:Ontology,owl:Ontology;
+	owl:incompatibleWith,owl:Ontology,owl:Ontology;
+	owl:intersectionOf,owl:Class,rdf:List;
+	owl:inverseOf,owl:ObjectProperty,owl:ObjectProperty;
+	owl:maxCardinality,owl:Restriction,xsd:nonNegativeInteger;
+	owl:minCardinality,owl:Restriction,xsd:nonNegativeInteger;
+	owl:oneOf,owl:Class,rdf:List;
+	owl:onProperty,owl:Restriction,rdf:Property;
+	owl:priorVersion,owl:Ontology,owl:Ontology;
+	owl:sameAs,owl:Thing,owl:Thing;
+	owl:sameIndividualAs,owl:Thing,owl:Thing;
+	owl:someValuesFrom,owl:Restriction,rdfs:Class;
+	owl:unionOf,owl:Class,rdf:List;
+end relation OWL Properties;
+
+# Properties with no domain,range
+rdf:Property isg
+	owl:hasValue,		# no range
+	owl:versionInfo;	# no domain or range
+owl:hasValue has rdfs:domain = owl:Restriction;
+owl:Restriction has owl:hasValue;
+</XMP>
+</HTML>

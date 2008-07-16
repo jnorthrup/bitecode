@@ -1,0 +1,55 @@
+# 1999/3/25
+# new syntax Jul/24/2005
+
+# printout control
+hfocus += action
+
+#=======================================================#
+# primitive actions                                     #
+#                                                       #
+# Roger C. Schank, "Conceptual Information Processing", #
+# North-Holland Publishing Company/American Elsevier    #
+# Publishing Company, Inc., 1975.                       #
+#=======================================================#
+
+#================#
+# Schank page 40 #
+#================#
+action isc
+	PROPEL,		# apply force to object
+	MOVE,		# body part
+	INGEST,		# take object into body
+	EXPEL,		# force object out of body
+	GRASP,		# physically hold object
+
+	PTRANS,		# change physical location of object
+	ATRANS,		# change abstract relation of object
+
+	SPEAK,		# produce sound
+	ATTEND,		# focus sense organ on object
+
+	MTRANS,		# transfer information
+	MBUILD;		# create or combine thoughts
+
+PROPEL is action with
+	format={entity:1 do PROPEL od entity:2 from space:3 to space:4 done;};
+MOVE is action with
+	format={animal:1 do MOVE od body-part:2 from space:3 to space:4 done;};
+INGEST is action with
+	format={animal:1 do INGEST od entity:2 from space:3 to body-opening:4 done;};
+EXPEL is action with
+	format={animal:1 do EXPEL od entity:2 from body-opening:3 to space:4 done;};
+GRASP is action with
+	format={animal:1 do GRASP od entity:2 from space:3 to body-part:4 done;};
+PTRANS is action with
+	format={animal:1 do PTRANS od entity:2 from space:3 to space:4 done;};
+ATRANS is action with
+	format={animal:1 do ATRANS od entity-relation:2 from animal:3 to animal:4 done;};
+SPEAK is action with
+	format={animal:1 do SPEAK od sound:2 from body-part:3 to animal:4 done;};
+ATTEND is action with
+	format={animal:1 do ATTEND od organ:2 entity:3 done;};
+MTRANS is action with
+	format={man:1 do MTRANS od concept:2 from memory:3 to memory:4 done;};
+MBUILD is action with
+	format={man:1 do MBUILD od concept:2 from concept:3 done;};

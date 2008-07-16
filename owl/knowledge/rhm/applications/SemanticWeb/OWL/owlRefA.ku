@@ -1,0 +1,62 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/owlRefA.ku
+# Apr/27/2003
+
+# OWL Web Ontology Language Reference
+# W3C Working Draft 31 March 2003
+# This version: 
+# http://www.w3.org/TR/2003/WD-owl-ref-20030331/ 
+# Appendix A. Index of all language elements
+# NOTE: This appendix only contains the OWL-specific constructs.
+# For the RDF/RDFS constructs see the relevant RDF documentation,
+# in particular the RDF Schema document [RDF Schema].
+ 
+vocabulary isall
+  owl:AllDifferent,	#owl:AllDifferent owl:AllDifferent 
+  owl:allValuesFrom,	#owl:allValuesFrom owl:allValuesFrom 
+  owl:backwardCompatibleWith,	#owl:backwardCompatibleWith owl:backwardCompatibleWith 
+  owl:cardinality,	#owl:cardinality owl:cardinality 
+  owl:Class,	#owl:Class owl:Class 
+  owl:complementOf,	#owl:complementOf owl:complementOf 
+  owl:DataRange,	#
+  owl:DatatypeProperty,	#owl:DatatypeProperty owl:DatatypeProperty 
+  owl:DeprecatedClass,	#owl:DeprecatedClass owl:DeprecatedClass 
+  owl:DeprecatedProperty,	#owl:DeprecatedProperty owl:DeprecatedProperty 
+  owl:differentFrom,	#owl:differentFrom owl:differentFrom 
+  owl:disjointWith,	#owl:disjointWith owl:disjointWith 
+  owl:distinctMembers,	#owl:distinctMembers owl:distinctMembers 
+  rdfs:domain,	#
+  owl:FunctionalProperty,	#owl:FunctionalProperty owl:FunctionalProperty 
+  owl:hasValue,	#owl:hasValue owl:hasValue 
+  owl:imports,	#owl:imports owl:imports 
+  owl:incompatibleWith,	#owl:incompatibleWith owl:incompatibleWith 
+  owl:intersectionOf,	#owl:intersectionOf owl:intersectionOf 
+  owl:InverseFunctionalProperty,	#owl:InverseFunctionalProperty owl:InverseFunctionalProperty 
+  owl:inverseOf,	#owl:inverseOf owl:inverseOf 
+  owl:maxCardinality,	#owl:maxCardinality owl:maxCardinality 
+  owl:minCardinality,	#owl:minCardinality owl:minCardinality 
+  owl:Nothing,	#owl:Nothing owl:Nothing 
+  owl:ObjectProperty,	#owl:ObjectProperty owl:ObjectProperty 
+  owl:oneOf,	#owl:oneOf owl:oneOf 
+  owl:onProperty,	#owl:onProperty owl:onProperty 
+  owl:Ontology,	#owl:Ontology owl:Ontology 
+  owl:priorVersion,	#owl:priorVersion owl:priorVersion 
+  rdf:Property,	#
+  rdfs:range,	#
+  owl:Restriction,	#owl:Restriction owl:Restriction 
+  owl:sameAs,	#owl:sameAs owl:sameAs 
+  owl:equivalentClass,	#owl:equivalentClass owl:equivalentClass 
+  owl:sameIndividualAs,	#owl:sameIndividualAs owl:sameIndividualAs 
+  owl:equivalentProperty,	#owl:equivalentProperty@ owl:equivalentProperty 
+  owl:someValuesFrom,	#owl:someValuesFrom owl:someValuesFrom 
+  rdfs:subClassOf,	#
+  rdfs:subPropertyOf,	#
+  owl:SymmetricProperty,	#owl:SymmetricProperty owl:SymmetricProperty 
+  owl:Thing,	#owl:Thing owl:Thing 
+  owl:TransitiveProperty,	#owl:TransitiveProperty owl:TransitiveProperty 
+  owl:unionOf,	#owl:unionOf owl:unionOf 
+  owl:versionInfo;	#owl:versionInfo  owl:versionInfo  
+
+</XMP>
+</HTML>

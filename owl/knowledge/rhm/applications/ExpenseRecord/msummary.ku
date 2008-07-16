@@ -1,0 +1,41 @@
+# KEHOME/knowledge/expense/msummary.ku
+# 1999/6/1
+# new syntax Sep/3/2002
+
+# summarize expenses by year, category
+#   save costs as group members
+
+do read from expense.rel done
+
+do isd od expense with year,type done
+
+every vyear isa expense {		# year
+set echo=off;
+    !print "==================================";
+    !print $vyear;
+    every vcat isa $vyear {		# expense category
+	$vcat isall 0;
+	every vexp isa $vcat {		# individual expense
+		set . = $vexp;
+		$vcat isall $cost;
+	}; # end every vexp
+	$vcat isall ?;
+	do sum od $question done;
+	$vcat has cost=$command;
+	$vyear isall $command;
+    }; # end every vcat
+    $vyear isall ?;
+    do sum od $question done;
+    $vyear has cost=$command;
+    expense isall $command;
+    do print od "----------------------------------" done;
+set echo=on;
+} # end every vyear
+
+expense isall ?
+do sum od $question done
+expense has cost=$command
+
+? has cost
+
+exit

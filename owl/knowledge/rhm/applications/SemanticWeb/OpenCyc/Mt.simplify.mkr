@@ -1,0 +1,22 @@
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/Mt.simplify.mkr
+# Aug/31/2003
+
+# simplify OpenCyc Microtheory hierarchy
+
+set CommentMode = cyc;
+
+do read from Mt.isg.txt done;
+#do read from Mt.isp.txt done;
+
+#$Microtheory isg* ?;
+do check od knit done;
+
+do simplify lattice od #$Microtheory done;
+
+#$Microtheory isg* ?;
+do check od knit done;
+
+! diff od Mt.isg.txt, simplify.Mt.isg.txt
+	to Mt.isg.diff done;
+
+exit;

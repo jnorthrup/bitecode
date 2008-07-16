@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Date: 2008/04/04 13:42:30 $, by $Author: ivan $, $Revision: 1.5 $ -->
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+		xmlns:recs="http://www.w3.org/2003/03/recsSchema#"
+		xmlns:org="http://www.w3.org/2001/04/roadmap/org#"
+		xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#"
+		xmlns="http://www.w3.org/2001/02pd/rec54#"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#"
+		>
+	<!-- 
+	These are extra controls for the translation management for cases where,
+	for some reason or another, there is an anomaly in the original data... or the old
+	translation system does not work properly
+	-->
+	
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-smil20-20010807/">
+	    <rdfs:label>By adding this predicate, translation of this document are also
+		listed for the document whose short name is SMIL2</rdfs:label>
+        <trans:listedAlsoFor rdf:resource="http://www.w3.org/TR/SMIL2/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-SMIL2-20050107/">
+        <trans:listedAlsoFor rdf:resource="http://www.w3.org/TR/SMIL2/"/>
+	</REC>
+	
+	<recs:Group rdf:ID="smil-group">
+		<dc:title>Synchronized Multimedia Integration Language</dc:title>
+		<recs:shortTitle>SMIL</recs:shortTitle>
+		<dc:date>2003-01-23</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-smil/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2001/REC-smil20-20010807/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/REC-SMIL2-20050107/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/REC-SMIL2-20051213/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	
+	<recs:Group rdf:ID="svg-group">
+		<dc:title>Scalable Vector Graphics</dc:title>
+		<recs:shortTitle>SVG</recs:shortTitle>
+		<dc:date>2003-01-23</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2001/REC-SVG-20010904"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2003/REC-SVG11-20030114/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2003/REC-SVGMobile-20030114/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/smil-animation/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	
+	<recs:Group rdf:ID="xml-binary-char">
+		<dc:title>XML Binary Characterization</dc:title>
+		<recs:shortTitle>XML Binary</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/NOTE-xbc-characterization-20050331/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/NOTE-xbc-measurement-20050331/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/NOTE-xbc-properties-20050331/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/NOTE-xbc-use-cases-20050331/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	
+	<recs:Group rdf:ID="p3p-notes">
+		<dc:title>P3P Notes</dc:title>
+		<recs:shortTitle>P3P Notes</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2002/NOTE-p3pdeployment-20020211"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/1998/NOTE-P3P10-principles-19980721"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/1998/NOTE-P3P10-Protocols-19980324"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="soap-notes">
+		<dc:title>SOAP 1.2 Notes</dc:title>
+		<recs:shortTitle>SOAP Notes</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-soap12-af-20040608/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2002/NOTE-soap12-email-20020703"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2003/NOTE-soap12-n11n-20031008/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2003/NOTE-xmlp-scenarios-20030730"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="wsa-notes">
+		<dc:title>WS Architecture Notes</dc:title>
+		<recs:shortTitle>WSA Notes</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-ws-arch-20040211/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-wsa-reqs-20040211"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-ws-arch-scenarios-20040211/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-ws-gloss-20040211/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-ws-i18n-scenarios-20040730/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	
+	
+	<rdf:Description rdf:about="http://croll.hotbox.ru/W3C/WAI/References/QuickTips/qt.ru.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>	
+	</rdf:Description>
+	<rdf:Description rdf:about="http://croll.hotbox.ru/W3C/TR/2001/NOTE-newline-20010314">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>	
+	</rdf:Description>
+	<rdf:Description rdf:about="http://croll.hotbox.ru/W3C/TR/1998/NOTE-datetime-19980827">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>	
+	</rdf:Description>
+	<rdf:Description rdf:about="http://croll.hotbox.ru/W3C/TR/2001/WD-xml-blueberry-req-20010921">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>	
+	</rdf:Description>
+	<rdf:Description rdf:about="http://croll.hotbox.ru/W3C/TR/2001/WD-xml11-20011213/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>	
+	</rdf:Description>
+	
+</rdf:RDF>

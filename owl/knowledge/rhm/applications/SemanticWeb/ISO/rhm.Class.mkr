@@ -1,0 +1,70 @@
+#<html><xmp>
+# KEHOME/knowledge/applications/SemanticWeb/ISO/rhm.Class.mkr
+# edited from iso.Class.mkr
+# Sep/24/2005
+
+#=============#
+# declaration #
+#=============#
+    mkr:Class isu mkr:Set;
+    owl:Class ismem mkr:Class;
+
+#============#
+# Properties #
+#============#
+	#owl:Class isu owl:ClassOfClass;
+	#mkr:Class iss* AbstractObject;  # an individual, not a Class
+	# I still don't understand the next statement
+	#owl:Class is Cardinality and RoleAndDomain
+	#	and (ClassOfAbstractObject or ClassOfIndividual);
+
+#==========#
+# comments #
+#==========#
+# DEFINITION
+	mkr:Class isu mkr:Set of owl:Class;
+	owl:Class iss owl:Thing with  # true for any particular Class
+ 		natural partition,
+		membership criteria,
+		membership set;
+	owl:Thing isg owl:Class, owl:notClass;
+	if do membership criteria od existent done; 
+	then existent isu owl:Class; 
+	else existent isu owl:notClass;
+	fi;
+	if existent isu owl:Class;
+	then existent ismem owl:ClassSet;
+	fi;
+
+# membership unchanging in space-time
+# member properies change with time
+	at space=any, time=any, view=v {member isu owl:Class;};
+	at time=t {member has property=p;};
+
+# non-wellfounded set theory
+# class may be a member of itself or another class
+	mkr:Class, owl:Class has domain = wellfounded set;
+	#at view=non-wellfounded set theory {
+	#	owl:Class isu owl:Class;
+	#	owl:Class isu owl:anotherClass;
+	#};
+
+# null Class that has no members
+	at view=real world {nothing isu owl:Nothing;};
+	at view=possible world {something isu owl:Nothing;};
+
+# Classification of known members of a Class
+	man do classify od known member to owl:Class done;
+
+# EXAMPLE
+	Centrifugal pump ismem mkr:Class;
+	Mechanical equipment ismem mkr:Class;
+	Temperature ismem mkr:Class;
+
+	Commercial fusion reactor ismem mkr:Class;
+	at time=present {nothing isu Commerial fusion reactor;};
+	at time=future {something isu Commerial fusion reactor;};
+
+	Centigrade scale ismem mkr:Class;
+
+#</xmp></html>

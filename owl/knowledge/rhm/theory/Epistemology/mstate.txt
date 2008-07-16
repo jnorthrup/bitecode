@@ -1,0 +1,38 @@
+# 1999/4/5
+
+#===================================#
+# characterization of mental states #
+#===================================#
+person do know          proposition
+person do imagine       proposition
+person do guess         proposition
+person do believe       proposition
+person do have-faith-in proposition
+
+state:		know	imagine	guess	believe	have-faith-in
+------		----	-------	-----	------- -------------
+person:		any	A	A	B	C
+
+proposition:	p1	p2	p3	p3	p3
+
+evidence:	Sense	Imag.	p1	p1	p1
+evaluate:	Reason	Reason	Reason	Reason	Faith
+validity:	Cert.	Arb.	Prob.	Prob.	Cert.
+
+decision:	True	Arb.	Prob.	True	True
+
+
+
+abbreviations:
+#============#
+Sense	Sensedata
+Imag.	Imagination
+
+Reason	Reason
+Faith	Faith
+
+(Peikoff, OPAR, page 176)
+Arb.	Arbitrary (no evidence)
+Poss.	Possible
+Prob.	Probable
+Cert.	Certain (True in context)

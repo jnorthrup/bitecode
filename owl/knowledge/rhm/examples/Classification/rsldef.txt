@@ -1,0 +1,159 @@
+# 1999/5/28
+# RSL definitions
+# concept; genus; species
+
+# NOTE: 
+#   AND,OR,NOT, AT,OF,WITH,FROM,TO, IS, ALL,SOME,SUPPORTS
+# are used instead of
+#   and,or,not, at,of,with,from,to, is, all,some,supports
+# to simplify the KR translation.
+
+rsldef is relation with
+	label="_concept_; _genus_; _species_",
+	format="concept:1; genus:2; species:3",
+	meaning="$1 isa $2; $1 ise $3",
+	isastar=NONE
+
+#debug=PAREN
+hfocus += rsldef
+charformat=line
+
+unspecified genus isa existent
+
+!begin relation rsldef
+# ( NOT yet entered ) ;unspecified genus;unspecified species
+achievement;unspecified genus;unspecified species
+action;characteristic;unspecified species
+actualization;unspecified genus;unspecified species
+affect ( adjective );unspecified genus;unspecified species
+affect ( verb );action;unspecified species
+analytics;unspecified genus;unspecified species
+animal;living organism;unspecified species
+appetite;unspecified genus;unspecified species
+art;unspecified genus;technique
+beauty;unspecified genus;unspecified species
+beginning OF …;unspecified genus;OF understanding AND intelligibility
+believe  ( faith ) ;unspecified genus;unspecified species
+body;unspecified genus;unspecified species
+cause;identify;way OF action
+certain;evidential status;in which ALL evidence SUPPORTS a claim  AND none IS contrary TO the claim
+change  ( quality ) ;unspecified genus;unspecified species
+city;unspecified genus;group OF people living in same local vacinity
+compulsion;unspecified genus;unspecified species
+conduct;unspecified genus;unspecified species
+consciousness;unspecified genus;unspecified species
+conversation, argument;unspecified genus;unspecified species
+deduce;reason  ( logismos ) ;FROM principles  "( OR generalities )"  TO particulars
+definition;unspecified genus;unspecified species
+deliberation;unspecified genus;unspecified species
+delight;unspecified genus;unspecified species
+demonstration;syllogism;that articulates that which IS known.
+desire ( noun );value ( ethics );that which one wants
+dialectician;talker;using dialectical syllogisms
+differ  ( in being ) ;unspecified genus;unspecified species
+discrimination;unspecified genus;unspecified species
+duty;unspecified genus;unspecified species
+effect  ( noun ) ;unspecified genus;inseparable result OF a cause
+effect  ( verb ) ;action;TO create, accomplish, OR produce
+emotion;mental state;unspecified species
+essence;unspecified genus;that about a thing that makes it what it is.
+ethic;unspecified genus;unspecified species
+ethical;unspecified genus;unspecified species
+evidential status;mental state;resulting form the sum OF ALL one's knowledge bearing upon SOME claim
+exist;action;unspecified species
+experience;unspecified genus;unspecified species
+fact;unspecified genus;that about a thing that makes it what it is.
+fact  ( experienced ) ;unspecified genus;SOME particular  "( experienced )"  aspect OR characteristic OF some-thing  "( in reality )" .
+fallacy;conversation, argument;illogical
+form;unspecified genus;unspecified species
+free will;consciousness;faculty OF choice
+friendship;unspecified genus;unspecified species
+function;unspecified genus;unspecified species
+genus;unspecified genus;unspecified species
+goal;unspecified genus;unspecified species
+good;unspecified genus;unspecified species
+greatness OF soul;unspecified genus;unspecified species
+habit  ( settled ) ;thinking;utilizing the evidence OF the senses couple WITH reason  "( see Aristotle's Posterior Analytics )" .
+happiness via reason;achievement;happiness through reason
+health;unspecified genus;unspecified species
+honesty;unspecified genus;unspecified species
+identify;action;unspecified species
+identity;unspecified genus;unspecified species
+image;unspecified genus;mental projection beyond one's current knowledge  "( using the conscious faculty OF imagination )" 
+impossible;evidential status;such that ALL evidence IS contrary TO SOME claim AND none SUPPORTS it
+impulse;unspecified genus;unspecified species
+inanimate things;natural things;unspecified species
+induction;reason  ( logismos ) ;FROM particulars  "( AND OR principles )"  into new principles OR generalities
+infer;reason  ( nous ) ;FROM facts, premises, OR principles TO a conclusion
+intelligence;unspecified genus;unspecified species
+intelligence ( house… ) ;unspecified genus;unspecified species
+joy  ( unsurpassable ) ;unspecified genus;unspecified species
+know;action;TO perceive directly OR TO hold a correct mental integration OF SOME aspect OF reality
+knowledge;identification;correct identification OF the facts OF reality
+language;unspecified genus;unspecified species
+life;unspecified genus;unspecified species
+limit;unspecified genus;terms OF a proposition.
+living things;natural things;unspecified species
+logic;unspecified genus;unspecified species
+love;unspecified genus;unspecified species
+mental state;unspecified genus;introspective evaluation OF the condition OF one's mind
+merriment;unspecified genus;unspecified species
+middle;unspecified genus;unspecified species
+natural philosopher;unspecified genus;investigator OF natural processes
+natural science;unspecified genus;unspecified species
+natural things;unspecified genus;unspecified species
+nature;unspecified genus;unspecified species
+necessarily;unspecified genus;unspecified species
+need;unspecified genus;unspecified species
+nonessential;unspecified genus;OF no fundamental use speciesting a kind.
+nutritive;unspecified genus;unspecified species
+object;entity;that toward which activities are directed
+objective;unspecified genus;unspecified species
+pain-free;unspecified genus;unspecified species
+perceive;unspecified genus;unspecified species
+pleasure;unspecified genus;unspecified species
+possible;evidential status;WITH SOME inconclusive evidence supporting a claim
+power;unspecified genus;unspecified species
+premise;unspecified genus;a statement accepted as true  "( usually within an argument OR a syllogism )" .
+principle;unspecified genus;unspecified species
+probable;evidential status;WITH predominantly supportive  "( but inconclusive )"  evidence
+problem;unspecified genus;unspecified species
+productiveness;virtue;OF rationality applied TO human survival -- the creation OF values TO further human life
+proof;unspecified genus;the process OF deriving a conclusion, via logical steps  "( as in laws OF logic )" 
+proposition;unspecified genus;a meaningful statement, sentence, OR claim  "( about reality )" .
+prudence;unspecified genus;unspecified species
+rationality;unspecified genus;unspecified species
+reality;exist;unspecified species
+reason  ( logismos ) ;thinking;unspecified species
+reason  ( nous ) ;unspecified genus;intelligence OR reason [?]
+reasoning ( dianoia ) ;unspecified genus;unspecified species
+religion;image;FROM Greek: TO pay diligent heed TO. FROM Latin:  TO bind together.
+right;unspecified genus;unspecified species
+science;unspecified genus;unspecified species
+seeing;unspecified genus;unspecified species
+sensing;unspecified genus;unspecified species
+sheer knowing;unspecified genus;unspecified species
+species;unspecified genus;unspecified species
+stasis  ( biological ) ;unspecified genus;unspecified species
+subjective;thinking;characterized by personal bias as opposed TO observed facts
+substance;unspecified genus;unspecified species
+syllogism;conversation, argument;a set OF premise WITH a logical conclusion.
+talker;unspecified genus;user OF language.
+theology;unspecified genus;unspecified species
+thinking;unspecified genus;unspecified species
+time  ( sense ) ;unspecified genus;unspecified species
+tool;unspecified genus;unspecified species
+tranquility;mental state;absent OF significant activity  "( confusion, problems, … distractions )" 
+truth;unspecified genus;correspondence WITH reality
+value ( ethics );unspecified genus;unspecified species
+virtue;unspecified genus;unspecified species
+walking  ( about ) ;unspecified genus;unspecified species
+what;unspecified genus;unspecified species
+why?;unspecified genus;query about reasoning, motivation OR causation
+wisdom  ( practical ) ;unspecified genus;unspecified species
+wisdom  ( theoretical ) ;unspecified genus;unspecified species
+!end relation rsldef
+
+#debug=loop
+!check genus,loop
+#!exit

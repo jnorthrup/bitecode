@@ -1,0 +1,255 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tap3.ho
+# Jan/9/2003
+
+#=========================================#
+# integrated TAP and tabula rasa contexts #
+#=========================================#
+
+#====================================#
+# Knowledge Explorer output, part 3  #
+#------------------------------------#
+#    $ ke			     #
+#    <> do read from tap.mkr done    #
+#    <> do read from tapid1.mkr done #
+#    <> do read from tapid2.mkr done #
+#    <> existent isc**3 ? 	     #
+#    <> exit			     #
+#    $				     #
+#====================================#
+
+# command <do read from tapid2.mkr done>
+##### read_knit tapid2.mkr #####
+# s_html << HTML >>
+# s_html << XMP >>
+# statement <Agent iss entity with purpose>
+# statement <person isd Agent>
+# statement <person is Person>
+# statement <PLANT isd Tangible>
+# statement <PLANT is Plant>
+# statement <Class isd Set>
+# statement <Literal isd group>
+# statement <BodyPart isd part>
+# statement <attribute isi FieldOfStudy,Genre,Material,PropertyType,Quantity,SpatialDirection,StateOfMatter,UnitOfMeasure>
+# statement <relation isi subClassOf,subPropertyOf>
+# statement <FoodActivity isd Activity>
+# statement <AttributeValueType notiss Event>
+# newproposition <AttributeValueType notiss Event>
+# statement <Auction iss Event>
+# s_html << /XMP >>
+# s_html << /HTML >>
+# 0 errors found in file tapid2.mkr
+# question <existent isc**3 ?>
+existent
+/  characteristic
+//    action
+///      COMMAND
+///      ask
+///      believe
+///      classify
+///      desire
+///      identify
+///      intend
+///      know
+///      live
+///      measure
+///      method
+///      move
+///      not live
+///      not move
+///      perceive
+///      say
+///      sense
+///      want
+//    attribute
+///      FieldOfStudy
+///      Genre
+///      Material
+///      Ontology
+///      PropertyType
+///      Quantity
+///      SpatialDirection
+///      StateOfMatter
+///      UnitOfMeasure
+///      a:ActivityType
+///      a:AttributeValueType
+///      a:EventType
+///      a:TaxonomicPropertyType
+///      a:TitlePropertyType
+///      a:plural
+///      a:producesFood
+///      a_dirobject
+///      a_event
+///      a_instrument
+///      a_pplist
+///      a_product
+///      a_purpose
+///      a_subject
+///      a_value
+///      alias
+///      alternative
+///      argclass
+///      argno
+///      argument
+///      automatic
+///      cache name
+///      cconcept
+///      cgenus
+///      cknit
+///      classified
+///      classname
+///      comment
+///      cprimitive
+///      cspecies
+///      ctype
+///      cunit
+///      domain
+///      e_action
+///      e_at
+///      e_cause
+///      e_effect
+///      e_from
+///      e_object
+///      e_product
+///      e_subject
+///      e_to
+///      eobject
+///      exlusive
+///      fact
+///      format
+///      fpath
+///      genus
+///      gpecies
+///      gtype
+///      icache
+///      iconcept
+///      inclusive
+///      inseparable
+///      internal name
+///      ktype
+///      label
+///      meaning
+///      meantype
+///      member
+///      name
+///      nickname
+///      object
+///      order
+///      p_cause
+///      p_event
+///      predicate
+///      primitive
+///      product
+///      propertyTypeCardinality
+///      ptype
+///      purpose
+///      range
+///      rdf:type
+///      role
+///      rootname
+///      separable
+///      sex
+///      shortname
+///      space
+///      stv
+///      subject
+///      time
+///      uid
+///      unit
+///      utype
+///      variable
+///      verb
+///      view
+///      wexplore
+//    differentia
+///      ambiguous genus
+///      antecedent subject
+///      default
+///      essential
+///      event location
+///      event sequence
+///      exclusive
+///      exclusive mental integration
+///      existent-attribute relation
+///      file list
+///      husband
+///      identification
+///      inclusive mental integration
+///      input/output knowledge
+///      instance
+///      integrate unit
+///      man-made
+///      mental integration
+///      multiple entity
+///      multiple existent
+///      not classified
+///      not space
+///      not time
+///      predefined
+///      previous knowledge
+///      primary thing which exists
+///      rational
+///      readonly
+///      referent
+///      repetition
+///      sentence output
+///      single entity
+///      single existent
+///      specify characteristic
+///      specify number
+///      statement relation
+///      unique genus
+///      user defined
+///      visual-auditory
+///      wife
+///      wildcard
+//    interaction
+///      Activity
+///      Event
+//    part
+///      BodyPart
+///      causality-relation Set
+///      chit
+///      entity-characteristic-proposition hierarchy
+///      event Set
+//    relation
+///      r_action
+///      r_attribute
+///      r_causality
+///      r_change
+///      r_hierarchy
+///      r_part
+///      subClassOf
+///      subPropertyOf
+/  entity
+//    ANIMAL
+//    Agent
+///      Organization
+///      firstlevel:person
+///      PopularCharacter
+//    OBJECT
+///      Intangible
+///      group
+///      knowledge # {knowledge := man do identify od existent done}
+///      measurement # {measurement := man do measure od characteristic done}
+///      symbol
+//    Tangible
+///      Animal
+///      Place
+///      PLANT
+///      Product
+/  proposition
+//    causality relation
+//    context
+//    newproposition
+//    sentence
+///      assignment
+///      command
+///      production
+///      question
+///      statement
+/  unknown
+# 0 errors found in input after last group tapid2.mkr
+</XMP>
+</HTML>

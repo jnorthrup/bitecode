@@ -1,0 +1,9 @@
+CareBearStuffedToy iss PopularCharacterStuffedToy
+CartoonPopularCharacter iss PopularCharacter
+ComicPopularCharacter iss PopularCharacter
+DisneyCharacterStuffedToy iss PopularCharacterStuffedToy
+LittleBearStuffedToy iss PopularCharacterStuffedToy
+LooneyTunesStuffedToy iss PopularCharacterStuffedToy
+PokemonStuffedToy iss PopularCharacterStuffedToy
+TeletubbiesStuffedToy iss PopularCharacterStuffedToy
+ToysAndGamesPopularCharacter iss PopularCharacter

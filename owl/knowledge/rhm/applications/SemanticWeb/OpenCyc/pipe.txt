@@ -1,0 +1,188 @@
+Running /cygdrive/c/Documents and Settings/rhm/.bash_profile
+
+rhm@rhm8200 ~
+$ opencyc
+
+c:\home\opencyc\scripts\win>REM run-cyc.bat
+
+c:\home\opencyc\scripts\win>REM Execute the cyc server
+
+c:\home\opencyc\scripts\win>REM written by Stephen Reed  2/6/2002
+
+c:\home\opencyc\scripts\win>REM After some time loading the world into memory yo
+u will see CYC(1):
+
+c:\home\opencyc\scripts\win>REM which is the SubL command prompt.
+
+c:\home\opencyc\scripts\win>REM ************************************************
+***************
+
+c:\home\opencyc\scripts\win>REM [optional]
+
+c:\home\opencyc\scripts\win>REM You can enter SubL expressions such as (+ 1 2) o
+r (genls #$Person)
+
+c:\home\opencyc\scripts\win>REM or (all-genls #$Person) at the command line to v
+erify Cyc's operation.
+
+c:\home\opencyc\scripts\win>REM ************************************************
+***************
+
+c:\home\opencyc\scripts\win>REM At this point the cyc http server is running and
+ you can access
+
+c:\home\opencyc\scripts\win>REM Cyc directly via the local web browser.
+
+c:\home\opencyc\scripts\win>REM http://localhost:3602/cgi-bin/cyccgi/cg?cb-start
+
+
+c:\home\opencyc\scripts\win>REM You can browse cyc via the Guest account or perf
+orm updates by
+
+c:\home\opencyc\scripts\win>REM logging on as CycAdminstrator.
+
+c:\home\opencyc\scripts\win>REM As a security measure, Cyc by default only accep
+ts tcp connections
+
+c:\home\opencyc\scripts\win>REM from the computer that it runs on.  You can forw
+ard ports via ssh
+
+c:\home\opencyc\scripts\win>REM to enable remote clients, provide middleware (se
+e run-web-server.bat)
+
+c:\home\opencyc\scripts\win>REM to do the same.
+
+c:\home\opencyc\scripts\win>REM see the file parameters.lisp in the init directo
+ry for startup
+
+c:\home\opencyc\scripts\win>REM options including choice of tcp ports utilized,
+and enabling remote
+
+c:\home\opencyc\scripts\win>REM connections.
+
+c:\home\opencyc\scripts\win>pushd ..\..\run
+
+C:\home\opencyc\run>bin\latest.exe -w world\latest.load
+Loading statics.
+Mapping in the memory image.
+
+DP Space Limit at 71AA0000.
+Running initializers ... PROCESS (7), LOCK (15), LOCK (27), done.
+Copyright (C) 1995 - 2002 Cycorp, Inc.  All rights reserved.
+RTL (Win32 threads) initialized.
+CycL Initialized.
+Enabling base TCP services to port 3600.
+
+Ready for services.
+System 1.3039 KB 605.
+CYC(1): (genls #$Person)
+(#<(#$CollectionUnionFn (#$TheSet #$Person #<(#$GroupFn #$Person)>))> #$LegalAge
+nt #$Agent #$Animal)
+T
+CYC(2): (exit)
+
+C:\home\opencyc\run>popd
+
+rhm@rhm8200 ~
+$ mkr2cyc | opencyc
+/home/ke/bin/mkr2cyc: 66: Syntax error: Bad substitution
+
+c:\home\opencyc\scripts\win>REM run-cyc.bat
+
+c:\home\opencyc\scripts\win>REM Execute the cyc server
+
+c:\home\opencyc\scripts\win>REM written by Stephen Reed  2/6/2002
+
+c:\home\opencyc\scripts\win>REM After some time loading the world into memory yo
+u will see CYC(1):
+
+c:\home\opencyc\scripts\win>REM which is the SubL command prompt.
+
+c:\home\opencyc\scripts\win>REM ************************************************
+***************
+
+c:\home\opencyc\scripts\win>REM [optional]
+
+c:\home\opencyc\scripts\win>REM You can enter SubL expressions such as (+ 1 2) o
+r (genls #$Person)
+
+c:\home\opencyc\scripts\win>REM or (all-genls #$Person) at the command line to v
+erify Cyc's operation.
+
+c:\home\opencyc\scripts\win>REM ************************************************
+***************
+
+c:\home\opencyc\scripts\win>REM At this point the cyc http server is running and
+ you can access
+
+c:\home\opencyc\scripts\win>REM Cyc directly via the local web browser.
+
+c:\home\opencyc\scripts\win>REM http://localhost:3602/cgi-bin/cyccgi/cg?cb-start
+
+
+c:\home\opencyc\scripts\win>REM You can browse cyc via the Guest account or perf
+orm updates by
+
+c:\home\opencyc\scripts\win>REM logging on as CycAdminstrator.
+
+c:\home\opencyc\scripts\win>REM As a security measure, Cyc by default only accep
+ts tcp connections
+
+c:\home\opencyc\scripts\win>REM from the computer that it runs on.  You can forw
+ard ports via ssh
+
+c:\home\opencyc\scripts\win>REM to enable remote clients, provide middleware (se
+e run-web-server.bat)
+
+c:\home\opencyc\scripts\win>REM to do the same.
+
+c:\home\opencyc\scripts\win>REM see the file parameters.lisp in the init directo
+ry for startup
+
+c:\home\opencyc\scripts\win>REM options including choice of tcp ports utilized,
+and enabling remote
+
+c:\home\opencyc\scripts\win>REM connections.
+
+c:\home\opencyc\scripts\win>pushd ..\..\run
+
+C:\home\opencyc\run>bin\latest.exe -w world\latest.load
+Loading statics.
+Mapping in the memory image.
+
+DP Space Limit at 71AA0000.
+Running initializers ... PROCESS (7), LOCK (15), LOCK (27), done.
+Copyright (C) 1995 - 2002 Cycorp, Inc.  All rights reserved.
+RTL (Win32 threads) initialized.
+CycL Initialized.
+Enabling base TCP services to port 3600.
+
+Ready for services.
+System 1.3039 KB 605.
+CYC(1):
+Error: Error reading from #<STREAM :DESCRIPTOR "<VAL: OS-Handle 0x000006E0>") :I
+NPUT from NIL (open) 400E02DC>: The pipe has been ended.
+.
+[Switching to single-threaded mode ....]
+
+Select a restart:
+  0: Return to top-level read loop.
+  1: Recursive read loop.
+  2: Signal the debugger.
+  3: Exit program.
+?
+Error: Error reading from #<STREAM :DESCRIPTOR "<VAL: OS-Handle 0x000006E0>") :I
+NPUT from NIL (open) 400E02DC>: The pipe has been ended.
+.
+
+Select a restart:
+  0: Return to top-level read loop.
+  1: Recursive read loop.
+  2: Signal the debugger.
+  3: Exit program.
+?
+Implementation error: Recursive error
+C:\home\opencyc\run>popd
+
+rhm@rhm8200 ~
+

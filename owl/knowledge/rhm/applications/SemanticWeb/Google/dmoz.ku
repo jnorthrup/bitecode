@@ -1,0 +1,36 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Google/dmoz.ku
+# May/7/2003
+
+# important dmoz attributes
+
+<?xml version='1.0' encoding='UTF-8' ?>
+<RDF xmlns:r="http://www.w3.org/TR/RDF/"
+     xmlns:d="http://purl.org/dc/elements/1.0/"  
+     xmlns="http://dmoz.org/rdf">
+
+<!-- Generated at 2003-03-31 22:33:13 GMT on  -->
+
+
+# attributes
+Topic has
+  r:id,		# <Topic r:id="rootname">
+  catid,	# <catid>unique number</catid>
+  d:Title,	# <d:Title>friendly label</d:Title>
+  lastUpdate,	# <lastUpdate>yyyy-mm-dd hh:mm:ss</lastUpdate>
+  narrow;	# <narrow r:resource="species rootname" />
+
+
+
+# example
+<Topic r:id="Top/UTF8">
+  <catid>816296</catid>
+  <d:Title>UTF8</d:Title>
+</Topic>
+
+
+</RDF>
+
+</XMP>
+</HTML>

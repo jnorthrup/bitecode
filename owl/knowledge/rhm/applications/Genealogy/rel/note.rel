@@ -1,0 +1,23 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/note.rel
+# Oct/5/2003 Mar/15/2007
+
+# automatic: 5 proposition/infon
+# meaning:   1 proposition/infon
+
+r_note is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, action phrase, date, place],
+    format=[person:1, action phrase:2, time:3, space:4], 
+    automatic=ISU,
+    meaning={
+	at space=$4,time=$3 { $1 do $2 done; };
+	};
+
+begin relation r_note; 
+Dick McCullough 1936, list od Knowledge Explorer 1.2, 1997/5/28, Internet/CNET download.com;
+end relation r_note;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

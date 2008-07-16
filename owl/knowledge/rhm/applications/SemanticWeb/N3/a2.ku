@@ -1,0 +1,17 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/N3/a2.ku
+# Nov/15/2002
+
+# "Anonymous nodes" example ala question
+
+    at view = doc {
+	group1 := ? has firstname = "Ora"
+	group2 := ? has title = "Moby Dick"
+	group3 := group2 has author = ?
+	group4 is group1 and group3
+	do print od group4 done
+    } # end view = doc
+
+</XMP>
+</HTML>

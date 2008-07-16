@@ -1,0 +1,54 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/camhi.mkr
+# May/29/2003
+
+at view = owl;
+
+do print od "TABRASA = $TABRASA" done;
+set UniqueName=uri;
+set DisplayName=qualname;
+
+do read tap from http://www.xfront.com/owl/camera-ontology/camera.owl done;
+
+# manual translation for anonymous nodes
+# from my Apr/21/2003 email
+Viewer isany
+	ThroughTheLens, WindowOnTopOfCamera;
+BodyWithNonAdjustableShutterSpeed isa Body with
+	not shutter-speed;
+SLR isa Camera with
+	ViewFinder = ThroughTheLens;
+Large-Format isa Camera
+	with body = BodyWithNonAdjustableShutterSpeed;
+
+
+do print od "<!--  Class  -->" done;
+Class isall* ?;
+
+do print od "<!--  Resource hierarchy  -->" done;
+Resource isc* ?;
+
+do print od "<!--  Properties  -->" done;
+? has ?;
+
+do print od "<!--  equivalences  -->" done;
+? has owl:equivalentClass;
+? has owl:equivalentProperty;
+? has owl:sameAs;
+? has owl:sameClassAs;
+? has owl:samePropertyAs;
+
+aperture is ?;
+size is ?;
+
+! deletecomment od camhi.out to camhi.save done;
+! cat od camhi.save done;
+
+
+do print od "<!--  check knit  -->" done;
+do check od knit done;
+
+exit;
+</XMP>
+</HTML>

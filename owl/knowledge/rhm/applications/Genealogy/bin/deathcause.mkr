@@ -1,0 +1,36 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/deathcause.mkr
+# Aug/17/2005
+
+# search knowledge base for known deathcauses
+
+# Execution time
+# Aug/16/2005
+# 2 GHz Pentium 4, Windows XP
+# 0:07 min:sec
+
+let echo=off;
+do read from aka.rel done;	# get all names and aliases
+do read from birth.rel done;	# births and some deaths
+do read from death.rel done;	# deaths
+do check od person done;	# number of persons
+
+set debug=array;
+! rm with -f od cause.txt,noinfo.txt done;	# remove old results
+every p isa person {
+	cause := $p[deathcause];
+	name  := $p[prefername];
+	pid   := $p;
+	if {$cause is NA;} or {$cause is [];} or {$cause is &null;};
+	then do print od "noinfo, ${pid}, $name;" to noinfo.txt done;
+	else do print od "$cause, ${pid}, $name;" to cause.txt  done;
+	fi;
+};
+let echo=on;
+
+cause isc* ?;			# all the different causes
+! cat od cause.txt done;	# show cause for each person
+
+exit;				# skip checks, statistics, hierarchy
+
+# </xmp></html>

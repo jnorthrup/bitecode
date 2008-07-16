@@ -1,0 +1,348 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/tools/unicon/bookhierarchy.html
+# Mar/3/2003
+
+# Clinton Jeffery, Shamim Mohamed, Ray Pereda & Robert Parlett,
+# "Programming with Unicon: Very high level object-oriented
+# application and system programming", 7/12/2002 draft,
+# http://unicon.sourceforge.net/book/ub.pdf
+
+uniconhi is begin hierarchy;
+Programming with Unicon
+/    Preface
+//	Organization of This Book
+//	Acknowledgements
+/    Introduction
+//	Prototyping and the Spiral Model of Development
+//	Icon: a Very High Level Language for Applications
+//	Enter Unicon: More Icon than Icon
+//	The Programming Languages Food Chain
+/    Part 1: Core Unicon
+//	Chapter 1: Programs and Expressions
+///	    Your First Unicon Program
+///	    Expressions and Types
+///	    Numeric Computation
+///	    Strings and Csets
+///	    Goal-directed Evaluation
+///	    Fallible Expressions
+///	    Generators
+///	    Iteration and Control Structures
+///	    Procedures
+////		Parameters
+////		Variables and Scopes
+////		Writing Your Own Generators
+////		Recursion
+//	Chapter 2: Structures
+///	    Tables
+///	    Lists
+///	    Records
+///	    Sets
+///	    Using Structures
+////		A Deep Copy
+////		Representing Trees and Graphs
+////		The n-Queens Example
+//	Chapter 3: String Processing
+///	    String Indexes
+///	    Character Sets
+///	    Character Escapes
+///	    String Scanning
+////		File Completion
+////		Backtracking
+////		Concordance Example
+///	    Regular Expressions
+///	    Grammars
+////		Parsing
+////		Doing It Better
+//	Chapter 4: Advanced Language Features
+///	    Limiting or Negating an Expression
+///	    List Structures and Parameter Lists
+///	    Co-expressions
+///	    User-Defined Control Structures
+///	    Parallel Evaluation
+///	    Coroutines
+////		Permutations
+///	    Simulation
+//	Chapter 5: The System Interface
+///	    The Role of the System Interface
+///	    Files and Directories
+////		Directories
+////		Obtaining File Information
+////		Controlling File Ownership and Access
+////		File Locks
+///	    Programs and Process Control
+////		Signals
+////		Launching Programs
+////		Using File Redirection and Pipes
+////		Process Information
+////		The select() System Call
+///	    Networking
+////		TCP
+////		UDP
+///	    Messaging Facilities
+////		HTTP
+////		SMTP and POP
+///	    Graphics
+//	Chapter 6: Databases
+///	    Language Support for Databases
+///	    Memory-based Databases
+///	    DBM Databases
+///	    SQL Databases
+////		The SQL Language
+////		Database Architectures and ODBC
+////		Opening a SQL Database
+////		Querying and Modifying a SQL Database
+////		Traversing the Selected Rows
+////		A SQL Example Application
+////		SQL Types and Unicon Types
+////		More SQL Database Functions
+///	    Tips and Tricks for SQL Database Applications
+////		Operating on Large Files
+////		Use Multiple Connections to Nest Queries
+////		Dynamic Records
+////		The db Library
+////		Unwritable Tuples
+/    Part II: Object-oriented Software Development
+//	Chapter 7: Object-oriented Software Development
+///	    Objects in Programming Languages
+////		Encapsulation
+////		Inheritance
+////		Polymorphism
+///	    Objects in Program Design
+//	Chapter 8: Classes and Objects
+///	    Class Diagrams
+///	    Declaring Classes
+///	    Object Instances
+///	    Object Invocation
+///	    Comparing Records and Classes by Example
+///	    Before Objects
+///	    After Objects
+//	Chapter 9: Inheritance and Associations
+///	    Inheritance
+////		Inheritance Semantics
+////		Invoking Superclass Operations
+////		Inheritance Examples
+////		Superclass Cycles and Type Equivalence
+///	    Associations
+////		Aggregation
+////		User-Defined Associations
+////		Multiplicities, Roles, and Qualifiers
+////		Implementing Associations
+//	Chapter 10: Writing Large Programs
+///	    Abstract Classes
+///	    Design Patterns
+////		Singleton
+////		Proxy
+////		Chain of Responsibility
+////		Visitor
+///	    Packages
+////		The package declaration
+////		The import declaration
+////		Explicit Package References
+////		Name Conflicts and Name Mangling
+////		Compilation Order and the Unidep Tool
+///	    HTML documentation
+//	Chapter 11: Use Cases, Statecharts, and Collaboration Diagrams
+///	    Use Cases
+////		Use Case Diagrams
+////		Use Case Descriptions
+///	    Statechart Diagrams
+////		Events and Conditions
+////		Actions and Activities
+///	    Collaboration Diagrams
+/    Part III: Example Applications
+//	Chapter 12: CGI Scripts
+///	    Introduction to CGI
+////		Organization of a CGI Script
+////		Processing Input
+////		Processing Output
+////		Common CGI Environment Variables
+///	    The CGI Execution Environment
+///	    An Example HTML Form
+///	    An Example CGI Script: Echoing the User's Input
+///	    Debugging CGI Programs
+///	    Appform: An Online Scholarship Application
+///	    Summary
+//	Chapter 13: System and Administration Tools
+///	    Searching for Files
+///	    Finding Duplicate Files
+///	    User File Quotas
+////		Calculating Disk Usage
+////		Sending Mail Messages
+////		The Quota Database
+///	    Capturing a Shell Command Session
+///	    Filesystem Backups
+///	    Filtering Email
+//	Chapter 14: Internet Programs
+///	    The Client-Server Model
+///	    An Internet Scorecard Server
+////		The Scorecard Client Procedure
+////		The Scorecard Server Program
+///	    A Simple "Talk" Program
+//	Chapter 15: Genetic Algorithms
+///	    What are Genetic Algorithms?
+///	    GA Operations
+////		Fitness
+////		Crossover
+////		Mutation
+///	    The GA Process
+///	    ga_eng: a Genetic Algorithm Engine
+////		The Fitness Function
+////		Methods and Attributes of Class ga_eng
+////		A Closer Look at the evolve() Method
+////		Using ga_eng
+////		Log Files
+///	    Color Breeder: a GA Application
+////		Breeding Textures
+///	    Picking Colors for Text Displays
+//	Chapter 16: Games
+///	    Sesrit
+///	    Galactic Network Upgrade War: a Strategy Game
+////		The Play's the Thing
+////		Background
+////		Software Architecture
+////		Use Cases for Game Activities
+////		An Object Model for a Galaxy
+////		The Map
+////		The User Interface
+//	Chapter 17: Object-oriented User Interfaces
+///	    A Simple Dialog Example
+///	    Positioning Objects
+///	    A More Complex Dialog Example
+///	    Containers
+////		TabSet
+////		OverlaySet
+///	    Menu Structures
+///	    Other Components
+////		Borders
+////		Images and Icons
+////		Scroll bars
+///	    Custom Components
+////		Creating New Components
+////		Customized Menu Components
+///	    Programming Techniques
+////		Parameters
+////		Subclassing
+///	    Ivib
+////		Moving, Selecting and Resizing
+////		Dialog Configuration
+////		Component Configuration
+////		Component Details
+////		Other Editing Functions
+//	Chapter 18: Scanning and Parsing
+///	    What are Scanning and Parsing?
+///	    ulex
+////		A Word Count Program
+////		A Lexical Analyzer for a Desktop Calculator
+////		A Summary of the Regular Expression Operators:
+////		Lexical analyzers in real compilers
+///	    iyacc
+////		Parse Tree Construction
+////		A Syntax Analyzer for a Desktop Calculator
+////		Making It All Work From The Command-Line
+///	    Generating Syntax Error Messages with Merr
+////		Merr Error Specification Files
+////		The Merr Command Line
+///	    Final Tips For Using ulex and iyacc
+///	    Summary
+/    Part IV: Appendixes
+//	Appendix A: Language Reference
+///	    Immutable Types
+////		Integer
+////		Real
+////		String
+////		Cset
+///	    Mutable Types
+////		List
+////		Table
+////		Set
+////		Record
+////		Object
+vii
+////		File
+///	    Variables
+////		Global
+////		Local
+////		Static
+////		Class
+///	    Keywords
+////		Graphics Keywords
+///	    Control Structures and Reserved Words
+///	    Operators and Built-in Functions
+////		Operators
+////		Unary Operators
+////		Binary Operators
+////		Built-in Functions
+////		Graphics Functions
+///	    Preprocessor
+////		Preprocessor Commands
+////		Predefined Symbols
+///	    Execution Errors
+////		Runtime Errors
+////		System Errors
+//	Appendix B: The Icon Program Library
+///	    Procedure Library Modules
+///	    Application Programs, Examples, and Tools
+///	    Selected IPL Authors and Contributors
+//	Appendix C: The Unicon Component Library
+///	    GUI Classes
+////		_Event
+////		_Dialog : Container
+////		Component
+////		Container : Component
+////		VisibleContainer : Component
+////		Button : Component
+////		TextButton : Button
+////		IconButton : Button
+////		ButtonGroup
+////		Label : Component
+////		Icon : Component
+////		Image : Component
+////		Border : VisibleContainer
+////		ScrollBar : Component
+////		TextField : Component
+////		CheckBox : Component
+////		CheckBoxGroup
+////		TextList : Component
+////		DropDown
+////		List : Component : DropDown
+////		EditList : Component : DropDown
+////		MenuBar : Component
+////		MenuButton : Component
+////		viii
+////		MenuEvent : _Event
+////		MenuComponent
+////		SubMenu : MenuComponent
+////		Menu : SubMenu
+////		TextMenuItem : MenuComponent
+////		CheckBoxMenuItem : MenuComponent
+////		MenuSeparator : MenuComponent
+////		TableColumn : TextButton
+////		Table : Component
+////		TabItem : Container
+////		TabSet : VisibleContainer
+////		Panel : VisibleContainer
+////		OverlayItem : Container
+////		OverlaySet : VisibleContainer
+//	Appendix D: Differences between Icon and Unicon
+///	    Extensions to Functions and Operators
+///	    Objects
+///	    System Interface
+///	    Database Facilities
+///	    Multiple Programs and Execution Monitoring Support
+//	Appendix E: Portability Considerations
+///	    POSIX extensions
+////		Information from System Files
+////		Fork and Exec
+////		POSIX Functions
+///	    Microsoft Windows
+////		Partial Support for POSIX
+////		Native User Interface Components
+//	Appendix F: Additional Unicon Resources
+///	    Icon and Unicon Resources
+///	    Unicon Installation Notes
+//	References
+//	Index
+end hierarchy uniconhi;
+</XMP>
+</HTML>

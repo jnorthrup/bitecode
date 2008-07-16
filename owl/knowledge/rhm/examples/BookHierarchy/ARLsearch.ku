@@ -1,0 +1,23 @@
+# KEHOME/knowledge/examples/BookHierarchy/ARLsearch.ku
+# Nov/4/2002
+
+# sample search of cross-references
+#   The Ayn Rand Lexicon
+#   Objectivism from A to Z
+#   Harry Binswanger, editor
+#   approx. 450 topics
+
+do read from AynRandLexicon.rel done
+do size_member od topic done
+
+# all dichotomy topics
+do find od *dichotomy* done
+
+# all references to psycho-epistemology
+set x = psycho-epistemology
+? has See +=  $x
+? has See Also += $x
+
+# all references from psycho-epistemology
+$x has See = ?
+$x has See Also = ?

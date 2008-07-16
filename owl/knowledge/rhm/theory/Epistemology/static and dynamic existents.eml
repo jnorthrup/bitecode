@@ -1,0 +1,75 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "Apollo, Adrian" <thinkonaut@yahoo.com>,
+	"Latimer, Richard S." <rslatimer@comcast.net>,
+	"Blanchette, Ralph" <ralph_blanchette@hotmail.com>
+Cc: "KR-language" <KR-language@YahooGroups.com>,
+	<Owl_objectivists@yahoogroups.com>
+Subject: static and dynamic existents
+Date: Sat, 8 Oct 2005 08:14:25 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	format=flowed;
+	charset="iso-8859-1";
+	reply-type=original
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2670
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2670
+
+Food for thought
+
+It seems reasonable to think of existents
+
+    entity iss existent;
+
+as having both a static nature
+
+    entity has attribute;
+
+and a dynamic nature (something happening in space,time) .
+
+    at space=s,time=t {entity do action done;};
+
+Dynamic seems very appropriate for living things,
+which require some effort to continue their existence.
+
+But what about a rock?  Is there anything inherently
+dynamic about it?  Is it "doing something" to avoid
+decaying into nothingness?  Maybe the perpetual motion
+of its atoms?
+
+I have said previously that
+
+    entity do exist done;
+
+suggesting that "exist" subsumes all "action".
+
+But I'm now thinking "exist" is a "pseudo action"
+which subsumes all characteristics.
+Likewise, "characteristic" is a "pseudo attribute"
+which subsumes all characteristics (maybe I'd better
+start calling them properties).
+And that's why 
+
+    existence :: entity DO exist done;
+
+is equivalent to (existence IS identity;)
+
+    identity :: entity HAS characteristic;
+
+They both denote the subsumption of all
+
+    part
+    attribute
+    relation
+    action
+    interaction
+
+of entity.
+
+Dick McCullough
+knowledge := man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/

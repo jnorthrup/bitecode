@@ -1,0 +1,94 @@
+<HTML>
+<H4>
+<XMP>
+# KEHOME/knowledge/identify/ex_tabr.htm
+# 1999/2/1
+# new syntax Sep/3/2002
+
+#=====================#
+# axiomatic concepts  #
+#   minimum hierarchy #
+#=====================#
+# The primary axiomatic concepts are
+#	existent, entity, relation,
+#	man, identify, knowledge
+# which are related by
+	existent is either entity or relation
+	man, knowledge isa entity
+	knowledge := man do identify od existent done
+
+# The secondary axiomatic concepts are
+#	attribute, action, event
+#	space, time, view
+# which are related by
+	attribute, action, event isa relation
+	identify isa action
+	space, time, view isa attribute
+	v isa knowledge
+	e isa event
+	at space=s,time=t,view=v {
+		v := man do identify=e existent
+	}
+
+
+#==========================================#
+# tabula_rasa                              #
+#   hierarchy with additional concepts     #
+#   for practical knowledge representation #
+#==========================================#
+
+at space=here,time=now,view=tabula_rasa
+
+tabula rasa is begin hierarchy
+existent
+/    entity
+//	animal
+///	    man  # is person
+////		I
+//	plant
+//	object
+///	    knowledge
+////		tabula_rasa
+/    relation  # is characteristic
+//	attribute
+///	    purpose
+///	    format
+///		"class:1; class:2; ...; class:n"	# general relation format
+///		"at space=s,time=t,view=vname"		# context
+///		"vname := I do identify existent"	# knowledge
+///		"concept isa genus; concept ise unit"	# hierarchy
+///		"concept is alias"			# identity
+///		"concept is genus with differentia"	# definition
+///		"entity isin relation=infon"		# general relation
+///		"entity has attribute=value"		# state
+///		"entity haspart part=count"		# composition
+///		"entity do action=event aobject"	# change unit
+///		"event changes eobject \
+			from attribute=initial \
+			to attribute=final"		# change unit
+///		"event:1 causes event:2"		# causality
+///		"sentence:1 implies sentence:2"		# implication
+///		"if sentence:1 then sentence:2 \
+		 else sentence:3 fi"			# conditional
+///		"every x isa concept { ... $x ... }"	# iteration
+///	    meaning
+//	    value
+//	    part
+//	action
+///	    choose
+///	    identify
+////		[tabula_rasa := I do identify existent with purpose]
+//	event
+//	phenomenon
+
+#=================================#
+# Knowledge Explorer              #
+#   attributes and actions        #
+#   are also added for efficiency #
+#=================================#
+end hierarchy tabula rasa
+</XMP>
+<BR>
+<A HREF="ref.html"> General References </A> <BR>
+</H4>
+</HTML>

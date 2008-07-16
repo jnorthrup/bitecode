@@ -1,0 +1,10 @@
+# 4:00 pm 12/15/97
+# new syntax Jul/24/2005
+
+give is action with
+	a_format = {subject:1 do give od object:2 to indirect-object:3 done;},
+	a_meaning = {subject:1 do move od object:2 from subject:1 to indirect-object:3 done;};
+
+take is action with
+	a_format = {subject:1 do take od object:2 from indirect-object:3 done;},
+	a_meaning = {subject:1 do move od object:2 from indirect-object:3 to subject:1 done;};

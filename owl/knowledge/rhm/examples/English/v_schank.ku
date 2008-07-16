@@ -1,0 +1,44 @@
+# 12:50 am 5/14/97
+# new syntax Jul/24/2005
+
+#=============================#
+# context for Schank examples #
+#=============================#
+#time isall past,present;
+at view=v_schank;
+
+by isa operator;
+
+person isc John,Mary,Rita;
+
+object isc
+	advice,
+	book,
+	clothing,
+	money,
+	wine;
+
+action isc
+	advise,
+      	buy,
+     	choke,
+    	drink,
+	feel,
+        give,
+	hate,
+	hunt,
+        kill,
+        prevent,
+	race,
+	spend,
+        want;
+
+
+{person:1 do give od beating to person:2 done;} means
+	{person:1 do beat od person:2 done;};
+
+[person:1 do advise od person:2 to advice:3 done;} means
+	{person:1 do give od advice=advice:3 to person:2 done;};
+
+{person:1 do give od sock to person:2 done;} means
+	{person:1 do sock od person:2 done;};

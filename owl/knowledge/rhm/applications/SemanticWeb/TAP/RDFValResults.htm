@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+<title>RDF Validator Results</title>
+<link href='http://www.w3.org/StyleSheets/base.css' rel='stylesheet' type='text/css'/>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<style type='text/css'>
+  td {    background:#EEEEEE;    font-family:'courier new',courier,serif;    border-style: solid;    border-width: 1px;    border-color: black;    padding: 2px;  }  table {    border-style: solid;    border-width: 1px;    border-color: black;  }</style>
+</head>
+<body>
+<h1><a href='http://www.w3.org/'><img
+src='http://www.w3.org/Icons/WWW/w3c_home' alt='W3C' border='0'
+    height='48' width='72' /></a>
+RDF Validation Results
+<a href='http://www.w3.org/RDF/'
+    title='RDF Resource Description Framework'><img border='0'
+    src='http://www.w3.org/RDF/icons/rdf_powered_button.48'
+    alt='RDF Resource Description Framework Powered Icon' /></a></h1>
+<p><a href='#source'>Source</a> | <a href='#triples'>Triples</a> | <a href='#messages'>Messages</a> | <a href='#graph'>Graph</a> | <a href='#feedback'>Feedback</a> | <a href='http://www.w3.org/RDF/Validator/'>Back to Validator Input</a></p>
+<hr title='original source' /><h3><a name='source' id='source'>The original RDF/XML document</a></h3><pre>
+<a name="1">1</a>: &lt;?xml version="1.0" encoding="UTF-8"?>
+<a name="2">2</a>: &lt;!-- TAP KB Fragment. Made available under the TAP KB Open License. Please
+<a name="3">3</a>:      see http://tap.stanford.edu/license.html -->
+<a name="4">4</a>: &lt;rdf:RDF
+<a name="5">5</a>:     xmlns:dc="http://purl.org/dc/elements/1.1/"
+<a name="6">6</a>:     xmlns:a="http://tap.stanford.edu/2002/05/GetDataSchema#"
+<a name="7">7</a>:     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+<a name="8">8</a>:     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+<a name="9">9</a>:     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<a name="10">10</a>:     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+<a name="11">11</a>:     xmlns:tap="http://tap.stanford.edu/data/">
+<a name="12">12</a>:   &lt;rdfs:Class rdf:ID="Person"/>
+<a name="13">13</a>:   &lt;Person rdf:ID="http://tap.stanford.edu/data/DickMcCullough">
+<a name="14">14</a>:     &lt;rdfs:label xml:lang="en">Richard H. McCullough&lt;/rdfs:label>
+<a name="15">15</a>:     &lt;tap:hasGender>male&lt;/tap:hasGender>
+<a name="16">16</a>:     &lt;tap:hasResidence>PioneerCA&lt;/tap:hasResidence>
+<a name="17">17</a>:   &lt;/Person>
+<a name="18">18</a>:   &lt;UnitedStatesState rdf:ID="http://tap.stanford.edu/data/CaliforniaState"/>
+<a name="19">19</a>:   &lt;rdfs:Class rdf:ID="UnitedStatesCity"/>
+<a name="20">20</a>:   &lt;rdfs:Class rdf:ID="Class"/>
+<a name="21">21</a>:   &lt;UnitedStatesCity rdf:ID="http://tap.stanford.edu/data/PioneerCA">
+<a name="22">22</a>:     &lt;tap:hasZipCode>95666&lt;/tap:hasZipCode>
+<a name="23">23</a>:     &lt;tap:locatedIn>CaliforniaState&lt;/tap:locatedIn>
+<a name="24">24</a>:   &lt;/UnitedStatesCity>
+<a name="25">25</a>: &lt;/rdf:RDF>
+<a name="26">26</a>: 
+</pre>
+<hr title='triples' />
+<h3><a name='triples' id='triples'>Triples of the Data Model</a></h3>
+<table frame='border' rules='all'><tr><td><b>Number</b></td><td><b>Subject</b></td><td><b>Predicate</b></td><td><b>Object</b></td></tr>
+<tr><td>1</td>
+<td><a href='http://rhm.cdepot.net/data/val.rdf#Person'>http://rhm.cdepot.net/data/val.rdf#Person</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#Class'>http://www.w3.org/2000/01/rdf-schema#Class</a></td>
+</tr>
+<tr><td>2</td>
+<td><a href='http://rhm.cdepot.net/data/val.rdf#UnitedStatesCity'>http://rhm.cdepot.net/data/val.rdf#UnitedStatesCity</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#Class'>http://www.w3.org/2000/01/rdf-schema#Class</a></td>
+</tr>
+<tr><td>3</td>
+<td><a href='http://rhm.cdepot.net/data/val.rdf#Class'>http://rhm.cdepot.net/data/val.rdf#Class</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#Class'>http://www.w3.org/2000/01/rdf-schema#Class</a></td>
+</tr>
+</table>
+<h2><a name='messages' id='messages'>Validation Results</a></h2>
+<h3>Error Messages</h3>Error: {W108} Not an XML Name: &apos;http://tap.stanford.edu/data/DickMcCullough&apos;[Line = 13, Column = 64]<br />Error: {W108} Not an XML Name: &apos;http://tap.stanford.edu/data/CaliforniaState&apos;[Line = 18, Column = 77]<br />Error: {W108} Not an XML Name: &apos;http://tap.stanford.edu/data/PioneerCA&apos;[Line = 21, Column = 69]<br />
+<hr title='Problem reporting' /><h3><a name='feedback' id='feedback'>Feedback</a></h3><p>If you suspect the parser is in error, please enter an explanation below and then press the <b>Submit problem report</b> button, to mail the report (and listing) to <i>www-rdf-validator@w3.org</i></p><form enctype='text/plain' method='post' action='mailto:www-rdf-validator@w3.org'><textarea cols='60' rows='4' name='report'></textarea>
+<input type='hidden' name='RDF' value="&lt;?xml version=&quot;1.0&quot;&gt;
+" />
+<input type='submit' value='Submit problem report' /></form>
+<p><a href='#source'>Source</a> | <a href='#triples'>Triples</a> | <a href='#messages'>Messages</a> | <a href='#graph'>Graph</a> | <a href='#feedback'>Feedback</a> | <a href='http://www.w3.org/RDF/Validator/'>Back to Validator Input</a></p>
+</body></html>

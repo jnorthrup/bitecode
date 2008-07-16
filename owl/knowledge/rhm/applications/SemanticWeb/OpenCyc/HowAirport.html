@@ -1,0 +1,118 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/HowAirport.html
+# Sep/30/2005
+
+
+# How do I get from my house to the airport?
+
+# tools used: MKE, OpenCyc, jshop
+# Notes:
+# OpenCyc is accessed using
+#	ke$ do opencyc od server from world done;
+# jshop is the hierarchical planning tool
+#	it has not yet been configured to run
+#	in the OpenCyc environment
+# Preliminary browsing shows that OpenCyc
+#	does not know "go", "house", "airport",
+#	"time", "future", "jshop".
+#	We must first define these terms.
+# Normally, MKE creates term and instance names
+#	and declares (isu) instances automatically.
+# OpenCyc does not have enough "common-sense"
+#	to ask for the address of my house, and
+#	to find the airport closest to my house.
+#	We must first "tell" OpenCyc my address,
+#	and then ask it plan a route.
+
+
+ke$ set echo=off, kbmode=cyc;
+
+###### MKR question to be implemented in CycL
+##### ke$ at time = future {
+##### ke>     I do go = go_001
+##### ke>         with planForTask = plan_001;
+##### ke>         from my house
+##### ke>	  to   the airport
+##### ke>     done;
+##### ke> };
+##### ke$ my house, the airport has address;
+##### ke$ jshop iss method with
+##### ke>	product = [planForTask:1],
+##### ke>	format = [Microtheory:1, Event:2];
+##### ke$ ? := do jshop od PlanningDomainMicrotheory, go_001 done;
+
+##### definitions
+ke$ ! mkecyc done;
+CYC(): do ke-create-now od "go", "house", "airport",
+CYC(): 		"time", "future" done
+CYC(): do ke-create-now od "address" done;
+CYC(): do ke-create-now od "my_house", "address_my_house" done;
+CYC(): do ke-create-now od "the_airport", "address_the_airport" done;
+CYC(): #$go      isu #$Collection; #$go      iss #$Translation-LocationChange;
+CYC(): #$house   isu #$Collection; #$house   iss #$HumanResidence;
+CYC(): #$airport isu #$Collection; #$airport iss #$Airport-Physical;
+CYC(): #$time    isu #$Collection; #$time    iss #$TimeInterval;
+CYC(): #$address isu #$Collection; #$address iss #$Address-LocationDesignator;
+CYC(): #$future  isu #$time;
+CYC(): #$go_001  isu #$go;
+CYC(): #$my_house    isu #$house;
+CYC(): #$the_airport isu #$airport;
+CYC(): #$address_my_house, #$address_the_airport isu #$address;
+CYC(): #$my_house    has #$hasAttributes = #$address_my_house;
+CYC(): #$the_airport has #$hasAttributes = #$address_the_airport;
+CYC(): #$go_001      has #$hasAttributes = #$planForTask_001;
+CYC(): #$plan_001    isu #$planForTask;
+
+CYC(): do ke-create-now od "jshop" done
+CYC(): #$jshop isu #$BinaryProgramOperator, #$Relation;
+CYC(): #$jshop has #$resultIsa = #$planForTask;
+CYC(): #$jshop has #$arity = 2;
+CYC(): #$jshop has #$arg1Isa = #$Microtheory;
+CYC(): #$jshop has #$arg2Isa = #$Event;
+CYC(): do write-image to "world/airport" done;
+
+##### question
+ke$ ! mkecyc from airport done;
+CYC(): do ke-create-now od "I", "go_001", "plan_001" done;
+CYC(): #$I means #$DickMcCullough;
+
+CYC(): at #$time = #$future {
+CYC():     #$I do #$go = #$go_001
+CYC(): 	       with #$planForTask  = #$plan_001
+CYC(): 	       from #$fromLocation = #$address_my_house
+CYC(): 	       to   #$toLocation   = #$address_the_airport
+CYC():     done;
+CYC(): };
+CYC(): ? := do #$jshop od #$PlanningDomainMicrotheory, #$go_001 done;
+
+# OpenCyc response
+CYC(7): (#$jshop #$PlanningDomainMicrotheory #$go_001)
+
+Error: Operator #$jshop was not a symbol
+[Switching to single-threaded mode ....]
+
+Select a restart:
+  0: Return to top-level read loop.
+  1: Recursive read loop.
+  2: Signal the debugger.
+  3: Exit program.
+? 0
+[Resuming multi-threaded mode ....]
+CYC(7): (?plan (#$jshop #$PlanningDomainMicrotheory #$go_001))
+
+Error: Operator ?PLAN is not defined in the API
+[Switching to single-threaded mode ....]
+
+Select a restart:
+  0: Return to top-level read loop.
+  1: Recursive read loop.
+  2: Signal the debugger.
+  3: Exit program.
+? 3
+
+C:\home\opencyc\run>popd
+
+rhm@rhm8200 ~
+$
+
+</pre></HTML>

@@ -1,0 +1,16 @@
+<rdfs:Class rdf:ID="Class">
+<rdfs:Class rdf:ID="Datatype">
+<Class rdf:ID="Thing">
+<Class rdf:ID="Nothing">
+<rdfs:Class rdf:ID="Restriction">
+
+<!-- Classes and Properties for different kinds of Property -->
+<rdfs:Class rdf:ID="ObjectProperty">
+<rdfs:Class rdf:ID="DatatypeProperty">
+<rdfs:Class rdf:ID="TransitiveProperty">
+<rdfs:Class rdf:ID="SymmetricProperty">
+<rdfs:Class rdf:ID="FunctionalProperty">
+<rdfs:Class rdf:ID="InverseFunctionalProperty">
+<rdfs:Class rdf:ID="Ontology">
+<rdfs:Class rdf:ID="Literal">
+<rdfs:Class rdf:ID="Property">

@@ -1,0 +1,2338 @@
+
+
+
+
+
+
+
+<--  original RDF ontology lattice -->
+existent
+/  A
+/  entity
+//    ANIMAL
+//    OBJECT
+///      group
+////        LATTICE
+/////          hierarchy
+//////            axiomhi
+//////            kehi
+//////            mkrhi
+//////            owlhi
+//////            tabhi
+/////          lattice
+/////          unithierarchy
+//////            keprim
+//////            mkrprim
+//////            owlprim
+////        Set
+/////          concepts
+/////          events
+/////          infons
+/////          owl:Class
+/////          parts
+/////          rdfs:Class
+/////          units
+/////          values
+/////          views
+////        concept
+/////          collective concept
+/////          individual concept
+/////          number
+////        directory
+////        enumeration
+/////          boolean
+/////          enum_automatic
+/////          enum_charformat
+/////          enum_check
+/////          enum_debug
+/////          enum_echo
+/////          enum_formattype
+/////          enum_hformat
+/////          enum_htype
+/////          enum_kformat
+/////          enum_krmode
+/////          enum_krtype
+/////          enum_kscdebug
+/////          enum_meaningtype
+/////          enum_menuwindow
+/////          enum_nameformat
+/////          enum_substitute
+/////          enum_systype
+/////          yes_no
+////        exgroup
+////        family
+////        file
+/////          kb/initial.mkr
+/////          kb/ke.html
+/////          kb/kvalue.ku
+/////          kb/owl.html
+/////          kb/tabrasa.html
+/////          lattice.err
+/////          lattice.log
+/////          lattice.mkr
+/////          lattice.out
+/////          rdfVDLA.rdf
+////        file system
+////        ingroup
+////        intersection
+////        list
+////        multiset
+////        requisite
+////        sequence
+////        union
+///      symbol
+////        separator
+/////          !
+/////          "
+/////          #
+/////          &
+/////          '
+/////          (
+/////          )
+/////          *=
+/////          +=
+/////          ,
+/////          -=
+/////          /
+/////          ::=
+/////          :=
+/////          ;
+/////          <
+/////          =
+/////          >
+/////          [
+/////          \
+/////          ]
+/////          blank
+/////          comment mark
+/////          dquote mark
+/////          newline
+/////          newpage
+/////          return
+/////          squote mark
+/////          tab
+/////          vertical tab
+/////          {
+/////          |
+/////          }
+/////          ~
+////        word
+/////          VERB
+//////            change
+//////            changes
+//////            do
+//////            do*
+//////            has
+//////            haspart
+//////            in
+//////            is
+//////            isa
+//////            isa*
+//////            isa**
+//////            isa**?
+//////            isa+
+//////            isall
+//////            isall*
+//////            isalt
+//////            isalt*
+//////            isany
+//////            isany*
+//////            isapart
+//////            isc
+//////            isc*
+//////            isc**
+//////            isc**?
+//////            isc+
+//////            isd
+//////            isg
+//////            isg*
+//////            isi
+//////            isin
+//////            ismem
+//////            ismem*
+//////            isp
+//////            isp*
+//////            iss
+//////            iss*
+//////            isu
+//////            isu*
+//////            set
+//////            unset
+//////            vdo
+//////            vset
+/////          conjunction
+//////            and
+//////            causes
+//////            iff
+//////            implies
+//////            means
+//////            or
+//////            supports
+/////          control
+//////            begin
+//////            done
+//////            else
+//////            end
+//////            every
+//////            exists
+//////            exit
+//////            fi
+//////            forall
+//////            if
+//////            then
+//////            when
+//////            while
+/////          preposition
+//////            at
+//////            from
+//////            od
+//////            of
+//////            out
+//////            to
+//////            with
+/////          quantifier
+//////            a
+//////            all
+//////            any
+//////            either
+//////            no
+//////            non
+//////            not
+//////            some
+//////            the
+///      ke
+//    PLANT
+//    man
+//    mkr:Enumeration
+//    mkr:Intersection
+//    mkr:Union
+/  proposition
+//    context
+//    newproposition
+//    sentence
+///      assignment
+///      command
+////        fact_001 # "do read from kb/tabrasa.html done;"
+////        fact_1200 # "do check od unknown done;"
+////        fact_1201 # "do print od "","<--  original RDF ontology lattice -->" done;"
+////        fact_1202 # "do read from rdfVDLA.rdf done;"
+////        fact_159 # "do read from kb/ke.html done;"
+////        fact_349 # "do read from kb/initial.mkr done;"
+////        fact_350 # "do read from kb/kvalue.ku done;"
+////        fact_376 # "do read from kb/owl.html done;"
+///      conditional
+///      iteration
+///      question
+////        fact_1466 # "owl:Thing isc* ? ;"
+///      statement
+////        definition
+////        s_action
+/////          fact_026 # "man do identify od entity with purpose done;"
+////        s_attribute
+/////          fact_009 # "proposition has format = {entity has characteristic ;} ;"
+/////          fact_153 # "rdf:Property,rdf:DeprecatedProperty has chartype = characteristic ;"
+/////          fact_154 # "rdfs:domain,rdfs:range,owl:DataRange,rdfs:Datatype,rdfs:Literal has chartype = attribute ;"
+/////          fact_155 # "rdf:type,rdfs:subClassOf,rdfs:subPropertyOf has chartype = relation ;"
+/////          fact_156 # "owl:Restriction has chartype = differentia ;"
+/////          fact_340 # "knit has view,current concept,current genus concept,current species,current primitive concept,current unit ;"
+/////          fact_341 # "chit has space,time,view ;"
+/////          fact_342 # "file has fname = name,ftype = enum,fsize = integer,fstatus = string,file system = name,fpath = name,current knit = name,current concept = name,kformat = enum,hformat = enum,hoseparator = enum,relseparator = enum,nvseparator = enum,removehtml = enum,savehref = enum,kerror = integer ;"
+/////          fact_343 # "relation has label = [],format = [],meaning = {},formattype = enum_formattype,meaningtype = enum_meaningtype,automatic = enum_automatic,separator = "," ;"
+/////          fact_344 # "method has usage = {},label = [],format = [],meaning = {},formattype = enum_formattype,meaningtype = enum_meaningtype,automatic = enum_automatic,separator = "," ;"
+/////          fact_345 # "phenomenon has p_event,p_cause ;"
+////        s_begin
+/////          fact_010 # "begin hierarchy axiomhi ;"
+/////          fact_034 # "begin hierarchy tabhi ;"
+/////          fact_090 # "begin hierarchy mkrhi ;"
+/////          fact_111 # "begin unithierarchy mkrprim ;"
+/////          fact_136 # "begin hierarchy owlhi ;"
+/////          fact_145 # "begin unithierarchy owlprim ;"
+/////          fact_164 # "begin hierarchy kehi ;"
+/////          fact_239 # "begin unithierarchy keprim ;"
+////        s_change
+////        s_conditional
+////        s_definition
+////        s_end
+/////          fact_015 # "end hierarchy axiomhi ;"
+/////          fact_089 # "end hierarchy tabhi ;"
+/////          fact_110 # "end hierarchy mkrhi ;"
+/////          fact_125 # "end unithierarchy mkrprim ;"
+/////          fact_144 # "end hierarchy owlhi ;"
+/////          fact_152 # "end unithierarchy owlprim ;"
+/////          fact_238 # "end hierarchy kehi ;"
+/////          fact_339 # "end unithierarchy keprim ;"
+////        s_exit
+////        s_group
+/////          fact_129 # "owl:Class ismem rdfs:Class ;"
+/////          fact_354 # "enum_htype isany existent,concept,primitive,unit ;"
+/////          fact_355 # "enum_krtype isany mkr,fs,odp,tap,cyc ;"
+/////          fact_356 # "boolean isany true,false ;"
+/////          fact_357 # "enum_automatic isany NONE,ISA*,ISA,ISS,ISU,ISALT,ISMEM ;"
+/////          fact_358 # "enum_charformat isany line,column ;"
+/////          fact_359 # "enum_echo isany on,off ;"
+/////          fact_360 # "enum_formattype isany list,proposition ;"
+/////          fact_361 # "enum_hformat isany ku,ho,hounit,rel,dir,alpha,outline,xml ;"
+/////          fact_362 # "enum_kformat isany ku,ho,hounit,rel,dir,xml,mcf,rdf,list ;"
+/////          fact_363 # "enum_krmode isany mkr,rdf,owl,cycl ;"
+/////          fact_364 # "enum_krtype isany mkr,tap,opencyc,dmoz,fs ;"
+/////          fact_365 # "enum_meaningtype isany proposition,procedure ;"
+/////          fact_366 # "enum_menuwindow isany inputmenu,console ;"
+/////          fact_367 # "enum_nameformat isany shortname,rootname,classname,alias,internal name,cache name,nickname ;"
+/////          fact_368 # "enum_substitute isany none,slow,fast ;"
+/////          fact_369 # "yes_no isany YES,NO ;"
+/////          fact_370 # "enum_systype isany Linux,Windows ;"
+/////          fact_371 # "enum_check isany knit,genus,species,unit,primitive,loop,link,nonexistent,unknown,newproposition,mapconcept,chit,event,definition,alias,xmlns,characteristic,attribute,part,action,relation,value,count,group,file,enumeration,requisite,list,sequence,set,hierarchy,lattice,person,family ;"
+/////          fact_372 # "enum_kscdebug isany SYMBOL,TOKEN ;"
+/////          fact_373 # "enum_debug isany ACTION,ALIAS,ARITY,ASSIGN,ATTR,CHAR,CHANGE,CHARNEST,CLASSIFY,COMMAND,COMPLETE,CONCEPT,CONJ,CONTINUE,COUNT,DEDUCE,DELETE,DIR,DOLLAR,EVENT,FORMAT,GLB,GOOGLE,GROUP,HOP,HTML,ISD,KACTION,LOOP,LUB,MAP,MEANING,MENU,METHOD,MOUNT,NAME,NEWWORD,NEXT,NO,NULL,NUMERIC,PARSE,PATH,PRODUCT,PROPERTY,PROPOSITION,QNAME,QUANTIFIER,QUESTION,READ,RELATION,ROLE,SEMICOLON,SIZE,SPECIAL_CHARNAME,SPLIT,SYMBOL,TOKEN,UNPARSE,VALUE,WINDOW,XMLNS,YES ;"
+////        s_hierarchy
+/////          s_hostatement
+//////            fact_011 # "existent;"
+//////            fact_012 # "/ entity;"
+//////            fact_013 # "/ characteristic;"
+//////            fact_014 # "/ proposition;"
+//////            fact_035 # "entity;"
+//////            fact_036 # "/ ANIMAL;"
+//////            fact_037 # "/ PLANT;"
+//////            fact_038 # "/ OBJECT;"
+//////            fact_039 # "// group;"
+//////            fact_040 # "// symbol;"
+//////            fact_041 # "characteristic;"
+//////            fact_042 # "/ differentia;"
+//////            fact_043 # "/ part;"
+//////            fact_044 # "/ attribute;"
+//////            fact_045 # "// purpose;"
+//////            fact_046 # "// space;"
+//////            fact_047 # "// time;"
+//////            fact_048 # "// view;"
+//////            fact_049 # "// chartype;"
+//////            fact_050 # "// format;"
+//////            fact_051 # "// meaning;"
+//////            fact_052 # "/ relation;"
+//////            fact_053 # "/ action;"
+//////            fact_054 # "// identify;"
+//////            fact_055 # "/ interaction;"
+//////            fact_056 # "// causality;"
+//////            fact_057 # "proposition;"
+//////            fact_058 # "/ context;"
+//////            fact_059 # "/ sentence;"
+//////            fact_060 # "// statement;"
+//////            fact_061 # "/// definition;"
+//////            fact_062 # "// question;"
+//////            fact_063 # "// command;"
+//////            fact_064 # "// assignment;"
+//////            fact_065 # "// conditional;"
+//////            fact_066 # "// iteration;"
+//////            fact_067 # "group;"
+//////            fact_068 # "/ concept;"
+//////            fact_069 # "// number;"
+//////            fact_070 # "// individual concept;"
+//////            fact_071 # "// collective concept;"
+//////            fact_072 # "/ enumeration;"
+//////            fact_073 # "/ list;"
+//////            fact_074 # "/ sequence;"
+//////            fact_075 # "/ Set;"
+//////            fact_076 # "/ multiset;"
+//////            fact_077 # "/ LATTICE;"
+//////            fact_078 # "// lattice;"
+//////            fact_079 # "// hierarchy;"
+//////            fact_080 # "// unithierarchy;"
+//////            fact_081 # "symbol;"
+//////            fact_082 # "/ separator;"
+//////            fact_083 # "/ word;"
+//////            fact_084 # "attribute;"
+//////            fact_085 # "/ product;"
+//////            fact_086 # "/ subject;"
+//////            fact_087 # "/ predicate;"
+//////            fact_088 # "/ object;"
+//////            fact_091 # "existent;"
+//////            fact_092 # "/ unknown;"
+//////            fact_093 # "group;"
+//////            fact_094 # "/ directory;"
+//////            fact_095 # "/ family;"
+//////            fact_096 # "attribute;"
+//////            fact_097 # "/ variable;"
+//////            fact_098 # "/ fact;"
+//////            fact_099 # "action;"
+//////            fact_100 # "/ COMMAND;"
+//////            fact_101 # "/ method;"
+//////            fact_102 # "/ sense;"
+//////            fact_103 # "/ perceive;"
+//////            fact_104 # "/ classify;"
+//////            fact_105 # "/ measure;"
+//////            fact_106 # "/ integrate;"
+//////            fact_107 # "/ differentiate;"
+//////            fact_108 # "proposition;"
+//////            fact_109 # "/ newproposition;"
+//////            fact_112 # "OBJECT;"
+//////            fact_113 # "/ ke;"
+//////            fact_114 # "space;"
+//////            fact_115 # "/ here;"
+//////            fact_116 # "/ there;"
+//////            fact_117 # "/ everywhere;"
+//////            fact_118 # "time;"
+//////            fact_119 # "/ now;"
+//////            fact_120 # "/ past;"
+//////            fact_121 # "/ present;"
+//////            fact_122 # "/ future;"
+//////            fact_123 # "view;"
+//////            fact_124 # "/ tabula rasa;"
+//////            fact_137 # "owl:Thing;"
+//////            fact_138 # "/ mkr:Entity;"
+//////            fact_139 # "// mkr:Enumeration;"
+//////            fact_140 # "// mkr:Intersection;"
+//////            fact_141 # "// mkr:Union;"
+//////            fact_142 # "/ rdf:Property;"
+//////            fact_143 # "// owl:Restriction;"
+//////            fact_146 # "rdf:Property;"
+//////            fact_147 # "/ rdf:type;"
+//////            fact_148 # "/ rdfs:domain;"
+//////            fact_149 # "/ rdfs:range;"
+//////            fact_150 # "/ rdfs:subClassOf;"
+//////            fact_151 # "/ rdfs:subPropertyOf;"
+//////            fact_165 # "group;"
+//////            fact_166 # "/ enumeration;"
+//////            fact_167 # "/ requisite;"
+//////            fact_168 # "/ family;"
+//////            fact_169 # "/ file system;"
+//////            fact_170 # "/ file;"
+//////            fact_171 # "/ union;"
+//////            fact_172 # "/ intersection;"
+//////            fact_173 # "attribute;"
+//////            fact_174 # "/ variable;"
+//////            fact_175 # "// pronoun;"
+//////            fact_176 # "action;"
+//////            fact_177 # "/ method;"
+//////            fact_178 # "/ COMMAND;"
+//////            fact_179 # "// class;"
+//////            fact_180 # "word;"
+//////            fact_181 # "/ VERB;"
+//////            fact_182 # "/ quantifier;"
+//////            fact_183 # "/ preposition;"
+//////            fact_184 # "/ conjunction;"
+//////            fact_185 # "/ control;"
+//////            fact_186 # "statement;"
+//////            fact_187 # "/ s_identity;"
+//////            fact_188 # "/ s_definition;"
+//////            fact_189 # "/ s_relation;"
+//////            fact_190 # "// s_relstatement;"
+//////            fact_191 # "/ s_hierarchy;"
+//////            fact_192 # "// s_hostatement;"
+//////            fact_193 # "/ s_part;"
+//////            fact_194 # "/ s_attribute;"
+//////            fact_195 # "/ s_action;"
+//////            fact_196 # "/ s_interaction;"
+//////            fact_197 # "// s_causality;"
+//////            fact_198 # "/ s_change;"
+//////            fact_199 # "/ s_conditional;"
+//////            fact_200 # "/ s_iteration;"
+//////            fact_201 # "/ s_begin;"
+//////            fact_202 # "/ s_end;"
+//////            fact_203 # "/ s_exit;"
+//////            fact_204 # "/ s_html;"
+//////            fact_205 # "/ s_group;"
+//////            fact_206 # "/ s_nt;"
+//////            fact_207 # "/ s_mcf;"
+//////            fact_208 # "/ s_rdf;"
+//////            fact_209 # "attribute;"
+//////            fact_210 # "/ product;"
+//////            fact_211 # "/ label;"
+//////            fact_212 # "/ format;"
+//////            fact_213 # "/ automatic;"
+//////            fact_214 # "/ meaning;"
+//////            fact_215 # "/ argument;"
+//////            fact_216 # "/ argclass;"
+//////            fact_217 # "/ argno;"
+//////            fact_218 # "/ role;"
+//////            fact_219 # "/ rootname;"
+//////            fact_220 # "/ classname;"
+//////            fact_221 # "/ shortname;"
+//////            fact_222 # "/ name;"
+//////            fact_223 # "/ nickname;"
+//////            fact_224 # "/ alias;"
+//////            fact_225 # "/ internal name;"
+//////            fact_226 # "/ cache name;"
+//////            fact_227 # "/ sex;"
+//////            fact_228 # "variable;"
+//////            fact_229 # "/ Assignment;"
+//////            fact_230 # "/ Command;"
+//////            fact_231 # "/ Every;"
+//////            fact_232 # "/ If;"
+//////            fact_233 # "/ Question;"
+//////            fact_234 # "/ Sentence;"
+//////            fact_235 # "/ .;"
+//////            fact_236 # "/ ..;"
+//////            fact_237 # "/ ...;"
+//////            fact_240 # "separator;"
+//////            fact_241 # "/ comment mark;"
+//////            fact_242 # "/ squote mark;"
+//////            fact_243 # "/ dquote mark;"
+//////            fact_244 # "/ blank;"
+//////            fact_245 # "/ tab;"
+//////            fact_246 # "/ vertical tab;"
+//////            fact_247 # "/ return;"
+//////            fact_248 # "/ newline;"
+//////            fact_249 # "/ newpage;"
+//////            fact_250 # "/ !;"
+//////            fact_251 # "/ =;"
+//////            fact_252 # "/ +=;"
+//////            fact_253 # "/ -=;"
+//////            fact_254 # "/ *=;"
+//////            fact_255 # "/ :=;"
+//////            fact_256 # "/ ::=;"
+//////            fact_257 # "/ /;"
+//////            fact_258 # "/ \;"
+//////            fact_259 # "/ &;"
+//////            fact_260 # "/ |;"
+//////            fact_261 # "/ ~;"
+//////            fact_262 # "/ {;"
+//////            fact_263 # "/ };"
+//////            fact_264 # "/ [;"
+//////            fact_265 # "/ ];"
+//////            fact_266 # "/ (;"
+//////            fact_267 # "/ );"
+//////            fact_268 # "VERB;"
+//////            fact_269 # "/ is;"
+//////            fact_270 # "/ has;"
+//////            fact_271 # "/ haspart;"
+//////            fact_272 # "/ isapart;"
+//////            fact_273 # "/ isin;"
+//////            fact_274 # "/ do;"
+//////            fact_275 # "/ do*;"
+//////            fact_276 # "/ vdo;"
+//////            fact_277 # "/ change;"
+//////            fact_278 # "/ set;"
+//////            fact_279 # "/ vset;"
+//////            fact_280 # "/ unset;"
+//////            fact_281 # "/ in;"
+//////            fact_282 # "/ isa;"
+//////            fact_283 # "/ isc;"
+//////            fact_284 # "/ isd;"
+//////            fact_285 # "/ isi;"
+//////            fact_286 # "/ isg;"
+//////            fact_287 # "/ iss;"
+//////            fact_288 # "/ isp;"
+//////            fact_289 # "/ isu;"
+//////            fact_290 # "/ isall;"
+//////            fact_291 # "/ ismem;"
+//////            fact_292 # "/ isany;"
+//////            fact_293 # "/ isalt;"
+//////            fact_294 # "quantifier;"
+//////            fact_295 # "/ a;"
+//////            fact_296 # "/ all;"
+//////            fact_297 # "/ any;"
+//////            fact_298 # "/ either;"
+//////            fact_299 # "/ no;"
+//////            fact_300 # "/ non;"
+//////            fact_301 # "/ not;"
+//////            fact_302 # "/ some;"
+//////            fact_303 # "/ the;"
+//////            fact_304 # "preposition;"
+//////            fact_305 # "/ at;"
+//////            fact_306 # "/ of;"
+//////            fact_307 # "/ with;"
+//////            fact_308 # "/ out;"
+//////            fact_309 # "/ od;"
+//////            fact_310 # "/ from;"
+//////            fact_311 # "/ to;"
+//////            fact_312 # "conjunction;"
+//////            fact_313 # "/ causes;"
+//////            fact_314 # "/ means;"
+//////            fact_315 # "/ and;"
+//////            fact_316 # "/ or;"
+//////            fact_317 # "/ iff;"
+//////            fact_318 # "/ implies;"
+//////            fact_319 # "/ supports;"
+//////            fact_320 # "control;"
+//////            fact_321 # "/ done;"
+//////            fact_322 # "/ begin;"
+//////            fact_323 # "/ exit;"
+//////            fact_324 # "/ if;"
+//////            fact_325 # "/ then;"
+//////            fact_326 # "/ else;"
+//////            fact_327 # "/ fi;"
+//////            fact_328 # "/ every;"
+//////            fact_329 # "/ when;"
+//////            fact_330 # "/ while;"
+//////            fact_331 # "Set;"
+//////            fact_332 # "/ views;"
+//////            fact_333 # "/ concepts;"
+//////            fact_334 # "/ units;"
+//////            fact_335 # "/ parts;"
+//////            fact_336 # "/ values;"
+//////            fact_337 # "/ infons;"
+//////            fact_338 # "/ events;"
+/////          fact_006 # "entity isa existent ;"
+/////          fact_007 # "characteristic isa existent ;"
+/////          fact_008 # "proposition isa existent ;"
+/////          fact_017 # "A isa existent ;"
+/////          fact_028 # "man isa entity ;"
+/////          fact_029 # "identify isa action ;"
+/////          fact_030 # "purpose isa attribute ;"
+/////          fact_031 # "action,attribute isa characteristic ;"
+/////          fact_032 # "sentence isc statement,question,command,assignment,conditional,iteration ;"
+/////          fact_033 # "characteristic isc differentia,part,relation,interaction ;"
+/////          fact_127 # "rdfs:Class isu Set ;"
+/////          fact_128 # "owl:Class isu Set ;"
+/////          fact_353 # "enumeration isp boolean,enum_automatic,enum_charformat,enum_check,enum_debug,enum_kscdebug,enum_echo,enum_formattype,enum_hformat,enum_htype,enum_kformat,enum_krmode,enum_krtype,enum_meaningtype,enum_menuwindow,enum_nameformat,enum_substitute,enum_systype,yes_no ;"
+////        s_html
+/////          fact_002 # "< HTML >"
+/////          fact_003 # "< TITLE >"
+/////          fact_004 # "Tabula Rasa Hierarchy < /TITLE >"
+/////          fact_005 # "< XMP >"
+/////          fact_1198 # "< /XMP >"
+/////          fact_1199 # "< /HTML >"
+/////          fact_1203 # "< HTML >"
+/////          fact_1204 # "< XMP >"
+/////          fact_1205 # "< rdf:RDF xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#" >"
+/////          fact_1206 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Resource" >"
+/////          fact_1207 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1208 # "< rdfs:label >"
+/////          fact_1209 # "Resource < /rdfs:label >"
+/////          fact_1210 # "< rdfs:comment >"
+/////          fact_1211 # "The class resource everything. < /rdfs:comment >"
+/////          fact_1212 # "< /rdfs:Class >"
+/////          fact_1213 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" >"
+/////          fact_1214 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1215 # "< rdfs:label >"
+/////          fact_1216 # "type < /rdfs:label >"
+/////          fact_1217 # "< rdfs:comment >"
+/////          fact_1218 # "The subject is an instance of a class. < /rdfs:comment >"
+/////          fact_1219 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1220 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1221 # "< /rdf:Property >"
+/////          fact_1222 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Class" >"
+/////          fact_1223 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1224 # "< rdfs:label >"
+/////          fact_1225 # "Class < /rdfs:label >"
+/////          fact_1226 # "< rdfs:comment >"
+/////          fact_1227 # "The class of classes. < /rdfs:comment >"
+/////          fact_1228 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1229 # "< /rdfs:Class >"
+/////          fact_1230 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#subClassOf" >"
+/////          fact_1231 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1232 # "< rdfs:label >"
+/////          fact_1233 # "subClassOf < /rdfs:label >"
+/////          fact_1234 # "< rdfs:comment >"
+/////          fact_1235 # "The subject is a subclass of a class. < /rdfs:comment >"
+/////          fact_1236 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1237 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1238 # "< /rdf:Property >"
+/////          fact_1239 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" >"
+/////          fact_1240 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1241 # "< rdfs:label >"
+/////          fact_1242 # "subPropertyOf < /rdfs:label >"
+/////          fact_1243 # "< rdfs:comment >"
+/////          fact_1244 # "The subject is a subproperty of a property. < /rdfs:comment >"
+/////          fact_1245 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1246 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1247 # "< /rdf:Property >"
+/////          fact_1248 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" >"
+/////          fact_1249 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1250 # "< rdfs:label >"
+/////          fact_1251 # "Property < /rdfs:label >"
+/////          fact_1252 # "< rdfs:comment >"
+/////          fact_1253 # "The class of RDF properties. < /rdfs:comment >"
+/////          fact_1254 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1255 # "< /rdfs:Class >"
+/////          fact_1256 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#comment" >"
+/////          fact_1257 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1258 # "< rdfs:label >"
+/////          fact_1259 # "comment < /rdfs:label >"
+/////          fact_1260 # "< rdfs:comment >"
+/////          fact_1261 # "A description of the subject resource. < /rdfs:comment >"
+/////          fact_1262 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1263 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Literal" / >"
+/////          fact_1264 # "< /rdf:Property >"
+/////          fact_1265 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#label" >"
+/////          fact_1266 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1267 # "< rdfs:label >"
+/////          fact_1268 # "label < /rdfs:label >"
+/////          fact_1269 # "< rdfs:comment >"
+/////          fact_1270 # "A human-readable name for the subject. < /rdfs:comment >"
+/////          fact_1271 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1272 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Literal" / >"
+/////          fact_1273 # "< /rdf:Property >"
+/////          fact_1274 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#domain" >"
+/////          fact_1275 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1276 # "< rdfs:label >"
+/////          fact_1277 # "domain < /rdfs:label >"
+/////          fact_1278 # "< rdfs:comment >"
+/////          fact_1279 # "A domain of the subject property. < /rdfs:comment >"
+/////          fact_1280 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1281 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1282 # "< /rdf:Property >"
+/////          fact_1283 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#range" >"
+/////          fact_1284 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1285 # "< rdfs:label >"
+/////          fact_1286 # "range < /rdfs:label >"
+/////          fact_1287 # "< rdfs:comment >"
+/////          fact_1288 # "A range of the subject property. < /rdfs:comment >"
+/////          fact_1289 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1290 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1291 # "< /rdf:Property >"
+/////          fact_1292 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#seeAlso" >"
+/////          fact_1293 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1294 # "< rdfs:label >"
+/////          fact_1295 # "seeAlso < /rdfs:label >"
+/////          fact_1296 # "< rdfs:comment >"
+/////          fact_1297 # "Further information about the subject resource. < /rdfs:comment >"
+/////          fact_1298 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1299 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1300 # "< /rdf:Property >"
+/////          fact_1301 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" >"
+/////          fact_1302 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1303 # "< rdf:type rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1304 # "< rdfs:subPropertyOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#seeAlso" / >"
+/////          fact_1305 # "< rdfs:label >"
+/////          fact_1306 # "isDefinedBy < /rdfs:label >"
+/////          fact_1307 # "< rdfs:comment >"
+/////          fact_1308 # "The defininition of the subject resource. < /rdfs:comment >"
+/////          fact_1309 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1310 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1311 # "< /rdf:Property >"
+/////          fact_1312 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Literal" >"
+/////          fact_1313 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1314 # "< rdfs:label >"
+/////          fact_1315 # "Literal < /rdfs:label >"
+/////          fact_1316 # "< rdfs:comment >"
+/////          fact_1317 # "The class of literal values eg. textual strings and integers. < /rdfs:comment >"
+/////          fact_1318 # "< /rdfs:Class >"
+/////          fact_1319 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" >"
+/////          fact_1320 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1321 # "< rdfs:label >"
+/////          fact_1322 # "Statement < /rdfs:label >"
+/////          fact_1323 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1324 # "< rdfs:comment >"
+/////          fact_1325 # "The class of RDF statements. < /rdfs:comment >"
+/////          fact_1326 # "< /rdfs:Class >"
+/////          fact_1327 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject" >"
+/////          fact_1328 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1329 # "< rdfs:label >"
+/////          fact_1330 # "subject < /rdfs:label >"
+/////          fact_1331 # "< rdfs:comment >"
+/////          fact_1332 # "The subject of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1333 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1334 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1335 # "< /rdf:Property >"
+/////          fact_1336 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate" >"
+/////          fact_1337 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1338 # "< rdfs:label >"
+/////          fact_1339 # "predicate < /rdfs:label >"
+/////          fact_1340 # "< rdfs:comment >"
+/////          fact_1341 # "The predicate of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1342 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1343 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1344 # "< /rdf:Property >"
+/////          fact_1345 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#object" >"
+/////          fact_1346 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1347 # "< rdfs:label >"
+/////          fact_1348 # "object < /rdfs:label >"
+/////          fact_1349 # "< rdfs:comment >"
+/////          fact_1350 # "The object of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1351 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1352 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1353 # "< /rdf:Property >"
+/////          fact_1354 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Container" >"
+/////          fact_1355 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1356 # "< rdfs:label >"
+/////          fact_1357 # "Container < /rdfs:label >"
+/////          fact_1358 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1359 # "< rdfs:comment >"
+/////          fact_1360 # "The class of RDF containers. < /rdfs:comment >"
+/////          fact_1361 # "< /rdfs:Class >"
+/////          fact_1362 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag" >"
+/////          fact_1363 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1364 # "< rdfs:label >"
+/////          fact_1365 # "Bag < /rdfs:label >"
+/////          fact_1366 # "< rdfs:comment >"
+/////          fact_1367 # "The class of unordered containers. < /rdfs:comment >"
+/////          fact_1368 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1369 # "< /rdfs:Class >"
+/////          fact_1370 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" >"
+/////          fact_1371 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1372 # "< rdfs:label >"
+/////          fact_1373 # "Seq < /rdfs:label >"
+/////          fact_1374 # "< rdfs:comment >"
+/////          fact_1375 # "The class of ordered containers. < /rdfs:comment >"
+/////          fact_1376 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1377 # "< /rdfs:Class >"
+/////          fact_1378 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt" >"
+/////          fact_1379 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1380 # "< rdfs:label >"
+/////          fact_1381 # "Alt < /rdfs:label >"
+/////          fact_1382 # "< rdfs:comment >"
+/////          fact_1383 # "The class of containers of alternatives. < /rdfs:comment >"
+/////          fact_1384 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1385 # "< /rdfs:Class >"
+/////          fact_1386 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty" >"
+/////          fact_1387 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1388 # "< rdfs:label >"
+/////          fact_1389 # "ContainerMembershipProperty < /rdfs:label >"
+/////          fact_1390 # "< rdfs:comment >"
+/////          fact_1391 # "The class of container membership properties rdf:_1 rdf:_2 ... all of which are sub-properties of 'member' . < /rdfs:comment >"
+/////          fact_1392 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1393 # "< /rdfs:Class >"
+/////          fact_1394 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#member" >"
+/////          fact_1395 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1396 # "< rdfs:label >"
+/////          fact_1397 # "member < /rdfs:label >"
+/////          fact_1398 # "< rdfs:comment >"
+/////          fact_1399 # "A member of the subject container. < /rdfs:comment >"
+/////          fact_1400 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1401 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1402 # "< /rdf:Property >"
+/////          fact_1403 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" >"
+/////          fact_1404 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1405 # "< rdfs:label >"
+/////          fact_1406 # "value < /rdfs:label >"
+/////          fact_1407 # "< rdfs:comment >"
+/////          fact_1408 # "Idiomatic property used for structured values. < /rdfs:comment >"
+/////          fact_1409 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1410 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1411 # "< /rdf:Property >"
+/////          fact_1412 # "< !-- the following are new additions Nov 2002 -- >"
+/////          fact_1413 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" >"
+/////          fact_1414 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1415 # "< rdfs:label >"
+/////          fact_1416 # "List < /rdfs:label >"
+/////          fact_1417 # "< rdfs:comment >"
+/////          fact_1418 # "The class of RDF Lists. < /rdfs:comment >"
+/////          fact_1419 # "< /rdfs:Class >"
+/////          fact_1420 # "< rdf:List rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" >"
+/////          fact_1421 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1422 # "< rdfs:label >"
+/////          fact_1423 # "nil < /rdfs:label >"
+/////          fact_1424 # "< rdfs:comment >"
+/////          fact_1425 # "The empty list with no items in it. If the rest of a list is nil then the list has no more items in it. < /rdfs:comment >"
+/////          fact_1426 # "< /rdf:List >"
+/////          fact_1427 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" >"
+/////          fact_1428 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1429 # "< rdfs:label >"
+/////          fact_1430 # "first < /rdfs:label >"
+/////          fact_1431 # "< rdfs:comment >"
+/////          fact_1432 # "The first item in the subject RDF list. < /rdfs:comment >"
+/////          fact_1433 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1434 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1435 # "< /rdf:Property >"
+/////          fact_1436 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" >"
+/////          fact_1437 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1438 # "< rdfs:label >"
+/////          fact_1439 # "rest < /rdfs:label >"
+/////          fact_1440 # "< rdfs:comment >"
+/////          fact_1441 # "The rest of the subject RDF list after the first item. < /rdfs:comment >"
+/////          fact_1442 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1443 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1444 # "< /rdf:Property >"
+/////          fact_1445 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Datatype" >"
+/////          fact_1446 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1447 # "< rdfs:label >"
+/////          fact_1448 # "Datatype < /rdfs:label >"
+/////          fact_1449 # "< rdfs:comment >"
+/////          fact_1450 # "The class of RDF datatypes. < /rdfs:comment >"
+/////          fact_1451 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1452 # "< /rdfs:Class >"
+/////          fact_1453 # "< rdfs:Datatype rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral" >"
+/////          fact_1454 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1455 # "< rdfs:label >"
+/////          fact_1456 # "XMLLiteral < /rdfs:label >"
+/////          fact_1457 # "< rdfs:comment >"
+/////          fact_1458 # "The class of XML literal values. < /rdfs:comment >"
+/////          fact_1459 # "< /rdfs:Datatype >"
+/////          fact_1460 # "< rdf:Description rdf:about = "http://www.w3.org/2000/01/rdf-schema#" >"
+/////          fact_1461 # "< rdfs:seeAlso rdf:resource = "http://www.w3.org/2000/01/rdf-schema-more" / >"
+/////          fact_1462 # "< /rdf:Description >"
+/////          fact_1463 # "< /rdf:RDF >"
+/////          fact_1464 # "< /XMP >"
+/////          fact_1465 # "< /HTML >"
+/////          fact_157 # "< /XMP >"
+/////          fact_158 # "< /HTML >"
+/////          fact_160 # "< HTML >"
+/////          fact_161 # "< TITLE >"
+/////          fact_162 # "McCullough Knowledge Explorer Hierarchy < /TITLE >"
+/////          fact_163 # "< XMP >"
+/////          fact_346 # "< /XMP >"
+/////          fact_347 # "< /HTML >"
+/////          fact_351 # "< HTML >"
+/////          fact_352 # "< XMP >"
+/////          fact_374 # "< /XMP >"
+/////          fact_375 # "< /HTML >"
+/////          fact_377 # "< HTML >"
+/////          fact_378 # "< XMP >"
+////        s_identity
+/////          fact_016 # "existent is existent ;"
+/////          fact_018 # "A is A ;"
+/////          fact_019 # "A or not A is existent ;"
+/////          fact_020 # "A and not A is nonexistent ;"
+/////          fact_021 # "nonexistent is not nonexistent ;"
+/////          fact_022 # "B is nonexistent ;"
+/////          fact_023 # "B is not B ;"
+/////          fact_126 # "man is person ;"
+/////          fact_130 # "existent is owl:Thing ;"
+/////          fact_131 # "entity is mkr:Entity ;"
+/////          fact_132 # "characteristic is rdf:Property ;"
+/////          fact_133 # "statement is rdf:Statement ;"
+/////          fact_134 # "nonexistent is owl:Nothing ;"
+/////          fact_135 # "rdfs:Resource is owl:Thing ;"
+////        s_interaction
+/////          s_causality
+////        s_iteration
+////        s_mcf
+////        s_nt
+////        s_part
+/////          fact_027 # "knowledge haspart proposition list ;"
+////        s_rdf
+////        s_relation
+/////          s_relstatement
+/  characteristic
+//    action
+///      COMMAND
+////        ExtractData
+////        altlist
+////        altsize
+////        cat
+////        cd
+////        check
+////        class
+////        clist
+////        clock
+////        csize
+////        date
+////        day
+////        dbclose
+////        dbopen
+////        dbprint
+////        delete
+////        deletecomment
+////        dir
+////        dump
+////        dump/ged
+////        dump/hidden
+////        dump/nvstack
+////        entropy
+////        exec
+////        explorer
+////        factsize
+////        find
+////        first-name
+////        flist
+////        fsize
+////        fstatus
+////        ftype
+////        genus_list
+////        genus_path
+////        getenv
+////        given-name
+////        group_list
+////        group_path
+////        hdepth
+////        help
+////        hlevel
+////        hwalk
+////        import
+////        import ontology
+////        interpret_line
+////        isa_exp
+////        isc_exp
+////        isclist
+////        kbdump
+////        kbload
+////        kbwrite
+////        kdepth
+////        klevel
+////        klist
+////        ksize
+////        last-name
+////        load
+////        load/ged
+////        ls
+////        max
+////        member_list
+////        member_path
+////        memlist
+////        memsize
+////        menu
+////        merge
+////        middle-name
+////        min
+////        mkdir
+////        month
+////        mount hierarchy
+////        nvtab
+////        path2list
+////        plist
+////        print
+////        psize
+////        pwd
+////        read
+////        read directory
+////        read tap
+////        read_dmoz
+////        replace
+////        rmdir
+////        sh
+////        simplify lattice
+////        size_act
+////        size_alias
+////        size_alternative
+////        size_attr
+////        size_echar
+////        size_eobj
+////        size_exgroup
+////        size_fact
+////        size_genus
+////        size_group
+////        size_ingroup
+////        size_member
+////        size_part
+////        size_primitive
+////        size_rel
+////        size_species
+////        size_unit
+////        slist
+////        species_list
+////        ssize
+////        suffix-name
+////        sum
+////        surname
+////        title-name
+////        ulist
+////        unique
+////        unit_list
+////        unit_path
+////        usize
+////        vdump
+////        vload
+////        vpop
+////        vpush
+////        vwrite
+////        write
+////        write directory
+////        year
+///      classify
+///      differentiate
+///      identify
+////        identify_025
+///      integrate
+///      measure
+///      method
+///      perceive
+///      sense
+//    attribute
+///      TITLE
+///      alias
+///      argclass
+///      argno
+///      argument
+///      automatic
+///      cache name
+///      chartype
+///      classname
+///      comment
+///      current concept
+///      current genus concept
+///      current knit
+///      current primitive concept
+///      current species
+///      current unit
+///      domain
+///      fact
+///      format
+///      formattype
+///      fpath
+///      gtype
+///      internal name
+///      isDefinedBy
+///      krtype
+///      label
+///      meaning
+///      meaningtype
+///      name
+///      nickname
+///      object
+///      p_cause
+///      p_event
+///      predicate
+///      primitive
+///      product
+///      purpose
+///      range
+///      role
+///      rootname
+///      sex
+///      shortname
+///      space
+////        everywhere
+////        here
+////        there
+///      stv
+///      subClassOf
+///      subject
+///      time
+////        future
+////        now
+////        past
+////        present
+///      type
+///      usage
+///      variable
+////        .
+////        ..
+////        ...
+////        Assignment
+////        BaseQualifier
+////        BaseUri
+////        CheckComment
+////        Command
+////        DefaultQualifier
+////        DefaultUri
+////        DisplayName
+////        Every
+////        If
+////        Question
+////        Sentence
+////        TypeComment
+////        UniqueName
+////        charformat
+////        cname
+////        dbmode
+////        debug
+////        echo
+////        fd
+////        fmode
+////        fname
+////        hchar
+////        hcheck
+////        hfocus
+////        hformat
+////        hmaxcount
+////        hmaxlevel
+////        hmethod
+////        hminfactid
+////        hop
+////        hoseparator
+////        hpad
+////        hquote
+////        hreduce
+////        hrelation
+////        htab
+////        iversion
+////        kcase
+////        kedb
+////        kehome
+////        kerror
+////        keview
+////        kformat
+////        klastid
+////        kmapword
+////        kname
+////        kquote
+////        kscdebug
+////        kversion
+////        menuwindow
+////        mseparator
+////        nvseparator
+////        pronoun
+/////          I
+/////          he
+/////          it
+/////          none
+/////          she
+/////          they
+/////          we
+/////          you
+////        pseparator
+////        qseparator
+////        relseparator
+////        removehtml
+////        roleseparator
+////        savehref
+////        submethod
+////        systype
+////        tapformat
+////        nameformat
+///      view
+////        tabula rasa
+/////          owl
+/////          rdf
+/////          rdfs
+///      wexplore
+///      xmlns:rdf
+///      xmlns:rdfs
+//    differentia
+//    interaction
+///      causality
+//    owl:Restriction
+//    part
+///      proposition list
+//    relation
+//    rdf:type
+//    rdfs:domain
+//    rdfs:range
+//    rdfs:subClassOf
+//    rdfs:subPropertyOf
+/  unknown
+/  rdf-schema
+
+<--  simplify lattice -->
+
+<--  simplified RDF ontology lattice -->
+existent
+/  A
+/  entity
+//    ANIMAL
+//    OBJECT
+///      group
+////        LATTICE
+/////          hierarchy
+//////            axiomhi
+//////            kehi
+//////            mkrhi
+//////            owlhi
+//////            tabhi
+/////          lattice
+/////          unithierarchy
+//////            keprim
+//////            mkrprim
+//////            owlprim
+////        Set
+/////          concepts
+/////          events
+/////          infons
+/////          owl:Class
+/////          parts
+/////          rdfs:Class
+/////          units
+/////          values
+/////          views
+////        concept
+/////          collective concept
+/////          individual concept
+/////          number
+////        directory
+////        enumeration
+/////          boolean
+/////          enum_automatic
+/////          enum_charformat
+/////          enum_check
+/////          enum_debug
+/////          enum_echo
+/////          enum_formattype
+/////          enum_hformat
+/////          enum_htype
+/////          enum_kformat
+/////          enum_krmode
+/////          enum_krtype
+/////          enum_kscdebug
+/////          enum_meaningtype
+/////          enum_menuwindow
+/////          enum_nameformat
+/////          enum_substitute
+/////          enum_systype
+/////          yes_no
+////        exgroup
+////        family
+////        file
+/////          kb/initial.mkr
+/////          kb/ke.html
+/////          kb/kvalue.ku
+/////          kb/owl.html
+/////          kb/tabrasa.html
+/////          lattice.err
+/////          lattice.log
+/////          lattice.mkr
+/////          lattice.out
+/////          rdfVDLA.rdf
+////        file system
+////        ingroup
+////        intersection
+////        list
+////        multiset
+////        requisite
+////        sequence
+////        union
+///      symbol
+////        separator
+/////          !
+/////          "
+/////          #
+/////          &
+/////          '
+/////          (
+/////          )
+/////          *=
+/////          +=
+/////          ,
+/////          -=
+/////          /
+/////          ::=
+/////          :=
+/////          ;
+/////          <
+/////          =
+/////          >
+/////          [
+/////          \
+/////          ]
+/////          blank
+/////          comment mark
+/////          dquote mark
+/////          newline
+/////          newpage
+/////          return
+/////          squote mark
+/////          tab
+/////          vertical tab
+/////          {
+/////          |
+/////          }
+/////          ~
+////        word
+/////          VERB
+//////            change
+//////            changes
+//////            do
+//////            do*
+//////            has
+//////            haspart
+//////            in
+//////            is
+//////            isa
+//////            isa*
+//////            isa**
+//////            isa**?
+//////            isa+
+//////            isall
+//////            isall*
+//////            isalt
+//////            isalt*
+//////            isany
+//////            isany*
+//////            isapart
+//////            isc
+//////            isc*
+//////            isc**
+//////            isc**?
+//////            isc+
+//////            isd
+//////            isg
+//////            isg*
+//////            isi
+//////            isin
+//////            ismem
+//////            ismem*
+//////            isp
+//////            isp*
+//////            iss
+//////            iss*
+//////            isu
+//////            isu*
+//////            set
+//////            unset
+//////            vdo
+//////            vset
+/////          conjunction
+//////            and
+//////            causes
+//////            iff
+//////            implies
+//////            means
+//////            or
+//////            supports
+/////          control
+//////            begin
+//////            done
+//////            else
+//////            end
+//////            every
+//////            exists
+//////            exit
+//////            fi
+//////            forall
+//////            if
+//////            then
+//////            when
+//////            while
+/////          preposition
+//////            at
+//////            from
+//////            od
+//////            of
+//////            out
+//////            to
+//////            with
+/////          quantifier
+//////            a
+//////            all
+//////            any
+//////            either
+//////            no
+//////            non
+//////            not
+//////            some
+//////            the
+///      ke
+//    PLANT
+//    man
+//    mkr:Enumeration
+//    mkr:Intersection
+//    mkr:Union
+/  proposition
+//    context
+//    newproposition
+//    sentence
+///      assignment
+///      command
+////        fact_001 # "do read from kb/tabrasa.html done;"
+////        fact_1200 # "do check od unknown done;"
+////        fact_1201 # "do print od "","<--  original RDF ontology lattice -->" done;"
+////        fact_1202 # "do read from rdfVDLA.rdf done;"
+////        fact_1467 # "do print od "","<--  simplify lattice -->" done;"
+////        fact_1468 # "do simplify lattice od owl:Thing done;"
+////        fact_1469 # "do print od "","<--  simplified RDF ontology lattice -->" done;"
+////        fact_159 # "do read from kb/ke.html done;"
+////        fact_349 # "do read from kb/initial.mkr done;"
+////        fact_350 # "do read from kb/kvalue.ku done;"
+////        fact_376 # "do read from kb/owl.html done;"
+///      conditional
+///      iteration
+///      question
+////        fact_1466 # "owl:Thing isc* ? ;"
+////        fact_1470 # "owl:Thing isc* ? ;"
+///      statement
+////        definition
+////        s_action
+/////          fact_026 # "man do identify od entity with purpose done;"
+////        s_attribute
+/////          fact_009 # "proposition has format = {entity has characteristic ;} ;"
+/////          fact_153 # "rdf:Property,rdf:DeprecatedProperty has chartype = characteristic ;"
+/////          fact_154 # "rdfs:domain,rdfs:range,owl:DataRange,rdfs:Datatype,rdfs:Literal has chartype = attribute ;"
+/////          fact_155 # "rdf:type,rdfs:subClassOf,rdfs:subPropertyOf has chartype = relation ;"
+/////          fact_156 # "owl:Restriction has chartype = differentia ;"
+/////          fact_340 # "knit has view,current concept,current genus concept,current species,current primitive concept,current unit ;"
+/////          fact_341 # "chit has space,time,view ;"
+/////          fact_342 # "file has fname = name,ftype = enum,fsize = integer,fstatus = string,file system = name,fpath = name,current knit = name,current concept = name,kformat = enum,hformat = enum,hoseparator = enum,relseparator = enum,nvseparator = enum,removehtml = enum,savehref = enum,kerror = integer ;"
+/////          fact_343 # "relation has label = [],format = [],meaning = {},formattype = enum_formattype,meaningtype = enum_meaningtype,automatic = enum_automatic,separator = "," ;"
+/////          fact_344 # "method has usage = {},label = [],format = [],meaning = {},formattype = enum_formattype,meaningtype = enum_meaningtype,automatic = enum_automatic,separator = "," ;"
+/////          fact_345 # "phenomenon has p_event,p_cause ;"
+////        s_begin
+/////          fact_010 # "begin hierarchy axiomhi ;"
+/////          fact_034 # "begin hierarchy tabhi ;"
+/////          fact_090 # "begin hierarchy mkrhi ;"
+/////          fact_111 # "begin unithierarchy mkrprim ;"
+/////          fact_136 # "begin hierarchy owlhi ;"
+/////          fact_145 # "begin unithierarchy owlprim ;"
+/////          fact_164 # "begin hierarchy kehi ;"
+/////          fact_239 # "begin unithierarchy keprim ;"
+////        s_change
+////        s_conditional
+////        s_definition
+////        s_end
+/////          fact_015 # "end hierarchy axiomhi ;"
+/////          fact_089 # "end hierarchy tabhi ;"
+/////          fact_110 # "end hierarchy mkrhi ;"
+/////          fact_125 # "end unithierarchy mkrprim ;"
+/////          fact_144 # "end hierarchy owlhi ;"
+/////          fact_152 # "end unithierarchy owlprim ;"
+/////          fact_238 # "end hierarchy kehi ;"
+/////          fact_339 # "end unithierarchy keprim ;"
+////        s_exit
+////        s_group
+/////          fact_129 # "owl:Class ismem rdfs:Class ;"
+/////          fact_354 # "enum_htype isany existent,concept,primitive,unit ;"
+/////          fact_355 # "enum_krtype isany mkr,fs,odp,tap,cyc ;"
+/////          fact_356 # "boolean isany true,false ;"
+/////          fact_357 # "enum_automatic isany NONE,ISA*,ISA,ISS,ISU,ISALT,ISMEM ;"
+/////          fact_358 # "enum_charformat isany line,column ;"
+/////          fact_359 # "enum_echo isany on,off ;"
+/////          fact_360 # "enum_formattype isany list,proposition ;"
+/////          fact_361 # "enum_hformat isany ku,ho,hounit,rel,dir,alpha,outline,xml ;"
+/////          fact_362 # "enum_kformat isany ku,ho,hounit,rel,dir,xml,mcf,rdf,list ;"
+/////          fact_363 # "enum_krmode isany mkr,rdf,owl,cycl ;"
+/////          fact_364 # "enum_krtype isany mkr,tap,opencyc,dmoz,fs ;"
+/////          fact_365 # "enum_meaningtype isany proposition,procedure ;"
+/////          fact_366 # "enum_menuwindow isany inputmenu,console ;"
+/////          fact_367 # "enum_nameformat isany shortname,rootname,classname,alias,internal name,cache name,nickname ;"
+/////          fact_368 # "enum_substitute isany none,slow,fast ;"
+/////          fact_369 # "yes_no isany YES,NO ;"
+/////          fact_370 # "enum_systype isany Linux,Windows ;"
+/////          fact_371 # "enum_check isany knit,genus,species,unit,primitive,loop,link,nonexistent,unknown,newproposition,mapconcept,chit,event,definition,alias,xmlns,characteristic,attribute,part,action,relation,value,count,group,file,enumeration,requisite,list,sequence,set,hierarchy,lattice,person,family ;"
+/////          fact_372 # "enum_kscdebug isany SYMBOL,TOKEN ;"
+/////          fact_373 # "enum_debug isany ACTION,ALIAS,ARITY,ASSIGN,ATTR,CHAR,CHANGE,CHARNEST,CLASSIFY,COMMAND,COMPLETE,CONCEPT,CONJ,CONTINUE,COUNT,DEDUCE,DELETE,DIR,DOLLAR,EVENT,FORMAT,GLB,GOOGLE,GROUP,HOP,HTML,ISD,KACTION,LOOP,LUB,MAP,MEANING,MENU,METHOD,MOUNT,NAME,NEWWORD,NEXT,NO,NULL,NUMERIC,PARSE,PATH,PRODUCT,PROPERTY,PROPOSITION,QNAME,QUANTIFIER,QUESTION,READ,RELATION,ROLE,SEMICOLON,SIZE,SPECIAL_CHARNAME,SPLIT,SYMBOL,TOKEN,UNPARSE,VALUE,WINDOW,XMLNS,YES ;"
+////        s_hierarchy
+/////          s_hostatement
+//////            fact_011 # "existent;"
+//////            fact_012 # "/ entity;"
+//////            fact_013 # "/ characteristic;"
+//////            fact_014 # "/ proposition;"
+//////            fact_035 # "entity;"
+//////            fact_036 # "/ ANIMAL;"
+//////            fact_037 # "/ PLANT;"
+//////            fact_038 # "/ OBJECT;"
+//////            fact_039 # "// group;"
+//////            fact_040 # "// symbol;"
+//////            fact_041 # "characteristic;"
+//////            fact_042 # "/ differentia;"
+//////            fact_043 # "/ part;"
+//////            fact_044 # "/ attribute;"
+//////            fact_045 # "// purpose;"
+//////            fact_046 # "// space;"
+//////            fact_047 # "// time;"
+//////            fact_048 # "// view;"
+//////            fact_049 # "// chartype;"
+//////            fact_050 # "// format;"
+//////            fact_051 # "// meaning;"
+//////            fact_052 # "/ relation;"
+//////            fact_053 # "/ action;"
+//////            fact_054 # "// identify;"
+//////            fact_055 # "/ interaction;"
+//////            fact_056 # "// causality;"
+//////            fact_057 # "proposition;"
+//////            fact_058 # "/ context;"
+//////            fact_059 # "/ sentence;"
+//////            fact_060 # "// statement;"
+//////            fact_061 # "/// definition;"
+//////            fact_062 # "// question;"
+//////            fact_063 # "// command;"
+//////            fact_064 # "// assignment;"
+//////            fact_065 # "// conditional;"
+//////            fact_066 # "// iteration;"
+//////            fact_067 # "group;"
+//////            fact_068 # "/ concept;"
+//////            fact_069 # "// number;"
+//////            fact_070 # "// individual concept;"
+//////            fact_071 # "// collective concept;"
+//////            fact_072 # "/ enumeration;"
+//////            fact_073 # "/ list;"
+//////            fact_074 # "/ sequence;"
+//////            fact_075 # "/ Set;"
+//////            fact_076 # "/ multiset;"
+//////            fact_077 # "/ LATTICE;"
+//////            fact_078 # "// lattice;"
+//////            fact_079 # "// hierarchy;"
+//////            fact_080 # "// unithierarchy;"
+//////            fact_081 # "symbol;"
+//////            fact_082 # "/ separator;"
+//////            fact_083 # "/ word;"
+//////            fact_084 # "attribute;"
+//////            fact_085 # "/ product;"
+//////            fact_086 # "/ subject;"
+//////            fact_087 # "/ predicate;"
+//////            fact_088 # "/ object;"
+//////            fact_091 # "existent;"
+//////            fact_092 # "/ unknown;"
+//////            fact_093 # "group;"
+//////            fact_094 # "/ directory;"
+//////            fact_095 # "/ family;"
+//////            fact_096 # "attribute;"
+//////            fact_097 # "/ variable;"
+//////            fact_098 # "/ fact;"
+//////            fact_099 # "action;"
+//////            fact_100 # "/ COMMAND;"
+//////            fact_101 # "/ method;"
+//////            fact_102 # "/ sense;"
+//////            fact_103 # "/ perceive;"
+//////            fact_104 # "/ classify;"
+//////            fact_105 # "/ measure;"
+//////            fact_106 # "/ integrate;"
+//////            fact_107 # "/ differentiate;"
+//////            fact_108 # "proposition;"
+//////            fact_109 # "/ newproposition;"
+//////            fact_112 # "OBJECT;"
+//////            fact_113 # "/ ke;"
+//////            fact_114 # "space;"
+//////            fact_115 # "/ here;"
+//////            fact_116 # "/ there;"
+//////            fact_117 # "/ everywhere;"
+//////            fact_118 # "time;"
+//////            fact_119 # "/ now;"
+//////            fact_120 # "/ past;"
+//////            fact_121 # "/ present;"
+//////            fact_122 # "/ future;"
+//////            fact_123 # "view;"
+//////            fact_124 # "/ tabula rasa;"
+//////            fact_137 # "owl:Thing;"
+//////            fact_138 # "/ mkr:Entity;"
+//////            fact_139 # "// mkr:Enumeration;"
+//////            fact_140 # "// mkr:Intersection;"
+//////            fact_141 # "// mkr:Union;"
+//////            fact_142 # "/ rdf:Property;"
+//////            fact_143 # "// owl:Restriction;"
+//////            fact_146 # "rdf:Property;"
+//////            fact_147 # "/ rdf:type;"
+//////            fact_148 # "/ rdfs:domain;"
+//////            fact_149 # "/ rdfs:range;"
+//////            fact_150 # "/ rdfs:subClassOf;"
+//////            fact_151 # "/ rdfs:subPropertyOf;"
+//////            fact_165 # "group;"
+//////            fact_166 # "/ enumeration;"
+//////            fact_167 # "/ requisite;"
+//////            fact_168 # "/ family;"
+//////            fact_169 # "/ file system;"
+//////            fact_170 # "/ file;"
+//////            fact_171 # "/ union;"
+//////            fact_172 # "/ intersection;"
+//////            fact_173 # "attribute;"
+//////            fact_174 # "/ variable;"
+//////            fact_175 # "// pronoun;"
+//////            fact_176 # "action;"
+//////            fact_177 # "/ method;"
+//////            fact_178 # "/ COMMAND;"
+//////            fact_179 # "// class;"
+//////            fact_180 # "word;"
+//////            fact_181 # "/ VERB;"
+//////            fact_182 # "/ quantifier;"
+//////            fact_183 # "/ preposition;"
+//////            fact_184 # "/ conjunction;"
+//////            fact_185 # "/ control;"
+//////            fact_186 # "statement;"
+//////            fact_187 # "/ s_identity;"
+//////            fact_188 # "/ s_definition;"
+//////            fact_189 # "/ s_relation;"
+//////            fact_190 # "// s_relstatement;"
+//////            fact_191 # "/ s_hierarchy;"
+//////            fact_192 # "// s_hostatement;"
+//////            fact_193 # "/ s_part;"
+//////            fact_194 # "/ s_attribute;"
+//////            fact_195 # "/ s_action;"
+//////            fact_196 # "/ s_interaction;"
+//////            fact_197 # "// s_causality;"
+//////            fact_198 # "/ s_change;"
+//////            fact_199 # "/ s_conditional;"
+//////            fact_200 # "/ s_iteration;"
+//////            fact_201 # "/ s_begin;"
+//////            fact_202 # "/ s_end;"
+//////            fact_203 # "/ s_exit;"
+//////            fact_204 # "/ s_html;"
+//////            fact_205 # "/ s_group;"
+//////            fact_206 # "/ s_nt;"
+//////            fact_207 # "/ s_mcf;"
+//////            fact_208 # "/ s_rdf;"
+//////            fact_209 # "attribute;"
+//////            fact_210 # "/ product;"
+//////            fact_211 # "/ label;"
+//////            fact_212 # "/ format;"
+//////            fact_213 # "/ automatic;"
+//////            fact_214 # "/ meaning;"
+//////            fact_215 # "/ argument;"
+//////            fact_216 # "/ argclass;"
+//////            fact_217 # "/ argno;"
+//////            fact_218 # "/ role;"
+//////            fact_219 # "/ rootname;"
+//////            fact_220 # "/ classname;"
+//////            fact_221 # "/ shortname;"
+//////            fact_222 # "/ name;"
+//////            fact_223 # "/ nickname;"
+//////            fact_224 # "/ alias;"
+//////            fact_225 # "/ internal name;"
+//////            fact_226 # "/ cache name;"
+//////            fact_227 # "/ sex;"
+//////            fact_228 # "variable;"
+//////            fact_229 # "/ Assignment;"
+//////            fact_230 # "/ Command;"
+//////            fact_231 # "/ Every;"
+//////            fact_232 # "/ If;"
+//////            fact_233 # "/ Question;"
+//////            fact_234 # "/ Sentence;"
+//////            fact_235 # "/ .;"
+//////            fact_236 # "/ ..;"
+//////            fact_237 # "/ ...;"
+//////            fact_240 # "separator;"
+//////            fact_241 # "/ comment mark;"
+//////            fact_242 # "/ squote mark;"
+//////            fact_243 # "/ dquote mark;"
+//////            fact_244 # "/ blank;"
+//////            fact_245 # "/ tab;"
+//////            fact_246 # "/ vertical tab;"
+//////            fact_247 # "/ return;"
+//////            fact_248 # "/ newline;"
+//////            fact_249 # "/ newpage;"
+//////            fact_250 # "/ !;"
+//////            fact_251 # "/ =;"
+//////            fact_252 # "/ +=;"
+//////            fact_253 # "/ -=;"
+//////            fact_254 # "/ *=;"
+//////            fact_255 # "/ :=;"
+//////            fact_256 # "/ ::=;"
+//////            fact_257 # "/ /;"
+//////            fact_258 # "/ \;"
+//////            fact_259 # "/ &;"
+//////            fact_260 # "/ |;"
+//////            fact_261 # "/ ~;"
+//////            fact_262 # "/ {;"
+//////            fact_263 # "/ };"
+//////            fact_264 # "/ [;"
+//////            fact_265 # "/ ];"
+//////            fact_266 # "/ (;"
+//////            fact_267 # "/ );"
+//////            fact_268 # "VERB;"
+//////            fact_269 # "/ is;"
+//////            fact_270 # "/ has;"
+//////            fact_271 # "/ haspart;"
+//////            fact_272 # "/ isapart;"
+//////            fact_273 # "/ isin;"
+//////            fact_274 # "/ do;"
+//////            fact_275 # "/ do*;"
+//////            fact_276 # "/ vdo;"
+//////            fact_277 # "/ change;"
+//////            fact_278 # "/ set;"
+//////            fact_279 # "/ vset;"
+//////            fact_280 # "/ unset;"
+//////            fact_281 # "/ in;"
+//////            fact_282 # "/ isa;"
+//////            fact_283 # "/ isc;"
+//////            fact_284 # "/ isd;"
+//////            fact_285 # "/ isi;"
+//////            fact_286 # "/ isg;"
+//////            fact_287 # "/ iss;"
+//////            fact_288 # "/ isp;"
+//////            fact_289 # "/ isu;"
+//////            fact_290 # "/ isall;"
+//////            fact_291 # "/ ismem;"
+//////            fact_292 # "/ isany;"
+//////            fact_293 # "/ isalt;"
+//////            fact_294 # "quantifier;"
+//////            fact_295 # "/ a;"
+//////            fact_296 # "/ all;"
+//////            fact_297 # "/ any;"
+//////            fact_298 # "/ either;"
+//////            fact_299 # "/ no;"
+//////            fact_300 # "/ non;"
+//////            fact_301 # "/ not;"
+//////            fact_302 # "/ some;"
+//////            fact_303 # "/ the;"
+//////            fact_304 # "preposition;"
+//////            fact_305 # "/ at;"
+//////            fact_306 # "/ of;"
+//////            fact_307 # "/ with;"
+//////            fact_308 # "/ out;"
+//////            fact_309 # "/ od;"
+//////            fact_310 # "/ from;"
+//////            fact_311 # "/ to;"
+//////            fact_312 # "conjunction;"
+//////            fact_313 # "/ causes;"
+//////            fact_314 # "/ means;"
+//////            fact_315 # "/ and;"
+//////            fact_316 # "/ or;"
+//////            fact_317 # "/ iff;"
+//////            fact_318 # "/ implies;"
+//////            fact_319 # "/ supports;"
+//////            fact_320 # "control;"
+//////            fact_321 # "/ done;"
+//////            fact_322 # "/ begin;"
+//////            fact_323 # "/ exit;"
+//////            fact_324 # "/ if;"
+//////            fact_325 # "/ then;"
+//////            fact_326 # "/ else;"
+//////            fact_327 # "/ fi;"
+//////            fact_328 # "/ every;"
+//////            fact_329 # "/ when;"
+//////            fact_330 # "/ while;"
+//////            fact_331 # "Set;"
+//////            fact_332 # "/ views;"
+//////            fact_333 # "/ concepts;"
+//////            fact_334 # "/ units;"
+//////            fact_335 # "/ parts;"
+//////            fact_336 # "/ values;"
+//////            fact_337 # "/ infons;"
+//////            fact_338 # "/ events;"
+/////          fact_006 # "entity isa existent ;"
+/////          fact_007 # "characteristic isa existent ;"
+/////          fact_008 # "proposition isa existent ;"
+/////          fact_017 # "A isa existent ;"
+/////          fact_028 # "man isa entity ;"
+/////          fact_029 # "identify isa action ;"
+/////          fact_030 # "purpose isa attribute ;"
+/////          fact_031 # "action,attribute isa characteristic ;"
+/////          fact_032 # "sentence isc statement,question,command,assignment,conditional,iteration ;"
+/////          fact_033 # "characteristic isc differentia,part,relation,interaction ;"
+/////          fact_127 # "rdfs:Class isu Set ;"
+/////          fact_128 # "owl:Class isu Set ;"
+/////          fact_353 # "enumeration isp boolean,enum_automatic,enum_charformat,enum_check,enum_debug,enum_kscdebug,enum_echo,enum_formattype,enum_hformat,enum_htype,enum_kformat,enum_krmode,enum_krtype,enum_meaningtype,enum_menuwindow,enum_nameformat,enum_substitute,enum_systype,yes_no ;"
+////        s_html
+/////          fact_002 # "< HTML >"
+/////          fact_003 # "< TITLE >"
+/////          fact_004 # "Tabula Rasa Hierarchy < /TITLE >"
+/////          fact_005 # "< XMP >"
+/////          fact_1198 # "< /XMP >"
+/////          fact_1199 # "< /HTML >"
+/////          fact_1203 # "< HTML >"
+/////          fact_1204 # "< XMP >"
+/////          fact_1205 # "< rdf:RDF xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#" >"
+/////          fact_1206 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Resource" >"
+/////          fact_1207 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1208 # "< rdfs:label >"
+/////          fact_1209 # "Resource < /rdfs:label >"
+/////          fact_1210 # "< rdfs:comment >"
+/////          fact_1211 # "The class resource everything. < /rdfs:comment >"
+/////          fact_1212 # "< /rdfs:Class >"
+/////          fact_1213 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" >"
+/////          fact_1214 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1215 # "< rdfs:label >"
+/////          fact_1216 # "type < /rdfs:label >"
+/////          fact_1217 # "< rdfs:comment >"
+/////          fact_1218 # "The subject is an instance of a class. < /rdfs:comment >"
+/////          fact_1219 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1220 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1221 # "< /rdf:Property >"
+/////          fact_1222 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Class" >"
+/////          fact_1223 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1224 # "< rdfs:label >"
+/////          fact_1225 # "Class < /rdfs:label >"
+/////          fact_1226 # "< rdfs:comment >"
+/////          fact_1227 # "The class of classes. < /rdfs:comment >"
+/////          fact_1228 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1229 # "< /rdfs:Class >"
+/////          fact_1230 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#subClassOf" >"
+/////          fact_1231 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1232 # "< rdfs:label >"
+/////          fact_1233 # "subClassOf < /rdfs:label >"
+/////          fact_1234 # "< rdfs:comment >"
+/////          fact_1235 # "The subject is a subclass of a class. < /rdfs:comment >"
+/////          fact_1236 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1237 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1238 # "< /rdf:Property >"
+/////          fact_1239 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" >"
+/////          fact_1240 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1241 # "< rdfs:label >"
+/////          fact_1242 # "subPropertyOf < /rdfs:label >"
+/////          fact_1243 # "< rdfs:comment >"
+/////          fact_1244 # "The subject is a subproperty of a property. < /rdfs:comment >"
+/////          fact_1245 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1246 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1247 # "< /rdf:Property >"
+/////          fact_1248 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" >"
+/////          fact_1249 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1250 # "< rdfs:label >"
+/////          fact_1251 # "Property < /rdfs:label >"
+/////          fact_1252 # "< rdfs:comment >"
+/////          fact_1253 # "The class of RDF properties. < /rdfs:comment >"
+/////          fact_1254 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1255 # "< /rdfs:Class >"
+/////          fact_1256 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#comment" >"
+/////          fact_1257 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1258 # "< rdfs:label >"
+/////          fact_1259 # "comment < /rdfs:label >"
+/////          fact_1260 # "< rdfs:comment >"
+/////          fact_1261 # "A description of the subject resource. < /rdfs:comment >"
+/////          fact_1262 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1263 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Literal" / >"
+/////          fact_1264 # "< /rdf:Property >"
+/////          fact_1265 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#label" >"
+/////          fact_1266 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1267 # "< rdfs:label >"
+/////          fact_1268 # "label < /rdfs:label >"
+/////          fact_1269 # "< rdfs:comment >"
+/////          fact_1270 # "A human-readable name for the subject. < /rdfs:comment >"
+/////          fact_1271 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1272 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Literal" / >"
+/////          fact_1273 # "< /rdf:Property >"
+/////          fact_1274 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#domain" >"
+/////          fact_1275 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1276 # "< rdfs:label >"
+/////          fact_1277 # "domain < /rdfs:label >"
+/////          fact_1278 # "< rdfs:comment >"
+/////          fact_1279 # "A domain of the subject property. < /rdfs:comment >"
+/////          fact_1280 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1281 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1282 # "< /rdf:Property >"
+/////          fact_1283 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#range" >"
+/////          fact_1284 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1285 # "< rdfs:label >"
+/////          fact_1286 # "range < /rdfs:label >"
+/////          fact_1287 # "< rdfs:comment >"
+/////          fact_1288 # "A range of the subject property. < /rdfs:comment >"
+/////          fact_1289 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1290 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1291 # "< /rdf:Property >"
+/////          fact_1292 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#seeAlso" >"
+/////          fact_1293 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1294 # "< rdfs:label >"
+/////          fact_1295 # "seeAlso < /rdfs:label >"
+/////          fact_1296 # "< rdfs:comment >"
+/////          fact_1297 # "Further information about the subject resource. < /rdfs:comment >"
+/////          fact_1298 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1299 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1300 # "< /rdf:Property >"
+/////          fact_1301 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" >"
+/////          fact_1302 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1303 # "< rdf:type rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1304 # "< rdfs:subPropertyOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#seeAlso" / >"
+/////          fact_1305 # "< rdfs:label >"
+/////          fact_1306 # "isDefinedBy < /rdfs:label >"
+/////          fact_1307 # "< rdfs:comment >"
+/////          fact_1308 # "The defininition of the subject resource. < /rdfs:comment >"
+/////          fact_1309 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1310 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1311 # "< /rdf:Property >"
+/////          fact_1312 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Literal" >"
+/////          fact_1313 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1314 # "< rdfs:label >"
+/////          fact_1315 # "Literal < /rdfs:label >"
+/////          fact_1316 # "< rdfs:comment >"
+/////          fact_1317 # "The class of literal values eg. textual strings and integers. < /rdfs:comment >"
+/////          fact_1318 # "< /rdfs:Class >"
+/////          fact_1319 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" >"
+/////          fact_1320 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1321 # "< rdfs:label >"
+/////          fact_1322 # "Statement < /rdfs:label >"
+/////          fact_1323 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1324 # "< rdfs:comment >"
+/////          fact_1325 # "The class of RDF statements. < /rdfs:comment >"
+/////          fact_1326 # "< /rdfs:Class >"
+/////          fact_1327 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject" >"
+/////          fact_1328 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1329 # "< rdfs:label >"
+/////          fact_1330 # "subject < /rdfs:label >"
+/////          fact_1331 # "< rdfs:comment >"
+/////          fact_1332 # "The subject of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1333 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1334 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1335 # "< /rdf:Property >"
+/////          fact_1336 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate" >"
+/////          fact_1337 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1338 # "< rdfs:label >"
+/////          fact_1339 # "predicate < /rdfs:label >"
+/////          fact_1340 # "< rdfs:comment >"
+/////          fact_1341 # "The predicate of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1342 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1343 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1344 # "< /rdf:Property >"
+/////          fact_1345 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#object" >"
+/////          fact_1346 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1347 # "< rdfs:label >"
+/////          fact_1348 # "object < /rdfs:label >"
+/////          fact_1349 # "< rdfs:comment >"
+/////          fact_1350 # "The object of the subject RDF statement. < /rdfs:comment >"
+/////          fact_1351 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" / >"
+/////          fact_1352 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1353 # "< /rdf:Property >"
+/////          fact_1354 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Container" >"
+/////          fact_1355 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1356 # "< rdfs:label >"
+/////          fact_1357 # "Container < /rdfs:label >"
+/////          fact_1358 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1359 # "< rdfs:comment >"
+/////          fact_1360 # "The class of RDF containers. < /rdfs:comment >"
+/////          fact_1361 # "< /rdfs:Class >"
+/////          fact_1362 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag" >"
+/////          fact_1363 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1364 # "< rdfs:label >"
+/////          fact_1365 # "Bag < /rdfs:label >"
+/////          fact_1366 # "< rdfs:comment >"
+/////          fact_1367 # "The class of unordered containers. < /rdfs:comment >"
+/////          fact_1368 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1369 # "< /rdfs:Class >"
+/////          fact_1370 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" >"
+/////          fact_1371 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1372 # "< rdfs:label >"
+/////          fact_1373 # "Seq < /rdfs:label >"
+/////          fact_1374 # "< rdfs:comment >"
+/////          fact_1375 # "The class of ordered containers. < /rdfs:comment >"
+/////          fact_1376 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1377 # "< /rdfs:Class >"
+/////          fact_1378 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt" >"
+/////          fact_1379 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1380 # "< rdfs:label >"
+/////          fact_1381 # "Alt < /rdfs:label >"
+/////          fact_1382 # "< rdfs:comment >"
+/////          fact_1383 # "The class of containers of alternatives. < /rdfs:comment >"
+/////          fact_1384 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Container" / >"
+/////          fact_1385 # "< /rdfs:Class >"
+/////          fact_1386 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty" >"
+/////          fact_1387 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1388 # "< rdfs:label >"
+/////          fact_1389 # "ContainerMembershipProperty < /rdfs:label >"
+/////          fact_1390 # "< rdfs:comment >"
+/////          fact_1391 # "The class of container membership properties rdf:_1 rdf:_2 ... all of which are sub-properties of 'member' . < /rdfs:comment >"
+/////          fact_1392 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" / >"
+/////          fact_1393 # "< /rdfs:Class >"
+/////          fact_1394 # "< rdf:Property rdf:about = "http://www.w3.org/2000/01/rdf-schema#member" >"
+/////          fact_1395 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1396 # "< rdfs:label >"
+/////          fact_1397 # "member < /rdfs:label >"
+/////          fact_1398 # "< rdfs:comment >"
+/////          fact_1399 # "A member of the subject container. < /rdfs:comment >"
+/////          fact_1400 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1401 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1402 # "< /rdf:Property >"
+/////          fact_1403 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" >"
+/////          fact_1404 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1405 # "< rdfs:label >"
+/////          fact_1406 # "value < /rdfs:label >"
+/////          fact_1407 # "< rdfs:comment >"
+/////          fact_1408 # "Idiomatic property used for structured values. < /rdfs:comment >"
+/////          fact_1409 # "< rdfs:domain rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1410 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1411 # "< /rdf:Property >"
+/////          fact_1412 # "< !-- the following are new additions Nov 2002 -- >"
+/////          fact_1413 # "< rdfs:Class rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" >"
+/////          fact_1414 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1415 # "< rdfs:label >"
+/////          fact_1416 # "List < /rdfs:label >"
+/////          fact_1417 # "< rdfs:comment >"
+/////          fact_1418 # "The class of RDF Lists. < /rdfs:comment >"
+/////          fact_1419 # "< /rdfs:Class >"
+/////          fact_1420 # "< rdf:List rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" >"
+/////          fact_1421 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1422 # "< rdfs:label >"
+/////          fact_1423 # "nil < /rdfs:label >"
+/////          fact_1424 # "< rdfs:comment >"
+/////          fact_1425 # "The empty list with no items in it. If the rest of a list is nil then the list has no more items in it. < /rdfs:comment >"
+/////          fact_1426 # "< /rdf:List >"
+/////          fact_1427 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" >"
+/////          fact_1428 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1429 # "< rdfs:label >"
+/////          fact_1430 # "first < /rdfs:label >"
+/////          fact_1431 # "< rdfs:comment >"
+/////          fact_1432 # "The first item in the subject RDF list. < /rdfs:comment >"
+/////          fact_1433 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1434 # "< rdfs:range rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Resource" / >"
+/////          fact_1435 # "< /rdf:Property >"
+/////          fact_1436 # "< rdf:Property rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" >"
+/////          fact_1437 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1438 # "< rdfs:label >"
+/////          fact_1439 # "rest < /rdfs:label >"
+/////          fact_1440 # "< rdfs:comment >"
+/////          fact_1441 # "The rest of the subject RDF list after the first item. < /rdfs:comment >"
+/////          fact_1442 # "< rdfs:domain rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1443 # "< rdfs:range rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" / >"
+/////          fact_1444 # "< /rdf:Property >"
+/////          fact_1445 # "< rdfs:Class rdf:about = "http://www.w3.org/2000/01/rdf-schema#Datatype" >"
+/////          fact_1446 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/2000/01/rdf-schema#" / >"
+/////          fact_1447 # "< rdfs:label >"
+/////          fact_1448 # "Datatype < /rdfs:label >"
+/////          fact_1449 # "< rdfs:comment >"
+/////          fact_1450 # "The class of RDF datatypes. < /rdfs:comment >"
+/////          fact_1451 # "< rdfs:subClassOf rdf:resource = "http://www.w3.org/2000/01/rdf-schema#Class" / >"
+/////          fact_1452 # "< /rdfs:Class >"
+/////          fact_1453 # "< rdfs:Datatype rdf:about = "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral" >"
+/////          fact_1454 # "< rdfs:isDefinedBy rdf:resource = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" / >"
+/////          fact_1455 # "< rdfs:label >"
+/////          fact_1456 # "XMLLiteral < /rdfs:label >"
+/////          fact_1457 # "< rdfs:comment >"
+/////          fact_1458 # "The class of XML literal values. < /rdfs:comment >"
+/////          fact_1459 # "< /rdfs:Datatype >"
+/////          fact_1460 # "< rdf:Description rdf:about = "http://www.w3.org/2000/01/rdf-schema#" >"
+/////          fact_1461 # "< rdfs:seeAlso rdf:resource = "http://www.w3.org/2000/01/rdf-schema-more" / >"
+/////          fact_1462 # "< /rdf:Description >"
+/////          fact_1463 # "< /rdf:RDF >"
+/////          fact_1464 # "< /XMP >"
+/////          fact_1465 # "< /HTML >"
+/////          fact_157 # "< /XMP >"
+/////          fact_158 # "< /HTML >"
+/////          fact_160 # "< HTML >"
+/////          fact_161 # "< TITLE >"
+/////          fact_162 # "McCullough Knowledge Explorer Hierarchy < /TITLE >"
+/////          fact_163 # "< XMP >"
+/////          fact_346 # "< /XMP >"
+/////          fact_347 # "< /HTML >"
+/////          fact_351 # "< HTML >"
+/////          fact_352 # "< XMP >"
+/////          fact_374 # "< /XMP >"
+/////          fact_375 # "< /HTML >"
+/////          fact_377 # "< HTML >"
+/////          fact_378 # "< XMP >"
+////        s_identity
+/////          fact_016 # "existent is existent ;"
+/////          fact_018 # "A is A ;"
+/////          fact_019 # "A or not A is existent ;"
+/////          fact_020 # "A and not A is nonexistent ;"
+/////          fact_021 # "nonexistent is not nonexistent ;"
+/////          fact_022 # "B is nonexistent ;"
+/////          fact_023 # "B is not B ;"
+/////          fact_126 # "man is person ;"
+/////          fact_130 # "existent is owl:Thing ;"
+/////          fact_131 # "entity is mkr:Entity ;"
+/////          fact_132 # "characteristic is rdf:Property ;"
+/////          fact_133 # "statement is rdf:Statement ;"
+/////          fact_134 # "nonexistent is owl:Nothing ;"
+/////          fact_135 # "rdfs:Resource is owl:Thing ;"
+////        s_interaction
+/////          s_causality
+////        s_iteration
+////        s_mcf
+////        s_nt
+////        s_part
+/////          fact_027 # "knowledge haspart proposition list ;"
+////        s_rdf
+////        s_relation
+/////          s_relstatement
+/  characteristic
+//    action
+///      COMMAND
+////        ExtractData
+////        altlist
+////        altsize
+////        cat
+////        cd
+////        check
+////        class
+////        clist
+////        clock
+////        csize
+////        date
+////        day
+////        dbclose
+////        dbopen
+////        dbprint
+////        delete
+////        deletecomment
+////        dir
+////        dump
+////        dump/ged
+////        dump/hidden
+////        dump/nvstack
+////        entropy
+////        exec
+////        explorer
+////        factsize
+////        find
+////        first-name
+////        flist
+////        fsize
+////        fstatus
+////        ftype
+////        genus_list
+////        genus_path
+////        getenv
+////        given-name
+////        group_list
+////        group_path
+////        hdepth
+////        help
+////        hlevel
+////        hwalk
+////        import
+////        import ontology
+////        interpret_line
+////        isa_exp
+////        isc_exp
+////        isclist
+////        kbdump
+////        kbload
+////        kbwrite
+////        kdepth
+////        klevel
+////        klist
+////        ksize
+////        last-name
+////        load
+////        load/ged
+////        ls
+////        max
+////        member_list
+////        member_path
+////        memlist
+////        memsize
+////        menu
+////        merge
+////        middle-name
+////        min
+////        mkdir
+////        month
+////        mount hierarchy
+////        nvtab
+////        path2list
+////        plist
+////        print
+////        psize
+////        pwd
+////        read
+////        read directory
+////        read tap
+////        read_dmoz
+////        replace
+////        rmdir
+////        sh
+////        simplify lattice
+////        size_act
+////        size_alias
+////        size_alternative
+////        size_attr
+////        size_echar
+////        size_eobj
+////        size_exgroup
+////        size_fact
+////        size_genus
+////        size_group
+////        size_ingroup
+////        size_member
+////        size_part
+////        size_primitive
+////        size_rel
+////        size_species
+////        size_unit
+////        slist
+////        species_list
+////        ssize
+////        suffix-name
+////        sum
+////        surname
+////        title-name
+////        ulist
+////        unique
+////        unit_list
+////        unit_path
+////        usize
+////        vdump
+////        vload
+////        vpop
+////        vpush
+////        vwrite
+////        write
+////        write directory
+////        year
+///      classify
+///      differentiate
+///      identify
+////        identify_025
+///      integrate
+///      measure
+///      method
+///      perceive
+///      sense
+//    attribute
+///      TITLE
+///      alias
+///      argclass
+///      argno
+///      argument
+///      automatic
+///      cache name
+///      chartype
+///      classname
+///      current concept
+///      current genus concept
+///      current knit
+///      current primitive concept
+///      current species
+///      current unit
+///      fact
+///      format
+///      formattype
+///      fpath
+///      gtype
+///      internal name
+///      krtype
+///      meaning
+///      meaningtype
+///      name
+///      nickname
+///      p_cause
+///      p_event
+///      primitive
+///      product
+///      purpose
+///      role
+///      rootname
+///      sex
+///      shortname
+///      space
+////        everywhere
+////        here
+////        there
+///      stv
+///      time
+////        future
+////        now
+////        past
+////        present
+///      usage
+///      variable
+////        .
+////        ..
+////        ...
+////        Assignment
+////        BaseQualifier
+////        BaseUri
+////        CheckComment
+////        Command
+////        DefaultQualifier
+////        DefaultUri
+////        DisplayName
+////        Every
+////        If
+////        Question
+////        Sentence
+////        TypeComment
+////        UniqueName
+////        charformat
+////        cname
+////        dbmode
+////        debug
+////        echo
+////        fd
+////        fmode
+////        fname
+////        hchar
+////        hcheck
+////        hfocus
+////        hformat
+////        hmaxcount
+////        hmaxlevel
+////        hmethod
+////        hminfactid
+////        hop
+////        hoseparator
+////        hpad
+////        hquote
+////        hreduce
+////        hrelation
+////        htab
+////        iversion
+////        kcase
+////        kedb
+////        kehome
+////        kerror
+////        keview
+////        kformat
+////        klastid
+////        kmapword
+////        kname
+////        kquote
+////        kscdebug
+////        kversion
+////        menuwindow
+////        mseparator
+////        nvseparator
+////        pronoun
+/////          I
+/////          he
+/////          it
+/////          none
+/////          she
+/////          they
+/////          we
+/////          you
+////        pseparator
+////        qseparator
+////        relseparator
+////        removehtml
+////        roleseparator
+////        savehref
+////        submethod
+////        systype
+////        tapformat
+////        nameformat
+///      view
+////        tabula rasa
+/////          owl
+/////          rdf
+/////          rdfs
+///      wexplore
+///      xmlns:rdf
+///      xmlns:rdfs
+//    differentia
+//    interaction
+///      causality
+//    owl:Restriction
+//    part
+///      proposition list
+//    relation
+//    rdf:type
+//    rdfs:domain
+//    rdfs:range
+//    rdfs:subClassOf
+//    rdfs:subPropertyOf
+/  unknown
+/  rdf-schema

@@ -1,0 +1,9 @@
+# 9:00 pm 7/31/97
+# topic; entry; subentry
+
+entity has attribute=value; statement; characterization
+enity do action=event; statement; characterization
+event change object from initial-state to final-state; statement; characterization
+read file kformat=rel; request;
+entity has ?; question;
+law of identity; statement;

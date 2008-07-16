@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns="http://masaka.cs.ohiou.edu/~amitchel/networking.owl#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xml:base="http://masaka.cs.ohiou.edu/~amitchel/networking.owl">
+
+<owl:Ontology rdf:about=""/>
+
+<owl:Class rdf:ID="IP">
+<rdfs:subClassOf>
+<owl:Class rdf:ID="Packet"/>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:ID="ICMP">
+<owl:equivalentClass>
+<owl:Class>
+<owl:intersectionOf rdf:parseType="Collection">
+<owl:Restriction>
+<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+>1</owl:hasValue>
+<owl:onProperty>
+<owl:DatatypeProperty rdf:ID="hasProtocol"/>
+</owl:onProperty>
+</owl:Restriction>
+<owl:Class rdf:about="#IP"/>
+</owl:intersectionOf>
+</owl:Class>
+</owl:equivalentClass>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:ID="hasType">
+<rdfs:domain rdf:resource="#ICMP"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="hasDestinationAddress">
+<rdfs:domain rdf:resource="#IP"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:ID="hasSourceAddress">
+<rdfs:domain rdf:resource="#IP"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasProtocol">
+<rdfs:domain rdf:resource="#IP"/>
+</owl:DatatypeProperty>
+
+<ICMP rdf:ID="EchoRequest">
+<hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+>8</hasType>
+</ICMP>
+
+<ICMP rdf:ID="EchoReply">
+<hasType rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+>0</hasType>
+</ICMP>
+
+</rdf:RDF>

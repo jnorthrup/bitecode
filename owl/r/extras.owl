@@ -1,0 +1,1681 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/04/17 12:46:38 $, by $Author: ivan $, $Revision: 1.79 $ -->
+<!-- Documents get translated sometimes which disappear from the central archive eventually. -->
+<!-- (or they have never been there...) -->
+<!-- That also means that their record is gone from there, but I need them... -->
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#" xmlns:extr="http://www.w3.org/2003/03/Translations/extraDocs.rdf#" xmlns:log="http://www.w3.org/2000/10/swap/log#" xmlns:mat="http://www.w3.org/2002/05/matrix/vocab#" xmlns:org="http://www.w3.org/2001/04/roadmap/org#" xmlns:os="http://www.w3.org/2000/10/swap/os#" xmlns:rcs="http://www.w3.org/2001/03swell/rcs#" xmlns:rct="file:/home/dom/WWW/2002/01/tr-automation/recent.n3#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rec="http://www.w3.org/2001/02pd/rec54#" xmlns:recs="http://www.w3.org/2003/03/recsSchema#" xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+	<!-- ======================================================================= -->
+	<!--    Notes that are translated, too, so they need short names at least    -->
+	<!-- ======================================================================= -->
+	<NOTE rdf:about="http://www.w3.org/TR/2006/NOTE-soap11-ror-httpbinding-20060321/">
+		<rdfs:comment>SOAP 1.1 Request Optional Response HTTP Binding</rdfs:comment>
+		<recs:shortTitle>SOAP 1.1 ROR HTTP</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-mathml-units-20031110/">
+		<rdfs:comment>Units in MathML</rdfs:comment>
+		<recs:shortTitle>Units in MathML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1998/NOTE-rdf-uml-19980804">
+		<rdfs:comment>A Discussion of the Relationship Between RDF-Schema and UML</rdfs:comment>
+		<recs:shortTitle>RDFS and UML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/Search/9605-Indexing-Workshop/ReportOutcomes/S6Group2">
+		<rdfs:comment>A Proposed Convention for Embedding Metadata in HTML</rdfs:comment>
+		<recs:shortTitle>Metadata in HTML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-wsdl20-altschemalangs-20050817">
+		<rdfs:comment>Discussion of Alternative Schema Languages and Type System Support in WSDL 2.0</rdfs:comment>
+		<recs:shortTitle>Alternative Schemas and WSDL 2.0</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xkms-wsdl-20051118/">
+		<rdfs:comment>A WSDL 1.1 description for XKMS</rdfs:comment>
+		<recs:shortTitle>WSDL1.1 for XKMS</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2001/NOTE-xml-infoset-rdfs-20010406">
+		<recs:shortTitle>An RDFS for the Infoset</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-acdi-20030901/">
+		<recs:shortTitle>Authoring Challenges for DI</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-di-atdi-20040218/">
+		<recs:shortTitle>Authoring Techniques for DI</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-access-control-20050613/">
+		<recs:shortTitle>&#60;?access-control?&#62; PI</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2001/NOTE-CCPP-COORDINATION-20011220/">
+		<recs:shortTitle>CC/PP Implementors Guide</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/1999/07/NOTE-CCPP-19990727">
+		<recs:shortTitle>CC/PP framework</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2001/NOTE-CX-20011211">
+		<recs:shortTitle>Component Extension API Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-CDRReqs-20051219/">
+		<recs:shortTitle>CD by Reference Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-wsdl20-altschemalangs-20050817">
+		<recs:shortTitle>Alt. Schema Languages in WSDL 2.0</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-DOM-Level-3-AS-20020725">
+		<recs:shortTitle>DOM 3 Abstract Schemas</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-DOM-Requirements-20040226">
+		<recs:shortTitle>DOM Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107">
+		<recs:shortTitle>DOM 3 Events</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-Views-20040226">
+		<recs:shortTitle>DOM 3 Views</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226">
+		<recs:shortTitle>DOM 3 XPath</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-grddl-20040413/">
+		<recs:shortTitle>GRDDL</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2007/NOTE-grddl-primer-20070628/">
+		<recs:shortTitle>GRDDL Primer</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2007/NOTE-grddl-scenarios-20070406/">
+		<recs:shortTitle>GRDDL Use Cases</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-modality-interface-20040510/">
+		<recs:shortTitle>DOM Requirements for Multimodal</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1998/NOTE-P3P10-Protocols-19980324">
+		<recs:shortTitle>P3P Protocol White Paper</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xml11schema10-20050511">
+		<recs:shortTitle>Processing XML 1.1 with XML Schema 1.0</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-swbp-classes-as-values-20050405">
+		<recs:shortTitle>Classes as Values on the SW</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-swbp-specified-values-20050517">
+		<recs:shortTitle>Value Partitions and Sets in OWL</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-rdfcal-20050929/">
+		<recs:shortTitle>RDF Calendar</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/NOTE-imagemap">
+		<recs:shortTitle>Image Maps on User Agents</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-lbase-20031010/">
+		<recs:shortTitle>LBase</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-owl-parsing-20040121">
+		<recs:shortTitle>OWL Parsing in RDF/XML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-owl-xmlsyntax-20030611/">
+		<recs:shortTitle>OWL Presentation Syntax</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-ws-i18n-req-20041116/">
+		<recs:shortTitle>Requirements for I8N in Web Services</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-ws-i18n-scenarios-20040730/">
+		<recs:shortTitle>WS I8N Scenarios</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1999/NOTE-SYMM-modules-19990223">
+		<recs:shortTitle>SYMM Modules Based on SMIL1.0</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/WD-ilu-requestor-960307">
+		<recs:shortTitle>The ILU Requester</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-p3pdeployment-20020211">
+		<recs:shortTitle>P3P 1.0 Deployment Guide</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2001/NOTE-uri-clarification-20010921/">
+		<recs:shortTitle>URIs, URLs, and URNs Clarifications</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xbc-characterization-20050331/">
+		<recs:shortTitle>Binary XML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xbc-measurement-20050331/">
+		<recs:shortTitle>Binary XML Measurement</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xbc-properties-20050331/">
+		<recs:shortTitle>Binary XML Properties</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xbc-use-cases-20050331/">
+		<recs:shortTitle>Binary XML Use Cases</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-di-dco-20050118/">
+		<recs:shortTitle>Delivery Context in DI</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1998/NOTE-XML-FRAG-REQ-19981123">
+		<recs:shortTitle>XML Fragment Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-xopinc-FAQ-20040608/">
+		<recs:shortTitle>XOP FAQ</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1999/NOTE-xptr-infoset-liaison-19990224">
+		<recs:shortTitle>XPointer-Infoset Liaison</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1999/NOTE-WCA-19990319">
+		<recs:shortTitle>Web Characterization</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-wsa-reqs-20040211">
+		<recs:shortTitle>WSA Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-ws-arch-scenarios-20040211/">
+		<recs:shortTitle>WSA User Scenarios</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-xml-media-types-20050504">
+		<recs:shortTitle>Content type of Binary Data in XML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-xml-fragid-20030912">
+		<recs:shortTitle>XML Fragment Identifier 0.9</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-xkms2-req-20030505">
+		<recs:shortTitle>XKMS 2.0 Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1998/NOTE-xlink-principles-19980303">
+		<recs:shortTitle>XLink Design Principles</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-inkreqs-20030122/">
+		<recs:shortTitle>InkML Requirements</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-soap12-email-20020703">
+		<recs:shortTitle>SOAP 1.2 Email Binding</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-soap12-n11n-20031008/">
+		<recs:shortTitle>SOAP 1.2 Message Normalization</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-xmlp-scenarios-20030730">
+		<recs:shortTitle>SOAP 1.2 Usage Scenarios</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2004/NOTE-wslc-20040211/">
+		<recs:shortTitle>Web Service Life Cycle</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-spec-variability-20050831/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<dc:title>Variability in Specifications</dc:title>
+		<recs:shortTitle>Variability in Specifications</recs:shortTitle>
+		<dc:date>2005-08-31</dc:date>
+		<recs:id>spec-variability</recs:id>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/di-dco/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>Delivery Context for DI</recs:shortTitle>
+		<dc:title>Delivery Context Overview for Device Independence</dc:title>
+		<dc:date>2005-01-05</dc:date>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-unicode-xml-20030613/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>Unicode in XML</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/XAdES/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<dc:title>XML Advanced Electronic Signatures (XAdES)</dc:title>
+		<recs:shortTitle>XAdES</recs:shortTitle>
+		<dc:date>2003-02-20</dc:date>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-chips-20030128/">
+		<dc:title>Common HTTP Implementation Problems</dc:title>
+		<recs:shortTitle>HTTP Impl. Problems</recs:shortTitle>
+		<dc:date>2003-01-28</dc:date>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/chips"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-cuap-20030128">
+		<dc:title>Common User Agent Problems</dc:title>
+		<recs:shortTitle>User Agent Problems</recs:shortTitle>
+		<dc:date>2003-01-28</dc:date>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/cuap"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1999/NOTE-html40-mobile-19990315">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>HTML4.0 Mobile Guidelines</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/WAI/GL/NOTE-WCAG-impact-matrix-19990810">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>1999-08-10</dc:date>
+		<dc:title>Web Content Accessibility Guidelines Impact Matrix</dc:title>
+		<recs:shortTitle>Impact Matrix</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/WAI-WEBCONTENT-TECHS/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-11-06</dc:date>
+		<dc:title>Techniques for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>WCAG Techniques</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/WCAG10-CORE-TECHS/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-11-06</dc:date>
+		<dc:title>Core Techniques for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>Core WCAG Techniques</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/WCAG10-HTML-TECHS/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-11-06</dc:date>
+		<dc:title>HTML Techniques for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>HTML WCAG</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/WCAG10-CSS-TECHS/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-11-06</dc:date>
+		<dc:title>CSS Techniques for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>CSS WCAG</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2000/NOTE-WCAG10-CSS-TECHS-20001106">
+		<recs:shortTitle>CSS WCAG</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/xmldsig-p3p-profile/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<dc:date>2000-02-02</dc:date>
+		<dc:title>A P3P Assurance Signature Profile</dc:title>
+		<recs:shortTitle>P3P Signature</recs:shortTitle>
+	</NOTE>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/2000/NOTE-SOAP-20000508">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:title>Simple Object Access Protocol (SOAP) 1.1</dc:title>
+		<recs:shortTitle>SOAP 1.1</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</MemberSubmission>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/2001/NOTE-SOAP-dsig-20010206">
+		<dc:title>SOAP Security Extensions: Digital Signature</dc:title>
+		<recs:shortTitle>SOAP DSig</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</MemberSubmission>
+	<NOTE rdf:about="http://www.w3.org/TR/1998/NOTE-datetime-19980827">
+		<dc:title>Date and Time Formats</dc:title>
+		<recs:shortTitle>Date/Time Formats</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</NOTE>
+	<TeamSubmission rdf:about="http://www.w3.org/TR/2000/NOTE-SAC-20000728">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>SAC</recs:shortTitle>
+		<dc:date>2000-07-28</dc:date>
+		<dc:title>SAC: Simple API for CSS</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/SAC/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Philippe Le Hégaret</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</TeamSubmission>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/1998/NOTE-compactHTML-19980209">
+		<dc:date>1998-02-09</dc:date>
+		<dc:title>Compact HTML for Small Information Appliances</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>cHTML</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/1998/NOTE-compactHTML-19980209"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Tomihisa Kamada</contact:fullName>
+		</editor>
+		<fromSubmission rdf:resource="http://www.w3.org/Submission/1998/04/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</MemberSubmission>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/2001/NOTE-newline-20010314">
+		<dc:date>2001-03-14</dc:date>
+		<dc:title>The [NEL] Newline Character</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>[NEL]</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/newline"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Susan Malaika</contact:fullName>
+		</editor>
+		<fromSubmission rdf:resource="http://www.w3.org/Submission/2001/06/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+	</MemberSubmission>
+	<NOTE rdf:about="http://www.w3.org/TR/2000/NOTE-rdf-pics-20000327">
+		<recs:shortTitle>RDF-PICS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<dc:date>2000-03-27</dc:date>
+		<dc:title>PICS Rating Vocabularies in XML/RDF</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/rdf-pics"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Dan Brickley</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ralph R. Swick</contact:fullName>
+		</editor>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/NOTE-rdfarch">
+		<recs:shortTitle> W3C Data Formats</recs:shortTitle>
+		<dc:date>1997-10-29</dc:date>
+		<dc:title> W3C Data Formats</dc:title>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Tim Berners-Lee</contact:fullName>
+		</editor>
+	</NOTE>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/2001/NOTE-vcard-rdf-20010222">
+		<dc:date>2001-02-22</dc:date>
+		<dc:title>Representing vCard Objects in RDF/XML</dc:title>
+		<recs:shortTitle>vCard in RDF</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/vcard-rdf"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Renato Iannella</contact:fullName>
+		</editor>
+		<fromSubmission rdf:resource="http://www.w3.org/Submission/2001/04/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+	</MemberSubmission>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/References/HTML4-access">
+		<dc:date>2000-11-08</dc:date>
+		<dc:title>HTML 4.0 Accessibility Improvements</dc:title>
+		<recs:shortTitle>Accessibility features HTML4.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Judy Brewer</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Daniel Dardailler</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<NOTE rdf:about="http://www.w3.org/1999/08/NOTE-CSS-access-19990804">
+		<dc:date>1999-08-04</dc:date>
+		<dc:title>Accessibility Features of CSS</dc:title>
+		<recs:shortTitle>Accessibility features CSS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/CSS-access"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Judy Brewer</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/1999/NOTE-SMIL-access-19990921">
+		<dc:date>1999-09-21</dc:date>
+		<dc:title>Accessibility Features of SMIL</dc:title>
+		<recs:shortTitle>Accessibility features  SMIL</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/SMIL-access/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName> Marja-Riitta Koivunen</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2000/NOTE-SVG-access-20000807">
+		<dc:date>2000-08-07</dc:date>
+		<dc:title>Accessibility Features of SVG</dc:title>
+		<recs:shortTitle>Accessibility features  SVG</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/SVG-access/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Charles McCathieNevile</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName> Marja-Riitta Koivunen</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<MemberSubmission rdf:about="http://www.w3.org/TR/2000/NOTE-dt4dtd-20000113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>DTD Datatypes</recs:shortTitle>
+		<dc:date>2000-01-13</dc:date>
+		<dc:title>Datatypes for DTDs (DT4DTD) 1.0</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/dt4dtd"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Lee Buck</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Charles F. Goldfarb</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Paul Prescod</contact:fullName>
+		</editor>
+		<fromSubmission rdf:resource="http://www.w3.org/Submission/2000/01/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Submissions"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</MemberSubmission>
+	<!-- ==================================================================================================== -->
+	<!-- Working drafts, Candidate recs, etc, which become obsolete when the rec comes out                    -->
+	<!-- However, they are translated in this version; on the other hand, this version disappears from tr.rdf -->
+	<!-- Ie, these have to be kept here, unless the translation is 'withdrawn'                                -->
+	<!-- ==================================================================================================== -->
+	<WD rdf:about="http://www.w3.org/TR/2003/WD-turingtest-20031105/">
+		<dc:date>2003-11-05</dc:date>
+		<dc:title>Inaccessibility of Visually-Oriented Anti-Robot Tests</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/turingtest"/>
+		<recs:shortTitle>Anti-Robot Tests</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2000/WD-xhtml11-20000105">
+		<dc:date>2000-01-05</dc:date>
+		<dc:title>XHTML™ 1.1 - Module-based XHTML</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xhtml11/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XHTML1.1</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2001/WD-xml11-20011213/">
+		<dc:date>2001-12-13</dc:date>
+		<dc:title>Extensible Markup Language (XML) 1.1</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xml11/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML1.1</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<CR rdf:about="http://www.w3.org/TR/2002/CR-xml11-20021015">
+		<dc:date>2002-10-15</dc:date>
+		<dc:title>Extensible Markup Language (XML) 1.1</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xml11/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML1.1</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</CR>
+	<PR rdf:about="http://www.w3.org/TR/2003/PR-xml11-20031105/">
+		<dc:date>2003-11-05</dc:date>
+		<recs:shortTitle>XML1.1</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:title>Extensible Markup Language (XML) 1.1</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</PR>
+	<PR rdf:about="http://www.w3.org/TR/2002/PR-UAAG10-20021016/">
+		<dc:date>2000-03-10</dc:date>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/UAAG10/"/>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>User Agent Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>UAAG1.0</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</PR>
+	<WD rdf:about="http://www.w3.org/WAI/EO/Drafts/PWD-Use-Web/20010104">
+		<dc:date>2004-01-04</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>How People with Disabilities Use the Web</dc:title>
+		<recs:shortTitle>Disability Web Usage</recs:shortTitle>
+		<recs:id>x20010104</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+		<!-- <doc:versionOf rdf:resource="http://www.w3.org/WAI/EO/Drafts/PWD-Use-Web/"/> -->
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2002/WD-XHTMLplusMathMLplusSVG-20020809/">
+		<dc:date>2002-08-09</dc:date>
+		<dc:title>An XHTML + MathML + SVG Profile</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/XHTMLplusMathMLplusSVG/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XHTML+MathML+SVG</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2002/WD-xframes-20020806">
+		<dc:date>2002-08-06</dc:date>
+		<dc:title>XFrames</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xframes"/>
+		<recs:shortTitle>XFrames</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2002/WD-xptr-xpointer-20021219/">
+		<dc:date>2002-12-19</dc:date>
+		<dc:title>XPointer xpointer() Scheme</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xptr-xpointer/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XPTR Xpointer</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2001/WD-xml-blueberry-req-20010921">
+		<dc:date>2001-09-21</dc:date>
+		<dc:title>XML Blueberry Requirements</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML Blueberry</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xml-blueberry-req"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2004/WD-WCAG20-20040311/">
+		<dc:date>2004-03-11</dc:date>
+		<dc:title>Web Content Accessibility Guidelines 2.0</dc:title>
+		<recs:shortTitle>WCAG 2.0</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/WCAG20/"/>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2000/WD-P3P-preferences-20000420">
+		<dc:date>2000-04-20</dc:date>
+		<dc:title>A P3P Preference Exchange Language 1.0 (APPEL 1.0)</dc:title>
+		<recs:shortTitle>APPEL</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/P3P-preferences"/>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2002/WD-P3P-preferences-20020415">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<dc:date>2002-04-15</dc:date>
+		<recs:shortTitle>APPEL</recs:shortTitle>
+		<dc:title>A P3P Preference Exchange Language 1.0 (APPEL1.0)</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/P3P-preferences"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Drafts"/>
+	</WD>
+	<!-- ================================================================================= -->
+	<!-- From here on, the documents are those which do not appear in the tr.rdf file, but -->
+	<!-- are nevertheless translated                                                       -->
+	<!-- ================================================================================= -->
+	<rdf:Description rdf:about="http://jigsaw.w3.org/css-validator/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>CSS1 Validator</recs:shortTitle>
+		<dc:title>CSS1 Validator Service Page</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/CSS/Test/CSS1/current/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>CSS1 Test Suite</recs:shortTitle>
+		<dc:title>CSS1 Test Suite</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/TR/2000/REC-ATAG10-20000203/atag10-chktable">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-02-03</dc:date>
+		<dc:title>Checklist of Checkpoints for Authoring Tool Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>ATAG Checkpoints</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/TR/2000/REC-ATAG10-20000203/atag10-chklist">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-02-03</dc:date>
+		<dc:title>List of Checkpoints for Authoring Tool Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>ATAG Checklist</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-ATAG10-TECHS-20021029/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:shortTitle>Techniques for ATAG1.0</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-UAAG10-TECHS-20021217/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:shortTitle>Techniques for UAAG1.0</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2000/NOTE-WCAG10-TECHS-20001106/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:shortTitle>Techniques for WCAG1.0</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</NOTE>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/eval/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2002-11-15</dc:date>
+		<dc:title>Evaluating Web Sites for Accessibility</dc:title>
+		<recs:shortTitle>Web Site Evaluation</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Talks/WAI-Intro/Overview.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-02-03</dc:date>
+		<dc:title>Online Overview of the Web Accessibility Initiative</dc:title>
+		<recs:shortTitle>WAI Slides</recs:shortTitle>
+		<recs:id>wai-intro-slides</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/References/Browsing">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2000-02-03</dc:date>
+		<dc:title>Alternative Web Browsing</dc:title>
+		<recs:shortTitle>Alternative Browsing</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/bcase/benefits.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Auxiliary Benefits of Accessible Web Design</dc:title>
+		<recs:shortTitle>Accessible Design Benefits</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/bcase/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Developing a Web Accessibility Business Case for Your Organization: Overview</dc:title>
+		<recs:shortTitle>WAI Business Case</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/wcag10.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Navigating WCAG 1.0 Guidelines and Techniques Documents</dc:title>
+		<recs:shortTitle>Navigating WCAG Documents</recs:shortTitle>
+		<recs:id>wcag1-intro</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/wcag.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Web Content Accessibility Guidelines (WCAG) Overview</dc:title>
+		<recs:shortTitle>WCAG Overview</recs:shortTitle>
+		<recs:id>wcag-overview</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/atag.php">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Authoring Tool Accessibility Guidelines (ATAG) Overview</dc:title>
+		<recs:shortTitle>ATAG Overview</recs:shortTitle>
+		<recs:id>atag-overview</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/wai-overview-slides">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Overview of the Web Accessibility Initiative (WAI) Slides</dc:title>
+		<recs:shortTitle>WAI Slides Overview</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/bcase/benefits-lin.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Summary of Business Benefits of Accessible Web Design</dc:title>
+		<recs:shortTitle>Accessible Design Business Case</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/impl/expanded">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Implementation Plan for Web Accessibility</dc:title>
+		<recs:shortTitle>Impl. Plan</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/impl/pol.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Developing Organizational Policies on Web Accessibility</dc:title>
+		<recs:shortTitle>Developing Org. Policies</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/impl/software.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Selecting and Using Authoring Tools for Web Accessibility</dc:title>
+		<recs:shortTitle>Selecting and Using Authoring Tools</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/uaag.php">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>User Agent Accessibility Guidelines (UAAG) Overview</dc:title>
+		<recs:shortTitle>UAAG Overview</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/TR/2005/NOTE-turingtest-20051123/">
+		<recs:shortTitle>Inaccessibility of CAPTCHA</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/checkpoint-list">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>1999-05-05</dc:date>
+		<dc:title>List of Checkpoints for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>WCAG Checkpoints</recs:shortTitle>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Wendy Chisholm</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Gregg Vanderheiden</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/full-checklist">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>1999-05-05</dc:date>
+		<dc:title>Checklist of Checkpoints for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>WCAG Checklist</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/1999/05/WCAG-REC-fact">
+		<dc:title>Fact Sheet for "Web Content Accessibility Guidelines 1.0"</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:shortTitle>WCAG Fact Sheet</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/flyer/flyerfront.en.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>WAI Flyer</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/gettingstarted/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Getting Started: Making a Web Site Accessible</dc:title>
+		<recs:shortTitle>WCAG Getting Started</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/References/QuickTips/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Quick Tips To Make Accessible Web Sites</dc:title>
+		<recs:shortTitle>WCAG Quick Tips</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/Points/">
+		<dc:title>W3C in 7 Points</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/XML/1999/XML-in-10-points.html.en">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:title>XML in 10 Points</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/Overview.html">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>WAI Overview</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/wcag-curric/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Curriculum for Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>WCAG Curriculum</recs:shortTitle>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Chuck Letourneau</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Geoff Freed</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Talks/WAI-Intro/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Overview of the Web Accessibility Initiative</dc:title>
+		<recs:shortTitle>WAI Online Overview</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/accessibility.php">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Introduction to Web Accessibility</dc:title>
+		<recs:shortTitle>Introduction to WAI</recs:shortTitle>
+		<recs:id>wai_intro</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/intro/components">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:title>Essential Components of Web Accessibility</dc:title>
+		<recs:shortTitle>WAI Components</recs:shortTitle>
+		<recs:id>wai_intro_components</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/1999/05/WCAG-REC-fact">
+		<dc:title>Fact Sheet for "Web Content Accessibility Guidelines 1.0"</dc:title>
+		<recs:shortTitle>WAI Fact Sheet</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Math/XSL/">
+		<dc:title>Putting mathematics on the Web with MathML</dc:title>
+		<recs:shortTitle>Maths on the Web</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/Prospectus/Joining">
+		<dc:title>W3C Membership</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:title>W3C Internationalization Activity</dc:title>
+		<recs:shortTitle>W3C I18n</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/Patent-Policy-20030520">
+		<dc:title>W3C Patent Policy</dc:title>
+		<recs:shortTitle>Patent Policy</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Guide/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<dc:title>Getting started with HTML</dc:title>
+		<recs:shortTitle>Basic HTML</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Guide/Advanced.html">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<dc:title>Getting started with HTML: More Advanced Features</dc:title>
+		<recs:shortTitle>Advanced HTML</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Guide/Style">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<dc:title>Getting started with HTML: Adding a Touch of Style</dc:title>
+		<recs:shortTitle>Style</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/2003/03/web-kit">
+		<dc:title>Web Standards Switch</dc:title>
+		<recs:shortTitle>Web Standards Switch</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/2002/07/WebAgency-Requirements">
+		<dc:title>Buy standards compliant Web sites</dc:title>
+		<recs:shortTitle>Buy compliant Web sites</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/2002/09/Step-by-step">
+		<dc:title>Making your website valid: a step by step guide</dc:title>
+		<recs:shortTitle>Validity guide</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/08/owlfaq">
+		<dc:title>Frequently Asked Questions on W3C's Web Ontology Language (OWL)</dc:title>
+		<recs:shortTitle>OWL FAQ</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<!-- ==================================== Webmaster Tips =========================== -->
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/">
+		<dc:title>Quality Tips for Webmasters</dc:title>
+		<recs:shortTitle>Webmasters Tips (full)</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/good-titles">
+		<dc:title>&lt;title&gt;: the most important element of a quality Web page</dc:title>
+		<recs:shortTitle>Title use</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/noClickHere">
+		<dc:title>Don’t use “click here” as link text</dc:title>
+		<recs:shortTitle>Don’t use “click here”…</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/reback">
+		<dc:title>Use standard redirects: don't break the back button!</dc:title>
+		<recs:shortTitle>Don’t break back button</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/Use_h1_for_Title">
+		<dc:title>Use &lt;h1&gt; for top-level heading</dc:title>
+		<recs:shortTitle>Use of &lt;h1&gt;</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/altAttribute">
+		<dc:title>Use the alt attribute</dc:title>
+		<recs:shortTitle>The alt attribute</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/altAttribute">
+		<dc:title>Use the alt attribute</dc:title>
+		<recs:shortTitle>The alt attribute</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/beyond-validation">
+		<dc:title>Beyond validation</dc:title>
+		<recs:shortTitle>Beyond validation</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/QA/Tips/font-size">
+		<dc:title>Care With Font Size</dc:title>
+		<recs:shortTitle>Font Size</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<!-- ==================================== Misc =========================== -->
+	<rdf:Description rdf:about="http://www.w3.org/2005/02/TranslationPolicy.html">
+		<dc:title>Policy for Authorized W3C Translations</dc:title>
+		<dc:date>2005-11-10</dc:date>
+		<recs:shortTitle>Auth. W3C Translations</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Judy Brewer</contact:fullName>
+		</editor>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ivan Herman</contact:fullName>
+		</editor>
+	</rdf:Description>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-timezone-20051013/">
+		<recs:shortTitle>Working with Time Zones</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</NOTE>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/Process-20010719/">
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#FirstEdition"/>
+		<dc:title>World Wide Web Consortium Process Document</dc:title>
+		<dc:date>2001-07-19</dc:date>
+		<recs:shortTitle>W3C Process Doc.</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/Consortium/Process/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231">
+		<dc:title>W3C® Document License</dc:title>
+		<dc:date>2002-12-31</dc:date>
+		<recs:shortTitle>W3C Document License</recs:shortTitle>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Joseph Reagle</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2005/10/Process-20051014/">
+		<dc:title>World Wide Web Consortium Process Document</dc:title>
+		<dc:date>2005-10-14</dc:date>
+		<recs:shortTitle>W3C Process Doc.</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/Consortium/Process/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Ian Jacobs</contact:fullName>
+		</editor>
+		<doc:obsoletes rdf:resource="http://www.w3.org/Consortium/Process-20010719/"/>
+		<previousEdition rdf:resource="http://www.w3.org/Consortium/Process-20010719/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<NOTE rdf:about="http://www.w3.org/TR/2002/NOTE-qaframe-ops-extech-20021202/">
+		<recs:shortTitle>QA Framework: Examples</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</NOTE>
+	<rdf:Description rdf:about="http://www.w3.org/QA/2002/04/Web-Quality">
+		<dc:title>My Web site is standard! And yours?</dc:title>
+		<recs:shortTitle>Web Quality</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Consortium/">
+		<dc:title>About the World Wide Web Consortium (W3C)</dc:title>
+		<recs:shortTitle>About W3C</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2001/06/manual/">
+		<dc:title>W3C Manual of Style</dc:title>
+		<recs:shortTitle>Manual of Style</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/05/27-pubrules.html">
+		<dc:title>Publication Rules</dc:title>
+		<recs:shortTitle>Publication Rules</recs:shortTitle>
+		<recs:id>pubrules</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2000/10/swap/Primer.html">
+		<dc:title>Primer: Getting into RDF &amp; Semantic Web using N3</dc:title>
+		<recs:shortTitle>N3 Primer</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3c.org/2000/10/swap/doc/Shortcuts.html">
+		<dc:title>Shorthand: Paths and lists, and @keywords</dc:title>
+		<recs:shortTitle>N3 Shorthands</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3c.org/2000/10/swap/doc/formats.html">
+		<dc:title>Comparing Formats</dc:title>
+		<recs:shortTitle>Comparing Formats</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3c.org/2000/10/swap/doc/ontologies.html">
+		<dc:title>Vocabulary Documentation</dc:title>
+		<recs:shortTitle>Vocabulary Documentation</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Forms/2003/xforms-for-html-authors.html">
+		<dc:title>XForms for HTML Authors</dc:title>
+		<recs:shortTitle>XForms</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Steven Pemberton</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Forms/2006/xforms-for-html-authors-part2.html">
+		<dc:title>XForms for HTML Authors, Part 2</dc:title>
+		<recs:shortTitle>XForms (Part 2)</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Steven Pemberton</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/Forms/2003/xforms-faq.html">
+		<dc:title>XForms 1.0 Frequently Asked Questions</dc:title>
+		<recs:shortTitle>XForms FAQ</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Steven Pemberton</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/01/svg11-faq">
+		<dc:title>SVG 1.1 and SVG Mobile Frequently Asked Questions</dc:title>
+		<recs:shortTitle>SVG FAQ</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Dean Jackson</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/2004/xmlevents-for-html-authors">
+		<dc:title>XML Events for HTML Authors</dc:title>
+		<recs:shortTitle>XML Events</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Steven Pemberton</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/MarkUp/2004/xhtml-faq">
+		<dc:title>HTML and XHTML Frequently Answered Questions</dc:title>
+		<recs:shortTitle>(X)HTML FAQ</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Steven Pemberton</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<NOTE rdf:about="http://www.w3.org/TR/xhtml-media-types/">
+		<dc:title>XHTML Media Types</dc:title>
+		<recs:shortTitle>XHTML Media Types</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:id>xhtml-media-types</recs:id>
+	</NOTE>
+	<rdf:Description rdf:about="http://www.w3.org/Voice/Guide/">
+		<dc:title>Getting started with VoiceXML 2.0</dc:title>
+		<recs:shortTitle>VoiceXML</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Dave Raggett</contact:fullName>
+		</editor>
+		<recs:id>voice-gettingstarted</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/People/Bos/DesignGuide/introduction">
+		<dc:title>What is a good standard? (an essay on W3C's design principles)</dc:title>
+		<recs:shortTitle>Design guide</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<!-- ======================================== I18N docs ========================================== -->
+	<rdf:Description rdf:about="http://www.w3.org/International/tutorials/tutorial-lang/Overview.en.html">
+		<dc:title>Tutorial: Using language information in XHTML, HTML and CSS</dc:title>
+		<recs:shortTitle>Using Lang. Info.</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<recs:id>langinfo_xhtml</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/articles/language-tags/Overview.en.php">
+		<dc:title>Language tags in HTML and XML</dc:title>
+		<recs:shortTitle>Lang. tags in HTML/XML</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<recs:id>language_tags</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/articles/serving-xhtml/">
+		<dc:title>Serving XHTML 1.0</dc:title>
+		<recs:shortTitle>Serving XHTML 1.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/articles/inline-bidi-markup/">
+		<dc:title>What you need to know about the bidi algorithm and inline markup</dc:title>
+		<recs:shortTitle>Inline bidi Markup</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-changing-encoding.en">
+		<dc:title>FAQ: Changing (X)HTML page encoding to UTF-8</dc:title>
+		<recs:shortTitle>(X)HTML encoding to UTF-8</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-when-lang-neg.en">
+		<dc:title>FAQ: When to use language negotiation</dc:title>
+		<recs:shortTitle>When use lang. negotiation</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-navigation-select.en.html">
+		<dc:title>FAQ: Using &lt;select&gt; to Link to Localized Content</dc:title>
+		<recs:shortTitle>Using &lt;select&gt;</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-non-eng-tags.en.html">
+		<dc:title>FAQ: Non-English tags</dc:title>
+		<recs:shortTitle>Non-English tags</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-i18n.en.html">
+		<dc:title>FAQ: Localization vs. Internationalization</dc:title>
+		<recs:shortTitle>Localization vs. Internationalization</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-controls.en.html">
+		<dc:title>FAQ: HTML, XHTML, XML and Control Codes</dc:title>
+		<recs:shortTitle>Control Codes</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-headers-charset.en.html">
+		<dc:title>FAQ: Checking HTTP Headers</dc:title>
+		<recs:shortTitle>HTTP Headers</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-css-charset.en.html">
+		<dc:title>FAQ: CSS Character Encoding Declarations</dc:title>
+		<recs:shortTitle>Char. Encoding in CSS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-css-lang.en">
+		<dc:title>FAQ: Styling using the lang attribute</dc:title>
+		<recs:shortTitle>Lang Attribute in CSS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/getting-started/characters.en">
+		<dc:title>Introducing Character Sets and Encodings</dc:title>
+		<recs:shortTitle>Intro. Character Sets and Encodings</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-international-multilingual.en.html">
+		<dc:title>FAQ: International &amp; Multilingual Web sites</dc:title>
+		<recs:shortTitle>Int. &amp; Multilingual Sites</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-mono-multilingual.en.html">
+		<dc:title>FAQ: Monolingual vs. Multilingual Web sites</dc:title>
+		<recs:shortTitle>Mono &amp; Multilingual Sites</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-forms-utf-8.en">
+		<dc:title>FAQ: Multilingual Forms</dc:title>
+		<recs:shortTitle>Multilingual Forms</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-htaccess-charset.en.html">
+		<dc:title>FAQ: Setting 'charset' Information in .htaccess</dc:title>
+		<recs:shortTitle>Chars in .htaccess</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-escapes.en">
+		<dc:title>FAQ: Using character entities and NCRs</dc:title>
+		<recs:shortTitle>Using character escapes</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-what-is-encoding.en">
+		<dc:title>FAQ: Character encodings for beginners</dc:title>
+		<recs:shortTitle>Character encodings for beginners</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-doc-charset.en.html">
+		<dc:title>FAQ: Document Character Set</dc:title>
+		<recs:shortTitle>Document Charset</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-lang-2or3.en.html">
+		<dc:title>FAQ: Two-letter or three-letter language codes</dc:title>
+		<recs:shortTitle>Two or three letter codes</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-lang-priorities.en.html">
+		<dc:title>FAQ: Setting language preferences in a browser</dc:title>
+		<recs:shortTitle>Language Preferences</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-lang-why.en">
+		<dc:title>FAQ: Why use the language attribute?</dc:title>
+		<recs:shortTitle>Language Attribute</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-ruby.en">
+		<dc:title>FAQ: Ruby</dc:title>
+		<recs:shortTitle>Ruby</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/questions/qa-who-uses-unicode.en.html">
+		<dc:title>FAQ: Who uses Unicode?</dc:title>
+		<recs:shortTitle>Who uses Unicode?</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/O-charset.en.html">
+		<dc:title>Character Encodings</dc:title>
+		<recs:shortTitle>Char. Encodings</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/International/O-HTTP-charset.en.html">
+		<dc:title>The HTTP charset parameter</dc:title>
+		<recs:shortTitle>HTTP Charset</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Richard Ishida</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/02/06-dom-support.html">
+		<dc:title>What does your user agent claim to support?</dc:title>
+		<recs:shortTitle>UA DOM Test</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:id>x06-dom-support</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/styling-XML">
+		<dc:title>How to add style to XML</dc:title>
+		<recs:shortTitle>Style XML</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>style_xml</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/011/firstcss">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Starting with HTML + CSS</dc:title>
+		<recs:shortTitle>Starting with HTML+CSS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_firstcss</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/figures.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Figures &amp; captions</dc:title>
+		<recs:shortTitle>Figures &amp; Captions</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_figures</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/indent.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Indented paragraphs</dc:title>
+		<recs:shortTitle>Indented paragraphs</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_indent</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/alternatives.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Alternative style sheets</dc:title>
+		<recs:shortTitle>Alternative style sheets</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_alt</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/maps.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: A confetti menu</dc:title>
+		<recs:shortTitle>A confetti menu</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_maps</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/scrollbars.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Un-colored scrollbars</dc:title>
+		<recs:shortTitle>Un-colored scrollbars</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_scroll</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/evenodd.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Even and odd rules</dc:title>
+		<recs:shortTitle>Even and odd rules</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_even_odd</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/target.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: The ':target' pseudo-class</dc:title>
+		<recs:shortTitle>The ':target' pseudo-class</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_target</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/menus.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: A pinned-down menu</dc:title>
+		<recs:shortTitle>Pinned-down Menu</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_menus</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/fonts.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Fonts</dc:title>
+		<recs:shortTitle>Fonts</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_fonts</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/center.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Centering things</dc:title>
+		<recs:shortTitle>Centering things</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_center</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/roundshadow.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Rounded corners and shadowed boxes</dc:title>
+		<recs:shortTitle>Corners and Shadows</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_roundshadow</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/text-shadow.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Text shadows</dc:title>
+		<recs:shortTitle>Text shadows</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_text_shadow</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/shadows.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks: Drop Shadows</dc:title>
+		<recs:shortTitle>Drop Shadows</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_shadow</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/Examples/007/Overview.html">
+		<dc:title>Web Style Sheets, CSS tips &amp; tricks</dc:title>
+		<recs:shortTitle>CSS tips &amp; tricks</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<recs:id>csstricks_shadow</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2002/03/csslayout-howto">
+		<dc:title>Tableless layout HOWTO</dc:title>
+		<recs:shortTitle>Tableless layout</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Dominique Hazaël-Massieux</contact:fullName>
+		</editor>
+		<recs:id>csstricks_csslayout</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/customdtd">
+		<dc:title>Don't use “custom DTDs”!</dc:title>
+		<recs:shortTitle>Don't use “custom DTDs”!</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/StyleSheets/Core/">
+		<dc:title>W3C Core Styles</dc:title>
+		<recs:shortTitle>W3C Core Styles</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Style/CSS-vs-XSL">
+		<dc:title>CSS &amp; XSL</dc:title>
+		<recs:shortTitle>CSS &amp; XSL</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<editor rdf:parseType="Resource">
+			<contact:fullName>Bert Bos</contact:fullName>
+		</editor>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<!-- ========================================================== -->
+	<!-- WCAG Conformance guidelines -->
+	<rdf:Description rdf:about="http://www.w3.org/WAI/WCAG1-Conformance.html.en">
+		<dc:title>W3C Web Content Accessibility Guidelines 1.0 Conformance Logos</dc:title>
+		<recs:shortTitle>Logos</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:id>WCAG1-Conformance</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/WCAG1A-Conformance.html.en">
+		<dc:title>Level A Conformance to Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>Level A</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:id>WCAG1A-Conformance</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/WCAG1AA-Conformance.html.en">
+		<dc:title>Level Double-A Conformance to Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>Level AA</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:id>WCAG1AA-Conformance</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/WAI/WCAG1AAA-Conformance.html.en">
+		<dc:title> Level Triple-A Conformance to Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>Level AAA</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:id>WCAG1AAA-Conformance</recs:id>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/Math/mathml-faq.html">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<dc:title>Mathematical Markup Language (MathML), Frequently Asked Questions (FAQ)</dc:title>
+		<recs:shortTitle>MathML FAQ</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+	</rdf:Description>
+	<!-- ========================================================== -->
+	<NOTE rdf:about="http://www.w3.org/TR/2006/NOTE-swbp-n-aryRelations-20060412/">
+		<recs:shortTitle>Defining N-ary Relations</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-swbp-classes-as-values-20050405">
+		<recs:shortTitle>Representing Classes as Property Values</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/NOTE-swbp-specified-values-20050517">
+		<recs:shortTitle>Representing Specified Values in OWL</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2006/NOTE-sw-oosd-primer-20060309/">
+		<recs:shortTitle>SW Primer for OO Software Developers</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2005/WD-rdftm-survey-20050329/">
+		<recs:shortTitle>RDF/TM Interoperability Survey</recs:shortTitle>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2006/NOTE-swbp-xsch-datatypes-20060314/">
+		<recs:shortTitle>Datatypes in RDF and OWL</recs:shortTitle>
+	</NOTE>
+	<!-- ========================================================== -->
+	<NOTE rdf:about="http://www.w3.org/TR/2003/NOTE-di-princ-20030901/">
+		<dc:title>Device Independence Principles</dc:title>
+		<recs:shortTitle>DI Principles</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:id>di-princ</recs:id>
+	</NOTE>
+	<NOTE rdf:about="http://www.w3.org/TR/2008/NOTE-cooluris-20080331/">
+		<recs:shortTitle>Cool URIs</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>		
+	</NOTE>
+	<!-- This is hack. I force the WebArch document to be put into the architecture part... -->
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-webarch-20041215/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Architecture of the World Wide Web, Volume One</rdfs:comment>
+	</REC>
+	<!-- ====================================================================================== -->
+	<!-- PR/PER documents are added in extras.rdf to get a proper feedback for PR Translations  -->
+	<rdf:Description rdf:about="http://www.w3.org/TR/2005/PER-xforms-20051006/">
+		<recs:shortTitle>XForms 1.0 (2nd. Ed.)</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+	</rdf:Description>
+	<!-- ======================================================================================= -->
+	<!-- These are not yet translated, but may be needed by other programs....                   -->
+	<!-- if the documents advance in level, they could be changed/deleted without problems       -->
+	<!-- ======================================================================================= -->
+	<WD rdf:about="http://www.w3.org/TR/2003/WD-di-gloss-20030825/">
+		<dc:date>2003-08-25</dc:date>
+		<dc:title>Glossary of Terms for Device Independence</dc:title>
+		<recs:shortTitle>DI Glossary</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/di-gloss/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</WD>
+	<WD rdf:about="http://www.w3.org/TR/2005/WD-di-gloss-20050118/">
+		<dc:date>2005-01-18</dc:date>
+		<dc:title>Glossary of Terms for Device Independence</dc:title>
+		<recs:shortTitle>DI Glossary</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/di-gloss/"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</WD>
+	<CR rdf:about="http://www.w3.org/TR/2001/CR-xml-fragment-20010212">
+		<dc:date>2001-02-12</dc:date>
+		<dc:title>XML Fragment Interchange</dc:title>
+		<recs:shortTitle>XFragment</recs:shortTitle>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xml-fragment"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</CR>
+	<WD rdf:about="http://www.w3.org/TR/2003/WD-wsdl12-20030611">
+		<dc:date>2003-06-11</dc:date>
+		<recs:shortTitle>WSDL Core</recs:shortTitle>
+		<dc:title>Web Services Description Language (WSDL) Version 1.2 Part 1: Core Language</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/wsdl12"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+	</WD>
+</rdf:RDF>

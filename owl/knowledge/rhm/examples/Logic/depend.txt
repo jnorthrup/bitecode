@@ -1,0 +1,27 @@
+# 1999/5/15
+
+#=====================================#
+# logical dependence: God & the Bible #
+#=====================================#
+
+There are many assumptions underlying the use of
+the Bible as a source of information about the
+characteristics of God.  Since things that do not
+exist do not have any characteristics, using the
+Bible presupposes that God exists.
+
+Specifically,
+
+if God exists then
+    if the Bible is the word of God then
+        if God knows everything then
+            if God does not lie then
+                everything in the Bible is true
+            else
+                some things in the Bible may be false
+        else
+            some things may not be in the Bible
+    else
+        the Bible is just a book
+else
+    God does not exist

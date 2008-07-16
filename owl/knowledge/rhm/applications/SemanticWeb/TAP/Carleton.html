@@ -1,0 +1,38 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/Carleton.html
+# Aug/23/2003
+</pre><H3><pre>
+
+
+# Where is Carleton College?
+
+# tools used: MKE, TAP
+# Notes:
+# "subject locatedIn* ?;" should be allowed.
+
+
+ke$ set echo=off, kbmode=tap;
+ke$ ? has name = Carleton;
+  CarletonCollege
+  MedicalScientistDCarletonGajdusek
+# has name = Carleton
+
+ke$ set cc = CarletonCollege;
+ke$ $cc has ?;
+# CarletonCollege has
+  label = Carleton College
+  locatedIn = MinnesotaState
+  type = University
+
+ke$ MinnesotaState has locatedIn = ?;
+# MinnesotaState has locatedIn =
+  CountryUnitedStates
+ke$ $Question has locatedIn = ?;
+# CountryUnitedStates has locatedIn =
+  NorthAmerica
+ke$ $Question has locatedIn = ?;
+# NorthAmerica has locatedIn =
+  # INFO: mkrGetData: count = 0
+
+
+</pre></H3></HTML>

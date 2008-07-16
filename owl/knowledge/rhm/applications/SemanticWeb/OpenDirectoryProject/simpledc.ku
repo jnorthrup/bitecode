@@ -1,0 +1,27 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/ODP/simpledc.ku
+# Nov/16/2002
+
+# Simple Dublin Core attributes
+# Reference: "http://dublincore.org/documents/2002/07/31/dcmes-xml/dcmes-dc.xsd"
+#      Date: 2002/07/31
+
+attribute isg
+	title,
+	creator,
+	subject,
+	description,
+	publisher,
+	contributor,
+	date,
+	type,
+	format,
+	identifier,
+	source,
+	language,
+	relation,
+	coverage,
+	rights
+</XMP>
+</HTML>

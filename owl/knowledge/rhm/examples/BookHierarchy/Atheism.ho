@@ -1,0 +1,89 @@
+#<html><xmp>
+# KEHOME/knowledge/examples/BookHierarchy/Atheism.ho
+# Nov/20/2005
+
+# "Atheism The Case Against God",
+# by George H. Smith,
+# Nash Publishing, Los Angeles, 1974.
+
+begin hierarchy atheismhi;
+book;
+/  Atheism The Case Against God;
+
+Atheism The Case Against God;
+/  Introduction  ix;
+/  Part One: Atheism and God  1;
+//	1. The Scope of Atheism  3;
+///	    I. The Myths of Atheism  3;
+///	    II. The Meaning of Atheism  7;
+///	    III. Agnosticism  8;
+///	    IV. The Varieties of Atheism  13;
+///	    V. Jacques Maritain and the Slander of Atheism  18;
+///	    VI. What Atheism Is Not  21;
+///	    VII. The Significance of Atheism  25;
+///	    VII. Theism on the Defense  27;
+//	2. The Concept of God  29;
+///	    I. The Meaning of "God"  29;
+///	    II. Atheism and the Concept of God  39;
+//	3. The God of Christianity  47;
+///	    I. An Escape from Agnosticism  47;
+///	    II. Knowing the Christian God  51;
+///	    III. God and Intelligibility  60;
+///	    IV. God, Being and Existence  62;
+///	    V. The Powers of God  69;
+///	    VI. God and Goodness  76;
+///	    VII. The Collapse Into Agnosticism  87;
+/  Part Two: Reason, Faith, and Revelation  93;
+//	4. Reason Versus Faith  95;
+///	    I. Clarifying the Issue  95;
+///	    II. The Attack on Reason  99;
+///	    III. The Nature of the Conflict  102;
+////		knowledge  102;
+///	    IV. Rejoinders and Arguments  108;
+///	    V. The Dilemma of Faith  123;
+//	5. The Skepticism of Faith  125;
+///	    I. Spheres of Influence  125;
+////		Occam's razor  126;
+///	    II. Universal Skepticism  130;
+///	    III. The Contextual Nature of Knowledge  134;
+///	    IV. Skepticism and the Primacy of Faith  140;
+///	    V. Skepticism and Sense Perception  147;
+//	6. The Varieties of Faith  163;
+///	    I. The Bible, Faith and Misology  163;
+///	    II. Faith as Authoritative Trust  170;
+///	    III. Voluntarist Theories of Faith  181;
+///	    IV. The End of Faith  189;
+//	7. Revelation  193;
+///	    I. The Bible  194;
+///	    II. Miracles  211;
+/  Part Three: The Arguments For God  219;
+//	8. Natural Theology  221;
+///	    I. The Final Appeal  221;
+///	    II. The Conditions of Proof  223;
+///	    III. "God" as an Explanatory Concept  228;
+//	9. The Cosmological Arguments  235;
+///	    I. The First Cause Argument  235;
+///	    II. The Sustaining First Cause  242;
+///	    III. The Contingency Argument  248;
+///	    IV. The Entropy Argument  252;
+//	10. The Design Arguments  257;
+///	    I. The Teleological Argument  258;
+///	    II. The Analogical Argument  262;
+///	    III. The Argument from Life  269;
+/  Part Four: God: The Practical Consequences  273;
+//	11. Ethics, Rationality, and Religion  275;
+///	    I. Introduction  275;
+///	    II. The Science of Ethics  279;
+///	    III. Normative Ethics and Meta-ethics  289;
+///	    IV. Rational Morality  292;
+////		practical syllogism  294;
+//	12. The Sins of Christianity  297;
+///	    I. Religious Morality  297;
+///	    II. The Conflicting Virtues  305;
+///	    III. The Ethics of Jesus  311;
+/  Notes  327;
+/  Selected Reading List  347;
+/  Index  351;
+end hierarchy atheismhi;
+
+#</xmp></html>

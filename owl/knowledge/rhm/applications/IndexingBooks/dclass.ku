@@ -1,0 +1,9 @@
+# 8:30 pm 1998/1/8
+
+# Dewey Decimal Classification
+# classify the subjects into subject/ddcn lattice
+
+
+at view=subject/ddcn
+#------------------#
+!isd subject with d100,d010	#,d001

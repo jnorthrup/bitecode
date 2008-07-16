@@ -37,7 +37,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 		String lstrDisplay = "";
 		String lstrEnumName = "";
 		for (Map.Entry<Class<? extends Enum>, Iterable<? extends Enum>> entry : loEntries)
-			lstrDisplay += EnumPackageAssemblyUtil.genEnumMiddle(TableRecord.class, entry);
+			lstrDisplay += EnumPackageAssemblyUtil.createEnumMiddle(TableRecord.class, entry);
 	}
 
 	private void createClassNode(SortedMap<CharSequence, ByteBuffer> charSequenceByteBufferSortedMap) {

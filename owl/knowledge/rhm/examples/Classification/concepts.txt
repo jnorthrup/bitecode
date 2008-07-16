@@ -1,0 +1,79 @@
+# 1999/5/22
+# Reference:
+# Richard S. Latimer 1999/5/20
+
+!begin hierarchy
+relation
+/    subbranch
+/    philosophers
+/    parts of speech
+/    types of concepts
+/    concepts
+/    activities
+/    -isms
+/    informal fallacies
+
+subbranch
+/	-1.000 study
+/	-0.000 philosophy
+/	1.000 metaphysics
+//	    1.100 science
+///		1.110 teleology
+///		1.120 psychology
+///		1.130 biology
+///		1.140 physics
+//	    1.200 cosmology
+//	    1.300 oncology
+/	2.000 epistemology
+//	    2.100 logic
+//	    2.200 defintion
+/	3.000 ethics
+//	    3.100 intra-personal
+//	    3.200 inter-personal
+/	4.000 politics
+/	5.000 aesthetics
+//	    5.100 architecture
+//	    5.200 literature
+//	    5.300 music
+//	    5.400 painting
+//	    5.400 performing arts
+//	    5.500 sculpture
+
+philosophers
+
+parts of speech
+
+types of concepts
+/	 0 non yet determined
+/	17 -ism
+/	10 action by (not upon)
+/	 9 action upon
+/	15 axiomatic
+/	13 being (living)
+/	 1 consciousness
+/	12 entity
+/	 2 existence
+/	 8 groupings
+/	 4 introspective
+/	 5 knowledge
+/	16 language
+/	 6 object
+/	18 power, ability
+/	22 process
+/	19 quality
+/	21 quantity
+/	11 relational
+/	14 religious
+/	20 substance
+/	 7 value
+/	 3 virtue
+
+concepts
+
+activities
+
+-isms
+
+informal fallacies
+
+!end hierarchy

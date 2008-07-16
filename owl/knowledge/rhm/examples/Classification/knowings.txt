@@ -1,0 +1,153 @@
+# 1999/5/22
+# Reference:
+# Richard S. Latimer 1999/5/20
+
+!check genus
+!begin hierarchy
+knowledge
+/    science
+//	knowings
+!end hierarchy
+!check genus
+knowings has
+	what,		# physical entity
+	how,		# interaction among physical entities
+	who,		# man
+	how much,	# measurement
+	where,		# space
+	when,		# time
+	why,		# understanding (philosophy)
+	#how to do,	# method  <== syntax error
+	how todo,	# method (activity)
+	what was,	# event
+	#what if	# imagine, speculate, project  <== syntax error
+	what may be	# nocept (imagine, speculate, project)
+
+!check genus
+!begin hierarchy
+knowings
+/    1. what		# physical entity
+/    2. how		# interaction among physical entities
+/    3. who		# man
+/    4. how much	# measurement
+/    5. where		# space
+/    6. when		# time
+/    7. why		# understanding (philosophy)
+/    8. how todo	# method (activity)
+/    9. what was	# event
+/    10. what may be	# nocept (imagine, speculate, project)
+
+!check genus
+1. what		# physical entity
+/    1.1. naturally occurring (not man-made)
+//	1.1.1. biology (living)
+///	    1.1.1.1. general
+////		1.1.1.1.1. cytology
+////		1.1.1.1.2. microbiology
+/////		    1.1.1.1.2.1. virology
+////		1.1.1.1.3. phsiology
+///	    1.1.1.2. botany
+///	    1.1.1.3. zoology
+//	1.1.2. chemistry
+//	1.1.3. (non-living)
+///	    1.1.3.1. geology
+////		1.1.3.1.1. petrology
+/////		    1.1.3.1.1.1. gemology
+////		1.1.3.1.2. hydrology
+////		1.1.3.1.3. mineralogy
+/    1.2. man-made
+//	1.2.1. ... (classifying scheme, to be determined)
+//	1.2.2. buttons
+//	1.2.3. computers
+//	1.2.4. ...
+2. how		# interaction among physical entities
+/    2.1. physics
+/    2.2. teleology	# design or purpose in nature
+3. who		# man
+/    3.1. anthropology
+/    3.2. ethnology
+/    3.3. psychology
+/    3.4. sociology
+4. how much	# measurement
+/    4.1. mathematics
+/    4.2. metrology
+/    4.3. geodesy	# measuring the earth
+/    4.4. topology
+5. where		# space
+/    5.1. astronomy
+/    5.2. geographical (spatial)	# earth & its climates, products, inhabitants, political boundaries
+/    5.3. microscopy
+//	5.3.1. electron-microscopy
+6. when		# time -- relative times of occurrence
+7. why		# understanding (philosophy)
+/    7.1. metaphysics
+//	7.1.1. ontology	# nature of existence, including the "soul", "immortality"
+/    7.2. epistemology
+//	7.2.1. phemonenology	# development of human awareness
+/    7.3. ethics
+/    7.4. politics
+/    7.5. esthetics
+8. how todo	# method
+/    8.1. languages
+//	8.1.1. linguistics
+//	8.1.2. philology
+/    8.2. recreational
+//	8.2.1. artistic
+//	8.2.2. athletic
+//	8.2.3. hobbies
+//	8.2.4. ...
+/    8.3. vocational
+//	8.3.1. producing goods
+///	    8.3.1.1. agronomy
+///	    8.3.1.2. artwork creation
+///	    8.3.1.3. forestry
+///	    8.3.1.4. engineering
+///	    8.3.1.5. law
+///	    8.3.1.6. manufacture
+///	    8.3.1.7. medicine
+///	    8.3.1.8. ...
+//	8.3.2. producing services
+///	    8.3.2.1. educating
+///	    8.3.2.2. financing
+///	    8.3.2.3. maintaining
+///	    8.3.2.4. marketing
+9. what was	# event
+/    9.1. pre-historic
+//	9.1.1. archeology	# past human life
+//	9.1.2. geology
+///	    9.1.2.1. paleontology
+/    9.2. history
+//	9.2.1. genealogy
+/    9.3. current events
+10. what may be	# nocept (imagine, speculate, project)
+/    10.1. belief systems
+//	10.1.1. ideologies (___-isms)
+//	10.1.2. mythology
+//	10.1.3. religion
+//	10.1.4. superstition
+///	    10.1.4.1. revelations
+////		10.1.4.1.1. theologies
+///	    10.1.4.2. toothfairology
+/    10.2. cosmology
+/    10.3. fictional literature
+/    10.4. futurology
+/    10.5. pseudo-science
+//	10.5.1. demonology
+//	10.5.2. eschatology	# last things: death, resurrection, judgment, immortality, ...
+//	10.5.3. parapsychology
+//	10.5.4. phrenology
+//	10.5.5. witch craft
+/    10.6. theoretical
+//	10.6.1. theoretical physics
+!end hierarchy
+!check genus
+
+# output
+knowings has ?
+knowings ise* ?
+
+!find *genealogy*
+!cc $command
+. isa* ?
+!cc ..
+. ise* ?

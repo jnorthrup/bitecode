@@ -1,0 +1,2009 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+		 xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+    
+    <rdfs:Class rdf:ID="boolean_operators">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="relational_operators">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="binary_arithmetic_operators">
+        <rdfs:subClassOf rdf:resource="arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="assignment_operators">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+        <rdfs:subClassOf rdf:resource="#Statements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="bitwise_operators">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="author">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_tags">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="exception">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="param">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="return1">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="see">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="throws1">
+        <rdfs:subClassOf rdf:resource="#javadoc_tags"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="AWT_Abstract_Window_Toolkit">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Advanced_Programming_Concepts">
+        <rdfs:subClassOf rdf:resource="#Programming_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="AWT_Components">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Access_to_Applets_in_HTML">
+        <rdfs:subClassOf rdf:resource="#Applets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Action_Event">
+        <rdfs:subClassOf rdf:resource="#Standard_Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Standard_Events">
+        <rdfs:subClassOf rdf:resource="#Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Event_Handling">
+        <rdfs:subClassOf rdf:resource="#Event_Model"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Adjustment_Event">
+        <rdfs:subClassOf rdf:resource="#Standard_Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Programming_Elements"/>
+    
+    <rdfs:Class rdf:ID="Object_Oriented">
+        <rdfs:subClassOf rdf:resource="#Imperative"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OO_Design">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Anonymous_Class">
+        <rdfs:subClassOf rdf:resource="#Inner_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Inner_Class">
+        <rdfs:subClassOf rdf:resource="#Nested_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Applet_Methods">
+        <rdfs:subClassOf rdf:resource="#Applets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Writing_a_Java_Program">
+        <rdfs:subClassOf rdf:resource="#Basic_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Appletviewer_Tool">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Installing_JDK">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Arithmetic_Expression">
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Reference_Types">
+        <rdfs:subClassOf rdf:resource="#Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Array_Declaration">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Array_Instantiation">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Assigning_Data_to_an_Array">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Basic_AWT_elements">
+        <rdfs:subClassOf rdf:resource="#AWT_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Basic_Programming_Concepts">
+        <rdfs:subClassOf rdf:resource="#Programming_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Basic_Swing_Elements">
+        <rdfs:subClassOf rdf:resource="#Swing_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Swing_Components">
+        <rdfs:subClassOf rdf:resource="#Swing_Set"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Basic_Types">
+        <rdfs:subClassOf rdf:resource="#Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Wrapper_Classes">
+        <rdfs:subClassOf rdf:resource="#Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Boolean">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Border_Layout">
+        <rdfs:subClassOf rdf:resource="#Layout"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Control_Structures">
+        <rdfs:subClassOf rdf:resource="#Basic_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Number">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Byte_Code">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Card_Layout">
+        <rdfs:subClassOf rdf:resource="#Layout"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Character">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Body">
+        <rdfs:subClassOf rdf:resource="#Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Declaration">
+        <rdfs:subClassOf rdf:resource="#Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Diagram">
+        <rdfs:subClassOf rdf:resource="#Analyse"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Hierarchy">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Instantiation">
+        <rdfs:subClassOf rdf:resource="#Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Method">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="static_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Modifier">
+        <rdfs:subClassOf rdf:resource="#Class_Declaration"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Class_Variable">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="static_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Classes_and_Objects">
+        <rdfs:subClassOf rdf:resource="#Basic_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Class">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Compilation_Unit">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Compiling_a_Program">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Concurrent_Programming">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Conditional_Expression">
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Content_Pane">
+        <rdfs:subClassOf rdf:resource="#Swing_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Conversion_from_String">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Conversion_to_String">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Copying_Arrays">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Creating_Packages">
+        <rdfs:subClassOf rdf:resource="#Package"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.util">
+        <rdfs:subClassOf rdf:resource="#Java_API"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Program_Construction">
+        <rdfs:subClassOf rdf:resource="#Writing_a_Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Defining_an_Applet">
+        <rdfs:subClassOf rdf:resource="#Applets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Download_JDK">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Environment_Variables">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Error_Handling">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Event_Model">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+        <rdfs:subClassOf rdf:resource="#Swing_Set"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Swing_Set">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Event_source">
+        <rdfs:subClassOf rdf:resource="#Event_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Exception_Handling">
+        <rdfs:subClassOf rdf:resource="#Exceptions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Exception_Hierarchy">
+        <rdfs:subClassOf rdf:resource="#Exceptions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Features_of_Java">
+        <rdfs:subClassOf rdf:resource="#Java_Programming_Language"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Programming_Language">
+        <rdfs:subClassOf rdf:resource="#Programming_Environment"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Flow_Layout">
+        <rdfs:subClassOf rdf:resource="#Layout"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Formatting_Numbers">
+        <rdfs:subClassOf rdf:resource="#Numbers"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Programming_Strategies"/>
+    
+    <rdfs:Class rdf:ID="GUI_Graphical_User_Interface">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Garbage_Collector">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Grid_Layout">
+        <rdfs:subClassOf rdf:resource="#Layout"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="GridBag_Layout">
+        <rdfs:subClassOf rdf:resource="#Layout"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Hiding_Class_Members">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="IO_Exception">
+        <rdfs:subClassOf rdf:resource="#Exception_Hierarchy"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Information_Hiding">
+        <rdfs:subClassOf rdf:resource="#Advantage"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Initializing_an_Object">
+        <rdfs:subClassOf rdf:resource="#Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Nested_Class">
+        <rdfs:subClassOf rdf:resource="#Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Input_Output">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Stream_Reading">
+        <rdfs:subClassOf rdf:resource="#Streams"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.io">
+        <rdfs:subClassOf rdf:resource="#Java_API"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Instance_Method">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Instance_Variable">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Integer">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interface_Body">
+        <rdfs:subClassOf rdf:resource="#Interfaces"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interface_Declaration">
+        <rdfs:subClassOf rdf:resource="#Interfaces"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interface_as_type">
+        <rdfs:subClassOf rdf:resource="#Interfaces"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interface_vs_abstract_Class">
+        <rdfs:subClassOf rdf:resource="#Interfaces"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Item_Event">
+        <rdfs:subClassOf rdf:resource="#Standard_Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JAR_Files">
+        <rdfs:subClassOf rdf:resource="#Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Program">
+        <rdfs:subClassOf rdf:resource="#Java_Programming_Language"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Swing_Container">
+        <rdfs:subClassOf rdf:resource="#Swing_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Programming_Environment"/>
+    
+    <rdfs:Class rdf:ID="Java_API">
+        <rdfs:subClassOf rdf:resource="#Programming_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Core_Classes">
+        <rdfs:subClassOf rdf:resource="#Java_Programming_Language"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Foundation_Class_JFC">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Linker">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Naming_Conventions">
+        <rdfs:subClassOf rdf:resource="#Java_Programming_Language"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Runtime_Environment_JRE">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Java_Virtual_Machine_JVM">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Just_in_time_JIT">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Length_of_an_Array">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Life_Cycle">
+        <rdfs:subClassOf rdf:resource="#Applets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Local_Variable">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Mac_OS">
+        <rdfs:subClassOf rdf:resource="#Running_Java_Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Running_Java_Applications">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Manipulating_a_Thread">
+        <rdfs:subClassOf rdf:resource="#Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Body">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Call">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Declaration">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Modifier">
+        <rdfs:subClassOf rdf:resource="#Method_Declaration"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Name">
+        <rdfs:subClassOf rdf:resource="#Method_Declaration"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Overloading">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Overriding">
+        <rdfs:subClassOf rdf:resource="#Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Method_Parameter">
+        <rdfs:subClassOf rdf:resource="#Method_Declaration"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Methods_of_the_Object_Class">
+        <rdfs:subClassOf rdf:resource="#root_class_Object"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="root_class_Object">
+        <rdfs:subClassOf rdf:resource="#Class_Hierarchy"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Mouse_Event">
+        <rdfs:subClassOf rdf:resource="#Standard_Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Multidimentional_Arrays">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Multiple_Constructors">
+        <rdfs:subClassOf rdf:resource="#Constructor"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Multiple_Inheritance">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Multiple_Threads">
+        <rdfs:subClassOf rdf:resource="#Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OO_Classes">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OO_Inheritance">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="OO_Interface">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OO_Methods">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OO_Objects">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Object">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Types_Operators_and_Variables">
+        <rdfs:subClassOf rdf:resource="#Basic_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Other_Controls">
+        <rdfs:subClassOf rdf:resource="#AWT_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Stream_Writing">
+        <rdfs:subClassOf rdf:resource="#Streams"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Overriding_Class_Members">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Primitive_Types">
+        <rdfs:subClassOf rdf:resource="#Basic_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Radio_Button">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Random_Access">
+        <rdfs:subClassOf rdf:resource="#Input_Output"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Reading_Data_from_an_Array">
+        <rdfs:subClassOf rdf:resource="#Array"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Return_Type">
+        <rdfs:subClassOf rdf:resource="#Method_Declaration"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Running_a_Program">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Runtime_System">
+        <rdfs:subClassOf rdf:resource="#Java_Runtime_Environment_JRE"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Scope_of_Identifiers">
+        <rdfs:subClassOf rdf:resource="#Scope"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Scope_of_Variables">
+        <rdfs:subClassOf rdf:resource="#Scope"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Sequential_Access">
+        <rdfs:subClassOf rdf:resource="#Input_Output"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Serializable_Interface">
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Setting_the_classpath">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Single_Inheritance">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Source_Code">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Source_file_naming_convention">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String_Creation">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String_Methods">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String_Operations">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-charAt">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-compareTo">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-equals">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-lastIndexOf">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-length">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String-substring">
+        <rdfs:subClassOf rdf:resource="#String_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.StringBuffer">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringBuffer_Methods">
+        <rdfs:subClassOf rdf:resource="#StringBuffer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringBuffer-append">
+        <rdfs:subClassOf rdf:resource="#StringBuffer_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringBuffer-inser">
+        <rdfs:subClassOf rdf:resource="#StringBuffer_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringBuffer-setCharAt">
+        <rdfs:subClassOf rdf:resource="#StringBuffer_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="System.out.println">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="TCP_IP">
+        <rdfs:subClassOf rdf:resource="#IP"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Text_Area">
+        <rdfs:subClassOf rdf:resource="#Other_Controls"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Text_Event">
+        <rdfs:subClassOf rdf:resource="#Standard_Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Textfield_gettext">
+        <rdfs:subClassOf rdf:resource="#Textfield"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Textfield_settext">
+        <rdfs:subClassOf rdf:resource="#Textfield"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Thread">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Use_Cases">
+        <rdfs:subClassOf rdf:resource="#Analyse"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="User_Defined_Events">
+        <rdfs:subClassOf rdf:resource="#Events"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Using_JDK">
+        <rdfs:subClassOf rdf:resource="#Installing_JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Using_Packages">
+        <rdfs:subClassOf rdf:resource="#Package"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="VM_Error">
+        <rdfs:subClassOf rdf:resource="#Errors"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Variable_Call">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Variable_Declaration">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Variable_Initialization">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Variable_Modifier">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="ZIP_Files">
+        <rdfs:subClassOf rdf:resource="#Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="abstract_Class">
+        <rdfs:subClassOf rdf:resource="#Class_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="abstract_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="actionPerformed_ActionEvent_e">
+        <rdfs:subClassOf rdf:resource="#ActionListener"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="actual_parameter">
+        <rdfs:subClassOf rdf:resource="#Method_Parameter"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="arithmetic_operators">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="binary">
+        <rdfs:subClassOf rdf:resource="#numbering_systems"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="numbering_systems">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="bit_binary_digit">
+        <rdfs:subClassOf rdf:resource="#binary"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="buffered_reader">
+        <rdfs:subClassOf rdf:resource="#Stream_Reading"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="clone">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="counter_loop">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="decrement_operator">
+        <rdfs:subClassOf rdf:resource="#unary_arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="unary_arithmetic_operators">
+        <rdfs:subClassOf rdf:resource="#arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="destroy_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="dot">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="else_if">
+        <rdfs:subClassOf rdf:resource="#if"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="equals">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="exception_definition">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="exception_handler">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="file_reader">
+        <rdfs:subClassOf rdf:resource="#Stream_Reading"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="final_Class">
+        <rdfs:subClassOf rdf:resource="#Class_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="final_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="final_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="finalize">
+        <rdfs:subClassOf rdf:resource="#Garbage_Collector"/>
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="formal_parameter">
+        <rdfs:subClassOf rdf:resource="#Method_Parameter"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="getClass">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="giving_exceptions_to_the_caller">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="grouping_exceptions">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="hexadecimal_number_system">
+        <rdfs:subClassOf rdf:resource="#numbering_systems"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="increment_operator">
+        <rdfs:subClassOf rdf:resource="#unary_arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="init_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java_Interpreter">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang">
+        <rdfs:subClassOf rdf:resource="#Java_API"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Error_extends_Throwable">
+        <rdfs:subClassOf rdf:resource="#java.lang.Throwable"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Throwable">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Exception_extends_Throwable">
+        <rdfs:subClassOf rdf:resource="#java.lang.Throwable"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Math">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Process">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.Runtime">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.String">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.lang.System">
+        <rdfs:subClassOf rdf:resource="#java.lang"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="java.util.Iterator">
+        <rdfs:subClassOf rdf:resource="#java.util"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javac_Compiler">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_comment">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_comment_for_a_class">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_comment_for_a_method">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_comment_for_a_package">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc_comment_syntax">
+        <rdfs:subClassOf rdf:resource="#javadoc"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="life_time_of_objects">
+        <rdfs:subClassOf rdf:resource="#Class_Instantiation"/>
+        <rdfs:subClassOf rdf:resource="#Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="main-Method">
+        <rdfs:subClassOf rdf:resource="#Class_Declaration"/>
+        <rdfs:subClassOf rdf:resource="#Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="measure_unit_byte">
+        <rdfs:subClassOf rdf:resource="#binary"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_classes">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_constants">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_data_fields">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_methods">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_packages">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="naming_variables">
+        <rdfs:subClassOf rdf:resource="#Java_Naming_Conventions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="native_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="nested_ifs">
+        <rdfs:subClassOf rdf:resource="#if"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="notify">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+        <rdfs:subClassOf rdf:resource="#Synchronization"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="notifyAll">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+        <rdfs:subClassOf rdf:resource="#Synchronization"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="paint_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="paint-Methode">
+        <rdfs:subClassOf rdf:resource="#Graphics"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="parameter_tag">
+        <rdfs:subClassOf rdf:resource="#Appletviewer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="passing_parameters_to_an_applet">
+        <rdfs:subClassOf rdf:resource="#Appletviewer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="private_Class">
+        <rdfs:subClassOf rdf:resource="#Class_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="private_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="private_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="protected_Class">
+        <rdfs:subClassOf rdf:resource="#Class_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="protected_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="protected_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="public_Class">
+        <rdfs:subClassOf rdf:resource="#Class_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="public_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="public_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="repaint_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="restrictions_of_applets">
+        <rdfs:subClassOf rdf:resource="#Security"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="run">
+        <rdfs:subClassOf rdf:resource="#Manipulating_a_Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="security_aspects_of_inheritance">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="security_manager">
+        <rdfs:subClassOf rdf:resource="#Security"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="security_of_applets">
+        <rdfs:subClassOf rdf:resource="#Security"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="sentinel_loop">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="separating_exceptions">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="start_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="stop_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="synchronized_Method">
+        <rdfs:subClassOf rdf:resource="#Method_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="throwing_exceptions">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="toString">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="transient_Variable">
+        <rdfs:subClassOf rdf:resource="#Variable_Modifier"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="unary_plus">
+        <rdfs:subClassOf rdf:resource="#unary_arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="unary_minus">
+        <rdfs:subClassOf rdf:resource="#unary_arithmetic_operators"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="update_method">
+        <rdfs:subClassOf rdf:resource="#Applet_Methods"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="wait">
+        <rdfs:subClassOf rdf:resource="#Methods_of_the_Object_Class"/>
+        <rdfs:subClassOf rdf:resource="#Synchronization"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Operators">
+        <rdfs:subClassOf rdf:resource="#Types_Operators_and_Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Applets">
+        <rdfs:subClassOf rdf:resource="#Writing_a_Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="ActionListener">
+        <rdfs:subClassOf rdf:resource="#Listener"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Listener">
+        <rdfs:subClassOf rdf:resource="#Event_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Adapter">
+        <rdfs:subClassOf rdf:resource="#Event_Handling"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:ID="Advantage">
+        <rdfs:subClassOf rdf:resource="#Object_Oriented"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Analyse">
+        <rdfs:subClassOf rdf:resource="#OO_Design"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Animation">
+        <rdfs:subClassOf rdf:resource="#Graphics"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Graphics">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Appletviewer">
+        <rdfs:subClassOf rdf:resource="#Applets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Applications">
+        <rdfs:subClassOf rdf:resource="#Writing_a_Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Expression">
+        <rdfs:subClassOf rdf:resource="#Statements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Array">
+        <rdfs:subClassOf rdf:resource="#Reference_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Types">
+        <rdfs:subClassOf rdf:resource="#Types_Operators_and_Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Block">
+        <rdfs:subClassOf rdf:resource="#Statements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Statements">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Boolean">
+        <rdfs:subClassOf rdf:resource="#Wrapper_Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Layout">
+        <rdfs:subClassOf rdf:resource="#AWT_Abstract_Window_Toolkit"/>
+        <rdfs:subClassOf rdf:resource="#Swing_Set"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Branching">
+        <rdfs:subClassOf rdf:resource="#Control_Structures"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="BufferdReader">
+        <rdfs:subClassOf rdf:resource="#Reader"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Reader">
+        <rdfs:subClassOf rdf:resource="#Input_Output"/>
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="BufferdWriter">
+        <rdfs:subClassOf rdf:resource="#Writer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Writer">
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="BufferedInputStream">
+        <rdfs:subClassOf rdf:resource="#FilterInputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FilterInputStream">
+        <rdfs:subClassOf rdf:resource="#InputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="BufferedOutputStream">
+        <rdfs:subClassOf rdf:resource="#FilterOutputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FilterOutputStream">
+        <rdfs:subClassOf rdf:resource="#OutputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Byte">
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Programming">
+        <rdfs:subClassOf rdf:resource="#Programming_Environment"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Canvas">
+        <rdfs:subClassOf rdf:resource="#Graphics"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Casting">
+        <rdfs:subClassOf rdf:resource="#Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Character">
+        <rdfs:subClassOf rdf:resource="#Wrapper_Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="CheckBox">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Choice">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Classes">
+        <rdfs:subClassOf rdf:resource="#Classes_and_Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Inheritance">
+        <rdfs:subClassOf rdf:resource="#Classes_and_Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Methods">
+        <rdfs:subClassOf rdf:resource="#Basic_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Variables">
+        <rdfs:subClassOf rdf:resource="#Types_Operators_and_Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Classpath">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Client">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Networking">
+        <rdfs:subClassOf rdf:resource="#Advanced_Programming_Concepts"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Compiler">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Concatenation">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="String">
+        <rdfs:subClassOf rdf:resource="#Basic_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Constructor">
+        <rdfs:subClassOf rdf:resource="#Class_Instantiation"/>
+        <rdfs:subClassOf rdf:resource="#Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Objects">
+        <rdfs:subClassOf rdf:resource="#Classes_and_Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Container">
+        <rdfs:subClassOf rdf:resource="#AWT_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Package">
+        <rdfs:subClassOf rdf:resource="#Classes_and_Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="DataInputStream">
+        <rdfs:subClassOf rdf:resource="#FilterInputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="DataOutputStream">
+        <rdfs:subClassOf rdf:resource="#FilterOutputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="DatagramSocket">
+        <rdfs:subClassOf rdf:resource="#Sockets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Sockets">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Date">
+        <rdfs:subClassOf rdf:resource="#java.util"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Deadlock">
+        <rdfs:subClassOf rdf:resource="#Synchronization"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Synchronization">
+        <rdfs:subClassOf rdf:resource="#Multiple_Threads"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Declarations">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Dialog">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Dictionary">
+        <rdfs:subClassOf rdf:resource="#java.util"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Double">
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Encapsulation">
+        <rdfs:subClassOf rdf:resource="#Advantage"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Errors">
+        <rdfs:subClassOf rdf:resource="#Error_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Events">
+        <rdfs:subClassOf rdf:resource="#Event_Model"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Exceptions">
+        <rdfs:subClassOf rdf:resource="#Error_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FileDialog">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FileInputStream">
+        <rdfs:subClassOf rdf:resource="#InputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="InputStream">
+        <rdfs:subClassOf rdf:resource="#Stream_Reading"/>
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FileOutputStream">
+        <rdfs:subClassOf rdf:resource="#OutputStream"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OutputStream">
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+        <rdfs:subClassOf rdf:resource="#Stream_Writing"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FileReader">
+        <rdfs:subClassOf rdf:resource="#InputStreamReader"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="InputStreamReader">
+        <rdfs:subClassOf rdf:resource="#Reader"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="FileWriter">
+        <rdfs:subClassOf rdf:resource="#OutputStreamWriter"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="OutputStreamWriter">
+        <rdfs:subClassOf rdf:resource="#Writer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Flashing">
+        <rdfs:subClassOf rdf:resource="#Graphics"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Float">
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Numbers">
+        <rdfs:subClassOf rdf:resource="#Basic_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Frame">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Functional">
+        <rdfs:subClassOf rdf:resource="#Programming_Strategies"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Hashtable">
+        <rdfs:subClassOf rdf:resource="#Dictionary"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="IP">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Identifier">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Imperative">
+        <rdfs:subClassOf rdf:resource="#Programming_Strategies"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Implementation">
+        <rdfs:subClassOf rdf:resource="#OO_Design"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Implementations">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JDK">
+        <rdfs:subClassOf rdf:resource="#Programming_Environment"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Instance">
+        <rdfs:subClassOf rdf:resource="#Class_Instantiation"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Integer">
+        <rdfs:subClassOf rdf:resource="#Wrapper_Classes"/>
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interfaces">
+        <rdfs:subClassOf rdf:resource="#Classes_and_Objects"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Interpreter">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="ItemListener">
+        <rdfs:subClassOf rdf:resource="#Listener"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JApplet">
+        <rdfs:subClassOf rdf:resource="#Swing_Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JButton">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JCheckBox">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JComboBox">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JComponent">
+        <rdfs:subClassOf rdf:resource="#Swing_Components"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JDialog">
+        <rdfs:subClassOf rdf:resource="#Swing_Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JFrame">
+        <rdfs:subClassOf rdf:resource="#Swing_Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JLabel">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JList">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JPanel">
+        <rdfs:subClassOf rdf:resource="#Swing_Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JRadioButton">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JTextArea">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JTextComponent">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="JTextField">
+        <rdfs:subClassOf rdf:resource="#Basic_Swing_Elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Label">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Lastenheft">
+        <rdfs:subClassOf rdf:resource="#OO_Design"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Linker">
+        <rdfs:subClassOf rdf:resource="#Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="List">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Literals">
+        <rdfs:subClassOf rdf:resource="#Variables"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Logical">
+        <rdfs:subClassOf rdf:resource="#Programming_Strategies"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Long">
+        <rdfs:subClassOf rdf:resource="#Wrapper_Classes"/>
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Looping">
+        <rdfs:subClassOf rdf:resource="#Control_Structures"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Thread">
+        <rdfs:subClassOf rdf:resource="#Concurrent_Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Modifier">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Modularity">
+        <rdfs:subClassOf rdf:resource="#Advantage"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Monitor">
+        <rdfs:subClassOf rdf:resource="#Synchronization"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="MouseListener">
+        <rdfs:subClassOf rdf:resource="#Listener"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="MulticastSocket">
+        <rdfs:subClassOf rdf:resource="#Sockets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Panel">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Peer">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Pixel">
+        <rdfs:subClassOf rdf:resource="#Graphics"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Portability">
+        <rdfs:subClassOf rdf:resource="#Features_of_Java"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Priority">
+        <rdfs:subClassOf rdf:resource="#Multiple_Threads"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Procedural">
+        <rdfs:subClassOf rdf:resource="#Imperative"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Process">
+        <rdfs:subClassOf rdf:resource="#Concurrent_Programming"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="RMI">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Raster">
+        <rdfs:subClassOf rdf:resource="#Pixel"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Reusability">
+        <rdfs:subClassOf rdf:resource="#Advantage"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Scope">
+        <rdfs:subClassOf rdf:resource="#Program_Construction"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="ScrollPane">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Scrollbar">
+        <rdfs:subClassOf rdf:resource="#Other_Controls"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Security">
+        <rdfs:subClassOf rdf:resource="#Error_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Serialization">
+        <rdfs:subClassOf rdf:resource="#Input_Output"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Server">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="ServerSocket">
+        <rdfs:subClassOf rdf:resource="#Sockets"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Short">
+        <rdfs:subClassOf rdf:resource="#Wrapper_Classes"/>
+        <rdfs:subClassOf rdf:resource="#java.lang.Number"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Slider">
+        <rdfs:subClassOf rdf:resource="#Other_Controls"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Stack">
+        <rdfs:subClassOf rdf:resource="#Vector"/>
+    </rdfs:Class>
+    
+   <rdfs:Class rdf:ID="Vector">
+        <rdfs:subClassOf rdf:resource="#java.util"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Streams">
+        <rdfs:subClassOf rdf:resource="#Input_Output"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StreamTokenizer">
+        <rdfs:subClassOf rdf:resource="#java.io"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringBuffer">
+        <rdfs:subClassOf rdf:resource="#Basic_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="StringTokenizer">
+        <rdfs:subClassOf rdf:resource="#java.util"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Textfield">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Unix">
+        <rdfs:subClassOf rdf:resource="#Running_Java_Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Window">
+        <rdfs:subClassOf rdf:resource="#Container"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Windows">
+        <rdfs:subClassOf rdf:resource="#Running_Java_Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="boolean">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="break">
+        <rdfs:subClassOf rdf:resource="#Control_Structures"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="button">
+        <rdfs:subClassOf rdf:resource="#Basic_AWT_elements"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="byte">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="case">
+        <rdfs:subClassOf rdf:resource="#switch"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="switch">
+        <rdfs:subClassOf rdf:resource="#Branching"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="catch">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="char">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="codebase">
+        <rdfs:subClassOf rdf:resource="#Appletviewer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="comments">
+        <rdfs:subClassOf rdf:resource="#Java_Program"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="continue">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="datagram">
+        <rdfs:subClassOf rdf:resource="#Networking"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="default">
+        <rdfs:subClassOf rdf:resource="#switch"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="do">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="double">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="else">
+        <rdfs:subClassOf rdf:resource="#if"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="if">
+        <rdfs:subClassOf rdf:resource="#Branching"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="excecutable">
+        <rdfs:subClassOf rdf:resource="#Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="exit">
+        <rdfs:subClassOf rdf:resource="#Control_Structures"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="extends">
+        <rdfs:subClassOf rdf:resource="#Class_Declaration"/>
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="filewriter">
+        <rdfs:subClassOf rdf:resource="#Stream_Writing"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="finally">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="float">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="for">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="getparameter">
+        <rdfs:subClassOf rdf:resource="#Appletviewer"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="implements">
+        <rdfs:subClassOf rdf:resource="#Class_Declaration"/>
+        <rdfs:subClassOf rdf:resource="#Interfaces"/>
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="keywords">
+        <rdfs:subClassOf rdf:resource="#Java_Programming_Language"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="import">
+        <rdfs:subClassOf rdf:resource="#Package"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="instanceof">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+        <rdfs:subClassOf rdf:resource="#Classes"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="int">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="javadoc">
+        <rdfs:subClassOf rdf:resource="#JDK"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="long">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="native">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="new">
+        <rdfs:subClassOf rdf:resource="#Operators"/>
+        <rdfs:subClassOf rdf:resource="#Instance"/>
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="null">
+        <rdfs:subClassOf rdf:resource="#Basic_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="octal">
+        <rdfs:subClassOf rdf:resource="#numbering_systems"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="parameter">
+        <rdfs:subClassOf rdf:resource="#Applications"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="print">
+        <rdfs:subClassOf rdf:resource="#Stream_Writing"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="println">
+        <rdfs:subClassOf rdf:resource="#Stream_Writing"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="printwriter">
+        <rdfs:subClassOf rdf:resource="#Stream_Writing"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="readline">
+        <rdfs:subClassOf rdf:resource="#Stream_Reading"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="return">
+        <rdfs:subClassOf rdf:resource="#Method_Body"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="root">
+        <rdfs:subClassOf rdf:resource="#Class_Hierarchy"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="short">
+        <rdfs:subClassOf rdf:resource="#Primitive_Types"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="sleep">
+        <rdfs:subClassOf rdf:resource="#Manipulating_a_Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="start">
+        <rdfs:subClassOf rdf:resource="#Manipulating_a_Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="static">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="stop">
+        <rdfs:subClassOf rdf:resource="#Manipulating_a_Thread"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="subclass">
+        <rdfs:subClassOf rdf:resource="#Class_Hierarchy"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="super">
+        <rdfs:subClassOf rdf:resource="#Inheritance"/>
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="superclass">
+        <rdfs:subClassOf rdf:resource="#Class_Hierarchy"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="synchronized">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="this">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="throw">
+        <rdfs:subClassOf rdf:resource="#throwing_exceptions"/>
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="throws">
+        <rdfs:subClassOf rdf:resource="#throwing_exceptions"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="transient">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="try">
+        <rdfs:subClassOf rdf:resource="#Exception_Handling"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="void">
+        <rdfs:subClassOf rdf:resource="#keywords"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="while">
+        <rdfs:subClassOf rdf:resource="#Looping"/>
+    </rdfs:Class>
+    
+    <rdf:Property rdf:ID="see_java.lang.Character"/>
+    
+    <rdf:Property rdf:ID="see_java.lang.Integer"/>
+    
+    <rdf:Property rdf:ID="Root"/>
+    
+    <rdf:Property rdf:ID="RootRelation"/>
+    
+    <rdf:Property rdf:ID="Beispiel"/>
+    
+    <rdf:Property rdf:ID="see_API_Boolean"/>
+    
+    <rdf:Property rdf:ID="another_name_for_class_method"/>
+    
+    <rdf:Property rdf:ID="another_name_for_class_variable"/>
+    
+    <rdf:Property rdf:ID="see_API_Class"/>
+    
+    <rdf:Property rdf:ID="see_API_Object"/>
+    
+    <rdf:Property rdf:ID="see_API_StringBuffer"/>
+    
+    <rdf:Property rdf:ID="see_API_Thread"/>
+
+</rdf:RDF>

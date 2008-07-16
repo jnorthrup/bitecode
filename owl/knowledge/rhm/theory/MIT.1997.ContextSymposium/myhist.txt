@@ -1,0 +1,72 @@
+
+
+#==============================#
+# My Personal History: General #
+#==============================#
+Richard H. McCullough
+
+1936-1954	army brat from Ft. Benning, GA to Ft. Knox, KY
+1954-1960	MIT
+1960-1989	AT&T Bell Labs and AT&T Network Systems
+1990-		Pioneer, California
+
+1960	SBEE, SMEE from MIT at Cambridge, MA
+1967	PhDEE from Polytechnic University at Brooklyn, NY
+
+1954	Valedictorian from Ft. Knox High School
+1960	Eta Kappa Nu, Tau Beta Pi, Sigma Xi
+1965	Supervisor
+1970	Senior Member of Technical Staff
+1983	Distinguished Technical Staff Award
+		for Sustained Achievement
+
+1960s	3 patents, 5 papers
+1970s	2 papers (classified)
+1980s	1 paper
+1997	1 paper
+
+1950	Spanish, 2 years
+1952	German, 5 months
+1963	French, 1 year
+19xx	many computer languages
+
+1960s	design codes for digital transmission
+	design pattern recognition algorithms
+	teach information theory
+1970s	write compilers for computer languages
+	design computer languages
+1980s	teach UNIX internals
+	design relational database applications
+
+
+
+#===============================================#
+# My Personal History: Knowledge Representation #
+#===============================================#
+
+* = unpublished
+published (discovered)
+======================
+1967  ('73)	Ayn Rand	epistemology
+1970  ('75)	Thompson &
+			Ritchie	UNIX
+1971*		Dick McCullough	"Truth, Prior Information and Entropy"
+1973		Dave Burnett	philosophy club
+197x* ('74)	Leonard Peikoff	logic
+1975  ('79)	Roger Schank	conceptual dependency graph
+1979*		Dick McCullough	"Intro. to Languages and Patterns"
+1982  ('97)	Rudolf Wille	Formal Concept Analysis
+198x		Joe Hall	Icon user
+1983  ('89)	Ralph Griswold	Icon
+1984  ('89)	John Sowa	semantic network
+1989*		Dick McCullough	"Efficient Knowledge Representation"
+198x* ('97)	Leonard Peikoff	grammar
+1994  ('97)	David Kelley	logic (+ epistemology + grammar)
+1996  ('97)	Robert Kent	"Web Conceptual Space"
+1997		Clint Jeffery	Icon for Windows (KEHOME/src/*.icn = 9000 lines)
+1997		MKS		UNIX tools for Windows (ksh, make, viw, grep)
+1997		Wise Tech.	wise auto. install for Windows (ke.wse = 2000 lines)
+199x  ('97)	Microsoft	Help Workshop (ke.rtf = 1000 lines)
+1997		Dick McCullough	"Knowledge Explorer User Manual"
+1997		Dick McCullough	"What is Context?"
+1997		Amati & Pirri	fixed point solutions

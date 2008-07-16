@@ -1,0 +1,27 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/work.rel
+# Oct/5/2003 Mar/15/2007
+
+# automatic: 7 proposition/infon
+# meaning:   2 proposition/infon
+
+company isa group;
+
+r_work is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, company, job function, company location, hire date, retire date],
+    format=[person:1, company:2, job:3, space:4, time:5, time:6],
+    automatic=ISU,
+    meaning={
+	$1 has job +=[$3];
+	at space=$4,time=$5 {$1 do work_for od $2 from time=$5 to time=$6 done;};
+	};
+
+begin relation r_work; 
+Dick McCullough 1936, Bell Labs, electrical engineer, NJ-IL-CA,   1960, 1989;
+Dick McCullough 1936, self,      knowledge engineer,  CA/Pioneer, 1996, NA;
+end relation r_work;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

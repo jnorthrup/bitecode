@@ -1,0 +1,64 @@
+# 7:30 pm 10/30/97
+# Richard H. McCullough
+# Context in Knowledge Representation and Natural Langauge
+# AAAI 1997 Fall Symposium, MIT, Nov. 8-10
+
+1. knowledge
+is an identification of a fact of reality,
+using words and sentences.
+
+example:
+	I isa person.
+
+2. context of a sentence
+is the knowledge required to understand the sentence.
+i.e., context is the closure on undefined concepts,
+terminating with axiomatic and perceptual concepts.
+
+	person isa entity.
+	entity isa existent.
+
+	I do identify existent.
+	identify isa action.
+	action isa characteristic.
+	characteristic isa existent.
+
+	knowledge := I do identify existent.
+	word means existent.
+	sentence means relationship.
+	relationship isa characteristic.
+
+3. concept-hierarchy
+is the knowledge unit, identified by view.
+
+	at view=v_I
+	existent
+	    entity
+		person
+		    I
+	    characteristic
+		attribute
+		action
+		    identify
+		relationship
+		    "knowledge := I do identify existent"
+		    "existent ise entity,characteristic"
+		    ...
+
+4. common knowledge
+
+	at view=v_I
+	I is "Dick McCullough".
+	I has birthday=1936/10/28.
+
+	at view=v_common
+	"Dick McCullough" isa person.
+	"Dick McCullough" has birthday=1936/10/28.
+
+5. event
+is the change unit, identified by space,time.
+
+example:
+	at space=home, time=5pm
+	I do move=moving.
+	moving changes car from space=street to space=garage.

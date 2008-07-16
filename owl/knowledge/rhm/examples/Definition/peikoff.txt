@@ -1,0 +1,19 @@
+# KEHOME/knowledge/ExamplesDefinition/peikoff.txt
+# 1999/5/20
+
+#=============================#
+# Leonard Peikoff definitions #
+#=============================#
+# Reference:
+# Leonard Peikoff,
+# "Objectivism: The Philosophy of Ayn Rand",
+# Dutton, 1991.
+
+A hierarchy means a body of persons or things ranked
+in grades, orders, or classes, one above another.
+
+A hierarchy of knowledge means a body of concepts
+and conclusions ranked in order of logical dependence,
+one upon another, according to each item's distance
+from the base of the structure.  The base is the
+perceptual data with which cognition begins.

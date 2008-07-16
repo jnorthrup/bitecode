@@ -1,0 +1,75 @@
+# 1999/4/12
+
+#========================#
+# Existence vs. Existent #
+#========================#
+
+1. Rand, IOE, page 18
+	"The relationship of concepts to their constituent
+	particulars is the same as the relationship of
+	algebraic symbols to numbers.  In the equation
+	2a = a + a, any number may be substituted for the
+	symbol "a" without affecting the truth of the equation.
+	... In the same manner, by the same psycho-epistemological
+	method, a concept is used as an algebraic symbol that
+	stands for any of the arithmetical sequence of units
+	it subsumes." 
+
+In my KR language, "concept stands for any one of its units"
+is expressed as
+	concept is either unit1 or unit2 or ...
+which defines a hierarchy of concepts and units.  Here's a
+simple example of the same hierarchy in outline format
+	kformat = ho
+	existent
+	/    entity
+	//	John
+	//	Mary
+	//   characteristic
+	///	sex
+	////	    male
+	////	    female
+	/    relation
+	//	[John has sex=male]
+	//	[Mary has sex=female]
+and in knit statement format
+	kformat = ku
+	existent is either entity or characteristic or relation
+	entity is either John or Mary
+	characteristic is either sex or ...
+	sex is either male or female
+	relation is either [John has sex=male] or
+		[Mary has sex=female]
+In my terminology, the units of existent are
+	entity, relation
+and the primitive units of existent are
+	John, Mary, male, female,
+	[John has sex=male], [Mary has sex=female]
+
+
+2. Binswanger & Peikoff, IOE Appendix, page 241
+	"Prof. B: What is the relationship between the concepts
+	'existence' and 'existent'? Is it that the concept
+	'existent' is a term which applies a concept to a
+	particular or designates a particular as a unit under
+	the concept?
+	AR: That's right.  Because the concept 'existence', at
+	least the way I use it, is in a certain way close to
+	the concept 'universe' -- all that which exists.
+	Prof. B: 'Existence' is a collective noun almost.
+	AR: That's right.  An existent is, then, a particular
+	which exists."
+
+In my KR language, "concept stands for all of its units"
+is expressed as
+	concept is all unit1 and unit2 and ...
+which defines a "collective concept" or "group".  Using
+the previous example, I interpret Rand's statements to
+mean that "existence" is the group of the primitive units
+of "existent"
+	existence is all John and Mary and
+			male and female and
+			[John has sex=male] and 
+			[Mary has sex=female]
+or
+	existence is all existent

@@ -1,0 +1,51 @@
+# KEHOME/knowledge/theory/KRdesign/krword.txt
+# Jul/15/2002
+# new syntax Sep/3/2002
+
+#=================================#
+# Knowledge Representation Design #
+#     keywords                    #
+#=================================#
+
+Basic Concepts
+==============
+existent,entity,relation	(reality)
+causes				(causality)
+perceive,choose,purpose		(consciousness,volition)
+knit,chit			(knowledge unit,change unit)
+
+at,space,time,view		(context)
+isa,ise,is,with			(hierarchy,definition)
+isin,has,do,:=			(relation,attribute,action)
+changes,from,to			(event)
+
+if,then,else,fi			(conditional)
+every				(iteration)
+method,variable,!		(procedure,command)
+?				(question)
+
+Concept Formation Concepts
+==========================
+identify,define
+measure,classify
+isi,isd,with			(integrate,differentiate)
+means				(meaning)
+
+Advanced Concepts
+=================
+haspart				(part)
+isany,isalt			(exgroup)
+isall,ismem			(ingroup)
+
+isa**,isa*,isa+			(multilevel operator)
+ise**,ise*,ise+			(multilevel operator)
+enum,req,seq,set		(enumeration,requisite,sequence,set)
+
+and,or,not,implies		(logic)
+a,all,some,the,no		(quantifier)
+
+nonexistent			(contradiction)
+know,believe,intend,desire	(mental states)
+say,ask				(communication)
+
+supports			(situation)

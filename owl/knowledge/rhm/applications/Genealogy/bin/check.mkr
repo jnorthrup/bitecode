@@ -1,0 +1,31 @@
+<HTML> <XMP>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/check.mkr
+# 1999/7/28
+# new syntax Aug/11/2005
+
+# check unique names and other names
+
+do clock od "read family history" done;
+do read from family.ku done;
+do check od person done;  # number of persons
+
+Dr. Richard H. McCullough isa person;
+
+let echo=off;
+do clock od "check MISSING unique names" done;
+every unique isa person {
+    if $unique has uniquename; else
+        do print od "# MISSING uniquename: $unique" done;
+    fi;
+};
+do clock od "check CONFLICT with other names" done;
+every unique isa person {
+    if ? has othername +=$unique; then
+        do print od "# CONFLICT with othername: $unique" done;
+    fi;
+};
+do clock od "done" done;
+let echo=on;
+
+exit;
+</XMP> </HTML>

@@ -1,0 +1,38 @@
+Today's entry is short but sweet, mostly due to inheritance and the work done in our last post.  Today we create the OWL ontology for the Smurf object we modeled in our last post.  The ontology can be implemented as follows:
+
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:attack="http://masaka.cs.ohiou.edu/attack.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://masaka.cs.ohiou.edu/smurf.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://masaka.cs.ohiou.edu/smurf.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://masaka.cs.ohiou.edu/attack.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Smurf">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#DenialOfService"/>
+        <owl:onProperty rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#ResultingIn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#IPLayer"/>
+        <owl:onProperty rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#DirectedTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#ReceivedFrom"/>
+        <owl:hasValue rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#ICMPPacket"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://masaka.cs.ohiou.edu/attack.owl#Intrusion"/>
+  </owl:Class>
+</rdf:RDF>

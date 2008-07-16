@@ -1,0 +1,11 @@
+begin hierarcy hilevel;
+Thing;
+/   Location-Underspecified;
+//	Trajector-Underspecified;
+///	    Individual;
+/  Individual;
+//	Temporal-Thing;
+///	    TemporallyExistingThing;
+////		SomethingExisting;
+/////		    Entity;
+end hierarcy hilevel;

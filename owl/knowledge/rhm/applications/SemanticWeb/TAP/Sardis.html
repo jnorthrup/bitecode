@@ -1,0 +1,58 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/Sardis.html
+# Aug/23/2003
+</pre><H3><pre>
+
+
+# What is the average cost of a meal at Sardi's?
+
+# tools used: MKE, TAP, google
+# Notes:
+# "! google home done;" has a better user interface.
+
+ke$ set echo=off, kbmode=tap;
+ke$ ? has name = Sardi;
+  # INFO: GetResource: count = 0
+# has name = Sardi
+
+ke$ ! google search Sardis restaurant price done;
+...
+  [
+  URL  = "http://www.sardis.com/"
+  Title = "Sardi&#39;s Restaurant"
+  Snippet = "the restaurant. private dining. reservations. gift shop. menus. hom
+e. ©<b>sardis</b>. "
+  Directory Category = {SE="", FVN="Top/Regional/North_America/United_States/New
+_York/Localities/N/New_York_City/Manhattan/Business_and_Economy/Restaurants_and_
+Bars"}
+  Directory Title = "Sardi's Restaurant"
+  Summary = "The famed Times Square restaurant and bar."
+  Cached Size = "8k"
+  Related information present = true
+  Host Name = ""
+  ],
+...
+  [
+  URL  = "http://newyork.citysearch.com/review/7186161/"
+  Title = "The city guide to entertainment, restaurants, events, hotels, <b>...<
+/b> "
+  Snippet = " <b>...</b> to it, it is just another overpriced <b>restaurant</b>
+with average <b>...</b> but the food wasn&#39;t worth<br> the <b>price</b> we pa
+id <b>...</b> I quite enjoyed my experience at <b>Sardis</b> but still, its <b>.
+..</b>  "
+  Directory Category = {SE="", FVN=""}
+  Directory Title = ""
+  Summary = ""
+  Cached Size = "59k"
+  Related information present = true
+  Host Name = ""
+  ],
+...
+
+##### http://newyork.citysearch.com/review/7186161/
+##### contains
+##### average cost of a three-course dinner, excluding wine, tax and tips
+##### $ ($20 or less) to $$$$ ($40 or more)
+
+
+</pre><H3></HTML>

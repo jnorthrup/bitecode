@@ -1,0 +1,421 @@
+
+
+
+
+<!--  set of class names  -->
+Class isall [Resource,ConstraintResource,ConstraintProperty,Property,Literal,Statement,Container,Bag,Seq,Alt,ContainerMembershipProperty];
+<!--  class hierarchy  -->
+Person
+\  ANIMAL
+\\    Entity
+\\\      Resource
+Resource
+/  Class
+/  ConstraintResource
+//    ConstraintProperty
+///      domain
+///      range
+/  Container
+//    Alt
+//    Bag
+//    Seq
+///      List
+/  Entity
+//    ANIMAL
+///      Person
+//    group
+///      Container
+///      LATTICE
+///      Literal
+///      Set
+///      concept
+///      enumeration
+///      exgroup
+///      ingroup
+///      list
+///      ntriple
+///      requisite
+///      sequence
+//    OBJECT
+///      symbol
+//    PLANT
+/  Property
+//    ConstraintProperty
+///      domain
+///      range
+//    ContainerMembershipProperty
+//    action
+///      COMMAND
+///      method
+//    attribute
+///      classname
+///      comment
+///      domain
+///      fact
+///      gtype
+///      krtype
+///      label
+///      label en
+///      label fr
+///      object
+///      predicate
+///      range
+///      rootname
+///      space
+///      stv
+///      subject
+///      time
+///      type
+///      value
+///      variable
+///      view
+///      wexplore
+//    comment
+//    interaction
+//    isDefinedBy
+//    label
+//    object
+//    part
+///      _n
+///      first
+///      rest
+//    predicate
+//    relation
+///      member
+///      seeAlso
+///      subClassOf
+///      subPropertyOf
+//    seeAlso
+///      isDefinedBy
+//    subClassOf
+//    subPropertyOf
+//    subject
+//    type
+//    value
+/  Statement
+//    s_action
+//    s_attribute
+//    s_begin
+//    s_change
+//    s_conditional
+//    s_definition
+//    s_end
+//    s_exit
+//    s_group
+//    s_hierarchy
+///      s_hostatement
+//    s_html
+//    s_identity
+//    s_interaction
+///      s_causality
+//    s_iteration
+//    s_mcf
+//    s_nt
+//    s_part
+//    s_rdf
+//    s_relation
+///      s_relstatement
+/  proposition
+//    context
+//    newproposition
+//    sentence
+///      Statement
+group
+/  Container
+//    Alt
+//    Bag
+//    Seq
+///      List
+////        Nil
+/  LATTICE
+//    hierarchy
+///      tabhi
+///      kehi
+//    lattice
+//    unithierarchy
+///      tabprim
+///      keprim
+/  Literal
+//    XMLLiteral
+/  Set
+//    Class
+//    values
+//    concepts
+//    infons
+//    views
+//    units
+//    events
+/  concept
+/  enumeration
+//    enum_formattype
+//    enum_hformat
+//    enum_echo
+//    enum_nameformat
+//    enum_charformat
+//    enum_kscdebug
+//    enum_menuwindow
+//    enum_automatic
+//    enum_check
+//    enum_htype
+//    enum_substitute
+//    enum_systype
+//    enum_debug
+//    enum_meaningtype
+//    boolean
+//    enum_kformat
+//    yes_no
+/  exgroup
+/  ingroup
+/  list
+/  ntriple
+/  requisite
+/  sequence
+<!--  resource attributes  -->
+Class has comment = The concept of Class
+ConstraintProperty has comment = Properties used to express RDF Schema constraints.
+ConstraintResource has comment = Resources used to express RDF Schema constraints.
+Container has comment = This represents the set Containers.
+Literal has comment = "This represents the set of atomic values, eg. textual strings."
+Property has comment = The concept of a property.
+Resource has comment = &null
+Statement has comment = This represents the set of reified statements.
+comment has comment = Use this for descriptions
+domain has comment = This is how we associate a class with properties that its instances can have
+isDefinedBy has comment = Indicates a resource containing and defining the subject resource.
+label has comment = Provides a human-readable version of a resource name.
+range has comment = Properties that can be used in a schema to provide constraints
+seeAlso has comment = Indicates a resource that provides information about the subject resource.
+subClassOf has comment = Indicates membership of a class
+subPropertyOf has comment = Indicates specialization of properties
+type has comment = Indicates membership of a class
+Resource has label = &null
+Alt has label en = Alt
+Bag has label en = Bag
+Class has label en = Class
+ConstraintProperty has label en = ConstraintProperty
+ConstraintResource has label en = ContraintResource
+Container has label en = Container
+ContainerMembershipProperty has label en = ContainerMembershipProperty
+Literal has label en = Literal
+Property has label en = Property
+Resource has label en = Resource
+Seq has label en = Sequence
+Statement has label en = [Statement,"D&#233;claration"]
+comment has label en = comment
+domain has label en = domain
+isDefinedBy has label en = isDefinedBy
+label has label en = label
+object has label en = object
+predicate has label en = [predicate,"pr&#233;dicat"]
+range has label en = range
+seeAlso has label en = seeAlso
+subClassOf has label en = subClassOf
+subPropertyOf has label en = subPropertyOf
+subject has label en = [sujet,subject]
+type has label en = type
+value has label en = object
+Alt has label fr = Choix
+Bag has label fr = Ensemble
+Class has label fr = Classe
+ConstraintProperty has label fr = "Propri&#233;t&#233;Contrainte"
+ConstraintResource has label fr = RessourceContrainte
+Container has label fr = Enveloppe
+Literal has label fr = "Litt&#233;ral"
+Property has label fr = "Propri&#233;t&#233;"
+Resource has label fr = Ressource
+Seq has label fr = "S&#233;quence"
+comment has label fr = commentaire
+domain has label fr = domaine
+isDefinedBy has label fr = "esD&#233;finiPar"
+label has label fr = label
+object has label fr = objet
+range has label fr = "&#233;tendue"
+seeAlso has label fr = voirAussi
+subClassOf has label fr = sousClasseDe
+subPropertyOf has label fr = "sousPropri&#233;t&#233;De"
+type has label fr = type
+value has label fr = value
+comment has domain = Resource
+isDefinedBy has domain = Resource
+label has domain = Resource
+object has domain = Statement
+predicate has domain = Statement
+range has domain = Property
+seeAlso has domain = Resource
+subClassOf has domain = Class
+subPropertyOf has domain = Property
+subject has domain = Statement
+Property has range = &null
+comment has range = Literal
+isDefinedBy has range = Resource
+label has range = Literal
+predicate has range = Property
+range has range = Class
+seeAlso has range = Resource
+subClassOf has range = Class
+subPropertyOf has range = Property
+subject has range = Resource
+type has range = Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+begin hierarchy focushi;
+chit
+group
+/  Container
+//    Alt
+//    Bag
+//    Seq
+///      List
+////        Nil
+/  LATTICE
+//    hierarchy
+///      tabhi
+///      kehi
+//    lattice
+//    unithierarchy
+///      tabprim
+///      keprim
+/  Literal
+//    XMLLiteral
+/  Set
+//    Class
+//    values
+//    concepts
+//    infons
+//    views
+//    units
+//    events
+/  concept
+/  enumeration
+//    enum_formattype
+//    enum_hformat
+//    enum_echo
+//    enum_nameformat
+//    enum_charformat
+//    enum_kscdebug
+//    enum_menuwindow
+//    enum_automatic
+//    enum_check
+//    enum_htype
+//    enum_substitute
+//    enum_systype
+//    enum_debug
+//    enum_meaningtype
+//    boolean
+//    enum_kformat
+//    yes_no
+/  exgroup
+/  ingroup
+/  list
+/  ntriple
+/  requisite
+/  sequence
+interaction
+newproposition
+nonexistent
+Person
+unknown
+/  Choix
+/  domaine
+/  Ressource
+/  sousClasseDe
+/  Classe
+/  Ensemble
+/  isc**3
+/  sujet
+/  Sequence
+/  RessourceContrainte
+/  ContraintResource
+/  objet
+/  commentaire
+/  voirAussi
+/  RDF
+/  Enveloppe
+view
+/  tabula rasa
+//    myview
+end hierarchy focushi;
+
+
+
+begin hierarchy focushi;
+chit
+group
+/  Container
+//    Alt
+//    Bag
+//    Seq
+///      List
+////        Nil
+/  LATTICE
+//    hierarchy
+///      tabhi
+///      kehi
+//    lattice
+//    unithierarchy
+///      tabprim
+///      keprim
+/  Literal
+//    XMLLiteral
+/  Set
+//    Class
+//    values
+//    concepts
+//    infons
+//    views
+//    units
+//    events
+/  concept
+/  enumeration
+//    enum_formattype
+//    enum_hformat
+//    enum_echo
+//    enum_nameformat
+//    enum_charformat
+//    enum_kscdebug
+//    enum_menuwindow
+//    enum_automatic
+//    enum_check
+//    enum_htype
+//    enum_substitute
+//    enum_systype
+//    enum_debug
+//    enum_meaningtype
+//    boolean
+//    enum_kformat
+//    yes_no
+/  exgroup
+/  ingroup
+/  list
+/  ntriple
+/  requisite
+/  sequence
+interaction
+newproposition
+nonexistent
+Person
+unknown
+/  kbcheck
+view
+/  tabula rasa
+//    myview
+end hierarchy focushi;
+

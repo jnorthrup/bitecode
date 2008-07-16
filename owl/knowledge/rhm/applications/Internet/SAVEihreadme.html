@@ -1,0 +1,113 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; U) [Netscape]">
+   <title>Internet Hierarchies</title>
+</head>
+<body>
+<XMP>
+# KEHOME/knowledge/ApplicationInternet/ihreadme.htm
+# 1999/2/28</font>
+# new syntax Sep/30/2002</font>
+</XMP>
+<p><font size=+1># The files in the KEHOME/knowledge/ApplicationInternet directory </font>
+<br><font size=+1># contain partial internet directory hierarchies from several public
+</font>
+<br><font size=+1># web sites, and KR programs to <a href="edit.htm">edit</a> and
+<a href="compare.htm">compare</a> the hierarchies.</font>
+<br><font size=+1># As discussed below, there are many practical problems in making</font>
+<br><font size=+1># the comparisons.</font>
+<br><font size=+1># The hierarchy categories are often ad hoc, with no
+definitions</font>
+<br><font size=+1># (or attributes) available.&nbsp; The particular categories
+chosen</font>
+<br><font size=+1># vary widely between directories.</font>
+<p><font size=+1>&nbsp;1. The first problem is lexical variations such
+as</font>
+<br><font size=+1>&nbsp;capitalization and singular/plural forms.</font>
+<br><font size=+1>&nbsp;Example:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; games, Games, Games@</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; Autos, Automotive</font>
+<br><font size=+1>&nbsp;This problem can be overcome by folding to lower
+case</font>
+<br><font size=+1>&nbsp;and using aliases</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; <b>set kcase = LOWER</b></font>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; games is Games, Games@</font></b>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; Autos is Automotive</font></b>
+<p><font size=+1>2. Another problem is related categories which have been</font>
+<br><font size=+1>combined into a single category.</font>
+<br><font size=+1>Example:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; Computers &amp; Internet</font>
+<br><font size=+1>This problem can be overcome by separating the categories:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; <b>set kformat = ho</b></font>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; Computers &amp; Internet</font></b>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; Computers</font></b>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; Internet</font></b>
+<p><font size=+1>3. The same word may have many different meanings.</font>
+<br><font size=+1>This situation can be represented as a hierarchy with</font>
+<br><font size=+1>the same word occupying multiple positions in the</font>
+<br><font size=+1>hierarchy.&nbsp; (The "hierarchy" is actually a lattice.)</font>
+<br><font size=+1>Example:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; Excite</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Search</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Horoscopes</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Channels</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Horoscopes</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More Services:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Horoscopes</font>
+<br><font size=+1>This situation can be detected using</font>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; do read from excite.ho done; do check od genus done</font></b>
+<br><font size=+1>and corrected by deleting the more general meaning</font>
+<br><font size=+1>from the hierarchy, or by choosing a different word.</font>
+<p><font size=+1>4. In some situations the same word has very different</font>
+<br><font size=+1>meanings in two hierarchies.</font>
+<br><font size=+1>Example:</font>
+<br><font size=+1>&nbsp;&nbsp; Excite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+InfoSeek</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Shopping</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Bargains&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Gifts</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Clothes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+music CDs</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Music&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+online malls</font>
+<br><font size=+1>This can be detected by comparing the units of the</font>
+<br><font size=+1>categories using the UNIX diff command</font>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; !diff with -ib od excite.ho,infoseek.ho 
+ out diffei.txt done</font></b>
+<p><font size=+1>5. There may be contradictions between hierarchies,</font>
+<br><font size=+1>i.e., A isa B in one hierarchy, and A isa not B in another.</font>
+<br><font size=+1>Example:</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; Excite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+InfoSeek</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entertainment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Entertainment</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Movies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Books</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Music&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+games</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+great movies</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+music</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...</font>
+<br><font size=+1>This can be detected using</font>
+<br><b><font size=+1>&nbsp;&nbsp;&nbsp; do read from excite.ho, infoseek.ho done; Excite
+is InfoSeek; do check od genus done</font></b>
+<br><font size=+1>Knowledge Explorer automatically checks for</font>
+<br><font size=+1>explicit declarations of the form</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp; <b>A is B; ...; A is not B</b></font>
+</body>
+</html>

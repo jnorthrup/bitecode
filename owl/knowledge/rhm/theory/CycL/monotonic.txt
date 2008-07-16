@@ -1,0 +1,6 @@
+RDF Interest Group IRC logs for 2002-07-31 
+
+16:43:07 <Guha_>
+if A => C but A+B does not imply C,
+for any statements A, B and C,
+then the system is not monotonic.

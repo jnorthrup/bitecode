@@ -1,0 +1,201 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OpenDirectoryProject/ktsample.html
+# May/4/2003
+
+# sample MKE search of dmoz directory for Kids and Teens
+
+$ ke
+...
+set echo=off;
+do read from kt-structure.rdf done;
+...
+rdfke$ do check od count done;
+# command <do check od count done;>
+
+##### count knit <view = myview> #####
+# nonexistent    count:      0
+# unknown        count:   1697
+# newproposition count:   1000
+# concept        count:    299
+# primitive      count:    271
+# unit           count:  30770
+# alternative    count:      0
+# member         count:      0
+# group type     count:     17
+# group          count:     29
+# file           count:     10
+# hierarchy      count:      2
+# unithierarchy  count:      2
+# lattice        count:      0
+# enumeration    count:     17
+# requisite      count:      0
+# list           count:      0
+# sequence       count:      0
+# Set            count:      8
+WARNING: hwalk: cname <multiset> not defined in <here,now,myview>
+# multiset       count:      0
+
+rdfke$ do find od *Harry Potter* done;
+# command <do find od *Harry Potter* done;>
+'s Stone&lt;/i&gt; (known as &lt;i&gt;Harry Potter and the Sorceror'
+
+rdfke$ do find od *fish* done;
+# command <do find od *fish* done;>
+Catfish
+Clownfish
+Crayfish
+Fish
+Flying_Fish
+Jellyfish
+Pufferfish
+Starfish
+Swordfish
+Talking_Fish
+
+rdfke$ do find od *sex* done;
+# command <do find od *sex* done;>
+"Gay,_Lesbian,_and_Bisexual"
+Sexualidad
+Sexually_Transmitted_Diseases
+Teen_Sexuality
+bisexual
+sex
+sexual
+sexuell
+
+rdfke$ International isc**2 ?;
+# question <International isc**2 ? ;>
+International
+/  Chinese_Simplified
+//    人民与社会
+//    体育与兴趣
+//    你的家庭
+//    健康
+//    娱乐
+//    学习时光
+//    幼儿
+//    新闻
+//    游戏
+//    目录
+//    艺术
+//    计算机
+//    青年生活
+/  Chinese_Traditional
+//    中學生活
+//    人類與社區
+//    你的家庭
+//    健康
+//    娛樂
+//    學習時光
+//    幼兒
+//    新聞
+//    目錄
+//    藝術
+//    遊戲
+//    運動與興趣
+//    電腦
+/  Cymraeg
+//    Adloniant
+//    Pobl_a_Cymdeithas
+/  Dansk
+//    Kultur
+//    Mennesker_og_samfund
+//    Søgemaskiner
+//    Underholdning
+/  Deutsch
+//    Computer
+//    Gesundheit
+//    Kultur
+//    Leute_und_Gesellschaft
+//    Nachrichten_und_Medien
+//    Schulzeit
+//    Spiele
+//    Sport_und_Hobby
+//    Teens
+//    Unterhaltung
+//    Verzeichnisse_und_Portale
+/  Español
+//    Actividades_escolares
+//    Artes
+//    Deportes_y_aficiones
+//    Diversión
+//    Juegos
+//    Jóvenes
+//    Salud
+//    Sociedad_y_gente
+/  Français
+//    Actualités
+//    Ados
+//    Arts
+//    Divertissements
+//    Informatique
+//    Jeux
+//    Petite_enfance
+//    Répertoires
+//    Santé
+//    Scolaire
+//    Société
+//    Sports_et_loisirs
+//    Votre_famille
+/  Greek
+/  Italiano
+//    Persone_e_Società
+/  Nederlands
+//    "Sport_en_Hobby's"
+//    Amusement
+//    Computers
+//    Gezondheid
+//    Kunst
+//    Mens_en_Maatschappij
+//    Nieuws
+//    Peuters_en_Kleuters
+//    School
+//    Spellen
+//    Tieners
+//    Zoeken_op_het_Net
+/  Polska
+//    Nasze_lektury
+//    Sami_o_sobie
+/  Română
+//    Artă
+//    Jocuri
+//    Oameni_şi_societate
+//    Sporturi_şi_preferinţe
+//    Sănătate
+//    Viaţa_tinerilor
+//    Şcoală
+/  Russian
+//    Дошкольники
+//    Здоровье
+//    Игры
+//    Искусство
+//    Каталоги
+//    Компьютеры
+//    Люди_и_общество
+//    Новости
+//    Подростки
+//    Развлечения
+//    Семья
+//    Спорт
+//    Увлечения
+//    Школа
+/  Svenska
+//    0-6_år
+//    Datorer
+//    Kultur
+//    Länksidor
+//    Människor_och_samhälle
+//    Skolan
+//    Spel
+//    Sport_och_fritid
+//    Tonårsfrågor
+//    Underhållning
+/  Türkçe
+rdfke$
+
+rdfke$ exit;
+...
+$
+</XMP>
+</HTML>

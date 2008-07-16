@@ -1,0 +1,143 @@
+
+
+What is knowledge?
+==================
+knowledge is an identification of a fact of reality,
+using words and sentences.
+
+What is a concept?
+==================
+A concept
+is a percept
+or an integration of two or more concepts.
+
+A percept is a primitive concept.
+
+There are three ways to define a concept.
+integration (ostensive), e.g.
+  entity is either animal or plant or object
+differentiation (genus-differentia), e.g.
+  man is animal with identify
+identity (alias), e.g.
+  person is man
+
+The algebraic properties of a concept
+follow from its definition by integration.
+The units of a concept are mutually exclusive
+and jointly exhaustive.
+
+The meaning of a concept
+is the set of all primitive concepts
+integrated by the concept.
+The extension of a concept
+is the set of all currently known
+primitive concepts.
+
+The intension of a concept
+is the set of all its 
+currently known characteristics.
+
+The differentia of a concept
+is the set of essential characteristics
+specified in its definition by differentiation.
+These may change as more existents
+or more characteristics are discovered.
+
+What is an axiomatic concept?
+=============================
+An axiomatic concept
+is the identification of a primary fact of reality,
+which is implicit in all facts and all knowledge.
+
+In the most abstract terms, the axiomatic concepts
+are existence, identity, consciousness.
+For practical applications, I use the following
+more specific axiomatic concepts.
+
+existent	everything that exists
+entity		primary existent, a thing that exists
+characteristic	secondary existent, the identity of a primary existent
+
+attribute	space-time-independent characteristic
+action		space-time-dependent characteristic
+relationship	relation between concepts
+
+space		where action occurs
+time		when action occurs
+view		knowledge unit of man1
+man1		man that identifies knowledge
+identify	action of rational entity
+statement1	view := man1 do identify existent
+
+percept		group of sensations automatically retained by man1
+
+What is a nonaxiomatic concept?
+===============================
+A nonaxiomatic concept
+is a concept defined by a man, or a group of men,
+for a particular purpose.
+
+purpose
+  unit economy
+  selective focus
+
+A personal concept
+is a nonaxiomatic concept defined by a man.
+A common concept
+is a nonaxiomatic concept defined by a group of men
+using interactive communication.
+
+What is a proposition?
+======================
+A proposition
+is a sequence of concepts
+that specifies a relationship between the concepts.
+
+A proposition is a unit of thought.
+
+
+What is a knowledge unit?
+=========================
+A knowledge unit (knit)
+is a concept-hierarchy that contains all axiomatic concepts
+and includes a particular subhierarchy of nonaxiomatic concepts.
+
+A knit identifies all concepts and the relations between them
+at a given space and time and view.  The knit changes if an
+action occurs at some space-time, or the person changes
+his view.
+
+Graphically, a knit looks like this
+(boxes enclose nonaxiomatic concepts).
+
+                  existent
+                     o
+                     |
+      ---------------------------------
+      |                               |
+      o entity                        o characteristic
+      |                               |
+    -----              ---------------------------------
+    |   |              |              |                |
+    -----              o attribute    o action         o relationship
+      |                |              |                |
+ man1 o              -----          -----            -----
+                     |   |          |   |            |   |
+                     -----          -----            -----
+                      |||             |                |
+                      ||o space       o identify       o statement1
+                      |o  time
+                      o   view
+                          
+                          
+What is a change unit?
+======================
+A change unit (chit)
+is an identification of an occurrence of an action.
+
+In my Knowledge Representation language,
+a chit is identified as follows.
+
+entity do action=event
+event changes eobject from attribute=initial to attribute=final
+

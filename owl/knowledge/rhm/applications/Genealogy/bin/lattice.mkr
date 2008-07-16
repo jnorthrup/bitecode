@@ -1,0 +1,32 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/lattice.mkr
+# 1999/Aug/11
+# new syntax Aug/10/2005
+
+#========================================#
+# family lattice                         #
+#   name isa* ?;	ancestor tree    #
+#   name isc* ?;	descendant tree  #
+#========================================#
+# execution time
+# 133 MHz pentium, Windows 98
+# 0:22 min:sec
+
+do read from family.ku done;
+
+let echo=off;
+every q isa person {
+	set . = $q;
+	if $q has parent; then $q isa $parent; fi;
+	if $q has child;  then $q isc $child;  fi;
+};
+let echo=on;
+
+
+# test
+person isc* ?;
+Steven Cates 1955 isa* ?;
+Kay Stecker 1910 isc* ?;
+Jane Doe 1933 isa* ?;
+
+# </xmp></html>

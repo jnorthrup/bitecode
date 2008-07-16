@@ -1,0 +1,71 @@
+# 5:30 pm 1998/2/10
+
+# integrating databases from GE, Navy, AirForce
+# John McCarthy & Sasa Buvac example
+# AAAI 1997 Symposium on Context in KR & NL
+
+# Naming convention
+#   p/product denotes the whole package
+#   which consists of the parts
+#     product (1)
+#     spares (if any)
+#     warranties (if any)
+# Package price calculation
+#   GE		sum(partprice)
+#   Navy	sum(partprice)
+#   Air Force	f(partprice)
+
+# problem solving context
+#========================
+at view=tabula_rasa  at view=cps
+relation ise r_price, r_spare, r_warranty
+r_price has \
+	format="object:1; price:2",
+	meaning=""  # depends on context
+r_spare has \
+	format="object:1; object:2",
+	meaning="p/$1 haspart $1,$2"
+r_warranty has \
+	format="object:1; object:2",
+	meaning="p/$1 haspart $1,$2"
+
+
+# GE context
+#===========
+at view=cps  at view=cGE
+# GEprice = productprice
+r_price has meaning="$1 has GEprice=$2"
+
+!read GEprice.rel with cname=r_price
+# FX-22-engine; 3600K
+# FX-22-engine-fan-blades; 5K
+# FX-22-engine-two-year-warranty; 6K
+
+
+# Navy context
+#=============
+at view=cGE  at view=cNAVY
+# NAVYprice = productprice + spareprice + warrantyprice
+r_price has meaning="p/$1 has NAVYprice=$2"
+
+!read NAVYprice.rel with cname=r_price
+# FX-22-engine; 3611K
+
+!read NAVYspare.rel with cname=r_spare
+# FX-22-engine; FX-22-engine-fan-blades
+
+!read NAVYwarranty.rel with cname=r_warranty
+# FX-22-engine; FX-22-engine-two-year-warranty
+
+
+# Air Force context
+#==================
+at view=cGE  at view=cAF
+# AFprice = f(productprice, spareprice, warrantyprice)
+r_price has meaning="p/$1 has AFprice=$2"
+
+!read AFprice.rel with cname=r_price
+
+!read AFspare.rel with cname=r_spare
+
+!read AFwarranty.rel with cname=r_warranty

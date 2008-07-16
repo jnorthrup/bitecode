@@ -1,0 +1,41 @@
+<html><pre>
+# KEHOME/knowledge/theory/CycL/Thing.cycl
+# Oct/20/2005
+
+
+Collection: Thing
+
+Mt: UniversalVocabularyMt
+partitionedInto: (ThePartition Intangible PartiallyTangible)
+partitionedInto: (ThePartition SpatialThing AspatialThing)
+partitionedInto: (ThePartition TemporalThing AtemporalThing)
+(genls FictionalThing Thing)
+(genls SetOrCollection Thing)
+(genls PartiallyTangible Thing)
+(genls Intangible Thing)
+(genls NonNegativeInteger Thing)
+(genls DayOfWeekType Thing)
+(genls SubLKeyword Thing)
+(genls System Thing)
+(genls LineSegment Thing)
+(genls SubLCharacter Thing)
+(genls LinearObject-ThreeDimensional Thing)
+(genls SocialSecurityNumber Thing)
+(genls SubLTemplate Thing)
+(genls LinearObject-Infinite Thing)
+(genls KFDInternalKRTern Thing)
+
+Mt: BaseKB
+partitionedInto: (ThePartition SetOrCollection Individual)
+(genls Nothing Thing)
+
+Mt: LogicalTruthMt
+(genls CycLExpression Thing)
+(genls Individual Thing)
+(genls Collection Thing)
+
+Mt: CoreCycLMt
+(genls SetOrCollection Thing)
+
+
+</pre></html>

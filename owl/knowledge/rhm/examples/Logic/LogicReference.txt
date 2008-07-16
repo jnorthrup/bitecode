@@ -1,0 +1,18 @@
+# KEHOME/knowledge/ExamplesLogic/LogicReference.txt
+# Jul/26/2002
+
+
+#=============================#
+# General References on Logic #
+#=============================#
+
+#  Leonard Peikoff, "Introduction to Logic",
+#  lecture course, January 15 - March 19, 1974.
+
+#  H.W.B Joseph, "An Introduction to Logic",
+#  Second Edition, Revised,
+#  Oxford University Press, 1916. 
+
+#  David Kelley, "The Art of Reasoning",
+#  Second Expanded Edition,
+#  W.W. Norton & Company, 1994.

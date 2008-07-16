@@ -1,0 +1,131 @@
+
+# context <at view = spo ;>
+existent
+
+# INFO: ke: Loading mkr definition .....
+# INFO: update_knit: tabula rasa context copied from spo
+
+# context <at view = tabula rasa ;>
+existent
+##### knowledge base #####
+# INFO: kbmode = mke
+# INFO: kedb = C:\cygwin\home\rhm/db
+# INFO: kbworld = &null
+# INFO: kbdata = &null
+# INFO: kbfile = &null
+
+##### check genus <view = tabula rasa> #####
+# genus error: (0) OBJECT
+# genus error: (0) attribute
+# genus error: (0) context
+# genus error: (0) differentia
+# genus error: (0) group
+# genus error: (0) isc**2
+# genus error: (0) kb/initial.mkr
+# genus error: (0) kb/ke.html
+# genus error: (0) kb/spo.mkr
+# genus error: (0) kb/tabrasa.html
+# genus error: (0) question
+# genus error: (0) relation
+# genus error: (0) role
+# genus error: (0) views
+# genus error: (0) xor
+# genus count: 524 items,21 no genus (15 unknowns,0 alternatives,1 members)
+# genus count: 524 items, 0 errors (0 alternatives, 0 members)
+
+##### check unknown <view = tabula rasa> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:    15 initial
+# can't classify <kb/initial.mkr>
+# can't classify <kb/tabrasa.html>
+# can't classify <OBJECT>
+# can't classify <relation>
+# can't classify <group>
+# can't classify <differentia>
+# can't classify <views>
+# can't classify <xor>
+# can't classify <question>
+# can't classify <kb/spo.mkr>
+# can't classify <context>
+# can't classify <attribute>
+# can't classify <kb/ke.html>
+# can't classify <role>
+# can't classify <isc**2>
+# classify count:   0
+# unknown count:    15 final
+
+
+# context <at view = test ;>
+# INFO: update_knit: test context copied from tabula rasa
+# person count:          651 items, 5 persons including 0 species
+# Internal ERROR: get_symbol(list/,=): unexpected type tok(null) <&null>
+# person count:          687 items, 5 persons including 0 species
+# person count:          700 items, 5 persons including 0 species
+# person count:          730 items, 6 persons including 0 species
+# person count:          739 items, 6 persons including 0 species
+# person count:          764 items, 8 persons including 0 species
+
+# context <at space = Internet/CNET download.com,time = 1997/5/28 {Dick McCullough 1936 do list od Knowledge Explorer 1.2 done;} ;>
+# person count:          786 items, 8 persons including 0 species
+
+# context <at space = MA/Cambridge,time = 1960 {Dick McCullough 1936 do receive od [SBEE,SMEE] from school = MIT done;} ;>
+
+# context <at space = NY/Brooklyn,time = 1967 {Dick McCullough 1936 do receive od PhDEE from school = Polytechnic University done;} ;>
+
+# context <at space = MA/Cambridge,time = 1960 {Bob McCullough 1938 do receive od SBEE from school = MIT done;} ;>
+
+# context <at space = CA,time = 19xx {Bob McCullough 1938 do receive od PhDEE from school = Stanford University done;} ;>
+# person count:          829 items, 8 persons including 0 species
+
+# context <at space = NJ-IL-CA,time = 1960 {Dick McCullough 1936 do work_for od Bell Labs from time = 1960 to time = 1989 done;} ;>
+
+# context <at space = CA/Pioneer,time = 1996 {Dick McCullough 1936 do work_for od self from time = 1996 to time = NA done;} ;>
+# person count:          863 items, 8 persons including 0 species
+# person count:          887 items, 8 persons including 0 species
+# person count:          905 items, 8 persons including 0 species
+# family count:          905 items, 3 families including 0 species
+
+##### check unknown <view = test> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:    15 initial
+# can't classify <kb/initial.mkr>
+# can't classify <kb/tabrasa.html>
+# can't classify <OBJECT>
+# can't classify <relation>
+# can't classify <group>
+# can't classify <differentia>
+# can't classify <views>
+# can't classify <xor>
+# can't classify <question>
+# can't classify <kb/spo.mkr>
+# can't classify <context>
+# can't classify <attribute>
+# can't classify <kb/ke.html>
+# can't classify <role>
+# can't classify <isc**2>
+# classify count:   0
+# unknown count:    15 final
+# person count:          907 items, 8 persons including 0 species
+# family count:          907 items, 3 families including 0 species
+# production <echo := off ;>
+# assignment <let echo = off;>
+# INFO: write_person: cname(string[19]) <Bob McCullough 1938>
+# INFO: write_person: birthname(string[23]) <Robert Burns McCullough>
+# INFO: write_person: cname(string[15]) <Carl Cates 1927>
+# INFO: write_person: birthname(string[2]) <[]>
+# INFO: write_person: birthname(string[15]) <Carl Cates 1927>
+# INFO: write_person: cname(string[20]) <Dick McCullough 1936>
+# INFO: write_person: birthname(string[24]) <Richard Homer McCullough>
+# INFO: write_person: cname(string[21]) <Homer McCullough 1907>
+# INFO: write_person: birthname(string[2]) <[]>
+# INFO: write_person: birthname(string[21]) <Homer McCullough 1907>
+# INFO: write_person: cname(string[13]) <Jane Doe 1933>
+# INFO: write_person: birthname(string[8]) <Jane Doe>
+# INFO: write_person: cname(string[16]) <Kay Stecker 1910>
+# INFO: write_person: birthname(string[2]) <[]>
+# INFO: write_person: birthname(string[16]) <Kay Stecker 1910>
+# INFO: write_person: cname(string[17]) <Pauline Neal 1934>
+# INFO: write_person: birthname(string[19]) <Althea Pauline Neal>
+# INFO: write_person: cname(string[17]) <Steven Cates 1955>
+# INFO: write_person: birthname(string[19]) <Steven Virgil Cates>
+#####  exit  #####

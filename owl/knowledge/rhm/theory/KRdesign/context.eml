@@ -1,0 +1,72 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "RDF-Interest" <www-rdf-interest@w3.org>
+Subject: context
+Date: Sun, 15 Dec 2002 05:13:00 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_001F_01C2A3F8.A34A2F00"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_001F_01C2A3F8.A34A2F00
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Here's my most fundamental view of context.
+Imagine that I decide to record all my knowledge in a diary.  Every day, =
+I write propositions in my diary, numbering them 1, 2, ....
+Today, I record proposition 123456789; the context of proposition =
+123456789 is the list of propositions from 1 to 123456788.
+It's that simple!
+
+My KR language and KE program is my way of recording, organizing & using =
+a large list of propositions.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart proposition list
+
+------=_NextPart_000_001F_01C2A3F8.A34A2F00
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>
+<DIV><FONT face=3DArial size=3D2>Here's my most fundamental view of=20
+context.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Imagine that I decide to record all my =
+knowledge in=20
+a diary.&nbsp; Every day, I write propositions in my diary, numbering =
+them 1, 2,=20
+....</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Today, I record proposition 123456789; =
+the context=20
+of proposition 123456789 is the list of propositions from 1 to=20
+123456788.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>It's that simple!</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>My KR language and KE program is my way =
+
+of&nbsp;recording, organizing &amp; using a large list of=20
+propositions.</FONT><BR></FONT>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D =
+<BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> proposition=20
+list<BR></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_001F_01C2A3F8.A34A2F00--

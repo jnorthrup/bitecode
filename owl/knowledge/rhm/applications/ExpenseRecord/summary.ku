@@ -1,0 +1,50 @@
+<html><pre>
+# KEHOME/knowledge/ApplicationExpenseRecord/summary.ku
+# 1999/Aug/6
+# upgraded sum command Sep/13/2002
+# new syntax Dec/22/2002
+# new syntax Jan/21/2003
+# new syntax Oct/6/2003
+
+#======================================#
+# summarize expenses by year, category #
+#   save costs as group members        #
+#======================================#
+
+do read from expense.rel done;		# read expense data
+category isc* ?;
+? has cost;
+
+do differentiate od expense with year,type done;  # differentiate wrt year,type
+expense isc* ?;				# display result
+
+# sum expenses by year,type
+every vyear isa expense {		# year
+    set echo=off;
+    do print od "==================================" done;
+    do print od $vyear done;
+    every vcat isa $vyear {		# expense category
+	$vcat isall 0.00;
+	every vexp isa $vcat {		# individual expense
+		vexp_cost := $vexp has cost=?;
+		$vcat isall ${vexp_cost};
+	}; # end every vexp
+	vcat_cost := do sum od $vcat done;
+	$vcat has cost=${vcat_cost};
+	$vyear isall ${vcat_cost};
+    }; # end every vcat
+    vyear_cost := do sum od $vyear done;
+    $vyear has cost=${vyear_cost};
+    expense isall ${vyear_cost};
+    do print od "----------------------------------" done;
+    set echo=on;
+}; # end every vyear
+
+expense_cost := do sum od expense done;
+expense has cost=$expense_cost;
+
+? has cost;				# display all sums
+
+exit;
+
+</pre></html>

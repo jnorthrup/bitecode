@@ -1,0 +1,37 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Netscape/bookmark.def
+# Apr/1/2003
+
+#===================#
+# Netscape Bookmark #
+#  .htm export file #
+#  version 4.79     #
+#===================#
+Description has line separator = "<BR>";
+
+bookmark file has
+	!DOCTYPE = NETSCAPE-Bookmark-file-1,
+	!-- =  "This is an automatically generated file.<BR>
+		It will be read and overwritten.<BR>
+		Do Not Edit! ",
+	TITLE = "Bookmarks for $user",
+	H1 = "Bookmarks for $user",
+	bookmark folder list;
+
+bookmark folder has
+	FOLDED,
+	H3 = Folder Name,
+	bookmark folder list,
+	bookmark list;
+
+bookmark has
+	H3 = Bookmark Name,
+	Description,
+	HREF = Location (URL),
+	ADD_DATE,
+	LAST_VISIT,
+	LAST_MODIFIED;
+
+</XMP>
+</HTML>

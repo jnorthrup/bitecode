@@ -1,0 +1,38 @@
+#
+# $Id: testfqxml.icn,v 1.3 2003/03/04 14:32:51 rparlett Exp $
+#
+# This file is in the public domain.
+#
+# Author: Robert Parlett (parlett@dial.pipex.com)
+#
+
+import xml
+
+procedure main(a)
+   p := XmlParser()
+
+   every e := !a do {
+      f := open(e) | stop("couldnt open" || e)
+      s := ""
+      every s ||:= !f || "\n"
+      close(f)
+      if d := p.parse(s) then {
+         write(d.format())
+         d.print_structure(,,1)
+         d.show_entities()
+         d.show_element_declarations()
+         d.show_notation_declarations()
+         d.show_attribute_lists()
+         d.show_id_attributes()
+
+         #r := d.get_root_element()
+         #write(image(r.get_attribute_global_name(GlobalName("attr2", "http://an.pr1.com"))))
+         #write(image(r.get_attribute_global_name(GlobalName("attr3"))))
+         #write(image(r.search_children_global_name(GlobalName("inner", "http://an.pr1.com"))))
+      } else {
+         write("couldnt parse\n" || p.get_err())
+      }
+
+   }
+end
+

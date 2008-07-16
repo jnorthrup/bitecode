@@ -1,0 +1,116 @@
+# 10:00 am 1998/1/9
+
+# Dewey Decimal Classification and Relative Index
+# The 100 Divisions
+
+at view = book/ddcn
+
+000 General Works
+/	010 "Bibliographies & catalogs"
+/	020 Library science
+/	030 General encyclopedic works
+/	040
+/	050 General periodicals
+/	060 General organizations
+/	070 "Newspapers & journalism"
+/	080 General collections
+/	090 "Manuscripts & book rarities"
+
+100 "Philosophy & Psychology"
+/	110 "Ontology & methodology"
+/	120 Knowledge, cause, purpose, man
+/	130 "Pseudo-psychology & parapsychology"
+/	140 Specific philosophic viewpoints
+/	150 Psychology
+/	160 Logic
+/	170 Ethics (Moral philosophy)
+/	180 "Ancient, medieval, Oriental philosophy"
+/	190 Modern Western philosophy
+
+200 Religion
+/	210 Natural religion
+/	220 Bible
+/	230 Christian doctrinal theology
+/	240 "Christian moral & devotional theology"
+/	250 "Christian pastoral, parochial, etc."
+/	260 "Christian social & ecclesiastical theology"
+/	270 "History & geography of Christian church"
+/	280 "Christian denominations & sect"
+/	290 "Other religions & comparative religion"
+
+300 Social Sciences
+/	310 "Statistical methods & statistics"
+/	320 Political science
+/	330 Economics
+/	340 Law
+/	350 Public administration
+/	360 "Welfare & association"
+/	370 Education
+/	380 Commerce
+/	390 "Customs & folklore"
+
+400 Language
+/	410 "Linguistics & nonverbal language"
+/	420 "English & Anglo-Saxon"
+/	430 Germanic languages
+/	440 French, Provencal, Catalan
+/	450 Italian, Romanian, etc.
+/	460 "Spanish & Portuguese"
+/	470 Italic languages
+/	480 "Classical & Greek"
+/	490 Other languages
+
+500 Science
+/	510 Mathematics
+/	520 "Astronomy & allied sciences"
+/	530 Physics
+/	540 "Chemistry & allied sciences"
+/	550 Earth sciences
+/	560 Paleontology
+/	570 "Anthropological & biological sciences"
+/	580 Botanical sciences
+/	590 Zoological sciences
+
+600 "Applied Science & Useful Arts"
+/	610 Medical sciences
+/	620 "Engineering & allied operations"
+/	630 "Agriculture & agricultural industries"
+/	640 "Domestic arts & sciences"
+/	650 "Business & related enterprises"
+/	660 Chemical technology etc.
+/	670 Manufactures processible
+/	680 "Assembled & final products"
+/	690 Buildings
+
+700 "Fine Arts & Recreation"
+/	710 "Civic & landscape art"
+/	720 Architecture
+/	730 "Sculpture & the plastic arts"
+/	740 "Drawing & decorative arts"
+/	750 "Painting & paintings"
+/	760 Graphic arts
+/	770 "Photography & photographs"
+/	780 Music
+/	790 Recreation (Recreational arts)
+
+800 Literature
+/	810 American literature in English
+/	820 "English & Anglo-Saxon literature"
+/	830 Germanic languages literature
+/	840 "French, Provencal, Catalan literature"
+/	850 "Italian, Romanian etc. literature"
+/	860 "Spanish & Portuguese literature"
+/	870 Italic languages literature
+/	880 "Classical & Greek literature"
+/	890 "Literatures of other languages"
+
+900 "Biography, Geography, History"
+/	910 General geography
+/	920 "General biography, genealogy, etc."
+/	930 General history of ancient world
+/	940 General history of modern Europe
+/	950 General history of modern Asia
+/	960 General history of modern Africa
+/	970 General history of North America
+/	980 General history of South America
+/	990 General history of rest of world

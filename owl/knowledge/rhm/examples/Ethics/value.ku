@@ -1,0 +1,23 @@
+# 5:30 pm 11/26/97
+#==================================#
+# choose, value, standard of value #
+#==================================#
+
+man do choose
+
+#===========================================================#
+# Ayn Rand                                                  #
+# value is that which one acts to gain and/or keep          #
+# virtue is the act by which one gains and/or keeps a value #
+#===========================================================#
+value := man do virtue
+
+
+#==========================#
+# George H. Smith page 294 #
+# practical syllogism      #
+#==========================#
+if	man do want value \		# goal
+and	value := man do action \	# standard
+then	man do choose action \		# ought
+fi

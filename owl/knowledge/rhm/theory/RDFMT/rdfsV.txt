@@ -1,0 +1,30 @@
+# KEHOME/knowledge/application/SemanticWeb/rdfsV.txt
+# Nov/17/2002
+
+RDFS reserved vocabulary 
+Reference: "http://www.w3.org/TR/2002/WD-rdf-mt-20021112/"
+     Date: 12 Nov 2002
+
+# Resource is existent
+# Class is entity
+# Property is attribute
+# isc isInverseOf isa
+
+rdfs:domain		# Property has domain = Resource
+rdfs:range		# Property has range = Resource
+rdfs:Resource		# Resource is existent
+rdfs:Literal		# Literal isa Datatype
+rdfs:XMLLiteral		# XMLLiteral isa Literal
+rdfs:Datatype		# Datatype isa object
+rdfs:Class		# Class is entity
+rdfs:subClassOf		# isa*: Class:1 isa* Class:2
+rdfs:subPropertyOf	# isa*: Property:1 isa* Property:2
+rdfs:member		# ismem, isalt: Resource ismem Container
+rdfs:Container		# Container isc Seq, Bag, Alt
+rdfs:ContainerMembershipProperty
+			# ContainerMembershipProperty isa Property
+			# ContainerMembershipProperty isc member, _1, _2, ...
+rdfs:comment		# Resource has comment = Literal
+rdfs:seeAlso		# Resource has seeAlso = Resource
+rdfs:isDefinedBy	# isDefined isa seeAlso
+rdfs:label 		# Resource has label = Literal

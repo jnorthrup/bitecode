@@ -1,0 +1,234 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tap2.ho
+# Jan/8/2003
+
+#=========================================#
+# integrated TAP and tabula rasa contexts #
+#=========================================#
+
+#====================================#
+# Knowledge Explorer output, part 2  #
+#------------------------------------#
+#    $ ke			     #
+#    <> do read from tap.mkr done    #
+#    <> do read from tapid1.mkr done #
+#    <> existent isc**3 ? 	     #
+#    <> exit			     #
+#    $				     #
+#====================================#
+
+# command <do read from tapid1.mkr done>
+##### read_knit tapid1.mkr #####
+# statement <entity isi Agent,Tangible>
+# statement <OBJECT isi Class,Intangible,Literal>
+# statement <attribute isi PropertyType>
+# statement <interaction isi Activity,Event>
+# 0 errors found in file tapisi.mkr
+# question <existent isc**3 ?>
+existent
+/  characteristic
+//    action
+///      COMMAND
+///      ask
+///      believe
+///      classify
+///      desire
+///      identify
+///      intend
+///      know
+///      live
+///      measure
+///      method
+///      move
+///      not live
+///      not move
+///      perceive
+///      say
+///      sense
+///      want
+//    attribute
+///      Ontology
+///      PropertyType
+///      a:ActivityType
+///      a:AttributeValueType
+///      a:EventType
+///      a:TitlePropertyType
+///      a:plural
+///      a:producesFood
+///      a_dirobject
+///      a_event
+///      a_instrument
+///      a_pplist
+///      a_product
+///      a_purpose
+///      a_subject
+///      a_value
+///      alias
+///      alternative
+///      argclass
+///      argno
+///      argument
+///      automatic
+///      cache name
+///      cconcept
+///      cgenus
+///      cknit
+///      classified
+///      classname
+///      comment
+///      cprimitive
+///      cspecies
+///      ctype
+///      cunit
+///      domain
+///      e_action
+///      e_at
+///      e_cause
+///      e_effect
+///      e_from
+///      e_object
+///      e_product
+///      e_subject
+///      e_to
+///      eobject
+///      exlusive
+///      fact
+///      format
+///      fpath
+///      genus
+///      gpecies
+///      gtype
+///      icache
+///      iconcept
+///      inclusive
+///      inseparable
+///      internal name
+///      ktype
+///      label
+///      meaning
+///      meantype
+///      member
+///      name
+///      nickname
+///      object
+///      order
+///      p_cause
+///      p_event
+///      primitive
+///      product
+///      propertyTypeCardinality
+///      ptype
+///      purpose
+///      range
+///      rdf:type
+///      role
+///      rootname
+///      separable
+///      sex
+///      shortname
+///      space
+///      stv
+///      subject
+///      time
+///      uid
+///      unit
+///      utype
+///      variable
+///      verb
+///      view
+///      wexplore
+//    differentia
+///      ambiguous genus
+///      antecedent subject
+///      default
+///      essential
+///      event location
+///      event sequence
+///      exclusive
+///      exclusive mental integration
+///      existent-attribute relation
+///      file list
+///      husband
+///      identification
+///      inclusive mental integration
+///      input/output knowledge
+///      instance
+///      integrate unit
+///      man-made
+///      mental integration
+///      multiple entity
+///      multiple existent
+///      not classified
+///      not space
+///      not time
+///      predefined
+///      previous knowledge
+///      primary thing which exists
+///      rational
+///      readonly
+///      referent
+///      repetition
+///      sentence output
+///      single entity
+///      single existent
+///      specify characteristic
+///      specify number
+///      statement relation
+///      unique genus
+///      user defined
+///      visual-auditory
+///      wife
+///      wildcard
+//    interaction
+///      Activity
+///      Event
+//    part
+///      causality-relation Set
+///      chit
+///      entity-characteristic-proposition hierarchy
+///      event Set
+//    relation
+///      r_action
+///      r_attribute
+///      r_causality
+///      r_change
+///      r_hierarchy
+///      r_part
+/  entity
+//    Agent
+///      Organization
+///      Person
+///      PopularCharacter
+//    OBJECT
+///      Class
+///      Intangible
+///      Literal
+///      group
+///      knowledge # {knowledge := man do identify od existent done}
+///      measurement # {measurement := man do measure od characteristic done}
+///      symbol
+//    Tangible
+///      Animal
+///      BodyPart
+///      Material
+///      Place
+///      Plant
+///      Product
+//    animal
+///      person
+//    plant
+/  proposition
+//    causality relation
+//    context
+//    newproposition
+//    sentence
+///      assignment
+///      command
+///      production
+///      question
+///      statement
+/  unknown
+# 0 errors found in input after last group tapid1.mkr
+</XMP>
+</HTML>

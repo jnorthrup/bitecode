@@ -1,0 +1,115 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/cam.nt
+# Apr/21/2003
+
+# camera.owl N-Triples
+# output from RDF Validator
+# transformed by MKE
+
+<Money> <type> <Class> .
+<Money> <subClassOf> <Thing> .
+<currency> <type> <DatatypeProperty> .
+<currency> <domain> <Money> .
+<currency> <range> <string> .
+<Range> <type> <Class> .
+<Range> <subClassOf> <Thing> .
+<min> <type> <DatatypeProperty> .
+<min> <domain> <Range> .
+<min> <range> <float> .
+<max> <type> <DatatypeProperty> .
+<max> <domain> <Range> .
+<max> <range> <float> .
+<units> <type> <DatatypeProperty> .
+<units> <domain> <Range> .
+<units> <range> <string> .
+<Window> <type> <Class> .
+<Window> <subClassOf> <Thing> .
+<ThroughTheLens> <type> <Window> .
+<WindowOnTopOfCamera> <type> <Window> .
+<Viewer> <type> <Class> .
+<ThroughTheLens> <type> <Window> .
+<WindowOnTopOfCamera> <type> <Window> .
+<jARP88396> <first> <WindowOnTopOfCamera> .
+<jARP88396> <rest> <nil> .
+<jARP88396> <type> <List> .
+<jARP88394> <first> <ThroughTheLens> .
+<jARP88394> <rest> <jARP88396> .
+<jARP88394> <type> <List> .
+<Viewer> <oneOf> <jARP88394> .
+<PurchaseableItem> <type> <Class> .
+<PurchaseableItem> <subClassOf> <Thing> .
+<cost> <type> <ObjectProperty> .
+<cost> <domain> <PurchaseableItem> .
+<cost> <range> <Money> .
+<Body> <type> <Class> .
+<Body> <subClassOf> <PurchaseableItem> .
+<BodyWithNonAdjustableShutterSpeed> <type> <Class> .
+<Body> <type> <Class> .
+<jARP88409> <type> <Restriction> .
+<jARP88409> <onProperty> <shutter-speed> .
+<jARP88409> <cardinality> <0> .
+<jARP88408> <first> <jARP88409> .
+<jARP88408> <rest> <nil> .
+<jARP88408> <type> <List> .
+<jARP88406> <first> <Body> .
+<jARP88406> <rest> <jARP88408> .
+<jARP88406> <type> <List> .
+<BodyWithNonAdjustableShutterSpeed> <intersectionOf> <jARP88406> .
+<Lens> <type> <Class> .
+<Lens> <subClassOf> <PurchaseableItem> .
+<Camera> <type> <Class> .
+<Camera> <subClassOf> <PurchaseableItem> .
+<SLR> <type> <Class> .
+<Camera> <type> <Class> .
+<jARP88419> <type> <Restriction> .
+<jARP88419> <onProperty> <viewFinder> .
+<jARP88419> <hasValue> <ThroughTheLens> .
+<jARP88418> <first> <jARP88419> .
+<jARP88418> <rest> <nil> .
+<jARP88418> <type> <List> .
+<jARP88416> <first> <Camera> .
+<jARP88416> <rest> <jARP88418> .
+<jARP88416> <type> <List> .
+<SLR> <intersectionOf> <jARP88416> .
+<Large-Format> <type> <Class> .
+<Large-Format> <subClassOf> <Camera> .
+<jARP88424> <type> <Restriction> .
+<jARP88424> <onProperty> <body> .
+<jARP88424> <allValuesFrom> <BodyWithNonAdjustableShutterSpeed> .
+<Large-Format> <subClassOf> <jARP88424> .
+<Digital> <type> <Class> .
+<Digital> <subClassOf> <Camera> .
+<part> <type> <ObjectProperty> .
+<lens> <type> <ObjectProperty> .
+<lens> <subPropertyOf> <part> .
+<lens> <domain> <Camera> .
+<lens> <range> <Lens> .
+<body> <type> <ObjectProperty> .
+<body> <subPropertyOf> <part> .
+<body> <domain> <Camera> .
+<body> <range> <Body> .
+<viewFinder> <type> <ObjectProperty> .
+<viewFinder> <type> <FunctionalProperty> .
+<viewFinder> <domain> <Camera> .
+<viewFinder> <range> <Viewer> .
+<size> <type> <DatatypeProperty> .
+<size> <domain> <Lens> .
+<size> <range> <string> .
+<aperture> <type> <DatatypeProperty> .
+<aperture> <domain> <Lens> .
+<aperture> <range> <string> .
+<shutter-speed> <type> <ObjectProperty> .
+<shutter-speed> <domain> <Body> .
+<shutter-speed> <range> <Range> .
+<focal-length> <type> <DatatypeProperty> .
+<focal-length> <equivalentProperty> <size> .
+<focal-length> <domain> <Lens> .
+<focal-length> <range> <string> .
+<f-stop> <type> <DatatypeProperty> .
+<f-stop> <equivalentProperty> <aperture> .
+<f-stop> <domain> <Lens> .
+<f-stop> <range> <string> .
+
+</XMP>
+</HTML>

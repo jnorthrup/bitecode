@@ -1,0 +1,209 @@
+# KEHOME/doc/axprop.txt
+# Jul/14/2002
+
+#========================#
+# axiomatic propositions #
+#                        #
+# Richard H. McCullough  #
+#========================#
+
+# Reference:
+# Ayn Rand, "Introduction to Objectivist Epistemology",
+# Expanded Second Edition, Meridian, 1990.
+
+
+# Rand describes three axiomatic concepts:
+# existence, identity, consciousness.
+# Her discussion can be neatly summarized
+# using KR:
+
+	existent is existent
+	entity, characteristic isa existent
+	entity has characteristic
+
+	man isa entity
+	man has consciousness
+	man do sense od existent done
+
+# Adding in the implied propositions (with some
+# refinement of characteristic)
+
+	attribute, action, relation isa characteristic
+	consciousness isa attribute
+	sense isa action
+	"is", "isa" isa relation
+	"has", "do od done" isa relation
+
+# we get the total set of axiomatic propositions.
+# This total context, or "view", can be conveniently
+# displayed as an entity-characteristic-proposition
+# hierarchy:
+
+    existent
+        entity
+            man
+        characteristic
+            attribute
+                consciousness
+            action
+                sense
+            relation
+		"is"
+                "has"
+		"do od done"
+		"isa"
+        proposition
+            { entity has characteristic }
+            { man has consciousness }
+            { man do sense od existent done }
+
+
+# Note that the hierarchy
+
+	existent
+	    entity
+	    characteristic
+
+# is equivalent to the three propositions
+
+	{ existent is existent }
+	{ entity isa existent }
+	{ characteristic isa existent }
+
+#============================================================#
+
+# Seeing where Rand's axiomatic concepts of existence, identity
+# and consciousness fit into the picture is more difficult.
+# For simplicity, I will consider only existence and identity.
+# From my current perspective, I consider these two concepts
+# to be collective concepts (see section 18 of KEtutorial.txt)
+# which subsume the same units (lowest level existents) using
+# different views (hierarchies) of those units.
+
+# So far, we have discussed only floating abstractions;
+# now it's time to get down to units.  Here is my example
+# hierarchy.
+
+	existent
+	    entity
+		cat
+		    BooBoo
+		    Samantha
+		dog
+		    Dutchess
+		    Reno
+	    characteristic
+		attribute
+		    color
+			gray
+			brown
+			black
+			white
+		action
+		    bark
+			bark_1
+			bark_2
+		    meow
+			meow_1
+			meow_2
+		relation
+	    proposition
+		BooBoo has color=gray
+		Samantha has color=brown
+		Dutchess has color=black
+		Reno has color=white
+		BooBoo do meow=meow_1 done
+		Samantha do meow=meow_2 done
+		Dutchess do bark=bark_1 done
+		Reno do bark=bark_2 done
+
+# In this example the units are:
+
+	BooBoo
+	Samantha
+	Dutchess
+	Reno
+	gray
+	brown
+	black
+	white
+	meow_1
+	meow_2
+	bark_1
+	bark_2
+	BooBoo has gray
+	Samantha has brown
+	Dutchess has black
+	Reno has white
+	BooBoo do meow_1 done
+	Samantha do meow_2 done
+	Dutchess do bark_1 done
+	Reno do bark_2 done
+
+# My intuition tells me that the focus of Rand's
+# existence and identity is
+
+	existence isall entity, characteristic
+	identity isall proposition
+
+# or, in terms of units,
+
+	existence isall
+		BooBoo, Samantha, Dutchess, Reno,
+		gray, brown, black, white,
+		meow_1, meow_2, bark_1, bark_2
+	identity isall 
+		BooBoo has gray
+		Samantha has brown
+		Dutchess has black
+		Reno has white
+		BooBoo do meow_1 done
+		Samantha do meow_2 done
+		Dutchess do bark_1 done
+		Reno do bark_2 done
+		
+# But Rand says that
+
+	existence is identity
+
+# meaning that they subsume the same units.
+# My best interpretation of Rand's point of view
+# is that "existence" and "identity", as described
+# in the hierarchy above, cannot be separated.
+# But they can be merged together, with a focus
+# more on the entity view, or
+# more on the proposition view.
+
+# Here is my best attempt at doing that.
+
+	existence isall existent
+	    BooBoo
+		BooBoo has gray
+		BooBoo do meow_1 done
+	    Samantha
+		Samantha has brown
+		Samantha do meow_2 done
+	    Dutchess
+		Dutchess has black
+		Dutchess do bark_1 done
+	    Reno
+		Reno has white
+		Reno do bark_2 done
+
+
+	identity isall proposition
+	    "isa"
+		BooBoo isa existent
+		Samantha isa existent
+		Dutchess isa existent
+		Reno isa existent
+	    "has"
+		BooBoo has gray
+		Samantha has brown
+		Dutchess has black
+		Reno has white
+	    "do done"
+		BooBoo do meow_1 done
+		Samantha do meow_2 done
+		Dutchess do bark_1 done
+		Reno do bark_2 done

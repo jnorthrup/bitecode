@@ -1,0 +1,3 @@
+<RDF xmlns:r="http://www.w3.org/TR/RDF/"
+     xmlns:d="http://purl.org/dc/elements/1.0/"  
+     xmlns="http://dmoz.org/rdf">

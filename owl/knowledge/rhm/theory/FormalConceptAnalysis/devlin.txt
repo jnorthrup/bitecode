@@ -1,0 +1,41 @@
+# KEHOME/knowledge/TheoryFormalConceptAnalysis/devlin.txt
+# 1999/1/1
+# new syntax Sep/29/2002
+
+
+
+Subject: Situation Theory and Knowledge Explorer
+From: Dick McCullough
+To: Keith Devlin
+
+The purpose of this short note is to present a high-level comparison
+of your Situation Theory and my Knowledge Representation language.
+Situation Theory:
+	situation  |=  infon
+KR language:
+	at space,time,view  sentence
+
+1. Your "situation" and my "view" are essentially the same --
+   a specification of the context of knowledge.
+2. My "sentence" is either "statement" or "question" or "command".
+   Your "infon" and my "statement" are essentially the same --
+   a specification of the relational units of knowledge.
+3. We both consider space,time to be arguments of relations.
+   I also consider space,time to be the context of actions.
+
+4. I give special treatment to these fundamental relations:
+	hierarchy - of entities and their relations
+		e.g.: man isa animal; identify isa action
+	definition - genus and differentia of concepts
+		e.g.: man is animal with identify
+	attribute - static characteristics of entities
+		e.g.: Keith has sex=male
+	action - changes in attributes of entities
+		e.g.: Dick do walk from x to y done
+5. I associate "format" and "meaning" attributes with each relation.
+   "meaning" is essentially a procedure -- a sequence of statements
+   that specifies the meaning of a relational unit in a context.
+   e.g.: birth is relation with
+	format=[space:1, time:2, sex:3, person:4, person:5, person:6],
+	meaning={$4 has birthplace=$1, birthday=$2, sex=$3,
+		mother=$5, father=$6}

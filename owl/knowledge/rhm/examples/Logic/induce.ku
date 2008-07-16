@@ -1,0 +1,44 @@
+# 2:30 pm 1998/2/4
+
+#===========#
+# Induction #
+#===========#
+# Leonard Peikoff, "Introduction to Logic"
+# H. W. B. Joseph, "An Introduction to Logic"
+#---------------------------------------------
+# Induction is process of reasoning
+# from observations of concretes or individuals
+# to a general or universal conclusion
+#----------------------------------------------
+
+# generalization
+#===============
+all S is P	# (A)
+no  S is P	# (E)
+
+
+# Simple enumeration
+#===================
+if	S1,S2,...	isa*	P	\
+and	S1,S2,...	isa	M	\
+then	M		isa*	P	fi	# all S is P
+
+# Elimination
+#============
+if	cause	ise	a,b,c,...,z	\
+and	cause	not ise	c,...,z		\
+then	cause	ise	a,b		fi
+
+# Mill's Methods
+#===============
+# 1. agreement of effect	- 1 & only 1 common antecedent
+# 2. difference of effect	- 1 & only 1 differing antecedent
+# 3. concomitant variations	- 1 & only 1 concomitant quantity antecedent
+# 4. residues			- subduct previously determined causes
+
+
+# Analogy
+#========
+if	S,P	has char1	\ # similar
+and	P	has char2	\
+then	S	has char2	fi

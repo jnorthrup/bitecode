@@ -1,0 +1,35 @@
+# KEHOME/knowledge/ExamplesLogic/LawsOfThought.ku
+# Jul/26/2002
+
+#=================#
+# Laws of Thought #
+#=================#
+
+
+# law of identity
+#----------------
+# everything is everything
+#-------------------------
+existent is existent
+
+# law of excluded middle
+#-----------------------
+# everything is either A or not A
+# at a given time in a given respect
+#-----------------------------------
+existent is either A or not A
+
+# law of non-contradiction
+#-------------------------
+# nothing is both B and not B
+# at the same time in the same respect
+#-------------------------------------
+nonexistent is all B and not B
+
+
+
+# output
+#-------
+existent    is    ?
+existent    isany ?
+nonexistent isall ?

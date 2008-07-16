@@ -1,0 +1,84 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/camera.mkr
+# May/29/2003
+
+at view = owl;
+
+do print od "UniqueName = $UniqueName" done;
+do print od "DisplayName = $DisplayName" done;
+
+do print od "<!--  import OWL Ontology  -->" done;
+do import ontology od owl from "http://www.w3.org/2002/07/owl#" done;  # xml/owl.ku
+do print od "DefaultQualifier = $DefaultQualifier" done;
+do print od "DefaultUri = $DefaultUri" done;
+do print od "BaseQualifier = $BaseQualifier" done;
+do print od "BaseUri = $BaseUri" done;
+
+do print od "<!--  read Camera Ontology  -->" done;
+do read from http://www.xfront.com/owl/camera-ontology/camera.owl done;
+do print od "DefaultQualifier = $DefaultQualifier" done;
+do print od "DefaultUri = $DefaultUri" done;
+do print od "BaseQualifier = $BaseQualifier" done;
+do print od "BaseUri = $BaseUri" done;
+
+
+# manual translation for anonymous nodes
+Viewer isany
+	ThroughTheLens, WindowOnTopOfCamera;
+BodyWithNonAdjustableShutterSpeed isa Body with
+	not shutter-speed;
+SLR isa Camera with
+	ViewFinder = ThroughTheLens;
+Large-Format isa Camera;
+Large-Format has body = BodyWithNonAdjustableShutterSpeed;
+
+
+do print od "","<!--  rdfs:Class  -->" done;
+rdfs:Class isall* ?;
+
+do print od "","<!--  Thing hierarchy  -->" done;
+mkr:Entity isg
+	Money,
+	PurchaseableItem,
+	Range,
+	Viewer,
+	camera:Window;
+do simplify lattice od owl:Thing done;
+owl:Thing isc* ?;
+do print od "","<!--  part hierarchy  -->" done;
+part isa* ?;
+part isc* ?;
+
+do print od "","<!--  Entity Properties  -->" done;
+entitylist := do isclist od mkr:Entity done;
+every resource in $entitylist {
+	#do dump od $resource done;
+	 $resource is ?;
+	 $resource has ?;
+};
+do print od "","<!--  Restriction Properties  -->" done;
+every resource isa owl:Restriction {
+	#do dump od $resource done;
+	 $resource is ?;
+	 $resource has ?;
+};
+
+do print od "","<!--  equivalences  -->" done;
+? has owl:equivalentClass;
+? has owl:equivalentProperty;
+? has owl:sameAs;
+? has owl:sameIndividualAs;
+
+
+do print od "","<!--  check knit  -->" done;
+set CheckComment="";
+set TypeComment="";
+do check od knit done;
+
+! deletecomment od camera.out to camera.save done;
+! cat od camera.save done;
+
+exit;
+</XMP>
+</HTML>

@@ -1,0 +1,49 @@
+# KEHOME/knowledge/application/SemanticWeb/OWL/AppendixA.txt
+# Nov/5/2002
+
+Appendix A. Index of all language elements
+
+allValuesFrom 
+cardinality 
+Class 
+complementOf 
+Datatype 
+DatatypeProperty 
+DatatypeRestriction 
+Datatype value 
+differentIndividualFrom 
+disjointUnionOf 
+disjointWith 
+domain 
+equivalentTo 
+FunctionalProperty 
+hasClass changed to someValuesFrom 
+hasValue 
+imports 
+intersectionOf 
+InverseFunctionalProperty 
+inverseOf 
+maxCardinality 
+minCardinality 
+ObjectClass 
+ObjectProperty 
+ObjectRestriction 
+oneOf 
+onProperty 
+Ontology 
+Property 
+range 
+Restriction 
+sameClassAs 
+sameIndividualAs 
+samePropertyAs 
+someValuesFrom 
+subClassOf 
+subPropertyOf 
+SymmetricProperty 
+toClass changed to allValuesFrom 
+TransitiveProperty 
+UnambiguousProperty changed to InverseFunctionalProperty 
+unionOf 
+UniqueProperty changed to FunctionalProperty 
+versionInfo 

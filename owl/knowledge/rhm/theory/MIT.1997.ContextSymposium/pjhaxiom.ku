@@ -1,0 +1,112 @@
+# 9:00 am 11/21/97
+
+# Pat Hayes axiom examples 11/20/97
+# BTW, your web page claims that your KR has the expressive power of
+# first-order logic. How does it handle quantifier scopes and negation?
+# Consider for example axioms like these (written using prefix connectives
+# and ? meaning a variable):
+
+# NOTES:
+# 1. All concepts, propositions, quantifiers, ...
+# are defined within a context
+# (alias view alias knowledge unit alias concept-hierarchy).
+# 2. I may yet regret some of my KR design decisions,
+# but I decided to keep KR simple and English-like by
+#	not allowing () [] <> for grouping
+#	using only "..." for grouping, with no nesting
+#	using infix notation instead of prefix notation
+#	not allowing procedure definitions
+# 3. I was confused by your (=> x y).
+# At times it seemed to be (=> conclusion premise).
+# Other times it seemed to be (=> premise conclusion).
+# I think my confusion is mainly due to my desire for variable "types"
+# to be part of the premise.
+# 4. I chose the format values to match your prefix relation style.
+# I really prefer these infix formats:
+#	before has format="timepoint:1 before timepoint:2"
+#	on has format="timepoint:1 on timeline:2"
+# 5. My current KR has only a single "$" parameter,
+# which contains the value of "?" obtained by searching
+# the knowledge base.  I don't think it would be difficult to
+# change over to multiple variables $x,$y,...
+# analogous to your variables ?x,?y,...
+# Notice that my variables are "typed" to match the relations
+# that they appear in.
+
+# (forall (?x ?y)
+#             (and
+#                 (=> (exist (?z) (= ?z (mult ?x ?y)))
+#                       (and (integer ?x) (timeduration ?y))  )
+#                 (=> (exist (?z) (= ?z (add ?x ?y)))
+#                       (timeduration ?x ?y)   )
+#                 (timeduration zero)
+#             )
+# )
+zero isa timeduration
+if i isa integer and x,y isa timeduration \
+then "i * y" isa timeduration \
+and "x + y" isa timeduration \
+fi
+ 
+# (forall  (?d ?e)
+#          (=>
+#             (exist (?n)(and (integer ?n) (= (mult ?n ?d) ?e)) )
+#             (= (mult (numberin ?d ?e) ?d) ?e)
+#          )
+# )
+if e == d * x and x isa gcd(d,e) \
+then e == n * d and n isa integer \
+fi
+ 
+# (forall (?x ?y)
+#       (=>
+#         (timepoint ?x ?y)
+#         (<=>
+#            (exists (?h) (and (timeline ?h)(on ?x ?h) (on ?y ?h)) )
+#            (or (= ?x ?y) (before ?x ?y) (before ?y ?x))
+#         )
+#       )
+# )
+before, on isa relation
+before has format="timepoint:1; timepoint:2"
+on has format="timepoint:1; timeline:2"
+if x,y isa timepoint \
+then \
+	iff x == y or "x;y" isa before or "y;x" isa before \
+	then h isa timeline and "x;h" isa on and "y;h" isa on \
+	fi \
+fi
+ 
+# (forall (?h ?k)
+#         (=>
+#              (and (timeline ?h ?k)
+#                      (exists (?x) (and (timepoint ?x)(on ?x ?h) (on ?x ?k)) ) )
+#             (= ?h ?k)
+#         )
+# )
+if h,k isa timeline and h == k \
+then x isa timepoint and "x;h" isa on and "x;k" isa on \
+fi
+ 
+# (forall (?h ?k ?x)
+#         (=>
+#            (and (timeline ?h ?k)(timepoint ?x)(on ?x ?h) (on ?x ?k))
+#            (forall (?y ) (=>
+#                                  (timepoint ?y)
+#                                  (=> (before ?y ?x)
+#                                        (<=>(on ?x ?h) (on ?y ?k))
+#                                  )
+#                                )
+#              )
+#           )
+# )
+if h,k isa timeline and x isa timepoint \
+and if \
+	? isa timepoint and \
+	iff "x;h" isa on then "$;k" isa on fi \
+    then \
+	"$;x" isa before \
+    fi \
+then "x;h","x;k" isa on \
+fi
+ 

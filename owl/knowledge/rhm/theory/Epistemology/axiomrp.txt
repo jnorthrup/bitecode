@@ -1,0 +1,116 @@
+# 1999/2/17
+
+#====================#
+# Axiomatic Concepts #
+#====================#
+
+1a. consciousness as an attribute (describing an action)
+Rand, ITOE, chapter 4
+	Consciousness is the faculty of perceiving
+	that which exists.
+This definition gives us three equivalent ways of saying
+the same thing:
+	animal has consciousness
+	animal has faculty = perceiving that which exists
+	animal do perceive existent
+I prefer the third way, because it describes an action
+with an action, not an attribute.
+
+1b. consciousness as a relation
+Rand, ITOE, chapter 6
+	The units of the concept "consciousness" are
+	every state or process of awareness that one
+	experiences, has experienced or will ever
+	experience (as well as similar units, a
+	similar faculty, which one infers in other
+	living entities).
+This can be expressed as
+	existent
+	    entity
+	    relation
+		consciousness
+		    [animal has state=awareness]
+		    [animal do process=awareness]
+
+2. existence (and consciousness as a phenomenon)
+Rand, ITOE, chapter 6
+	The units of the concepts "existence" and "identity"
+	are every entity, attribute, action, event or
+	phenomenon (including consciousness) that exists,
+	has ever existed or will ever exist.
+This can be expressed as
+	existence is identity is existent
+	    entity
+	    attribute
+	    action
+	    event
+	    phenomenon
+		consciousness
+
+3. identity as a different view
+Peikoff, OPAR, chapter 1
+	Why, one might ask, use two concepts to identify
+	one fact?  This procedure is common in philosophy
+	and in other fields as well.  When men have
+	several perspectives on a single fact, when they
+	consider it from different aspects in different
+	contexts, it is often essential to form concepts
+	that identify the various perspectives.
+
+	"Existence" differentiates a thing from nothing,
+	from the absence of the thing.  This is the primary
+	identification, on which all others depend; it is
+	the recognition in conceptual terms that the thing
+	*is*.  "Identity" indicates not that it *is*, but
+	that *it* is.  This differentiates one thing from
+	another, which is a distinguishable step in cognition.
+	The perspective here is not: it is (vs. it is not),
+	but: it is this (vs. it is that).  Thus the context
+	and purpose of the two concepts differ, although
+	the fact both concepts name is indivisible.
+This can be expressed as
+	at view = v_existence
+	existence is existent
+	    entity
+	    relation
+		[existent is either entity or relation]
+
+	at view = v_identity
+	identity is existent
+	    entity
+	    relation
+		[entity isin relation]
+		attribute
+		    [entity has attribute]
+		action
+		    [entity do action]
+
+4. axiomatic concepts
+Rand, ITOE, chapter 6
+	An axiomatic concept is the identification
+	of a primary fact of reality, which cannot
+	be analyzed, i.e., reduced to other facts
+	or broken into component parts.  It is
+	implicit in all facts and all knowledge.
+	It is the fundamentally given and directly
+	perceived or experienced, which requires
+	no proof or explanation, but on which all
+	proofs and explanations rest.
+This can be expressed as
+	axiomatic concept :=
+	    man do identify primary fact of reality
+	axiomatic concept has
+	    implicit in all facts and all knowledge,
+	    requires no proof or explanation,
+	    on which all proofs and explanations rest
+	primary fact of reality is fact of reality with
+	    cannot be reduced to other facts,
+	    cannot be broken into component parts
+
+(":=" means "is the product of")
+I think that this definition qualifies "identify" and
+"man" as axiomatic concepts, since they are used in
+the definition of axiomatic concept.  I think that
+the attribute "implicit in all facts and all knowledge"
+opens the door to consider "knowledge" (and "choose"
+and "purpose") to be axiomatic concept(s).

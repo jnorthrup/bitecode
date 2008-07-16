@@ -1,0 +1,69 @@
+# 1999/5/5
+
+#===========================#
+# definitions & hierarchies #
+#===========================#
+
+One of the reasons a concept-hierarchy is useful is that
+it explicitly gives an ostensive definition of every concept.
+For example, the (partial) hierarchy
+
+existent
+    entity
+        animal
+            person
+                man
+                    Dick
+                    Bob
+                woman
+                    Sue
+                    Pauline
+        plant
+        object
+
+includes the ostensive definitions
+
+entity is either animal or plant or object
+person is either man or woman
+man is either Dick or Bob
+woman is either Sue or Pauline
+
+However, some of these definitions are of no use
+outside the context of the current finite sample,
+i.e., the units
+
+Dick, Bob, Sue, Pauline
+
+As we add new units, we need a genus-differentia definition.
+For example,
+
+man is person with sex=male
+woman is person with sex=female
+Reno has sex=male
+
+shows that
+
+Reno isa man
+
+Wrong.  Those of you who remember my previous examples
+will "smell a dog" at this point.  Yes,
+
+Reno isa dog
+dog isa animal
+
+So we need genus-differentia definitions for all our concepts,
+except existent.  In the context of imaginary worlds, it's
+helpful to keep in mind a "definition" of existent, such as
+
+existent is anything that exists in reality
+
+Just a reminder:
+definitions are relations, and are part of the identity of a concept.
+
+One final observation:
+An ostensive definition is a "definition by integration".
+A genus-differentia definition is a "definition by differentiation".
+We can also have a "definition by identity", e.g.,
+
+female person is woman
+morning star is evening star

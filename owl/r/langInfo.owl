@@ -1,0 +1,860 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/02/27 12:37:57 $, by $Author: ivan $, $Revision: 1.16 $ -->
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" 
+         xmlns:lang="http://www.w3.org/2003/03/Translations/langSchema#" 
+		 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		 xml:base="http://www.w3.org/2003/03/RDFData/langInfo.rdf">
+	<!-- ===================================== -->
+	<!-- General information on languages                          -->
+	<!-- ===================================== -->
+	<!-- There are some sources on the web where the information can be found, eg, http://people.w3.org/rishida/names/. If in doubt, ask the translator! -->
+	<!-- Be careful that the language code is not necessarily the internet domain suffix! Eg, greek sites are in the '.gr' domain, but Greek as a language
+        uses 'el' as its ISO code. In case of doubt, check! -->
+	<lang:Language rdf:ID="sr">
+		<dc:language>sr</dc:language>
+		<lang:englishLanguageName>Serbian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Српски</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Српски преводи W3C докумената</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="sr">Архитектура</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="sr">Интеракција</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="sr">Технологија и друштво, семантика</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="sr">Доступност на мрежи</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="sr">Разно</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="eu">
+		<dc:language>eu</dc:language>
+		<lang:englishLanguageName>Basque</lang:englishLanguageName>
+		<lang:nativeLanguageName>Euskara</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3Cren agiri euskaratuak</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="eu">Arkitektura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="eu">Elkareragina</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="eu">Teknologia eta gizartea, Semantika</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="eu">Web salotasuna</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="eu">Bestelakorik</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="tl">
+		<dc:language>tl</dc:language>
+		<lang:englishLanguageName>Tagalog/Filipino</lang:englishLanguageName>
+		<lang:nativeLanguageName>Tagalog/Filipino</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Pagsasalin ng mga Kasulatan ng W3C sa Wikang Tagalog/Filipino</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="tl">Arkitektura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="tl">Interaksyon</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="tl">Teknolohiya, Lipunan at mga Semantiko</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="tl">Web Para Sa May Mga Kapansanan</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="tl">Atbp.</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="af">
+		<dc:language>af</dc:language>
+		<lang:englishLanguageName>Afrikaans</lang:englishLanguageName>
+		<lang:nativeLanguageName>Afrikaans</lang:nativeLanguageName>
+	</lang:Language>
+	<lang:Language rdf:ID="ar">
+		<dc:language>ar</dc:language>
+		<lang:englishLanguageName>Arabic</lang:englishLanguageName>
+		<lang:nativeLanguageName>العربية</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>الترجمة العربية لوثائق W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ar">بِنْية</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ar">تفاعل</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ar">تكنولوجيا و مجتمع، علم الدّلالة</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ar">منالية الويب</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ar">متنوع</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="bg">
+		<dc:language>bg</dc:language>
+		<lang:englishLanguageName>Bulgarian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Български</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Български преводи на документите на W3C</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="bn">
+		<dc:language>bn</dc:language>
+		<lang:englishLanguageName>Bengali</lang:englishLanguageName>
+		<lang:nativeLanguageName>বাংলা</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C ডকূমেনট এর বাংলা অনুবাদ্</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="ca">
+		<dc:language>ca</dc:language>
+		<lang:englishLanguageName>Catalan</lang:englishLanguageName>
+		<lang:nativeLanguageName>Català</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traduccions al català dels documentes del W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ca">Arquitectura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ca">Interacciò</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ca">Tecnologia i Societat, Semàntica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ca">Accessibilitat Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ca">Divers</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="cs">
+		<dc:language>cs</dc:language>
+		<lang:englishLanguageName>Czech</lang:englishLanguageName>
+		<lang:nativeLanguageName>Česky</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>České překlady dokumentů W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="cs">Architektura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="cs">Spolupráce</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="cs">Technika a společnost, sémantika</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="cs">Přístupnost na Webu</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="cs">Ostatní</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="hr">
+		<dc:language>hr</dc:language>
+		<lang:englishLanguageName>Croatian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Hrvatski</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Hrvatski prijevodi dokumenata W3C-a</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="da">
+		<dc:language>da</dc:language>
+		<lang:englishLanguageName>Danish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Dansk</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Danske oversættelser af W3C dokumenter</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="de">
+		<dc:language>de</dc:language>
+		<lang:englishLanguageName>German</lang:englishLanguageName>
+		<lang:nativeLanguageName>Deutsch</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Übersetzungen von W3C Dokumenten</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="de">Architektur</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="de">Interaktion</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="de">Technik und Gesellschaft, Semantik</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="de">Behindertengerechtes Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="de">Sonstige</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="en">
+		<dc:language>en</dc:language>
+		<lang:englishLanguageName>English</lang:englishLanguageName>
+		<lang:nativeLanguageName>English</lang:nativeLanguageName>
+	</lang:Language>
+	<lang:Language rdf:ID="el">
+		<dc:language>el</dc:language>
+		<lang:englishLanguageName>Greek</lang:englishLanguageName>
+		<lang:nativeLanguageName>Ελληνικά</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle> Mεταφράσεις Εγγράφων  W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="gr">Αρχιτεκτονική</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="gr">Προσβασιμότητα στον Παγκόσμιο Ιστό</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="gr">Αλληλεπίδραση</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="gr">Τεχνολογία και Κοινωνία, Σημασιολογία</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="gr">Διάφορα Θέματα</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="es">
+		<dc:language>es</dc:language>
+		<lang:englishLanguageName>Spanish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Castellano</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traducciones al Castellano de documentos del W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="es">Arquitectura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="es">Interacción</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="es">Tecnología y Sociedad, Semántica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="es">Accesibilidad Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="es">Varios</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="et">
+		<dc:language>et</dc:language>
+		<lang:englishLanguageName>Estonian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Eesti</lang:nativeLanguageName>
+	</lang:Language>
+	<lang:Language rdf:ID="fi">
+		<dc:language>fi</dc:language>
+		<lang:englishLanguageName>Finnish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Suomi</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Suomenkielisiä käännöksiä W3C-dokumenteista</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="fi">Arkkitehtuuri</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="fi">Vuorovaikutus</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="fi">Teknologia ja yhteiskunta, semantiikka</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="fi">Webin saavutettavuusaloite</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="fi">Muut</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="fa">
+		<dc:language>fa</dc:language>
+		<lang:englishLanguageName>Farsi</lang:englishLanguageName>
+		<lang:nativeLanguageName>فارسی</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>ترجمه‌های فارسی اسناد  W3C</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="fr">
+		<dc:language>fr</dc:language>
+		<lang:englishLanguageName>French</lang:englishLanguageName>
+		<lang:nativeLanguageName>Français</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Liste des traductions françaises disponibles des documents W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="fr">Architecture</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="fr">Interaction</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="fr">Technique et Société, Sémantique</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="fr">Accessibilité du Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="fr">Divers</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="gl">
+		<dc:language>gl</dc:language>
+		<lang:englishLanguageName>Galician</lang:englishLanguageName>
+		<lang:nativeLanguageName>Galego</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traduccións ó galego de documentos do W3C</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="he">
+		<dc:language>he</dc:language>
+		<lang:englishLanguageName>Hebrew</lang:englishLanguageName>
+		<lang:nativeLanguageName>עברית</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle> תרגום לעברית של מסמכי W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="he">ארכיטקטורה</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="he">אינטראקציה</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="he">טכנולוגיה וחברה, סמנטיקה</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="he">יוזמת נגישות הרשת</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="he">שונות</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="hi">
+		<dc:language>hi</dc:language>
+		<lang:englishLanguageName>Hindi</lang:englishLanguageName>
+		<lang:nativeLanguageName>हिंदी</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C के दस्तावेजो का हिन्दी मे अनुवाद</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="hu">
+		<dc:language>hu</dc:language>
+		<lang:englishLanguageName>Hungarian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Magyar</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C dokumentumok magyar fordításai</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="hu">Architektúra</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="hu">Interakció</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="hu">Technika és Társadalom, Szemantika</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="hu">Web Hozzáférés</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="hu">Egyéb</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="ia">
+		<dc:language>ia</dc:language>
+		<lang:englishLanguageName>Interlinguan</lang:englishLanguageName>
+		<lang:nativeLanguageName>Interlingua</lang:nativeLanguageName>
+	</lang:Language>
+	<lang:Language rdf:ID="id">
+		<dc:language>id</dc:language>
+		<lang:englishLanguageName>Indonesian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Bahasa Indonesia</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Terjemahan dari Dokumen-dokumen W3C ke dalam Bahasa Indonesia</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="id">Arsitektur</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="id">Interaksi</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="id">Teknologi dan Masyarakat, Semantik</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="id">Aksesibilitas dari Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="id">Lain-lain</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="it">
+		<dc:language>it</dc:language>
+		<lang:englishLanguageName>Italian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Italiano</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traduzioni in italiano delle W3C Recommendation</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="it">Architettura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="it">Interazione</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="it">Tecnologia e Società, Semantica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="fr">Accessibilità del Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="it">Miscellanea</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="ja">
+		<dc:language>ja</dc:language>
+		<lang:englishLanguageName>Japanese</lang:englishLanguageName>
+		<lang:nativeLanguageName>日本語</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C 文書の日本語翻訳集</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ja">アーキテクチャ</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ja">インタラクション</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ja">技術と社会、意味</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ja">ウェブアクセシビリティ</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ja">その他</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="kn">
+		<dc:language>kn</dc:language>
+		<lang:englishLanguageName>Kannada</lang:englishLanguageName>
+		<lang:nativeLanguageName>ಕನ್ನಡ</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C ದಸ್ತವೇಜು ಗಳ ಕನ್ನಡ ಅನು ವಾದಗಳು</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="ko">
+		<dc:language>ko</dc:language>
+		<lang:englishLanguageName>Korean</lang:englishLanguageName>
+		<lang:nativeLanguageName>한국어</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C 문서 한국어 번역판</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ko">구조</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ko">상호작용</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ko">기술과 사회, 시맨틱웹</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ko">웹 접근성</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ko">기타</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="lt">
+		<dc:language>lt</dc:language>
+		<lang:englishLanguageName>Lithuanian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Lietuvių</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C dokumentų lietuviški vertimai</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="te">
+		<dc:language>te</dc:language>
+		<lang:englishLanguageName>Telugu</lang:englishLanguageName>
+		<lang:nativeLanguageName>తెలుగు</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C పత్రముల తెలుగు అనువాదములు</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="ms">
+		<dc:language>ms</dc:language>
+		<lang:englishLanguageName>Malay</lang:englishLanguageName>
+		<lang:nativeLanguageName>Bahasa Melayu</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Terjemahan dokumen-dokumen W3C di dalam Bahasa Melayu</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ms">Seni Bina</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ms">Interaksi</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ms">Teknologi dan Masyarakat, Semantik</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ms">Capaian Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ms">Pelbagai</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="mr">
+		<dc:language>mr</dc:language>
+		<lang:englishLanguageName>Marathi</lang:englishLanguageName>
+		<lang:nativeLanguageName>मराठी</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W३C दस्तावेजांचे मराठी भाषांतरण</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="nl">
+		<dc:language>nl</dc:language>
+		<lang:englishLanguageName>Dutch</lang:englishLanguageName>
+		<lang:nativeLanguageName>Nederlands</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Nederlandse vertalingen van W3C-documenten</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="nl">Architectuur</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="nl">Interactie</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="nl">Techniek en maatschappij, semantiek</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="nl">Toegankelijkheid van het Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="nl">Diversen</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="no">
+		<dc:language>no</dc:language>
+		<lang:englishLanguageName>Norwegian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Norsk</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Norske omsetjingar av W3C-dokument</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="no">Arkitektur</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="no">Samhandling</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="no">Teknologi og samfunn, semantikk</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="no">Tilgjengelegheit</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="no">Ymse</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="pl">
+		<dc:language>pl</dc:language>
+		<lang:englishLanguageName>Polish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Polski</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Polskie tłumaczenia dokumentów W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="pl">Architektura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="pl">Interakcja</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="pl">Technika i społeczeństwo, semantyka</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="pl">Dostępność Sieci</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="pl">Różne</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="pt">
+		<dc:language>pt</dc:language>
+		<lang:englishLanguageName>Portuguese</lang:englishLanguageName>
+		<lang:nativeLanguageName>Português</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traduções para o português de documentos W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="pt">Arquitetura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="pt">Interação</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="pt">Tecnologia e Sociedade, Semântica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="pt">Acessibilidade na Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="pt">Miscelânea</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="pt-br">
+		<dc:language>pt-br</dc:language>
+		<lang:englishLanguageName>Brazilian Portuguese</lang:englishLanguageName>
+		<lang:nativeLanguageName>Português Brasileiro</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traduções para o português (Brasil) de documentos W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="pt-br">Arquitetura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="pt-br">Interação</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="pt-br">Tecnologia e Sociedade, Semântica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="pt-br">Acessibilidade na Web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="pt-br">Miscelânea</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="ro">
+		<dc:language>ro</dc:language>
+		<lang:englishLanguageName>Romanian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Română</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Traducerile în limba română a documentelor W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architectura/"/>
+			<dc:title xml:lang="ro">Architectura</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interactiv/"/>
+			<dc:title xml:lang="ro">Interactiv</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ro">Tehnica si Societate, Semantica</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ro">Accesibilitatea siturilor web</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ro">Diverse</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="ru">
+		<dc:language>ru</dc:language>
+		<lang:englishLanguageName>Russian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Русский</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Русские переводы документов W3C</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="ru">Архитектура</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="ru">Взаимодействие</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="ru">Технология и общество, семантика</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="ru">Доступность в Сети</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="ru">Разное</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="sk">
+		<dc:language>sk</dc:language>
+		<lang:englishLanguageName>Slovakian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Slovensky</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Slovenské preklady W3C dokumentov</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="sn">
+		<dc:language>sn</dc:language>
+		<lang:englishLanguageName>Slovenian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Slovenščina</lang:nativeLanguageName>
+	</lang:Language>
+	<lang:Language rdf:ID="sv">
+		<dc:language>sv</dc:language>
+		<lang:englishLanguageName>Swedish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Svenska</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C-dokument på svenska</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="sv">Arkitektur</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="sv">Interaktion </dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="sv">Teknologi och samhälle, semantik</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="sv">Webbtillgänglighet</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="sv">Diverse</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="tr">
+		<dc:language>tr</dc:language>
+		<lang:englishLanguageName>Turkish</lang:englishLanguageName>
+		<lang:nativeLanguageName>Türkçe</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C dokümanlarının Türkçe çevirileri</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="vi">
+		<dc:language>vi</dc:language>
+		<lang:englishLanguageName>Vietnamese</lang:englishLanguageName>
+		<lang:nativeLanguageName>Tiếng Việt</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Dịch các tài liệu của W3C sang Tiếng Việt</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="uk">
+		<dc:language>uk</dc:language>
+		<lang:englishLanguageName>Ukrainian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Українська</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Переклади документів W3C українською мовою</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="uk">Архітектура</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="uk">Взаємодія</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="uk">Технологія й суспільство, семантика</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="uk">Доступність у веб-мережі</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="uk">Різне</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="zh-hant">
+		<dc:language>zh-hant</dc:language>
+		<lang:englishLanguageName>Chinese, Traditional</lang:englishLanguageName>
+		<lang:nativeLanguageName>繁體中文</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C文件(中文翻譯本)</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="zh-hant">結構</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="zh-hant">互動</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="zh-hant">技術及社會,語義</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="zh-hant">網可讀性</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="zh-hant">其他</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="zh-hans">
+		<dc:language>zh-hans</dc:language>
+		<lang:englishLanguageName>Chinese, Simplified</lang:englishLanguageName>
+		<lang:nativeLanguageName>简体中文</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>W3C文件(中文翻译本)</lang:nativeDocumentTitle>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Architecture/"/>
+			<dc:title xml:lang="zh-hans">结构</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/Interaction/"/>
+			<dc:title xml:lang="zh-hans">互动</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/TandS/"/>
+			<dc:title xml:lang="zh-hans">技术及社会,语义</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<lang:domainOrig rdf:resource="http://www.w3.org/WAI/"/>
+			<dc:title xml:lang="zh-hans">网可读性</dc:title>
+		</lang:domain>
+		<lang:domain rdf:parseType="Resource">
+			<dc:title xml:lang="zh-hans">其它</dc:title>
+		</lang:domain>
+	</lang:Language>
+	<lang:Language rdf:ID="th">
+		<dc:language>th</dc:language>
+		<lang:englishLanguageName>Thai</lang:englishLanguageName>
+		<lang:nativeLanguageName>ไทย</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>เอกสารของ W3C ฉบับแปลภาษาไทย</lang:nativeDocumentTitle>
+	</lang:Language>
+	<lang:Language rdf:ID="be">
+		<dc:language>be</dc:language>
+		<lang:englishLanguageName>Belarusian</lang:englishLanguageName>
+		<lang:nativeLanguageName>Беларуская</lang:nativeLanguageName>
+		<lang:nativeDocumentTitle>Беларускія пераклады дакументаў W3C</lang:nativeDocumentTitle>
+	</lang:Language>
+</rdf:RDF>

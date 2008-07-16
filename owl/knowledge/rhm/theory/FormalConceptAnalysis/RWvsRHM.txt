@@ -1,0 +1,32 @@
+# 9:30 pm 9/28/97
+
+# Wille example
+# ICCS'97 page 290
+
+# significant differences
+# between Wille view (Figure 1)
+#     and McCullough view
+
+1. Wille (correctly) viewed building and decoration as parts;
+McCullough (wrongly) viewed them as attributes.
+
+2. Wille viewed "sleek glass monolith" and
+"Renaissance Revival palazzo" as aliases;
+McCullough viewed them as attributes (architectural style).
+
+3. Wille viewed "texture" as an attribute
+	"Central Business" has texture=interesting
+while McCullough viewed "texture" as a metaphor
+	"Central Business" has "interesting texture"
+
+4. Wille viewed "terra-cotta" and "brick" as locations;
+McCullough viewed them as materials.
+
+5. Wille ignored construction date of buildings.
+
+6. McCullough explicitly listed more context.
+
+7. McCullough replaced several words with their "intended" meaning
+give -> causes
+distinguish -> isapart (i.e., no emphasis intended)
+reflects -> is caused by (<=)

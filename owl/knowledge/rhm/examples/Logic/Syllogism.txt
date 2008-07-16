@@ -1,0 +1,41 @@
+
+#=======================#
+# Syllogisms            #
+#                       #
+# Richard H. McCullough #
+# July 27, 2002         #
+#=======================#
+
+
+# Categorical arguments have the form
+#
+#	categorical statement:1		# premise:1
+#	categorical statement:2		# premise:2
+#	-----------------------
+#	categorical statement:3		# conclusion:3
+#
+# where each categorical statement is type
+# "A", "E", "I" or "O".
+
+
+# A syllogism is a categorical argument with
+# three terms: S,M,P
+#
+#	q1 S is q2 M
+#	q3 P is q4 M
+#	------------
+#	q5 S is q6 P
+#
+# where q1,...,q6 are optional quantifiers
+# chosen from
+#	all
+#	some
+#	no
+#	not
+
+# Aristotle developed principles to
+# determine which choices of quantifiers
+# lead to valid conclusions.
+# He also developed principles for
+# valid conversions between different
+# types of categorical statements.

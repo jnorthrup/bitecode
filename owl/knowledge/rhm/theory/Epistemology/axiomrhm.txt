@@ -1,0 +1,42 @@
+# 1999/3/24
+
+#====================#
+# axiomatic concepts #
+#====================#
+
+1. existent (existence, identity)
+	existent
+	/  entity
+	/  characteristic
+	/  relation
+	//    [entity has characteristic]
+	existence is all existent
+	identity is all relation
+
+2. perceive (consciousness)
+	man has consciousness means
+		percept := man do perceive entity
+
+3. changes (action, space,time)
+	entity has attribute = value
+	at space=s,time=t
+	product := entity do action aobject = event
+	event changes eobject \
+		from attribute = initial \
+        	to attribute = final
+
+4. causes (causality)
+	entity do action = event
+	entity causes action  # metaphysical meaning
+	event1 causes event2  # ordinary meaning
+
+5. choose (volition)
+	man has volition means
+		man do choose
+	p := man do choose purpose
+	act := man do choose action with purpose=p
+	man do act
+
+6. identify (knowledge)
+	knowledge := man do identify existent
+	knit := man do identify existent with purpose=p

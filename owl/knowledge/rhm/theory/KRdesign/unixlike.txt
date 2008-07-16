@@ -1,0 +1,27 @@
+# KEHOME/knowledge/theory/KRdesign/unixlike.txt
+# 1999/3/7
+# new syntax Sep/29/2002
+
+#===================#
+# KR and UNIX shell #
+#===================#
+
+The simple sentence structure in KR is English-like.
+But KR also has control structures, $variables, and
+navigation commands which are very much like those
+in the UNIX shell.
+
+Some highlights:
+    set . = concept    # sets current concept, $attribute variables
+    set .. = next      # sets current genus (more than one for a lattice)
+    set ... = next     # sets current unit
+
+    if sentence:1 then sentence:2 else sentence:3 fi
+    every x isa concept { ... $x ... }	# all units of a concept
+
+    m is method with				# user-defined method
+        format=[class:1, class:2; ...],		# argument declaration
+        meaning={ ... $1 ... $2 ...}  		# method definition
+
+It would be easy to add more UNIX-like features,
+but these are probably sufficient for any practical purposes.

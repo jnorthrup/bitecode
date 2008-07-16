@@ -1,0 +1,132 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Netscape/addressbook.def
+# Apr/1/2003
+
+#=======================#
+# Netscape Address Book #
+#   .csv export file    #
+#   version 4.79        #
+#=======================#
+
+Notes, Address has line separator = "<BR>";  # ???
+
+##### person #####
+nab479 is relation with
+    arity = 20,
+    format = [
+	Person:1,	# or List Name
+	Last Name:2,
+	First Name:3,
+	Notes:4,	# or List Description
+	City:5,
+	State:6,
+	Email:7,	# or List Member Email
+	Title:8,
+	empty:9,
+	Address:10,
+	Zip:11,
+	Country:12,
+	Work:13,	# phone
+	Fax:14,		# phone
+	Home:15,	# phone
+	Organization:16,
+	Nickname:17,	# or List Nickname
+	Cellular:18,	# phone
+	Pager:19,	# phone
+	empty:20
+	],
+    meaning = {
+	$1 has Display Name=$1;
+	$1 has Last Name += $2,First Name += $3;
+	$1 has Nickname += ${17};
+	$1 has Notes += $4;
+	$1 has Email += $7;
+	$1 has Work += ${13},Fax += ${14},Home += ${15};
+	$1 has Cellular += ${18},Pager += ${19};
+	$1 has Address += ${10},City += $5,State += $6,
+			Zip += ${11},Country += ${12};
+	$1 has Organization += ${16},Title += $8;
+	};
+
+#----------------------------------------------------------------#
+# Person layout
+
+begin relation nab479;
+"Last Name, First Name",Last Name,First Name,
+    Notes line 1  Notes line 2  ...,
+    City,State,
+    Email,
+    Title,,
+    Address line 1  Address line 2  ...,
+    Zip,Country,
+    Work,Fax,Home,
+    Organization,
+    Nickname,
+    Cellular,Pager,
+    ;
+end relation nab479;
+
+
+#----------------------------------------------------------------#
+# Email List
+
+##### list #####
+set List format = [
+	List Name:1,
+	empty:2,
+	empty:3,
+	Description:4,
+	empty:5,
+	empty:6,
+	empty:7,
+	empty:8,
+	empty:9,
+	empty:10,
+	empty:11,
+	empty:12,
+	empty:13,
+	empty:14,
+	empty:15,
+	empty:16,
+	List Nickname:17,
+	empty:18,
+	empty:19,
+	empty:20
+	];
+
+##### list member #####
+set List Member format = [
+	empty:1,
+	empty:2,
+	empty:3,
+	empty:4,
+	empty:5,
+	empty:6,
+	Email:7,
+	empty:8,
+	empty:9,
+	empty:10,
+	empty:11,
+	empty:12,
+	empty:13,
+	empty:14,
+	empty:15,
+	empty:16,
+	empty:17,
+	empty:18,
+	empty:19,
+	empty:20
+	];
+
+#----------------------------------------------------------------#
+# List layout
+
+begin relation nab479;
+List Name,,,Description,,,,,,,,,,,,,List Nickname,,,;
+,,,,,,Member1 Email,,,,,,,,,,,,,;
+,,,,,,Member2 Email,,,,,,,,,,,,,;
+,,,,,,Membern Email,,,,,,,,,,,,,;
+end relation nab479;
+</XMP>
+</HTML>

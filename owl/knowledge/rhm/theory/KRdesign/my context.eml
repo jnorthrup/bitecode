@@ -1,0 +1,169 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "RDF-Interest" <www-rdf-interest@w3.org>
+Cc: "William Thomas" <wthomas@nycap.rr.com>,
+	"Richard S. Latimer" <latimer1@att.net>
+Bcc: "Rhonda Cates" <colorsinbloom2@aol.com>,
+	"Sheila M. Faber" <SCCFaber@aol.com>,
+	"Virginia McCullough" <virginia.mccullough@attbi.com>,
+	"Deborah G. Cates" <claudiazeller@interx.net>,
+	"Steven V. Cates" <SVCates@aol.com>,
+	"Theodore R. McCullough" <McCulluogh-only@webtv.net>,
+	"Robert B. McCullough" <drbobm11@attbi.com>
+Subject: my context
+Date: Tue, 26 Nov 2002 22:12:04 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0007_01C29598.D9BB8CF0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0007_01C29598.D9BB8CF0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+# KEHOME/knowledge/theory/Epistemology/MyContext.txt
+# Nov/26/2002
+
+#=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D#
+# My Context #
+#=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D#
+
+Suppose I make the statement
+
+    I saw Bob Hope in person at the Presidio.
+
+What is the context of my statement?  Quite literally,
+it is everything I know.
+
+    at space=3Dhere, time=3Dnow, view=3DDick McCullough knows {
+        I saw Bob Hope in person at the Presidio
+    }
+
+How can you understand what I said?
+Because your context is everything you know,
+and our contexts have a lot in common.
+
+    at space=3Dthere, time=3Dnow, view=3Dyou know {
+        Dick McCullough saw Bob Hope in person at the Presidio
+    }
+
+Note:
+For this example, I'm leaving out the extra layer of context
+
+    at view=3DDick McCullough says { ... }
+
+
+From the viewpoint of knowledge representation, capturing
+everything I know is a difficult problem.  What can we do
+to simplify that problem?  I see two promising approaches.
+
+1. We can use genus-differentia definitions to condense the
+knowledge.
+
+    at view=3DDick McCullough definitions { ... }
+
+2. We can select only those definitions that are relevant to
+the words in my statement.
+
+    at view=3Drelevant Dick McCullough definitions { ... }
+
+In theory, these are common-sense, reasonable approaches;
+in practice, they need to be tested.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart list of proposition
+
+------=_NextPart_000_0007_01C29598.D9BB8CF0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>#=20
+KEHOME/knowledge/theory/Epistemology/MyContext.txt<BR># =
+Nov/26/2002</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial =
+size=3D2>#=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D#<BR># My Context=20
+#<BR>#=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D#</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Suppose I make the =
+statement</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; I saw Bob Hope in =
+person at the=20
+Presidio.</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>What is the context of my =
+statement?&nbsp; Quite=20
+literally,<BR>it is everything I know.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; at space=3Dhere, =
+time=3Dnow,=20
+view=3DDick McCullough knows =
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I saw=20
+Bob Hope in person at the Presidio<BR>&nbsp;&nbsp;&nbsp; }</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>How can you understand what I =
+said?<BR>Because your=20
+context is everything you know,<BR>and our contexts have a lot in=20
+common.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; at space=3Dthere, =
+time=3Dnow,=20
+view=3Dyou know {<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dick =
+McCullough=20
+saw Bob Hope in person at the Presidio<BR>&nbsp;&nbsp;&nbsp; =
+}</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Note:<BR>For this example, I'm leaving =
+out the=20
+extra layer of context</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; at view=3DDick =
+McCullough says {=20
+... }</FONT></DIV>
+<DIV>&nbsp;</DIV><FONT face=3DArial size=3D2>
+<DIV><BR>From the viewpoint of knowledge representation, =
+capturing<BR>everything=20
+I know is a difficult problem.&nbsp; What can we do<BR>to simplify that=20
+problem?&nbsp; I see two promising approaches.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>1. We can use genus-differentia definitions to condense=20
+the<BR>knowledge.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; at view=3DDick McCullough definitions { ... =
+}<BR><BR>2. We=20
+can select only those definitions that are relevant to<BR>the words in =
+my=20
+statement.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; at view=3Drelevant Dick McCullough definitions { =
+...=20
+}</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>In theory, these are common-sense, reasonable approaches;<BR>in =
+practice,=20
+they need to be tested.</FONT><BR>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D =
+<BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> list =
+<B>of</B>=20
+proposition<BR></DIV></BODY></HTML>
+
+------=_NextPart_000_0007_01C29598.D9BB8CF0--

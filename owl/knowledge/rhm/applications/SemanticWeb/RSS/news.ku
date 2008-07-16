@@ -1,0 +1,43 @@
+# KEHOME/knowledge/application/SemanticWeb/RSS/news.ku
+# Dec/22/2002
+
+# Mark Pilgrim, "What is RSS?", December 18, 2002.
+# http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html
+
+at view=xmlns:rdf {do read from kb/rdfs.ku done}
+at view=xmlns:rss {do read from "http://purl.org/rss/1.0/" done}
+at view=xmlns:dc  {do read from kb/dc.ku done}
+
+set channel_1 = "http://www.xml.com/cs/xml/query/q/19"
+set item_1    = "http://www.xml.com/pub/a/2002/12/04/normalizing.html"
+set item_2    = "http://www.xml.com/pub/a/2002/12/04/som.html"
+set item_3    = "http://www.xml.com/pub/a/2002/12/04/svg.html"
+
+$channel_1 isu channel
+$channel_1 has
+    title="XML.com",
+    link="http://www.xml.com/",
+    description="XML.com features a rich mix of information and services for the XML community.",
+    language="en-us",
+    items=[ $item_1, $item_2, $item_3 ]
+
+$item_1 has
+    title="Normalizing XML, Part 2",
+    link=$item_1,
+    description="In this second and final look at applying relational normalization techniques to W3C XML Schema data modeling, Will Provost discusses when not to normalize, the scope of uniqueness and the fourth and fifth normal forms.",
+    creator=Will Provost,
+    date=2002-12-04
+
+$item_2 has
+    title="The .NET Schema Object Model",
+    link=$item_2,
+    description="Priya Lakshminarayanan describes in detail the use of the .NET Schema Object Model for programmatic manipulation of W3C XML Schemas.",
+    creator=Priya Lakshminarayanan,
+    date=2002-12-04
+
+$item_3 has
+    title="SVG's Past and Promising Future",
+    link=$item_3,
+    description="In this month's SVG column, Antoine Quint looks back at SVG's journey through 2002 and looks forward to 2003.",
+    creator=Antoine Quint,
+    date=2002-12-04

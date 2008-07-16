@@ -1,0 +1,9 @@
+  <rdf:Description rdf:about="MusicianUncle_Tupelo">
+    <rdf:type>Musician</rdf:type>
+    <rdf:type>MusicGroup</rdf:type>
+    <rdfs:label xml:lang="en">Uncle Tupelo</rdfs:label>
+    <sortPriority>10</sortPriority>
+    <hasMember>MusicianTweedy,_Jeff</hasMember>
+    <hasMember>MusicianHeidorn,_Michael</hasMember>
+    <hasMember>MusicianFarrar,_Jay</hasMember>
+  </rdf:Description>

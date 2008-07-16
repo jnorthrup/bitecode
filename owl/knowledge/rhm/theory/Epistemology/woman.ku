@@ -1,0 +1,19 @@
+# Jul/14/2002
+
+# commonly used definitions of man & woman
+hfocus += [s_differentiation, animal]
+
+man is not person  # split alias
+do check od link done
+person isd animal  # new hierarchy
+man    isd person  # new hierarchy
+
+# new definitions
+person is  animal with identify
+man    is  person with sex=male
+woman  is  person with sex=female
+
+animal ise* ?
+person is ?
+man is ?
+woman is ?

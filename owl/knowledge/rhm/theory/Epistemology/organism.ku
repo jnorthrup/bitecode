@@ -1,0 +1,11 @@
+# 1999/4/4
+
+#=================#
+# define organism #
+#=================#
+hfocus = organism
+
+organism do live
+
+organism is entity with live
+organism isi animal,plant

@@ -1,0 +1,137 @@
+# KEHOME/knowledge/application/SemanticWeb/TAP/YoYoMa.ku
+# Dec/22/2002
+
+# R.V.Guha & Rob McCool,
+# "A System for integrating Web Services into a Global Knowledge Base"
+# http://tap.stanford.edu/sw002.html
+
+# 8. Appendix A
+# 8.1 GetData(<Yo-Yo Ma>, concertSchedule) 
+
+# Request message:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+     <GetDataMKR>
+       set request = [Person_1, concertSchedule]
+       Person_1 isu a:Musician
+       Person_1 has
+          a:title=["Yo Yo Ma", "Ma, Yo-Yo"],
+          a:oid "a" namespace="MusicianMa,_Yo-Yo",
+          a:concertSchedule
+       Person_1 do a:playsInstrument od resource="http://www.alpiri.org/CelloInstrument"/ done
+     </GetDataMKR>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+# End of request.
+
+
+# Response message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+       <DataMKR>
+            set response = [Concert_1, Concert_2]
+            Concert_1, Concert_2 isu a:Concert
+            Concert_1 has        
+                  a:title="Silk Road Project With Yo-Yo Ma",
+                  a:oid "ticketmaster" namespace=F003384F15CA4E4,
+                  a:date=5/12/02,
+                  a:time=7:30PM,
+                  a:eventLocation=Auditorium_1               
+                       Auditorium_1 isu a:Auditorium
+                       Auditorium_1 has                       
+                            a:title="Benaroya Hall",
+                            a:location=City_1
+                            City_1 isu a:City
+                            City_1 has
+				a:title="Seattle",
+				a:location=USState_1
+				USState_1 isu a:USState 
+				USState_1 has
+				    a:title="Washington"
+
+            Concert_2 has
+       	           a:title="Silk Road Project with Yo-Yo Ma",
+                   a:oid "ticketmaster" namespace=F003384F7EDB26E,
+                   a:date=5/13/02,
+                   a:time=7:30PM,
+                   a:eventLocation=Auditorium_1                       
+        </DataMKR>
+     </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+# End of response.
+
+
+# 8.2 GetDataInverse(<Yo-Yo Ma>, hasAuthor)
+# Request message:
+
+?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+        <GetDataMKR>
+            set request = [Person_1, hasAuthor]
+            Person_1 isu a:Musician
+            Person_1 has
+                a:title=["Yo Yo Ma", "Ma, Yo-Yo"],
+                a:hasAuthor inverse="yes",
+                a:oid "a" namespace="MusicianMa,_Yo-Yo"
+            Person_1 do a:playsInstrument od resource="http://www.alpiri.org/CelloInstrument" done
+        </GetDataMKR>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+# End of request.
+
+
+# Response message:
+
+?xml version="1.0" encoding="UTF-8"?>
+  <SOAP-ENV:Envelope
+       xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+       SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+       xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+       xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+       xmlns:a="http://www.alpiri.org/">
+       <SOAP-ENV:Body>
+           <DataMKR>
+               set response = [MusicAlbum_1, MusicAlbum_2]
+               MusicAlbum_1, MusicAlbum_2 isu a:MusicAlbum_2
+               MusicAlbum_1 has
+                   a:title="Appalachian Journey",
+                   a:oid "cdnow" namespace=757707,
+                   a:price="$10.99",
+                   a:hasAuthor=person_1
+                       person_1 isu a:Musician
+                       person_1 has a:title="Yo-Yo Ma"
+               
+               MusicAlbum_2 has
+                   a:title="Tavener: The Protecting Veil",
+                   a:oid "cdnow" namespace=559275,
+                   a:price="$17.99",
+                   a:hasAuthor=person_1
+           </DataMKR>
+        </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+# End of response.

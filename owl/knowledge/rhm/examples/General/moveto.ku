@@ -1,0 +1,21 @@
+# 5:30 pm 1998/2/21
+# new syntax Jul/24/2005
+
+# example of user-defined method
+
+set debug=METHOD;
+# moveto existent:1,existent:2
+moveto is method with
+	automatic=ISA*,
+	format=[existent:1; existent:2],
+	meaning={$1 isd $2;};
+
+
+my dog, his flower, her book isa entity;
+
+do moveto od my dog,animal done;
+do moveto od his flower,plant done;
+do moveto od her book,object done;
+
+my dog, his flower, her book isa* ?;
+? isa moveto;

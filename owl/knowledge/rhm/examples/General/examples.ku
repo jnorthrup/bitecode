@@ -1,0 +1,40 @@
+# KEHOME/knowledge/examples.ku
+# 1999/4/22
+# new syntax Jul/24/2005
+
+# Here is a small sample of sentences in KR:
+
+at view=vname;				# define new knowledge unit
+
+animal isc man,cat,dog;			# hierarchy
+Dick   isa person;			# hierarchy
+Dick   is  Richard H. McCullough;	# identity/alias
+Dick   has sex=male;			# attribute
+Dick   do  read done;			# action
+at time=10am {
+    Dick do go to space=store done; };	# action/event (change unit)
+man    is  animal with identify;	# definition
+phonebook is relation with		# define & read relation
+  format=[phone:1, person:2],
+  meaning={$2 has phone=$1};
+do read od phonebook from phonebk.rel done;
+
+ke      has  ?;				# display all attributes
+Dick    do   ? done;			# display all action/events
+apple   ?    orange;			# determine relation of concepts
+apple   isa* ?;				# walk up hierarchy
+animal  isc* ?;				# display subhierarchy
+do find od Bob* done;			# all concepts beginning with Bob
+do check  od definition done;		# display undefined concepts
+set hfocus = [animal,newword,newstatement];  # concepts to write
+set hformat = outline;			# write format
+do write to save.ku done;		# write knowledge unit file
+
+every x isa person {			# iteration
+  $x has ?;
+};
+if Bob has phone;			# conditional
+then
+  set . = Bob;				# current concept
+  do call od $phone done;		# attribute of current concept
+fi;

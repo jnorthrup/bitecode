@@ -1,0 +1,242 @@
+# 1:00 pm 1998/1/9
+
+# Dewey Decimal Classification
+# The 1000 Sections
+
+at view = book/ddcn
+
+000 General Works
+/	001 Knowledge
+/	002
+/	003
+/	004
+/	005
+/	006
+/	007
+/	008
+/	009
+010 "Bibliographies & catalogs"
+/	011 General bibliographies
+/	012 Of individuals
+/	013 "Of specific classes of writers"
+/	014 "Of anonymous & pseudonym works"
+/	015 Of works from specific places
+/	016 Of specific subjects
+/	017 General subject catalogs
+/	018 General author catalogs
+/	019 General dictionary catalogs
+020 Library science
+/	021 The library
+/	022 Physical plant of libraries
+/	023 "Library personnel & positions"
+/	024 Regulations for use of libraries
+/	025 Library economy
+/	026 Special libraries
+/	027 General libraries
+/	028 "Reading & reading aids"
+/	029 "Indexing & documentation"
+030 General encyclopedic works
+040
+050 General periodicals
+060 General organizations
+070 "Newspapers & journalism"
+080 General collections
+090 "Manuscripts & book rarities"
+
+100 "Philosophy & Psychology"
+/	101 Theory
+/	102 Miscellany
+/	103 "Dictionaries, Encyclopedias, etc."
+/	104
+/	105 Serial publications
+/	106 Organizations
+/	107 "Study & teaching"
+/	108 "Collections & anthologies"
+/	109 Historical treatment
+110 "Ontology & methodology"
+/	111 Ontology
+/	112 Classification of knowledge
+/	113 Origin of universe
+/	114 Space
+/	115 Time, duration, eternity
+/	116 "Motion & change"
+/	117 "Matter & form"
+/	118 "Force & energy"
+/	119 "Number & quantity"
+120 Knowledge, cause, purpose, man
+/	121 Epistemology
+/	122 "Cause & Effect"
+/	123 "Freedom & necessity"
+/	124 Teleology
+/	125 "Finite & infinite"
+/	126 "Consciousness & personality"
+/	127 "Unconscious & subconscious"
+/	128 Man
+/	129 "Origin & destiny of soul"
+130 "Pseudo-psychology & parapsychology"
+140 Specific philosophic viewpoints
+/	141 "Idealism & related systems"
+/	142 Critical philosophy
+/	143 "Intuitionism & Bergsonism"
+/	144 "Humanism & related systems"
+/	145 "Sensationalism & ideology"
+/	146 "Naturalism & related systems"
+/	147 "Pantheism & related systems"
+/	148 "Liberalism & other systems"
+/	149 "Other systems & doctrines"
+150 Psychology
+160 Logic
+/	161 Induction
+/	162 Deduction
+/	163
+/	164 "Symbolic & mathematical logic"
+/	165 "Fallacies & sources of error"
+/	166 Syllogism
+/	167 Hypothesis
+/	168 "Argument & persuasion"
+/	169 Analogy
+170 Ethics (Moral philosophy)
+180 "Ancient, medieval, Oriental philosophy"
+/	181 Oriental
+/	182 Pre-socratic
+/	183 "Sophistic, Socratic & related"
+/	184 Platonic
+/	185 Aristotelian
+/	186 "Skeptic & Neoplatonic"
+/	187 Epicurean
+/	188 Stoic
+/	189 Medieval Western
+190 Modern Western philosophy
+
+200 Religion
+210 Natural religion
+220 Bible
+230 Christian doctrinal theology
+240 "Christian moral & devotional theology"
+250 "Christian pastoral, parochial, etc."
+260 "Christian social & ecclesiastical theology"
+270 "History & geography of Christian church"
+280 "Christian denominations & sect"
+290 "Other religions & comparative religion"
+/	291 Comparative religion
+/	292 "Classical (Greek & Roman) religion
+/	293 Germanic religion
+/	294 "Brahmanism & related religions"
+/	295 Zoroastrianism
+/	296 Judaism
+/	297 "Islam & its derivatives"
+/	298
+/	299 Other religions
+
+300 Social Sciences
+310 "Statistical methods & statistics"
+320 Political science
+330 Economics
+340 Law
+350 Public administration
+360 "Welfare & association"
+370 Education
+/	371 The school
+/	372 Elementary education
+/	373 Secondary education
+/	374 Adult education
+/	375 Curriculums
+/	376 Education of women
+/	377 "Schools & religion"
+/	378 Higher Education
+/	379 "Government supervision & support"
+380 Commerce
+390 "Customs & folklore"
+
+400 Language
+410 "Linguistics & nonverbal language"
+420 "English & Anglo-Saxon"
+430 Germanic languages
+440 French, Provencal, Catalan
+450 Italian, Romanian, etc.
+460 "Spanish & Portuguese"
+470 Italic languages
+480 "Classical & Greek"
+490 Other languages
+
+500 Science
+510 Mathematics
+/	511 Arithmetic
+/	512 Algebra
+/	513 Synthetic geometry
+/	514 Trigonometry
+/	515 Descriptive geometry
+/	516 Analytic (Coordinate) geometry
+/	517 Calculus
+/	518
+/	519 "Probabilites & statistical mathematics"
+520 "Astronomy & allied sciences"
+530 Physics
+540 "Chemistry & allied sciences"
+550 Earth sciences
+560 Paleontology
+570 "Anthropological & biological sciences"
+580 Botanical sciences
+590 Zoological sciences
+
+600 "Applied Science & Useful Arts"
+610 Medical sciences
+620 "Engineering & allied operations"
+/	621 Applied physics
+/	622 "Mining engineering & operations"
+/	623 "Military & naval engineering"
+/	624 Civil engineering
+/	625 "Railroads & highways"
+/	626
+/	627 Hydraulic engineering etc.
+/	628 "Sanitary & municipal engineering
+/	629 Other branches
+630 "Agriculture & agricultural industries"
+640 "Domestic arts & sciences"
+650 "Business & related enterprises"
+660 Chemical technology etc.
+670 Manufactures processible
+680 "Assembled & final products"
+690 Buildings
+
+700 "Fine Arts & Recreation"
+710 "Civic & landscape art"
+720 Architecture
+730 "Sculpture & the plastic arts"
+740 "Drawing & decorative arts"
+750 "Painting & paintings"
+760 Graphic arts
+770 "Photography & photographs"
+780 Music
+790 Recreation (Recreational arts)
+/	791 Public entertainment
+/	792 Theater (Stage presentations)
+/	793 "Indoor games & amusements"
+/	794 Indoor games of skill
+/	795 Games of chance
+/	796 "Athletic & outdoor sports"
+/	797 "Aquatic & air sports"
+/	798 "Equestrian & animal sports"
+/	799 "Fishing, hunting, shooting"
+
+800 Literature
+810 American literature in English
+820 "English & Anglo-Saxon literature"
+830 Germanic languages literature
+840 "French, Provencal, Catalan literature"
+850 "Italian, Romanian etc. literature"
+860 "Spanish & Portuguese literature"
+870 Italic languages literature
+880 "Classical & Greek literature"
+890 "Literatures of other languages"
+
+900 "Biography, Geography, History"
+910 General geography
+920 "General biography, genealogy, etc."
+930 General history of ancient world
+940 General history of modern Europe
+950 General history of modern Asia
+960 General history of modern Africa
+970 General history of North America
+980 General history of South America
+990 General history of rest of world

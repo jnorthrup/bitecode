@@ -1,0 +1,149 @@
+<HTML>
+<XMP>
+# KEHOME/kb/rdfs.ku
+# Dec/23/2002
+
+# "http://www.w3.org/TR/2002/WD-rdf-schema-20021112/"
+
+# KR-RDFS identities
+#===================
+rdf:Class is concept
+rdfs:Resource is existent
+rdf:Property is characteristic   
+rdf:Statement is statement   
+rdfs:Container is group       
+rdfs:Bag is multiset    
+rdfs:Seq is list        
+rdfs:Alt is enumeration 
+
+at view=meaning hierarchy
+#========================#
+rdfsHi is begin hierarchy
+group
+/   rdfs:Datatype
+//	rdfs:Literal
+//	rdfs:XMLLiteral
+list
+/   rdf:List  # Seq plus properties: first, rest, nil
+
+attribute
+/   rdf:type           # genus
+/   rdf:value
+/   rdf:first
+/   rdf:rest
+/   rdf:nil  # <<== not in summary table
+/   rdf:subject
+/   rdf:predicate
+/   rdf:object
+/   rdfs:domain
+/   rdfs:range
+/   rdfs:label
+/   rdfs:comment
+/   rdfs:seeAlso
+//	rdfs:isDefinedBy
+relation
+/   rdfs:subClassOf     # iss*
+/   rdfs:subPropertyOf  # iss*
+/   rdfs:member  # ismem
+//	rdfs:ContainerMembershipProperty  # 1, 2, ...
+end hierarchy rdfsHi
+
+# "RDF Schema Overview"
+#======================
+RDF classes is relation with
+    automatic=none,
+    label=[Class name,comment],
+    format=[Class:1,comment:2],
+    meaning={
+	$1 isu rdf:Class;
+	$1 has rdfs:comment="$2";
+	}
+RDF classes is begin relation
+#============================
+# Class name; comment 
+rdfs:Resource; The class resource, everything. 
+rdfs:Literal; This represents the set of atomic values, eg. textual strings. 
+rdfs:XMLLiteral; The class of XML literals. 
+rdfs:Class; The concept of Class 
+rdf:Property; The concept of a property. 
+rdfs:Datatype; The class of datatypes. 
+rdf:Statement; The class of RDF statements. 
+rdf:Bag; An unordered collection. 
+rdf:Seq; An ordered collection. 
+rdf:Alt; A collection of alternatives. 
+rdfs:Container; This represents the set Containers. 
+rdfs:ContainerMembershipProperty; The container membership properties, rdf:1, rdf:2, ..., all of which are sub-properties of 'member'. 
+rdf:List; The class of RDF Lists 
+end relation RDF classes
+ 
+RDF properties is relation with
+    automatic=none,
+    label=[Property name,comment,domain,range],
+    format=[Property:1,comment:2,domain:3,range:4],
+    meaning={
+	#$1 iss* rdf:Property;
+	$1 has rdfs:comment="$2";
+	$1 has rdfs:domain=$3;
+	$1 has rdfs:range=$4;
+	#$3 has $1 = $4;
+    }
+RDF properties is begin relation
+#===============================
+# Property name; comment; domain; range 
+rdfs:subClassOf; Indicates membership of a class; rdfs:Class; rdfs:Class 
+rdfs:subPropertyOf; Indicates specialization of properties; rdf:Property; rdf:Property 
+rdfs:member; a member of a container; rdfs:Container; not specified 
+rdf:type; Indicates membership of a class; rdfs:Resource; rdfs:Class 
+rdfs:domain; A domain class for a property type; rdf:Property; rdfs:Class 
+rdfs:range; A range class for a property type; rdf:Property; rdfs:Class 
+rdfs:label; Provides a human-readable version of a resource name.; rdfs:Resource; rdfs:Literal 
+rdfs:comment; Use this for descriptions; rdfs:Resource; rdfs:Literal 
+rdf:first; The first item in an RDF list. Also often called the head.; rdf:List; not specified 
+rdf:rest; The rest of an RDF list after the first item. Also often called the tail.; rdf:List; rdf:List 
+rdfs:seeAlso; A resource that provides information about the subject resource; rdfs:Resource; rdfs:Resource 
+rdfs:isDefinedBy; Indicates the namespace of a resource; rdfs:Resource; rdfs:Resource 
+rdf:value; Identifies the principal value (usually a string) of a property when the property value is a structured resource; rdfs:Resource; not specified 
+rdf:subject; The subject of an RDF statement.; rdf:Statement; rdfs:Resource 
+rdf:predicate; the predicate of an RDF statement.; rdf:Statement; rdf:Property 
+rdf:object; The object of an RDF statement.; rdf:Statement; not specified 
+end relation RDF properties
+
+at view=vocabulary hierarchy
+#===========================#
+rdfsVocabulary is begin unithierarchy
+rdf:Class  # concept
+#/   Resource  # existent
+/   rdfs:Literal
+/   rdfs:XMLLiteral
+#/   rdf:Class  # concept
+/   rdf:Property
+/   rdfs:Datatype
+/   rdf:Statement
+/   rdfs:Container  # ingroup
+/   rdfs:Bag  # multiset
+/   rdfs:Seq  # list
+/   rdfs:Alt  # enumeration
+/   rdfs:ContainerMembershipProperty  # 1, 2, ...
+/   rdf:List  # Seq plus properties: first, rest, nil
+
+Property
+/   rdf:type  # genus
+/   rdfs:subClassOf     # isa*
+/   rdfs:subPropertyOf  # isa*
+/   rdfs:domain  # subject Class
+/   rdfs:range   # object  Class
+/   rdfs:label
+/   rdfs:comment
+/   rdfs:member  # ismem
+/   rdf:first
+/   rdf:rest
+/   rdf:nil  # <<== not in summary table
+/   rdfs:seeAlso
+/   rdfs:isDefinedBy
+/   rdf:value
+/   rdf:subject
+/   rdf:predicate
+/   rdf:object
+end unithierarchy rdfsVocabulary
+</XMP>
+</HTML>

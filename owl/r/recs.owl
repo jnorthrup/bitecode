@@ -1,0 +1,804 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/01/24 09:08:39 $, by $Author: ivan $, $Revision: 1.114 $ -->
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#" xmlns:org="http://www.w3.org/2001/04/roadmap/org#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:recs="http://www.w3.org/2003/03/recsSchema#">
+	<!-- 
+		the tr.rdf file does not include two essential information:
+			the domain responsible for a specific document
+			a suitable short name that can be used to display on a limited space
+		this file includes those. 
+		Actually, the first info could be retrieved going through the groups.rdf file (I must
+		admit I did not know about the existence of that one when I began to work on this) but
+		there is certainly no comcept for a short title elsewhere, so this file is
+		necessary anyway...
+		Each description also includes the date and the title which is, strictly speaking
+		unnecessary, because it is just a copy from the tr.rdf file. I put there at the beginning
+		to add my own editing, in newer editions I do not do that any more. In fact, 
+		I should have rdf:comment instead... ;-(
+		In some cases I also had to add an explicit activity information, because the document
+		belonged to an non-existing working group any more
+	-->
+	<FirstEdition rdf:about="http://www.w3.org/TR/REC-png-961001">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<rdfs:comment>PNG (Portable Network Graphics) Specification</rdfs:comment>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/PNG"/>
+		<dc:date>1996-10-01</dc:date>
+		<recs:shortTitle>PNG</recs:shortTitle>
+	</FirstEdition>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-PNG-20031110">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Portable Network Graphics (PNG) Specification (Second Edition)</rdfs:comment>
+		<recs:shortTitle>PNG (2nd)</recs:shortTitle>
+		<recs:activity rdf:resource="http://www.w3.org/Graphics/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-PICS-labels-961031">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>PICS 1.1 Label Distribution -- Label Syntax and Communication Protocols</rdfs:comment>
+		<dc:date>1996-10-31</dc:date>
+		<recs:shortTitle>PICS Labels</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-PICS-services-961031">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>PICS 1.1 Rating Services and Rating Systems -- and Their Machine Readable Descriptions</rdfs:comment>
+		<dc:date>1996-10-31</dc:date>
+		<recs:shortTitle>PICS Rating</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-CSS1-961217">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Cascading Style Sheets, level 1 Recommandation</rdfs:comment>
+		<dc:date>1996-12-17</dc:date>
+		<recs:shortTitle>CSS 1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-html32-19970114">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>HTML 3.2 Reference Specification</rdfs:comment>
+		<dc:date>1997-01-14</dc:date>
+		<recs:shortTitle>HTML 3.2</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-html40-971218">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>HTML 4.0 Recommendation</rdfs:comment>
+		<dc:date>1997-12-18</dc:date>
+		<recs:shortTitle>HTML 4.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-html40-19980424">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<previousEdition rdf:resource="http://www.w3.org/TR/REC-html40-971218"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#FirstEdition"/>
+		<dc:date>1998-04-24</dc:date>
+		<rdfs:comment>HTML 4.0 Recommendation</rdfs:comment>
+		<recs:shortTitle>HTML 4.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/REC-PICSRules-971229">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>PICSRules 1.1 Specification</rdfs:comment>
+		<dc:date>1997-12-29</dc:date>
+		<recs:shortTitle>PICSRules</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-xml-19980210">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML 1.0 Recommendation</rdfs:comment>
+		<dc:date>1998-02-10</dc:date>
+		<recs:shortTitle>XML 1.0</recs:shortTitle>
+		<recs:id>xml</recs:id>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-MathML-19980407">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Mathematical Markup Language (MathML) 1.0 Specification</rdfs:comment>
+		<dc:date>1998-04-07</dc:date>
+		<recs:shortTitle>MathML 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-CSS2-19980512">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Cascading Style Sheets, level 2 (CSS2) Specification</rdfs:comment>
+		<dc:date>1998-05-12</dc:date>
+		<recs:shortTitle>CSS 2</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-DSig-label-19980527">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>PICS Signed Labels (DSig) 1.0 Specification</rdfs:comment>
+		<dc:date>1998-05-27</dc:date>
+		<recs:shortTitle>PICS DSig</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-smil-19980615">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Synchronized Multimedia Integration Language (SMIL) 1.0 Specification</rdfs:comment>
+		<dc:date>1998-06-15</dc:date>
+		<recs:shortTitle>SMIL 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 1</rdfs:comment>
+		<dc:date>1998-10-01</dc:date>
+		<recs:shortTitle>DOM 1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-CSS1-19990111">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Cascading Style Sheets (CSS1) Level 1 Specification</rdfs:comment>
+		<dc:date>1999-01-11</dc:date>
+		<recs:shortTitle>CSS 1 (2nd)</recs:shortTitle>
+		<recs:genericShortTitle>CSS 1</recs:genericShortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-xml-names-19990114">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Namespaces in XML</rdfs:comment>
+		<dc:date>1999-01-14</dc:date>
+		<recs:shortTitle>Namespaces</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xml-names-20060816">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Namespaces in XML (2nd.)</rdfs:comment>
+		<recs:shortTitle>Namespaces (2nd.)</recs:shortTitle>
+		<previousEdition rdf:resource="http://www.w3.org/TR/1999/REC-xml-names-19990114"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-WebCGM-19990121">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>WebCGM Profile Recommendation</rdfs:comment>
+		<dc:date>1999-01-21</dc:date>
+		<recs:shortTitle>WebCGM</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-rdf-syntax-19990222">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<!-- <rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#FirstEdition"/> -->
+		<rdfs:comment>Resource Description Framework (RDF) Model and Syntax Specification</rdfs:comment>
+		<dc:date>1999-02-22</dc:date>
+		<recs:shortTitle>RDF (Old Version)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdfs:comment>Web Content Accessibility Guidelines 1.0</rdfs:comment>
+		<dc:date>1999-05-05</dc:date>
+		<recs:shortTitle>WCAG 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Associating Style Sheets with XML documents</rdfs:comment>
+		<dc:date>1999-06-29</dc:date>
+		<recs:shortTitle>Style Sheets PI</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/1999/07/REC-MathML-19990707">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Mathematical Markup Language (MathML) 1.01 Specification</rdfs:comment>
+		<dc:date>1999-07-07</dc:date>
+		<recs:shortTitle>MathML 1.01</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-xpath-19991116">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XML Path Language (XPath) Version 1.0</rdfs:comment>
+		<dc:date>1999-11-16</dc:date>
+		<recs:shortTitle>XPath 1.0</recs:shortTitle>
+		<recs:group rdf:resource="http://www.w3.org/Style/XSL/Group/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-xslt-19991116">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XSL Transformations (XSLT) Version 1.0</rdfs:comment>
+		<dc:date>1999-11-16</dc:date>
+		<recs:shortTitle>XSLT 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/1999/REC-html401-19991224">
+		<previousEdition rdf:resource="http://www.w3.org/TR/1998/REC-html40-19980424"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>HTML 4.01 Specification</rdfs:comment>
+		<dc:date>1999-12-24</dc:date>
+		<recs:shortTitle>HTML 4.01</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-xhtml1-20000126">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XHTML™ 1.0: The Extensible HyperText Markup Language - A Reformulation of HTML 4 in XML 1.0</rdfs:comment>
+		<dc:date>2000-01-26</dc:date>
+		<recs:shortTitle>XHTML 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xhtml1-20020801">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XHTML™ 1.0 The Extensible HyperText Markup Language (Second Edition)</rdfs:comment>
+		<dc:date>2002-08-01</dc:date>
+		<recs:shortTitle>XHTML 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-ATAG10-20000203">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdfs:comment>Authoring Tool Accessibility Guidelines 1.0</rdfs:comment>
+		<dc:date>2000-02-03</dc:date>
+		<recs:shortTitle>ATAG 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-xml-20001006">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Extensible Markup Language (XML) 1.0 (Second Edition)</rdfs:comment>
+		<dc:date>2000-10-06</dc:date>
+		<recs:shortTitle>XML 1.0</recs:shortTitle>
+		<recs:genericShortTitle>XML 1.0</recs:genericShortTitle>
+		<recs:id>xml</recs:id>
+		<!-- <previousEdition rdf:resource="http://www.w3.org/TR/1998/REC-xml-19980210"/> -->
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 Core Specification</rdfs:comment>
+		<dc:date>2000-11-13</dc:date>
+		<recs:shortTitle>DOM 2 Core</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-DOM-Level-2-Views-20001113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 Views Specification</rdfs:comment>
+		<dc:date>2000-11-13</dc:date>
+		<recs:shortTitle>DOM 2 Views</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 Events Specification</rdfs:comment>
+		<dc:date>2000-11-13</dc:date>
+		<recs:shortTitle>DOM 2 Events</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 Style Specification</rdfs:comment>
+		<dc:date>2000-11-13</dc:date>
+		<recs:shortTitle>DOM 2 Style</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 Traversal and Range Specification</rdfs:comment>
+		<dc:date>2000-11-13</dc:date>
+		<recs:shortTitle>DOM 2 Traversal</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2000/REC-xhtml-basic-20001219">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XHTML™ Basic</rdfs:comment>
+		<dc:date>2000-12-19</dc:date>
+		<recs:shortTitle>XHTML Basic</recs:shortTitle>
+	</REC>
+	<FirstEdition rdf:about="http://www.w3.org/TR/2001/REC-MathML2-20010221">
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Mathematical Markup Language (MathML) Version 2.0</rdfs:comment>
+		<dc:date>2001-02-21</dc:date>
+		<recs:shortTitle>MathML 2.0</recs:shortTitle>
+	</FirstEdition>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-MathML2-20031021/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Mathematical Markup Language (MathML) Version 2.0 (Second Edition)</rdfs:comment>
+		<dc:date>2003-10-21</dc:date>
+		<recs:shortTitle>MathML 2.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>Canonical XML Version 1.0</rdfs:comment>
+		<dc:date>2001-03-15</dc:date>
+		<recs:shortTitle>Canonical XML</recs:shortTitle>
+		<recs:group rdf:resource="http://www.w3.org/Signature/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xhtml-modularization-20010410/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Modularization of XHTML™</rdfs:comment>
+		<dc:date>2001-04-10</dc:date>
+		<recs:shortTitle>XHTML M12n</recs:shortTitle>
+		<dc:title>Modularization of XHTML™</dc:title>
+		<doc:versionOf rdf:resource="http://www.w3.org/TR/xhtml-modularization/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xmlschema-0-20010502/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 0: Primer</rdfs:comment>
+		<dc:date>2001-05-02</dc:date>
+		<recs:shortTitle>Schema Primer</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xmlschema-2-20010502/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 2: Datatypes</rdfs:comment>
+		<dc:date>2001-05-02</dc:date>
+		<recs:shortTitle>Schema Types</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 1: Structures</rdfs:comment>
+		<dc:date>2001-05-02</dc:date>
+		<recs:shortTitle>Schema Struct.</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 0: Primer Second Edition</rdfs:comment>
+		<recs:shortTitle>Schema Primer (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 2: Datatypes Second Edition</rdfs:comment>
+		<recs:shortTitle>Schema Types (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Schema Part 1: Structures  Second Edition</rdfs:comment>
+		<recs:shortTitle>Schema Struct. (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-ruby-20010531">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Ruby Annotation</rdfs:comment>
+		<dc:date>2001-05-31</dc:date>
+		<recs:shortTitle>Ruby</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xhtml11-20010531">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XHTML™ 1.1 - Module-based XHTML</rdfs:comment>
+		<dc:date>2001-05-31</dc:date>
+		<recs:shortTitle>XHTML 1.1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xmlbase-20010627/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Base</rdfs:comment>
+		<dc:date>2001-06-27</dc:date>
+		<recs:shortTitle>XML Base</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xlink-20010627/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Linking Language (XLink) Version 1.0</rdfs:comment>
+		<dc:date>2001-06-27</dc:date>
+		<recs:shortTitle>XLink 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-smil20-20010807/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Synchronized Multimedia Integration Language (SMIL 2.0) Specification</rdfs:comment>
+		<recs:shortTitle>SMIL 2.0</recs:shortTitle>
+		<!-- <doc:versionOf rdf:resource="http://www.w3.org/TR/SMIL2/"/> -->
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-SMIL2-20050107/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Synchronized Multimedia Integration Language (SMIL 2.0) Specification - [Second Edition]</rdfs:comment>
+		<recs:shortTitle>SMIL 2.0 (2nd ed.)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-smil-animation-20010904">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>SMIL Animation</rdfs:comment>
+		<dc:date>2001-09-04</dc:date>
+		<recs:shortTitle>SMIL Animation</recs:shortTitle>
+		<recs:group rdf:resource="http://www.w3.org/Graphics/SVG/Group/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-SVG-20010904">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Scalable Vector Graphics (SVG) 1.0 Specification</rdfs:comment>
+		<dc:date>2001-09-04</dc:date>
+		<recs:shortTitle>SVG 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xsl-20011015/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Extensible Stylesheet Language (XSL) Version 1.0</rdfs:comment>
+		<dc:date>2001-10-15</dc:date>
+		<recs:shortTitle>XSL 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xsl11-20061205/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Extensible Stylesheet Language (XSL) Version 1.1</rdfs:comment>
+		<recs:shortTitle>XSL 1.1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-xml-infoset-20011024/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Information Set</rdfs:comment>
+		<dc:date>2001-10-24</dc:date>
+		<recs:shortTitle>Infoset</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2001/REC-WebCGM-20011217/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>WebCGM 1.0 Second Release</rdfs:comment>
+		<dc:date>2001-12-17</dc:date>
+		<recs:shortTitle>WebCGM (2nd)</recs:shortTitle>
+		<recs:genericShortTitle>WebCGM</recs:genericShortTitle>
+		<recs:activity rdf:resource="http://www.w3.org/Graphics/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>XML-Signature Syntax and Processing</rdfs:comment>
+		<dc:date>2002-02-12</dc:date>
+		<recs:shortTitle>XML Signature</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-P3P-20020416/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>The Platform for Privacy Preferences 1.0 (P3P1.0) Specification</rdfs:comment>
+		<dc:date>2002-04-16</dc:date>
+		<recs:shortTitle>P3P 1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xml-exc-c14n-20020718/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>Exclusive XML Canonicalization Version 1.0</rdfs:comment>
+		<dc:date>2002-07-18</dc:date>
+		<recs:shortTitle>XML Canonicalization</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xhtml1-20020801">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>XHTML™ 1.0 The Extensible HyperText Markup Language (Second Edition)</rdfs:comment>
+		<dc:date>2002-08-01</dc:date>
+		<recs:shortTitle>XHTML 1.0 (2nd)</recs:shortTitle>
+		<recs:genericShortTitle>XHTML 1.0</recs:genericShortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xmldsig-filter2-20021108/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>XML-Signature XPath Filter 2.0</rdfs:comment>
+		<dc:date>2002-11-08</dc:date>
+		<recs:shortTitle>XPath Filter</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xmlenc-decrypt-20021210">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>Decryption Transform for XML Signature</rdfs:comment>
+		<dc:date>2002-12-10</dc:date>
+		<recs:shortTitle>Decrypt Transform</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdfs:comment>XML Encryption Syntax and Processing</rdfs:comment>
+		<dc:date>2002-12-10</dc:date>
+		<recs:shortTitle>XML Encryption</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2002/REC-UAAG10-20021217/">
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<versionOf rdf:resource="http://www.w3.org/TR/UAAG10/"/>
+		<rdfs:comment>User Agent Accessibility Guidelines 1.0</rdfs:comment>
+		<dc:date>2002-12-17</dc:date>
+		<recs:shortTitle>UAAG1.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030107">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Document Object Model (DOM) Level 2 HTML Specification</rdfs:comment>
+		<dc:date>2003-01-09</dc:date>
+		<recs:shortTitle>DOM 2 HTML</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-SVG11-20030114/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Scalable Vector Graphics (SVG) 1.1 Specification</rdfs:comment>
+		<dc:date>2003-01-14</dc:date>
+		<recs:shortTitle>SVG 1.1</recs:shortTitle>
+		<!-- 
+        <doc:versionOf rdf:resource="http://www.w3.org/TR/SVG/"/>
+        <recs:shortURI rdf:resource="http://www.w3.org/TR/SVG11/"/>
+        -->
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-SVGMobile-20030114/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdfs:comment>Mobile SVG Profiles: SVG Tiny and SVG Basic</rdfs:comment>
+		<dc:date>2003-01-14</dc:date>
+		<recs:shortTitle>SVG Mobile</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XPointer Framework</rdfs:comment>
+		<dc:date>2003-03-25</dc:date>
+		<recs:shortTitle>XPTR Framewk.</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-xptr-element-20030325/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XPointer element() Scheme</rdfs:comment>
+		<dc:date>2003-03-25</dc:date>
+		<recs:shortTitle>XPTR Element</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-xptr-xmlns-20030325/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XPointer xmlns() Scheme</rdfs:comment>
+		<dc:date>2003-03-25</dc:date>
+		<recs:shortTitle>XPTR Xmlns</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-soap12-part0-20030624/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Primer</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-soap12-part1-20030624/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Framewk.</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-soap12-part2-20030624/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Adjuncts</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-soap12-testcollection-20030624/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Tests</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-xforms-20031014/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XForms 1.0</recs:shortTitle>
+		<dc:date>2003-10-14</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xforms-20060314/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XForms 1.0 (2nd)</recs:shortTitle>
+		<dc:date>2006-03-14</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xforms-20071029/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XForms 1.0 (3rd)</recs:shortTitle>
+		<dc:date>2007-10-30</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2003/REC-xml-events-20031014">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>XML Events</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-CCPP-struct-vocab-20040115/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>CC/PP</recs:shortTitle>
+		<!-- I am not sure why this is missing from tr.rdf. I gather this is due to the history of CC/PP... -->
+		<org:deliveredBy rdf:parseType="Resource">
+			<contact:homePage rdf:resource="http://www.w3.org/2001/di/Group/"/>
+		</org:deliveredBy>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-DOM-Level-3-Val-20040127">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>DOM 3 Validation</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>DOM 3 Core</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>DOM 3 L &amp; S</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xml-20040204">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML 1.0</recs:shortTitle>
+		<recs:id>xml</recs:id>
+		<previousEdition rdf:resource="http://www.w3.org/TR/2000/REC-xml-20001006"/>
+		<dc:date>2004-02-04</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xml-20060816">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML 1.0</recs:shortTitle>
+		<previousEdition rdf:resource="http://www.w3.org/TR/2004/REC-xml-20040204"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xml-infoset-20040204">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>Infoset (2nd)</recs:shortTitle>
+		<dc:date>2004-02-04</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xml-names11-20040204">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>Namespaces 1.1</recs:shortTitle>
+		<dc:date>2004-02-04</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xml-names11-20060816">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>Namespaces 1.1 (2nd.)</recs:shortTitle>
+		<previousEdition rdf:resource="http://www.w3.org/TR/2004/REC-xml-names11-20040204"/>
+		<dc:date>2006-08-16</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xml11-20040204/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML 1.1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xml11-20060816">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>XML 1.1 (2nd.)</recs:shortTitle>
+		<previousEdition rdf:resource="http://www.w3.org/TR/2004/REC-xml11-20040204/"/>
+	</REC>
+	<!-- ============================ RDF =============================== -->
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF/XML</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/">
+		<!-- <previousEdition rdf:resource="http://www.w3.org/TR/1999/REC-rdf-syntax-19990222"/> -->
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF Primer</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/">
+		<rdfs:comment>RDF Concepts and Abstract Syntax</rdfs:comment>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF Concepts</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF Semantics</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF Test Cases</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-rdf-schema-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>RDF Schema</recs:shortTitle>
+	</REC>
+	<!-- ============================= OWL ==================================== -->
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-owl-guide-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Guide</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-owl-features-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Overview</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-owl-ref-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Reference</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-owl-test-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Tests</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-webont-req-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Use Cases</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/">
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:shortTitle>OWL Semantics</recs:shortTitle>
+	</REC>
+	<!-- ============================= Voice ============================== -->
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-speech-grammar-20040316/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>Speech Recognition</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-speech-synthesis-20040907/">
+		<recs:shortTitle>Speech Synthesis</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-voicexml20-20040316/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>VoiceXML 2.0</recs:shortTitle>
+	</REC>
+	<!-- ================================================================== -->
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-webarch-20041215/">
+		<rdfs:comment>Architecture of the World Wide Web, Volume One</rdfs:comment>
+		<recs:shortTitle>WebArch</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2004/REC-xinclude-20041220/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Inclusions (XInclude) Version 1.0</rdfs:comment>
+		<recs:shortTitle>XInclude</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xinclude-20061115/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML Inclusions (XInclude) Version 1.0 (Second Edition)</rdfs:comment>
+		<recs:shortTitle>XInclude (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-soap12-mtom-20050125/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>SOAP Message Transmission Optimization Mechanism</rdfs:comment>
+		<recs:shortTitle>SOAP MTOM</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-soap12-rep-20050125/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>Resource Representation SOAP Header Block</rdfs:comment>
+		<recs:shortTitle>RRSHB</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-xop10-20050125/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdfs:comment>XML-binary Optimized Packaging</rdfs:comment>
+		<recs:shortTitle>XOP</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-charmod-20050215/">
+		<rdfs:comment>Character Model Fundamentals</rdfs:comment>
+		<recs:shortTitle>Char Model</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-xkms2-20050628/">
+		<recs:shortTitle>XKMS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-xkms2-bindings-20050628/">
+		<recs:shortTitle>XKMS Bindings</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-qaframe-spec-20050817/">
+		<recs:shortTitle>QA Framework</recs:shortTitle>
+		<rdfs:comment>QA Framework</rdfs:comment>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-xml-id-20050909/">
+		<rdfs:comment>xml:id</rdfs:comment>
+		<recs:shortTitle>xml:id</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2005/REC-SMIL2-20051213/">
+		<recs:shortTitle>SMIL 2.1</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-ws-addr-core-20060509">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSA Core</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-ws-addr-soap-20060509">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSA SOAP Binding</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2006/REC-xhtml-print-20060920/">
+		<recs:shortTitle>XHTML-Print</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xslt20-20070123/">
+		<recs:shortTitle>XSLT 2.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xpath-datamodel-20070123/">
+		<recs:shortTitle>XQuery Data Model</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xpath-functions-20070123/">
+		<recs:shortTitle>XQuery Functs. and Ops.</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xpath20-20070123/">
+		<recs:shortTitle>XPath 2.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xquery-20070123/">
+		<recs:shortTitle>XQuery 1.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xquery-semantics-20070123/">
+		<recs:shortTitle>XQuery Formal Semantics</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xqueryx-20070123">
+		<recs:shortTitle>XQueryX</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-xslt-xquery-serialization-20070123/">
+		<recs:shortTitle>XQuery Serialization</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-webcgm20-20070130/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>WebCGM 2.0</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-its-20070403/">
+		<recs:shortTitle>ITS</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-semantic-interpretation-20070405/">
+		<recs:shortTitle>SISR</recs:shortTitle>
+		<dc:date>2007-04-05</dc:date>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-soap12-part0-20070427/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Primer (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-soap12-part1-20070427/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Framewk. (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-soap12-part2-20070427/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Adjuncts (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-soap12-testcollection-20070427/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SOAP Tests (2nd)</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-voicexml21-20070619/">
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>VoiceXML 2.1</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-wsdl20-20070626">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSDL 2.0 Core</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-wsdl20-adjuncts-20070626">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSDL 2.0 Adjuncts</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-wsdl20-primer-20070626">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSDL 2.0 Primer</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-ws-policy-20070904">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSP 1.5 Framework</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-ws-policy-attach-20070904">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSP 1.5 Attachment</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-ws-addr-metadata-20070904">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSA Metadata</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-sawsdl-20070828/">
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>SAWSDL</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-grddl-tests-20070911/">
+		<recs:shortTitle>GRDDL Tests</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2007/REC-grddl-20070911/">
+		<recs:shortTitle>GRDDL</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2008/REC-rdf-sparql-protocol-20080115/">
+		<recs:shortTitle>SPARQL Protocol</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2008/REC-rdf-sparql-XMLres-20080115/">
+		<recs:shortTitle>SPARQL Return Format</recs:shortTitle>
+	</REC>
+	<REC rdf:about="http://www.w3.org/TR/2008/REC-rdf-sparql-query-20080115/">
+		<recs:shortTitle>SPARQL Language</recs:shortTitle>
+	</REC>
+</rdf:RDF>

@@ -1,0 +1,43 @@
+ke$ #$Agent isg* ?;
+#$Agent
+/  #$Animal
+//    #$CollectionDifferenceFn #$Animal #$Person
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JuvenileFn #$Person
+//    #$Person
+///      [2]#$FemaleFn #$Person
+///      [2]#$HumanAdult
+///      [2]#$JuvenileFn #$Person
+/  [2]#$CollectionDifferenceFn #$Animal #$Person
+/  #$CollectionUnionFn (#$TheSet #$Athlete #$SportsOrganization
+/  #$CollectionUnionFn (#$TheSet #$EntertainmentOrRecreationOrganization #$Enter
+tainer
+/  [3]#$FemaleFn #$Person
+/  [3]#$HumanAdult
+/  #$JudicialAgent
+/  [3]#$JuvenileFn #$Person
+/  #$LegalAgent
+//    [4]#$FemaleFn #$Person
+//    [4]#$HumanAdult
+//    [4]#$JuvenileFn #$Person
+//    [2]#$Person
+/  #$PerceptualAgent
+//    [2]#$Animal
+//    [3]#$CollectionDifferenceFn #$Animal #$Person
+//    [5]#$FemaleFn #$Person
+//    [5]#$HumanAdult
+//    [5]#$JuvenileFn #$Person
+//    [3]#$Person
+/  [4]#$Person
+/  #$SocialBeing
+//    [2]#$CollectionUnionFn (#$TheSet #$Athlete #$SportsOrganization
+//    [2]#$CollectionUnionFn (#$TheSet #$EntertainmentOrRecreationOrganization #
+$Entertainer
+//    [6]#$FemaleFn #$Person
+//    [6]#$HumanAdult
+//    [2]#$JudicialAgent
+//    [6]#$JuvenileFn #$Person
+//    [2]#$LegalAgent
+//    [5]#$Person
+ke$

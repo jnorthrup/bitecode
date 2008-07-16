@@ -1,0 +1,77 @@
+<html><pre>
+# KEHOME/knowledge/examples/BookHierarchy/law.ho
+# 7:00 am 1998/6/3
+# new syntax Jun/26/2005
+
+# Keith Devlin and Duska Rosenberg
+# "Language At Work: Analyzing Communication Breakdown in the Workplace
+# to Inform Systems Design"
+# CSLI Publications, 1996
+
+begin hierachy law;
+book;
+/	Language at Work;
+
+Language at Work;
+/	Acknowledgments;
+/	Prologue: Understanding information;
+//		Managing information;
+//		LFZ analysis;
+/	1 The fine power of a culture;
+//		Language structure;
+//		Language use;
+//		Communicating with language;
+//		A new tradition;
+//		Collaboration at arm's length;
+//		Situation theory;
+//		On mathematics and sociology;
+/	2 Crossing the boundaries;
+//		Unlocking locked conceptual frames;
+//		The multidisciplinary background;
+//		Engineers designing systems;
+//		Winograd and Flores;
+//		Suchman;
+//		Situation theory and communication in the workplace;
+//		Infons;
+/	3 Situation theory;
+//		Situation, infons, types, and constraints;
+//		A framework for analyzing communication;
+//		Situation semantics;
+/	4 Whose mother is it?;
+//		Harvey Sacks;
+//		Sacks' analysis;
+//		A situation-theoretic analysis;
+//		Taking stock;
+/	5 Sacks, norms, and mathematics;
+//		Sacks' maxims;
+//		Constraints and norms;
+//		Constraint formation and salience;
+//		Norms, choices, and information structure;
+//		We are not doing reductionism;
+/	6 LFZ analysis;
+//		What is understanding?;
+//		The LFZ analytic technique;
+//		Formal features of documents;
+//		The Problem Report Forms;
+//		Scenes, stories, and explanations;
+//		Possible descriptions;
+//		Genre;
+/	7 The PRF at work;
+//		Establishing the framework;
+//		Reading a PRF;
+//		A scene;
+//		An explanation;
+//		Document intensions and infomorphisms;
+//		Understanding what happened in the field;
+//		Formal features of the PRF;
+/	8 Interpreting the PRF;
+//		Maxims and rules for PRF completion and interpretation;
+//		Grammatical structure of the PRF;
+/	Epilogue;
+//		Is it really so complicated?;
+//		Surely you don't need that?;
+//		The end?;
+/	Bibliography;
+/	Index;
+end hierachy law;
+</pre></html>

@@ -1,0 +1,92 @@
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/everybody.mkr
+# Aug/25/2005
+
+# Execution time
+# 2 GHz Pentium 4, Windows XP
+# Aug/25/2005
+# 0:13 min:sec for    8 persons
+# 2:04 min:sec for 1164 persons
+
+# Generate list of persons for each relation,
+# and for the whole KB.
+# These lists can be used in performing many
+# KB consistency checks.
+# NOTE:
+# There are likely to be many "extra" people
+# who do not explicitly appear in the r_aka
+# relation.
+
+##do read from ../bin/family.env done;  # set kbmode,kedb,view
+do read from family.ku done;
+echo := off;
+every p isu person; {
+	do print od $p to person.list done;
+};
+
+exit;
+#=======================================================#
+#=======================================================#
+#=======================================================#
+
+! rm with -f od *person.list done;
+
+# from GDBM database (*.dir *.pag files)
+every r in 
+     r_aka,
+    
+     r_birth,
+     r_death,
+    #r_marriage,# arraykey="$1_$2_$3"
+    #r_divorce,	# arraykey="$1_$2_$3"
+    #r_child, 	# arraykey="$1_$2_$3"
+    
+    r_note,
+    r_address,
+    r_phone,
+    r_school,
+    r_work
+{   
+    $r has arraymode = gdbm;
+    every p in $r {
+	do print od $p to $r.person.list done;
+    };
+    ! sort with -o $r.person.list od $r.person.list done;
+};
+
+# from MKR knowledge base (*.rel files)
+every f in 
+    #aka.rel,
+    
+    #birth.rel,
+    #death.rel,
+    marry.rel,
+    divorce.rel,
+    child.rel #,
+    
+    #note.rel,
+    #address.rel,
+    #phone.rel,
+    #school.rel,
+    #work.rel
+{   
+    at view = $f.view {
+    	do read from $f done;
+	do check od person done;
+	do read from alias.ku done;
+    	every p isa person {
+    	    do print od $p to $f.person.list done;
+    	};
+    };
+    ! sort with -o $f.person.list od $f.person.list done;
+};
+do check od person done;
+do read from alias.ku done;
+
+# include everybody in final person.list
+# sort and remove duplicates
+! cat od *.person.list to person.list done;
+! sort with -u -o person.list od person.list done;
+! wc od *person.list to person.count done;
+
+
+exit;

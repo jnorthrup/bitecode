@@ -1,0 +1,68 @@
+# KEHOME/knowledge/theory/KRdesign/egrammar.txt
+# 5:00 pm 1998/1/25
+# revised 1999/1/31
+
+#========================#
+# KR vs. English grammar #
+#========================#
+
+# Reference:
+# Leonard Peikoff, "Principles of Grammar",
+# audio tapes.
+
+concept names
+=============
+	always use singular form
+	action - use infinitive form
+	event - use action_number
+
+Basic KR statements
+===================
+(concept-formation operators not listed here)
+	at space=s,time=t,view=v
+
+	entity has attribute=value
+	entity haspart part=count
+	entity do action=event
+	event changes eobject \
+		from attribute=intial \
+		to attribute=final
+	event1 causes event2
+
+	concept is genus with differentia
+	alias is concept
+	concept isa genus
+	concept ise unit
+
+	if sentence1 then sentence2 else sentence3 fi
+
+	product := entity do method object
+
+mapping: English grammar -> KR
+==============================
+	declarative sentence -> statement
+	interrogative sentence -> question
+	imperative sentence -> command
+	exclamatory sentence -> explicit only with action (e.g. I do feel)
+
+	noun -> concept
+	pronoun -> alias
+	verb -> has
+	     -> do action
+	modifier/adjective -> attribute
+	modifier/adverb -> attribute
+	preposition -> at, from, to, with
+	conjunction -> if-then-else-fi, and-or-not, causes
+	complement/adjective -> attribute
+	complement/object -> eobject
+
+	verbal/gerund -> event
+	verbal/participle -> attribute
+	verbal/infinitive -> action
+
+	inflection -> NONE (by design)
+	subject person -> explicit only with alias (e.g. I,you,she)
+	subject number -> quantifier, size
+	verb voice (active/passive) -> operator/inverse  (e.g. ise/isa)
+	verb tense -> at time=t
+	verb mood -> explicit only with action (e.g. I do wish)

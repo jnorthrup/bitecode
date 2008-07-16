@@ -1,0 +1,65 @@
+REBOL End User License Agreement 
+
+IMPORTANT. READ CAREFULLY.
+
+This License Agreement (AGREEMENT) is a legal contract between
+you and REBOL Technologies (REBOL) for the limited use of this
+REBOL software product (SOFTWARE), which includes computer
+software, and, as applicable, associated media, printed
+materials, and electronic documentation.
+
+REBOL grants you a non-exclusive license to use the SOFTWARE.
+The SOFTWARE is licensed, not sold, to you. REBOL retains all 
+right, title, and interest in and to the SOFTWARE including, 
+without limitation, all intellectual property rights relating to
+or embodied in the SOFTWARE.
+
+The copyright, trademark, and other proprietary rights notices
+contained in the SOFTWARE may not be removed, altered, or added
+to in any way. You may not reverse engineer, decompile, or
+disassemble the SOFTWARE.
+
+You agree to use the SOFTWARE in compliance with all applicable 
+laws and regulations including all laws governing the export or
+re-export of the SOFTWARE. You agree to indemnify REBOL from
+and against your violation of any such laws or regulations.
+
+You may redistribute the SOFTWARE provided that you include this
+entire License AGREEMENT and all copyright and trademark
+notices; and agree to indemnify, hold harmless, and defend
+REBOL from and against any claims or lawsuits, including
+attorneys' fees, that arise from use, reproduction, or
+distribution of the SOFTWARE. 
+
+THE SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTY
+OF ANY KIND, EXPRESS, IMPLIED OR STATUTORY INCLUDING WITHOUT
+LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY,
+NONINFRINGEMENT OR FITNESS FOR PARTICULAR USE OR PURPOSE.
+
+IN NO EVENT SHALL REBOL OR ITS SUPPLIERS OR RESELLERS BE LIABLE
+TO YOU OR ANY OTHER PERSON FOR ANY INDIRECT, SPECIAL,
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND INCLUDING,
+WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS OR DATA, ARISING
+OUT OF THIS AGREEMENT OR USE OF THE SOFTWARE. IN NO EVENT WILL
+REBOL BE LIABLE FOR (a) ANY DAMAGES IN EXCESS OF THE AMOUNT
+REBOL RECEIVED FROM YOU FOR A LICENSE TO THE SOFTWARE, EVEN IF
+REBOL HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND
+NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY REMEDY,
+OR (b) FOR ANY CLAIM BY ANY THIRD PARTY.
+
+This AGREEMENT shall be governed by the laws of the State of
+California. If any provision of this AGREEMENT is held to be
+unenforceable, such provision shall be reformed only to the
+extent necessary to make it enforceable. 
+
+This AGREEMENT contains the entire agreement between the parties
+with respect to the license of the SOFTWARE. This AGREEMENT
+supersedes any prior license agreement of the SOFTWARE.
+
+By installing or using the SOFTWARE, you are consenting to be
+bound by and are becoming a party to this AGREEMENT. If you do
+not agree to all of the terms of this AGREEMENT, do not use the
+SOFTWARE. 
+
+REBOL can be contacted at WWW.REBOL.COM
+

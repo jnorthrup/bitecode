@@ -1,0 +1,238 @@
+
+
+
+
+<--  original OWL ontology lattice -->
+Resource
+/  Entity
+//    Set
+///      concepts
+///      events
+///      infons
+///      units
+///      values
+///      views
+//    Class
+///      DeprecatedClass
+///      Restriction
+///      AllDifferent
+///      AnnotationProperty
+////        comment
+////        isDefinedBy
+////        label
+////        seeAlso
+////        versionInfo
+///      DataRange
+///      DatatypeProperty
+///      DeprecatedClass
+///      DeprecatedProperty
+///      FunctionalProperty
+///      InverseFunctionalProperty
+///      ObjectProperty
+////        SymmetricProperty
+////        TransitiveProperty
+///      Ontology
+///      Restriction
+///      SymmetricProperty
+///      TransitiveProperty
+/  Property
+//    AnnotationProperty
+///      comment
+///      isDefinedBy
+///      label
+///      seeAlso
+///      versionInfo
+//    DatatypeProperty
+//    DeprecatedProperty
+//    FunctionalProperty
+//    InverseFunctionalProperty
+//    ObjectProperty
+///      SymmetricProperty
+///      TransitiveProperty
+//    allValuesFrom
+//    backwardCompatibleWith
+//    cardinality
+//    complementOf
+//    differentFrom
+//    disjointWith
+//    distinctMembers
+//    equivalentClass
+//    equivalentProperty
+//    hasValue
+//    imports
+//    incompatibleWith
+//    intersectionOf
+//    inverseOf
+//    maxCardinality
+//    minCardinality
+//    onProperty
+//    oneOf
+//    priorVersion
+//    type
+//    domain
+//    range
+//    subClassOf
+///      equivalentClass
+//    subPropertyOf
+///      equivalentProperty
+//    sameAs
+//    someValuesFrom
+//    unionOf
+//    versionInfo
+/  Statement
+/  comment
+/  isDefinedBy
+/  label
+/  seeAlso
+
+<--  simplify lattice -->
+
+
+INFO: simplify_lattice: cname(string[5]) <Thing>
+
+unit-species contradiction: complementOf isu (set[1]) <Property>
+                            complementOf iss (set[1]) <attribute>
+unit-species contradiction: equivalentClass isu (set[1]) <Property>
+                            equivalentClass iss (set[1]) <subClassOf>
+unit-species contradiction: equivalentProperty isu (set[1]) <Property>
+                            equivalentProperty iss (set[1]) <subPropertyOf>
+unit-species contradiction: imports isu (set[1]) <Property>
+                            imports iss (set[1]) <attribute>
+unit-species contradiction: label isu (set[2]) <[AnnotationProperty,rdfs:Resource]>
+                            label iss (set[1]) <attribute>
+unit-species contradiction: sameAs isu (set[1]) <Property>
+                            sameAs iss (set[1]) <sameIndividualAs>
+unit-species contradiction: versionInfo isu (set[2]) <[AnnotationProperty,Property]>
+                            versionInfo iss (set[1]) <attribute>
+unit count:              774 units, 7 units with species contradiction
+species count:           340 species, 7 species with unit contradiction
+
+genus error: (2) AnnotationProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) AnnotationProperty isu (set[0]) <[]>
+genus error: (2) DatatypeProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) DatatypeProperty isu (set[0]) <[]>
+genus error: (2) DeprecatedClass iss (set[2]) <[Class,rdfs:Resource]>
+             (0) DeprecatedClass isu (set[0]) <[]>
+genus error: (2) DeprecatedProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) DeprecatedProperty isu (set[0]) <[]>
+genus error: (2) FunctionalProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) FunctionalProperty isu (set[0]) <[]>
+genus error: (2) InverseFunctionalProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) InverseFunctionalProperty isu (set[0]) <[]>
+genus error: (2) ObjectProperty iss (set[2]) <[Property,rdfs:Resource]>
+             (0) ObjectProperty isu (set[0]) <[]>
+genus error: (2) Restriction iss (set[2]) <[Class,rdfs:Resource]>
+             (0) Restriction isu (set[0]) <[]>
+genus error: (2) Set iss (set[2]) <[group,mkr:Entity]>
+             (0) Set isu (set[0]) <[]>
+genus error: (2) SymmetricProperty iss (set[2]) <[ObjectProperty,rdfs:Resource]>
+             (0) SymmetricProperty isu (set[0]) <[]>
+genus error: (2) TransitiveProperty iss (set[2]) <[ObjectProperty,rdfs:Resource]>
+             (0) TransitiveProperty isu (set[0]) <[]>
+genus error: (0) comment iss (set[0]) <[]>
+             (2) comment isu (set[2]) <[AnnotationProperty,rdfs:Resource]>
+genus error: (1) complementOf iss (set[1]) <attribute>
+             (1) complementOf isu (set[1]) <Property>
+genus error: (1) equivalentClass iss (set[1]) <subClassOf>
+             (1) equivalentClass isu (set[1]) <Property>
+genus error: (1) equivalentProperty iss (set[1]) <subPropertyOf>
+             (1) equivalentProperty isu (set[1]) <Property>
+genus error: (1) imports iss (set[1]) <attribute>
+             (1) imports isu (set[1]) <Property>
+genus error: (0) isDefinedBy iss (set[0]) <[]>
+             (2) isDefinedBy isu (set[2]) <[AnnotationProperty,rdfs:Resource]>
+genus error: (1) label iss (set[1]) <attribute>
+             (2) label isu (set[2]) <[AnnotationProperty,rdfs:Resource]>
+genus error: (1) sameAs iss (set[1]) <sameIndividualAs>
+             (1) sameAs isu (set[1]) <Property>
+genus error: (0) seeAlso iss (set[0]) <[]>
+             (2) seeAlso isu (set[2]) <[AnnotationProperty,rdfs:Resource]>
+genus error: (1) versionInfo iss (set[1]) <attribute>
+             (2) versionInfo isu (set[2]) <[AnnotationProperty,Property]>
+genus count:   1224 items, 117 no genus (109 alternatives, 4 members)
+genus count:   1224 items, 21 errors (0 alternatives, 10 members)
+
+
+
+<--  simplified OWL ontology lattice -->
+Resource
+/  AllDifferent
+/  AnnotationProperty
+//    comment
+//    isDefinedBy
+//    label
+//    seeAlso
+//    versionInfo
+/  DataRange
+/  DatatypeProperty
+/  DeprecatedClass
+/  DeprecatedProperty
+/  FunctionalProperty
+/  InverseFunctionalProperty
+/  ObjectProperty
+//    SymmetricProperty
+//    TransitiveProperty
+/  Ontology
+/  Restriction
+/  SymmetricProperty
+/  TransitiveProperty
+/  Entity
+//    Set
+///      concepts
+///      events
+///      infons
+///      Class
+////        DeprecatedClass
+////        Restriction
+///      units
+///      values
+///      views
+/  Property
+//    AnnotationProperty
+///      comment
+///      isDefinedBy
+///      label
+///      seeAlso
+///      versionInfo
+//    DatatypeProperty
+//    DeprecatedProperty
+//    FunctionalProperty
+//    InverseFunctionalProperty
+//    ObjectProperty
+///      SymmetricProperty
+///      TransitiveProperty
+//    allValuesFrom
+//    backwardCompatibleWith
+//    cardinality
+//    complementOf
+//    differentFrom
+//    disjointWith
+//    distinctMembers
+//    equivalentClass
+//    equivalentProperty
+//    hasValue
+//    imports
+//    incompatibleWith
+//    intersectionOf
+//    inverseOf
+//    maxCardinality
+//    minCardinality
+//    onProperty
+//    oneOf
+//    priorVersion
+//    type
+//    domain
+//    range
+//    subClassOf
+///      equivalentClass
+//    subPropertyOf
+///      equivalentProperty
+//    sameAs
+//    someValuesFrom
+//    unionOf
+//    versionInfo
+/  Statement
+/  comment
+/  isDefinedBy
+/  label
+/  seeAlso

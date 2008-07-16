@@ -1,0 +1,14 @@
+
+AuthorMerrill,_James HAS
+     isu Author ,
+     has label += " James Merrill" ,
+     has label += "James Merrill" ;
+
+GameAsteroids_3D HAS
+     isu PersonalComputerGame ,
+     has label += "Asteroids 3D" ;
+
+CityStratfordCT HAS
+     isu UnitedStatesCity ,
+     has label += "Stratford" ,
+     has locatedIn += ConnecticutState ;

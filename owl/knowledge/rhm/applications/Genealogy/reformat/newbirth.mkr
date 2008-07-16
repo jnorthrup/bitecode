@@ -1,0 +1,18 @@
+# KEHOME/knowledge/family/newbirth.mkr
+# 1999/Aug/6
+# new syntax Jun/26/2005
+
+# update r_birth relation
+#   from r_death relation
+
+set echo=off;
+do read from birth.rel done;
+do read from death.rel done;
+
+every x isa person {
+  set . = $x;
+  do print od "$x, $sex, $birthtype, $birthdate, $birthplace, $deathdate, $deathplace, $deathcause;" done;
+}
+
+set echo=on;
+exit;

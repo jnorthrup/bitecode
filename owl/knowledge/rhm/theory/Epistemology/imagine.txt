@@ -1,0 +1,19 @@
+# 1999/5/14
+
+#=========#
+# imagine #
+#=========#
+
+imagination := I do imagine
+classification := I do classify (imagination)
+
+
+# I imagine the imaginary, the real, and the unreal.
+# 
+# As of now, I classify my imagination as:
+# imaginary, if I intended it to be so;
+# real, if I discovered it in reality;
+# unreal, if I discovered its contradiction(s);
+# unknown, otherwise.
+# 
+# Is my classification truth or fiction?

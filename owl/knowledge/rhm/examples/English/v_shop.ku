@@ -1,0 +1,13 @@
+# 8:20 pm 5/12/97
+# new syntax Jul/24/2005
+
+# shop context
+at view=v_schank;
+at view=v_shop;
+
+action isc shop,spend;
+object isc money,clothing;
+
+shoot  is  spend;
+buck   isa money;
+sock   isa clothing;

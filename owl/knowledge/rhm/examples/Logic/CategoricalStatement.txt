@@ -1,0 +1,61 @@
+# KEHOME/knowledge/ExamplesLogic/CategoricalStatement.txt
+# July 27, 2002
+
+#========================#
+# categorical statements #
+#                        #
+# Richard H. McCullough  #
+#========================#
+
+# The standard categorical statement has the form
+#
+#	s S is p P
+#
+# where S is the "subject", P is the "predicate"
+# and s,p are optional quantifiers chosen from
+#
+#	all
+#	some
+#	no
+#	not
+
+# The most widely used forms of categorical statements
+# are type "A","E","I","O":
+#
+#	all  S is P	  # A
+#	no   S is P	  # E
+#	some S is P	  # I
+#	some S is not P	  # O
+
+
+#=========================================
+
+# What are the meanings of "S", "P", "is"?
+
+# In the most common case,
+# S and P are sets of existents
+# which have specific characteristics.
+# For example,
+#
+#	man is mortal entity
+#
+# In this case, I will replace "is" by "isa*".
+#
+#	S isa* P
+#
+# which means that either
+#
+#	S is  P    (identity)
+# or
+#	S isa P    (subset)
+
+# In the less common case,
+# S is a set of existents
+# and P is characteristics of the existents.
+# For example,
+#
+#	man is mortal
+#
+# In this case, I will replace "is" by "has".
+#
+#	S has P

@@ -1,0 +1,126 @@
+# KEHOME/knowledge/TheoryFormalConceptAnalysis/infon.txt
+# 9:00 am 1998/3/22
+# new syntax Sep/29/2002
+
+#=========================#
+# KR vs. Situation Theory #
+#=========================#
+
+# Reference:
+# Keith Devlin, "Logic and Information",
+# Cambridge University Press, 1995.
+
+# NOTES about KR
+# 1. Every situation is an abstract situation as viewed by a man.
+#    The abstract situation is characterized as an entity-relation
+#    concept-hierarchy, denoted by view=sit.
+# 2. The context of an infon consists of space,time,view
+# 3. General relation infons are usually stored in relation files
+#    and translated into basic infons.
+
+# situation theory -> KR
+
+#=============#
+# Basic types #
+#=============#
+LOC	-> space
+TIM	-> time
+SIT	-> view
+
+IND	-> entity
+RELn	-> relation
+INF	-> statement
+
+PAR	-> variable
+TYP	-> concept
+
+POL	-> truth value (true or false)
+
+#===========================#
+# propositions & parameters #
+#===========================#
+T1:T		-> T:1 isa* T		(parameter T1 denoting arbitrary object of type T)
+
+x:T		-> x isa* T		(object x of type T)
+p:T		-> p isa* T		(parameter p denoting arbitrary object)
+r = p | C	-> r is p with C	(restricted parameter r satisfying condition C)
+
+#=======#
+# infon #
+#=======#
+<<R,a1,...,an,1>>	->     R ise [a1;...;an]
+<<R,a1,...,an,0>>	-> not R ise [a1;...;an]
+
+#=====================#
+# situation & context #
+#=====================#
+sit		-> view=sit
+loc,tim,sit	-> space=loc,time=tim,view=sit
+
+#==========#
+# supports #
+#==========#
+sit |= <<R,a1,...,an,1>>		-> view=sit                |= [a1;...;an] isa R
+sit |= <<S,a1,...,an,s,t,1>>		-> space=s,time=t,view=sit |= [a1;...;an] isa S
+
+space=s,time=t,view=sit |= statemenmt	-> at space=s,time=t,view=sit {statement}
+<<supports,context,statement,1>>	-> at context {statement}
+
+#==============#
+# basic infons #
+#==============#
+<<attribute,entity,attrname,attrvalue,1>>	-> entity has attrname=attrvalue
+<<action,product,entity,actname,event,aobject,1>> -> product := entity do actname=event od aobject done
+<<change,event,eobject,attrname,initial,final,1>> -> event changes eobject \
+							from attrname=initial \
+							to   attrname=final
+<<causality,event:1,event:2,1>>			-> event:1 causes event:2
+
+<<implication,statement:1,statement:2,1>>	-> statement:1 implies statement:2
+<<conditional,statement:1,statement:2,statement:3,1>> -> if   statement:1
+							 then statement:2
+							 else statement:3
+							 fi
+
+<<existence,concept,1>>				-> concept isa* existent
+<<hierarchy,unit,concept,1>>			-> unit isp concept
+<<definition,concept,genus,differentia,1>>	-> concept is genus with differentia
+<<identification,sit,man,existent,1>>		-> sit := man do identify od existent done
+
+#=============#
+# quantifiers #
+#=============#
+v |= <<forall,v,S,T,s,t,1>>	-> at space=s,time=t,view=v forall x isa* S ( x isa* T )
+v |= <<exists,v,S,T,s,t,1>>	-> at space=s,time=t,view=v exists x isa* S ( x isa* T )
+
+#====================#
+# simple quantifiers #
+#====================#
+forall x isa* S ( x isa* T )	-> all S isa* T
+				-> any S isa* T
+				-> S isa* T
+exists x isa* S ( x isa* T )	-> some S isa* T
+
+#===============================#
+# Translation into basic infons #
+#===============================#
+# phonebook example
+
+# The relation definition and read command
+
+	phonebook is relation with
+		format=[person:1, phone:2],
+		meaning={$1 has phone=$2}
+	do read from phonebook.rel done
+
+# are used to access the relation infon
+# (only the text between the square brackets
+# is recorded in the file phonebook.rel)
+
+	[Dick McCullough; 209-295-1365] isa phonebook
+
+# and translate it into the basic infons
+
+	Dick McCullough isa* person
+	209-295-1365 isa* phone
+	Dick McCullough has phone=209-295-1365

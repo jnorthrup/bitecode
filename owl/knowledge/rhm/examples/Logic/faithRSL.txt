@@ -1,0 +1,91 @@
+Subject: decisions, decisions! (definition of faith)
+Date: Wed, 31 Mar 1999 20:55:37 -0800
+From: "Richard H. McCullough" <rhm@cdepot.net>
+Organization: Richard H. McCullough, Knowledge Engineer
+To: "Richard S. Latimer" <latimer1@att.net>
+CC: "Harold L. Fields" <hlfields@volcano.net>
+
+Faith is an attribute of the method of evaluating evidence about some
+proposition, P.  Let's say
+    decision:1 := person:2 do decide evidence:3 = decide_123
+where evidence & decision have the values
+    F -- evidence supports { P has false }       --  decision is { P has false }
+    ? -- evidence does not support true or false --  decision is { neither }
+    T -- evidence supports { P has true }        --  decision is { P has true }
+and
+    r_decide is relation with format="person:1; proposition:2; evidence:3; decision:4"
+
+The RHM definition of faith is
+    decide_123 has faith iff [person; P; ?; T]
+The RSL definition of faith is
+    decide_123 has faith iff [person; P; ?; T] or [person; P; F; T]
+
+These are easier to grasp using a 2D diagram of decision vs. evidence
+RHM decision   T  -  x  -
+               ?  -  -  -
+               F  -  -  -
+evidence          F  ?  T
+
+RSL decision  T  x  x  -
+              ?  -  -  -
+              F  -  -  -
+evidence         F  ?  T
+
+I hope you understand my pictures & formalisms.
+
+I will leave to a later discussion the question of different kinds & strengths
+of evidence.  For now, I'll just make a quick remark related to RSL's five
+categories.  A first cut (analogous to F,?,T) is a two state description of
+evidence
+    G -- guess
+    S -- sense data
+The next more sophisticated description might use 4 states
+      G -- guess
+     GR -- guess plus logical reasoning
+     SR -- sense data plus logical reasoning
+      S -- sense data
+to indicate the relative strength of the evidence.  To relate to the previous
+description:
+     G  <=>    ?
+    GR  <=>    ?- or ?+  (leaning toward F or T)
+    SR  <=>    F+ or T-  (not quite so certain)
+     S  <=>    F  or T
+
+Let me know if you think this view is useful.
+--
+Dick McCullough
+mailto:rhm@cdepot.net
+http://www2.cdepot.net/~rhm
+knowledge := man do identify existent
+
+
+
+Subject: re: Latimer faith & contradiction
+Date: Thu, 01 Apr 1999 00:49:50 -0800
+From: "Richard H. McCullough" <rhm@cdepot.net>
+Organization: Richard H. McCullough, Knowledge Engineer
+To: "Richard S. Latimer" <latimer1@att.net>,
+     "Harold L. Fields" <hlfields@volcano.net>
+
+I've got a complete model for RSL 5 stages.  It utilizes four types of
+evidence/decision-methods:
+    G -- guess
+    S -- sense data
+    R -- reason
+    C -- ignore contradiction
+Using these terms & RSL definition of faith, we have
+    RSL name    proposition   evid./method  supports    decision
+    "know"          p1            S or SR |=  T            T
+    "imagine"       p2            G       |=  ?            ?
+    "guess"         p2            GR      |=  ?+           ?+
+    "belief"        p2            GR      |=  ?+           T
+    "faith"         p2            GC      |=  ?+           T+
+
+Incidentally, I said "T+" instead of "T" just to emphasize RSL's sense of 
+total commitment to the decision. 
+--
+Dick McCullough
+mailto:rhm@cdepot.net
+http://www2.cdepot.net/~rhm
+knowledge := man do identify existent
+

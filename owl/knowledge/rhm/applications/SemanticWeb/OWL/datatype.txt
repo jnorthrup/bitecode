@@ -1,0 +1,55 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/datatype.txt
+# May/8/2003
+
+# OWL Web Ontology Language
+# Guide
+# W3C Working Draft 31 March 2003
+# This version: 
+# http://www.w3.org/TR/2003/WD-owl-guide-20030331/ 
+
+# 3.2.2. Properties and Datatypes
+
+OWL uses some of many of the built-in XML Schema datatypes. References to these datatypes are by means of the URI reference for the datatype, http://www.w3.org/2001/XMLSchema. The following datatypes are recommended for use with OWL: 
+
+xsd:string
+xsd:normalizedString
+xsd:boolean
+xsd:decimal
+xsd:float
+xsd:double
+xsd:integer
+xsd:nonNegativeInteger
+xsd:positiveInteger
+xsd:nonPositiveInteger
+xsd:negativeInteger
+xsd:long
+xsd:int
+xsd:short
+xsd:byte
+xsd:unsignedLong
+xsd:unsignedInt
+xsd:unsignedShort
+xsd:unsignedByte
+xsd:hexBinary
+xsd:base64Binary
+xsd:dateTime
+xsd:time
+xsd:date
+xsd:gYearMonth
+xsd:gYear
+xsd:gMonthDay
+xsd:gDay
+xsd:gMonth
+xsd:anyURI
+xsd:token
+xsd:language
+xsd:NMTOKEN
+xsd:Name
+xsd:NCName
+
+The above datatypes, plus rdfs:Literal, form the built-in OWL datatypes. 
+
+</XMP>
+</HTML>

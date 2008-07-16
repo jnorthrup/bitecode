@@ -1,0 +1,192 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.2800.1170" name=GENERATOR></HEAD>
+<BODY><PRE>&lt;rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+
+&lt;rdfs:Class rdf:ID="Resource"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Resource&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Ressource&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;The most general class&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdf:Property about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;type&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;type&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Indicates membership of a class&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Class"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property ID="comment"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;comment&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;commentaire&lt;/rdfs:label&gt;
+  &lt;rdfs:domain rdf:resource="#Resource"/&gt;
+  &lt;rdfs:comment&gt;Use this for descriptions&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Literal"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property ID="label"&gt;
+ &lt;rdf:type resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+ &lt;rdfs:label xml:lang="en"&gt;label&lt;/rdfs:label&gt;
+ &lt;rdfs:label xml:lang="fr"&gt;label&lt;/rdfs:label&gt;
+ &lt;rdfs:domain rdf:resource="#Resource"/&gt;
+ &lt;rdfs:comment&gt;Provides a human-readable version of a resource name.&lt;/rdfs:comment&gt;
+ &lt;rdfs:range rdf:resource="#Literal"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdfs:Class rdf:ID="Class"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Class&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Classe&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;The concept of Class&lt;/rdfs:comment&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Resource"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdf:Property ID="subClassOf"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;subClassOf&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;sousClasseDe&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Indicates membership of a class&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Class"/&gt;
+  &lt;rdfs:domain rdf:resource="#Class"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property ID="subPropertyOf"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;subPropertyOf&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;sousPropri&amp;#233;t&amp;#233;De&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Indicates specialization of properties&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+  &lt;rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property ID="seeAlso"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;seeAlso&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;voirAussi&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Indicates a resource that provides information about the subject resource.&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Resource"/&gt;
+  &lt;rdfs:domain rdf:resource="#Resource"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property ID="isDefinedBy"&gt;
+  &lt;rdf:type resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+  &lt;rdfs:subPropertyOf rdf:resource="#seeAlso"/&gt;
+  &lt;rdfs:label xml:lang="en"&gt;isDefinedBy&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;esD&amp;#233;finiPar&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Indicates a resource containing and defining the subject resource.&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Resource"/&gt;
+  &lt;rdfs:domain rdf:resource="#Resource"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdfs:Class rdf:ID="ConstraintResource"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;ConstraintResource&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;RessourceContrainte&lt;/rdfs:label&gt;
+  &lt;rdf:type resource="#Class"/&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Resource"/&gt;
+  &lt;rdfs:comment&gt;Resources used to express RDF Schema constraints.&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:ID="ConstraintProperty"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;ConstraintProperty&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Propri&amp;#233;t&amp;#233;Contrainte&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+  &lt;rdfs:subClassOf rdf:resource="#ConstraintResource"/&gt;
+  &lt;rdfs:comment&gt;Properties used to express RDF Schema constraints.&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:ConstraintProperty rdf:ID="domain"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;domain&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;domaine&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;This is how we associate a class with properties that its instances can have&lt;/rdfs:comment&gt;
+&lt;/rdfs:ConstraintProperty&gt;
+
+&lt;rdfs:ConstraintProperty rdf:ID="range"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;range&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;&amp;#233;tendue&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;Properties that can be used in a schema to provide constraints&lt;/rdfs:comment&gt;
+  &lt;rdfs:range rdf:resource="#Class"/&gt;
+  &lt;rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+&lt;/rdfs:ConstraintProperty&gt;
+
+&lt;rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Property&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Propri&amp;#233;t&amp;#233;&lt;/rdfs:label&gt;
+  &lt;rdfs:comment&gt;The concept of a property.&lt;/rdfs:comment&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Resource"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:ID="Literal"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Literal&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Litt&amp;#233;ral&lt;/rdfs:label&gt;
+  &lt;rdf:type resource="#Class"/&gt;
+  &lt;rdfs:comment&gt;This represents the set of atomic values, eg. textual strings.&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Statement&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;D&amp;#233;claration&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Resource"/&gt;
+  &lt;rdfs:comment&gt;This represents the set of reified statements.&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdf:Property about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;subject&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;sujet&lt;/rdfs:label&gt;
+  &lt;rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/&gt;
+  &lt;rdfs:range rdf:resource="#Resource"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;predicate&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;pr&amp;#233;dicat&lt;/rdfs:label&gt;
+  &lt;rdf:type resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+  &lt;rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/&gt;
+  &lt;rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Property about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;object&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;objet&lt;/rdfs:label&gt;
+  &lt;rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdfs:Class rdf:ID="Container"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Container&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Enveloppe&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Resource"/&gt;
+  &lt;rdfs:comment&gt;This represents the set Containers.&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Bag&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Ensemble&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Container"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Sequence&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;S&amp;#233;quence&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Container"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;Alt&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;Choix&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="#Container"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class rdf:ID="ContainerMembershipProperty"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;ContainerMembershipProperty&lt;/rdfs:label&gt;
+  &lt;rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"&gt;
+  &lt;rdfs:label xml:lang="en"&gt;object&lt;/rdfs:label&gt;
+  &lt;rdfs:label xml:lang="fr"&gt;value&lt;/rdfs:label&gt;
+&lt;/rdf:Property&gt;
+
+&lt;rdf:Description about="http://www.w3.org/2000/01/rdf-schema#"&gt;
+  &lt;rdfs:seeAlso resource="http://www.w3.org/2000/01/rdf-schema-more"/&gt;
+&lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+</PRE></BODY></HTML>

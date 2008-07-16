@@ -1,0 +1,87 @@
+
+
+
+
+<!--  set of class names  -->
+Class isall Person;
+<!--  class hierarchy  -->
+Resource
+/  Entity
+//    ANIMAL
+///      Person
+//    group
+///      Container
+///      LATTICE
+///      Literal
+///      Set
+///      concept
+///      enumeration
+///      exgroup
+///      ingroup
+///      list
+///      ntriple
+///      requisite
+///      sequence
+//    OBJECT
+///      symbol
+//    PLANT
+/  Person
+/  Property
+//    action
+///      COMMAND
+///      method
+//    attribute
+///      classname
+///      comment
+///      domain
+///      fact
+///      gtype
+///      krtype
+///      label
+///      object
+///      predicate
+///      range
+///      rootname
+///      space
+///      stv
+///      subject
+///      time
+///      type
+///      value
+///      variable
+///      view
+///      wexplore
+//    interaction
+//    part
+///      _n
+///      first
+///      rest
+//    relation
+///      member
+///      seeAlso
+///      subClassOf
+///      subPropertyOf
+/  proposition
+//    context
+//    newproposition
+//    sentence
+///      Statement
+<!--  resource attributes  -->
+Person has  
+    classname = Person\Resource,
+    ctype = person,
+    firstlevel = true,
+    gtype = none,
+    htype = concept,
+    krtype = mkr,
+    label = Person,
+    mount = "",
+    nickname = "",
+    primitive = false,
+    ptype = none,
+    rootname = Resource/Person,
+    shortname = Person,
+    utype = none,
+    xmlname = [Person,person],
+    xmlns = [] 
+;

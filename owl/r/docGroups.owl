@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/04/09 12:43:00 $, by $Author: ivan $, $Revision: 1.82 $ -->
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:recs="http://www.w3.org/2003/03/recsSchema#">
+	<recs:Group rdf:ID="sparql">
+		<dc:title>SPARQL Query Language for RDF</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:shortTitle>SPARQL</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-sparql-query/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-sparql-protocol/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-sparql-XMLres/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="grddl">
+		<dc:title>Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:shortTitle>GRDDL</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/grddl/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/grddl-tests/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="xhtml-family">
+		<dc:title>HTML, XHTML</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:shortTitle>HTML, XHTML</recs:shortTitle>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-html32"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/html40"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/html401"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xhtml1"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xhtml-modularization/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xhtml-basic"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xhtml11/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xhtml-print"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/1998/NOTE-compactHTML-19980209"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="WSDL">
+		<dc:title>Web Services Description Language (WSDL) Version 2.0</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:shortTitle>WSDL 2.0</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/wsdl20"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/wsdl20-adjuncts"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/wsdl20-primer"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="Voice">
+		<dc:title>Voice Framework</dc:title>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:shortTitle>Voice Framework</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/voicexml20"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/voicexml21/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/speech-grammar"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/speech-synthesis"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xsl11/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="xmlschema">
+		<dc:title>XML Schemas</dc:title>
+		<recs:shortTitle>XML Schemas</recs:shortTitle>
+		<dc:date>2001-05-02</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xmlschema-0/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xmlschema-1/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xmlschema-2/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="xquery">
+		<dc:title>XML Query</dc:title>
+		<recs:shortTitle>XML Query</recs:shortTitle>
+		<dc:date>2001-05-02</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xpath-datamodel/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xpath-functions/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xpath20"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xquery"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xquery-semantics/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xqueryx"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xslt-xquery-serialization/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xslt20"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="DOM-Level-2">
+		<dc:title>Document Object Model (DOM) Level 2</dc:title>
+		<recs:shortTitle>DOM 2</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:date>2000-11-13</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-Core/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-Views"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-Events/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-Style/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-2-HTML/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="DOM-Level-3">
+		<dc:title>Document Object Model (DOM) Level 3</dc:title>
+		<recs:shortTitle>DOM 3</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:date>2004-04-09</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-3-Val"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-3-Core/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/DOM-Level-3-LS"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="DOM-Level-3-Notes">
+		<dc:title>Document Object Model (DOM) Level 3</dc:title>
+		<recs:shortTitle>DOM 3 Notes</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2002/NOTE-DOM-Level-3-AS-20020725"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-Views-20040226"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="PICS">
+		<dc:title>PICS 1.1 Rating Services and Rating Systems</dc:title>
+		<recs:shortTitle>PICS 1.1</recs:shortTitle>
+		<dc:date>1996-10-31</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-DSig-label/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-PICS-services"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-PICSRules"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/REC-PICS-labels"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="soap12">
+		<dc:title>SOAP Version 1.2 (2nd)</dc:title>
+		<recs:shortTitle>SOAP 1.2 (2nd)</recs:shortTitle>
+		<dc:date>2003-06-24</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-part0/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-part1/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-part2/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-testcollection"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="soaptrans">
+		<dc:title>Binary Data through SOAP</dc:title>
+		<recs:shortTitle>Bin. Data in SOAP</recs:shortTitle>
+		<dc:date>2005-01-25</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xop10/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-mtom"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/soap12-rep/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="rdf">
+		<dc:title>Resource Description Framework (RDF), Revised</dc:title>
+		<recs:shortTitle>RDF</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-primer/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-concepts/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-mt/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-testcases"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/rdf-schema"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="xpointer">
+		<dc:title>XPointer</dc:title>
+		<recs:shortTitle>XPointer</recs:shortTitle>
+		<dc:date>2003-01-23</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xptr-framework/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xptr-element/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xptr-xmlns/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/xptr-xpointer/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="WSPolicy">
+		<dc:title>WS Policy 1.5</dc:title>
+		<recs:shortTitle>WSP 1.5</recs:shortTitle>
+		<dc:date>2007-09-04</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/ws-policy"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/ws-policy-attach"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="owl">
+		<dc:title>Web Ontology Language</dc:title>
+		<recs:shortTitle>OWL</recs:shortTitle>
+		<dc:date>2003-03-31</dc:date>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/owl-guide/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/webont-req/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/owl-features/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/owl-ref/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/owl-semantics/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/owl-test/"/>
+				<rdf:li rdf:resource="http://www.w3.org/2003/08/owlfaq"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="WSA">
+		<dc:title>Web Services Addressing</dc:title>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<recs:shortTitle>WSA</recs:shortTitle>
+		<dc:date>2006-05-09</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/ws-addr-core"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/ws-addr-soap"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/ws-addr-metadata"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="markup-guide">
+		<dc:title>Getting Started with HTML</dc:title>
+		<recs:shortTitle>Getting Started...</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<dc:date>2002-02-13</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/Guide/"/>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/Guide/Advanced.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/Guide/Style/"/>
+				<rdf:li rdf:resource="http://www.w3.org/Voice/Guide/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="html-guide">
+		<dc:title>Guides for (X)HTML Authors</dc:title>
+		<recs:shortTitle>For (X)HTML Authors</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<dc:date>2004-07-29</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/Forms/2003/xforms-for-html-authors.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/Forms/2006/xforms-for-html-authors-part2.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/MarkUp/2004/xmlevents-for-html-authors"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="wcag-techniques">
+		<dc:title>WCAG Documents</dc:title>
+		<recs:shortTitle>WCAG Documents</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<dc:date>2002-04-16</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/intro/wcag10.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/intro/wcag.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/References/QuickTips/"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/gettingstarted/"/>
+				<rdf:li rdf:resource="http://www.w3.org/1999/05/WCAG-REC-fact"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/WAI-WEBCONTENT-TECHS/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/WCAG10-CORE-TECHS/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/WCAG10-HTML-TECHS/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/WCAG10-CSS-TECHS/"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/wcag-curric/"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="atag-checks">
+		<dc:title>ATAG Checks</dc:title>
+		<recs:shortTitle>ATAG Checks</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2002-04-16</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2000/REC-ATAG10-20000203/atag10-chktable"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2000/REC-ATAG10-20000203/atag10-chklist"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="wcag-checks">
+		<dc:title>WCAG Checks</dc:title>
+		<recs:shortTitle>WCAG Checks</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<dc:date>2002-04-16</dc:date>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/checkpoint-list"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/full-checklist"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/GL/NOTE-WCAG-impact-matrix-19990810"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="wai-info">
+		<dc:title>WAI Info</dc:title>
+		<recs:shortTitle>WAI Info</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<dc:date>2002-04-16</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/Overview.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/intro/components"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/intro/wai-overview-slides"/>
+				<rdf:li rdf:resource="http://www.w3.org/Talks/WAI-Intro/"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/bcase/benefits.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/bcase/benefits-lin.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/eval/"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/impl/expanded"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/impl/pol.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/impl/software.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/flyer/flyerfront.en.html"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="WCAG-Conformance">
+		<dc:title>Conformance to Web Content Accessibility Guidelines 1.0</dc:title>
+		<recs:shortTitle>WCAG Conformance</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<recs:domain rdf:resource="http://www.w3.org/WAI/"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/WCAG1-Conformance.html.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/WCAG1A-Conformance.html.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/WCAG1AA-Conformance.html.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/WCAG1AAA-Conformance.html.en"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="n3-guides">
+		<dc:title>RDF N3 Guides</dc:title>
+		<recs:shortTitle>RDF N3 Guides</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Misc"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<dc:date>2002-04-16</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/2000/10/swap/Primer.html"/>
+				<rdf:li rdf:resource="http://www.w3c.org/2000/10/swap/doc/Shortcuts.html"/>
+				<rdf:li rdf:resource="http://www.w3c.org/2000/10/swap/doc/ontologies.html"/>
+				<rdf:li rdf:resource="http://www.w3c.org/2000/10/swap/doc/formats.html"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="csstricks">
+		<dc:title>CSS tips &amp; tricks</dc:title>
+		<recs:shortTitle>CSS tips &amp; tricks</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Interaction/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#Tut_FAQ"/>
+		<dc:date>2004-12-15</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/Overview.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/figures.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/menus.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/indent.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/alternatives.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/maps.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/scrollbars.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/evenodd.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/target.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/center.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/shadows.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/text-shadow.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/Examples/007/roundshadow.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/2002/03/csslayout-howto"/>
+				<rdf:li rdf:resource="http://www.w3.org/Style/styling-XML"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="i18n-tutorials">
+		<dc:title>Internationalization Articles</dc:title>
+		<recs:shortTitle>I18N Articles</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#I18NDoc"/>
+		<dc:date>2002-04-16</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/International/articles/serving-xhtml/"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/articles/inline-bidi-markup/"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/tutorials/tutorial-lang/Overview.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/O-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/O-HTTP-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-controls.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-i18n.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-non-eng-tags.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-navigation-select.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-headers-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-css-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-mono-multilingual.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-lang-priorities.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-international-multilingual.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-escapes.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-what-is-encoding.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-htaccess-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-doc-charset.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-lang-2or3.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-who-uses-unicode.en.html"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-css-lang.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-changing-encoding.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-forms-utf-8.en"/>
+				<rdf:li rdf:resource="http://www.w3.org/International/questions/qa-when-lang-neg.en"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="swbp-notes">
+		<dc:title>SW Best Practices and Deployment Group Notes</dc:title>
+		<recs:shortTitle>SWBPD Group Notes</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/TandS/"/>
+		<rdf:type rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/swbp-n-aryRelations"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/swbp-classes-as-values"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/swbp-specified-values"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/sw-oosd-primer/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/2005/WD-rdftm-survey"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/swbp-xsch-datatypes"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<!--
+	<recs:Group rdf:ID="i18n-faqs">
+		<dc:title>Internationalization FAQs</dc:title>
+		<recs:shortTitle>I18N FAQs</recs:shortTitle>
+		<recs:domain rdf:resource="http://www.w3.org/Architecture/"/>
+		<dc:date>2005-07-29</dc:date>
+		<recs:groupMembers>
+			<rdf:Seq>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	-->
+	<recs:Group rdf:ID="qa-webtips">
+		<dc:title>QA Webmasters Tips</dc:title>
+		<recs:shortTitle>Webmasters Tips</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/QA/Tips/good-titles"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/Tips/noClickHere"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/Tips/font-size"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/Tips/beyond-validation"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="qa-articles">
+		<dc:title>QA Articles</dc:title>
+		<recs:shortTitle>QA Articles</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#QADoc"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/QA/2002/04/Web-Quality"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/2002/07/WebAgency-Requirements"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/2003/03/web-kit"/>
+				<rdf:li rdf:resource="http://www.w3.org/QA/2002/09/Step-by-step"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+	<recs:Group rdf:ID="acc_notes">
+		<dc:title>"Accessibility Features of ..."</dc:title>
+		<recs:shortTitle>Accessibility in ...</recs:shortTitle>
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/extraDocs.rdf#WAIDoc"/>
+		<recs:groupMembers>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://www.w3.org/TR/CSS-access"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/SMIL-access/"/>
+				<rdf:li rdf:resource="http://www.w3.org/TR/SVG-access/"/>
+				<rdf:li rdf:resource="http://www.w3.org/WAI/References/HTML4-access"/>
+			</rdf:Seq>
+		</recs:groupMembers>
+	</recs:Group>
+</rdf:RDF>

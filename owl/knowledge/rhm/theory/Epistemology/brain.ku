@@ -1,0 +1,70 @@
+# 1999/6/2
+
+#==================#
+# the brain of man #
+#==================#
+charformat=line
+
+man haspart
+	brain=1,
+	eye=2,
+	ear=2,
+	skin,
+	tongue,
+	nose
+brain haspart
+	cache=1,
+	memory=1,
+	conscious-processor=1,
+	subconscious-processor=1
+entity isi
+	sensation, percept, concept,
+	emotion,
+	value, standard-of-value,
+	conscious-process, automatic-process
+
+man do sense
+sense ise see, hear, touch, taste, smell
+eye    do see
+ear    do hear
+skin   do touch
+tongue do taste
+nose   do smell
+
+
+subconscious-processor do
+	integrate,
+	evaluate,
+	execute
+conscious-processor do
+	perceive,
+	feel,
+	remember,
+	imagine,
+	create,
+	record,
+	choose
+
+# big picture
+sensation := man do sense (existent)
+percept := man do remember (sensation)
+concept := man do classify (percept)
+
+# details
+percept := subconscious-processor do integrate (sensation) to memory
+emotion := subconscious-processor do evaluate  (sensation) to memory \
+					with value
+result  := subconscious-processor do execute   (automatic-process) from cache
+
+concept := conscious-processor do classify (percept) from memory to cache
+concept := conscious-processor do feel     (emotion) from memory to cache
+concept := conscious-processor do remember (concept) from memory to cache
+concept := conscious-processor do imagine  (concept) to cache
+concept := conscious-processor do create   (concept) to cache
+concept := conscious-processor do record   (concept) from cache to memory
+concept := conscious-processor do choose   (conscious-process)  to cache \
+					with standard-of-value
+
+
+hfocus = [newstatement,newword,
+	animal,brain,part]

@@ -1,0 +1,29 @@
+
+
+
+<!--  input data  -->
+unit:Person
+/  Fred Bloggs
+/  John Doe
+/  an unknown person
+primitive:Gun License DB
+/  unit:Gun License DB_087 # ABCD,Fred Bloggs,ZXYZXY;
+primitive:Robbery Event DB
+/  unit:Robbery Event DB_092 # date_123,an unknown person,ABCD;
+primitive:Speeding Offense DB
+/  unit:Speeding Offense DB_099 # date_456,John Doe,ZXYZXY;
+ 
+<!--  output results  -->
+Fred Bloggs has registeredGun = ABCD
+Fred Bloggs has driversLicenseNumber = ZXYZXY
+Fred Bloggs isin Gun License DB = Gun License DB_087
+{ Fred Bloggs isin Gun License DB ; } has truth_value = true;
+ABCD isin Robbery Event DB = Robbery Event DB_092
+{ ABCD isin Robbery Event DB ; } has truth_value = true;
+ZXYZXY isin Speeding Offense DB = Speeding Offense DB_099
+{ ZXYZXY isin Speeding Offense DB ; } has truth_value = true;
+<!-- matching Robber and Speeder -->
+John Doe has driversLicenseNumber = ZXYZXY
+{ John Doe isin Gun License DB ; } has truth_value = false;
+an unknown person has registeredGun = ABCD
+{ an unknown person isin Gun License DB ; } has truth_value = false;

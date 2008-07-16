@@ -1,0 +1,45 @@
+# 1999/5/4
+
+#=======#
+# group #
+#=======#
+
+# A group is all of two or more similar units
+
+  group is all unit1 and unit2 and ...
+
+# Compare this to a concept.
+# A concept is any one of two or more similar units
+
+  concept is either unit1 or unit2 or ...
+
+# Note that a "group" has a plural, collective nature,
+# while a "concept" has a singular, individual nature.
+# This is why I distinguish the two, even though they
+# are both "mental integrations".
+
+# Rand defines a concept as a mental integration of
+# two or more units possessing the same distinguishing
+# characteristics, with their particular measurements
+# omitted.  Strictly speaking, that means that the
+# "Rand concept" subsumes the "McCullough concept"
+# and the "McCullough group".  However, I suspect Rand
+# was thinking of the "McCullough concept" when she
+# formulated her definition.  For example, see Rand,
+# IOE, page 18.)
+
+
+# The following abbreviated formats may be used:
+
+  group isc unit1, unit2, ...
+  unit1, unit2, ... ism group
+
+# "isc" can be translated as "is a collection of".
+# "ism" can be translated as "is a member of".
+
+
+# By definition, the group and concept that subsume
+# the same units are related by
+
+  group is all concept
+  concept is either group

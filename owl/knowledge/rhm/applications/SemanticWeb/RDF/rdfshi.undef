@@ -1,0 +1,24 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/RDF/rdfshi.undef
+# Apr/28/2003
+
+# command <do check od unknown,genus done;>
+# unknown count:         0
+
+##### check genus <view = myview> #####
+# genus error: (2) ContainerMembershipProperty iss (set[2]) <[part,rdfs:subPropertyOf]>
+#              (0) ContainerMembershipProperty isu (set[0]) <[]>
+# genus error: (2) XMLLiteral iss (set[2]) <[rdfs:Datatype,rdf:Literal]>
+#              (0) XMLLiteral isu (set[0]) <[]>
+# genus error: (2) _n iss (set[2]) <[rdfs:ContainerMembershipProperty,part]>
+#              (0) _n isu (set[0]) <[]>
+# genus error: (2) li iss (set[2]) <[xmlword,rdfs:ContainerMembershipProperty]>
+#              (0) li isu (set[0]) <[]>
+# genus error: (2) member iss (set[2]) <[rdfs:ContainerMembershipProperty,part]>
+#              (0) member isu (set[0]) <[]>
+# genus count: 1528 items, 148 no genus (114 alternatives, 30 members)
+# genus count: 1528 items, 5 errors (0 alternatives, 2 members)
+
+</XMP>
+</HTML>

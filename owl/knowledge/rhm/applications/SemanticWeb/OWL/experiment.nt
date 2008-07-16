@@ -1,0 +1,22 @@
+# KEHOME/knowledge/applications/SemanticWeb/OWL/experiment.nt
+# Apr/25/2003
+
+#=====================================#
+# experimenting with xmlns qualifiers #
+#=====================================#
+
+begin triple xmlns qualifier experiment;
+body rdfs:subPropertyOf part;
+lens owl:subPropertyOf part;
+Camera owl:part body;
+Camera part lens;
+end triple xmlns qualifier experiment;
+
+do check od xmlns done;
+part isc* ?;
+part has ?;
+Camera haspart ?;
+subPropertyOf has ?;
+
+! deletecomment experiment.out done;
+exit;

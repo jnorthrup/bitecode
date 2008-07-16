@@ -1,0 +1,20 @@
+# KEHOME/knowledge/ExamplesLogic/LawOfCausality.ku
+# Jul/27/2002
+
+# law of causality
+# all actions are caused by entities
+#-----------------------------------
+
+entity  causes  event
+
+if	event
+then	entity do action=event done
+fi
+
+if	entity do  action=event done
+then	entity has power=action
+fi
+
+
+# output
+hfocus = deduction

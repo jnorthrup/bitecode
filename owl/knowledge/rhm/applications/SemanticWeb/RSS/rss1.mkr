@@ -1,0 +1,21 @@
+# KEHOME/knowledge/application/SemanticWeb/RSS/rss1.mkr
+# Dec/21/2002
+
+do read from news.ku done
+
+news := $channel_1 has items=?
+do print od " " done
+
+every x in $news {
+    set . = $x;
+    do print od
+	"title: $title",
+	"link: $link",
+	"description: $description",
+	"date: $date",
+	"author: $creator",
+	" "
+    done;
+}
+
+exit

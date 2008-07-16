@@ -1,0 +1,43 @@
+# 1999/5/22
+# new syntax Oct/16/2002
+
+#====================#
+# internet knowledge #
+#     iknit          #
+#====================#
+
+iknit is begin hierarchy
+space
+/	map
+time
+/	atomic clock
+event
+/	news
+
+action
+/	entertainment
+/	shop
+/	travel
+/	invest
+attribute
+/	email address
+/	street address
+/	phone
+relation
+/	genealogy
+/	employment
+
+product
+/	computer
+/	car
+/	science
+person
+company
+government
+/    federal
+//	Social Security Administration
+//	Internal Revenue Service
+/    state
+/    county
+/    city
+end hierarchy iknit

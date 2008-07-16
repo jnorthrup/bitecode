@@ -1,0 +1,29 @@
+# 12:30 pm 9/26/97
+
+# general context (edited KE output)
+
+at view=tabula_rasa
+
+# question <existent ise* ?>
+existent
+	entity
+		animal
+			man is person
+		plant
+		object
+	characteristic
+		attribute
+		part
+		action
+		event
+		phenomenon
+		relationship
+			"concept isa genus; concept ise unit"
+			"concept is genus with differentia"
+			"alias is concept"
+			"entity has attribute=value"
+			"entity haspart part=count" 
+			"entity do action=event object"
+			"event changes object from attribute=initial to attribute=final"
+			"cause => effect"
+			"role:1; role:2; ...; role:n"

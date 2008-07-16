@@ -1,0 +1,109 @@
+# input  file <GED.KU>
+# output file <ged.out>
+# error  file <ged.err>
+# log    file <ged.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Icon Version 9.3.  November 25, 1996
+# INFO: kversion = Knowledge Explorer version 4.0  1999/Aug/15
+# clock <1999/08/15 08:40:28> # finished opening files
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/08/15 08:40:31> # finished loading tabula_rasa
+# command <!read kb/init.ku>
+# clock <1999/08/15 08:40:35> # finished loading definitions
+# clock <1999/08/15 08:40:35> # finished !menu
+# command <!read GED.KU>
+# command <!read family.ku>
+# clock <1999/08/15 08:40:35> # loading family history
+# clock <1999/08/15 08:40:39> # checking family history
+############################################################
+########## CHECKING KNIT view = tabula_rasa ##########
+# genus error <2> <CA isa [space,
+    state]>
+# genus error <4> <NA isa [cause,
+    name,
+    space,
+    time]>
+# genus error <0> <action object change isa []>
+# genus error <0> <cause isa []>
+# genus error <0> <school isa []>
+# genus count:          1037 units, 5 errors
+# loop count:           1037 units, 0 units with loops
+# link count:           1037 units, 0 units with broken genus or unit links
+# link count:           1037 units, 0 units with broken group or member links
+# newproposition count: 0
+# unknown count:        0
+# chit count:           1
+# event count:          13
+#   childtype is attribute with unknown differentia
+#   city is space with unknown differentia
+#   company is group with unknown differentia
+#   country is space with unknown differentia
+#   degree is attribute with unknown differentia
+#   email is attribute with unknown differentia
+#   job is attribute with unknown differentia
+#   list is action with unknown differentia
+#   marriagetype is attribute with unknown differentia
+#   name is attribute with unknown differentia
+#   not live is action with unknown differentia
+#   not move is action with unknown differentia
+#   phone is attribute with unknown differentia
+#   receive is action with unknown differentia
+#   sex is attribute with unknown differentia
+#   state is space with unknown differentia
+#   street is space with unknown differentia
+#   work for is action with unknown differentia
+#   zip is space with unknown differentia
+# definition count:     1037 units, 264 concepts with 0 bad genus, 19 undefined
+# definition count:     1037 units, 773 prim. units with 0 bad genus, 646 undefined
+# definition count:     1037 units, 7 negated units
+# alias count:          1037 units, 21 units have 23 aliases
+# attribute count:      252 attributes total, 233 prim. with 127 unused
+# action count:         114 actions total, 104 prim.
+# value count:          450 char. total, 450 char. have 4 values
+# part count:           1 parts total, 1 prim. with 1 unused
+# enumeration count:    1037 units, 10 enumerations
+# requisite count:      1037 units, 0 requisites
+# set count:            1037 units, 8 sets
+# sequence count:       1037 units, 1 sequences
+# group count:          1037 units, 9 groups
+# hierarchy count:      1037 units, 0 hierarchies
+# lattice count:        1037 units, 0 lattices
+# person count:         8 units
+# family count:         3 units
+#========== END KNIT view = tabula_rasa ==========
+#============================================================
+# clock <1999/08/15 08:40:43> # finished family history
+# question <newproposition ise* ?>
+newproposition
+# question <unknown ise* ?>
+unknown
+# command <!clock "finished unknown">
+# clock <1999/08/15 08:40:43> # finished unknown
+# clock <1999/08/15 08:40:43> # generating GEDCOM file
+# clock <1999/08/15 08:40:43> # finished GEDCOM file
+# command <!exit []>
+# clock <1999/08/15 08:40:43> # finished reading knowledge
+
+##### Goodbye. #####
+# clock <1999/08/15 08:40:43> # closing files
+# lines:           961
+# propositions:    517
+#   newpropositions:  0
+#   nullpropositions: 1
+#   productions:      2
+#   context:          6
+#   kusentences:     332
+#     kustatements:    237
+#     commands:        58
+#     assignments:     30
+#     questions:       2
+#     condtionals:     0
+#     iterations:      0
+#   hosentences:     156
+#     hostatements:    156
+#   relsentences:    20
+#     relstatements:   20 infons

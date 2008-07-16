@@ -1,0 +1,842 @@
+<HTML>
+<XMP>
+<!-- KEHOME/knowledge/application/SemanticWeb/TAP/tap.rdf -->
+<!-- Jan/8/2003 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--- TAP KB Fragment. Made available under the TAP KB Open License. Please see http://tap.stanford.edu/license.html -->
+
+<rdf:RDF 
+      xmlns:a="http://tap.stanford.edu/daml/" 
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+       xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+<Ontology about=''> 
+   <comment>TAP KB Fragment on Node</comment>
+</Ontology>
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Account'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Activity'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/ActivityType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Agent'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Animal'>
+      <a:plural>Animals</a:plural>
+      <a:producesFood rdf:resource='http://tap.stanford.edu/daml/Sausage'/>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <rdfs:label xml:lang='en'>Animal</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Array'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Literal'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/AttributeValueType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <rdfs:label xml:lang='en'>Attribute Value Type</rdfs:label>
+</daml:Class>
+
+<a:EventType rdf:about='http://tap.stanford.edu/daml/Auction'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <rdfs:label xml:lang='en'>Auction</rdfs:label>
+</a:EventType>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Award'>
+      <a:plural>Awards</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/BeliefSystem'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/BiologicalEvent'>
+      <a:plural>biological events</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <rdfs:label xml:lang='en'>biological event</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Bitmap'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Literal'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/BodyPart'>
+      <a:plural>body parts</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <rdfs:label xml:lang='en'>body part</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Brand'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Broadcast'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Class'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/CommunicationMedium'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Concert'>
+      <a:plural>Concerts</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <rdfs:label xml:lang='en'>Concert</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/ConflictEvent'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Convention'>
+      <a:plural>Conventions</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <rdfs:label xml:lang='en'>Convention</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Cuisine'>
+      <a:plural>Cuisines</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+      <rdfs:label xml:lang='en'>Cuisine</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/CyberPlace'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Event'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/EventType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/FieldOfStudy'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/FoodActivity'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/activity'/>
+</daml:Class>
+
+<a:AttributeValueType rdf:about='http://tap.stanford.edu/daml/Gender'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+      <rdfs:label xml:lang='en'>Gender</rdfs:label>
+</a:AttributeValueType>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Genre'>
+      <a:plural>Genres</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+      <rdfs:label xml:lang='en'>Genre</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/HistoricEvent'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Intangible'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Literal'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Material'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <rdfs:label xml:lang='en'>Material</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/MediaObject'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/MediaObjectType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Node'>
+      <a:description>Root of the taxonomy</a:description>
+      <rdfs:label xml:lang='en'>Root of the taxonomy</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Number'>
+      <a:plural>Numbers</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Literal'/>
+      <rdfs:label xml:lang='en'>Number</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Organization'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Person'>
+      <a:plural>People</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+      <rdfs:label xml:lang='en'>Person</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Place'>
+      <a:plural>Places</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <rdfs:label xml:lang='en'>Place</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Plant'>
+      <a:plural>Plants</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <rdfs:label xml:lang='en'>Plant</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/PopularCharacter'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Product'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/ProductType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/ProfessionalType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Project'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/PropertyType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Quantity'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/QuantityType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/ReflexivePropertyType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Service'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Activity'/>
+      <rdfs:label xml:lang='en'>Service</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/SocioReligiousEvent'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/SpatialDirection'>
+      <a:plural>Spatial Directions</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+      <rdfs:label xml:lang='en'>Spatial Direction</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Sport'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Activity'/>
+      <rdfs:label xml:lang='en'>Sport</rdfs:label>
+      <rdfs:label xml:lang='en'>Sports</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/SportsEvent'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/StateOfMatter'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/String'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Literal'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/Tangible'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/TaxonomicPropertyType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+      <rdfs:label xml:lang='en'>Taxonomic Property Type</rdfs:label>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/TitlePropertyType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+</daml:Class>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/TransitivePropertyType'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+</daml:Class>
+
+<a:ActivityType rdf:about='http://tap.stanford.edu/daml/Travel'>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Activity'/>
+      <rdfs:label xml:lang='en'>Travel</rdfs:label>
+</a:ActivityType>
+
+<daml:Class rdf:about='http://tap.stanford.edu/daml/UnitOfMeasure'>
+      <a:plural>Unit Of Measures</a:plural>
+      <daml:subClassOf rdf:resource='http://tap.stanford.edu/daml/Intangible'/>
+      <rdfs:label xml:lang='en'>Unit Of Measure</rdfs:label>
+</daml:Class>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/about'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Node'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/accessoryOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/AccessoryType'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/activityOfEvent'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ActivityType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/amazonMap'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/animalProduces'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Animal'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/arg3Type'>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/auctionItem'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Auction'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/awardWinner'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Award'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Person'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/bioEventBodyPart'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/HealthDisorder'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/BodyPart'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/biography'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/chiefExecutive'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Organization'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Person'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/creationIncludesEvent'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</a:PropertyType>
+
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+      <rdfs:label xml:lang='en'>data Code</rdfs:label>
+
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/description'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/dmozMap'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/domain'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/duration'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Activity'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Movie'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MusicAlbum'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Song'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/TimeQuantity'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/ebayMap'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/endingDate'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Date'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/eventUsesTool'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Tool'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasAddress'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/GeoAddress'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasAuthor'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasCitizenship'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Country'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasComponent'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <a:subPropertyOf rdf:resource='http://tap.stanford.edu/daml/hasPhysicalPart'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasDateOfBirth'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Date'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasDirector'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Movie'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Person'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasDish'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Cuisine'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/PreparedFood'/>
+</a:PropertyType>
+
+<a:TitlePropertyType rdf:about='http://tap.stanford.edu/daml/hasEmailAddress'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/EmailAddress'/>
+</a:TitlePropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasFirstName'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/HumanName'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasFoodAccessory'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Food'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Food'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasGender'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Gender'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasHomePage'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/WebSite'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasIngredient'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Food'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Food'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasLastName'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/HumanName'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasLatitude'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasLongitude'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasManufacturer'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Corporation'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasMember'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/EntertainmentOrganization'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Person'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasParticipant'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Project'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+      <a:subPropertyOf rdf:resource='http://tap.stanford.edu/daml/performedBy'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasPhysicalPart'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasProducer'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Movie'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Person'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasPublisher'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasResidence'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Place'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasSocialSecurityNumber'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Integer'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasStateOfMatter'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Material'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/StateOfMatter'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasTeamCode'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/SportsTeam'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasZipCode'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ZipCode'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/highestBid'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Auction'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/MoneyQuantity'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/homePage'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/WebPage'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/imageURL'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Animal'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/UniformResourceLocator'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/inOffice'>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:PropertyType>
+
+<a:TaxonomicPropertyType rdf:about='http://tap.stanford.edu/daml/instanceOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:TaxonomicPropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/isCopyOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MediaCopy'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/locatedIn'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Organization'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Place'/>
+</a:PropertyType>
+
+<a:TitlePropertyType rdf:about='http://tap.stanford.edu/daml/longFormName'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Country'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:TitlePropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/looksmartMap'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/madeOfMaterial'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Material'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/manufacturerModelName'>
+      <rdf:type rdf:resource='http://tap.stanford.edu/daml/TitlePropertyType'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/manufacturerOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Corporation'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Product'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/manufacturerSuggestedRetailPrice'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/MoneyQuantity'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/memberOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Organization'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/notes'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/numberOfBids'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Auction'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Integer'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/occurrenceDate'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Date'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/occurrenceTimeOfDay'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/TimeOfDay'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/ownsBrand'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Corporation'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Brand'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/performedBy'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/placeLetterCode'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Place'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/plays'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/SportsTeam'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ActivityType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/plural'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/price'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/MoneyQuantity'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/producesFood'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Food'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/projectPrincipal'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Project'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+      <a:subPropertyOf rdf:resource='http://tap.stanford.edu/daml/performedBy'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/propertyTypeCardinality'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/publishDate'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/MediaObject'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Date'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/quantityMeasuredIn'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/QuantityType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/UnitOfMeasure'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/range'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/single'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/relevantBrand'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Brand'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/relevantSecondaryBrand'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Brand'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/representsPlace'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Politician'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Place'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/servesCuisine'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/RestaurantOrganization'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Cuisine'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/singular'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/sortPriority'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Integer'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/startingDate'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Date'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/subBrand'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Brand'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Brand'/>
+</a:PropertyType>
+
+<a:TaxonomicPropertyType rdf:about='http://tap.stanford.edu/daml/subClassOf'>
+      <rdf:type rdf:resource='http://tap.stanford.edu/daml/TransitivePropertyType'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Class'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Class'/>
+</a:TaxonomicPropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/subEvent'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Event'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Event'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/subGenreOf'>
+      <rdf:type rdf:resource='http://tap.stanford.edu/daml/TaxonomicPropertyType'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Genre'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Genre'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/subOrganization'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Organization'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Organization'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/subPropertyOf'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/PropertyType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/title'>
+      <rdf:type rdf:resource='http://tap.stanford.edu/daml/TitlePropertyType'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Node'/>
+      <a:propertyTypeCardinality rdf:resource='http://tap.stanford.edu/daml/multi'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/toolUsedToMake'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Tangible'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Product'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/usedInActivity'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Product'/>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/ProductType'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Activity'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/ActivityType'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/versionNumber'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Software'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/String'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/worksFor'>
+      <daml:domain rdf:resource='http://tap.stanford.edu/daml/Person'/>
+      <daml:range rdf:resource='http://tap.stanford.edu/daml/Agent'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/hasCapitalCity'>
+      <a:subPropertyOf rdf:resource='http://tap.stanford.edu/daml/locatedIn'/>
+</a:PropertyType>
+
+<a:PropertyType rdf:about='http://tap.stanford.edu/daml/processorType'>
+      <a:subPropertyOf rdf:resource='http://tap.stanford.edu/daml/hasComponent'/>
+</a:PropertyType>
+
+
+
+</rdf:RDF>
+</XMP>
+</HTML>

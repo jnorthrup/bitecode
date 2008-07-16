@@ -1,0 +1,161 @@
+# KEHOME/knowledge/application/SemanticWeb/TAP/YoYoMa.xml
+# Dec/22/2002
+
+# R.V.Guha & Rob McCool,
+# "A System for integrating Web Services into a Global Knowledge Base"
+# http://tap.stanford.edu/sw002.html
+
+# 8. Appendix A
+# 8.1 GetData(<Yo-Yo Ma>, concertSchedule) 
+
+# Request message:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+     <GetData>
+       <a:Musician>
+          <a:title>Yo Yo Ma</a:title>
+          <a:title>Ma, Yo-Yo</a:title>
+          <a:playsInstrument resource="http://www.alpiri.org/CelloInstrument"/>
+          <a:oid namespace="a">MusicianMa,_Yo-Yo</a:oid>
+       </a:Musician>
+     <a:concertSchedule/>
+     </GetData>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+# End of request.
+
+
+# Response message:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+       <Data>
+            <a:Concert>        
+                  <a:title>Silk Road Project With Yo-Yo Ma</a:title>        
+                  <a:oid namespace="ticketmaster">F003384F15CA4E4</a:oid>        
+                  <a:date>5/12/02</a:date>        
+                  <a:time>7:30PM</a:time>        
+                  <a:eventLocation>               
+                       <a:Auditorium>                       
+                            <a:title>Benaroya Hall</a:title>               
+                            <a:location>
+			       <a:City>                       
+                                  <a:title>Seattle</a:title>                               
+				  <a:location>
+				      <a:USState>                       
+				           <a:title>Washington</a:title>
+				      </a:USState>                               
+				  </a:location>                       
+                               </a:City>                       
+                           </a:location>               
+                       </a:Auditorium>        
+                  </a:eventLocation>
+            </a:Concert>
+
+            <a:Concert>
+       	           <a:title>Silk Road Project with Yo-Yo Ma</a:title>        
+                   <a:oid namespace="ticketmaster">F003384F7EDB26E</a:oid>        
+                   <a:date>5/13/02</a:date>        
+                   <a:time>7:30PM</a:time>        
+                   <a:eventLocation>               
+                       <a:Auditorium>                       
+                            <a:title>Benaroya Hall</a:title>               
+                            <a:location>
+			       <a:City>                       
+                                  <a:title>Seattle</a:title>                               
+				  <a:location>
+				      <a:USState>                       
+				           <a:title>Washington</a:title>
+				      </a:USState>                               
+				  </a:location>                       
+                               </a:City>                       
+                           </a:location>               
+                       </a:Auditorium>        
+                  </a:eventLocation>
+            </a:Concert>
+        
+        </Data>
+     </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+# End of response.
+
+
+# 8.2 GetDataInverse(<Yo-Yo Ma>, hasAuthor)
+# Request message:
+
+?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:a="http://www.alpiri.org/">
+    <SOAP-ENV:Body>
+        <GetData>
+            <a:Musician>
+                <a:title>Yo Yo Ma</a:title>
+                <a:title>Ma, Yo-Yo</a:title>
+                <a:playsInstrument resource="http://www.alpiri.org/CelloInstrument"> 
+                <a:oid namespace="a">MusicianMa,_Yo-Yo</a:oid>
+            </a:Musician>
+            <a:hasAuthor inverse="yes">
+        </GetData>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+# End of request.
+
+
+# Response message:
+
+?xml version="1.0" encoding="UTF-8"?>
+  <SOAP-ENV:Envelope
+       xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+       SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+       xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+       xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+       xmlns:a="http://www.alpiri.org/">
+       <SOAP-ENV:Body>
+           <Data>
+               <a:MusicAlbum>
+                   <a:title>Appalachian Journey</a:title>
+                   <a:hasAuthor>
+                       <a:Musician>
+                          <a:title>Yo-Yo Ma</a:title>        
+                       </a:Musician>
+                   </a:hasAuthor>
+                   <a:oid namespace="cdnow">757707</a:oid>
+                   <a:price>$10.99</a:price>
+               </a:MusicAlbum>
+               
+               <a:MusicAlbum>
+                   <a:title>Tavener: The Protecting Veil</a:title>
+                   <a:hasAuthor>
+                       <a:Musician>
+                          <a:title>Yo-Yo Ma</a:title>        
+                       </a:Musician>
+                   </a:hasAuthor>
+                   <a:oid namespace="cdnow">559275</a:oid>
+                   <a:price>$17.99</a:price>
+               </a:MusicAlbum>
+           </Data>
+        </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+# End of response.

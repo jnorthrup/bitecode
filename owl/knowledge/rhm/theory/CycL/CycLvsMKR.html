@@ -1,0 +1,106 @@
+<html><pre>
+# KEHOME/knowledge/theory/CycL/CycLvsMKR.html
+# Dec/24/2002
+</pre>
+
+<title> CycL vs. MKR </title>
+<h1> CycL vs. MKR </h1>
+
+<pre>
+CycL language			MKR language
+=============			============
+(#$ist context sentence)	at context { sentence }
+(#$inconsistentWithMt sentence context)
+				not (sentence and context)
+(#$genlMt MT1 MT2)		MT1 iss* MT2  # at MT2 {p} implies at MT1 {p}
+(#$contradictoryMt MT1 MT2)	not (MT1 and MT2)  # content
+(#$negationMt MT1 MT2)		not (MT1 and MT2)  # domain
+
+#$Collection			concepts	 # set
+#$Individual			units		 # set
+#$Event				events		 # set
+#$Role				event attributes # set
+
+#$Nothing			nonexistent
+#$Thing				existent
+    #$Entity			    entity
+	#$Animal			animal
+	    #$Person			    person
+#$Predicate			characteristic
+    #$Predicate		    	    attribute
+	#$arity				arity
+	#$arg[N]Isa			format,automatic=ISA
+	#$arg[N]Genl			format,automatic=ISS*
+	#$resultIsa			format,automatic=ISA   # not implemented
+	#$resultGenl			format,automatic=ISS*  # not implemented
+    #$Predicate			    part
+    #$Event			    action
+	#$Function-Denotational		method
+	    #$IndividualDenotingFunction-Denotational
+					    ???  # not implemented
+	    #$CollectionDenotingFunction-Denotational
+					    ???  # not implemented
+    #$Predicate			    relation
+assertion			proposition +truth value+justification+direction
+    #$Microtheory		    view
+	#$BaseKB			tabula rasa
+	#$EverythingPSC			all knowledge  # virtual
+    #$ELSentence-Assertible	    statement
+    ???				    question
+    ???				    command
+    ???				    assignment
+
+
+(#$defnIff thing genus-differentia-test)
+				existent is genus with differentia
+(#$equals thing1 thing2)	existent1 is existent2
+(#$equiv thing1 thing2)		thing1 iff thing2
+(#$different  thing1 thing2)	not (existent1 is existent2)  # not implemented
+(#$disjointWith col1 col2)	not (concept1 and concept2)   # not implemented
+
+(#$isa instance genus)		instance isa genus
+(#$isa individual genus)	unit     isu genus
+(#$isa species genus)		species  iss genus
+(#$genls species genus)		species iss* genus  # not proper subclass
+(#$typeGenls typecol col)	if $x isa typecol then $x iss* col fi
+(#$genlPreds pred1 pred2)	pred1 iss* pred2
+(#$negationPreds pred1 pred2)	if pred1 then not pred2 fi
+(#$genlInverse pred1 pred2)	pred1 iss* pred2  # reverse arguments
+(#$negationInverse pred1 pred2)	if pred1 then not pred2 fi  # reverse arguments
+(#$genlAttributes att1 att2)	att1 iss* att2
+(#$negationAttribute att1 att2)	not (all $x has att1 and $x has att2)  # not implemented
+(#$oppositeAttribute att1 att2)	either $x has att1 or $x has att2  # not implemented
+
+(#$hasAttributes thing att)	existent has att
+(attribute thing value)		existent has attribute = value
+(#$parts whole part)		whole haspart part
+(#$physicalParts whole part)	whole haspart part
+(#$subEvents whole part)	???
+(#$timeSlices whole part)	???
+(#$subInformation whole part)	???
+(#$groupMembers group member)	exgroup isany member  # exclusive group
+(#$groupMembers group member)	ingroup isall member  # inclusive group
+???				entity do action=event done
+(#$objectActedOn event object)	entity do action=event od object done
+(rel thing1 thing2)		existent:1 rel existent:2
+
+???				group:1 is begin group; ...; end group group:1
+(causes event1 event2)		event:1 causes event:2  # CycL not implemented?
+(means symbol referent)		symbol means referent   # CycL not implemented?
+
+#$not				not
+#$and				and
+#$or				or
+(#$implies x y)			x implies y  # if x then y fi
+(#$forAll ?x y)			forAll x isa existent { y }
+(#$thereExists ?x y)		forSome x isa existent { y }
+
+(#$comment x y)			x has comment = y
+(#$myCreator x y)		x has myCreator = y
+
+#$True				monotonically true ???
+#$False				monotonically false ???
+</pre>
+
+<a href="../../../../index.html">mKE home</a>
+</html>

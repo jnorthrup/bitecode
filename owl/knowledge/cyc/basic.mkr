@@ -1,0 +1,22 @@
+# KEHOME/knowledge/cyc/basic.mkr
+# Feb/18/2007
+
+# gather basic facts from Cyc Upper Ontology
+do clock od "begin" done;
+
+#do find od *microtheory* done;
+#do find od *space* done;
+#do find od *time* done;
+#do find od *view* done;
+
+do size_species od Thing    done;
+do size_member  od Class    done;
+do size_unit    od Property done;
+
+Thing    isc**3 ?;
+Entity   isc*   ?;
+Class    isall* ?;
+Property isc*   ?;
+
+do clock od "end" done;
+exit;

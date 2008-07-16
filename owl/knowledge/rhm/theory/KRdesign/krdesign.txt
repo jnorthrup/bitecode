@@ -1,0 +1,42 @@
+# KEHOME/knowledge/theory/KRdesign/krdesign.txt
+# 9:30 am 1998/2/17
+
+#============================================#
+# Knowledge Representation Design Philosophy #
+#============================================#
+
+
+consistent theory of knowledge
+==============================
+    axiomatic concepts
+    personal concept-hierarchy
+    dynamic concept-formation
+    genus-differentia definitions
+    permit lattice for error checking
+
+English-like with very simple grammar
+=====================================
+    statements, commands, questions
+    no ambiguity
+    no inflections
+    no word order inversion for questions
+    user-friendly
+    allow lists everywhere it makes sense
+
+UNIX-like with simple control structures
+========================================
+    current concept, genus, unit, view
+    wildcard names
+    conditional
+    iteration
+    methods
+    variables
+
+Knowledge Explorer interaction
+==============================
+    extensive error checks
+    powerful search capability (questions)
+    flexible input/output
+    external relations
+    user-adjustable parameters
+    self knowledge

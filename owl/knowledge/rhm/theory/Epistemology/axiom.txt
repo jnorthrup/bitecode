@@ -1,0 +1,61 @@
+# 1999/3/1
+
+#====================#
+# Axiomatic Concepts #
+#====================#
+
+1. Ayn Rand states (ITOE, Chapter 6)
+
+	An axiomatic concept is the identifification of
+	a primary fact of reality, which cannot be analyzed,
+	i.e., reduced to other facts or broken into component
+	parts.  It is implicit in all facts and in all knowledge.
+	It is the fundamentally given and directly perceived
+	or experienced, which requires no proof or explanation,
+	but on which all proofs and explanations exist.
+
+	The first and primary axiomatic concepts are
+	"existence", "identity" (which is a corollary of
+	"existence") and "consciousness".  One can study
+	what exists and how consciousness functions; but
+	one cannot analyze (or "prove") existence as such,
+	or consciousness as such.  These are irreducible
+	primaries.  (An attempt to "prove" them is self-
+	contradictory: it is an attempt to "prove" existence
+	by means of non-existence, and consciousness by means
+	of unconsciousness.)
+
+2. In essence, I agree with Ayn Rand.  However, I think that
+her choice of primary axiomatic concepts obscures the issues
+because it omits too much of the context.  My choice for
+primary axiomatic concepts is
+
+	existent, entity, relation,
+	man, identify, knowledge
+
+where (using KR, my knowledge representation language)
+
+	existent is either entity or relation
+	man, knowledge isa entity
+	knowledge := man do identify existent
+
+I claim that the use of these six concepts clarifies the notion of
+identification -- the product, subject, action, and object --
+and thus gives a clear idea of what "existence", "identity" and
+"consciousness" really mean.  Although Rand uses these three
+concepts in several different senses, I think her main sense of
+meaning is
+
+	existence is identity is existent
+	consciousness is identify
+
+3. There are six secondary axiomatic concepts which are
+too important to go unmentioned:
+
+	action, space, time
+	choose, purpose, view
+
+Action is the characterization of change;
+space and time are the attributes which measure change.
+Man chooses a purpose, which guides his choice of actions
+and his view of knowledge in a given context.

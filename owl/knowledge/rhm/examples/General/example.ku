@@ -1,0 +1,105 @@
+# Jun/23/2002
+# new syntax Jul/24/2005
+#========================================#
+# Simple examples of                     #
+# knowledge representation language (kr) #
+#========================================#
+
+at view=tabula_rasa;	# access knit
+at view=v_example;	# create knit
+
+#======#
+# knit #
+#======#
+animal	 isc dog,cat;				# hierarchy
+Dutchess isa dog;				# hierarchy
+
+animal is entity with live,move;		# definition
+
+person is man;					# identity/alias
+
+Dutchess has color=black;			# characterization
+Dutchess do bark done;				# characterization
+r_ssn is relation with
+	format=[ssn:1; person:2],		# char. of relation
+	meaning={$2 has ssn=$1;};
+
+man haspart brain,eye=2,ear=2,			# composition
+	    hand=2,mouth,nose;
+
+knowledge := man do identify od entity done;	# production
+
+A is A;						# laws of thought
+existent isc B or not B;			# laws of thought
+nonexistent isall C and not C;			# laws of thought
+
+if	S	isa*	M and			# deduction
+	M	isa*	P;
+then
+	S	isa*	P;
+fi;
+
+if	x,y	has	characteristic-1 and	# induction - analogy
+	x	has	characteristic-2;
+then
+	y	has	characteristic-2;
+fi;
+
+if   cause	=>	effect;			# induction - Mill's methods
+then
+     not cause	=>	not effect;
+fi;
+
+if cat isa dog; fi;				# true or false
+
+concept	means existent;				# meaning
+
+
+#======#
+# chit #
+#======#
+Bob do move 					# action/event
+	od car
+	from driveway to garage
+	done;
+
+acceleration <=	force;				# cause-effect phenomenon
+
+life is phenomenon with live;			# char. of life
+live is action with a_event =[birth,death];
+
+
+#============#
+# ke actions #
+#============#
+do read od myview.ku done;		# read knit     file
+do read od r_ssn.rel done;		# read relation file
+do check od hierarchy done;		# check for errors
+do check od definition done;		# check for errors
+do dump od Dutchess done;		# display all concept data
+do hsize od deduction done;		# # concepts in subhierarchy
+do class od apple,dog done;		# apple,dog isa* class
+
+
+#===============#
+# ke attributes #
+#===============#
+set hfocus = [event,newword,newstatement];	# select concepts to write
+set hformat = alpha;				# output format
+set hformat = outline;				# output format
+set debug = RELATION;				# extra output
+ke has ?;					# values of all attributes
+
+
+#===========#
+# questions #
+#===========#
+animal is ?;			# definition
+Dutchess has ?;			# all attributes
+Bob do ? done;			# all action/events
+apple ?	orange;			# relation between concepts
+table isa**? entity;		# distance between concepts
+plant isc* ?;			# subhierarchy
+dog isa* ?;			# dog isa ... isa existent
+? has sex=female;		# all females
+Bob has sex=female ?;		# true or false

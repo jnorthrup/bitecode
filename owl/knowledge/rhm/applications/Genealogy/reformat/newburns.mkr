@@ -1,0 +1,26 @@
+# 1999/7/28
+# split r_burns into two relations
+# new syntax Aug/10/2005
+
+r_burns is relation with
+    label=[unique name,prefername,sex,birthdate,birthplace,father,mother,spouse...,child...],
+    format=[person:1,prefername:2,sex:3,time:4,space:5,person:6,person:7,person:8,person:9],
+    meaning={};
+
+begin relation r_burns;
+# ... infons here ...
+end relation r_burns;
+
+set echo=off;
+do clock od "##### burns_birth.rel #####" done;
+every x isa r_burns {
+	set . = $x;
+	do print od "$1, $2, $3, $4, $5, $6, $7;" done;
+};
+do clock "##### burns_child.rel #####" done;
+every x isa r_burns {
+	set . = $x;
+	do print od "$1, $2, $8, $9;" done;
+};
+do clock od "##### done #####" done;
+set echo=on;

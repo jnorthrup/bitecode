@@ -1,0 +1,9 @@
+  <rdf:Description rdf:about="FashionModelMacPherson,Elle">
+    <rdf:type>FashionModel</rdf:type>
+    <rdfs:label xml:lang="en"> Elle MacPherson</rdfs:label>
+    <hasGender>FemaleGender</hasGender>
+  </rdf:Description>
+  <rdf:Description rdf:about="ActorMacPherson,Elle">
+    <rdf:type>Actor</rdf:type>
+    <rdfs:label xml:lang="en"> Elle MacPherson</rdfs:label>
+  </rdf:Description>

@@ -1,0 +1,161 @@
+# 10:00 pm 9/29/97
+
+# Kenneth Burke, "Classifying Proverbs",
+# in Stephen R. C. Hicks and David Kelley, Editors,
+# "The Art of Reasoning: Readings for Logical Analysis",
+# W. W. Norton & Company, 1994.
+# page 92-95
+
+at view = Burke
+#==============
+knit has purpose = \				# purpose paragraph 11
+	"categories that suggest their active nature,
+	for the direct bearing that such acts have upon matters of welfare"
+
+proverb is strategy with \			# definition paragraph 12
+	purpose="dealing with situation"
+strategy is attitude				# identity paragraph 12
+attitude causes strategy			# causality paragraph 13
+
+# basic categories
+#-----------------
+proverb ise \
+	consolation,
+	vengeance,
+	admonition,
+	exhortation,
+	foretelling,
+	"typical recurrent situation"
+
+# subcategories
+foretelling ise \
+	"meteorological weather",
+	"social weather",
+	"recipe for wise living"  # moral or technical 
+
+# the proverbs
+consolation ise \
+	"The sun does not shine on both sides of the hedge at once.",
+	"Think of ease, but work on.",
+	"Little troubles the eye, but far less the soul.",
+	"The worst luck now, the better another time.",
+	"The wind in one's face makes one wise.",
+	"He that hath lands hath quarrels.",
+	"He knows how to carry the dead cock home.",
+	"He is not poor that hath little, but he that desireth much."
+vengeance ise \
+	"At length the fox is brought to the furrier.",
+	"Shod in the cradle, barefoot in the stubble.",
+	"Sue a beggar and get a louse.",
+	"The higher the ape goes, the more he shows his tail.",
+	"The moon does not heed the barking of dogs.",
+	"He measures another's corn by his own bushel.",
+	"He shuns the man who knows him well.",
+	"Fools tie knots and wise men loose them."
+"meteorological weather" ise \
+	"Sow peas and beans in the wane of the moon, Who soweth them sooner,
+		he soweth too soon.",
+	"When the wind's in the north, the skillful fisher goes not forth.",
+	"When the sloe tree is as white as a sheet, sow your barley whether it be dry or wet.",
+	"When the sun set bright and clear, An easterly wind we shall not want.",
+	"Keep your weather eye open."
+"social weather" ise \
+	"When the moon's in the full, then wit's in the wane.",
+	"Straws show which way the wind blows.",
+	"When the fish is caught, the net is laid aside.",
+	"Remove an old tree, and it will wither to death.",
+	"The wolf may lose his teeth, but never his nature.",
+	"He that bites on every weed must needs light on poison.",
+	"Whether the pitcher strikes the stone, or the stone the pitcher,
+		it is bad for the pitcher.",
+	"Eagles catch no flies.",
+	"The more laws, the more offenders."
+"recipe for wise living" ise \
+	"First thrive, and then wive.",
+	"Think with the wise but talk with the vulgar.",
+	"When the fox preacheth, then beware your geese.",
+	"Venture a small fish to catch a great one.",
+	"Respect a man, he will do the more."
+"typical recurrent situation" ise \
+	"Sweet appears sour when we pay.",
+	"The treason is loved but the traitor is hated.",
+	"The wine in the bottle does not quench thirst.",
+	"The sun is never the worse for shining on a dunghill.",
+	"The lion kicked by an ass.",
+	"The lion's share.",
+	"To catch one napping.",
+	"To smell a rat.",
+	"To cool one's heels."
+
+at view = "other ways"
+#=====================
+# other ways of classifying
+#--------------------------
+
+"When the fox preacheth, then beware your geese." isa vengeance
+
+"Virtue flies from the heart of a mercenary man." isa consolation
+"Virtue flies from the heart of a mercenary man." means \
+	"Because I am poor in money I am rich in virtue."
+"Virtue flies from the heart of a mercenary man." isa vengeance
+"Virtue flies from the heart of a mercenary man." means \
+	"When he got money, what else could you expect \
+		of him but deterioration?"
+
+"The sun is never the worse for shining on a dunghill." isa vengeance
+
+# more categories
+proverb ise \
+	promise, solace, instruction, charting
+
+# contrary proverbs
+"Repentence comes too late." isa admonition
+"Repentence comes too late." means \
+	"You'd better look out, or you'll get yourself \
+		too far into this business."
+
+"Never too late to mend." isa consolation
+"Never too late to mend." means \
+	"Buck up, old man, you can still pull out of this."
+
+
+#===========#
+# questions #
+#===========#
+
+# 1. What principle does Burke follow in classifying the proverbs he lists?
+
+# 2. Think of some other proverbs, or look up a representative sample in a
+#    reference book.  Do they all fit into Burke's classificatory scheme?
+
+# 3. At the beginning of paragraph 10, Burke says: "... I do not wish to
+#    suggest that this is the only way in which the proverbs could be
+#    classified."  What instead does he see as the purpose of classifying
+#    the proverbs?  Does this have any implications for the principle he is
+#    employing?
+
+
+#============#
+# my answers #
+#============#
+
+# This short essay is filled with contradictions.
+
+# Burke's clear "definition" of proverb in paragraph 12
+# and his initial discussion in paragraph 2 suggest that
+# proverbs should be classified by situation.
+# But he never identifies the situation of a proverb.
+
+# His fuzzy statement of "purpose" in paragraph 11
+# suggests that proverbs should be classified by action.
+
+# There is no consistent principle of classification.
+# Burke's categories are a strange blend of
+# actions (strategies) and situations.
+
+# His clear statement of "identity" between strategy and
+# attitude in paragraph 12 is contradicted in paragraph 13
+# by an apparent "causality" relation between the two.
+
+# When Burke discusses "other ways" in paragraphs 10 and 13,
+# he assigns one proverb to multiple categories.

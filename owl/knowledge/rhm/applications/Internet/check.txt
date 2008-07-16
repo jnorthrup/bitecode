@@ -1,0 +1,18 @@
+# command <! check genus, loop>
+# genus error <16> <... isa attribute,autos,business,careers,computer,entertain
+ent,health,internet,kids & family,news,personal finance,real estate,shopping,sp
+rts,the good life,travel>
+# genus error <2> <book flights isa search,services:>
+# genus error <2> <business isa channel,news>
+# genus error <2> <education isa careers,channel>
+# genus error <3> <games@ isa channel,computers & internet,entertainment>
+# genus error <2> <health isa channel,lifestyle>
+# genus error <3> <horoscopes isa lifestyle,more services:,search>
+# genus error <3> <internet isa channel,computers & internet,games@>
+# genus error <3> <maps isa search,services:,travel>
+# genus error <2> <music isa entertainment,shopping>
+# genus error <2> <mutual funds isa business & investing,personal finance>
+# genus error <2> <people finder isa search,services:>
+# genus error <2> <yellow pages isa search,services:>
+# genus count:        860 concepts, 13 errors
+# loop count:         860 concepts, 0 concepts with loops

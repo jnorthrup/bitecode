@@ -1,0 +1,156 @@
+# KEHOME/knowledge/ExamplesLogic/PJHaxiom.ku
+# 4:30 am 1998/2/1
+
+# Pat Hayes axiom examples 11/20/97
+#---------------------------------#
+# Pat Hayes: "BTW, your web page claims that your KR
+# has the expressive power of first-order logic.
+# How does it handle quantifier scopes and negation?
+# Consider for example axioms like these (written using
+# prefix connectives and ? meaning a variable):"
+
+# NOTES:
+# 1. Each example shows:
+# prefix style; infix style; KR translation.
+#
+# 2. "forall" and "exist" variables have "types".
+#
+# 3. The current version (2.1) of KE does not
+# implement the semantics of "forall" and "exist".
+# The current version does implement iteration,
+# which is denoted by "every ... do ... done".
+
+# example 1: prefix style
+# (forall (?x ?y)
+#             (and
+#                 (=> (exist (?z) (= ?z (mult ?x ?y)))
+#                       (and (integer ?x) (timeduration ?y))  )
+#                 (=> (exist (?z) (= ?z (add ?x ?y)))
+#                       (timeduration ?x ?y)   )
+#                 (timeduration zero)
+#             )
+# )
+# example 1: infix style
+# forall (?x ?y)(
+#             (
+#                 ((exist (?z) (?z = (?x mult ?y)))
+#                       => ((integer ?x) and (timeduration ?y))  )
+#             and
+#                 ((exist (?z) (?z = (?x add ?y)))
+#                       => (timeduration ?x ?y)   )
+#             and
+#                 (timeduration zero)
+#             )
+# )
+# example 1: KR translation
+forall x,y isa* existent (				\
+    exist z isa* existent ( $z = $x mult $y )		\
+	=> $x isa* integer and $y isa* timeduration	\
+and							\
+    exist z isa* existent ( $z = $x add $y )		\
+	=> $x,$y isa* timeduration			\
+and							\
+    zero isa* timeduration				\
+)
+ 
+# example 2: prefix style
+# (forall  (?d ?e)
+#          (=>
+#             (exist (?n)(and (integer ?n) (= (mult ?n ?d) ?e)) )
+#             (= (mult (numberin ?d ?e) ?d) ?e)
+#          )
+# )
+# example 2: infix style
+# forall  (?d ?e)(
+#          (
+#             (exist (?n) ((integer ?n) and ((?n mult ?d) = ?e)) )
+#             =>(((?d numberin ?e) mult ?d) = ?e)
+#          )
+# )
+# example 2: KR translation
+forall d,e isa* existent (			\
+    exist n isa* integer ( $n mult $d = $e )	\
+	=> ($d numberin $e) mult $d = $e	\
+)
+ 
+# example 3: prefix style
+# (forall (?x ?y)
+#       (=>
+#         (timepoint ?x ?y)
+#         (<=>
+#            (exists (?h) (and (timeline ?h)(on ?x ?h) (on ?y ?h)) )
+#            (or (= ?x ?y) (before ?x ?y) (before ?y ?x))
+#         )
+#       )
+# )
+# example 3: infix style
+# forall (?x ?y)(
+#       (
+#         (timepoint ?x ?y)
+#         =>(
+#            (exists (?h) ((timeline ?h) and (?x on ?h) and (?y on ?h)) )
+#            <=>((?x = ?y) or (?x before ?y) or (?y before ?x))
+#         )
+#       )
+# )
+# example 3: KR translation
+forall x,y isa* timepoint (				\
+    exist h isa* timeline ( $x on $h and $y on $h )	\
+	<=> $x = $y or $x before $y or $y before $x	\
+)
+ 
+# example 4: prefix style
+# (forall (?h ?k)
+#         (=>
+#              (and (timeline ?h ?k)
+#                      (exists (?x) (and (timepoint ?x)(on ?x ?h) (on ?x ?k)) ) )
+#             (= ?h ?k)
+#         )
+# )
+# example 4: infix style
+# forall (?h ?k)(
+#         (
+#              ((timeline ?h ?k) and
+#                      (exists (?x) ((timepoint ?x) and (?x on ?h) and (?x on ?k)) ) )
+#             =>(?h = ?k)
+#         )
+# )
+# example 4: KR translation
+forall h,k isa* timeline (				\
+    exist x isa* timepoint ( $x on $h and $x on $k )	\
+	=> $h = $k					\
+)
+ 
+# example 5: prefix style
+# (forall (?h ?k ?x)
+#         (=>
+#            (and (timeline ?h ?k)(timepoint ?x)(on ?x ?h) (on ?x ?k))
+#            (forall (?y ) (=>
+#                                  (timepoint ?y)
+#                                  (=> (before ?y ?x)
+#                                        (<=>(on ?x ?h) (on ?y ?k))
+#                                  )
+#                                )
+#              )
+#           )
+# )
+# example 5: infix style
+# forall (?h ?k ?x)(
+#         (
+#            ((timeline ?h ?k) and (timepoint ?x) and (?x on ?h) and (?x on ?k))
+#            =>(forall (?y ) (
+#                                  (timepoint ?y)
+#                                  =>((?y before ?x)
+#                                        => ((?x on ?h) <=> (?y on ?k))
+#                                  )
+#                                )
+#              )
+#           )
+# )
+# example 5: KR translation
+forall h,k isa* timeline and x isa* timepoint (			\
+    $x on $h and $x on $k					\
+	=> forall y isa* timepoint (				\
+		($y before $x) => ($x on $h <=> $y on $k)	\
+	   )							\
+)

@@ -1,0 +1,129 @@
+Date: July 19,2002
+From: Dick McCullough
+To:   Richard Latimer
+Subject: dogz, dogs and quantifiers
+
+I like your dogz,dogs notation.  It has an
+intuitive appeal which I think can help to
+clarify the distinctions of individual and
+collective concepts.  My intent in this
+note is to summarize the basic ideas.
+I will use my simple dog example to keep
+the discussion as concrete as possible. 
+I will use KR, but it's so English-like
+that I don't think it will be a problem
+for you.
+
+You will notice that my definitions of
+dogz,dogs,dog differ from yours.  I have
+done this on purpose, trying to clarify
+the subtle distinctions.
+
+1. dogz and dogs
+#==============#
+Consider two or more entities
+
+	Dutchess has color=black, ...
+	Dutchess do  bark=bark_1, ... done
+	Reno has color=white, ...
+	Reno do  bark=bark_2, ... done
+	...
+
+and three groups
+
+	dogz is  any Dutchess or  Reno or  ...
+	dogs is  all Dutchess and Reno and ...
+	dog  ise Dutchess, Reno, ...
+
+dogz is an exclusive/individual group.
+dogs is an inclusive/collective group.
+The groups dogz and dogs have the same units,
+but the group-unit relation is different.
+dog is a group with the group-unit relation
+left unspecified.
+
+NOTE:
+Before our current discussion, I had always
+considered dog to be the same as dogz.
+My more usual KR notation is
+  dogz isany Dutchess, Reno, ...
+  dogs isall Dutchess, Reno, ...
+  dog  ise   Dutchess, Reno, ...
+The inverse relation is expressed as
+  Dutchess, Reno, ... isalt dogz
+  Dutchess, Reno, ... ismem dogs
+  Dutchess, Reno, ... isa   dog
+
+
+2. Quantifiers
+#============#
+Consider the quantifiers
+
+	a
+	all
+	any
+	no
+	some
+	the
+
+and the groups
+
+	dogz
+	dogs
+	dog
+
+What is the meaning of expressions of the form
+
+	quantifier group
+
+e.g.,
+
+	a   dog
+	any dogs
+
+You can supply your own answer to this question.
+
+
+3. English
+#========#
+How does all this relate to ordinary English?
+My gut reaction is
+
+	English "dog"  is KR "dogz"
+	English "dogs" is KR "dogs"
+
+But maybe we need to translate individual phrases,
+e.g.,
+
+	English "a dog"   is KR "a dogs"
+	English "any dog" is KR "a dogz"
+
+You can supply your own answer to this question.
+
+
+4. Final Remarks
+#==============#
+It is sometimes helpful to think of dogz,dogs,dog
+as abstract algebraic entities which represent
+the solutions to equations, i.e., the answers to
+questions.  For example,
+
+	x do bark done ?
+	x is dogz
+
+NOTE:
+The usual KE interaction for this example is
+
+	...
+	<myview:.=myconcept> ? do bark done
+	# question <? do bark done>
+	Dutchess do bark=bark_1 done
+	Reno do bark=bark_2 done
+	...
+
+
+I have left significant unanswered questions here,
+which could provide the basis for some interesting
+future discussions.
+I hope I have provided a clear foundation for
+expressing answers to those questions.

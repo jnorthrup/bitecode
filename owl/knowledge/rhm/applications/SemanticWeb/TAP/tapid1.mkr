@@ -1,0 +1,28 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tapid1.mkr
+# Apr/8/2003
+
+#==============================#
+# MKR commands to integrate    #
+# TAP and tabula rasa contexts #
+# (step 1)                     #
+#==============================#
+
+entity isi
+	Agent,
+	Tangible;
+
+OBJECT isi
+	Class,
+	Intangible,
+	Literal;
+
+attribute isi
+	PropertyType;
+
+interaction isi
+	Activity,
+	Event;
+</XMP>
+</HTML>

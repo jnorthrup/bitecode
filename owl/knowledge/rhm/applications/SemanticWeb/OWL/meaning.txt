@@ -1,0 +1,21 @@
+Re: Characterizing intersectionOf relationships?
+
+This is a very important question.
+The key issue is: what is the meaning of a Statement?
+
+According to what I have read, RDF associates
+as little meaning as possible with a Statement.
+
+I have not yet read enough OWL documents to assess
+the OWL perspective on this issue.
+
+The MKR language has the same meaning as natural language.
+The MKR statement corresponding to your RDF/OWL is
+
+SLR isa Camera with viewFinder = ThroughTheLens;
+
+The meaning of this MKR statement is:
+a genus-differentia definition which gives the 
+necessary and sufficient conditions for a thing
+to be an SLR.  SLR is a proper subclass of Camera.
+All SLRs have a ThroughTheLens viewFinder.

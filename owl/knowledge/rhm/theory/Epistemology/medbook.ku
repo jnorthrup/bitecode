@@ -1,0 +1,22 @@
+# 6:00 pm 1998/1/19
+
+hfocus = [view,newword]
+
+# view = v_medbook  # from read medbook.ku
+#=================
+disease ise seizure
+seizure is  convulsion
+newword ise* ?
+
+at view=v_epilepsy  # new context
+#=================
+convulsion is not seizure  # undo alias
+convulsion isd seizure     # move from newword
+seizure    isd disease     # move from newword
+newword ise* ?
+
+at view=v_medbook  # return to old context
+#================
+!vdo convulsion is ?
+
+!exit

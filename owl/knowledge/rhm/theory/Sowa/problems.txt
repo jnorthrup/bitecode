@@ -1,0 +1,30 @@
+# KEHOME/knowledge/theory/Sowa/problems.txt
+# Jan/25/2003
+
+# Here are some problem areas in
+# Sowa's "Knowledge Representation"
+
+1. does not distinguish between
+	existent
+	entity
+	characteristic
+
+2. does not identify domain of characteristics
+e.g., Peirce's attributes
+	existent has
+		physical,
+		abstract
+	characteristic has
+		independent,
+		relative,
+		mediating
+	entity has
+		continuant,
+		occurrent
+
+3. does not define
+	concept
+	existent
+	entity
+	characteristic
+	...

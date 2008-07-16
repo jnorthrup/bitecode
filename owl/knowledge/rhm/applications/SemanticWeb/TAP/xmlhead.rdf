@@ -1,0 +1,29 @@
+set kmapword=YES;
+set kformat=rdf;
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TAP KB Fragment. Made available under the TAP KB Open License. Please
+    see http://tap.stanford.edu/license.html -->
+<rdf:RDF
+    xmlns:thiskb=""
+    xmlns:a="http://tap.stanford.edu/2002/05/GetDataSchema"
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tap="http://tap.stanford.edu/kb/"
+    xmlns:cdnow="http://localhost:8000/cgi-bin/cdnow.cgi/">
+
+  <rdf:Description rdf:about="FashionModelMacPherson,Elle">
+    <rdf:type>FashionModel</rdf:type>
+    <rdfs:label xml:lang="en"> Elle MacPherson</rdfs:label>
+    <hasGender>FemaleGender</hasGender>
+  </rdf:Description>
+  <rdf:Description rdf:about="ActorMacPherson,Elle">
+    <rdf:type>Actor</rdf:type>
+    <rdfs:label xml:lang="en"> Elle MacPherson</rdfs:label>
+  </rdf:Description>
+
+</rdf:RDF>

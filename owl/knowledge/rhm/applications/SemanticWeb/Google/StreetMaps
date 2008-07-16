@@ -1,0 +1,10 @@
+# KEHOME/knowledge/applications/SemanticWeb/Google/StreetMaps.ku
+# Apr/23/2003
+
+# Google Street Maps
+
+map has
+	street address,
+	city,
+	state,
+	zip code;

@@ -1,0 +1,35 @@
+<HTML>
+<XMP>
+# KEHOME/kb/dc.ku
+# Dec/23/2002
+
+# MKR-DC identities
+#==================#
+Resource is existent
+Property is characteristic
+
+resource properties is relation with
+    format=[attribute:1,comment:2],
+    meaning={
+	$1 has comment="$2";
+    }
+
+resource properties is begin relation
+Title;		A name given to the resource. 
+Creator;	An entity primarily responsible for making the content of the resource. 
+Subject;	The topic of the content of the resource. 
+Description;	An account of the content of the resource. 
+Publisher;	An entity responsible for making the resource available 
+Contributor;	An entity responsible for making contributions to the content of the resource. 
+Date;		A date associated with an event in the life cycle of the resource. 
+Type;		The nature or genre of the content of the resource. 
+Format;		The physical or digital manifestation of the resource. 
+Identifier;	An unambiguous reference to the resource within a given context. 
+Source;		A Reference to a resource from which the present resource is derived. 
+Language;	A language of the intellectual content of the resource. 
+Relation;	A reference to a related resource. 
+Coverage;	The extent or scope of the content of the resource. 
+Rights;		Information about rights held in and over the resource. 
+end relation resource properties
+</XMP>
+</HTML>

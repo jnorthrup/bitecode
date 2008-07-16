@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#">
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/ms-wcag.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.openspc2.org/~svg/20010904/addenglish/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.riik.ee/xml/trans/REC-xml-19980210-ee.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://decode.ateneo.edu/martin/w3c/REC-xhtml-basic-20001219/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.dkg.it/w3c/TR/2001/REC-xmlbase-20010627/it/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.isoc.org.il/w3c-wai/guide1.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/rec-dom-level-1.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.gardep.info/W3CWebContentAccessibilityGuidelines1_0ConformanceLoos-lithuanian.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://home.megapass.co.kr/~guldook11/Translation/REC-soap12-part0-20030624.kr.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.gardep.info/LevelDouble-AConformancetoWebContentAccessibilityGuidelines1_0-lithuanian.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.cblue.org/traduzioni/atagit.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.asahi-net.or.jp/~bd9y-ktu/html4rec_f/cover.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/rec-xml-stylesheet/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+
+	<rdf:Description rdf:about="http://geocities.yahoo.com.br/doc2web/W3C/CSS1/REC-CSS1-19990111.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/rec-dom-level2/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.hinnerup.net/reference/w3c/xhtml/1.1/dk/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.gardep.info/LevelTriple-AConformancetoWebContentAccessibilityGuidelines1_0-lithuanian.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/xptr-xmlns20030325.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://jendryschik.de/TR/2002/WD-xframes-20020806/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.utad.pt/~leonelm/w3ctranslations/smil/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/rec-xslt-19991116.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/wai_overview_ms.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.asahi-net.or.jp/~bd9y-ktu/comhtm_f/compact.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.asahi-net.or.jp/~bd9y-ktu/WEBc_f/wcag_f.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://linkage.xrea.jp/documents/W3C/XHTML_FAQ/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/math/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/mu_overviewhtml_ms.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.asahi-net.or.jp/~bd9y-ktu/WEBc_f/wai-pageauth.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.or.kr/Translation/PR-rdf-primer-20031215/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.acmede.de/p3p/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/xptr-framework-20030325/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.amtechs.com/w3c/rec-xptr-element-20030325.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.asahi-net.or.jp/~bd9y-ktu/W3Ccss1/index.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/wai_qt_trans.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.silenth.sytes.net/w3c/Patent-Policy-20030520.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.infoescena.es/achuter/web/w3cdocs/xforms-for-html-authors_es.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/ms-impl-expanded.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.gardep.info/LevelAConformancetoWebContentAccessibilityGuidelines1_0-lithuanian.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.dkg.it/w3c/TR/2004/REC-webarch-20041215/it/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/wai_browse_ms.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.silenth.sytes.net/w3c/process.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/ms-accessibility.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.rakanmedik.org/w3c/ms-wai-overview-slides.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.azk.pl/web/css1.php">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://kazmacky.cool.ne.jp/www/translate/here.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://members.home.nl/holke/w3c/XForms-voor-HTML-Programmeurs/XForms-voor-HTML-Programmeurs.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://mcnnabee.vilabol.uol.com.br/uaag.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://kazmacky.cool.ne.jp/www/translate/raggett.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.azk.pl/web/typy-mediow-xhtml.php">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.tradic.jp/tr/w3c/Talks/WAI-Intro/Overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://cnata.fcc.ro/WAI/References/qt-ro.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/web-kit.html.es.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/Chinese_T/joining.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Trad/putMathMLtoPage.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.pristupnyweb.cz/dokumenty/css-techniky-pro-wcag10/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.xml.or.id/xml-spec.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://cnata.fcc.ro/WAI/gettingstarted/Overview.html.ro">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.swlab.csce.kyushu-u.ac.jp/man/rec-css1/rec-css1.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.swlab.csce.kyushu-u.ac.jp/man/rec-css2/cover.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.tradic.jp/tr/w3c/WAI/intro/wai-overview-slides.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.concordia.tav.ca/~sheng/Namespaces11BIG520040330.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/WebAgency-Requirements.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.acesso.umic.pcm.gov.pt/curriculo/index.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.concordia.tav.ca/~sheng/Namespaces11CN20040330.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.concordia.tav.ca/~seicarea/REC-xml-names11-20040204_it.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/benefits-es.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.xml.or.id/xml-ns.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TR/REC-CCPP-struct-vocab-20040115.html.cn">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/Web-Quality.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/CSS-access.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Trad/WAI-QuickTips.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/SVG-access.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Simp/putMathMLtoPage.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Simp/XML-10pts.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/Advanced.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/06-dom-support.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.n3rds.com.ar/files/docs/estructuras/estructuras_css.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Trad/XML-10pts.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TR/REC-CCPP-struct-vocab-20040115.html.hk">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/TRANSLATIONS-Simp/WAI-QuickTips.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://ferguweb.tx.com.ru/w3/Overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.w3c.org.hk/Chinese_S/joining.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/xhtml/overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://140.96.170.136/~chientai/atitri/translations/Ontology/Overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/xhtml-modul/overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://dewey.yonsei.ac.kr/courses/metadata/rdf/rdf_model_syntax_spec_kor.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.point.uni.it/WAI/">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/html401/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.azk.pl/web/xmlid1.0.php">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/xml/xml1/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://140.96.170.136/~chientai/Talks/WAI-Intro/Overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/xhtml11/overview.html">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://alepira.ural.ru/css2/index.htm">
+		<rdf:type rdf:resource="http://www.w3.org/2003/03/Translations/transSchema#DeadDuck"/>
+	</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,10 @@
+AuthorMerrill,_James isu Author;
+AuthorMerrill,_James has label += " James Merrill";
+AuthorMerrill,_James has label += "James Merrill";
+
+GameAsteroids_3D isu PersonalComputerGame;
+GameAsteroids_3D has label += "Asteroids 3D";
+
+CityStratfordCT isu UnitedStatesCity;
+CityStratfordCT has label += "Stratford";
+CityStratfordCT has locatedIn += ConnecticutState;

@@ -1,0 +1,51 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/phone.mkr
+# Aug/24/2005 Mar/7/2007
+
+# Execution time
+# 2 GHz Pentium 4, Windows XP
+# Aug/20/2005 using MKR r_aka
+#   0:39 min:sec for  1 persons
+#   1:14 min:sec for 89 persons
+# Aug/24/2005 using GDBM r_aka
+#   0:xx min:sec for  1 persons
+#   0:46 min:sec for 89 persons
+
+#===========================#
+# generate GDBM phone table #
+#===========================#
+# input  MKR  phone.rel
+# input  GDBM r_aka (f:/family/db/report/r_aka)
+# output MKR  phone.txt
+# output GDBM phone (f:/family/db/report/phone)
+
+do read from ../bin/family.env done;  # set kbmode,kedb,view
+
+echo := off;
+do clock od "generating GDBM phone table" done;
+
+#do read from aka.rel done;	# MKR  r_aka
+r_aka has arraymode = gdbm;	# GDBM r_aka
+do read from phone.rel done;	# MKR  r_phone
+
+do size/gdbm od r_aka done;
+every p in r_aka; {			# from GDBM r_aka
+	do print od $p done;
+	$p has arraymode = attr;	# use  MKR  KB
+	tuple := r_aka[$p];		# from GDBM r_aka
+	name := tuple[5];		# prefername (see aka.rel)
+	#number := $p[phone];		# from MKR  r_phone
+	number := $p has phone=?;	# from MKR  r_phone
+	phone[$name] := $number;	# to   GDBM phone
+};
+
+do clock od "finished GDBM phone table" done;
+echo := on;
+
+do size/gdbm od phone done;
+do dump/gdbm od phone to phone.txt done;
+! sort with -o phone.txt od phone.txt done;
+
+exit;
+
+# </xmp></html>

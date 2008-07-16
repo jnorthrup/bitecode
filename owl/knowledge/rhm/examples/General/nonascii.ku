@@ -1,0 +1,22 @@
+# 1999/6/19
+# new syntax Jul/24/2005
+
+# NOTE: ASCIIpw.rel has non-ascii character 0xFF
+
+# read UNIX password file
+# rhm;*;1;1;Dr. Richard H. McCullough;/user/home/rhm;/bin/sh
+
+passwd is relation with
+	format=[logname:1;upasswd:2;uid:3;ugroup:4;person:5;uhome:6;ushell:7],
+	meaning="$5 has logname=$1,
+			upasswd=$2,
+			uid=$3,
+			ugroup=$4,
+			uhome=$6,
+			ushell=$7;},
+	relseparator=";";
+
+
+do read from NONASCII.rel with cname=passwd done;
+
+set hfocus = [passwd,logname,uhome,ushell,file];

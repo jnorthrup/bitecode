@@ -1,0 +1,69 @@
+#<html><xmp>
+# KEHOME/knowledge/applications/SemanticWeb/ISO/iso.Class.mkr
+# Sep/24/2005
+
+# ISO 15926-2 definition of owl:Class
+# MKR translation
+
+#=============#
+# declaration #
+#=============#
+    Class isu Class;  # 1
+
+#============#
+# Properties #
+#============#
+	Class isu ClassOfClass;  # 2
+	Class iss* AbstractObject;  # 3
+	Class is Cardinality and RoleAndDomain
+		and (ClassOfAbstractObject or ClassOfIndividual);  # 4
+
+#==========#
+# comments #
+#==========#
+# DEFINITION
+	Class iss Thing with  # 5
+		natural partition,
+		membership criteria,
+		membership set;
+	Thing isxor Class, notClass;  # 6
+	if do membership criteria od existent done;  # 7
+	then existent isu Class; 
+	else existent isu notClass;
+	fi;
+	if existent isu Class;  # 8
+	then existent ismem ClassSet;
+	fi;
+
+# membership unchanging in space-time
+# member properties change with time
+	at space=any, time=any, view=v {member isu Class;};  # 9
+	at time=t {member has property=p;};  # 10
+
+# non-wellfounded set theory
+# class may be a member of itself or another class
+	Class has domain = non-wellfounded set;  # 11
+	at view=non-wellfounded set theory {  # 12
+		Class isu Class;  # 13
+		Class isu anotherClass;  # 14
+	};
+
+# null Class that has no members
+	at view=real world {nothing isu Nothing;};  # 15
+	at view=possible world {something isu Nothing;};  # 16
+
+# Classification of known members of a Class
+	man do classify od known member to Class done;  # 17
+
+# EXAMPLE
+	Centrifugal pump isu Class;  # 18
+	Mechanical equipment isu Class;  # 19
+	Temperature isu Class;  # 20
+
+	Commercial fusion reactor isu Class;  # 21
+	at time=present {nothing isu Commerial fusion reactor;};  # 22
+	at time=future {something isu Commerial fusion reactor;};  # 23
+
+	Centigrade scale isu Class;  # 24
+
+#</xmp></html>

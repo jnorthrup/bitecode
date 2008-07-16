@@ -1,0 +1,8 @@
+# Jun/22/2002
+# new syntax Jul/24/2005
+
+teach is action with
+	format = [teacher:1 do teach od subject:2 to student:3],
+	meaning = {teacher:1,student:3 isa person;
+		subject:2 isa knowledge;
+		teacher:1 do give od subject:2 to student:3 done;};

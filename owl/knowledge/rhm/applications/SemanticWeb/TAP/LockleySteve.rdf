@@ -1,0 +1,7 @@
+set kformat = rdf
+
+  <rdf:Description rdf:about="AuthorLockleySteve">
+    <rdf:type>Author</rdf:type>
+    <rdfs:label xml:lang="en">Steve Lockley</rdfs:label>
+    <notes>When we figure out how to do genre correctly, this guy should get HorrorGenre.</notes>
+  </rdf:Description>

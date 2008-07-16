@@ -1,0 +1,17 @@
+
+What is Knowledge Explorer?
+===========================
+
+Knowledge Explorer is an interactive tool for organizing knowledge.
+It helps the user to record, change and search knowledge,
+and provides extensive error checking to ensure
+the internal consistency of the knowledge.
+Interaction with Knowledge Explorer uses simple
+English-like statements, commands and questions.
+
+Knowledge is an identification of a fact of reality,
+using words and sentences.
+The internal knowledge structure consists of concept-hierarchies
+and space-time-dependent events.
+The principal external knowledge structures are relational databases
+and transliterated English.

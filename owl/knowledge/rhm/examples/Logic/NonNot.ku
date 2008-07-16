@@ -1,0 +1,30 @@
+# KEHOME/knowledge/ExamplesLogic/NonNot.ku
+# Jul/26/2002
+
+#===============================#
+# Definition of "non" and "not" #
+#                               #
+# Richard H. McCullough         #
+#===============================#
+
+# "non" is relative to genus
+# "not" is relative to existent
+#==============================
+existent ise G or not G
+G isa existent
+G ise S or non S
+
+non S isa G
+not S ise non S or not G
+
+
+
+# with intermediate concepts
+# between G and existent
+#===========================
+existent ise* G
+G isa* existent
+G ise S or non S
+
+non S isa G
+not S ise non S	or non G or ... or nonexistent

@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+<title>RDF Validator Results</title>
+<link href='http://www.w3.org/StyleSheets/base.css' rel='stylesheet' type='text/css'/>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<style type='text/css'>
+  td {    background:#EEEEEE;    font-family:'courier new',courier,serif;    border-style: solid;    border-width: 1px;    border-color: black;    padding: 2px;  }  table {    border-style: solid;    border-width: 1px;    border-color: black;  }</style>
+</head>
+<body>
+<h1><a href='http://www.w3.org/'><img
+src='http://www.w3.org/Icons/WWW/w3c_home' alt='W3C' border='0'
+    height='48' width='72' /></a>
+RDF Validation Results
+<a href='http://www.w3.org/RDF/'
+    title='RDF Resource Description Framework'><img border='0'
+    src='http://www.w3.org/RDF/icons/rdf_powered_button.48'
+    alt='RDF Resource Description Framework Powered Icon' /></a></h1>
+<p><a href='#source'>Source</a> | <a href='#triples'>Triples</a> | <a href='#messages'>Messages</a> | <a href='#graph'>Graph</a> | <a href='#feedback'>Feedback</a> | <a href='http://www.w3.org/RDF/Validator/'>Back to Validator Input</a></p>
+<hr title='original source' /><h3><a name='source' id='source'>The original RDF/XML document</a></h3><pre>
+<a name="1">1</a>: &lt;?xml version="1.0" encoding="UTF-8"?>
+<a name="2">2</a>: &lt;!-- KEHOME/knowledge/theory/OWL/basicmkr.owl -->
+<a name="3">3</a>: &lt;!-- May/18/2003 -->
+<a name="4">4</a>: 
+<a name="5">5</a>: &lt;!--
+<a name="6">6</a>: The purpose of this note is to clarify the basic
+<a name="7">7</a>: relations between MKR and OWL.
+<a name="8">8</a>: 
+<a name="9">9</a>: MKE detects non-disjoint units and species by checking 
+<a name="10">10</a>: for units which have multiple primitive concepts,
+<a name="11">11</a>: and for species that have multiple genus concepts.  
+<a name="12">12</a>: MKE considers this "ambiguity" to be an error, 
+<a name="13">13</a>: but has the ability to process all ambiguities.
+<a name="14">14</a>: -->
+<a name="15">15</a>: 
+<a name="16">16</a>: &lt;rdf:RDF
+<a name="17">17</a>:     xmlns:mkr  = "http://rhm.cdepot.net/xml/"
+<a name="18">18</a>:     xmlns      = "http://rhm.cdepot.net/xml/"
+<a name="19">19</a>:     xml:base   = "http://rhm.cdepot.net/xml/"
+<a name="20">20</a>:     xmlns:owl  = "http://www.w3.org/2002/07/owl#"
+<a name="21">21</a>:     xmlns:rdf  = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<a name="22">22</a>:     xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#"
+<a name="23">23</a>:     xmlns:dc   = "http://purl.org/dc/elements/1.1/"
+<a name="24">24</a>:     xmlns:xsd  = "http://www.w3.org/2001/XMLschema#">
+<a name="25">25</a>:  
+<a name="26">26</a>: &lt;rdf:Property  rdf:ID="similarTo">
+<a name="27">27</a>:     &lt;rdfs:label>   is similar to &lt;/rdfs:label>
+<a name="28">28</a>:     &lt;rdfs:comment> same basic idea, but subtle differences &lt;/rdfs:comment>
+<a name="29">29</a>:     &lt;rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<a name="30">30</a>:     &lt;rdfs:range  rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<a name="31">31</a>: &lt;/rdf:Property>
+<a name="32">32</a>:  
+<a name="33">33</a>: &lt;owl:Thing rdf:ID="existent"> &lt;owl:sameAs
+<a name="34">34</a>:     rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<a name="35">35</a>:     &lt;/owl:Thing>
+<a name="36">36</a>: &lt;owl:Thing rdf:ID="nonexistent"> &lt;mkr:similarTo
+<a name="37">37</a>:     rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+<a name="38">38</a>:     &lt;/owl:Thing>
+<a name="39">39</a>: &lt;owl:Thing rdf:ID="concept"> &lt;mkr:similarTo
+<a name="40">40</a>:     rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+<a name="41">41</a>:     &lt;/owl:Thing>
+<a name="42">42</a>: &lt;owl:Thing rdf:ID="species"> &lt;mkr:similarTo
+<a name="43">43</a>:     rdf:resource="http://www.w3.org/2002/07/owl#subClass"/>
+<a name="44">44</a>:     &lt;/owl:Thing>
+<a name="45">45</a>: &lt;owl:Thing rdf:ID="unit"> &lt;mkr:similarTo
+<a name="46">46</a>:     rdf:resource="http://www.w3.org/2002/07/owl#Individual"/>
+<a name="47">47</a>:     &lt;/owl:Thing>
+<a name="48">48</a>: &lt;owl:Thing rdf:ID="entity"/>
+<a name="49">49</a>: &lt;owl:Thing rdf:ID="characteristic"> &lt;owl:sameAs
+<a name="50">50</a>:     rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<a name="51">51</a>:     &lt;/owl:Thing>
+<a name="52">52</a>: &lt;owl:Thing rdf:ID="statement"> &lt;mkr:similarTo
+<a name="53">53</a>:     rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+<a name="54">54</a>:     &lt;/owl:Thing>
+<a name="55">55</a>:  
+<a name="56">56</a>: &lt;rdf:Property  rdf:ID="is">
+<a name="57">57</a>:     &lt;rdfs:label>   is &lt;/rdfs:label>
+<a name="58">58</a>:     &lt;rdfs:comment> is identical to, is an alias of &lt;/rdfs:comment>
+<a name="59">59</a>:     &lt;owl:sameAs  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+<a name="60">60</a>:     &lt;rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<a name="61">61</a>:     &lt;rdfs:range  rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<a name="62">62</a>:     &lt;/rdf:Property>
+<a name="63">63</a>:  
+<a name="64">64</a>: &lt;rdf:Property  rdf:ID="isu">
+<a name="65">65</a>:     &lt;rdfs:label>   is unit of &lt;/rdfs:label>
+<a name="66">66</a>:     &lt;rdfs:comment> is a disjoint unit of the primitive concept &lt;/rdfs:comment>
+<a name="67">67</a>:     &lt;owl:inverseOf      rdf:resource="#isp"/>
+<a name="68">68</a>:     &lt;rdfs:subPropertyOf rdf:resource="#isa"/>
+<a name="69">69</a>:     &lt;mkr:similarTo      rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+<a name="70">70</a>:     &lt;rdfs:domain        rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<a name="71">71</a>:     &lt;rdfs:range         rdf:resource="#concept"/>
+<a name="72">72</a>:     &lt;/rdf:Property>
+<a name="73">73</a>:  
+<a name="74">74</a>: &lt;rdf:Property           rdf:ID="iss">
+<a name="75">75</a>:     &lt;rdfs:label>   is species of &lt;/rdfs:label>
+<a name="76">76</a>:     &lt;rdfs:comment> is a disjoint species of the genus concept &lt;/rdfs:comment>
+<a name="77">77</a>:     &lt;owl:inverseOf      rdf:resource="#isg"/>
+<a name="78">78</a>:     &lt;rdfs:subPropertyOf rdf:resource="#isa"/>
+<a name="79">79</a>:     &lt;mkr:similarTo      rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+<a name="80">80</a>:     &lt;rdfs:domain        rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<a name="81">81</a>:     &lt;rdfs:range         rdf:resource="#concept"/>
+<a name="82">82</a>:     &lt;/rdf:Property>
+<a name="83">83</a>:  
+<a name="84">84</a>: &lt;rdf:Property  rdf:ID="isa">
+<a name="85">85</a>:     &lt;rdfs:label>   is a &lt;/rdfs:label>
+<a name="86">86</a>:     &lt;rdfs:comment> is a disjoint unit or species of the concept &lt;/rdfs:comment>
+<a name="87">87</a>:     &lt;owl:inverseOf rdf:resource="#isc"/>
+<a name="88">88</a>:     &lt;rdfs:domain   rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+<a name="89">89</a>:     &lt;rdfs:range    rdf:resource="#concept"/>
+<a name="90">90</a>:     &lt;/rdf:Property>
+<a name="91">91</a>:  
+<a name="92">92</a>: &lt;rdf:Property  rdf:ID="isp"
+<a name="93">93</a>:     rdfs:label="is primitive concept of"
+<a name="94">94</a>:     rdfs:comment="is the primitive concept of disjoint units"/>
+<a name="95">95</a>:  
+<a name="96">96</a>: &lt;rdf:Property  rdf:ID="isg"
+<a name="97">97</a>:     rdfs:label="is genus concept of"
+<a name="98">98</a>:     rdfs:comment="is the genus concept of disjoint species"/>
+<a name="99">99</a>:  
+<a name="100">100</a>: &lt;rdf:Property  rdf:ID="isc"
+<a name="101">101</a>:     rdfs:label="is concept of"
+<a name="102">102</a>:     rdfs:comment="is the concept of disjoint units or species"/>
+<a name="103">103</a>: 
+<a name="104">104</a>: &lt;/rdf:RDF>
+<a name="105">105</a>: 
+</pre>
+<hr title='triples' />
+<h3><a name='triples' id='triples'>Triples of the Data Model</a></h3>
+<table frame='border' rules='all'><tr><td><b>Number</b></td><td><b>Subject</b></td><td><b>Predicate</b></td><td><b>Object</b></td></tr>
+<tr><td>1</td>
+<td><a href='http://rhm.cdepot.net/xml/#similarTo'>http://rhm.cdepot.net/xml/#similarTo</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>2</td>
+<td><a href='http://rhm.cdepot.net/xml/#similarTo'>http://rhm.cdepot.net/xml/#similarTo</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is similar to&quot;
+</td>
+</tr>
+<tr><td>3</td>
+<td><a href='http://rhm.cdepot.net/xml/#similarTo'>http://rhm.cdepot.net/xml/#similarTo</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;same basic idea, but subtle differences&quot;
+</td>
+</tr>
+<tr><td>4</td>
+<td><a href='http://rhm.cdepot.net/xml/#similarTo'>http://rhm.cdepot.net/xml/#similarTo</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#domain'>http://www.w3.org/2000/01/rdf-schema#domain</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>5</td>
+<td><a href='http://rhm.cdepot.net/xml/#similarTo'>http://rhm.cdepot.net/xml/#similarTo</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#range'>http://www.w3.org/2000/01/rdf-schema#range</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>6</td>
+<td><a href='http://rhm.cdepot.net/xml/#existent'>http://rhm.cdepot.net/xml/#existent</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>7</td>
+<td><a href='http://rhm.cdepot.net/xml/#existent'>http://rhm.cdepot.net/xml/#existent</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#sameAs'>http://www.w3.org/2002/07/owl#sameAs</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>8</td>
+<td><a href='http://rhm.cdepot.net/xml/#nonexistent'>http://rhm.cdepot.net/xml/#nonexistent</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>9</td>
+<td><a href='http://rhm.cdepot.net/xml/#nonexistent'>http://rhm.cdepot.net/xml/#nonexistent</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Nothing'>http://www.w3.org/2002/07/owl#Nothing</a></td>
+</tr>
+<tr><td>10</td>
+<td><a href='http://rhm.cdepot.net/xml/#concept'>http://rhm.cdepot.net/xml/#concept</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>11</td>
+<td><a href='http://rhm.cdepot.net/xml/#concept'>http://rhm.cdepot.net/xml/#concept</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Class'>http://www.w3.org/2002/07/owl#Class</a></td>
+</tr>
+<tr><td>12</td>
+<td><a href='http://rhm.cdepot.net/xml/#species'>http://rhm.cdepot.net/xml/#species</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>13</td>
+<td><a href='http://rhm.cdepot.net/xml/#species'>http://rhm.cdepot.net/xml/#species</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#subClass'>http://www.w3.org/2002/07/owl#subClass</a></td>
+</tr>
+<tr><td>14</td>
+<td><a href='http://rhm.cdepot.net/xml/#unit'>http://rhm.cdepot.net/xml/#unit</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>15</td>
+<td><a href='http://rhm.cdepot.net/xml/#unit'>http://rhm.cdepot.net/xml/#unit</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Individual'>http://www.w3.org/2002/07/owl#Individual</a></td>
+</tr>
+<tr><td>16</td>
+<td><a href='http://rhm.cdepot.net/xml/#entity'>http://rhm.cdepot.net/xml/#entity</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>17</td>
+<td><a href='http://rhm.cdepot.net/xml/#characteristic'>http://rhm.cdepot.net/xml/#characteristic</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>18</td>
+<td><a href='http://rhm.cdepot.net/xml/#characteristic'>http://rhm.cdepot.net/xml/#characteristic</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#sameAs'>http://www.w3.org/2002/07/owl#sameAs</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>19</td>
+<td><a href='http://rhm.cdepot.net/xml/#statement'>http://rhm.cdepot.net/xml/#statement</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>20</td>
+<td><a href='http://rhm.cdepot.net/xml/#statement'>http://rhm.cdepot.net/xml/#statement</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement</a></td>
+</tr>
+<tr><td>21</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>22</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is&quot;
+</td>
+</tr>
+<tr><td>23</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is identical to, is an alias of&quot;
+</td>
+</tr>
+<tr><td>24</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#sameAs'>http://www.w3.org/2002/07/owl#sameAs</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#sameAs'>http://www.w3.org/2002/07/owl#sameAs</a></td>
+</tr>
+<tr><td>25</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#domain'>http://www.w3.org/2000/01/rdf-schema#domain</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>26</td>
+<td><a href='http://rhm.cdepot.net/xml/#is'>http://rhm.cdepot.net/xml/#is</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#range'>http://www.w3.org/2000/01/rdf-schema#range</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#Thing'>http://www.w3.org/2002/07/owl#Thing</a></td>
+</tr>
+<tr><td>27</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>28</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is unit of&quot;
+</td>
+</tr>
+<tr><td>29</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is a disjoint unit of the primitive concept&quot;
+</td>
+</tr>
+<tr><td>30</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#inverseOf'>http://www.w3.org/2002/07/owl#inverseOf</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#isp'>http://rhm.cdepot.net/xml/#isp</a></td>
+</tr>
+<tr><td>31</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#subPropertyOf'>http://www.w3.org/2000/01/rdf-schema#subPropertyOf</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+</tr>
+<tr><td>32</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+</tr>
+<tr><td>33</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#domain'>http://www.w3.org/2000/01/rdf-schema#domain</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#List'>http://www.w3.org/1999/02/22-rdf-syntax-ns#List</a></td>
+</tr>
+<tr><td>34</td>
+<td><a href='http://rhm.cdepot.net/xml/#isu'>http://rhm.cdepot.net/xml/#isu</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#range'>http://www.w3.org/2000/01/rdf-schema#range</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#concept'>http://rhm.cdepot.net/xml/#concept</a></td>
+</tr>
+<tr><td>35</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>36</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is species of&quot;
+</td>
+</tr>
+<tr><td>37</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is a disjoint species of the genus concept&quot;
+</td>
+</tr>
+<tr><td>38</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#inverseOf'>http://www.w3.org/2002/07/owl#inverseOf</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#isg'>http://rhm.cdepot.net/xml/#isg</a></td>
+</tr>
+<tr><td>39</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#subPropertyOf'>http://www.w3.org/2000/01/rdf-schema#subPropertyOf</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+</tr>
+<tr><td>40</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://rhm.cdepot.net/xml/similarTo'>http://rhm.cdepot.net/xml/similarTo</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>http://www.w3.org/2000/01/rdf-schema#subClassOf</a></td>
+</tr>
+<tr><td>41</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#domain'>http://www.w3.org/2000/01/rdf-schema#domain</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#List'>http://www.w3.org/1999/02/22-rdf-syntax-ns#List</a></td>
+</tr>
+<tr><td>42</td>
+<td><a href='http://rhm.cdepot.net/xml/#iss'>http://rhm.cdepot.net/xml/#iss</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#range'>http://www.w3.org/2000/01/rdf-schema#range</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#concept'>http://rhm.cdepot.net/xml/#concept</a></td>
+</tr>
+<tr><td>43</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>44</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is a&quot;
+</td>
+</tr>
+<tr><td>45</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is a disjoint unit or species of the concept&quot;
+</td>
+</tr>
+<tr><td>46</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/2002/07/owl#inverseOf'>http://www.w3.org/2002/07/owl#inverseOf</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#isc'>http://rhm.cdepot.net/xml/#isc</a></td>
+</tr>
+<tr><td>47</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#domain'>http://www.w3.org/2000/01/rdf-schema#domain</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#List'>http://www.w3.org/1999/02/22-rdf-syntax-ns#List</a></td>
+</tr>
+<tr><td>48</td>
+<td><a href='http://rhm.cdepot.net/xml/#isa'>http://rhm.cdepot.net/xml/#isa</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#range'>http://www.w3.org/2000/01/rdf-schema#range</a></td>
+<td><a href='http://rhm.cdepot.net/xml/#concept'>http://rhm.cdepot.net/xml/#concept</a></td>
+</tr>
+<tr><td>49</td>
+<td><a href='http://rhm.cdepot.net/xml/#isp'>http://rhm.cdepot.net/xml/#isp</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>50</td>
+<td><a href='http://rhm.cdepot.net/xml/#isp'>http://rhm.cdepot.net/xml/#isp</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is primitive concept of&quot;
+</td>
+</tr>
+<tr><td>51</td>
+<td><a href='http://rhm.cdepot.net/xml/#isp'>http://rhm.cdepot.net/xml/#isp</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is the primitive concept of disjoint units&quot;
+</td>
+</tr>
+<tr><td>52</td>
+<td><a href='http://rhm.cdepot.net/xml/#isg'>http://rhm.cdepot.net/xml/#isg</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>53</td>
+<td><a href='http://rhm.cdepot.net/xml/#isg'>http://rhm.cdepot.net/xml/#isg</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is genus concept of&quot;
+</td>
+</tr>
+<tr><td>54</td>
+<td><a href='http://rhm.cdepot.net/xml/#isg'>http://rhm.cdepot.net/xml/#isg</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is the genus concept of disjoint species&quot;
+</td>
+</tr>
+<tr><td>55</td>
+<td><a href='http://rhm.cdepot.net/xml/#isc'>http://rhm.cdepot.net/xml/#isc</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></td>
+<td><a href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>http://www.w3.org/1999/02/22-rdf-syntax-ns#Property</a></td>
+</tr>
+<tr><td>56</td>
+<td><a href='http://rhm.cdepot.net/xml/#isc'>http://rhm.cdepot.net/xml/#isc</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#label'>http://www.w3.org/2000/01/rdf-schema#label</a></td>
+<td>
+&quot;is concept of&quot;
+</td>
+</tr>
+<tr><td>57</td>
+<td><a href='http://rhm.cdepot.net/xml/#isc'>http://rhm.cdepot.net/xml/#isc</a></td>
+<td><a href='http://www.w3.org/2000/01/rdf-schema#comment'>http://www.w3.org/2000/01/rdf-schema#comment</a></td>
+<td>
+&quot;is the concept of disjoint units or species&quot;
+</td>
+</tr>
+</table>
+<h2><a name='messages' id='messages'>Validation Results</a></h2>
+<p>Your RDF document validated successfully.</p>
+<hr title='Problem reporting' /><h3><a name='feedback' id='feedback'>Feedback</a></h3><p>If you suspect the parser is in error, please enter an explanation below and then press the <b>Submit problem report</b> button, to mail the report (and listing) to <i>www-rdf-validator@w3.org</i></p><form enctype='text/plain' method='post' action='mailto:www-rdf-validator@w3.org'><textarea cols='60' rows='4' name='report'></textarea>
+<input type='hidden' name='RDF' value="&lt;?xml version=&quot;1.0&quot;&gt;
+" />
+<input type='submit' value='Submit problem report' /></form>
+<p><a href='#source'>Source</a> | <a href='#triples'>Triples</a> | <a href='#messages'>Messages</a> | <a href='#graph'>Graph</a> | <a href='#feedback'>Feedback</a> | <a href='http://www.w3.org/RDF/Validator/'>Back to Validator Input</a></p>
+</body></html>

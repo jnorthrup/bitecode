@@ -1,0 +1,233 @@
+$ cd /home/ke/test
+$ cat dbtap.mkr
+<HTML>
+<XMP>
+# KEHOME/test/dbtap.mkr
+# May/22/2003
+
+# build GDBM database for TAP KB
+
+set rdfdir = http://rhm.cdepot.net/db/tap;
+set dbdir = tap;
+
+do read from bin/dmoz.mkr done;
+do open dmoz od $dbdir done;
+do read dmoz od $rdfdir done;
+do close dmoz od $dbdir done;
+
+Resource isc* ?;
+! deletecomment od dbtap.out done;
+
+exit;
+</XMP>
+</HTML>
+
+$ ke dbtap.mkr
+
+
+
+{ http://rhm.cdepot.net/db/tap is netscape ; } has truth_value = false;
+
+{ http://rhm.cdepot.net/db/tap is kt ; } has truth_value = false;
+
+{ http://rhm.cdepot.net/db/tap is dmoz ; } has truth_value = false;
+
+{ http://rhm.cdepot.net/db/tap is tap ; } has truth_value = false;
+
+owl:Thing
+/  ActivityType
+/  AttributeValueType
+/  EventType
+/  MediaObjectType
+/  ProductType
+/  ProfessionalType
+/  QuantityType
+/  Entity
+//    Enumeration
+//    Intersection
+//    Union
+//    AllDifferent
+//    DeprecatedClass
+//    Ontology
+//    List
+//    Container
+/  Property
+//    DataRange
+//    DeprecatedProperty
+//    Restriction
+//    Datatype
+//    Literal
+//    type
+//    domain
+//    range
+//    subClassOf
+//    subPropertyOf
+/  Statement
+/  Account
+/  Activity
+//    Service
+//    Sport
+//    Travel
+/  ActivityType
+/  Agent
+//    Organization
+//    Person
+//    PopularCharacter
+/  Animal
+/  Array
+/  AttributeValueType
+/  Award
+/  BeliefSystem
+/  BiologicalEvent
+/  Bitmap
+/  BodyPart
+/  Brand
+/  Broadcast
+/  CommunicationMedium
+/  Concert
+/  ConflictEvent
+/  Convention
+/  Cuisine
+/  CyberPlace
+/  Event
+//    Auction
+//    BiologicalEvent
+//    Broadcast
+//    Concert
+//    ConflictEvent
+//    Convention
+//    HistoricEvent
+//    Project
+//    SocioReligiousEvent
+//    SportsEvent
+/  EventType
+/  FieldOfStudy
+/  FoodActivity
+/  Genre
+/  HistoricEvent
+/  Intangible
+//    Account
+//    Award
+//    BeliefSystem
+//    Brand
+//    CommunicationMedium
+//    Cuisine
+//    CyberPlace
+//    FieldOfStudy
+//    Gender
+//    Genre
+//    MediaObject
+//    Quantity
+//    SpatialDirection
+//    StateOfMatter
+//    UnitOfMeasure
+/  Literal
+//    Array
+//    Bitmap
+//    Number
+//    String
+/  Material
+/  MediaObject
+/  MediaObjectType
+/  Node
+//    Activity
+///      Service
+///      Sport
+///      Travel
+//    Agent
+///      Organization
+///      Person
+///      PopularCharacter
+//    Event
+///      Auction
+///      BiologicalEvent
+///      Broadcast
+///      Concert
+///      ConflictEvent
+///      Convention
+///      HistoricEvent
+///      Project
+///      SocioReligiousEvent
+///      SportsEvent
+//    Intangible
+///      Account
+///      Award
+///      BeliefSystem
+///      Brand
+///      CommunicationMedium
+///      Cuisine
+///      CyberPlace
+///      FieldOfStudy
+///      Gender
+///      Genre
+///      MediaObject
+///      Quantity
+///      SpatialDirection
+///      StateOfMatter
+///      UnitOfMeasure
+//    Literal
+///      Array
+///      Bitmap
+///      Number
+///      String
+//    PropertyType
+///      ReflexivePropertyType
+///      TaxonomicPropertyType
+////        subGenreOf
+///      TitlePropertyType
+////        manufacturerModelName
+////        title
+///      TransitivePropertyType
+////        subClassOf
+//    Tangible
+///      Animal
+///      BodyPart
+///      Material
+///      Place
+///      Plant
+///      Product
+/  Number
+/  Organization
+/  Person
+/  Place
+/  Plant
+/  PopularCharacter
+/  Product
+/  ProductType
+/  ProfessionalType
+/  Project
+/  PropertyType
+//    ReflexivePropertyType
+//    TaxonomicPropertyType
+///      subGenreOf
+//    TitlePropertyType
+///      manufacturerModelName
+///      title
+//    TransitivePropertyType
+///      subClassOf
+/  Quantity
+/  QuantityType
+/  ReflexivePropertyType
+/  Service
+/  SocioReligiousEvent
+/  SpatialDirection
+/  Sport
+/  SportsEvent
+/  StateOfMatter
+/  String
+/  Tangible
+//    Animal
+//    BodyPart
+//    Material
+//    Place
+//    Plant
+//    Product
+/  TaxonomicPropertyType
+//    subGenreOf
+/  TitlePropertyType
+//    manufacturerModelName
+//    title
+/  TransitivePropertyType
+//    subClassOf
+/  UnitOfMeasure
+$

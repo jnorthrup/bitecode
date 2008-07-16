@@ -1,0 +1,39 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/surname.mkr
+# 1999/Aug/6
+# new syntax Aug/17/2005
+
+#===========================#
+# generate surname relation #
+#===========================#
+outfile := surname.rel;
+relname := r_surname;
+
+echo := off;
+#do clock od "generating surname relation" done;
+
+do read from family.ku done;  # load knowledge base
+
+! rm -f $outfile done;
+do print od "begin relation $relname;" to $outfile done;
+every p isu person; {
+	surname := do surname od $p done;
+	#$p[surname] := $surname;
+	#name := $p[prefername];
+
+	$p has surname=$surname;
+	name := $p has prefername=?;
+
+	do print od "$surname, $p, $name;" to $outfile done;
+};
+do print od "end relation $relname;" to $outfile done;
+
+
+! sort with -u -o $outfile to $outfile done;  # sort relation
+! cat from $outfile done;  # display relation
+
+
+#do clock od "finished surname list" done;
+echo := on;
+
+# </xmp></html>

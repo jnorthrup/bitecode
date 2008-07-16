@@ -1,0 +1,6 @@
+
+# manual translation for anonymous nodes (from my Apr/21/2003 email)
+Viewer isany ThroughTheLens, WindowOnTopOfCamera;
+BodyWithNonAdjustableShutterSpeed isa Body with not shutter-speed;
+SLR isa Camera with ViewFinder = ThroughTheLens;
+Large-Format isa Camera with body = BodyWithNonAdjustableShutterSpeed;

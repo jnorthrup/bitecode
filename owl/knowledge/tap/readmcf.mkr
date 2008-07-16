@@ -1,0 +1,16 @@
+# <html><xmp>
+# KEHOME/knowledge/tap/readmcf.mkr
+# Feb/26/2007
+
+# translate tap.mcf to tap.mkr
+
+
+#! awk -f /home/ke/src/QuoteMCF.awk tap.mcf >tap.qmcf
+
+do read mcf from tap.qmcf done;
+
+! log2mkr readmcf.log tap.mkr done;
+
+exit;
+
+# </xmp></html>

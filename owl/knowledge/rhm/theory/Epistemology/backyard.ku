@@ -1,0 +1,54 @@
+# 1999/2/8
+
+#=====================#
+# Integration example #
+#=====================#
+
+# Context
+#========
+at space=backyard, time=now, view=v_backyard
+animal ise I,dutchess,rex,samantha,tiger
+
+# Characteristic
+#===============
+I        do identify,see,hear,talk; I has white
+dutchess do run,bark; dutchess has black
+rex      do run,bark; rex has yellow
+samantha do run,meow; samantha has brown
+tiger    do run,meow; tiger has orange
+
+
+# Definition
+#===========
+
+# Statement
+#==========
+debug=EVENT
+kformat = cu  # action event
+I do identify [dutchess,rex,samantha,tiger]
+
+dutchess,rex,samantha,tiger do run
+dutchess has black
+rex has yellow
+samantha has brown
+tiger has orange
+dutchess,rex do bark
+samantha,tiger do meow
+
+
+# Integrate & Differentiate
+#==========================
+debug = MERGE
+kformat = ku  # action declaration
+at view=v_integrate
+animal do speak
+speak isi talk,bark,meow
+
+!isd animal with speak
+person is animal/speak_talk;	person is ?
+dog is animal/speak_bark;	dog is ?
+cat is animal/speak_meow;	cat is ?
+animal ise* ?
+
+
+hfocus = [animal,speak,event, newword,newstatement]

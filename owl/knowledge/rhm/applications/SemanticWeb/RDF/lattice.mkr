@@ -1,0 +1,15 @@
+# KEHOME/knowledge/applications/SemanticWeb/RDF/lattice.mkr
+# May/29/2003
+
+do print od "","<--  original RDF ontology lattice -->" done;
+do read from rdfVDLA.rdf done;
+owl:Thing isc* ?;
+
+do print od "","<--  simplify lattice -->" done;
+do simplify lattice od owl:Thing done;
+
+do print od "","<--  simplified RDF ontology lattice -->" done;
+owl:Thing isc* ?;
+
+! deletecomment od lattice.out to lattice.save done;
+#exit;

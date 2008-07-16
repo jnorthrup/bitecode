@@ -1,0 +1,85 @@
+#<html><xmp>
+# KEHOME/knowledge/tap/BADspo.tap
+# Mar/4/2007
+
+# TAP Upper Ontology
+
+begin hierarchy cps;
+Resource;
+/	Activity;
+//		Sport;
+///			SportBaseball;
+///			SportBasketball;
+///			SportFootball;
+/	Agent;
+//		Organization;
+///			GeoPoliticalRegion;
+////				Country;
+///			SportsOrganization;
+////				SportsTeam;
+/////					BaseballTeam;
+/////					BasketballTeam;
+//		Person;
+///			Artist;
+////				Actor;
+////				MovieDirector;
+////				Musician;
+///			Athlete;
+///			Author;
+///			Politician;
+/	Intangible;
+//		MediaObject;
+///			Movie;
+///			TelevisionShow;
+////				MedicalDramaTVShow;
+/	Tangible;
+//		Place;
+///			GeoPoliticalRegion;
+//		Product;
+///			HeathCareProduct;
+////				CosmeticProduct;
+/////					MakeUp;
+//////						LipMakeUp;
+///////							LipColor;
+///			ToysAndGames;
+////				Game;
+
+/	Class;
+//		ActivityType;
+///			SportBaseball;
+///			SportBasketball;
+///			SportFootball;
+//		ProductType;
+///			CosmeticProduct;
+////				MakeUp;
+/////					LipMakeUp;
+//////						LipColor;
+///			Game;
+///			LipColor;
+///			LipMakeUp;
+////				LipColor;
+///			MakeUp;
+////				LipMakeUP;
+/////					LipColor;
+//		ProfessionalType;
+///			Actor;
+end hierarchy cps;
+
+
+# mKR relation RDF
+existent             is  Resource;
+#   entity           is  Class;
+#   attribute        iss Property;
+#   binary relation  iss Property;
+#   statement        isg Statement;
+# group              isg Container;
+#   list (ingroup)   iss Seq;
+#   set  (ingroup)   iss Bag;
+#   enum (exgroup)   iss Alt;
+# isa* (isu*|iss*)   is  type;           # Resource type Class;
+# iss* (is|iss+)     is  subClassOf;     # Class subClassOf Class;
+# iss* (is|iss+)     is  subPropertyOf;  # Property subPropertyOf Property;
+# isall (ingroup)    iss member;         # Container member Resource;
+# isany (exgroup)    iss member;         # Container member Resource;
+
+#</xmp></html>

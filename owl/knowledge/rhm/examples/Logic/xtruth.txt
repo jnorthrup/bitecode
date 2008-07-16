@@ -1,0 +1,103 @@
+# 1999/4/15
+
+#==================#
+# Contextual Truth #
+#==================#
+
+# Peikoff, OPAR, page 172-174
+
+    Man is a being of limited knowledge -- and he must, therefore,
+identify the cognitive context of his conclusions.  In any situation
+where there is reason to suspect that a variety of factors is relevant
+to the truth, only some of which are presently known, he is obliged
+to acknowledge this fact.  The implicit or explicit preamble to his
+conclusion must be: "On the basis of the available evidence, i.e.,
+within the context of the factors so far discovered, the following
+is the proper conclusion to draw."  Thereafter, the individual must
+continue to observe and identify; should new information warrant it,
+he must qualify his conclusion accordingly.
+
+    If a man follows this policy, he will find that his knowledge at
+one stage is not contradicted by later discoveries.  He will find
+that the discoveries expand his understanding; that he learns more
+about the conditions on which his conclusions depend; that he moves
+from relatively generalized, primitive observations to increasingly
+detailed, sophisticated formulations.  He will also find that the
+process is free of epistemological trauma.  The advanced conclusions
+augment and enhance his earlier knowledge; they do not clash with
+or annul it.
+
+    I have already illustrated this fact in the discussion of
+contextual definitions.  Here is another kind of example, drawn
+from the field of scientific induction.  Some time ago, medical
+researchers learned to identify four types of blood: A, B, AB, and O.
+When blood was transfused from one individual to another, some of
+these blood types proved to be compatible while others were not
+(an undesirable reaction, hemolysis, occurred).  For example, the
+blood of an A-type donor was compatible with that of an A-type
+recipient, but not with that of a B-type.  Later, a new discovery
+was made: in certain cases, an undesirable reaction occurred even
+when blood of type A was given to an A-type recipient.  Further
+investigation revealed another factor at work, the RH factor,
+which was found in the blood of some individuals, but not others.
+The initial generalization (for short, "A bloods are compatible")
+was thus discovered to hold only under a circumstance that had
+earlier been unidentified.  Given this knowledge, the generalization
+had to be qualified ("A bloods are compatible if their RH factors
+are matched").
+
+    The principle here is evident: since a later discovery rests
+hierarchically on earlier knowledge, it cannot contradict its own
+base.  The qualified formulation in no way clashes with the initial
+proposition, viz.: "Within the context of the circumstances so
+far known, A bloods are compatible."  This proposition represented
+real knowledge when it was first reached, and it still does so;
+in fact, like all properly formulated truths, this truth is
+immutable.  Within the context initially specified, A bloods are
+and always will be compatible.
+
+    The appearance of a contradiction between new knowledge and
+old derives from a single source: context-dropping.  If the
+researchers had decided to view their initial discovery as an
+out-of-context absolute; if they were to declare -- in effect,
+as a matter of dogma: "A bloods will always be compatible,
+regardless of altered circumstances"; then of course the next
+factor discovered would plunge them into contradiction, and
+they would end up complaining that knowledge is impossible.
+But if a man reaches conclusions logically and grasps their
+contextual nature, intellectual progress poses no threat to him;
+it consists to a great extent in his identifying ever more fully
+the relationships, the connections among facts, that make the
+world a unity.  Such a man is not dismayed to find that he always
+has more to learn.  He is happy about it, because he recognizes
+that he is expanding and refining his knowledge, not subverting it.
+
+    Although the researchers cannot claim their discovery as an
+out-of-context absolute, they must treat it as a contextual
+absolute (i.e., as an immutable truth within the specified
+context).
+
+    The researchers must know that the initial generalization is
+valid -- "know" as against guess, hope, or feel.  It is only on
+this basis that they can progress to further discoveries.  Since
+it is an established truth that A bloods are compatible under
+the circumstances so far encountered, the researchers are able
+to infer, when they observe a new reaction, the presence of a
+new factor.  By contrast, when the anti-conceptual mentality
+observes the new reaction, he stops dead.  "My generalization
+was unreliable," he sighs, "science is a progression of exploded
+theories, everything is relative." 
+
+    A man does not know everything, but he does know what he knows.
+The choice is not: to make unwarranted, dogmatic claims or to
+give up the cognitive quest in despair.  Both these policies stem
+from the notion that omniscience is the standard.  One side then
+pretends to have access to it somehow, while the other bewails our
+lack of such access.  In reason, however, this kind of standard
+must be rejected.  Conceptual knowledge rests on logic within a
+context, not on omniscience.  If an idea has been logically proved,
+then it is valid and it is an absolute -- contextually.  This last
+term, indeed, does not introduce a factor distinct from logic and
+should not have to be stressed: to adduce evidence for a conclusion
+is to place it within a context and thereby to define precisely
+the conditions of its applicability.

@@ -1,0 +1,121 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/RobberSpeeder.html
+# Mar/29/2003
+
+#=========#
+# context #
+#=========#
+at view = Match Criminals;
+
+  driversLicenseNumber,
+  registeredGun,
+  serial
+	isa InverseFunctionalProperty;
+  Person has
+    driversLicenseNumber = Literal,
+    registeredGun = Literal;
+  Gun has serial = Literal;
+  Gun License has
+    registeredGun = Literal,
+    holder = Person,
+    driversLicenseNumber = Literal;
+
+  Gun License DB isa relation with
+    format = [registeredGun:1, Person:2, driversLicenseNumber:3],
+    meaning = {
+      $2 has registeredGun=$1;
+      $2 has driversLicenseNumber=$3;
+    };
+
+  Robbery Event DB isa relation with
+    format = [Date:1, Person:2, registeredGun:3],
+    meaning = {
+#####      at time = $1 {
+#####        $2 do rob done;
+#####        $2 has registeredGun = $3;
+#####      };
+at time=$1;
+$2 do rob done;
+$2 has registeredGun=$3;
+    };
+  
+  Speeding Offense DB isa relation with
+    format = [Date:1, Person:2, driversLicenseNumber:3],
+    meaning = {
+#####      at time = $1 {
+#####        $2 do speed done;
+#####        $2 has driversLicenseNumber = $3;
+#####      };
+at time=$1;
+$2 do speed done;
+$2 has driversLicenseNumber=$3;
+    };
+
+  Match Robber and Speeder isa method with
+    label = [Gun License DB, Robbery Event DB, Speeding Offense DB],
+    format = [relation:1, relation:2, relation:3],
+    meaning = {
+      do load od $1, $2, $3 done;
+      every person isa Person {
+        #set . = $person;
+        gun    := $person has registeredGun = ?;
+        driver := $person has driversLicenseNumber = ?;
+          #do print od "person = $person" done;
+          #do print od "gun = $gun" done;
+          #do print od "driver = $driver" done;
+        if $person isin $1; then
+          if $gun isin $2; then
+            if $driver isin $3; then
+              do print od "<!-- matching Robber and Speeder -->" done;
+              #do print od "Person:                $person" done;
+              #do print od "registeredGun:         $gun"    done;
+              #do print od "driversLicenseNumber:  $driver" done;
+            fi;
+          fi;
+        fi;
+      }; # end every person
+    }; # end meaning
+
+
+#======#
+# data #
+#======#
+begin relation Gun License DB;
+  ABCD, Fred Bloggs, ZXYZXY;
+end relation Gun License DB;
+
+begin relation Robbery Event DB;
+  date_123, an unknown person, ABCD;
+end relation Robbery Event DB;
+
+begin relation Speeding Offense DB;
+  date_456, John Doe, ZXYZXY;
+end relation Speeding Offense DB;
+
+
+#=========#
+# results #
+#=========#
+do print od "<!--  input data  -->" done;
+Person              isc* ?;
+Gun License DB      isc* ?;
+Robbery Event DB    isc* ?;
+Speeding Offense DB isc* ?;
+
+#? isin Gun License DB;
+#? isin Robbery Event DB;
+#? isin Speeding Offense DB;
+
+do print od "" done;
+do print od "<!--  output results  -->" done;
+do Match Robber and Speeder
+   od Gun License DB, Robbery Event DB, Speeding Offense DB
+done;
+
+! deletecomment RobberSpeeder.out done;
+
+exit;
+
+</XMP>
+</HTML>

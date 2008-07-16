@@ -1,0 +1,211 @@
+; Sat Nov 16 07:58:51 PST 2002
+; 
+;+ (version "1.8")
+;+ (build "Build 1012")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS
+	(is-a USER)
+	(role concrete)
+	(single-slot KB_8879_00021
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot weight
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot KB_8879_00020
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot tabula+rasa_00039
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot tabula+rasa_00048
+		(type STRING)
+;+		(value "male")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass entity "that which exists"
+	(is-a USER)
+	(role abstract))
+
+(defclass animal "live, move"
+	(is-a entity)
+	(role abstract))
+
+(defclass person
+	(is-a animal)
+	(role abstract)
+	(single-slot weight
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass John+Doe
+	(is-a person)
+	(role concrete)
+	(single-slot tabula+rasa_00048
+		(type STRING)
+;+		(value "male")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Jane+Doe
+	(is-a person)
+	(role concrete)
+	(single-slot tabula+rasa_00039
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass cat
+	(is-a animal)
+	(role abstract))
+
+(defclass dog
+	(is-a animal)
+	(role abstract))
+
+(defclass Fido
+	(is-a dog)
+	(role concrete))
+
+(defclass Rover
+	(is-a dog)
+	(role concrete))
+
+(defclass plant "live, not move"
+	(is-a entity)
+	(role abstract))
+
+(defclass object "not live, not move"
+	(is-a entity)
+	(role abstract))
+
+(defclass ke "Knowledge Explorer"
+	(is-a object)
+	(role concrete))
+
+(defclass knowledge
+	(is-a object)
+	(role abstract))
+
+(defclass group
+	(is-a object)
+	(role abstract))
+
+(defclass enumeration
+	(is-a group)
+	(role abstract))
+
+(defclass list
+	(is-a group)
+	(role abstract))
+
+(defclass multiset
+	(is-a group)
+	(role abstract))
+
+(defclass hierarchy
+	(is-a group)
+	(role abstract))
+
+(defclass lattice
+	(is-a group)
+	(role abstract))
+
+(defclass file
+	(is-a group)
+	(role abstract))
+
+(defclass characteristic "identity of entity"
+	(is-a USER)
+	(role abstract))
+
+(defclass attribute "inseparable, static"
+	(is-a characteristic)
+	(role abstract))
+
+(defclass sex
+	(is-a attribute)
+	(role abstract))
+
+(defclass male
+	(is-a sex)
+	(role concrete))
+
+(defclass female
+	(is-a sex)
+	(role concrete))
+
+(defclass purpose
+	(is-a attribute)
+	(role abstract))
+
+(defclass format
+	(is-a attribute)
+	(role abstract))
+
+(defclass meaning
+	(is-a attribute)
+	(role abstract))
+
+(defclass part "separable"
+	(is-a characteristic)
+	(role abstract))
+
+(defclass action "inseparable, dynamic"
+	(is-a characteristic)
+	(role abstract))
+
+(defclass live
+	(is-a action)
+	(role abstract))
+
+(defclass move
+	(is-a action)
+	(role abstract))
+
+(defclass identify
+	(is-a action)
+	(role abstract))
+
+(defclass measure
+	(is-a action)
+	(role abstract))
+
+(defclass classify
+	(is-a action)
+	(role abstract))
+
+(defclass perceive
+	(is-a action)
+	(role abstract))
+
+(defclass relation "inseparable, interentity"
+	(is-a characteristic)
+	(role abstract))
+
+(defclass proposition "identification of entity"
+	(is-a USER)
+	(role abstract))
+
+(defclass tabula+rasa_00044 "knowledge := man do identify od existent done"
+	(is-a proposition)
+	(role concrete))
+
+(defclass tabula+rasa_00045 "John Doe has sex=male"
+	(is-a proposition)
+	(role concrete))
+
+(defclass tabula+rasa_00046 "Jane Doe has sex=female"
+	(is-a proposition)
+	(role concrete))
+
+(defclass tabula+rasa_00047 "person has sex=[male,female]"
+	(is-a proposition)
+	(role concrete))

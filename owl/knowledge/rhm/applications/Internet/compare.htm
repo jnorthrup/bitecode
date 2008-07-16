@@ -1,0 +1,65 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/ApplicationInternet/compare.htm
+# 1999/6/30
+# new syntax Sep/29/2002
+
+#==============================#
+# compare Internet Directories #
+#==============================#
+
+set kcase=LOWER  # fold all names to lower case
+
+do read od excite.ho, infoseek.ho, yahoo.ho done
+do read od myexcite.ho done
+
+# merge the top level categories
+Yahoo is Excite, InfoSeek
+Directory is Channel 
+My Page is Channel
+
+# merge different variants of the same name
+games is Games, Games@
+Autos is Automotive
+music is Music
+great movies is Movies
+football is Football
+computer is computers
+
+# separate units which were lumped into a single category
+dirhi is begin hierarchy
+People & Chat
+/	People
+/	Chat
+Kids & Family
+/	Kids
+/	Family
+Business & Economy
+/	Business
+/	Economy
+Business & Investing
+/	Business
+/	Investing
+Careers & Education
+/	Careers
+/	Education
+Computers & Internet
+/	Computers
+/	Internet
+News & Media
+/	News
+/	Media
+Recreation & Sports
+/	Recreation
+/	Sports
+Society & Culture
+/	Society
+/	Culture
+end hierarchy dirhi
+
+set hfocus = Channel
+do check od genus, loop done
+#Channel ise**1 ?
+#Channel ise**2 ?
+</XMP>
+</HTML>

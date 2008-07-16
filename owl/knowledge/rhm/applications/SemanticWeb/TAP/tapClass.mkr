@@ -1,0 +1,17 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/tapClass.mkr
+# Jun/2/2003
+
+do read from tapClass.ku done;
+
+do check od unknown done;
+
+Resource isc* ?;
+
+! deletecomment od tapClass.out to tapClass.save done;
+
+do check od knit done;
+exit;
+</XMP>
+</HTML>

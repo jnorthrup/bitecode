@@ -1,0 +1,50 @@
+# 1999/4/14
+
+#============================#
+# logical/evidence fallacies #
+#   nature & the universe    #
+#   God & the Bible          #
+#============================#
+
+I. evidence of God (Latimer)
+contradiction [proof without sensedata]
+1. (unstated premise/fact): Proof requires sensedata.
+2. I cannot sense God.
+3. I can prove that God exists.
+
+II. definition of universe/God (McCullough)
+contradiction [God created himself]
+1. The universe is everything that exists.
+2. God exists.
+3. God created the universe.
+
+III. Bible (Kelley, AR, page 145)
+begging the question (circular argument)
+1. God exists, because the Bible says so.
+2. The Bible is trustworthy, because it is the Word of God.
+
+IV. Bible (Fields)
+appeal to ignorance
+1. Historical research has verified many statements in the Bible.
+2. Historical research has not disproved any statements in the Bible.
+3. Every statement in the Bible is true (God exists).
+
+V. order & complexity of Nature (evolution and creation) (Fields)
+false alternative [left out causality]
+1. Things observed in Nature, especially man, are very complex.
+2. This resulted either from random events (evolution), or from design (creation).
+3. This did not result from random events, therefore Nature was designed (by God).
+
+VI. nature of the universe (Fields)
+non sequitur (it does not follow)
+1. The predictions of the "big bang" theory are consistent with today's universe.
+2. The "big bang" theory has been proved.
+(Brian Greene, "The Elegant Universe", points out that the
+assumptions of the "big bang" theory make it inapplicable
+at the time of the "big bang".)
+
+VII. "origin" of the universe (first cause)
+complex question, false alternative
+1. Everything has to have a cause.
+2. The universe cannot cause itself.
+3. The universe was caused by God.

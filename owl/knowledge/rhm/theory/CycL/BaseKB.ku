@@ -1,0 +1,69 @@
+# KEHOME/knowledge/theory/CycL/BaseKB.ku
+# Jan/20/2003
+
+at UniversalVocabularyMt {
+	UniversalVocabularyMt iss*
+		UniversalVocabularyImplementationMt,
+		CoreCycLMt,
+		BaseKB;
+	CoreCycLMt iss*
+		CoreCycLImplementationMt,
+		LogicalTruthMt,
+		BaseKB;
+	CoreCycLImplementationMt iss*
+		LogicalTruthImplementationMt,
+		CoreCycLMt, 
+		BaseKB;
+	LogicalTruthImplementationMt iss*
+		LogicalTruthMt,
+		BaseKB; 
+	LogicalTruthMt iss*
+		LogicalTruthImplementationMt,
+		BaseKB; 
+
+	BaseKB isa
+		GeneralMicrotheory;
+	BaseKB iss*
+		BaseKB,
+		UniversalVocabularyMt,
+		BookkeepingMt;
+	BaseKB isg*
+		xxx (347 Mt);
+}
+
+at BookkeepingMt {
+	BaseKB isa CoreConstant;
+}
+
+at BaseKB {
+	#?MIC isa Microtheory implies ?MIC iss* BaseKB
+	$MIC isa Microtheory implies $MIC iss* BaseKB;
+	BaseKB isa
+		BroadMicrotheory,
+		xxx (12 Mt);
+	BaseKB isg*
+		xxx (347 Mt);
+	BaseKB has
+		Direction = Forward,
+		comment = " ... ";
+}
+
+at EnglishMt {
+	BaseKB has
+		preferredNameString = "Cyc's knowledge of general truths";
+}
+
+at EnglishParaphraseMt {
+	BaseKB has
+		genKeyword = BASE-KB;
+}
+
+at CyclishMt {
+	BaseKB has
+		multiWordString = xxx;
+}
+
+at EverythingPSC {
+	BaseKB isa
+		xxx (32 ans.);
+}

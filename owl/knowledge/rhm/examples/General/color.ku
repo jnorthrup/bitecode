@@ -1,0 +1,25 @@
+# 11:30 am 5/21/97
+# new syntax Jul/24/2005
+
+color is attribute with RED,GREEN,BLUE;
+
+color isc
+	black,
+	blue,		# 0,0,1
+	brown,
+	cyan,
+	gray,
+	green,		# 0,1,0
+	magenta,
+	orange,
+	pink,
+	purple,
+	red,		# 1,0,0
+	violet,
+	white,
+	yellow;
+red   is color with RED=1,GREEN=0,BLUE=0;
+green is color with RED=0,GREEN=1,BLUE=0;
+blue  is color with RED=0,GREEN=0,BLUE=1;
+black is color with RED=0,GREEN=0,BLUE=0;
+white is color with RED=1,GREEN=1,BLUE=1;

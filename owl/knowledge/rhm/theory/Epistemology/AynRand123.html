@@ -1,0 +1,60 @@
+#<html><pre>
+# KEHOME/knowledge/theory/Epistemology/AynRand123.html
+# Oct/10/2005
+
+# three versions of Ayn Rand axiomatic concepts
+
+# definitions
+IS  isu relation verb with  # is metaphysically equivalent to
+	format=[existent:1,existent:2];
+HAS isu relation verb with  # abstract extension of "has" verb
+	format=[existent:1,characteristic:2];
+##DO  isu relation verb with  # abstract extension of "do" verb
+##	format=[existent:1,characteristic:2];
+##can isu relation verb with  # synonym for "do*"
+##	format=[entity:1,action:2],
+##	meaning={
+##		$1 isu entity;
+##		$2 iss action;
+##		$1 do* $2 done;
+##	};
+Exist  isu relation action with  # abstract extension of "exist" action
+	format=[existent:1];
+Exists isu relation verb with  # abstract extension of "exists" verb
+	format=[existent:1];
+
+
+# Ayn Rand concepts - version 1
+Existence :: entity DO Exist done;
+Identity  :: entity HAS charactersitic;
+Existence IS Identity;
+Exist IS characteristic;
+
+Consciousness  :: man has conscious;
+Identification :: characteristic := man do identify od entity done;
+Consciousness IS Identification;
+conscious IS identify;
+
+# Ayn Rand concepts - version 2
+Existence :: entity HAS existence;
+Identity  :: entity HAS identity;
+Existence IS Identity;
+existence IS identity;
+
+Consciousness  :: man has consciousness;
+Identification :: man can perceive od entity done;
+Consciousness IS Identification;
+consciounesss IS perceive;
+
+# Ayn Rand concepts - version 3
+Existence :: entity Exists;
+Identity  :: entity HAS identity;
+Existence IS Identity;
+Exists IS identity;
+
+Consciousness  :: man has conscious;
+Identification :: man can identify done;
+Consciousness IS Identification;
+conscious IS identify;
+
+#</pre></html>

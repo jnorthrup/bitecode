@@ -1,0 +1,340 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/OWL/owl.ku
+# Nov/13/2002
+
+# NOTE: "isa*" simulated by "isa"
+
+# aliases
+#========
+Thing is existent
+Class is entity
+Property is attribute
+
+# output
+#=======
+set hfocus += [Property, Class]
+
+###<!-- $Revision: 1.2 $ of $Date: 2002/07/29 15:34:54 $. -->
+
+###<rdf:RDF
+###  xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+###  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+###  xmlns:dc  ="http://purl.org/dc/elements/1.0/"
+###  xmlns:owl ="http://www.w3.org/2002/07/owl#"
+###  xmlns     ="http://www.w3.org/2002/07/owl#"
+###  xml:base  ="http://www.w3.org/2002/07/owl"
+###>
+
+owl isa Ontology
+owl has
+  versionInfo="$Id: owl.txt,v 1.2 2002/07/29 15:34:54 connolly Exp $",
+  imports resource="http://www.w3.org/2000/01/rdf-schema"/,
+  title="OWL Web Ontology Language",
+  author="W3C Web Ontology (WebOnt) Working Group",
+  subject="OWL; Web Ontology Language; Semantic Web",
+  description="Classes and Properties comprising the OWL Web Ontology Language",
+  publisher="W3C",
+  date="2002-07-17",
+  format="text/xml",
+  language="en",
+  identifier="http://www.w3.org/2002/07/owl"
+
+###<!-- (meta) classes of "object" and datatype classes  -->
+
+Class has
+  label="Class",
+  comment='The class of all "object" classes'
+
+Datatype isa Class
+Datatype has
+  label="Datatype",
+  comment="The class of all datatype classes"
+
+###<!-- Pre-defined top/bottom thing/nothing most/least-general (object) classes. -->
+
+Thing has
+  label="Thing",
+  comment="\n
+    The most general (object) class in OWL.\n
+    This is equal to the union of any class and its complement.\n
+  "
+
+##### invalid concept: Nothing
+#####Nothing is not Thing
+#####Thing isg
+#####  Nothing,
+#####  not Nothing
+
+Nothing has
+  label="Nothing",
+  comment="the class with no things in it."
+
+###<!-- Terms for building classes from other classes. -->
+
+equivalentTo isa Property
+equivalentTo has
+  label="equivalentTo",
+  comment="for equivalentTo(X, Y), read X is an equivalent term to Y."
+
+# X is Y
+Class has sameClassAs = Class
+sameClassAs has
+  label="sameClassAs",
+  comment="for sameClassAs(X, Y), read X is an equivalent class to Y."
+sameClassAs isa equivalentTo
+sameClassAs isa subClassOf
+
+# X is Y
+samePropertyAs has
+  label="samePropertyAs",
+  comment="for samePropertyAs(P, R), read P is an equivalent property to R."
+samePropertyAs isa equivalentTo
+samePropertyAs isa subPropertyOf
+
+# X is Y
+Thing has sameIndividualAs = Thing
+sameIndividualAs has
+  label="sameIndividualAs",
+  comment="for sameIndividualAs(a, b), read a is the same individual as b."
+sameIndividualAs isa equivalentTo
+
+# X and Y is nonexistent
+Class has disjointWith = Class
+disjointWith has
+  label="disjointWith",
+  comment="for disjointWith(X, Y) read: X and Y have no members in common."
+
+# X notis Y
+Thing has differentIndividualFrom = Thing
+differentIndividualFrom has
+  label="differentIndividualFrom",
+  comment="for differentIndividualFrom(a, b), read a is not the same individual as b."
+
+# X isall Y
+Class has unionOf = List
+unionOf has
+  label="unionOf",
+  comment="\n
+    for unionOf(X, Y) read: X is the union of the classes in the list Y;\n
+    i.e. if something is in any of the classes in Y, it's in X, and vice versa.\n
+  "
+
+Class has disjointUnionOf = List
+disjointUnionOf has
+  label="disjointUnionOf",
+  comment="\n
+    for disjointUnionOf(X, Y) read: X is the disjoint union of the classes in\n
+    the list Y: (a) for any c1 and c2 in Y, disjointWith(c1, c2),\n
+    and (b) unionOf(X, Y). i.e. if something is in any of the classes in Y, it's\n
+    in X, and vice versa.\n
+  "
+
+# X isIntersectionOf Y
+Class has intersectionOf = List
+intersectionOf has
+  label="intersectionOf",
+  comment="\n
+    for intersectionOf(X, Y) read: X is the intersection of the classes in the list Y;\n
+    i.e. if something is in all the classes in Y, then it's in X, and vice versa.\n
+  "
+
+Class has complementOf = Class
+complementOf has
+  label="complementOf",
+  comment="\n
+    for complementOf(X, Y) read: X is the complement of Y; if something is in Y,\n
+    then it's not in X, and vice versa.\n
+  "
+
+###<!-- Term for building classes by enumerating their elements -->
+
+# C isany L
+Class has oneOf = List
+oneOf has
+  label="oneOf",
+  comment="\n
+     for oneOf(C, L) read everything in C is one of the\n
+     things in L;\n
+     This lets us define classes by enumerating the members.\n
+  "
+
+###<!-- Terms for building classes by restricting their properties. -->
+
+Restriction isa Class
+Restriction has
+    onProperty = Property,
+    allValuesFrom = Class,
+    hasValue,
+    someValuesFrom = Class
+
+Restriction has
+  label="Restriction",
+  comment="\n
+    something is in the class R if it satisfies the attached restrictions,\n
+    and vice versa.\n
+  "
+
+onProperty has
+  label="onProperty",
+  comment="\n
+    for onProperty(R, P), read:\n
+    R is a restricted with respect to property P.\n
+  "
+
+allValuesFrom has
+  label="allValuesFrom",
+  comment="\n
+    for onProperty(R, P) and allValuesFrom(R, X), read:\n
+    i is in class R if and only if for all j, P(i, j) implies type(j, X).\n
+  "
+
+hasValue has
+  label="hasValue",
+  comment="\n
+    for onProperty(R, P) and hasValue(R, V), read:\n
+    i is in class R if and only if P(i, V).\n
+  "
+
+someValuesFrom has
+  label="someValuesFrom",
+  comment="\n
+    for onProperty(R, P) and someValuesFrom(R, X), read:\n
+    i is in class R if and only if for some j, P(i, j) and type(j, X).\n
+  "
+
+###<!-- Note that cardinality restrictions on transitive properties, or     -->
+###<!-- properties with transitive sub-properties, compromise decidability. -->
+
+
+rdf:RDF has xmlns:rdfxs="http://www.w3.org/2000/10/XMLSchema#nonNegativeInteger"/
+
+Restriction has
+    minCardinality = nonNegativeInteger,
+    maxCardinality = nonNegativeInteger,
+    cardinality    = nonNegativeInteger
+
+minCardinality has
+  label="minCardinality",
+  comment="\n
+    for onProperty(R, P) and minCardinality(R, n), read:\n
+    i is in class R if and only if there are at least n distinct j with P(i, j).\n
+  "
+
+maxCardinality has
+  label="maxCardinality",
+  comment="\n
+    for onProperty(R, P) and maxCardinality(R, n), read:\n
+    i is in class R if and only if there are at most n distinct j with P(i, j).\n
+  "
+
+cardinality has
+  label="cardinality",
+  comment="\n
+    for onProperty(R, P) and cardinality(R, n), read:\n
+    i is in class R if and only if there are exactly n distinct j with P(i, j).\n
+  "
+
+###<!-- Classes and Properties for different kinds of Property -->
+
+Property isg
+    ObjectProperty,
+    DatatypeProperty
+    FunctionalProperty,
+    InverseFunctionalProperty
+ObjectProperty isg
+    TransitiveProperty,
+    SymmetricProperty,
+    InverseFunctionalProperty
+
+ObjectProperty has
+  label="ObjectProperty",
+  comment="if P is an ObjectProperty, and P(x, y), then y is an object."
+
+DatatypeProperty has
+  label="DatatypeProperty",
+  comment="if P is a DatatypeProperty, and P(x, y), then y is a data value."
+
+ObjectProperty has inverseOf = ObjectProperty
+inverseOf has
+  label="inverseOf",
+  comment="\n
+    for inverseOf(R, S) read: R is the inverse of S; i.e.\n
+    if R(x, y) then S(y, x) and vice versa.\n
+  "
+
+TransitiveProperty has
+  label="TransitiveProperty",
+  comment="if P is a TransitiveProperty, then if P(x, y) and P(y, z) then P(x, z)."
+
+SymmetricProperty has
+  label="SymmetricProperty",
+  comment="if P is a SymmetricProperty, then if P(x, y) then P(y, x)."
+
+FunctionalProperty has
+  label="FunctionalProperty",
+  comment="\n
+    compare with maxCardinality=1; e.g. integer successor:\n
+    if P is a FunctionalProperty, then if P(x, y) and P(x, z) then y=z.\n
+  "
+
+InverseFunctionalProperty has 
+  label="InverseFunctionalProperty",
+  comment="\n
+    if P is an InverseFunctionalProperty, then if P(x, y) and P(z, y) then x=z.\n
+    aka injective. e.g. if firstBorne(m, Susan)\n
+    and firstBorne(n, Susan) then m and n are the same.\n
+  "
+
+###<!-- A class for ontologies themselves... -->
+
+Ontology isa Class 
+Ontology has
+  label="Ontology",
+  comment="\n
+    An Ontology is a document that describes\n
+    a vocabulary of terms for communication between\n
+    (human and) automated agents.\n
+  ",
+    versionInfo,
+    imports
+
+versionInfo has
+  label="versionInfo",
+  comment="\n
+    generally, a string giving information about this\n
+    version; e.g. RCS/CVS keywords\n
+  "
+
+###<!-- Importing, i.e. assertion by reference -->
+
+imports has
+  label="imports",
+  comment="\n
+    for imports(X, Y) read: X imports Y;\n
+    i.e. X asserts the* contents of Y by reference;\n
+    i.e. if imports(X, Y) and you believe X and Y says something,\n
+    then you should believe it.\n
+  "
+
+###<!-- Importing terms from RDF/RDFS -->
+
+
+Literal isa Class
+
+Property isg
+    subClassOf,
+    subPropertyOf,
+    type,
+    value,
+    domain,
+    range,
+    label,
+    comment,
+    seeAlso
+
+isDefinedBy isa seeAlso
+
+###</RDF>
+</XMP>
+</HTML>

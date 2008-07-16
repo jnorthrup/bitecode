@@ -1,0 +1,36 @@
+# 5:30 pm 1998/2/10
+# new syntax Jul/24/2005
+
+# indexing
+# minimal hierarchy
+
+# basic terminology from
+# Nancy C. Mulvany, "Indexing Books",
+# The University of Chicago Press, 1994.
+
+# index name is book name;
+object isc index,entry;
+
+# entry/subentry name is unique concept name;
+# entry heading is main heading; subentry heading is subheading;
+# entry genus is index name; subentry genus is entry name;
+# entry unit is subentry name;
+entry has
+	heading,
+	ref,	# reference locator list
+	xref;	# cross-reference list
+
+# entry relation
+#	entry:1	entry/subentry name
+#	entry:2	genus name
+#	ref:3	reference locator list
+#	entry:4	cross-reference list
+r_entry is relation with \
+	format = [entry:1; entry:2; ref:3; entry:4],
+	meaning = {$1 isd $2;
+		$1 has ref=$3;
+		$1 has xref=$4;};
+
+set hfocus = [index,entry,
+	newword,newstatement];
+entry, r_entry has ?;

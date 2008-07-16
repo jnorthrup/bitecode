@@ -1,0 +1,2197 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/04/17 14:12:52 $, by $Author: ivan $, $Revision: 1.130 $ -->
+<rdf:RDF xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" 
+         xmlns:dc="http://purl.org/dc/elements/1.1/" 
+		 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+		 xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#"
+		 xml:base="http://www.w3.org/2003/03/RDFData/translators.rdf"
+		 >
+	<!-- ===================================== -->
+	<!-- Serbian ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Danilo_S_Furundzic">
+		<contact:fullName xml:lang="sr">Данило Фурунџић</contact:fullName>
+		<contact:knownAs xml:lang="en">Danilo S. Furundžić</contact:knownAs>
+		<contact:mailboxURI>mailto:dfurundzic@gmail.com</contact:mailboxURI>
+		<dc:language>sr</dc:language>
+	</trans:Translator>
+
+	<trans:Translator rdf:ID="Luka_Stanisavljevic">
+		<contact:fullName xml:lang="sr">Лука Станисављевић</contact:fullName>
+		<contact:knownAs xml:lang="en">Luka Stanisavljevic</contact:knownAs>
+		<contact:mailboxURI>mailto:osecevsjaj@yahoo.com</contact:mailboxURI>
+		<dc:language>sr</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Africaans ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Jacques_du_Plessis">
+		<contact:fullName xml:lang="af">Jacques du Plessis</contact:fullName>
+		<contact:mailboxURI>mailto:afrikaans@europe.com</contact:mailboxURI>
+		<dc:language>af</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Arabic ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Najib_Tounsi">
+		<contact:fullName xml:lang="ar">نجيب التونسي</contact:fullName>
+		<contact:knownAs xml:lang="en">Najib Tounsi</contact:knownAs>
+		<contact:mailboxURI>mailto:tounsi@w3.org</contact:mailboxURI>
+		<dc:language>ar</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="WTB">
+		<contact:fullName xml:lang="en"> Arabic Translation team, WTB</contact:fullName>
+		<dc:language>ar</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Basque ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Arantza_Ruiz">
+		<contact:fullName xml:lang="eu">Arantza Ruiz</contact:fullName>
+		<dc:language>eu</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Bulgarian============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Triphon_Statkoff">
+		<contact:fullName xml:lang="bg">Трифон Статков</contact:fullName>
+		<contact:knownAs xml:lang="en">Triphon Statkoff</contact:knownAs>
+		<contact:mailboxURI>mailto:trezeguet@gmail.com</contact:mailboxURI>
+		<dc:language>bg</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Stanislav_Yordanov">
+		<contact:fullName xml:lang="bg">Станислав Йорданов</contact:fullName>
+		<contact:knownAs xml:lang="en">Stanislav Yordanov</contact:knownAs>
+		<contact:mailboxURI>mailto:stan@webthoughts.net</contact:mailboxURI>
+		<dc:language>bg</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Bengali============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Amitabha_Roy">
+		<contact:fullName xml:lang="bn">অমীতাভ রায</contact:fullName>
+		<contact:knownAs xml:lang="en">Amitabha Roy</contact:knownAs>
+		<contact:mailboxURI>mailto:aroy@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>bn</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="K_K_Chakrabarty">
+		<contact:fullName xml:lang="bn">কৃষ্‌নেন্দু কূমার চক্রবর্ত</contact:fullName>
+		<contact:knownAs xml:lang="en">Krishnendu Kumar Chakraborty</contact:knownAs>
+		<dc:language>bn</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Telugu============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Nageswari_Adurty">
+		<contact:fullName xml:lang="te">నాగేశ్వరి ఆదుర్తి</contact:fullName>
+		<contact:knownAs xml:lang="en">Nageswari Adurty</contact:knownAs>
+		<contact:mailboxURI>mailto:nareshadurty@yahoo.com</contact:mailboxURI>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sivaram_Prasad">
+		<contact:fullName xml:lang="te">పి.శివరామ్ ప్రసాద్</contact:fullName>
+		<contact:knownAs xml:lang="en">P. Sivaram Prasad</contact:knownAs>
+		<contact:mailboxURI>mailto:sivaram@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Siva_Basava">
+		<contact:fullName xml:lang="te">కె.శివ బసవ</contact:fullName>
+		<contact:knownAs xml:lang="en">K.Siva Basava</contact:knownAs>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pavan_Kumar_Chowdary">
+		<contact:fullName xml:lang="en">Pavan Kumar Chowdary</contact:fullName>
+		<contact:mailboxURI>mailto:pavan@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="M_D_Srinivasulu">
+		<contact:knownAs xml:lang="en">M.D. Srinivasulu</contact:knownAs>
+		<contact:fullName xml:lang="te">శ్రీనివాసులు</contact:fullName>
+		<contact:mailboxURI>mailto:mds@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Naveen_Reddy">
+		<contact:fullName xml:lang="en">K. Naveen Reddy</contact:fullName>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Vasanta_Lakshmi">
+		<contact:knownAs xml:lang="en">K. Vasanta Lakshmi</contact:knownAs>
+		<contact:fullName xml:lang="te">కె.వసంత లక్ష్మి</contact:fullName>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sreenath_K">
+		<contact:fullName xml:lang="te">శ్రీనాథ్ .K</contact:fullName>
+		<contact:knownAs xml:lang="en">Sreenath K</contact:knownAs>
+		<dc:language>te</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Catalan =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Biblio_Barcelona">
+		<contact:fullName xml:lang="ca">Facultat de Biblioteconomia i Documentació - Universitat de Barcelona</contact:fullName>
+		<contact:mailboxURI>mailto:wcag.cat@ub.edu</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Arnau_Siches">
+		<contact:fullName xml:lang="ca">Arnau Siches</contact:fullName>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Diego_Martin_Lafuente">
+		<contact:fullName xml:lang="ca">Diego Martín Lafuente</contact:fullName>
+		<contact:mailboxURI>mailto:diego@minid.net</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mireia_Ribera">
+		<contact:fullName xml:lang="ca">Mireia Ribera</contact:fullName>
+		<contact:mailboxURI>mailto:ribera@ub.edu</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Miquel_Termens">
+		<contact:fullName xml:lang="ca">Miquel Térmens</contact:fullName>
+		<contact:mailboxURI>mailto:termens@ub.edu</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andreu_Sule">
+		<contact:fullName xml:lang="ca">Andreu Sulé</contact:fullName>
+		<contact:mailboxURI>mailto:sule@ub.edu</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fran_Rosa_i_Soler">
+		<contact:fullName xml:lang="ca">Fran Rosa i Soler</contact:fullName>
+		<contact:mailboxURI>mailto:franrs@nnftc.com</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lambert_Torres_Villafane">
+		<contact:fullName xml:lang="ca">Lambert Torres Villafañe</contact:fullName>
+		<contact:mailboxURI>mailto:lambert.torres@sidar.org</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mikel_L_Forcada">
+		<contact:fullName xml:lang="ca">Mikel L. Forcada</contact:fullName>
+		<contact:mailboxURI>mailto:mlf@dlsi.ua.es</contact:mailboxURI>
+		<dc:language>ca</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Czech =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Vladimir_Matejicek">
+		<contact:fullName xml:lang="cs">Vladimir Matejicek</contact:fullName>
+		<contact:mailboxURI>mailto:matejicek@gmail.com</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Miroslav_Rocek">
+		<contact:fullName xml:lang="cs">Miroslav Rocek</contact:fullName>
+		<contact:mailboxURI>mailto:miroslavrocek@gmail.com</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Antonin_Vaishar">
+		<contact:fullName xml:lang="cs">Antonín Vaishar</contact:fullName>
+		<contact:mailboxURI>mailto:4157@mail.muni.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="M_Pazdersky">
+		<contact:fullName xml:lang="cs">M. Pazdersky</contact:fullName>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Filip_Rychetsky">
+		<contact:fullName xml:lang="cs">Filip Rychetský</contact:fullName>
+		<contact:mailboxURI>mailto:rychetsky@atlas.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jakub_Matejka">
+		<contact:fullName xml:lang="cs">Jakub Matějka </contact:fullName>
+		<contact:mailboxURI>mailto:fjolkunnigr@centrum.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Josef_Petrak">
+		<contact:fullName xml:lang="cs">Josef Petrák</contact:fullName>
+		<contact:mailboxURI>mailto:jspetrak@zapisky.info</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michal_Trna">
+		<contact:fullName xml:lang="cs">Michal Trna</contact:fullName>
+		<contact:mailboxURI>mailto:michal.trna@seznam.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jiri_Kosek">
+		<contact:fullName xml:lang="cs">Jiří Kosek</contact:fullName>
+		<contact:mailboxURI>mailto:jirka@kosek.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jiri_Hrazdil">
+		<contact:fullName xml:lang="cs">Jiří Hrazdil</contact:fullName>
+		<contact:mailboxURI>mailto:hrazda@zralog.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ondra_Zizka">
+		<contact:fullName xml:lang="cs">Ondra Žižka</contact:fullName>
+		<contact:mailboxURI>mailto:ondra@dynawest.cz</contact:mailboxURI>
+		<dc:language>cs</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Craotian =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Koraljka_Golub">
+		<contact:fullName xml:lang="hr">Koraljka Golub</contact:fullName>
+		<contact:mailboxURI>mailto:kgolub@ffzg.hr</contact:mailboxURI>
+		<dc:language>ht</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Danish ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Lars_Ballieu_Christensen">
+		<contact:fullName xml:lang="da">Lars Ballieu Christensen</contact:fullName>
+		<contact:mailboxURI>mailto:Lars@Sensus.dk</contact:mailboxURI>
+		<dc:language>da</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Helle_Bjarno">
+		<contact:fullName xml:lang="da">Helle Bjarnø</contact:fullName>
+		<contact:mailboxURI>mailto:hbj@visinfo.dk</contact:mailboxURI>
+		<dc:language>da</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Tobias_Hinnerup">
+		<contact:fullName xml:lang="da">Tobias Hinnerup</contact:fullName>
+		<contact:mailboxURI>mailto:hinnerup@hinnerup.net</contact:mailboxURI>
+		<dc:language>da</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- German ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Gunnar_Bittersmann">
+		<contact:fullName xml:lang="de">Gunnar Bittersmann</contact:fullName>
+		<contact:mailboxURI>mailto:gunnar.bittersmann@web.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+
+	<trans:Translator rdf:ID="Mark_Goeder_Tarant">
+		<contact:fullName xml:lang="de">Mark Goeder-Tarant</contact:fullName>
+		<contact:mailboxURI>mailto:markgoeder@googlemail.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Axel_Friedrich">
+		<contact:fullName xml:lang="de">Axel Friedrich</contact:fullName>
+		<contact:mailboxURI>mailto:axelfr74@googlemail.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Simon_Wilper">
+		<contact:fullName xml:lang="de">Simon A. Wilper</contact:fullName>
+		<contact:mailboxURI>mailto:p9wilper.vu.31122003@gmx.net</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alo_Clemens">
+		<contact:fullName xml:lang="de">Alo Clemens</contact:fullName>
+		<contact:mailboxURI>mailto:w3c_translation@warpmail.net</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Auke_Creutz">
+		<contact:fullName xml:lang="de">Auke Creutz</contact:fullName>
+		<contact:mailboxURI>mailto:info@creuz.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Thomas_Lutz">
+		<contact:fullName xml:lang="de">Thomas Lutz</contact:fullName>
+		<contact:mailboxURI>mailto:info@lutz-development.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sebastian_Zacherl">
+		<contact:fullName xml:lang="de">Sebastian Zächerl</contact:fullName>
+		<contact:mailboxURI>mailto:sebastian@zaecherl.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="HansWerner_Heinzen">
+		<contact:fullName xml:lang="de">Hans-Werner Heinzen</contact:fullName>
+		<contact:mailboxURI>mailto:hwheinzen@t-online.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Anton_Kostlbacher">
+		<contact:fullName xml:lang="de">Anton Köstlbacher</contact:fullName>
+		<contact:mailboxURI>mailto:anton1@koestlbacher.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Rainer_Wallbruch">
+		<contact:fullName xml:lang="de">Rainer Wallbruch</contact:fullName>
+		<contact:mailboxURI>mailto:rw@ftb-volmarstein.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fabian_Engstermann">
+		<contact:fullName xml:lang="de">Fabian Engstermann</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jens_Meiert">
+		<contact:fullName xml:lang="de">Jens Meiert</contact:fullName>
+		<contact:mailboxURI>mailto:jens.meiert@erde3.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Toby_Baier">
+		<contact:fullName xml:lang="de">Toby Baier</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Oliver_Becker">
+		<contact:fullName xml:lang="de">Oliver Becker</contact:fullName>
+		<contact:mailboxURI>mailto:ob@obqo.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michael_Ebert">
+		<contact:fullName xml:lang="de">Michael Ebert</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Henning_Fischer">
+		<contact:fullName xml:lang="de">Henning Fischer</contact:fullName>
+		<contact:mailboxURI>mailto:henning.fischer@w3c.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andreas_Geissel">
+		<contact:fullName xml:lang="de">Andreas Geissel</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Marc_Goertz">
+		<contact:fullName xml:lang="de">Marc Görtz</contact:fullName>
+		<contact:mailboxURI>mailto:marcgoertz@hotmail.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Rene_Hartmann">
+		<contact:fullName xml:lang="de">René Hartmann</contact:fullName>
+		<contact:mailboxURI>mailto:rehartmann@t-online.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Daniel_Hinz">
+		<contact:fullName xml:lang="de">Daniel Hinz</contact:fullName>
+		<contact:mailboxURI>mailto:daniel.hinz@coremedia.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Bjoern_Hoehrmann">
+		<contact:fullName xml:lang="de">Björn Höhrmann</contact:fullName>
+		<contact:mailboxURI>mailto:bjoern@hoehrmann.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mario_Jeckle">
+		<contact:fullName xml:lang="de">Mario Jeckle</contact:fullName>
+		<contact:mailboxURI>mailto:mario@jeckle.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michael_Jendryschik">
+		<contact:fullName xml:lang="de">Michael Jendryschik</contact:fullName>
+		<contact:mailboxURI>mailto:michael@jendryschik.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nik_Klever">
+		<contact:fullName xml:lang="de">Nik Klever</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Christine_Kuehnel">
+		<contact:fullName xml:lang="de">Christine Kühnel</contact:fullName>
+		<contact:mailboxURI>mailto:kuehnel@screenexa.net</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Stefan_Mintert">
+		<contact:fullName xml:lang="de">Stefan Mintert</contact:fullName>
+		<contact:mailboxURI>mailto:stefan@mintert.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Judith_Muhr">
+		<contact:fullName xml:lang="de">Judith Muhr</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Thomas_Klute">
+		<contact:fullName xml:lang="de">Thomas Klute</contact:fullName>
+		<contact:mailboxURI>mailto:thomas@klute.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Elke_Meier">
+		<contact:fullName xml:lang="de">Elke Meier</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Christian_Schweda">
+		<contact:fullName xml:lang="de">Christian Schweda</contact:fullName>
+		<contact:mailboxURI>mailto:christian.schweda@acmede.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jan_Sudeikat">
+		<contact:fullName xml:lang="de">Jan Sudeikat</contact:fullName>
+		<contact:mailboxURI>mailto:sudeik_j@informatik.fh-hamburg.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jens_Thiemann">
+		<contact:fullName xml:lang="de">Jens Thiemann</contact:fullName>
+		<contact:mailboxURI>mailto:jens@thiemann.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Rigo_Wenning">
+		<contact:fullName xml:lang="de">Rigo Wenning</contact:fullName>
+		<contact:mailboxURI>mailto:rigo@w3.org</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sebastian_Werner">
+		<contact:fullName xml:lang="de">Sebastian Werner</contact:fullName>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Axel_Wienberg">
+		<contact:fullName xml:lang="de">Axel Wienberg</contact:fullName>
+		<contact:mailboxURI>mailto:axel.wienberg@coremedia.com</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Stefan_Schumacher">
+		<contact:fullName xml:lang="de">Stefan Schumacher</contact:fullName>
+		<contact:mailboxURI>mailto:sts@schumacher-netz.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Max_Diehn">
+		<contact:fullName xml:lang="de"> Max Diehn</contact:fullName>
+		<contact:mailboxURI>mailto:max.diehn@lrz-muenchen.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andreas_Stephan">
+		<contact:fullName xml:lang="de">Andreas Stephan</contact:fullName>
+		<contact:mailboxURI>mailto:piccard@web.de</contact:mailboxURI>
+		<dc:language>de</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Spanish ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Pablo_Diez_Suarez">
+		<contact:fullName xml:lang="es">Pablo Díez Suárez</contact:fullName>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Carlos_Tejo_Alonso">
+		<contact:fullName xml:lang="es">Carlos Tejo Alonso</contact:fullName>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Tania_Estebanez_Alvarez">
+		<contact:fullName xml:lang="es">Tania Estébanez Álvarez</contact:fullName>
+		<contact:mailboxURI>mailto:tania_estebanez@telecable.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Trusted_Translations">
+		<contact:fullName xml:lang="en">Trusted Translations, Inc., directed by Cornelio Flores</contact:fullName>
+		<contact:mailboxURI>mailto:gaston@spanish-translator-services.com</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Martin_Sarsale">
+		<contact:fullName xml:lang="es">Martin Sarsale</contact:fullName>
+		<contact:mailboxURI>mailto:martin@n3rds.com.ar</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Marta_Trejo">
+		<contact:fullName xml:lang="es">Marta Trejo</contact:fullName>
+		<contact:mailboxURI>mailto:marta@alfanex.net</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Encarnacion_Quesada_Ruiz">
+		<contact:fullName xml:lang="es">Encarnación Quesada Ruiz</contact:fullName>
+		<contact:mailboxURI>mailto:encarna.quesada@fundacionctic.org</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Anna_Estelles_Palanca">
+		<contact:fullName xml:lang="es">Anna Estellés Palanca</contact:fullName>
+		<contact:mailboxURI>mailto:al076668@alumail.uji.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Juan_L_Lara">
+		<contact:fullName xml:lang="es">Juan Luis Lara</contact:fullName>
+		<contact:mailboxURI>mailto:juanluis@sidar.org</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Carlos_Iglesias_Moro">
+		<contact:fullName xml:lang="es">Carlos Iglesias Moro</contact:fullName>
+		<contact:mailboxURI>mailto:ciglesia@w3.org</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Oscar_Manrique">
+		<contact:fullName xml:lang="es">Oscar Manrique</contact:fullName>
+		<contact:mailboxURI>mailto:megatrans@uk2.net</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fernando_Gutierrez_Ferrerias">
+		<contact:fullName xml:lang="es">Fernando Gutiérrez Ferrerias</contact:fullName>
+		<contact:mailboxURI>mailto:ferguweb2004@yahoo.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fabio_Arciniegas">
+		<contact:fullName xml:lang="es">Fabio Arciniegas</contact:fullName>
+		<contact:mailboxURI>mailto:fabio@postgraphy.com</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gregorio_Rodriguez">
+		<contact:fullName xml:lang="es">Gregorio Rodríguez</contact:fullName>
+		<contact:mailboxURI>mailto:grr00003@terra.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Carlos_Benavidez">
+		<contact:fullName xml:lang="es">Carlos Benavidez</contact:fullName>
+		<contact:mailboxURI>mailto:carlosb@sidar.org</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Eva_Mendez">
+		<contact:fullName xml:lang="es">Eva Méndez</contact:fullName>
+		<contact:mailboxURI>mailto:emendez@bib.uc3m.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Juan_Gomez_Duaso">
+		<contact:fullName xml:lang="es">Juan Gómez Duaso</contact:fullName>
+		<contact:mailboxURI>mailto:juangodu@teleline.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Juan_Luis_Lara">
+		<contact:fullName xml:lang="es">Juan Luis Lara</contact:fullName>
+		<contact:mailboxURI>mailto:juan.lara@kristina.com</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fran_Rosa_Soler">
+		<contact:fullName xml:lang="es">Fran Rosa Soler</contact:fullName>
+		<contact:mailboxURI>mailto:franrsoler@terra.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jose_Manuel_Alonso">
+		<contact:fullName xml:lang="es">José Manuel Alonso</contact:fullName>
+		<contact:mailboxURI>mailto:jalonso@w3.org</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pedro_Silva">
+		<contact:fullName xml:lang="es">Pedro Silva</contact:fullName>
+		<contact:mailboxURI>mailto:po2@yandex.ru</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yesenia_Moreno">
+		<contact:fullName xml:lang="es">Yesenia Moreno</contact:fullName>
+		<contact:mailboxURI>mailto:yesenka@mail.ru</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Juan_R_Pozo">
+		<contact:fullName xml:lang="es">Juan R. Pozo</contact:fullName>
+		<contact:mailboxURI>mailto:jrpozo@conclase.net</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Emmanuelle_Gutierrez">
+		<contact:fullName xml:lang="es">Emmanuelle Gutiérrez y Restrepo</contact:fullName>
+		<contact:mailboxURI>mailto:emanuelle@sidar.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pedro_Palazon">
+		<contact:fullName xml:lang="es">Pedro Palazón Candel</contact:fullName>
+		<contact:mailboxURI>mailto:kusor@kusor.net</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gustavo_Garcia">
+		<contact:fullName xml:lang="es">Gustavo García</contact:fullName>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Carlos_Egea">
+		<contact:fullName xml:lang="es">Carlos Egea García</contact:fullName>
+		<contact:mailboxURI>mailto:Carlos.Egea@carm.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alicia_Sarabia">
+		<contact:fullName xml:lang="es">Alicia Sarabia Sánchez</contact:fullName>
+		<contact:mailboxURI>mailto:AliciaM.Sarabia@carm.es</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alan_Chuter">
+		<contact:fullName xml:lang="es">Alan Chuter</contact:fullName>
+		<contact:mailboxURI>mailto:achuter@teleservicios.com</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Salishan">
+		<contact:fullName xml:lang="es">Salishan</contact:fullName>
+		<contact:mailboxURI>mailto:crass2002@hotmail.com</contact:mailboxURI>
+		<dc:language>es</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Estonian ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Uuno_Vallner">
+		<contact:fullName xml:lang="et">Uuno Vallner</contact:fullName>
+		<contact:mailboxURI>mailto:Uuno.Vallner@riik.ee</contact:mailboxURI>
+		<dc:language>et</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Swedish ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Emil_Stenstrom">
+		<contact:fullName xml:lang="sv">Emil Stenström</contact:fullName>
+		<contact:mailboxURI>mailto:em@kth.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Joakim_Lofkvist">
+		<contact:fullName xml:lang="sv">Joakim Löfkvist</contact:fullName>
+		<contact:mailboxURI>mailto:joakim.lofkvist@c.lst.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Olle_Olsson">
+		<contact:fullName xml:lang="sv">Olle Olsson</contact:fullName>
+		<contact:mailboxURI>mailto:olleo@w3.org</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Erik_Mjoberg">
+		<contact:fullName xml:lang="sv">Erik Mjöberg</contact:fullName>
+		<contact:mailboxURI>mailto: erik.mjoberg@xml.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gustaf_Liljegren">
+		<contact:fullName xml:lang="sv">Gustaf Liljegren</contact:fullName>
+		<contact:mailboxURI>mailto:gustaf@xml.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jan_Ostberg">
+		<contact:fullName xml:lang="sv">Jan Östberg</contact:fullName>
+		<contact:mailboxURI>mailto:jan@xml.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Johan_Hjelm">
+		<contact:fullName xml:lang="sv">Johan Hjelm</contact:fullName>
+		<contact:mailboxURI>mailto:johan.hjelm@era.ericsson.se</contact:mailboxURI>
+		<dc:language>sv</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Finnish ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Erkka_Koski">
+		<contact:fullName xml:lang="fi">Erkka Koski </contact:fullName>
+		<contact:mailboxURI>mailto:erkkak@mbnet.fi</contact:mailboxURI>
+		<dc:language>fi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ossi_Nykanen">
+		<contact:fullName xml:lang="fi">Ossi Nykänen</contact:fullName>
+		<contact:mailboxURI>mailto:ossi.nykanen@tut.fi</contact:mailboxURI>
+		<dc:language>fi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Minna_von_Zansen">
+		<contact:fullName xml:lang="fi">Minna von Zansen</contact:fullName>
+		<dc:language>fi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Katariina_Kiiliainen">
+		<contact:fullName xml:lang="fi">Katariina Kiiliäinen</contact:fullName>
+		<dc:language>fi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Marja-Riitta_Koivunen">
+		<contact:fullName xml:lang="fi">Marja-Riitta Koivunen</contact:fullName>
+		<dc:language>fi</dc:language>
+		<contact:mailboxURI>mailto:marja@w3.org</contact:mailboxURI>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- French ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="CEWhitehead">
+		<contact:fullName xml:lang="fr">Catherine E Whitehead</contact:fullName>
+		<contact:mailboxURI>mailto:cewcathar@hotmail.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yves_Pratter">
+		<contact:fullName xml:lang="fr">Yves Pratter</contact:fullName>
+		<contact:mailboxURI>mailto:ypratter@club-internet.fr</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Coralie">
+		<contact:fullName xml:lang="fr">Coralie Mercier</contact:fullName>
+		<contact:mailboxURI>mailto:coralie@w3.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pierre_Goiffon">
+		<contact:fullName xml:lang="fr">Pierre Goiffon</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sebastien_Guillon">
+		<contact:fullName xml:lang="fr">Sébastien Guillon</contact:fullName>
+		<contact:mailboxURI>mailto:contact@sebastienguillon.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Catherine_Roy">
+		<contact:fullName xml:lang="fr">Catherine Roy</contact:fullName>
+		<contact:mailboxURI>mailto:zara@arobas.net</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Frederic_Laurent">
+		<contact:fullName xml:lang="fr">Frédéric Laurent </contact:fullName>
+		<contact:mailboxURI>mailto:fl@opikanoba.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Patrick_Blanchenay">
+		<contact:fullName xml:lang="fr">Patrick Blanchenay</contact:fullName>
+		<contact:mailboxURI>mailto:pbly@laposte.net</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Francois_Palaci">
+		<contact:fullName xml:lang="fr">François Palaci</contact:fullName>
+		<contact:mailboxURI>mailto:fp@ewap.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Xavier_Lacot">
+		<contact:fullName xml:lang="fr">Xavier Lacot</contact:fullName>
+		<contact:mailboxURI>mailto:xavier@lacot.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Carine_Bournez">
+		<contact:fullName xml:lang="fr">Carine Bournez</contact:fullName>
+		<contact:mailboxURI>mailto:carine@w3.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Patrick_Andries">
+		<contact:fullName xml:lang="fr">Patrick Andries</contact:fullName>
+		<contact:mailboxURI>mailto:pandries@cafi.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yves_Bazin">
+		<contact:fullName xml:lang="fr">Yves Bazin</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sylvain_Bilodeau">
+		<contact:fullName xml:lang="fr">Sylvain Bilodeau</contact:fullName>
+		<contact:mailboxURI>mailto:sylvain_bilodeau@hotmail.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Stephane_Bonhomme">
+		<contact:fullName xml:lang="fr">Stéphane Bonhomme</contact:fullName>
+		<contact:mailboxURI>mailto:sbonhomme@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hubert_Borderiou">
+		<contact:fullName xml:lang="fr">Hubert Borderiou</contact:fullName>
+		<contact:mailboxURI>mailto:hborderiou@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Denis_Boudreau">
+		<contact:fullName xml:lang="fr">Denis Boudreau</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Olivier_Collioud">
+		<contact:fullName xml:lang="fr">Olivier Collioud</contact:fullName>
+		<contact:mailboxURI>mailto:ocollioud@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lucas_Fournier">
+		<contact:fullName xml:lang="fr">Lucas Fournier</contact:fullName>
+		<contact:mailboxURI>mailto:lfournier@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Samira_Cuny">
+		<contact:fullName xml:lang="fr">Samira Cuny</contact:fullName>
+		<contact:mailboxURI>mailto:glsc@bris.ac.uk</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lionel_Crine">
+		<contact:fullName xml:lang="fr">Lionel Crine</contact:fullName>
+		<contact:mailboxURI>mailto:lionel.crine@free.fr</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Daniel_Dardailler">
+		<contact:fullName xml:lang="fr">Daniel Dardailler</contact:fullName>
+		<contact:mailboxURI>mailto:dd@w3.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Karl_Dubost">
+		<contact:fullName xml:lang="fr">Karl Dubost</contact:fullName>
+		<contact:mailboxURI>mailto:karl@la-grange.net</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gaelle_Feat">
+		<contact:fullName xml:lang="fr">Gaëlle Féat</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lionel_Fiol">
+		<contact:fullName xml:lang="fr">Lionel Fiol</contact:fullName>
+		<contact:mailboxURI>mailto:lfiol@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ramzi_Guetari">
+		<contact:fullName xml:lang="fr">Ramzi Guetari</contact:fullName>
+		<contact:mailboxURI>mailto:rguetari@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Xavier_Legalles">
+		<contact:fullName xml:lang="fr">Xavier Legalles</contact:fullName>
+		<contact:mailboxURI>mailto:xlegalles@nagora.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jean-Jacques_Solari">
+		<contact:fullName xml:lang="fr">Jean-Jacques Solari</contact:fullName>
+		<contact:mailboxURI>mailto:jjsolari@pobox.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jean-Jacques_Thomasson">
+		<contact:fullName xml:lang="fr">Jean-Jacques Thomasson</contact:fullName>
+		<contact:mailboxURI>mailto:jjthomasson@hotmail.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Wilfried_Paris">
+		<contact:fullName xml:lang="fr">Wilfried Pâris</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alexandre_Rodiere">
+		<contact:fullName xml:lang="fr">Alexandre Rodière</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Francois_Yergeau">
+		<contact:fullName xml:lang="fr">François Yergeau</contact:fullName>
+		<contact:mailboxURI>mailto:yergeau@alis.com</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fabrice_Bonny">
+		<contact:fullName xml:lang="fr">Fabrice Bonny</contact:fullName>
+		<contact:mailboxURI>mailto:fbonny@club-internet.fr</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Steve_Frecinaux">
+		<contact:fullName xml:lang="fr">Steve Frécinaux</contact:fullName>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Eric_Gateau">
+		<contact:fullName xml:lang="fr">Eric Gateau</contact:fullName>
+		<contact:mailboxURI>mailto:eric.gateau@webaccessibilite.net</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Dom_Massieux">
+		<contact:fullName xml:lang="fr">Dominique Hazaël-Massieux</contact:fullName>
+		<contact:mailboxURI>mailto:dom@w3.org</contact:mailboxURI>
+		<dc:language>fr</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Galician ============================ -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Santiago_Lopez_Ponte">
+		<contact:fullName xml:lang="gl">Santiago F. López Ponte</contact:fullName>
+		<contact:mailboxURI>mailto:santiago.lopez@xunta.es</contact:mailboxURI>
+		<dc:language>gl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Xose_Calvo">
+		<contact:fullName xml:lang="gl">Xosé Calvo</contact:fullName>
+		<contact:mailboxURI>mailto:html@galizaweb.net</contact:mailboxURI>
+		<dc:language>gl</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Greek ============================ -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Dimitris_Papadopoulos">
+		<contact:fullName xml:lang="el">Δημήτρης Παπαδόπουλος</contact:fullName>
+		<contact:knownAs xml:lang="en">Dimitris Papadopoulos</contact:knownAs>
+		<contact:mailboxURI>mailto:imitrispapadopoulos07@gmail.com></contact:mailboxURI>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andreas_Giannakoulopoulos">
+		<contact:fullName xml:lang="el">Αντρέας Γιαννακουλόπουλος</contact:fullName>
+		<contact:knownAs xml:lang="en">Andreas Giannakoulopoulos</contact:knownAs>
+		<contact:mailboxURI>mailto:agsp96@media.uoa.gr</contact:mailboxURI>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nina_Bouri">
+		<contact:fullName xml:lang="el">Νίνα Μπούρη</contact:fullName>
+		<contact:knownAs xml:lang="en">Nina Bouri</contact:knownAs>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Giorgos_Theocharis">
+		<contact:fullName xml:lang="el">Γιώργος Θεοχάρης</contact:fullName>
+		<contact:knownAs xml:lang="en">Giorgos Theocharis</contact:knownAs>
+		<contact:mailboxURI>mailto:gtheo003@hol.gr</contact:mailboxURI>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Constantine_Stephanidis">
+		<contact:fullName xml:lang="el">Κωνσταντίνος Στεφανίδης</contact:fullName>
+		<contact:knownAs xml:lang="en">Constantine Stephanidis</contact:knownAs>
+		<contact:mailboxURI>mailto:cs@csi.forth.gr</contact:mailboxURI>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Dimitris_Spachos">
+		<contact:fullName xml:lang="el">Δημήτρης Σπάχος</contact:fullName>
+		<contact:knownAs xml:lang="en">Dimitris_Spachos</contact:knownAs>
+		<contact:mailboxURI>mailto:dspachos@zeus.csd.auth.gr</contact:mailboxURI>
+		<dc:language>el</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Hungarian =========================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Gabor_Mate">
+		<contact:fullName xml:lang="hu">Máté Gábor</contact:fullName>
+		<contact:mailboxURI>mailto:gabor.lajos.mate@gmail.com</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Gábor Máté</contact:knownAs>
+		<dc:language>hu</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pataki_Erno">
+		<contact:fullName xml:lang="hu">Pataki Ernő</contact:fullName>
+		<contact:mailboxURI>mailto:pataki.erno@w3c.hu</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Ernő Pataki</contact:knownAs>
+		<dc:language>hu</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Eva_Megyaszai">
+		<contact:fullName xml:lang="hu">Megyaszai Éva</contact:fullName>
+		<contact:mailboxURI>mailto:vava@dsd.sztaki.hu</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Éva Megyaszai</contact:knownAs>
+		<dc:language>hu</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sikos_Laszlo">
+		<contact:fullName xml:lang="hu">Sikos László</contact:fullName>
+		<contact:mailboxURI>mailto:sikos_l@freemail.hu</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">László Sikos</contact:knownAs>
+		<dc:language>hu</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Monostory_Miklos">
+		<contact:fullName xml:lang="hu">Monostory Miklós</contact:fullName>
+		<contact:knownAs xml:lang="en">Miklós Monostory</contact:knownAs>
+		<dc:language>hu</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Interlinguan ======================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Emerson_Jose_Silveira_da_Costa">
+		<contact:fullName xml:lang="pt-br">Emerson José Silveira da Costa</contact:fullName>
+		<contact:mailboxURI>mailto:ensjo@nautilus.com.br</contact:mailboxURI>
+		<dc:language>ia</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Hebrew ======================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Gila_Gertel_Hasson">
+		<contact:fullName xml:lang="he"> גילה גרטל- חסון</contact:fullName>
+		<contact:knownAs xml:lang="en">Gila Gertel-Hasson</contact:knownAs>
+		<contact:mailboxURI>mailto:gilagh@netvision.net.il</contact:mailboxURI>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michel_Bercovier">
+		<contact:fullName xml:lang="he">מישל ברקוביאר</contact:fullName>
+		<contact:knownAs xml:lang="fr">Michel Bercovier</contact:knownAs>
+		<contact:mailboxURI>mailto:berco@cs.huji.ac.il</contact:mailboxURI>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ouri_Bercovier">
+		<contact:fullName xml:lang="he">אורי ברקוביאר</contact:fullName>
+		<contact:knownAs xml:lang="fr">Ouri Bercovier</contact:knownAs>
+		<contact:mailboxURI>mailto:fberco@cs.huji.ac.il</contact:mailboxURI>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nir_Dagan">
+		<contact:fullName xml:lang="he">ניר דגן</contact:fullName>
+		<contact:knownAs xml:lang="en">Nir Dagan</contact:knownAs>
+		<contact:mailboxURI>mailto:nir@nirdagan.com</contact:mailboxURI>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Katerina_Shechtman">
+		<contact:fullName xml:lang="en">Katerina Shechtman</contact:fullName>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Oleg_Gaivoronsky">
+		<contact:fullName xml:lang="en">Oleg Gaivoronsky</contact:fullName>
+		<dc:language>he</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Indonesian ========================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Edwin_Rene">
+		<contact:fullName xml:lang="id">Edwin Rene</contact:fullName>
+		<contact:mailboxURI>mailto:edwin.rene@gmail.com</contact:mailboxURI>
+		<dc:language>id</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Roberta_Asparsa">
+		<contact:fullName xml:lang="id">Roberta Asparsa</contact:fullName>
+		<contact:mailboxURI>mailto:roberta@idebagus.com</contact:mailboxURI>
+		<dc:language>id</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Junaidi_Kurniawan">
+		<contact:fullName xml:lang="id">Junaidi Kurniawan</contact:fullName>
+		<contact:mailboxURI>mailto:unaidi@indonesiacompanies.com</contact:mailboxURI>
+		<dc:language>id</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Dody_Suria_Wijaya">
+		<contact:fullName xml:lang="id">Dody Suria Wijaya</contact:fullName>
+		<contact:mailboxURI>mailto:dody@usable.web.id</contact:mailboxURI>
+		<dc:language>id</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Roy_Sukamto">
+		<contact:fullName xml:lang="id">Roy Sukamto</contact:fullName>
+		<contact:mailboxURI>roy.sukamto@gmail.com</contact:mailboxURI>
+		<dc:language>id</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Italian ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Gabriele_Romanato">
+		<contact:fullName xml:lang="it">Gabriele Romanato</contact:fullName>
+		<contact:mailboxURI>mailto:gabriele.romanato@gmail.com</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Simone_Pascarosa">
+		<contact:fullName xml:lang="it">Simone Pascarosa</contact:fullName>
+		<contact:mailboxURI>mailto:simone.pascarosa@gmail.com</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Giovanni_Losacco">
+		<contact:fullName xml:lang="it">Giovanni Losacco</contact:fullName>
+		<contact:mailboxURI>mailto:giovannideangelis@gmail.com</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Giovanni_De_Angelis">
+		<contact:fullName xml:lang="it">Giovanni De Angelis</contact:fullName>
+		<contact:mailboxURI>mailto:g.losacco@inwind.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gianpiero_Pedone">
+		<contact:fullName xml:lang="it">Gianpiero Pedone</contact:fullName>
+		<contact:mailboxURI>mailto:johannespetrus@tiscali.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Daniele_Florio">
+		<contact:fullName xml:lang="it">Daniele Florio</contact:fullName>
+		<contact:mailboxURI>mailto:daniele@gizax.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andrea_Crevola">
+		<contact:fullName xml:lang="it">Andrea Crevola</contact:fullName>
+		<contact:mailboxURI>mailto:andrea.crevola@csp.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Luca_Gabriele">
+		<contact:fullName xml:lang="it">Luca Gabriele</contact:fullName>
+		<contact:mailboxURI>mailto:w3c-translator@lucagabriele.net</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Daniele_Gabriele">
+		<contact:fullName xml:lang="it">Daniele Gabriele</contact:fullName>
+		<contact:mailboxURI>mailto:daniele.gabriele@dkg.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Maurizio_Vittoria">
+		<contact:fullName xml:lang="it">Maurizio Vittoria</contact:fullName>
+		<contact:mailboxURI>mailto:vittoria@marciana.venezia.sbn.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pasquale_Popolizio">
+		<contact:fullName xml:lang="it">Pasquale Popolizio</contact:fullName>
+		<contact:mailboxURI>mailto:pasquale@popolizio.com</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="traweb">
+		<contact:fullName xml:lang="it">Monica Cainarca</contact:fullName>
+		<contact:mailboxURI>mailto:mocai@vodafone.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Claudio_Cattazzo">
+		<contact:fullName xml:lang="it">Claudio Cattazzo</contact:fullName>
+		<contact:mailboxURI>mailto:claudio@linux.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Francesca_Falconi">
+		<contact:fullName xml:lang="it">Francesca Falconi</contact:fullName>
+		<contact:mailboxURI>mailto:francesca@cblue.org</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Patrizia_Andronico">
+		<contact:fullName xml:lang="it">Patrizia Andronico</contact:fullName>
+		<contact:mailboxURI>mailto:patrizia.andronico@iat.cnr.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Annalisa_Cichella">
+		<contact:fullName xml:lang="it">Annalisa Cichella</contact:fullName>
+		<contact:mailboxURI>mailto:acichella@tiscali.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Roberto_Scano">
+		<contact:fullName xml:lang="it">Roberto Scano</contact:fullName>
+		<contact:mailboxURI>mailto:rscano@iwa-italy.org</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michele_Diodati">
+		<contact:fullName xml:lang="it">Michele Diodati</contact:fullName>
+		<contact:mailboxURI>mailto:michele@diodati.org</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pasquale_Russo">
+		<contact:fullName xml:lang="it">Paquale Russo</contact:fullName>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Vanni_Bertini">
+		<contact:fullName xml:lang="it">Vanni Bertini</contact:fullName>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michelangelo_Bottura">
+		<contact:fullName xml:lang="it">Michelangelo Bottura</contact:fullName>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Maria_Cristina_Giavoni">
+		<contact:fullName xml:lang="it">Maria Cristina Giavoni</contact:fullName>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Adelmo_Taddei">
+		<contact:fullName xml:lang="it">Adelmo Taddei</contact:fullName>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Elfrida_Brioschi">
+		<contact:fullName xml:lang="it">Elfrida Brioschi</contact:fullName>
+		<contact:mailboxURI>mailto:Elfrida.Brioschi@vodafone.com></contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Emiliano_Tellina">
+		<contact:fullName xml:lang="it">Emiliano Tellina</contact:fullName>
+		<contact:mailboxURI>mailto:iranon@latoserver.it</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="IT_Office">
+		<!-- <contact:fullName xml:lang="it">Traduzione a cura dell' Ufficio Italiano W3C, con il contributo di Marco Blasioli</contact:fullName> -->
+		<contact:fullName xml:lang="it">Ufficio Italiano W3C, con il contributo di Marco Blasioli</contact:fullName>
+		<contact:mailboxURI>mailto:oreste@w3.org</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nick_Venturelli">
+		<contact:fullName xml:lang="it">Nick Venturelli</contact:fullName>
+		<contact:mailboxURI>mailto:nventurelli@yahoo.com</contact:mailboxURI>
+		<dc:language>it</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Korean ============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="TaeSoo_Kim">
+		<contact:fullName xml:lang="ko">김태수</contact:fullName>
+		<contact:knownAs>TaeSoo Kim</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kyung_Shim">
+		<contact:fullName xml:lang="ko">심경</contact:fullName>
+		<contact:knownAs>Kyung Shim</contact:knownAs>
+		<contact:mailboxURI>mailto:shim@kisti.re.kr</contact:mailboxURI>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="ChangHee_Lee">
+		<contact:fullName xml:lang="ko">이창희</contact:fullName>
+		<contact:knownAs>ChangHee Lee</contact:knownAs>
+		<contact:mailboxURI>mailto:chlee@initech.com</contact:mailboxURI>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Minsu_Jang">
+		<contact:fullName xml:lang="ko">장민수</contact:fullName>
+		<contact:knownAs>Minsu Jang</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jungshik_Shin">
+		<contact:fullName xml:lang="ko">신정식</contact:fullName>
+		<contact:knownAs>Jungshik Shin</contact:knownAs>
+		<contact:mailboxURI>mailto:jshin@i18nl10n.com</contact:mailboxURI>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Greg_Shin">
+		<contact:fullName xml:lang="ko">신승식</contact:fullName>
+		<contact:knownAs>Greg Shin</contact:knownAs>
+		<contact:mailboxURI>mailto:gregshin@hanafos.com</contact:mailboxURI>
+		<contact:WebPage>http://gregshin.pe.kr</contact:WebPage>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Dongsok_Kang">
+		<contact:fullName xml:lang="ko">강동석</contact:fullName>
+		<contact:knownAs>Dongsok Kang</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Taeho_Lee">
+		<contact:fullName xml:lang="ko">이태호</contact:fullName>
+		<contact:knownAs>Taeho Lee</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kangchan_Lee">
+		<contact:fullName xml:lang="ko">이강찬</contact:fullName>
+		<contact:knownAs>Kangchan Lee</contact:knownAs>
+		<contact:mailboxURI>mailto:chan@w3.org</contact:mailboxURI>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hye_Jin_Park">
+		<contact:fullName xml:lang="ko">박혜진</contact:fullName>
+		<contact:knownAs>Hye Jin Park</contact:knownAs>
+		<contact:mailboxURI>mailto:h.j.park@w3.org</contact:mailboxURI>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Namhyung_Lee">
+		<contact:fullName xml:lang="ko">김남형</contact:fullName>
+		<contact:knownAs>Namhyung Kim</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yonsei_University">
+		<contact:fullName xml:lang="ko">연세대학교</contact:fullName>
+		<contact:knownAs>Yonsei University</contact:knownAs>
+		<dc:language>ko</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!--Slovakian ============================ -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Jozef_Izso">
+		<contact:fullName xml:lang="sk">Jozef Izso</contact:fullName>
+		<contact:mailboxURI>mailto:izsak@adart.sk</contact:mailboxURI>
+		<dc:language>sk</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Martina_Kobolkova">
+		<contact:fullName xml:lang="sk">Martina Kobolkova</contact:fullName>
+		<contact:mailboxURI>mailto:kobolkova@fmph.uniba.sk</contact:mailboxURI>
+		<dc:language>sk</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!--Slovenian ============================ -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Vuk_Cosic">
+		<contact:fullName xml:lang="sn">Vuk Cosic</contact:fullName>
+		<contact:mailboxURI>mailto:vuk.cosic@literal.si</contact:mailboxURI>
+		<dc:language>sn</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Dutch =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Saffier_Verkaik">
+		<contact:fullName xml:lang="nl">Saffier Verkaik</contact:fullName>
+		<contact:mailboxURI>mailto:saffierv@hotmail.com</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Holke_Visser">
+		<contact:fullName xml:lang="nl">Holke F. Visser</contact:fullName>
+		<contact:mailboxURI>mailto:holke@home.nl</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Miente_Bakker">
+		<contact:fullName xml:lang="nl">Miente Bakker</contact:fullName>
+		<contact:mailboxURI>mailto:miente@cwi.nl</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andy_Camps">
+		<contact:fullName xml:lang="nl">Andy Camps</contact:fullName>
+		<contact:mailboxURI>mailto:andy.camps@playgarden.com</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Henk_Snetselaar">
+		<contact:fullName xml:lang="nl">Henk Snetselaar</contact:fullName>
+		<contact:mailboxURI>mailto:H.Snetselaar@bartimeus.nl</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Bert_Bos">
+		<contact:fullName xml:lang="nl">Bert Bos</contact:fullName>
+		<contact:mailboxURI>mailto:bert@w3.org</contact:mailboxURI>
+		<dc:language>nl</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Lithuanian ============================ -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Tadas_Talaikis">
+		<contact:fullName xml:lang="lt">Tadas Talaikis</contact:fullName>
+		<contact:mailboxURI>mailto:talaikis.tadas@gmail.com</contact:mailboxURI>
+		<dc:language>lt</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Marathi =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Amol_Wanjari">
+		<contact:fullName xml:lang="mr">अमोल वि. वंजारी</contact:fullName>
+		<contact:knownAs xml:lang="en">Amol V. Wanjari</contact:knownAs>
+		<contact:mailboxURI>mailto:amol@dsl.serc.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>mr</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Norwegian ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Frank_Karlstroem">
+		<contact:fullName xml:lang="no">Frank Karlstrøm</contact:fullName>
+		<contact:mailboxURI>mailto:frank_karlstrom@hotmail.com</contact:mailboxURI>
+		<dc:language>no</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Karl_Ove_Hufthammer">
+		<contact:fullName xml:lang="no">Karl Ove Hufthammer</contact:fullName>
+		<contact:mailboxURI>mailto:karl@huftis.org</contact:mailboxURI>
+		<dc:language>no</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Polish ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Sebastian_Snopek">
+		<contact:fullName xml:lang="pl">Sebastian Snopek</contact:fullName>
+		<contact:mailboxURI>mailto:boltarr@poczta.onet.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ireneusz_Wojdylo">
+		<contact:fullName xml:lang="pl">Ireneusz Wojdyło</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Daniel_Parafianowicz">
+		<contact:fullName xml:lang="pl">Daniel Parafianowicz</contact:fullName>
+		<contact:mailboxURI>mailto:gumbas83@wp.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mariusz_Zebrowski">
+		<contact:fullName xml:lang="pl">Mariusz Żebrowski</contact:fullName>
+		<contact:mailboxURI>mailto:kontakt@kompedium.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andrzej_Korasiak">
+		<contact:fullName xml:lang="pl">Andrzej Korasiak</contact:fullName>
+		<contact:mailboxURI>mailto:andrzej.korasiak@netresolve.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lukasz_Piwko">
+		<contact:fullName xml:lang="pl">Łukasz Piwko</contact:fullName>
+		<contact:mailboxURI>mailto:piwekmbm@wp.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Robert_Blaut">
+		<contact:fullName xml:lang="pl">Robert Błaut</contact:fullName>
+		<contact:mailboxURI>mailto:robert.blaut@gmail.com</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andrew_Osobka">
+		<contact:fullName xml:lang="pl">Andrew Osobka</contact:fullName>
+		<contact:mailboxURI>mailto:pan_andrew@yahoo.ca</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michal_Gorny">
+		<contact:fullName xml:lang="pl">Michał Górny</contact:fullName>
+		<contact:mailboxURI>mailto:michal-gorny@wp.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jacek_Glen">
+		<contact:fullName xml:lang="pl">Jacek Gleń</contact:fullName>
+		<contact:mailboxURI>mailto:glenik@wp.pl</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Piotr_Rejmer">
+		<contact:fullName xml:lang="pl">Piotr Rejmer</contact:fullName>
+		<contact:mailboxURI>mailto:prejmer@acm.org</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Natalia_Fabisz">
+		<contact:fullName xml:lang="pl">Natalia Fabisz</contact:fullName>
+		<contact:mailboxURI>mailto:natalia.fabisz@yahoo.com</contact:mailboxURI>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Tomasz_Namyslowski">
+		<contact:fullName xml:lang="pl">Tomasz Namysłowski</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Agata_Bogacka">
+		<contact:fullName xml:lang="pl">Agata Bogacka</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jan_Dlugosz">
+		<contact:fullName xml:lang="pl">Jan Długosz</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kamil_Wisniewski">
+		<contact:fullName xml:lang="pl">Kamil Wiśniewski</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Robert_Filipowski">
+		<contact:fullName xml:lang="pl">Robert Filipowski</contact:fullName>
+		<dc:language>pl</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Portuguese ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Alan_Carvalho">
+		<contact:fullName xml:lang="pt-br">Alan Henrique Pardo de Carvalho</contact:fullName>
+		<contact:mailboxURI>mailto:alancarv@uol.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Rafael_Zanella">
+		<contact:fullName xml:lang="pt-br">Rafael Zanella</contact:fullName>
+		<contact:mailboxURI>mailto:rafael@homehost.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Miguel_Saturnino">
+		<contact:fullName xml:lang="pt">Miguel Saturnino</contact:fullName>
+		<contact:mailboxURI>mailto:miguel.saturnino@teiadigital.pt</contact:mailboxURI>
+		<dc:language>pt</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alexandre_Claudio">
+		<contact:fullName xml:lang="pt">Alexandre Cláudio de Sena Viegas</contact:fullName>
+		<contact:mailboxURI>mailto:Bandlos17@hotmail.com</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mauricio_Samy_Silva">
+		<contact:fullName xml:lang="pt-br">Maurício Samy Silva</contact:fullName>
+		<contact:mailboxURI>mailto:maujor@maujor.com</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jorge_Fernandes">
+		<contact:fullName xml:lang="pt">Jorge Fernandes</contact:fullName>
+		<contact:mailboxURI>mailto:jorge.f@netcabo.pt</contact:mailboxURI>
+		<dc:language>pt</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ricardo_Maciel">
+		<contact:fullName xml:lang="pt-br">Ricardo Maciel</contact:fullName>
+		<contact:mailboxURI>mailto:r_maciel@ig.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Paulo_Baptista">
+		<contact:fullName xml:lang="pt-br">Paulo Baptista</contact:fullName>
+		<contact:mailboxURI>mailto:pw777a@yahoo.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Leonel_Morgado">
+		<contact:fullName xml:lang="pt">Leonel Morgado</contact:fullName>
+		<contact:mailboxURI>mailto:leonelm@bigfoot.com</contact:mailboxURI>
+		<dc:language>pt</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Marcelo_Jaccoud_Amaral">
+		<contact:fullName xml:lang="pt-br">Marcelo Jaccoud Amaral</contact:fullName>
+		<contact:mailboxURI>mailto:jaccoud@petrobras.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Fabricio_Rogerio_Santos_Santana">
+		<contact:fullName xml:lang="pt-br">Fabrício Rogério Santos Santana</contact:fullName>
+		<contact:mailboxURI>mailto:fabricio@conheca.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Joildo_Santos">
+		<contact:fullName xml:lang="pt-br">Joildo Santos</contact:fullName>
+		<contact:mailboxURI>mailto:joildo@msn.com</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Christian_Reis">
+		<contact:fullName xml:lang="pt-br">Christian Reis</contact:fullName>
+		<contact:mailboxURI>mailto:kiko@async.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Claudia_Dias">
+		<contact:fullName xml:lang="pt-br">Claudia Dias</contact:fullName>
+		<contact:mailboxURI>mailto:claudiaad@yahoo.com</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jose_Donato_Messaros">
+		<contact:fullName xml:lang="pt-br">José Donato Messaros</contact:fullName>
+		<contact:mailboxURI>mailto:josemessaros@ig.com.br</contact:mailboxURI>
+		<dc:language>pt-br</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Romanian ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Teodor_Birca">
+		<contact:fullName xml:lang="ro">Teodor Birca</contact:fullName>
+		<contact:mailboxURI>mailto:bircat@gmail.com</contact:mailboxURI>
+		<dc:language>ro</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Andrei_Stanescu">
+		<contact:fullName xml:lang="ro">Andrei Stanescu</contact:fullName>
+		<contact:mailboxURI>mailto:andre_ardent-user@yahoo.com.au</contact:mailboxURI>
+		<dc:language>ro</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Antoniu_Seicareanu">
+		<contact:fullName xml:lang="ro">Antoniu Seicareanu</contact:fullName>
+		<contact:mailboxURI>mailto:seicareanus@yahoo.ca</contact:mailboxURI>
+		<dc:language>ro</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ionita_Lucian">
+		<contact:fullName xml:lang="ro">Ionita Lucian</contact:fullName>
+		<contact:mailboxURI>mailto:chupy@go.ro</contact:mailboxURI>
+		<dc:language>ro</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mircea_Vutcovici">
+		<contact:fullName xml:lang="ro">Mircea Vutcovici</contact:fullName>
+		<contact:mailboxURI>mailto:mot@c7.campus.utcluj.ro</contact:mailboxURI>
+		<dc:language>ro</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Belorusian  ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Aleksei_Petrov">
+		<contact:fullName xml:lang="be">Аляксей Пятроў</contact:fullName>
+		<contact:knownAs xml:lang="en">Aleksei Petrov</contact:knownAs>
+		<dc:language>be</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Russian  ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Elena_Nellson">
+		<contact:fullName xml:lang="ru">Елена Неллсон</contact:fullName>
+		<contact:knownAs xml:lang="en">Elena Nellson</contact:knownAs>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Michail_Kaliev">
+		<contact:fullName xml:lang="ru">Михаил Калиев</contact:fullName>
+		<contact:knownAs xml:lang="en">Michail Kaliev</contact:knownAs>
+		<contact:mailboxURI>mailto:interent@yandex.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Aleksey_Beshenov">
+		<contact:fullName xml:lang="ru">Алексей Бешенов</contact:fullName>
+		<contact:knownAs xml:lang="en">Aleksey Beshenov</contact:knownAs>
+		<contact:mailboxURI>mailto:bav.272304@gmail.com</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Evgeny_Rabchevsky">
+		<contact:fullName xml:lang="ru">Евгений Рабчевский</contact:fullName>
+		<contact:knownAs xml:lang="en">Evgeny Rabchevsky</contact:knownAs>
+		<contact:mailboxURI>mailto:evgeny@ranat.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Dmitry_Sherdina">
+		<contact:fullName xml:lang="ru">Дмитрий Щербина</contact:fullName>
+		<contact:knownAs xml:lang="en">Dmitry Sherbina</contact:knownAs>
+		<contact:mailboxURI>mailto:sherdim@mail.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Igor_Dolotin">
+		<contact:fullName xml:lang="ru">Игорь Долотин</contact:fullName>
+		<contact:knownAs xml:lang="en">Igor Dolotin</contact:knownAs>
+		<contact:mailboxURI>mailto:igor_dolotin@ubs.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alexey_Shamrin">
+		<contact:fullName xml:lang="ru">Алексей Шамрин</contact:fullName>
+		<contact:knownAs xml:lang="en">Alexey Shamrin</contact:knownAs>
+		<contact:mailboxURI>mailto:shamrin@mail.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Julia_Podaniova">
+		<contact:fullName xml:lang="ru">Юлия Поданёва</contact:fullName>
+		<contact:knownAs xml:lang="en">Julia Podaniova</contact:knownAs>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gennadiy_Berman">
+		<contact:fullName xml:lang="ru">Геннадий Берман</contact:fullName>
+		<contact:knownAs xml:lang="en">Gennadiy Berman</contact:knownAs>
+		<contact:mailboxURI>mailto:berman@tversu.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Vladimir_Lukyanov">
+		<contact:fullName xml:lang="ru">Владимир Лукьянов</contact:fullName>
+		<contact:knownAs xml:lang="en">Vladimir Lukyanov</contact:knownAs>
+		<contact:mailboxURI>mailto:lvm@integrum.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alexander_Savenkov">
+		<contact:fullName xml:lang="ru">Александр Савенков</contact:fullName>
+		<contact:knownAs xml:lang="en">Alexander Savenkov</contact:knownAs>
+		<contact:mailboxURI>mailto:w3@hotbox.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Vasili_Yaroshevich">
+		<contact:fullName xml:lang="ru">Василь Ярошевич</contact:fullName>
+		<contact:knownAs xml:lang="en">Vasili Yaroshevich</contact:knownAs>
+		<contact:mailboxURI>mailto:yarosh@raleigh.ru</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Oleg_Tkachenko">
+		<contact:fullName xml:lang="ru">Олег Ткаченко</contact:fullName>
+		<contact:knownAs xml:lang="en">Oleg Tkachenko</contact:knownAs>
+		<contact:mailboxURI>mailto:olegt@multiconn.com</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Radik_Usmanov">
+		<contact:fullName xml:lang="ru">Радик Усманов</contact:fullName>
+		<contact:mailboxURI>mailto:RUsmanov@luxoft.com</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Radik Usmanov</contact:knownAs>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Alexander_Pyramidin">
+		<contact:fullName xml:lang="ru">Александр Пирамидин</contact:fullName>
+		<contact:knownAs xml:lang="en">Alexander Pyramidin</contact:knownAs>
+		<contact:mailboxURI>mailto:a_pyramidin@yahoo.com</contact:mailboxURI>
+		<dc:language>ru</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Vietnamese ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Manh_Nguyen">
+		<contact:fullName xml:lang="vi">Mạnh Nguyễn</contact:fullName>
+		<contact:mailboxURI>mailto:leanh.pham@hotmail.com</contact:mailboxURI>
+		<dc:language>vi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Tran_Duy_Hoang">
+		<contact:fullName xml:lang="vi">Trần Duy Hoàng</contact:fullName>
+		<contact:mailboxURI>mailto:hoangduytran@tiscali.co.uk</contact:mailboxURI>
+		<dc:language>vi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Screzz_Wladimir">
+		<contact:fullName xml:lang="en">Screzz Wladimir</contact:fullName>
+		<contact:mailboxURI>mailto:screzzcoms@yahoo.com</contact:mailboxURI>
+		<dc:language>vi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nguyen_Van_Binh">
+		<contact:fullName xml:lang="vi">Nguyen Van Binh</contact:fullName>
+		<contact:mailboxURI>mailto:tiensinh@fpt.vn</contact:mailboxURI>
+		<dc:language>vi</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Turkish =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Yeliz_Yesilada">
+		<contact:fullName xml:lang="tr">Yeliz Yesilada</contact:fullName>
+		<contact:mailboxURI>mailto:yesilady@cs.man.ac.uk</contact:mailboxURI>
+		<dc:language>tr</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nilgun_Belma_Buguner">
+		<contact:fullName xml:lang="tr">Nilgün Belma Bugüner</contact:fullName>
+		<contact:mailboxURI>mailto:nilgun@belgeler.gen.tr</contact:mailboxURI>
+		<dc:language>tr</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Chinese ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="ZDYX">
+		<contact:fullName xml:lang="zh-hans">张杜一雄</contact:fullName>
+		<contact:knownAs xml:lang="en">Zhang Du Yi Xiong</contact:knownAs>
+		<contact:mailboxURI>mailto:zhangduyixiong@gmail.com</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Liang_Guo">
+		<contact:fullName xml:lang="zh-hans">郭亮</contact:fullName>
+		<contact:knownAs xml:lang="en">Liang Guo</contact:knownAs>
+		<contact:mailboxURI>mailto:dove188@163.com</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Chao_Wang">
+		<contact:fullName xml:lang="zh-hans">王超</contact:fullName>
+		<contact:knownAs xml:lang="en">Chao Wang</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Junchen_Wu">
+		<contact:fullName xml:lang="zh-hans">吴隽辰</contact:fullName>
+		<contact:knownAs xml:lang="en">Junchen  Wu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hao_Wu">
+		<contact:fullName xml:lang="zh-hans">武浩</contact:fullName>
+		<contact:knownAs xml:lang="en">Hao Wu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Shan_Chen">
+		<contact:fullName xml:lang="zh-hans">陈珊</contact:fullName>
+		<contact:knownAs xml:lang="en">Shan Chen</contact:knownAs>
+		<contact:mailboxURI>mailto:chenshan@ust.hk</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Shengping_Liu">
+		<contact:fullName xml:lang="zh-hans"> 刘升平</contact:fullName>
+		<contact:knownAs xml:lang="en">Shengping Liu</contact:knownAs>
+		<contact:mailboxURI>mailto:lsp@w3china.org</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yufeng_Lan">
+		<contact:fullName xml:lang="zh-hans"> 兰煜峰</contact:fullName>
+		<contact:knownAs xml:lang="en">Yufeng Lan</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+		<contact:mailboxURI>mailto:nlany@uibe.edu.cn</contact:mailboxURI>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Lijun_Zhu">
+		<contact:fullName xml:lang="zh-hans"> 朱礼军</contact:fullName>
+		<contact:knownAs xml:lang="en">Lijun Zhu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Zipeng_Zhan">
+		<contact:fullName xml:lang="zh-hans"> 詹子鹏 </contact:fullName>
+		<contact:knownAs xml:lang="en">Zipeng Zhan</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yue_Ni">
+		<contact:fullName xml:lang="zh-hans"> 倪跃 </contact:fullName>
+		<contact:knownAs xml:lang="en">Yue Ni</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="W3CHina">
+		<contact:fullName xml:lang="en">W3CHINA.ORG Open Translation Project</contact:fullName>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Eagle_Liang">
+		<contact:fullName xml:lang="zh-hant">梁英志</contact:fullName>
+		<contact:knownAs xml:lang="en">Eagle Liang</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="LA_Center">
+		<contact:fullName xml:lang="zh-hant">洛杉磯中華學習中心</contact:fullName>
+		<contact:knownAs xml:lang="en">Los Angeles Chinese Learning Center</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Samuel_Chong">
+		<contact:fullName xml:lang="zh-hans">種參</contact:fullName>
+		<contact:knownAs xml:lang="en">Samuel Chong</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kong_Lan">
+		<contact:fullName xml:lang="zh-hans">孔岚</contact:fullName>
+		<contact:knownAs xml:lang="en">Kong Lan</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jingru_Li">
+		<contact:fullName xml:lang="zh-hans">李净如</contact:fullName>
+		<contact:knownAs xml:lang="en">Jingru Li</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sheng_Liu">
+		<contact:fullName xml:lang="zh-hans">刘 胜</contact:fullName>
+		<contact:knownAs xml:lang="en">Sheng Liu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Johnson_Zhou">
+		<contact:fullName xml:lang="zh-hans">周强</contact:fullName>
+		<contact:knownAs xml:lang="en">Johnson Zhou</contact:knownAs>
+		<contact:mailboxURI>mailto:jszhou@pub.xaonline.com</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yaozhong_Liang">
+		<contact:fullName xml:lang="zh-hans">梁曜中</contact:fullName>
+		<contact:knownAs xml:lang="en">Yaozhong Liang</contact:knownAs>
+		<contact:mailboxURI>mailto:liangy@cs.man.ac.uk</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yidong_Du">
+		<contact:fullName xml:lang="zh-hans">杜怡冬</contact:fullName>
+		<contact:knownAs xml:lang="en">Yidong Du</contact:knownAs>
+		<contact:mailboxURI>mailto:duyidong@263.net</contact:mailboxURI>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Chien-Tai-Chen">
+		<contact:fullName xml:lang="zh-hant">陳建泰</contact:fullName>
+		<contact:knownAs xml:lang="en">Chientai Chen</contact:knownAs>
+		<contact:mailboxURI>mailto:chientai@itri.org.tw</contact:mailboxURI>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hong-Chen">
+		<contact:fullName xml:lang="zh-hant">陳宏</contact:fullName>
+		<contact:mailboxURI>mailto:hchen@hongchen.net</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Hong Chen</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kevin_Hsu">
+		<contact:fullName xml:lang="zh-hant">徐子淵</contact:fullName>
+		<contact:mailboxURI>mailto:shyutz@ms1.hinet.net</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Kevin Hsu</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Liang_ChungPing">
+		<contact:fullName xml:lang="zh-hant">梁中平</contact:fullName>
+		<contact:mailboxURI>mailto:shyutz@cpliang@iii.org.tw</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Liang Chung-Ping</contact:knownAs>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pan_Li">
+		<contact:fullName xml:lang="zh-hans">李攀</contact:fullName>
+		<contact:mailboxURI>mailto:li76pan@web.de</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Pan Li</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Q_Qiu">
+		<contact:fullName xml:lang="zh-hans">裘强</contact:fullName>
+		<contact:mailboxURI>mailto:qqiu@yeah.net</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Q. Qiu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Collin_Hsu">
+		<contact:fullName xml:lang="zh-hans">徐涵</contact:fullName>
+		<contact:mailboxURI>mailto:collin@seu.edu.cn</contact:mailboxURI>
+		<contact:knownAs xml:lang="en">Collin Hsu</contact:knownAs>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yammie-Yuen">
+		<contact:fullName xml:lang="zh-hant">阮明儀</contact:fullName>
+		<contact:knownAs xml:lang="en">Yammie Yuen</contact:knownAs>
+		<contact:mailboxURI>mailto:yammie@cs.ust.hk</contact:mailboxURI>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="WTB_Language_Group">
+		<contact:fullName xml:lang="en">WTB Language Group</contact:fullName>
+		<dc:language>zh-hans</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Huan-Ching-Kuo">
+		<contact:fullName xml:lang="zh-hant">郭煥青</contact:fullName>
+		<contact:knownAs xml:lang="en">Huan Ching Kuo</contact:knownAs>
+		<contact:mailboxURI>mailto:huan.ching@nationsfinance.co.uk</contact:mailboxURI>
+		<dc:language>zh-hant</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Japanese ============================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Yakura_Masataka">
+		<contact:fullName xml:lang="ja">矢倉 眞隆</contact:fullName>
+		<contact:knownAs xml:lang="en">Yakura Masataka</contact:knownAs>
+		<contact:mailboxURI>mailto:yakura-masataka@mitsue.co.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kamitsuna_Shuji">
+		<contact:fullName xml:lang="ja">上綱 秀治</contact:fullName>
+		<contact:knownAs xml:lang="en">Shuji KamitsunaS</contact:knownAs>
+		<contact:mailboxURI>mailto:ax2s-kmtn@asahi-net.or.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kei_Kubo">
+		<contact:fullName xml:lang="ja">久保渓</contact:fullName>
+		<contact:knownAs xml:lang="en">Kei Kubo</contact:knownAs>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hiroaki_Hasegawa">
+		<contact:fullName xml:lang="ja">長谷川 宏聡</contact:fullName>
+		<contact:knownAs xml:lang="en">Hasegawa Hiroaki</contact:knownAs>
+		<contact:mailboxURI>mailto:w4ard@s26.xrea.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yosikazu_Takamura">
+		<contact:fullName xml:lang="ja">高村 吉一</contact:fullName>
+		<contact:knownAs xml:lang="en">Yosikazu Takamura</contact:knownAs>
+		<contact:mailboxURI>mailto:soco__kankyo@hotmail.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ryuuta_Hasegawa">
+		<contact:fullName xml:lang="ja">長谷川 隆太</contact:fullName>
+		<contact:knownAs xml:lang="en">Ryuuta Hasegawa</contact:knownAs>
+		<contact:mailboxURI>mailto:DZK11605@nifty.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Shuji_Kamitsuna">
+		<contact:fullName xml:lang="ja">上綱 秀治</contact:fullName>
+		<contact:knownAs xml:lang="en">Shuji Kamitsuna</contact:knownAs>
+		<!-- <contact:fullName xml:lang="en">Shuji Kamitsuna</contact:fullName> -->
+		<contact:mailboxURI>mailto:ax2s-kmtn@asahi-net.or.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kenji_Inoue">
+		<contact:fullName xml:lang="ja">井上謙次</contact:fullName>
+		<contact:knownAs xml:lang="en">Kenji Inoue</contact:knownAs>
+		<contact:mailboxURI>mailto:kenz@oct.zaq.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yushi_Komachi">
+		<contact:fullName xml:lang="en">Yushi Komachi</contact:fullName>
+		<contact:mailboxURI>mailto:komachi@y-adagio.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="JapXHTMLFAQ">
+		<contact:fullName xml:lang="ja">橋本</contact:fullName>
+		<!-- <contact:fullName xml:lang="en">Manabu Sugai</contact:fullName> -->
+		<contact:mailboxURI>cocoa@bx.raindrop.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Manabu_Sugai">
+		<!-- <contact:fullName xml:lang="ja">まきかずひこ</contact:fullName> -->
+		<contact:fullName xml:lang="en">Manabu Sugai</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kazuhiko_Maki">
+		<contact:fullName xml:lang="ja">まきかずひこ</contact:fullName>
+		<contact:knownAs xml:lang="en">Kazuhiko Maki</contact:knownAs>
+		<contact:mailboxURI>mailto:kazmacky@fancy.ocn.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Hiroki_Hosokawa">
+		<contact:fullName xml:lang="ja">細川裕樹</contact:fullName>
+		<contact:knownAs xml:lang="en">Hiroki Hosokawa</contact:knownAs>
+		<contact:mailboxURI>mailto:hskwhrk@ybb.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yoko_Onda">
+		<contact:fullName xml:lang="ja">恩田 葉子</contact:fullName>
+		<contact:knownAs xml:lang="en">Yoko Onda</contact:knownAs>
+		<contact:mailboxURI>mailto:oz-07ams@mvh.biglobe.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yukio_Hirose">
+		<contact:fullName xml:lang="ja">広瀬行夫</contact:fullName>
+		<contact:knownAs xml:lang="en">Yukio Hirose</contact:knownAs>
+		<contact:mailboxURI>mailto:___@hcn.zaq.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Nobuhisa_Shiraishi">
+		<contact:fullName xml:lang="ja">白石 展久</contact:fullName>
+		<contact:knownAs xml:lang="en">Nobuhisa Shiraishi</contact:knownAs>
+		<contact:mailboxURI>mailto:n-shiraishi@w3.org</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:webmaster@cybergarden.net">
+		<contact:fullName xml:lang="ja">益子 貴寛</contact:fullName>
+		<contact:mailboxURI>mailto:webmaster@cybergarden.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:kenjikat@microsoft.com">
+		<contact:fullName xml:lang="ja">加藤 健二 (マイクロソフト)</contact:fullName>
+		<contact:mailboxURI>mailto:kenjikat@microsoft.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:satoshih@jp.ibm.com">
+		<contact:fullName xml:lang="ja">羽田 知史 (日本アイ・ビー・エム)</contact:fullName>
+		<contact:mailboxURI>mailto:satoshih@jp.ibm.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:maruyama@jp.ibm.com">
+		<contact:fullName xml:lang="ja">丸山 宏 (日本アイ・ビー・エム)</contact:fullName>
+		<contact:mailboxURI>mailto:maruyama@jp.ibm.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="SOAP_ja_1">
+		<contact:fullName xml:lang="ja">天野 富夫 (日本アイ・ビー・エム)</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="SOAP_ja_2">
+		<contact:fullName xml:lang="ja">今村 剛 (日本アイ・ビー・エム)</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="SOAP_ja_3">
+		<contact:fullName xml:lang="ja">小松 誠 (マイクロソフト)</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="SOAP_ja_4">
+		<contact:fullName xml:lang="ja">根山 亮 (日本アイ・ビー・エム)</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:next@tom.sfc.keio.ac.jp">
+		<contact:fullName xml:lang="ja">遠山 緑生</contact:fullName>
+		<contact:mailboxURI>mailto:next@tom.sfc.keio.ac.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yoshito_Teramoto">
+		<contact:fullName xml:lang="ja">どら猫本舗</contact:fullName>
+		<contact:knownAs xml:lang="en">Yoshito Teramoto</contact:knownAs>
+		<contact:mailboxURI>mailto:teramoto@doraneko.org</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:y.kato@personal.email.ne.jp">
+		<contact:fullName xml:lang="ja">加藤 泰孝</contact:fullName>
+		<contact:mailboxURI>mailto:y.kato@personal.email.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:sardine@toyfish.net">
+		<contact:fullName xml:lang="ja">椙村 敦史</contact:fullName>
+		<contact:mailboxURI>mailto:sardine@toyfish.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:pics-info@nmda.or.jp">
+		<contact:fullName xml:lang="ja">電子ネットワーク協議会</contact:fullName>
+		<contact:mailboxURI>mailto:pics-info@nmda.or.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Yusuke_Koizumi">
+		<contact:knownAs xml:lang="en">Yusuke Koizumi</contact:knownAs>
+		<!--		
+		<contact:fullName xml:lang="ja">小泉 雄介 (NEC プラニングリサーチ / 財団法人インターネット協会 (旧 電子ネットワーク協議会))</contact:fullName>
+		-->
+		<contact:fullName xml:lang="ja">小泉 雄介</contact:fullName>
+		<contact:mailboxURI>mailto:y-koizumi@pd.jp.nec.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<!--
+	<trans:Translator rdf:about="mailto:muraw3c@attglobal.net">
+		<contact:fullName xml:lang="ja">村田 真</contact:fullName>
+		<contact:mailboxURI>mailto:muraw3c@attglobal.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	-->
+	<trans:Translator rdf:about="mailto:yamashita_t@lycos.ne.jp">
+		<contact:fullName xml:lang="ja">山下 岳史</contact:fullName>
+		<contact:mailboxURI>mailto:yamashita_t@lycos.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:muraw3c@attglobal.net">
+		<!-- <contact:fullName xml:lang="ja">高速 Web における標準化に関する調査研究委員会 作業グループ (WG3) XML 特別作業グループ (XML-SWG) (主査: 村田 真)</contact:fullName> -->
+		<contact:fullName xml:lang="ja">村田 真 WG3/XML-SWG (主査: 村田 真)</contact:fullName>
+		<contact:mailboxURI>mailto:muraw3c@attglobal.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:webmaster@zspc.com">
+		<contact:fullName xml:lang="ja">大藤 幹</contact:fullName>
+		<contact:mailboxURI>mailto:webmaster@zspc.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:ishikawa@u-shizuoka-ken.ac.jp">
+		<contact:fullName xml:lang="ja">石川 准 (監訳)</contact:fullName>
+		<contact:mailboxURI>mailto:ishikawa@u-shizuoka-ken.ac.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:dev_request@infoteria.co.jp">
+		<contact:fullName xml:lang="ja">インフォテリア株式会社</contact:fullName>
+		<contact:mailboxURI>mailto:dev_request@infoteria.co.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:uchida@happy.email.ne.jp">
+		<contact:fullName xml:lang="ja">内田 明</contact:fullName>
+		<contact:mailboxURI>mailto:uchida@happy.email.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Kenji_Watatani">
+		<contact:fullName xml:lang="ja">わった煮</contact:fullName>
+		<contact:knownAs xml:lang="en">Kenji Watatani</contact:knownAs>
+		<contact:mailboxURI>mailto:wattani@jtw.zaq.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="S_Yamaguti">
+		<contact:fullName xml:lang="ja">らすかる</contact:fullName>
+		<contact:knownAs xml:lang="en">S. Yamaguti</contact:knownAs>
+		<contact:mailboxURI>mailto:rascal@kun.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="A_Enomoto">
+		<contact:fullName xml:lang="ja">吟雅</contact:fullName>
+		<contact:knownAs xml:lang="en">A. Enomoto</contact:knownAs>
+		<contact:mailboxURI>mailto:ginga@kit.hi-ho.ne.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="M_Sakuma">
+		<contact:fullName xml:lang="ja">佐久間</contact:fullName>
+		<contact:knownAs xml:lang="en">M. Sakuma</contact:knownAs>
+		<contact:mailboxURI>mailto:sakuma@cot.osaka-gu.ac.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:about="mailto:max@imgsrc.co.jp">
+		<contact:fullName xml:lang="ja">中根 雅文</contact:fullName>
+		<contact:mailboxURI>mailto:max@imgsrc.co.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Norihisa_Washitake">
+		<contact:fullName xml:lang="ja">和志武 功久</contact:fullName>
+		<contact:knownAs xml:lang="en">Norihisa Washitake</contact:knownAs>
+		<contact:mailboxURI>mailto:nori@washitake.com</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Miki_Ofuji">
+		<contact:fullName xml:lang="en">Miki Ofuji</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Takahiro_Mashiko">
+		<contact:fullName xml:lang="en">Takahiro Mashiko</contact:fullName>
+		<contact:mailboxURI>mailto:webmaster@cybergarden.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Sugimura_Atsushi">
+		<contact:fullName xml:lang="en">Sugimura Atsushi</contact:fullName>
+		<contact:mailboxURI>mailto:sardine@toyfish.net</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Keisuke_Nakao">
+		<contact:fullName xml:lang="en">Keisuke Nakao</contact:fullName>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Mimasa">
+		<contact:fullName xml:lang="ja">石川 雅康</contact:fullName>
+		<contact:knownAs xml:lang="en">Masayasu Ishikawa</contact:knownAs>
+		<contact:mailboxURI>mailto:mimasa@w3.org</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Tomoko_Taniguchi">
+		<contact:fullName xml:lang="ja">谷口 朋子</contact:fullName>
+		<contact:knownAs xml:lang="en">XMLCafe</contact:knownAs>
+		<contact:mailboxURI>mailto:tani@fxis.co.jp</contact:mailboxURI>
+		<dc:language>ja</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Hindi ================================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Ajeet_Khurana">
+		<contact:fullName xml:lang="hi">अजीत खुराना</contact:fullName>
+		<contact:knownAs xml:lang="en">Ajeet Khurana</contact:knownAs>
+		<contact:mailboxURI>mailto:kits_ajeet@hotmail.com</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Jai_Kumar_Wadhwani">
+		<contact:fullName xml:lang="hi">जय कुमार वाधवानी </contact:fullName>
+		<contact:knownAs xml:lang="en">Jai Kumar Wadhwani</contact:knownAs>
+		<contact:mailboxURI>mailto:jai@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Durgesh_Kumar_Verma">
+		<contact:fullName xml:lang="hi">दुर्गेश कुमार वर्मा </contact:fullName>
+		<contact:knownAs xml:lang="en">Durgesh Kumar Verma</contact:knownAs>
+		<contact:mailboxURI>mailto:durgesh@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Monu_Agrawal">
+		<contact:fullName xml:lang="hi">मोनू अग्रवाल</contact:fullName>
+		<contact:knownAs xml:lang="en">Monu Agrawal</contact:knownAs>
+		<contact:mailboxURI>mailto:monu@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Bhatt_Chidansh_Amitkumar">
+		<contact:fullName xml:lang="hi">भटृ चिदंश अमितकुमार</contact:fullName>
+		<contact:knownAs xml:lang="en">Bhatt Chidansh Amitkumar</contact:knownAs>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ashish_Gupta">
+		<contact:fullName xml:lang="hi">आशीष गुप्ता</contact:fullName>
+		<contact:knownAs xml:lang="en">Ashish Gupta</contact:knownAs>
+		<contact:mailboxURI>mailto:ashish@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Gaurav_Malhotra">
+		<contact:fullName xml:lang="hi">गौरव मलहोत्रा</contact:fullName>
+		<contact:knownAs xml:lang="en">Gaurav Malhotra</contact:knownAs>
+		<contact:mailboxURI>mailto:gaurav@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Ramasya">
+		<contact:fullName xml:lang="hi">रामस्य</contact:fullName>
+		<contact:knownAs xml:lang="en">Ramasya </contact:knownAs>
+		<contact:mailboxURI>mailto:ramasya@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Vinay_P_Jain">
+		<contact:fullName xml:lang="en">Vinay P Jain</contact:fullName>
+		<contact:mailboxURI>mailto:v9y@yahoo.com</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Abhijit_Khadilkar">
+		<contact:fullName xml:lang="hi">अमित विजयवर्गीय </contact:fullName>
+		<contact:knownAs xml:lang="en">Abhijit Khadilkar</contact:knownAs>
+		<contact:mailboxURI>mailto:kavijay@cedt.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Amit_Vijayvargiya">
+		<contact:fullName xml:lang="hi">अभिजीत खाडिलकर</contact:fullName>
+		<contact:knownAs xml:lang="en">Amit Vijayvargiya</contact:knownAs>
+		<contact:mailboxURI>mailto:vamit@cedt.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>hi</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Hindi ================================= -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Narasimha_Datta">
+		<contact:fullName xml:lang="kn">ನರಸಿಂಹ ದತ್ತ</contact:fullName>
+		<contact:knownAs xml:lang="en">Narasimha Datta</contact:knownAs>
+		<contact:mailboxURI>mailto:ndatta@csa.iisc.ernet.in</contact:mailboxURI>
+		<dc:language>kn</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Filipino =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Martin_Gomez">
+		<contact:fullName xml:lang="tl">Martin Gomez</contact:fullName>
+		<contact:mailboxURI>mailto:pgomez@student.ateneo.edu</contact:mailboxURI>
+		<dc:language>tl</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Malay =============================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Basil_Algalez">
+		<contact:fullName xml:lang="ms">Basil Algalez</contact:fullName>
+		<contact:mailboxURI>mailto:digitalis@rakanmedik.org</contact:mailboxURI>
+		<dc:language>ms</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Zahani_Yusoff">
+		<contact:fullName xml:lang="ms">Zahani Yusoff</contact:fullName>
+		<contact:mailboxURI>mailto:drzmy@rakanmedik.org</contact:mailboxURI>
+		<dc:language>ms</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Ukrainian =========================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Nataly_Panchenko">
+		<contact:fullName xml:lang="uk">Наталія Панченко</contact:fullName>
+		<contact:knownAs xml:lang="en">Nataly Panchenko</contact:knownAs>
+		<contact:mailboxURI>mailto:gillkas@yahoo.com</contact:mailboxURI>
+		<dc:language>uk</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Evgeny_Skripec">
+		<contact:fullName xml:lang="uk">Евгений Скрипець</contact:fullName>
+		<contact:knownAs xml:lang="en">Yevgeny Skripets</contact:knownAs>
+		<contact:mailboxURI>mailto:dp76pocet@gmail.com</contact:mailboxURI>
+		<dc:language>uk</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Pavlo_Sultanskyi">
+		<contact:fullName xml:lang="uk">Павло Султанський</contact:fullName>
+		<contact:knownAs xml:lang="en">Pavlo Sultanskyi</contact:knownAs>
+		<contact:mailboxURI>mailto:pasha@email.ua</contact:mailboxURI>
+		<dc:language>uk</dc:language>
+	</trans:Translator>
+	<trans:Translator rdf:ID="Valentinas_Kulinic">
+		<contact:fullName xml:lang="uk">Валентин Кулинич</contact:fullName>
+		<contact:knownAs xml:lang="en">Valentinas Kulinic</contact:knownAs>
+		<contact:mailboxURI>mailto:kulinic@aula.w3.lt</contact:mailboxURI>
+		<dc:language>uk</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Thai             =========================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Lawan_Nuntavovat">
+		<contact:fullName xml:lang="th">ลาวัณย์ นันทโววาทย์</contact:fullName>
+		<contact:knownAs xml:lang="en">Lawan Nuntavovat</contact:knownAs>
+		<contact:mailboxURI>mailto:lawan@webstarthai.com</contact:mailboxURI>
+		<dc:language>th</dc:language>
+	</trans:Translator>
+	<!-- ===================================== -->
+	<!-- Farsi             =========================== -->
+	<!-- ===================================== -->
+	<trans:Translator rdf:ID="Seyyed_Abdul_Qader_Samadi">
+		<contact:fullName xml:lang="fa">سيد عبدالقادر صمدی</contact:fullName>
+		<contact:knownAs xml:lang="en">Seyyed Abdul Qader Samadi</contact:knownAs>
+		<dc:language>fa</dc:language>
+	</trans:Translator>
+</rdf:RDF>

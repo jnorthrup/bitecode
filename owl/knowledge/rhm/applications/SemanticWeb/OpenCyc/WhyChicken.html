@@ -1,0 +1,107 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/WhyChicken.html
+# Sep/4/2003
+
+
+# Why did the chicken cross the road?
+
+# tools used: MKE, OpenCyc
+# Notes:
+# OpenCyc is accessed using
+#	ke$ do opencyc od server from world done;
+# Preliminary browsing shows that OpenCyc
+#	does not know "chicken", "road",
+#	"cross", "purpose", "time", "past".
+#	We must first define these terms.
+# Normally, MKE creates term and instance names
+#	and declares (isu) instances automatically. 
+# OpenCyc does not have enough "common-sense"
+#	to label this as a joke, or to reason about
+#	the capabilities of nonhuman animals.
+# OpenCyc does not know that
+#	Agent do action with purpose = p done;
+#	causedBy
+#	p := Agent do choose od purpose done;
+
+
+ke$ set echo=off, kbmode=cyc;
+
+###### MKR questions to be implemented in CycL
+##### ke$ at time = past {
+##### ke>     the chicken do cross = cross_001 od the road
+##### ke>	  with purpose = purpose_001 
+##### ke>     done;
+##### ke> };
+##### ke$ ? causes cross_001;
+##### ke$ cross_001 has purpose = ?;
+
+###### definitions
+ke$ do opencyc done;
+CYC(): do ke-create-now od
+CYC(): 	   "chicken","road","cross",
+CYC():	   "purpose","time","past",
+CYC():	   "subject","object" done;
+CYC(): #$chicken isu #$Collection; #$chicken iss #$Bird;
+CYC(): #$road    isu #$Collection; #$road    iss #$Roadway;
+CYC(): #$cross   isu #$Collection; #$cross   iss #$Translation-LocationChange;
+CYC(): #$purpose isu #$Collection; #$purpose isu #$AttributeValue;
+CYC(): #$time    isu #$Collection; #$time    iss #$TimeInterval;
+CYC(): #$past    isu #$time;
+
+CYC(): #$AttributeValue isp #$subject,#$object,#$purpose,#$time;
+CYC(): #$cross          has #$subject,#$object,#$purpose,#$time;
+
+CYC(): do write-image to "world/chicken" done;
+
+###### questions
+ke$ do opencyc od server from chicken done;
+CYC(): do ke-create-now od
+CYC(): 	   "the_chicken","the_road","cross_001", 
+CYC():	   "purpose_001","time_001" done;
+CYC(): #$the_chicken isu #$chicken;
+CYC(): #$the_road    isu #$road;
+CYC(): #$cross_001   isu #$cross;
+CYC(): #$purpose_001 isu #$purpose;
+CYC(): #$time_001    isu #$time;
+
+CYC(): at #$time = #$past {
+CYC():	   #$the_chicken do cross = #$cross_001 od #$the_road
+CYC():		with #$purpose = #$purpose_001
+CYC():	   done;
+CYC(): }:
+###### which automatically creates these statements
+##### #$cross_001 hasAttributes
+#####	   #$subject_001,#$object_001,
+#####	   #$purpose_001,#$time_001;
+##### #$subject_001 is #$the_chicken;
+##### #$object_001  is #$the_road;
+##### #$purpose_001 is #$purpose_001;
+##### #$time_001    is #$past;
+
+CYC(): #$cross_001 #$causedBy ?e;
+CYC(): #$cross_001 has purpose = ?p;
+
+# OpenCyc response
+Status : Suspended, Exhaust
+Mt : UniversalVocabularyMt
+EL Query :
+(causedBy cross_001 ?E)
+No answers
+
+Inference Answer [Inference Answer 149.0.0]
+Mt : UniversalVocabularyMt
+EL Query :
+(and 
+   (hasAttributes cross_001 ?P) 
+   (isa ?P purpose))
+Answer Bindings :
+?P    purpose_001 
+Justifications :
+(hasAttributes cross_001 purpose_001) in BaseKB 
+:ISA   (isa purpose_001 purpose) in UniversalVocabularyMt 
+
+:ISA   (isa purpose_001 purpose) in UniversalVocabularyMt 
+(hasAttributes cross_001 purpose_001) in BaseKB 
+
+
+</pre></HTML>

@@ -1,0 +1,56 @@
+# KEHOME/knowledge/family/newaka.mkr
+# Aug/21/2005
+
+# Execution time
+# 2 GHz Pentium 4, Windows XP
+# Aug/20/2005
+# 1:35 min:sec  504 persons before abort
+# 2:51 min:sec  504 persons, 504 "$y" before abort
+# 1:26 min:sec  504 persons, 504 "$y" before abort
+# x:xx min:sec  926 persons
+
+#===========================#
+# make newaka.rel from all  #
+#  Burns, McCullough names  #
+#===========================#
+# output GDBM file is f:/family/db/report/newaka
+# output GDBM dump is newaka.txt
+# output MKR  file is newaka.rel
+
+#! rm with -f od newaka.rel done;
+#! rm with -f od newaka.txt done;
+
+set kedb = f:/family/db;
+at view = report;
+newaka has arraymode=gdbm;
+
+set echo=off;
+do clock od "generating newaka.rel" done;
+
+# read all the names and aliases
+do read from name.ku done;
+
+set debug=arrayvalue;
+every x isa person {
+    do print od "$x" to newperson.txt done;
+    #set . = $x;
+    birthname := $x[birthname];
+    prefername := $x[prefername];
+    nickname := $x[nickname];
+    marriedname := $x[marriedname];
+    othername := $x[othername];
+    do print to newaka.rel
+	od "$x,$birthname,$prefername,$nickname,[$marriedname],[$othername];"
+	done;
+    newaka[$x] :=
+	"$x,$birthname,$prefername,$nickname,[$marriedname],[$othername];";
+};
+
+do clock od "finished newaka.rel" done;
+set echo=on;
+
+# gdbmdump newaka
+do dump/gdbm od newaka to newaka.txt done;
+! sort with -o newaka.txt od newaka.txt done;
+
+exit;

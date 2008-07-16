@@ -1,0 +1,42 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Google/Browser.ku
+# May/1/2003
+
+#=========================================#
+# dmoz.org topic browser                  #
+#                                         #
+# usage:                                  #
+#	$ ke                              #
+#	ke$ do read from Browser.ku done; #
+#	ke$                               #
+#                                         #
+#	... <enter MKR questions here>    #
+#                                         #
+#	ke$ exit;                         #
+#	$                                 #
+#                                         #
+# Note:                                   #
+#	use full path for ambiguous names #
+#	such as Computers                 #
+#=========================================#
+
+# read high-level topics
+set echo = off;
+do read from Directory.ho done;
+
+# use dmoz directory 
+#####Top has krtype = dmoz;
+#####every topic isa Top {
+#####    $topic has krtype = dmoz;
+#####};
+
+# print topics
+set . = Top;
+$. isa* ?;
+$. isc* ?;
+do print od "","# WARNING: dynamic directory scrape not implemented","" done;
+set echo = on;
+
+</XMP>
+</HTML>

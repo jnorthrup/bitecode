@@ -1,0 +1,24 @@
+# 1999/2/2
+
+# examples: !isd, !isi, !measure, !classify
+
+dick,bob,sue isa person
+dick,bob has sex=male
+sue has sex=female
+
+!isd person with sex
+person ise* ?
+
+!isi dick,bob,sue with sex
+person, newword ise* ?
+
+
+!measure person with test
+? has test
+
+john has sex=male
+mary has sex=female
+!classify john,mary with sex to person
+#!classify mary with sex to person
+#!classify john with sex to person
+person, newword ise* ?

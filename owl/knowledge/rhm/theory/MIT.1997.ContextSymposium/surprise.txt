@@ -1,0 +1,37 @@
+
+
+Seven surprising statements
+===========================
+
+1. Knowledge consists of true concepts
+                     and true propositions.
+    o A concept is true if it has referents in reality;
+      otherwise it is false.
+    o Possible worlds are not possible unless they involve
+      men making choices.
+      See Leonard Peikoff "The Analytic-Synthetic Dichotomy"
+
+2. All knowledge is personal.
+    o Concepts are primarily a thinking tool.
+    o The context of a proposition is the speaker's knowledge.
+    o The speaker chooses his context for a specific purpose.
+
+3. Interpersonal communication permits common knowledge
+   among a group of persons.
+
+4. A personal context is a concept-hierarchy denoted by a view name.
+    o A hierarchy provides unit economy, a logN dependence
+      upon the number of concepts and propositions.
+
+5. The top and bottom concepts in the hierarchy are axiomatic.
+    o The choice of context is the selection of nonaxiomatic
+      concepts between the top and the bottom.
+
+6. A proposition is a concept.
+    o A proposition is a sequence of concepts
+      that denotes a relationship between the concepts.
+
+7. A natural language concept has the same properties as
+   a simple algebraic concept. e.g.: "dog" vs "x"
+	dog do bark
+	x**2 = 4

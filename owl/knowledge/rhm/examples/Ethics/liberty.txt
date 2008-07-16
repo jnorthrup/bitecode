@@ -1,0 +1,89 @@
+# 1999/5/23
+
+#===========================#
+# individualism and liberty #
+#===========================#
+# Reference:
+# Nathaniel Branden, "Honoring The Self"
+
+# comment:
+# Richard S. Latimer 1999/3/12
+# A favorite quote from Nathaniel Branden. It is
+# a brilliant summary of the relationships among the
+# personal choices between individualism/collectivism,
+# justice/injustice, and coercion/persuasion.  It is
+# also a profound commentary on popular contemporary
+# views within Pre- & Anti-Enlightenment subcultures.
+# A good encapsulation of many principles that I contend
+# are objectively determined and worthy of upholding
+# and defending against those who would seek to violate
+# the rights of individuals.
+
+
+# "Individualism is at once an ethical-psychological concept and an
+#    ethical-political concept.
+#  As an ethical-psychological concept, individualism holds that a
+#    human being should think and judge independently, respecting
+#    nothing more than the sovereignty of his or her mind.
+#  As an ethical-political concept, individualism upholds the
+#    supremacy of individual rights, the principle that a human being
+#    is an end in him- or herself, and that the proper goal of life is
+#    self-realization."  . . .
+# 
+# "It is also the single most avoided issue in discussions of social
+#    philosophy.  I shall be blunt here, because there is a tendency
+#    in this arena to dance around the obvious, to discuss everything
+#    but the self-evident.  It is at the mind that every gun is aimed.
+#  Every use of force is the attempt to compel a person to act against
+#    his or her judgment;  if the person were willing to take the
+#    action, force would not be required."
+# 
+# "Without property rights, no other rights are possible.
+#  We must be free to use that which we have produced, or we do not
+#    possess the right to liberty.
+#  We must be free to make the products of our work serve our chosen
+#    goals or we do not possess the right to the pursuit of
+#    happiness."
+
+# NOTE: The KR translation was simplified by
+# using AND,OR,OF instead of and,or,of.
+# (and,or,of have special meaning in KR.)
+
+#===============#
+# individualism #
+#===============#
+#at view = ethical-psychological {
+#    individualism do hold (
+	a human being do should think AND judge independently with
+	respecting nothing more than the sovereignty OF his OR her mind #;
+#    )
+#}
+#at view = ethical-political {
+#   individualism do uphold (
+	individual rights has supremacy #;
+	a human being has an end = himself OR herself #;
+	a human being has the proper goal OF life = self-realization #;
+#   )
+#}
+ 
+#=========#
+# liberty #
+#=========#
+#at view = discussions OF social philosophy {
+	# I shall be blunt here, because there is a tendency
+	# in this arena to dance around the obvious,
+	# to discuss everything but the self-evident.
+    every gun do aim at od the mind done #;
+    every use OF force is
+	the attempt to compel a person to act against his OR her judgment #;
+    if the person has willing to take the action then
+	force has not required fi #;
+
+ 
+    if we has not property rights then
+	no other rights has possible fi #;
+    either we has free to use that which we have produced or
+	we do not possess (the right to liberty) #;
+    either we has free to make the products OF our work serve our chosen goals or
+	we do not possess (the right to the pursuit OF happiness) #;
+#}

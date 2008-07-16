@@ -1,0 +1,85 @@
+<HTML>
+<XMP>
+# 1999/5/7
+
+#=========#
+# Context #
+#=========#
+
+1. Background
+=============
+When I studied the fundamental nature of concept-formation, I focused on
+definitions, and the associated concept-hierarchy.  There are three
+methods of defining a concept, e.g.
+    person is either man or woman	# integration
+    man is person with sex=male		# differentiation
+    Dick is Richard H. McCullough	# identity
+Combining all definitions yields a genus-species concept-hierarchy.
+I call this concept-hierarchy a view.  The phrase
+    at view=v
+denotes the concept-hierarchy named v.
+
+McCarthy's notation
+    ist(c,p)
+is written as
+    at c  p
+in my KR language.  If the at phrase is omitted, c defaults
+to the current context.  My notation provides a convenient method
+of specifying nested contexts.
+
+The Situation Semantics notation
+    c |= p
+is written as
+    at c  p
+in my KR language.
+
+2. Beliefs and knowledge and context
+====================================
+A belief is a guess about reality.
+Knowledge is an identification of a fact of reality.
+In other words, knowledge is a sequence of true propositions;
+belief is a sequence of propositions which are either true or false.
+Each person (or agent) has his/her personal beliefs and knowledge.
+
+For simplicity, I will discuss only my knowledge and my context.
+My context is all of my current knowledge.
+
+To illustrate what this means, I record my knowledge as
+a sequence of true propositions.
+    kn is p0;p1;...pn-1;pn
+If I partition my knowledge between pn-1 and pn,
+the explicit context of pn is
+    cx is p0;p1;...;pn-1
+The definition context of pn is
+    cd is sequence of definitions of all concepts of kn.
+The implicit context of pn is
+    ci is sequence of all propositions logically implied by cx and cd.
+As above, my knowledge and context can be characterized as
+a concept-hierarchy and labeled by a view name.
+
+3. Truth
+========
+Propositions can be classified into the following categories.
+    axiom            implicit in all facts and knowledge
+    percept          internal sense data
+    measurement      external data
+    definition       based on current knowledge
+    conclusion       logically implied by the above propositions
+    belief           a guess
+
+Axiom, percept, measurement are true;
+they are the foundation of all knowledge.
+Definition, conclusion, belief may be true or false.
+
+4. Actions and events
+=====================
+To integrate actions and events into my KR language, I introduce
+a space-time context.
+    at space=s,time=t,view=v  p
+where
+    s is space where action/event occurs
+    t is time when action/event occurs
+    v is the context of knowledge at s,t as defined above
+</XMP>
+<a href="excx.txt">Examples</a>
+</HTML>

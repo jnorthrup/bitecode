@@ -1,0 +1,67 @@
+# 1999/5/22
+# Reference:
+# Richard S. Latimer 1999/5/20
+
+!begin hierarchy
+at view=Latimer
+types of concepts
+/	 0 none yet determined
+/	17 -ism
+/	10 action by (not upon)
+/	 9 action upon
+/	15 axiomatic
+/	13 being (living)
+/	 1 consciousness
+/	12 entity
+/	 2 existence
+/	 8 groupings
+/	 4 introspective
+/	 5 knowledge
+/	16 language
+/	 6 object
+/	18 power, ability
+/	22 process
+/	19 quality
+/	21 quantity
+/	11 relational
+/	14 religious
+/	20 substance
+/	 7 value
+/	 3 virtue
+!end hierarchy
+
+!begin hierarchy
+at view=McCullough
+unknown				#  0 none yet determined
+
+nonexistent
+/    nocept			# 14 religious
+
+existent
+/    entity			# 12 entity
+//	organism		# 13 being (living)
+//	object			#  6 object
+///	    measurement		# 21 quantity
+///	    value		#  7 value
+///	    group		#  8 groupings
+////		existence	#  2 existence
+////		language	# 16 language
+////		knowledge	#  5 knowledge
+////		ideology	# 17 -ism
+/    characteristic
+//	attribute
+///	    axiomatic		# 15 axiomatic
+///	    substance		# 20 substance
+///	    quality		# 19 quality
+///	    virtue		#  3 virtue
+///	    capability		# 18 power, ability
+///	    consciousness	#  1 consciousness
+///	    introspective	#  4 introspective
+//	action
+///	    intransitive action	# 10 action by (not upon)
+///	    transitive action	#  9 action upon
+////		method		# 22 process
+//	relationship		# 11 relational
+/    part
+/    proposition
+!end hierarchy

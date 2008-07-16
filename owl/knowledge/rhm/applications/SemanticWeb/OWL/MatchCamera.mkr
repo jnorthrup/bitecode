@@ -1,0 +1,49 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/MatchCamera.mkr
+# May/29/2003
+
+at view = owl;
+at view = Camera Ontology;
+
+desired camera isa Camera with
+	size = 75-300mm zoom,
+	aperture = 4.5-5.6,
+	shutter-speed = 1/500 - 1.0 sec;
+
+Hunts isa PhotographyStore;
+Hunts has
+	store-location = "Malden, MA",
+	phone = 617-555-1234,
+	catalog = Hunts catalog;
+Hunts catalog isall  # Set of Camera
+	Olympus-OM-10;
+	
+Olympus-OM-10 isa SLR with
+	lens = Lens_Olympus-OM-10,
+	body = Body_Olympus-OM-10;
+Lens_Olympus-OM-10 has
+	focal-length = 75-300mm zoom,
+	f-stop = 4.5-5.6;
+Body_Olympus-OM-10 has
+	shutter-speed = [ min = 0.002, max = 1.0, units = seconds ];
+Olympus-OM-10 has
+	cost = 325 USD;
+
+MatchCatalog isa method with
+	format = [Camera:1, Catalog:2],
+	meaning = {
+		every cam ismem $2 {
+			if MatchCamera od $1, $cam done;
+			then do print od "Yes, $cam MATCHES" done;
+			fi;
+		};
+	};
+MatchCamera isa method with
+	format = [Camera:1, Camera:2],
+	meaning = match_camera,
+	meaningtype = procedure;  # Unicon procedure
+
+do MatchCatalog od desired camera, Hunts catalog done;
+</XMP>
+</HTML>

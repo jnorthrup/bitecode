@@ -1,0 +1,38 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Netscape/nab479.mkr
+# Apr/1/2003
+
+# read & process Netscape Address Book
+# usage: ke nab479.mkr
+
+! csv2rel nab479 addressbook.csv addressbook.rel done;
+do read from addressbook.def done;	# define address book format & meaning
+do read from addressbook.rel done;	# read address book data
+
+
+# MKR processing: put anything you want here!
+#===========================================#
+do print od "<!--  all "John Doe" info.  -->" done;
+"John Doe" has ?;
+
+do print od "<!--  all email addresses  -->" done;
+? has Email;
+
+do print od "<!--  all snailmail addresses  -->" done;
+every p isa Person {
+	set . = $p;
+	do print od $p done;
+	do print od $Address done;
+	do print od "$City, $State $Zip $Country" done;
+};
+
+do print od "<!--  all Bell Labs employees  -->" done;
+? has Organization += Bell Labs;
+
+
+! deletecomment nab479.out done;
+exit;
+
+</XMP>
+</HTML>

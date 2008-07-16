@@ -1,0 +1,41 @@
+# KEHOME/knowledge/theory/Epistemology/axprop.txt
+# Jan/13/2003
+
+#========================#
+# axiomatic propositions #
+#========================#
+
+I use a variant of Rand's axiomatic concepts
+
+	existence/identity/consciousness
+
+that focuses on actions (instead of describing them in terms of attributes). 
+My approach is a bottom-up generalization which leads to different
+top-level concepts. 
+
+The top of my hierarchy is
+ 
+    existent
+	entity
+	characteristic
+	proposition
+ 
+with the axiomatic concepts existence/identity/identification
+ 
+    existence is the set of all entities
+    identity is the set of all characteristics
+    identification is the set of all propositions
+ 
+Consciousness comes in as a lower-level detail of "identification". 
+Expressed in MKR:
+ 
+    entity has characteristic
+    man do perceive od entity done                # man has consciousness
+    measurement := man do measure od characteristic done
+    knowledge := man do identify od entity done   # knowledge is identification
+						  # of the facts of reality
+    knowledge haspart proposition list
+ 
+
+NOTE:
+In my usual formulation, I generalize "entity" to "existent".

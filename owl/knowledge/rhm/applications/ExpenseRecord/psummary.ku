@@ -1,0 +1,42 @@
+# KEHOME/knowledge/expense/psummary,ku
+# 1999/6/24
+# new syntax Sep/3/2002
+
+# summarize expenses by year, category
+#   save costs as part values
+# NOTE: does NOT work (part values are sets)
+
+do read from expense.rel done
+
+do isd od expense with year,type done
+
+every vyear isa expense {		# year
+set echo=off;
+    do print od "==================================" done;
+    do print od $vyear done;
+    every vcat isa $vyear {		# expense category
+	$vcat haspart pcost=0;
+	every vexp isa $vcat {		# individual expense
+		set . = $vexp;
+		$vcat haspart pcost += $cost;
+	}; # end every vexp
+	set . = $vcat;
+	do sum od $pcost done;
+	$vcat has cost=$command;
+	$vyear haspart pcost += $command;
+    }; # end every vcat
+    set . = $vyear;
+    do sum od $pcost done;
+    $vyear has cost=$command;
+    expense haspart pcost += $command;
+    do print od "----------------------------------" done;
+set echo=on;
+} # end every vyear
+
+set . = expense
+do sum od $pcost done
+expense has cost=$command
+
+? has cost
+
+exit

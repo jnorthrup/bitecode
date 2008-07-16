@@ -1,0 +1,514 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tap1.mkr
+# Jan/8/2003
+
+##### TAP RDF to MKR translator #####
+kb/ke.ku has Ontology += []
+kb/ke.ku has comment += [TAP KB Fragment on existent]
+Account ismem Class
+Account iss* Intangible
+Activity ismem Class
+Activity iss* Node
+ActivityType ismem Class
+ActivityType iss* Class
+Agent ismem Class
+Agent iss* Node
+Animal ismem Class
+Animal has a:plural += [Animals]
+Animal has a:producesFood += [Sausage]
+Animal iss* Tangible
+Animal has label += [Animal]
+Array ismem Class
+Array iss* Literal
+AttributeValueType ismem Class
+AttributeValueType iss* Class
+AttributeValueType has label += [Attribute Value Type]
+AttributeValueType has a:EventType += [Auction]
+AttributeValueType iss* Event
+AttributeValueType has label += [Auction]
+Award ismem Class
+Award has a:plural += [Awards]
+Award iss* Intangible
+BeliefSystem ismem Class
+BeliefSystem iss* Intangible
+BiologicalEvent ismem Class
+BiologicalEvent has a:plural += [biological events]
+BiologicalEvent iss* Event
+BiologicalEvent has label += [biological event]
+Bitmap ismem Class
+Bitmap iss* Literal
+BodyPart ismem Class
+BodyPart has a:plural += [body parts]
+BodyPart iss* Tangible
+BodyPart has label += [body part]
+Brand ismem Class
+Brand iss* Intangible
+Broadcast ismem Class
+Broadcast iss* Event
+Class ismem Class
+Class iss* Node
+CommunicationMedium ismem Class
+CommunicationMedium iss* Intangible
+Concert ismem Class
+Concert has a:plural += [Concerts]
+Concert iss* Event
+Concert has label += [Concert]
+ConflictEvent ismem Class
+ConflictEvent iss* Event
+Convention ismem Class
+Convention has a:plural += [Conventions]
+Convention iss* Event
+Convention has label += [Convention]
+Cuisine ismem Class
+Cuisine has a:plural += [Cuisines]
+Cuisine iss* Intangible
+Cuisine has label += [Cuisine]
+CyberPlace ismem Class
+CyberPlace iss* Intangible
+Event ismem Class
+Event iss* Node
+EventType ismem Class
+EventType iss* Class
+FieldOfStudy ismem Class
+FieldOfStudy iss* Intangible
+FoodActivity ismem Class
+FoodActivity iss* activity
+FoodActivity has a:AttributeValueType += [Gender]
+FoodActivity iss* Intangible
+FoodActivity has label += [Gender]
+Genre ismem Class
+Genre has a:plural += [Genres]
+Genre iss* Intangible
+Genre has label += [Genre]
+HistoricEvent ismem Class
+HistoricEvent iss* Event
+Intangible ismem Class
+Intangible iss* Node
+Literal ismem Class
+Literal iss* Node
+Material ismem Class
+Material iss* Tangible
+Material has label += [Material]
+MediaObject ismem Class
+MediaObject iss* Intangible
+MediaObjectType ismem Class
+MediaObjectType iss* Class
+Node ismem Class
+Node has a:description += [Root of the taxonomy]
+Node has label += [Root of the taxonomy]
+Number ismem Class
+Number has a:plural += [Numbers]
+Number iss* Literal
+Number has label += [Number]
+Organization ismem Class
+Organization iss* Agent
+Person ismem Class
+Person has a:plural += [People]
+Person iss* Agent
+Person has label += [Person]
+Place ismem Class
+Place has a:plural += [Places]
+Place iss* Tangible
+Place has label += [Place]
+Plant ismem Class
+Plant has a:plural += [Plants]
+Plant iss* Tangible
+Plant has label += [Plant]
+PopularCharacter ismem Class
+PopularCharacter iss* Agent
+Product ismem Class
+Product iss* Tangible
+ProductType ismem Class
+ProductType iss* Class
+ProfessionalType ismem Class
+ProfessionalType iss* Class
+Project ismem Class
+Project iss* Event
+PropertyType ismem Class
+PropertyType iss* Node
+Quantity ismem Class
+Quantity iss* Intangible
+QuantityType ismem Class
+QuantityType iss* Class
+ReflexivePropertyType ismem Class
+ReflexivePropertyType iss* PropertyType
+Service ismem Class
+Service iss* Activity
+Service has label += [Service]
+SocioReligiousEvent ismem Class
+SocioReligiousEvent iss* Event
+SpatialDirection ismem Class
+SpatialDirection has a:plural += [Spatial Directions]
+SpatialDirection iss* Intangible
+SpatialDirection has label += [Spatial Direction]
+Sport ismem Class
+Sport iss* Activity
+Sport has label += [Sport]
+Sport has label += [Sports]
+SportsEvent ismem Class
+SportsEvent iss* Event
+StateOfMatter ismem Class
+StateOfMatter iss* Intangible
+String ismem Class
+String iss* Literal
+Tangible ismem Class
+Tangible iss* Node
+TaxonomicPropertyType ismem Class
+TaxonomicPropertyType iss* PropertyType
+TaxonomicPropertyType has label += [Taxonomic Property Type]
+TitlePropertyType ismem Class
+TitlePropertyType iss* PropertyType
+TransitivePropertyType ismem Class
+TransitivePropertyType iss* PropertyType
+TransitivePropertyType has a:ActivityType += [Travel]
+TransitivePropertyType iss* Activity
+TransitivePropertyType has label += [Travel]
+UnitOfMeasure ismem Class
+UnitOfMeasure has a:plural += [Unit Of Measures]
+UnitOfMeasure iss* Intangible
+UnitOfMeasure has label += [Unit Of Measure]
+UnitOfMeasure has characteristic += [about]
+UnitOfMeasure has domain += [MediaObject]
+UnitOfMeasure has range += [Node]
+UnitOfMeasure has characteristic += [accessoryOf]
+UnitOfMeasure has domain += [AccessoryType]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [Product]
+UnitOfMeasure has range += [ProductType]
+UnitOfMeasure has characteristic += [activityOfEvent]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [ActivityType]
+UnitOfMeasure has characteristic += [amazonMap]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [animalProduces]
+UnitOfMeasure has domain += [Animal]
+UnitOfMeasure has range += [Tangible]
+UnitOfMeasure has characteristic += [arg3Type]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [auctionItem]
+UnitOfMeasure has domain += [Auction]
+UnitOfMeasure has range += [MediaObject]
+UnitOfMeasure has range += [Product]
+UnitOfMeasure has range += [ProductType]
+UnitOfMeasure has characteristic += [awardWinner]
+UnitOfMeasure has domain += [Award]
+UnitOfMeasure has range += [Person]
+UnitOfMeasure has characteristic += [bioEventBodyPart]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has domain += [HealthDisorder]
+UnitOfMeasure has range += [BodyPart]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [biography]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [chiefExecutive]
+UnitOfMeasure has domain += [Organization]
+UnitOfMeasure has range += [Person]
+UnitOfMeasure has characteristic += [creationIncludesEvent]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has range += [Event]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has label += [data Code]
+UnitOfMeasure has characteristic += [description]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [dmozMap]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [domain]
+UnitOfMeasure has domain += [PropertyType]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [duration]
+UnitOfMeasure has domain += [Activity]
+UnitOfMeasure has domain += [Movie]
+UnitOfMeasure has domain += [MusicAlbum]
+UnitOfMeasure has domain += [Song]
+UnitOfMeasure has range += [TimeQuantity]
+UnitOfMeasure has characteristic += [ebayMap]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [endingDate]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Date]
+UnitOfMeasure has characteristic += [eventUsesTool]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has range += [Tool]
+UnitOfMeasure has characteristic += [hasAddress]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [GeoAddress]
+UnitOfMeasure has characteristic += [hasAuthor]
+UnitOfMeasure has domain += [MediaObject]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has characteristic += [hasCitizenship]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [Country]
+UnitOfMeasure has characteristic += [hasComponent]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [Product]
+UnitOfMeasure has range += [ProductType]
+UnitOfMeasure iss* hasPhysicalPart
+UnitOfMeasure has characteristic += [hasDateOfBirth]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [Date]
+UnitOfMeasure has characteristic += [hasDirector]
+UnitOfMeasure has domain += [Movie]
+UnitOfMeasure has range += [Person]
+UnitOfMeasure has characteristic += [hasDish]
+UnitOfMeasure has domain += [Cuisine]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has range += [PreparedFood]
+UnitOfMeasure has a:TitlePropertyType += [hasEmailAddress]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [EmailAddress]
+UnitOfMeasure has characteristic += [hasFirstName]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [HumanName]
+UnitOfMeasure has characteristic += [hasFoodAccessory]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has domain += [Food]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has range += [Food]
+UnitOfMeasure has characteristic += [hasGender]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [Gender]
+UnitOfMeasure has characteristic += [hasHomePage]
+UnitOfMeasure has domain += [Agent]
+UnitOfMeasure has range += [WebSite]
+UnitOfMeasure has characteristic += [hasIngredient]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has domain += [Food]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has range += [Food]
+UnitOfMeasure has characteristic += [hasLastName]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [HumanName]
+UnitOfMeasure has characteristic += [hasLatitude]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [hasLongitude]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [hasManufacturer]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has range += [Corporation]
+UnitOfMeasure has characteristic += [hasMember]
+UnitOfMeasure has domain += [EntertainmentOrganization]
+UnitOfMeasure has range += [Person]
+UnitOfMeasure has characteristic += [hasParticipant]
+UnitOfMeasure has domain += [Project]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure iss* performedBy
+UnitOfMeasure has characteristic += [hasPhysicalPart]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has domain += [Tangible]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has range += [Tangible]
+UnitOfMeasure has characteristic += [hasProducer]
+UnitOfMeasure has domain += [Movie]
+UnitOfMeasure has range += [Person]
+UnitOfMeasure has characteristic += [hasPublisher]
+UnitOfMeasure has domain += [MediaObject]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has characteristic += [hasResidence]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [Place]
+UnitOfMeasure has characteristic += [hasSocialSecurityNumber]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [Integer]
+UnitOfMeasure has characteristic += [hasStateOfMatter]
+UnitOfMeasure has domain += [Material]
+UnitOfMeasure has range += [StateOfMatter]
+UnitOfMeasure has characteristic += [hasTeamCode]
+UnitOfMeasure has domain += [SportsTeam]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [hasZipCode]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [ZipCode]
+UnitOfMeasure has characteristic += [highestBid]
+UnitOfMeasure has domain += [Auction]
+UnitOfMeasure has range += [MoneyQuantity]
+UnitOfMeasure has characteristic += [homePage]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has range += [WebPage]
+UnitOfMeasure has characteristic += [imageURL]
+UnitOfMeasure has domain += [Animal]
+UnitOfMeasure has range += [UniformResourceLocator]
+UnitOfMeasure has characteristic += [inOffice]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has a:TaxonomicPropertyType += [instanceOf]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [isCopyOf]
+UnitOfMeasure has domain += [MediaCopy]
+UnitOfMeasure has range += [MediaObject]
+UnitOfMeasure has characteristic += [locatedIn]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has domain += [Organization]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has range += [Place]
+UnitOfMeasure has a:TitlePropertyType += [longFormName]
+UnitOfMeasure has domain += [Country]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [looksmartMap]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [madeOfMaterial]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has range += [Material]
+UnitOfMeasure has characteristic += [manufacturerModelName]
+UnitOfMeasure has rdf:type += [TitlePropertyType]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [manufacturerOf]
+UnitOfMeasure has domain += [Corporation]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [Product]
+UnitOfMeasure has characteristic += [manufacturerSuggestedRetailPrice]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [MoneyQuantity]
+UnitOfMeasure has characteristic += [memberOf]
+UnitOfMeasure has domain += [Organization]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has characteristic += [notes]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [numberOfBids]
+UnitOfMeasure has domain += [Auction]
+UnitOfMeasure has range += [Integer]
+UnitOfMeasure has characteristic += [occurrenceDate]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Date]
+UnitOfMeasure has characteristic += [occurrenceTimeOfDay]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [TimeOfDay]
+UnitOfMeasure has characteristic += [ownsBrand]
+UnitOfMeasure has domain += [Corporation]
+UnitOfMeasure has range += [Brand]
+UnitOfMeasure has characteristic += [performedBy]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has characteristic += [placeLetterCode]
+UnitOfMeasure has domain += [Place]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [plays]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has domain += [SportsTeam]
+UnitOfMeasure has range += [ActivityType]
+UnitOfMeasure has characteristic += [plural]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [price]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [MoneyQuantity]
+UnitOfMeasure has characteristic += [producesFood]
+UnitOfMeasure has domain += [Tangible]
+UnitOfMeasure has range += [Food]
+UnitOfMeasure has characteristic += [projectPrincipal]
+UnitOfMeasure has domain += [Project]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure iss* performedBy
+UnitOfMeasure has characteristic += [propertyTypeCardinality]
+UnitOfMeasure has domain += [PropertyType]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has characteristic += [publishDate]
+UnitOfMeasure has domain += [MediaObject]
+UnitOfMeasure has range += [Date]
+UnitOfMeasure has characteristic += [quantityMeasuredIn]
+UnitOfMeasure has domain += [QuantityType]
+UnitOfMeasure has range += [UnitOfMeasure]
+UnitOfMeasure has characteristic += [range]
+UnitOfMeasure has domain += [PropertyType]
+UnitOfMeasure has propertyTypeCardinality += [single]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [relevantBrand]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [Brand]
+UnitOfMeasure has characteristic += [relevantSecondaryBrand]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [Brand]
+UnitOfMeasure has characteristic += [representsPlace]
+UnitOfMeasure has domain += [Politician]
+UnitOfMeasure has range += [Place]
+UnitOfMeasure has characteristic += [servesCuisine]
+UnitOfMeasure has domain += [RestaurantOrganization]
+UnitOfMeasure has range += [Cuisine]
+UnitOfMeasure has characteristic += [singular]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [sortPriority]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has range += [Integer]
+UnitOfMeasure has characteristic += [startingDate]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Date]
+UnitOfMeasure has characteristic += [subBrand]
+UnitOfMeasure has domain += [Brand]
+UnitOfMeasure has range += [Brand]
+UnitOfMeasure has a:TaxonomicPropertyType += [subClassOf]
+UnitOfMeasure has rdf:type += [TransitivePropertyType]
+UnitOfMeasure has domain += [Class]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [Class]
+UnitOfMeasure has characteristic += [subEvent]
+UnitOfMeasure has domain += [Event]
+UnitOfMeasure has range += [Event]
+UnitOfMeasure has characteristic += [subGenreOf]
+UnitOfMeasure has rdf:type += [TaxonomicPropertyType]
+UnitOfMeasure has domain += [Genre]
+UnitOfMeasure has range += [Genre]
+UnitOfMeasure has characteristic += [subOrganization]
+UnitOfMeasure has domain += [Organization]
+UnitOfMeasure has range += [Organization]
+UnitOfMeasure has characteristic += [subPropertyOf]
+UnitOfMeasure has domain += [PropertyType]
+UnitOfMeasure has range += [PropertyType]
+UnitOfMeasure has characteristic += [title]
+UnitOfMeasure has rdf:type += [TitlePropertyType]
+UnitOfMeasure has domain += [Node]
+UnitOfMeasure has propertyTypeCardinality += [multi]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [toolUsedToMake]
+UnitOfMeasure has domain += [Tangible]
+UnitOfMeasure has range += [Product]
+UnitOfMeasure has characteristic += [usedInActivity]
+UnitOfMeasure has domain += [Product]
+UnitOfMeasure has domain += [ProductType]
+UnitOfMeasure has range += [Activity]
+UnitOfMeasure has range += [ActivityType]
+UnitOfMeasure has characteristic += [versionNumber]
+UnitOfMeasure has domain += [Software]
+UnitOfMeasure has range += [String]
+UnitOfMeasure has characteristic += [worksFor]
+UnitOfMeasure has domain += [Person]
+UnitOfMeasure has range += [Agent]
+UnitOfMeasure has characteristic += [hasCapitalCity]
+UnitOfMeasure iss* locatedIn
+UnitOfMeasure has characteristic += [processorType]
+UnitOfMeasure iss* hasComponent
+</XMP>
+</HTML>

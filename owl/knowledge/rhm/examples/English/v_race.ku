@@ -1,0 +1,12 @@
+# 8:20 pm 5/12/97
+# new syntax Jul/24/2005
+
+# race context
+at view=v_schank;
+at view=v_race;
+
+action isc race,win,lose;
+race   is  action with a_event="start:1; finish:2";
+finish is  event with win,lose;
+
+beat   is  win;

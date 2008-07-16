@@ -1,0 +1,34 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/RDF/rdfshi.mkr
+# Apr/29/2003
+
+# check TABRASA=rdf
+do print od "TABRASA = $TABRASA" done;
+
+do read tap from http://www.w3.org/TR/rdf-schema/rdfs-namespace.xml done;
+
+# print Class hierarchy
+Resource isg* ?;
+Set isp* ?;
+Class isall* ?;
+! deletecomment od rdfshi.out done;
+
+# check _n vs. rdfs:_n
+#do dump od ContainerMembershipProperty done;
+
+# check for ambiguous xmlns
+#do check od xmlns done;
+
+# check for undefined & multiply-defined classes
+#do check od unknown, genus done;
+#unknown isp* ?;
+
+
+# check everything
+do check od knit done;
+
+#exit;
+
+</XMP>
+</HTML>

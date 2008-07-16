@@ -1,0 +1,13 @@
+tag isp
+	?xml,
+	channel,
+	description,
+	image,
+	item,
+	items,
+	link,
+	name,
+	rdf:RDF,
+	textinput,
+	title,
+	url

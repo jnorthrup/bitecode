@@ -1,0 +1,65 @@
+
+
+
+Context in Knowledge Representation (KR) and Natural Language (NL)
+
+Context plays a crucial role in human knowledge representation, reasoning, natural language processing, and perception. Thus,
+computer systems which act "intelligently" need the ability to represent, utilize and reason about contexts.
+
+Within the AI community, high hopes were set for ways in which context could help reasoning systems. A number of projects
+aimed at incorporating the notion of context into intelligent KR and NL computer systems were initiated. However, this task
+turned out to be more difficult than originally anticipated. The accepted view now seems to be that a better understanding of
+the phenomenon of context and its general mathematical and computational properties are needed before such systems can
+fully cash in on the "magic of context."
+
+Making progress in this direction will require an interdisciplinary collaboration. Other academic disciplines, such as linguistics,
+philosophy and anthropology, have also studied various aspects of the context phenomena. However, their theories usually lie
+embedded in the analysis of specific linguistic constructions, so applying them in AI systems is a research challenge in and of
+itself.
+
+This symposium aims at bringing together researchers in AI, linguistics, philosophy, cognitive science, and other related fields
+who are interested in theoretical and practical aspects of context.
+
+Some technical issues of interest are:
+
+     What are some roles of context in KR and NL systems, particularly in the process of reasoning? We are primarily
+     interested in formal, computable theories addressing the roles of context. 
+     Is it possible to decrease the computational complexity of a formal system by the means of introducing context? 
+     What is context? 
+     Is context an inherent characteristic of natural language that ultimately decides the formal power of natural language? 
+     How can we represent relations between contexts? How can a computer system automatically infer the relation between
+     some given set of contexts? 
+     Is decontextualization possible/necessary? 
+     How can information obtained in one context be utilized in another, possibly unanticipated, context? 
+     Which aspects of context or which contexts result in refined, more general, and different interpretations of natural
+     language? 
+     Do the existing theories of context in KR offer insights or solutions into the context dependency of natural language? 
+     Do natural language theories which involve context offer solutions to the problems which have motivated the
+     development of theories of context in KR? 
+     Which aspects of context can be handled in a real-life application such as managing a large knowledge base or
+     processing large volumes of text?
+
+This list is not exhaustive and papers on any topic concerning context in KR or NL are welcome.
+
+Participants: This is a double-size, about 80-100 participant symposium.
+
+Submission Information
+
+Hard copy submissions should be no longer than 12 pages in a 12 point font. Please send 6 hard copies of your paper to:
+
+     Context Fall Symposium
+     American Association for Artificial Intelligence
+     445 Burgess Drive Menlo Park, CA 94025-3442
+
+In addition please place the PostScript version of your paper in the "~pub/iwanska/context" directory via the anonymous ftp at:
+ftp.cs.wayne.edu.
+
+Organizing Committee
+
+Sasa Buvac (cochair), Stanford University (buvac@cs.stanford.edu); Lucja Iwanska (cochair), Wayne State University
+(lucja@cs.wayne.edu); Kees van Deemter, Philips Electronics (deemter@natlab.research.philips.com); Fausto Giunchiglia,
+IRST & Universitá di Trento (fausto@irst.itc.it); R.V. Guha, Apple Computers, Inc. (guha@taurus.apple.com); Pat Hayes,
+University of Illinois (phayes@picayune.coginst.uwf.edu); Graeme Hirst, University of Toronto (gh@cs.toronto.edu); John
+McCarthy, Stanford University (jmc@cs.stanford.edu); Stuart Shapiro, SUNY Buffalo (shapiro@cs.buffalo.edu); Rich
+Thomason, University of Pittsburgh (thomason@isp.pitt.edu); Wlodek Zadrozny, IBM TJ Watson Research Center
+(wlodz@watson.ibm.com).

@@ -1,0 +1,35 @@
+# KEHOME/knowledge/application/SemanticWeb/rdfV.txt
+# Nov/17/2002
+
+RDF reserved vocabulary 
+Reference: "http://www.w3.org/TR/2002/WD-rdf-mt-20021112/"
+     Date: 12 Nov 2002
+
+# Property is attribute
+# Statement isa statement
+
+RDF reserved vocabulary 
+rdf:type	# existent:1 has type = existent:2 implies existent:1 isa* existent:2
+rdf:Property	# existent:1 has Property = existent:2
+rdf:List 	# List isa list with first, rest
+rdf:nil		# nil isa List with size = 0
+
+RDF reification vocabulary 
+rdf:Statement	# Statement has
+rdf:subject	#   subject = existent,
+rdf:predicate	#   predicate = Property,
+rdf:object 	#   object = existent
+
+RDF Container Vocabulary 
+rdf:Seq		# Seq is list
+rdf:Bag		# Bag is multiset
+rdf:Alt		# Alt is enumeration
+rdf:_1		# group has _1,
+rdf:_2		#   _2,
+... 		#   ...
+
+RDF Collection Vocabulary 
+rdf:List	# List has
+rdf:first	#   first,
+rdf:rest	#   rest
+rdf:nil 	# nil isa List with size = 0

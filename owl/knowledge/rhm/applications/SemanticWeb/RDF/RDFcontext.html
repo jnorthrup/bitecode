@@ -1,0 +1,172 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/RDF/RDFcontext.html
+# Mar/15/2003
+
+at view = tabula rasa;
+RDF views isall
+	RDF vocabulary,
+	RDF Class-Instance hierarchy,
+	RDF format and meaning,
+	RDF logic,
+	RDF documentation;
+
+at view = RDF vocabulary {
+#========================#
+begin hierarchy RDF vocabulary hierarchy;  # properSubClassOf
+Class;			# rdfs:
+/	Alt;		# rdf:
+/	Bag;		# rdf:
+#/	Class;		# rdfs:
+/	Collection;	# rdf:
+/	Container;	# rdfs:
+/	ContainerMembershipProperty;	# rdfs:
+/	Datatype;	# rdfs:
+/	Entity;		# owl:
+/	List;		# rdf:
+/	Literal;	# rdfs:
+/	Property;	# rdf:
+/	Resource;	# rdfs:
+/	Seq;		# rdf:
+/	Statement;	# rdf:
+/	subClassOf;	# rdfs:
+/	subPropertyOf;	# rdfs:
+/	XMLLiteral;	# rdfs:
+Entity;			# owl:
+/	nil;		# rdf:
+Property;		# rdf:
+/	_n;  # n=1,2,...# rdf:
+/	begin;		# mkr:
+/	comment;	# rdfs:
+/	domain;		# rdfs:
+/	end;		# mkr:
+/	first;		# rdf:
+/	format;		# mkr:
+/	isa;		# mkr:
+/	isDefinedBy;	# rdfs:
+/	ismem;		# mkr:
+/	iss;		# mkr:
+/	isu;		# mkr:
+/	label;		# rdfs:
+/	meaning;	# mkr:
+/	member;		# rdfs:
+/	object;		# rdf:
+/	predicate;	# rdf:
+/	range;		# rdfs:
+/	relation;	# mkr:
+/	rest;		# rdf:
+/	seeAlso;	# rdfs:
+/	subject;	# rdf:
+/	type;		# rdf:
+/	value;		# rdf:
+/	view;		# mkr:
+end hierarchy RDF vocabulary hierarchy;
+}; # end view RDF vocabulary
+
+at view = RDF tabula rasa {
+#=========================#
+begin hierarchy RDF Class-Instance hierarchy;  # properSubClassOf
+  Resource;
+  /	Entity;
+  /	Property;
+  /	Statement;
+  
+  Entity;
+  /	Collection;
+  //	    Alt;
+  //	    Bag;
+  //	    Seq;
+  ///		List;
+  ////		    nil;
+  /	Literal;
+  //	    XMLLiteral;
+
+  Property;
+  /	comment;
+  /	domain;
+  /	first;
+  /	label;
+  /	member;
+  //	    MembershipContainerProperty;
+  ///		_n;  # n=1,2,...
+  /	object;
+  /	predicate;
+  /	range;
+  /	rest;
+  /	seeAlso;
+  //		isDefinedBy;
+  /	subClassOf;
+  //		subPropertyOf;
+  /	subject;
+  /	type;
+  /	value;
+
+  Statement;
+  /	subject predicate object;
+end hierarchy RDF Class-Instance hierarchy;
+
+# domain, range
+Property domain and range isa relation with
+	format=[Property:1, domain:2, range: 3],
+	meaning={$1 has domain=$2, range=$3;};
+begin relation Property domain and range;
+  _n,		List,		List;
+  comment,	Resource,	Literal;
+  domain,	Property,	Class;
+  first,	List,		List;
+  isDefinedBy,	Resource,	Resource;
+  label,	Resource,	Literal;
+  member,	Container,	Resource;
+  object,	Statement,	Resource;
+  predicate,	Statement,	Resource;
+  range,	Property,	Class;
+  rest,		List,		List;
+  seeAlso,	Resource,	Resource;
+  subClassOf,	Class,		Class;
+  subject,	Statement,	Resource;
+  subPropertyOf,Property,	Property;
+  type,		Resource,	Class;
+  value,	Resource,	Resource;
+end relation Property domain and range;
+}; # end view RDF tabula rasa
+
+at view = RDF documentation {
+#===========================#
+begin relation Resource comment;
+  # Class
+  Alt,		A collection of alternatives. ;
+  Bag,		An unordered collection. ;
+  Class,	The concept of Class ;
+  Container,	This represents the set Containers. ;
+  ContainerMembershipProperty,	 The container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'. ;
+  Datatype,	The class of datatypes. ;
+  List,	 	The class of RDF Lists ;
+  Literal,	This represents the set of atomic values, eg. textual strings. ;
+  Property,	The concept of a property. ;
+  Resource,	The class resource, everything. ;
+  Seq,		An ordered collection. ;
+  Statement,	The class of RDF statements. ;
+  XMLLiteral,	The class of XML literals. ;
+   
+  # Property
+  comment,	Use this for descriptions;
+  domain,	A domain class for a property type;
+  first,	The first item in an RDF list. Also often called the head.;
+  isDefinedBy,	Indicates the namespace of a resource;
+  label,	Provides a human-readable version of a resource name.;
+  member,	a member of a container;
+  object,	The object of an RDF statement.;
+  predicate,	the predicate of an RDF statement.;
+  range,	A range class for a property type;
+  rest,		The rest of an RDF list after the first item. Also often called the tail.;
+  seeAlso,	A resource that provides information about the subject resource;
+  subClassOf,	Indicates membership of a class;
+  subject,	The subject of an RDF statement.;
+  subPropertyOf,Indicates specialization of properties;
+  type,		Indicates membership of a class;
+  value,	Identifies the principal value (usually a string) of a property when the property value is a structured resource;
+end relation Resource comment;
+}; # end view RDF documentation
+
+</XMP>
+</HTML>

@@ -1,0 +1,299 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "Godfrey Rust" <godfreyrust@dds.netkonect.co.uk>,
+	"Patrick J. Hayes" <phayes@ai.uwf.edu>
+Cc: "RDF-Interest" <www-rdf-interest@w3.org>,
+	"Richard S. Latimer" <latimer1@att.net>
+References: <000e01c2a377$e03e9a30$bd7ba8c0@rhm8200> <005401c2a5cd$4f6e42a0$0a14a8c0@godfrey>
+Subject: Re: space,time in KR: context, initial, final
+Date: Tue, 17 Dec 2002 12:04:30 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0010_01C2A5C4.744E5960"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0010_01C2A5C4.744E5960
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+You make some excellent points.
+
+1. My concept of "person" does not depend on legal status (e.g. age).
+
+2. My concept of "time independent" is related to causality.
+I view attributes (e.g. sex) as "constant", unless/until changed by some =
+action (e.g. sex change operation).
+In other words, there is a "long time interval" where we can view the =
+attribute as "time independent".
+I think this is a good way to characterize reality,
+even though "long time interval" depends on the judgment of the =
+"observer".
+
+In summary:
+    an attribute is a space-time-independent characteristic of an entity
+    an action is a space-time-dependent characteristic of an entity
+    actions change attributes
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart proposition list
+
+  ----- Original Message -----=20
+  From: Godfrey Rust=20
+  To: Richard H. McCullough ; Patrick J. Hayes=20
+  Cc: RDF-Interest ; Richard S. Latimer=20
+  Sent: Tuesday, December 17, 2002 5:07 AM
+  Subject: Re: space,time in KR: context, initial, final
+
+
+  Belated comments.
+    ----- Original Message -----=20
+    From: Richard H. McCullough=20
+
+    a. Jane has sex=3Dfemale=20
+    b. Jane isa person=20
+    c. John do walk with a limp done=20
+    d. John do walk to the store done=20
+    a and b are attribute and relation statements which are independent =
+of space-time.=20
+
+    GR> a is not independent if Jane has a sex change. If your datastore =
+was for a sex-change clinic it would be the most significant variable. =
+In some jurisdictions sex changes are not recognized (I understand from =
+this week's newspapers that in the UK it will be possible in future to =
+change your birth certificate) so this statement is both space and time =
+dependent.
+
+    b is space-time dependent according to your definition of "person". =
+If it is a legal definition then in many jurisdictions it will be true =
+only after one of Jane's birthdays, and which one will vary from place =
+to place.
+
+    c is an action statement which is independent of space-time.=20
+
+    GR> c is not time independent. Presumably Jane wasn't born walking, =
+so it is not true until at least the time at which she could walk. After =
+that it depends on whether the limp was genetic or acquired. She will =
+also only walk with a limp in appropriate environments (eg not under =
+water or if she is an astronaut).
+
+    d is an action statement which depends on space-time.=20
+
+    GR> ...as are all the rest. In any case they are bounded by Jane's =
+life: and that may have begun at conception or at birth, or any time =
+between or even before, according to your religious or philosophical =
+conjecture, or the requirements of your datastore.=20
+
+    Any definition of space-time independence is itself space-time =
+dependent, and dependent on the view of the domain within which, or the =
+authority by which, it is expressed.  (But then again, that's just my =
+point of view...:-)
+
+    I dont disagree with your general approach to contexts, btw Richard: =
+it is quite similar to the one we use, but beware of making =
+non-contextual statements about them as they undermine its credibility =
+and usefulness.
+
+    Godfrey Rust
+    ................................
+    Data Definitions
+    14 Gloucester Road
+    London W5 4JB
+    T 020 8579 8655
+    M 07979 627714
+    E godfreyrust@dds.netkonect.co.uk
+
+
+
+------=_NextPart_000_0010_01C2A5C4.744E5960
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>You make some excellent =
+points.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>1. My concept of "person" does&nbsp;not =
+depend=20
+on&nbsp;legal status (e.g. age).</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>2. My concept of "time independent" is =
+related to=20
+causality.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>I view attributes =
+(e.g.&nbsp;sex)&nbsp;as=20
+"constant", unless/until changed by some action (e.g.&nbsp;sex change=20
+operation).</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>In other words, there is a =
+"long&nbsp;time=20
+interval" where we can view the attribute as "time =
+independent".</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>I think this is a good way to =
+characterize=20
+reality,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>even though&nbsp;"long&nbsp;time=20
+interval"&nbsp;depends on the judgment of the "observer".</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>In summary:</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; an attribute is a=20
+space-time-independent characteristic of an entity</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; an action is a=20
+space-time-dependent characteristic of an entity</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; actions change=20
+attributes</FONT></DIV>
+<DIV><FONT face=3DArial =
+size=3D2>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Dick McC</FONT>ullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> proposition=20
+list<BR></DIV>
+<BLOCKQUOTE dir=3Dltr=20
+style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 5px; MARGIN-LEFT: 5px; =
+BORDER-LEFT: #000000 2px solid; MARGIN-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"BACKGROUND: #e4e4e4; FONT: 10pt arial; font-color: =
+black"><B>From:</B>=20
+  <A title=3Dgodfreyrust@dds.netkonect.co.uk=20
+  href=3D"mailto:godfreyrust@dds.netkonect.co.uk">Godfrey Rust</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A title=3Drhm@cdepot.net=20
+  href=3D"mailto:rhm@cdepot.net">Richard H. McCullough</A> ; <A=20
+  title=3Dphayes@ai.uwf.edu href=3D"mailto:phayes@ai.uwf.edu">Patrick J. =
+Hayes</A>=20
+  </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Cc:</B> <A =
+title=3Dwww-rdf-interest@w3.org=20
+  href=3D"mailto:www-rdf-interest@w3.org">RDF-Interest</A> ; <A=20
+  title=3Dlatimer1@att.net href=3D"mailto:latimer1@att.net">Richard S. =
+Latimer</A>=20
+  </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Tuesday, December 17, =
+2002 5:07=20
+  AM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Re: space,time in KR: =
+context,=20
+  initial, final</DIV>
+  <DIV><BR></DIV>
+  <DIV><FONT face=3DArial size=3D2><FONT color=3D#ff0000>Belated=20
+  comments</FONT>.</FONT></DIV>
+  <BLOCKQUOTE=20
+  style=3D"PADDING-RIGHT: 0px; PADDING-LEFT: 5px; MARGIN-LEFT: 5px; =
+BORDER-LEFT: #000000 2px solid; MARGIN-RIGHT: 0px">
+    <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+    <DIV=20
+    style=3D"BACKGROUND: #e4e4e4; FONT: 10pt arial; font-color: =
+black"><B>From:</B>=20
+    <A title=3Drhm@cdepot.net href=3D"mailto:rhm@cdepot.net">Richard H.=20
+    McCullough</A> </DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial size=3D2>a. Jane <STRONG>has</STRONG> =
+sex=3Dfemale=20
+    </FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2>b. Jane <STRONG>isa</STRONG> person =
+
+    </FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2>c. John <STRONG>do</STRONG> walk=20
+    <STRONG>with</STRONG> a limp <STRONG>done </STRONG></FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2>d. John <STRONG>do</STRONG> walk=20
+    <STRONG>to</STRONG> the store <STRONG>done </STRONG></FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2>a and b are attribute and relation =
+statements=20
+    which are independent of space-time. </FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial size=3D2>GR&gt; <FONT color=3D#ff0000>a is =
+not independent=20
+    if Jane has a sex change. If your datastore was for a sex-change =
+clinic it=20
+    would be the most significant variable. In some jurisdictions sex =
+changes=20
+    are not recognized (I understand from this week's newspapers that in =
+the UK=20
+    it will be possible in future to change your birth certificate) so =
+this=20
+    statement is both space and time dependent.</FONT></FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2>b is space-time =
+dependent=20
+    according to your definition of "person". If it is a legal =
+definition then=20
+    in many jurisdictions it will be true only after one of Jane's =
+birthdays,=20
+    and&nbsp;which one will vary from place to place.</FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial size=3D2>c is an action statement which is =
+independent=20
+    of space-time. </FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial size=3D2>GR&gt; <FONT color=3D#ff0000>c is =
+not time=20
+    independent. Presumably Jane wasn't born walking, so it is not true =
+until at=20
+    least the time at which she could walk. After that it depends on =
+whether the=20
+    limp was genetic or acquired. She will also only walk with a limp in =
+
+    appropriate environments (eg not under water or if she is an=20
+    astronaut).</FONT></FONT></FONT></DIV></DIV>
+    <DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+    <DIV><FONT face=3DArial size=3D2>d is an action statement which =
+depends on=20
+    space-time. </FONT></DIV>
+    <DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2>GR&gt; ...as are =
+all the rest. In=20
+    any case they are bounded by Jane's life: and that may have begun at =
+
+    conception or at birth, or any time between or even before, =
+according to=20
+    your religious or philosophical conjecture</FONT><FONT face=3DArial=20
+    color=3D#ff0000 size=3D2>,&nbsp;or the requirements of&nbsp;your =
+datastore.=20
+    </FONT></DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2></FONT>&nbsp;</DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2>Any definition of =
+space-time=20
+    independence is itself space-time dependent, and dependent on the =
+view of=20
+    the domain within which, or the authority by which, it is=20
+    expressed.</FONT><FONT face=3DArial color=3D#ff0000 size=3D2>&nbsp; =
+(But then=20
+    again, that's just my point of view...:-)</FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2>I dont disagree =
+with your general=20
+    approach to contexts, btw Richard: it is quite similar to the one we =
+use,=20
+    but&nbsp;beware of making non-contextual statements about them as =
+they=20
+    undermine its credibility and usefulness.</FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV><FONT face=3DArial color=3D#ff0000 size=3D2>Godfrey=20
+    Rust<BR>................................<BR>Data Definitions<BR>14=20
+    Gloucester Road<BR>London W5 4JB<BR>T 020 8579 8655<BR>M 07979 =
+627714<BR>E=20
+    <A=20
+    =
+href=3D"mailto:godfreyrust@dds.netkonect.co.uk">godfreyrust@dds.netkonect=
+.co.uk</A></FONT></DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV>&nbsp;</DIV></BLOCKQUOTE></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_0010_01C2A5C4.744E5960--

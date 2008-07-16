@@ -1,0 +1,19 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/phone.rel
+# Oct/5/2003 Mar/15/2007
+
+r_phone is relation with
+  arraymode=gdbm,arraykey="$1",
+  label=[pid, phone, fax, email],
+  format=[person:1, phone:2, phone:3, email:4],
+  automatic=ISU,
+  meaning={$1 has phone=$2,fax=$3,email=$4;};
+
+begin relation r_phone;
+Dick McCullough 1936, 209-295-1365, 209-295-1365, rhm@PioneerCA.com;
+end relation r_phone;
+
+#do check od person done;  # number of persons
+
+
+# </xmp></html>

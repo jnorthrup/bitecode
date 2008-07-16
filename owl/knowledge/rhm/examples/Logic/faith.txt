@@ -1,0 +1,31 @@
+# 1999/4/11
+
+#=======================#
+# measuring belief      #
+#   definition of faith #
+#=======================#
+
+# Reference:
+# "Webster's II New Riverside University Dictionary"
+# The Riverside Publishing Company, 1984.
+
+Webster's includes 3 definitions of faith (paraphrased)
+
+  belief is something accepted as true
+  faith1 is strong belief
+  faith2 is belief not based on logical proof or material evidence
+  faith4a is belief and trust in God
+
+I think faith1 refers to "psychological strength" of the decision to
+accept something as true.  No reference is made to evidence.  This
+strength can be measured by willingness to commit to an action.
+
+I think faith2 refers to "logical strength" (David Kelley, "The Art
+of Reasoning", chapter 5).  Note that logical strength measures the
+connection between premises and conclusion, so faith2 depends on the
+evidence which was considered, and the method used to validate the
+evidence.
+
+I think faith4a means a belief that God exists and that he is
+benevolent.  Note that faith4a makes no mention of psychological
+strength or logical strength.

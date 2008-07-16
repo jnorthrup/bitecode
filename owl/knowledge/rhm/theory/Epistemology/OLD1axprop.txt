@@ -1,0 +1,91 @@
+# 1999/4/26
+
+#========================#
+# axiomatic propositions #
+#========================#
+# References:
+# Peikoff, OSA, tape 2A
+# Peikoff, OPAR, chapter 1-2
+# Chase, email, "[od0] [MAE] Metaphysics and Epistemology", 4/3/99
+
+I think that the axiomatic concepts and axiomatic principles
+of Objectivism, and their dependencies, can be more easily
+grasped by using propositions.  This requires introducing
+some grammatical relationships.
+
+Here are the grammatical relationships used in the propositions,
+which are expressed in KR, my "simplified English" language.
+KR eliminates the ambiguity and redudancy of English, and
+is completely consistent with Objectivist epistemology.
+
+word		relationship
+====		============
+at { }		context-proposition
+isa		species-genus (adjacent level in hierarchy)
+isa*		unit-concept (0 or more levels in hierarchy)
+either or	disjunction
+all and		conjunction
+not		complement of relationship
+
+is		entity-self
+has		entity-attribute
+do		entity-action
+isin		entity-relationship
+
+causes		cause-effect
+haspart		whole-part
+
+:=		product-action
+
+=		attribute-value measurement 
+=		action-event measurement 
+=		relationship-infon measurement 
+
+Using these relationships, we can map axiomatic concepts and
+principles to the corresponding axiomatic propositions.
+(In some propositions, "entity" can be generalized to "existent";
+the exceptions concern actions, which are performed only by
+entities.)
+
+perspective		context-proposition
+===========		===================
+unit			at view=unit perspective {
+				ball_1,ball_2 isa ball }
+causal structure	at view=causal structure perspective {
+				ball do fall,roll }
+first-person		at view=first-person perspective {
+				rock,ball,rattle isa entity }
+third-person		at view=third-person perspective {
+				I has consciousness }
+
+axiomatic concept
+    or principle	axiomatic proposition
+=================	=====================
+			at view=third-person perspective
+
+existence		existence is all existent
+
+entity			entity isa existent
+
+identity		identity is all
+			    entity has  attribute   and
+			    entity do   action      and
+			    entity isin relationship
+
+causality		entity has attribute causes entity do action
+			entity:1 do action:1 causes
+			    entity:2 do action:2
+
+consciousness		entity has consciousness
+primacy of existence	entity do perceive existent
+			entity do perceive not causes existent
+
+volition		entity has volition
+absolutism of existence	entity do choose causes entity do action
+			entity do choose not causes existent
+
+mind-body integration 	man haspart mind-body
+
+metaphysical vs.	man do not change metaphysical existent
+    man-made		man-made existent :=
+				man do rearrange metaphysical existent

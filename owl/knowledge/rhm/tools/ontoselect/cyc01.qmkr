@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:daml := "http://www.daml.org/2001/03/daml+oil#";
+    xmlns:rdf  := "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+    xmlns:rdfs := "http://www.w3.org/2000/01/rdf-schema#";
+    xmlns      := "http://opencyc.sourceforge.net/daml/cyc#";
+>
+    daml:Ontology has about="",
+        daml:versionInfo = $Id$,
+        rdfs:comment = "The Cyc Upper Ontology";
+    daml:UniqueProperty isp guid;
+    guid has
+        rdfs:label = "guid",
+        rdfs:comment = "Permanent Global Unique ID for the associated\n
+            concept -- which enables concept renaming.  Users should not\n
+            depend upon the DAML ID nor label as fixed for all time.",
+        daml:domain = daml:Thing,
+        daml:range = rdfs:Literal;
+    Time-Quantity isp AFewDaysDuration;
+    AFewDaysDuration has
+        rdfs:label = "a few days duration",
+        rdfs:comment = "Duration of 2 to 10 days",
+        guid = "bd58f6ee-9c29-11b1-9dad-c379636f7270";
+    OrderOfMagnitudeInterval isp AFewDecadesDuration;
+    AFewDecadesDuration has
+        rdfs:label = "a few decades duration",
+        rdfs:comment = "Duration of 2 to 10 decades",
+        guid = "bd58af72-9c29-11b1-9dad-c379636f7270";
+    OrderOfMagnitudeInterval isp AFewHoursDuration;
+    AFewHoursDuration has
+        rdfs:label = "a few hours duration",
+        rdfs:comment = "Duration of 2 to 10 hours",
+        guid = "bd58fded-9c29-11b1-9dad-c379636f7270";
+    OrderOfMagnitudeInterval isp AFewMinutesDuration;
+    AFewMinutesDuration has
+        rdfs:label = "a few minutes duration",
+        rdfs:comment = "Duration of 2 to 10 minutes",
+        guid = "bd5899f0-9c29-11b1-9dad-c379636f7270";
+    Time-Quantity isp AFewMonthsDuration;
+    AFewMonthsDuration has
+        rdfs:label = "a few months duration",
+        rdfs:comment = "A few months 2-10",
+        guid = "bd59008b-9c29-11b1-9dad-c379636f7270";
+    OrderOfMagnitudeInterval isp AFewSecondsDuration;
+    AFewSecondsDuration has
+        rdfs:label = "a few seconds duration",
+        rdfs:comment = "Duration of 2 to 30 seconds",
+        guid = "bd589ecf-9c29-11b1-9dad-c379636f7270";
+    Time-Quantity isp AFewWeeksDuration;
+    AFewWeeksDuration has
+        rdfs:label = "a few weeks duration",
+        rdfs:comment = "Duration of 2 to 10 weeks",
+        guid = "bd58ddfa-9c29-11b1-9dad-c379636f7270";
+    Time-Quantity isp AFewYearsDuration;
+    AFewYearsDuration has
+        rdfs:label = "a few years duration",
+        rdfs:comment = "Duration of 2 to 10 years",
+        guid = "bd589ddb-9c29-11b1-9dad-c379636f7270";
+    daml:Class isg AbandoningSomething;
+    AbandoningSomething has
+        rdfs:label = "abandonments",
+        rdfs:comment = "The collection of events in which some #$Agent\n
+            deliberately gives up possession of something, without\n
+            giving it to another.",
+        guid = "bd67b7de-9c29-11b1-9dad-c379636f7270";
+        AbandoningSomething isu TemporalObjectType;
+        AbandoningSomething iss LosingUserRights,
+        			PurposefulAction;
+        AbandoningSomething xor GainingUserRights;
+    daml:Class isg Ablation;
+    Ablation has
+        rdfs:label = "ablations",
+        rdfs:comment = "A collection of events.  In an #$Ablation, a\n
+            (usually relatively thin) layer of material is removed from\n
+            the surface of an object.",
+        guid = "bd58b6b3-9c29-11b1-9dad-c379636f7270";
+        Ablation isu DefaultDisjointScriptType,
+        		TemporalStuffType;
+        Ablation iss Separation-Complete,
+        		RemovingSomething;
+    daml:Class isg AboveGroundLevelInAConstruction;
+    AboveGroundLevelInAConstruction has
+        rdfs:label = "above ground levels",
+        rdfs:comment = "A specialization of #$LevelOfAConstruction whose\n
+            instances are at or above ground level.  See also\n
+            #$BasementLevelInAConstruction and #$BalconyLevelInAConstruction.",
+        guid = "bd588bb2-9c29-11b1-9dad-c379636f7270";
+        AboveGroundLevelInAConstruction isu ExistingObjectType;
+        AboveGroundLevelInAConstruction iss LevelOfAConstruction;
+    daml:Class isg AbradingSomething;
+    AbradingSomething has
+        rdfs:label = "abrading events",
+        rdfs:comment = "A collection of events.  In an #$AbradingSomething\n
+            event, the surface of some object is gradually worn away by\n
+            scraping or similar physical contact involving friction.\n
+            Devices used in elements of #$AbradingSomething include\n
+            files and sand paper; elements of #$AbradingSomething would\n
+            include the event in which Howard Hughes sanded down the\n
+            Spruce Goose for the last time, the event in which Lucy\n
+            Ricardo filed her fingernails just before her singing debut\n
+            at Rickie&apos;s club, etc.",
+        guid = "bd5899e7-9c29-11b1-9dad-c379636f7270";
+        AbradingSomething isu DefaultDisjointScriptType;
+        AbradingSomething iss Ablation;
+    daml:Class isg AbstractInformationalThing;
+    AbstractInformationalThing has
+        rdfs:label = "data",
+        rdfs:comment = "A heterogeneous collection of abstract objects\n
+            that pertain to information. Subsumes not only\n
+            #$Proposition, but also the collections #$Sentence,\n
+            #$CharacterString, #$AtomicSymbol-Abstract, #$Microtheory,\n
+            #$PropositionalInformationThing, and #$ConceptualWork. Note\n
+            that while all #$AbstractInformationalThings are abstract\n
+            objects (this collection is disjoint with\n
+            #$SpatialThing-Localized), most instances of this collection\n
+            can have multiple concrete &apos;embodiments&apos;. A single\n
+            instance of #$Sentence can be written on several peices of\n
+            paper (see #$instantiationOfAIS); a\n
+            #$PropositionalInformationThing may be the content of\n
+            several concrete documents, such as instances of #$BookCopy\n
+            (see #$containsInfoPropositional-IBT); and several events,\n
+            such as spoken utterances, may have a certain #$Proposition\n
+            as their content (see #$containsInformation). Note that some\n
+            instances of #$AbstractInformationalThing have temporal\n
+            extent. Examples include all instances of #$Novel-CW and\n
+            #$Movie-CW. Others specs are disjoint with #$TemporalThing.\n
+            Examples include all instances of #$Character-Abstract and #$Proposition.",
+        guid = "bdff6c64-9c29-11b1-9dad-c379636f7270";
+        AbstractInformationalThing isu StuffType,
+        				daml:Class;
+        AbstractInformationalThing iss IntangibleIndividual;
+        AbstractInformationalThing xor SpatialThing,
+        					Agent,
+        					Event;
+    daml:Class isg AbstractProgrammingLanguage;
+    AbstractProgrammingLanguage has
+        rdfs:label = "programming languages",
+        rdfs:comment = "The collection of languages invented for use by\n
+            computers. This includes both command languages and others\n
+            which one doesn&apos;t really `program&apos; in.",
+        guid = "bd58c2ea-9c29-11b1-9dad-c379636f7270";
+        AbstractProgrammingLanguage isu ObjectType;
+    daml:Class isg AbstractShapeType;
+    AbstractShapeType has
+        rdfs:label = "abstract shape type",
+        rdfs:comment = "A collection of collections. An instance SHAPE of\n
+            #$ShapeType (q.v.) is also an instance of\n
+            #$AbstractShapeType if and only if SHAPE is a spec of\n
+            #$GeometricThing-Abstract. It is distinguished from\n
+            #$GenericShapeType (q.v.), which is the collection of those\n
+            collections that are instances of #$ShapeType, some of whose\n
+            instances are abstract, and some of whose instances are\n
+            localized. There is no &apos;#$LocalizedShapeType&apos;. The\n
+            instances of #$AbstractShapeType are the acceptable\n
+            second-arguments of the predicate #$shape. So, if you have\n
+            have a spherical ball, BALL001, it is true that (#$shape\n
+            BALL001 (#$AbstractFn #$SphereShape)), but false (in fact,\n
+            undefined) that (#$shape BALL001 #$SphereShape).",
+        guid = "c0f46e32-9c29-11b1-9dad-c379636f7270";
+        AbstractShapeType isu daml:Class,
+        			CollectionType;
+        AbstractShapeType iss ShapeType;
+        AbstractShapeType xor GenericShapeType;
+    daml:Class isg AcademicProfessional;
+    AcademicProfessional has
+        rdfs:label = "academics",
+        rdfs:comment = "A collection of persons; a subset of\n
+            #$Professional.  Each element of #$AcademicProfessional is a\n
+            person whose job is to educate and/or to perform research as\n
+            an affiliate of an academic institution.  This includes\n
+            members of the teaching and/or research staff of schools,\n
+            colleges, universities, and research institutes.",
+        guid = "bd589db6-9c29-11b1-9dad-c379636f7270";
+        AcademicProfessional isu OccupationType;
+        AcademicProfessional iss Professional;
+    daml:Class isg AcademicQuarter;
+    AcademicQuarter has
+        rdfs:label = "academic quarters",
+        rdfs:comment = "Each instance of this collection is a\n
+            #$TimeInterval defined by some educational institution: one\n
+            quarter of their #$AcademicYear.  Since the start dates, end\n
+            dates, and duration may all vary depending on the\n
+            institution, the year, etc., instances of this collection\n
+            must unfortunately be time intervals like StanfordSpringQuarter1991.",
+        guid = "bd589441-9c29-11b1-9dad-c379636f7270";
+        AcademicQuarter isu TemporalObjectType;
+        AcademicQuarter iss TimeInterval;
+        AcademicQuarter xor TimePoint;
+    daml:Class isg AcademicSemester;
+    AcademicSemester has
+        rdfs:label = "semesters",
+        rdfs:comment = "Each instance of this collection is a\n
+            #$TimeInterval defined by some educational institution: one\n
+            half of their #$AcademicYear. Since the start dates, end\n
+            dates and duration may vary depending on the institution and\n
+            year, instances will be time intervals such as ``StanfordSpringSemester1990-91&apos;&apos;.",
+        guid = "bd58ea30-9c29-11b1-9dad-c379636f7270";
+        AcademicSemester isu TemporalObjectType;
+        AcademicSemester iss TimeInterval;
+        AcademicSemester xor TimePoint;
+    daml:Class isg AcademicTrimester;
+    AcademicTrimester has
+        rdfs:label = "trimesters",
+        rdfs:comment = "Each instance of this collection is a\n
+            #$TimeInterval defined by some educational institution: one\n
+            third of their #$AcademicYear. Since the start dates, end\n
+            dates, and duration may all vary depending on the\n
+            institution and year, instances of this collection must\n
+            unfortunately be time intervals like UCLASpringTrimester1990-91.",
+        guid = "bd58ea73-9c29-11b1-9dad-c379636f7270";
+        AcademicTrimester isu TemporalObjectType;
+        AcademicTrimester iss TimeInterval;
+        AcademicTrimester xor TimePoint;
+    daml:Class isg AcademicYear;
+    AcademicYear has
+        rdfs:label = "academic years",
+        rdfs:comment = "Each instance of this collection is an annually\n
+            recurring #$TimeInterval defined by an educational\n
+            institution.  Since the start dates, end dates, and duration\n
+            may all vary depending on the institution, the year, etc.,\n
+            instances of this collection must unfortunately be time\n
+            intervals like Stanford1989-90AcademicYear.",
+        guid = "bd58f188-9c29-11b1-9dad-c379636f7270";
+        AcademicYear isu TemporalObjectType;
+        AcademicYear iss TimeInterval;
+        AcademicYear xor TimePoint;
+    daml:Class isg Acceleration;
+    Acceleration has
+        rdfs:label = "accelerations",
+        rdfs:comment = "Acceleration is the change in speed of an object\n
+            per unit time.  It is a measurable physical quantity,\n
+            measured in units such as MilesPerHourPerSecond.",
+        guid = "bd58dc89-9c29-11b1-9dad-c379636f7270";
+        Acceleration isu DerivedNumericAttributeType;
+        Acceleration iss ScalarInterval,
+        		PhysicalAttribute;
+    daml:Class isg AccessNumber;
+    AccessNumber has
+        rdfs:label = "access numbers",
+        rdfs:comment = "A collection of #$PhoneNumbers. Each element of\n
+            #$AccessNumber is a string that a user with #$Internet\n
+            connections uses to connect to his/her #$InternetServiceProvider.",
+        guid = "bf796ce3-9c29-11b1-9dad-c379636f7270";
+        AccessNumber isu IDStringType;
+        AccessNumber iss PhoneNumber;
+    daml:Class isg AccessingAnIBT;
+    AccessingAnIBT has
+        rdfs:label = "information-accessing events",
+        rdfs:comment = "A collection of information transfer events.  Each\n
+            element of #$AccessingAnIBT is an action by which an agent\n
+            accesses the content of some IBT (i.e., an element of\n
+            #$InformationBearingThing).  Examples include (getting\n
+            information from) reading a newspaper, watching a film,\n
+            listening to a musical performance, decoding an encrypted\n
+            message, seeing a traffic police officer wave you on, or\n
+            hearing your roommate ask you to take out the trash.  Of\n
+            course, communication conventions play a role here.  In the\n
+            #$NaiveInformationMt, Cyc simply assumes that an agent who\n
+            accesses an IBT understands its content afterwards.  In the\n
+            #$InformationGMt, Cyc makes the more complicated inference\n
+            that an agent who accesses an IBT understands its content\n
+            afterwards only if the agent is able to get the encoded\n
+            information using a convention familiar to that agent.  See\n
+            also #$CommunicationConvention, #$hasCommConvention, #$usesCommConventionForInfo.",
+        guid = "bd58d61f-9c29-11b1-9dad-c379636f7270";
+        AccessingAnIBT isu TemporalObjectType,
+        			DefaultDisjointScriptType;
+        AccessingAnIBT iss TransferIn,
+        			PurposefulAction,
+        			InformationTransferEvent;

@@ -1,0 +1,332 @@
+<HTML>
+<XMP>
+
+TABRASA = rdf
+Resource
+/  Property
+//    action
+///      COMMAND
+////        ExtractData
+////        altlist
+////        altsize
+////        cd
+////        check
+////        class
+////        clist
+////        clock
+////        csize
+////        date
+////        day
+////        delete
+////        deletecomment
+////        differentiate
+////        dir
+////        dump
+////        ged
+////        hidden
+////        nvstack
+////        entropy
+////        exec
+////        explorer
+////        factsize
+////        find
+////        first-name
+////        flist
+////        fsize
+////        fstatus
+////        ftype
+////        genus_list
+////        genus_path
+////        getenv
+////        given-name
+////        group_list
+////        group_path
+////        hdepth
+////        help
+////        hlevel
+////        hwalk
+////        import
+////        integrate
+////        interpret_line
+////        isa_exp
+////        isc_exp
+////        kbdump
+////        kbload
+////        kbwrite
+////        kdepth
+////        klevel
+////        klist
+////        ksize
+////        last-name
+////        load
+////        ged
+////        ls
+////        max
+////        member_list
+////        member_path
+////        memlist
+////        memsize
+////        menu
+////        middle-name
+////        min
+////        mkdir
+////        month
+////        mount hierarchy
+////        nvtab
+////        path2list
+////        plist
+////        print
+////        psize
+////        pwd
+////        read
+////        read directory
+////        read tap
+////        replace
+////        rmdir
+////        sh
+////        size_act
+////        size_alias
+////        size_attr
+////        size_echar
+////        size_eobj
+////        size_fact
+////        size_genus
+////        size_group
+////        size_member
+////        size_part
+////        size_rel
+////        size_unit
+////        suffix-name
+////        sum
+////        surname
+////        title-name
+////        ulist
+////        unique
+////        unit_list
+////        unit_path
+////        usize
+////        vdump
+////        vload
+////        vpop
+////        vpush
+////        vwrite
+////        write
+////        write directory
+////        year
+///      method
+//    attribute
+///      classname
+///      comment
+///      domain
+///      fact
+///      gtype
+///      krtype
+///      label
+///      primitive
+///      range
+///      object
+///      predicate
+///      subject
+///      type
+///      value
+///      rdfs
+///      rootname
+///      space
+///      stv
+///      time
+///      variable
+////        .
+////        ..
+////        ...
+////        Assignment
+////        Command
+////        Every
+////        If
+////        Question
+////        Sentence
+////        charformat
+////        cname
+////        debug
+////        echo
+////        fd
+////        fmode
+////        fname
+////        hchar
+////        hcheck
+////        hfocus
+////        hformat
+////        hmaxcount
+////        hmaxlevel
+////        hmethod
+////        hminfactid
+////        hop
+////        hoseparator
+////        hpad
+////        hquote
+////        hreduce
+////        hrelation
+////        htab
+////        iversion
+////        kcase
+////        kehome
+////        kerror
+////        keview
+////        kformat
+////        klastid
+////        kmapword
+////        kname
+////        kquote
+////        kscdebug
+////        kversion
+////        menuwindow
+////        mseparator
+////        nvseparator
+////        pronoun
+////        pseparator
+////        qseparator
+////        relseparator
+////        removehtml
+////        roleseparator
+////        savehref
+////        submethod
+////        systype
+////        tapformat
+///      view
+////        tabula rasa
+/////          myview
+///      wexplore
+//    interaction
+//    part
+///      member
+////        _n
+///      first
+///      rest
+//    relation
+///      RDF classes
+///      RDF properties
+///      seeAlso
+////        isDefinedBy
+///      subClassOf
+///      subPropertyOf
+/  Entity
+//    ANIMAL
+///      Person
+//    OBJECT
+///      Container
+////        Alt
+////        Bag
+////        Seq
+/////          List
+///      group
+////        LATTICE
+/////          hierarchy
+/////          lattice
+/////          unithierarchy
+////        Set
+////        concept
+////        enumeration
+////        exgroup
+////        html
+////        ingroup
+////        list
+////        mcf
+////        owl
+////        rdf
+////        requisite
+////        sequence
+////        triple
+////        xml
+///      Literal
+////        XMLLiteral
+///      symbol
+////        separator
+////        word
+/////          VERB
+/////          conjunction
+/////          control
+/////          preposition
+/////          quantifier
+////        xmlword
+//    PLANT
+/  proposition
+//    context
+//    newproposition
+//    sentence
+///      Statement
+////        s_action
+////        s_attribute
+////        s_begin
+////        s_change
+////        s_conditional
+////        s_definition
+////        s_end
+////        s_exit
+////        s_group
+////        s_hierarchy
+/////          s_hostatement
+////        s_html
+////        s_identity
+////        s_interaction
+/////          s_causality
+////        s_iteration
+////        s_mcf
+////        s_nt
+////        s_part
+////        s_rdf
+////        s_relation
+/////          s_relstatement
+Set
+/  concepts
+/  events
+/  infons
+/  Class
+//    Datatype
+/  ContainerMembershipProperty
+/  units
+/  values
+/  views
+Class
+/  Property
+/  Resource
+/  Alt
+/  Bag
+/  List
+/  Literal
+/  Property
+/  Seq
+/  Statement
+/  XMLLiteral
+/  Container
+/  ContainerMembershipProperty
+//    _n
+//    _n
+/  Datatype
+/  Resource
+ContainerMembershipProperty has iconcept = ContainerMembershipProperty;
+ContainerMembershipProperty has icache = ContainerMembershipProperty;
+ContainerMembershipProperty has xmlname = [ContainerMembershipProperty,rdfs:ContainerMembershipProperty];
+ContainerMembershipProperty has xmlns = rdfs;
+ContainerMembershipProperty has krtype = mkr;
+ContainerMembershipProperty has ctype = Set;
+ContainerMembershipProperty has htype = unit;
+ContainerMembershipProperty has mark = 0;
+ContainerMembershipProperty is ContainerMembershipProperty,rdfs:ContainerMembershipProperty;
+ContainerMembershipProperty isu Set;
+ContainerMembershipProperty ismem Class,rdfs:Class;
+ContainerMembershipProperty isall rdfs:_n,_n;
+ContainerMembershipProperty has  
+    classname = rdfs:ContainerMembershipProperty\Set\Group\OBJECT\Entity\Resource,
+    gtype = Set,
+    rdfs:comment = "The container membership properties, rdf:1, rdf:2, ..., all of which are sub-properties of 'member'.",
+    rootname = Resource/Entity/OBJECT/Group/Set/rdfs:ContainerMembershipProperty,
+    shortname = ContainerMembershipProperty,
+    xmlname = [rdfs:ContainerMembershipProperty,ContainerMembershipProperty],
+    xmlns = rdfs 
+;
+
+unknown
+/  
+/  rdfshi
+
+</XMP>
+</HTML>

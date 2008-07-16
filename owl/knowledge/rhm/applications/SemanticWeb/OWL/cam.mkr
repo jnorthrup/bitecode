@@ -1,0 +1,42 @@
+# KEHOME/knowledge/applications/SemanticWeb/OWL/camera.mkr
+# May/29/2003
+
+at view = owl;
+
+do read tap from cam.owl done;
+
+do print od "<!--  Class  -->" done;
+Class isall* ?;
+
+do print od "<!--  Class hierarchy  -->" done;
+PurchaseableItem isc* ?;
+part isc* ?;
+Money isc* ?;
+Range isc* ?;
+Window isc* ?;
+Viewer isc* ?;
+
+do print od "<!--  Properties  -->" done;
+PurchaseableItem has ?;
+Camera has ?;
+Body has ?;
+Lens has ?;
+SLR has ?;
+Digital has ?;
+Large-Format has ?;
+Money has ?;
+Range has ?;
+Window has ?;
+Viewer has ?;
+
+do print od "<!--  equivalences  -->" done;
+f-stop is ?;
+focal-length is ?;
+
+! deletecomment cam.out done;
+
+
+do print od "<!--  check knit  -->" done;
+do check od knit done;
+
+exit;

@@ -1,0 +1,259 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "RDF-Interest" <www-rdf-interest@w3.org>
+Subject: food for thought: KR-RDFS aliases
+Date: Sat, 23 Nov 2002 02:53:52 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0007_01C2929B.8E6F24F0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0007_01C2929B.8E6F24F0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Note: ??? for RDFS basically means here's an important Class that has =
+yet to be defined,
+                                                   or here's a missing =
+feature of the language
+
+Class hierarchy outline
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+existent is Resource
+    entity is Entity
+        animal is Animal
+            person is Person
+        plant
+        object
+            internet is Internet
+            ke is Knowledge Explorer
+            group is Container  # approximately
+                enumeration is Alt
+                bag is Bag
+                set is ???
+                    company is Company
+                    class names is rdfs:Class
+                list is Seq
+                sequence is ???   # order =3D time
+                hierarchy is ???    # unique genus, disjoint subclasses
+                lattice is ???        # ambiguous genus, overlapping =
+subclasses
+                file is ???
+    characteristic is Property
+        attribute is ???    # static property, e.g.: sex
+        action is ???        # dynamic property, e.g.: walk
+            measure existent is ???
+            classify existent is ???
+            integrate concepts is ???
+            differentiate concept is ???
+        relation is ???        # relation property, e.g.: subClassOf
+        part is ???                # composition property, e.g.: leg
+    proposition is ???
+        context is ???
+        sentence is ???
+            statement is Statement  # approximately
+                definition is ???
+                    n-ary relation definition is ???
+                    method definition is ???
+                attribute statement is ???    # static
+                action statement is ???        # dynamic
+                relation statement is ???        # relation
+                    causality statement is ???        # action:1 causes =
+action:2  (events)
+                    meaning statement is ???        # symbol means =
+referent
+                part statement is ???            # composition
+                conditional statement is ???    # if then else if
+                iteration statement is ???        # every
+                forSome statement is forSome statement  # approximately
+                forAll statement is forAll statement  # approximately
+            question is ???
+            command is ???
+            assignment is ???
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart list of proposition
+
+------=_NextPart_000_0007_01C2929B.8E6F24F0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Note: ??? for RDFS basically means =
+here's an=20
+important Class that has yet to be defined,</FONT></DIV>
+<DIV><FONT face=3DArial=20
+size=3D2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;or=20
+here's a missing feature of the language</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Class hierarchy outline</FONT></DIV>
+<DIV><FONT face=3DArial =
+size=3D2>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</FONT></DIV>=
+
+<DIV><FONT face=3DArial size=3D2>existent is Resource</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; entity is =
+Entity</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+animal is=20
+Animal</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; person is Person</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+plant</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+object</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; internet is Internet</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; ke is Knowledge Explorer</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; group is Container&nbsp; # approximately</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; enumeration is Alt</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; bag is Bag</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; set is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; company is=20
+Company</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; class =
+names&nbsp;is=20
+rdfs:Class</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; list is Seq</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sequence is ???&nbsp;&nbsp; # =
+order =3D=20
+time</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; hierarchy is ???&nbsp;&nbsp;&nbsp; =
+#=20
+unique genus, disjoint subclasses</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; lattice is ???&nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; # ambiguous genus, overlapping =
+subclasses</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; file is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; characteristic is=20
+Property</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+attribute is=20
+???&nbsp;&nbsp;&nbsp; # static property, e.g.: sex</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+action is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # dynamic property, e.g.:=20
+walk</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; measure existent is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; classify existent is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; integrate concepts is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; differentiate concept is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+relation is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # relation property, e.g.:=20
+subClassOf</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+part is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp; #=20
+composition property, e.g.: leg</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; proposition is =
+???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+context is=20
+???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; =
+sentence is=20
+???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; statement is Statement&nbsp; # =
+approximately</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; definition is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; n-ary relation=20
+definition is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; method =
+definition is=20
+???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; attribute statement is=20
+???&nbsp;&nbsp;&nbsp; # static</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; action statement is =
+???&nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; # dynamic</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; relation statement is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # relation</FONT></DIV>
+<DIV>
+<DIV><FONT face=3DArial=20
+size=3D2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; causality statement is ???&nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; # action:1 causes action:2&nbsp; =
+(events)</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; meaning =
+statement is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # symbol means=20
+referent</FONT></DIV></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; part statement is =
+???&nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # composition</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; conditional statement is=20
+???&nbsp;&nbsp;&nbsp; # if then else if</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; iteration statement is=20
+???&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; # every</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; forSome statement is forSome=20
+statement&nbsp; # approximately</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; forAll statement is forAll =
+statement&nbsp;=20
+# approximately</FONT></DIV>
+<DIV><FONT face=3DArial=20
+size=3D2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;=20
+question is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; command is ???</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; assignment is ???</FONT></DIV>
+<DIV>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D <BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> list =
+<B>of</B>=20
+proposition<BR></DIV></BODY></HTML>
+
+------=_NextPart_000_0007_01C2929B.8E6F24F0--

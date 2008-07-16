@@ -1,0 +1,45 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/tools/jena/tree1.nt
+# Apr/17/2003
+
+begin ntriple tree1;
+#####from jena-dev email digest
+#####
+#####Message: 4
+#####   Date: Tue, 25 Mar 2003 15:52:10 -0000
+#####   From: "cntomcom" <cntomcom@yahoo.com.cn>
+#####Subject: Re: How can I form a class tree from a rdfs/rdf file?
+#####
+#####For example, there are statements or triples about class in a *.rdf 
+#####or *.rdfs file.
+#####Just like, 
+#####<rdf:Class rdf:about="http://example.org/schema#Person">
+#####  <rdfs:isDefinedBy rdf:resource="http://example.org/schema#"/>
+#####  <rdfs:label>Person</rdfs:label>
+#####  <rdfs:subClassOf 
+#####    rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+#####</rdf:Class>
+Person type Class ;
+Person subClassOf Resource ;
+Person label "Person" ;
+Person isDefinedBy "http://example.org/schema#"/ ; 
+#####
+#####These classes and subclasses in the file just  form a tree or several
+#####trees.
+#####I wonder if there are any methods to get such a tree.
+#####
+end ntriple tree1;
+
+do print od "<!--  set of class names  -->" done;
+Class isall ?;
+do print od "<!--  class hierarchy  -->" done;
+Resource isc**3 ?;
+do print od "<!--  resource attributes  -->" done;
+Person has ?;
+
+! deletecomment tree1.out done;
+
+exit;
+</XMP>
+</HTML>

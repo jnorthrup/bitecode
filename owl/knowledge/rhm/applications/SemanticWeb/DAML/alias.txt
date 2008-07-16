@@ -1,0 +1,8 @@
+Class is concept
+Instance is unit
+Resource is existent
+Property is attribute
+Container is group
+Alt is enumeration
+Bag is multiset
+Seq is list

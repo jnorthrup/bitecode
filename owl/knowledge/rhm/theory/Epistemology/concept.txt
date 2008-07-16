@@ -1,0 +1,63 @@
+# 1999/5/4
+
+#=========#
+# Concept #
+#=========#
+
+Rand, IOE, page 13
+
+        A concept is a mental integration of two or more units
+        possessing the same distinguishing characteristic(s),
+        with their particular measurements omitted.
+
+Rand, IOE, page 40, 41
+
+        A definition is a statement which identifies the nature
+        of the units subsumed under the concept.
+
+        The purpose of a definition is to distinguish a concept
+	from all other concepts and thus keep its units
+	differentiated from all other existents.
+
+	The distinguishing characteristic(s) of the units
+	becomes the differentia of the concept's definition;
+	the existents possessing a "Conceptual Common Denominator"
+	become the genus.
+	Thus a definition complies with the two essential
+	functions of consciousness: differentiation and
+	integration.  The differentia isolates the units of a
+	concept from all other existents; the genus indicates
+	their connection to a wider group of existents.
+
+
+Knowledge Representation language:
+
+        concept is either unit1 or unit2 or ...
+        concept is genus with differentia	# definition
+
+	concept isa* existent
+        concept isa genus
+        concept is alias
+	concept ise unit
+        concept isin relationship=infon
+        concept has attribute=value
+        concept haspart part=partcount
+
+        entity do action=event
+
+
+        # NOTE:
+	# The "primitive units" at the bottom level of an
+        # entity-relation hierarchy are the percepts and perceptual
+	# judgments which are produced directly from sense data.
+	# If a concept is placed at the bottom of the hierarchy,
+	# that concept is a "floating abstraction" which has no
+	# direct tie to reality.
+	# Knowledge Explorer cannot distinguish a "primitive unit"
+	# from a "floating abstraction".  That distinction can only
+	# be made by the user of Knowledge Explorer.
+
+	# The KE command "!psize cname" counts the number of
+	# primitive units in the cname subhierarchy; the command
+	# "!hsize cname" counts the number of concepts plus the
+	# number of primitive units.

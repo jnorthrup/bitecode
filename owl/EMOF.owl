@@ -1,0 +1,300 @@
+<?xml version='1.0'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl 'http://www.w3.org/2002/07/owl#' >
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#' >
+    <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#' >
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#' >
+    <!ENTITY dcterms 'http://purl.org/dc/terms/' >
+    <!ENTITY dc 'http://purl.org/dc/elements/1.1/' >
+    <!ENTITY QVTOperational 'http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTOperational.owl#' >
+    <!ENTITY QVTBase 'http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTBase.owl#' >
+]>
+<rdf:RDF
+    xmlns='http://www.tssg.org/public/ontologies/omg/qvt/2005/EMOF.owl#'
+    xmlns:QVTOperational='http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTOperational.owl#'
+    xmlns:QVTBase='http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTBase.owl#'
+    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+    xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+    xmlns:owl='http://www.w3.org/2002/07/owl#'
+    xmlns:dcterms='http://purl.org/dc/terms/'
+    xmlns:dc='http://purl.org/dc/elements/1.1/'
+  xml:base='http://www.tssg.org/public/ontologies/omg/qvt/2005/EMOF.owl'>
+  <owl:Ontology rdf:about=''>
+<dc:publisher xml:lang='en-US'>Telecommunications Software and Systems Group 'www.tssg.org'</dc:publisher>
+<dc:contributor xml:lang='fr'>Nazim Agoulmine -  Laboratoire de R&#233;seaux et Syst&#232;mes Multim&#233;dia -  Universit&#233; d'Evry-Val d'Essonne</dc:contributor>
+<dc:contributor xml:lang='en-US'>John Strassner - Autonomic Research Lab - Motorola Labs</dc:contributor>
+<dc:contributor xml:lang='en-US'>M&#237;che&#225;l &#211; Foghl&#250; - Telecommunications Software and Systems Group - Waterford Institute of Technology</dc:contributor>
+<dc:creator xml:lang='en-US'>Elyes Lehtihet 'elehtihet@tssg.org'</dc:creator>
+<dc:title xml:lang='en-US'>EMOF</dc:title>
+<dc:date xml:lang='en-US'>29/05/2005</dc:date>
+<dc:subject xml:lang='en-US'
+>Meta Object Facility (MOF) 2.0 Query/View/Transformation Specification</dc:subject>
+   <owl:imports rdf:resource='http://purl.org/dc/elements/1.1/'/>
+    <owl:imports rdf:resource='http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTOperational.owl'/>
+    <owl:imports rdf:resource='http://www.tssg.org/public/ontologies/omg/qvt/2005/QVTBase.owl'/>
+  </owl:Ontology>
+<owl:Class rdf:ID='MultiplicityElement'>
+</owl:Class>
+<owl:Class rdf:ID='Operation'>
+  <rdfs:subClassOf rdf:resource='#TypedElement'/>
+  <rdfs:subClassOf rdf:resource='#MultiplicityElement'/>
+</owl:Class>
+<owl:Class rdf:ID='Object'>
+</owl:Class>
+<owl:Class rdf:ID='Extent'>
+  <rdfs:subClassOf rdf:resource='#Object'/>
+</owl:Class>
+<owl:Class rdf:ID='NamedElement'>
+  <rdfs:subClassOf rdf:resource='#Element'/>
+</owl:Class>
+<owl:Class rdf:ID='Enumeration'>
+  <rdfs:subClassOf rdf:resource='#DataType'/>
+</owl:Class>
+<owl:Class rdf:ID='Comment'>
+  <rdfs:subClassOf rdf:resource='#Element'/>
+</owl:Class>
+<owl:Class rdf:ID='Real'/>
+<owl:Class rdf:ID='Property'>
+  <rdfs:subClassOf rdf:resource='#TypedElement'/>
+  <rdfs:subClassOf rdf:resource='#MultiplicityElement'/>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#Property.opposite'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#Property.module'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID='EnumerationLiteral'>
+  <rdfs:subClassOf rdf:resource='#NamedElement'/>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#EnumerationLiteral.enumeration'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID='Parameter'>
+  <rdfs:subClassOf rdf:resource='#TypedElement'/>
+  <rdfs:subClassOf rdf:resource='#MultiplicityElement'/>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#Parameter.operation'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID='Type'>
+  <rdfs:subClassOf rdf:resource='#NamedElement'/>
+</owl:Class>
+<owl:Class rdf:ID='Package'>
+  <rdfs:subClassOf rdf:resource='#NamedElement'/>
+</owl:Class>
+<owl:Class rdf:ID='Integer'/>
+<owl:Class rdf:ID='Tag'>
+  <rdfs:subClassOf rdf:resource='#Element'/>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#Tag.transformation'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#Tag.owner'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID='UnlimitedNatural'/>
+<owl:Class rdf:ID='Element'>
+  <rdfs:subClassOf rdf:resource='#Object'/>
+</owl:Class>
+<owl:Class rdf:ID='String'/>
+<owl:Class rdf:ID='DataType'>
+  <rdfs:subClassOf rdf:resource='#Type'/>
+</owl:Class>
+<owl:Class rdf:ID='Boolean'/>
+<owl:Class rdf:ID='URIExtent'>
+  <rdfs:subClassOf rdf:resource='#Extent'/>
+</owl:Class>
+<owl:Class rdf:ID='Class'>
+  <rdfs:subClassOf rdf:resource='#Type'/>
+</owl:Class>
+<owl:Class rdf:ID='PrimitiveType'>
+  <rdfs:subClassOf rdf:resource='#DataType'/>
+</owl:Class>
+<owl:Class rdf:ID='TypedElement'>
+  <rdfs:subClassOf rdf:resource='#NamedElement'/>
+<rdfs:subClassOf>
+ <owl:Restriction>
+  <owl:onProperty rdf:resource='#TypedElement.type'/>
+  <owl:maxCardinality rdf:datatype='&xsd;int'>1</owl:maxCardinality>
+ </owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:ObjectProperty rdf:ID='TypedElement.type'>
+ <rdfs:domain rdf:resource='#TypedElement'/>
+ <rdfs:range rdf:resource='#Type'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Package.nestedPackage'>
+ <rdfs:domain rdf:resource='#Package'/>
+ <rdfs:range rdf:resource='#Package'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Tag.transformation'>
+ <rdfs:domain rdf:resource='#Tag'/>
+ <rdfs:range rdf:resource='&QVTBase;Transformation'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.opposite'>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#Property'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Operation.raisedException'>
+ <rdfs:domain rdf:resource='#Operation'/>
+ <rdfs:range rdf:resource='#Type'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Comment.annotatedElement'>
+ <rdfs:domain rdf:resource='#Comment'/>
+ <rdfs:range rdf:resource='#NamedElement'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Element.ownedComment'>
+ <rdfs:domain rdf:resource='#Element'/>
+ <rdfs:range rdf:resource='#Comment'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Enumeration.ownedLiteral'>
+ <rdfs:domain rdf:resource='#Enumeration'/>
+ <rdfs:range rdf:resource='#EnumerationLiteral'/>
+  <rdfs:comment rdf:datatype='&xsd;string'
+ >ordered</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='EnumerationLiteral.enumeration'>
+ <rdfs:domain rdf:resource='#EnumerationLiteral'/>
+ <rdfs:range rdf:resource='#Enumeration'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.module'>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='&QVTOperational;Module'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Tag.element'>
+ <rdfs:domain rdf:resource='#Tag'/>
+ <rdfs:range rdf:resource='#Element'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Element.tag'>
+ <rdfs:domain rdf:resource='#Element'/>
+ <rdfs:range rdf:resource='#Tag'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Package.ownedType'>
+ <rdfs:domain rdf:resource='#Package'/>
+ <rdfs:range rdf:resource='#Type'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Type.package'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Type'/>
+ <rdfs:range rdf:resource='#Package'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Class.superClass'>
+ <rdfs:domain rdf:resource='#Class'/>
+ <rdfs:range rdf:resource='#Class'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Operation.ownedParameter'>
+ <rdfs:domain rdf:resource='#Operation'/>
+ <rdfs:range rdf:resource='#Parameter'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Parameter.operation'>
+ <rdfs:domain rdf:resource='#Parameter'/>
+ <rdfs:range rdf:resource='#Operation'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Class.ownedOperation'>
+ <rdfs:domain rdf:resource='#Class'/>
+ <rdfs:range rdf:resource='#Operation'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Operation.class'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Operation'/>
+ <rdfs:range rdf:resource='#Class'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Class.ownedAttribute'>
+ <rdfs:domain rdf:resource='#Class'/>
+ <rdfs:range rdf:resource='#Property'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Tag.owner'>
+ <rdfs:domain rdf:resource='#Tag'/>
+ <rdfs:range rdf:resource='&QVTOperational;Module'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='NamedElement.name'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#NamedElement'/>
+ <rdfs:range rdf:resource='#String'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Tag.value'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Tag'/>
+ <rdfs:range rdf:resource='#String'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Tag.name'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Tag'/>
+ <rdfs:range rdf:resource='#String'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Class.isAbstract'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Class'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.default'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#String'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.isId'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.isDerived'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.isComposite'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Property.isReadOnly'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Property'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Package.uri'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Package'/>
+ <rdfs:range rdf:resource='#String'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='MultiplicityElement.isUnique'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#MultiplicityElement'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='MultiplicityElement.upper'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#MultiplicityElement'/>
+ <rdfs:range rdf:resource='#UnlimitedNatural'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='MultiplicityElement.isOrdered'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#MultiplicityElement'/>
+ <rdfs:range rdf:resource='#Boolean'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='MultiplicityElement.lower'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#MultiplicityElement'/>
+ <rdfs:range rdf:resource='#Integer'/>
+</owl:ObjectProperty>
+</rdf:RDF>

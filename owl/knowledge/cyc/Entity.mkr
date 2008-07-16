@@ -1,0 +1,15 @@
+    Class isall Entity;
+    Entity has
+        label = "entities",
+        comment = "X is an #$Entity if it is a `maximal&apos;\n
+            #$SomethingExisting.  What we mean by that is that there\n
+            cannot be another #$SomethingExisting of which X is merely a\n
+            subabstraction (see #$subAbstrac).  So #$AlbertEinstein is\n
+            an entity, but AlbertEinsteinWhileAtPrinceton is not.  In\n
+            other words, an #$Entity represents the entire existence of\n
+            a thing, not just one or more `temporal chunks&apos; or\n
+            #$timeSlices of a thing.",
+        guid = "bd58dd15-9c29-11b1-9dad-c379636f7270";
+    Entity rel
+        isu TemporalObjectType,
+        iss SomethingExisting;

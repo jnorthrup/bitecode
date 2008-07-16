@@ -1,0 +1,25 @@
+# 2:00 am 1998/1/29
+
+# Dewey Decimal Classification
+# explore the book/ddcn hierarchy
+
+
+at view=book/ddcn
+#---------------#
+
+# find a subject
+#--------------#
+!find *chance*	# find Games of chance
+!cc $command	# set current concept to Games of chance
+. has ?		# attributes of Games of chance
+. isa* ?	# wider classes of subjects
+
+# all subjects in the same d010 concept
+#-------------------------------------#
+!print "##### d010 group #####"
+. isa**1 ?; $question ise**1 ?
+
+# all subjects in the same d100 concept
+#-------------------------------------#
+!print "##### d100 group #####"
+. isa**2 ?; $question ise**2 ?

@@ -1,0 +1,11 @@
+# 12:10 pm 9/8/97
+# new syntax Jul/24/2005
+
+# context for Schank examples
+
+do read v_schank.ku
+
+do read from v_hunt.ku done;
+do read from v_shop.ku done;
+do read from v_race.ku done;
+do read from v_hate.ku done;

@@ -1,0 +1,14 @@
+# newdeath.mkr
+# 2004/5/31
+# new syntax Aug/10/2005
+
+set echo=off;
+do read from death.rel done;
+
+every x isa r_death {
+	set . = $x;
+	do print od "$3, $2, $1;" done;
+};
+set echo=on;
+
+exit;

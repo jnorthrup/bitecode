@@ -1,0 +1,31 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/birth.rel
+# Oct/5/2003 Mar/19/2007
+
+# automatic: 8 proposition/infon
+# meaning:   2 proposition/infon
+
+r_birth is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, sex, birthname, birthdate, birthplace, deathdate, deathplace, deathcause],
+    format=[person:1, sex:2, name:3, time:4, space:5, time:6, space:7, cause:8],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_birth;
+#    meaning={
+#	$1 isu person with pid=$1;
+#	$1 has sex=$2,birthname=$3,birthdate=$4,birthplace=$5,
+#	       deathdate=$6,deathplace=$7,deathcause=$8;
+#	};
+
+begin relation r_birth;
+Bob McCullough 1938,  male,   Robert Burns McCullough, 1938, GA/Ft. Benning,   NA, NA, NA;
+Dick McCullough 1936, male,   Richard Homer McCullough, 1936, GA/Ft. Benning,   NA, NA, NA;
+Jane Doe 1933,        female, Jane Doe, 1933, Kansas,           NA, NA, NA;
+Pauline Neal 1934,    female, Althea Pauline Neal, 1934, AR/Heber Springs, NA, NA, NA;
+Steven Cates 1955,    male,   Steven Virgil Cates, 1955, CA,               NA, NA, NA;
+end relation r_birth;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

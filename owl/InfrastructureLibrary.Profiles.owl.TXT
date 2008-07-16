@@ -1,0 +1,120 @@
+<?xml version='1.0'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl 'http://www.w3.org/2002/07/owl#' >
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#' >
+    <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#' >
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#' >
+    <!ENTITY dcterms 'http://purl.org/dc/terms/' >
+    <!ENTITY dc 'http://purl.org/dc/elements/1.1/' >
+    <!ENTITY Constructs 'http://www.tssg.org/public/ontologies/omg/uml/2004/Constructs.owl#' >
+    <!ENTITY PrimitiveTypes 'http://www.tssg.org/public/ontologies/omg/uml/2004/PrimitiveTypes.owl#' >
+    <!ENTITY Comments 'http://www.tssg.org/public/ontologies/omg/uml/2004/Comments.owl#' >
+]>
+<rdf:RDF
+    xmlns='http://www.tssg.org/public/ontologies/omg/uml/2004/InfrastructureLibrary.Profiles.owl#'
+    xmlns:Constructs='http://www.tssg.org/public/ontologies/omg/uml/2004/Constructs.owl#'
+    xmlns:PrimitiveTypes='http://www.tssg.org/public/ontologies/omg/uml/2004/PrimitiveTypes.owl#'
+    xmlns:Comments='http://www.tssg.org/public/ontologies/omg/uml/2004/Comments.owl#'
+    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+    xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+    xmlns:owl='http://www.w3.org/2002/07/owl#'
+    xmlns:dcterms='http://purl.org/dc/terms/'
+    xmlns:dc='http://purl.org/dc/elements/1.1/'
+  xml:base='http://www.tssg.org/public/ontologies/omg/uml/2004/InfrastructureLibrary.Profiles.owl'>
+  <owl:Ontology rdf:about=''>
+<dc:publisher xml:lang='en-US'>Telecommunications Software and Systems Group 'www.tssg.org'</dc:publisher>
+<dc:contributor xml:lang='fr'>Nazim Agoulmine -  Laboratoire de R&#233;seaux et Syst&#232;mes Multim&#233;dia -  Universit&#233; d'Evry-Val d'Essonne</dc:contributor>
+<dc:contributor xml:lang='en-US'>John Strassner - Autonomic Research Lab - Motorola Labs</dc:contributor>
+<dc:contributor xml:lang='en-US'>M&#237;che&#225;l &#211; Foghl&#250; - Telecommunications Software and Systems Group - Waterford Institute of Technology</dc:contributor>
+<dc:creator xml:lang='en-US'>Elyes Lehtihet 'elehtihet@tssg.org'</dc:creator>
+<dc:title xml:lang='en-US'>InfrastructureLibrary.Profiles</dc:title>
+<dc:date xml:lang='en-US'>29/05/2005</dc:date>
+<dc:subject xml:lang='en-US'
+>Unified Modeling Language (UML2) Superstructure</dc:subject>
+   <owl:imports rdf:resource='http://purl.org/dc/elements/1.1/'/>
+    <owl:imports rdf:resource='http://www.tssg.org/public/ontologies/omg/uml/2004/Constructs.owl'/>
+    <owl:imports rdf:resource='http://www.tssg.org/public/ontologies/omg/uml/2004/PrimitiveTypes.owl'/>
+    <owl:imports rdf:resource='http://www.tssg.org/public/ontologies/omg/uml/2004/Comments.owl'/>
+  </owl:Ontology>
+<owl:Class rdf:ID='ExtensionEnd'>
+<rdfs:subClassOf rdf:resource='&Constructs;Property'/>
+</owl:Class>
+<owl:Class rdf:ID='Extension'>
+<rdfs:subClassOf rdf:resource='&Constructs;Association'/>
+</owl:Class>
+<owl:Class rdf:ID='ProfileApplication'>
+<rdfs:subClassOf rdf:resource='&Constructs;PackageImport'/>
+</owl:Class>
+<owl:Class rdf:ID='Class'>
+</owl:Class>
+<owl:Class rdf:ID='Package'>
+</owl:Class>
+<owl:Class rdf:ID='Profile'>
+  <rdfs:subClassOf rdf:resource='#Package'/>
+</owl:Class>
+<owl:Class rdf:ID='Stereotype'>
+  <rdfs:subClassOf rdf:resource='#Class'/>
+</owl:Class>
+<owl:Class rdf:ID='Image'>
+</owl:Class>
+<owl:ObjectProperty rdf:ID='Profile.ownedStereotype'>
+ <rdfs:domain rdf:resource='#Profile'/>
+ <rdfs:range rdf:resource='#Stereotype'/>
+ <rdfs:comment rdf:datatype='&xsd;string'
+ >subsets ownedMember</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Package.appliedProfile'>
+ <rdfs:domain rdf:resource='#Package'/>
+ <rdfs:range rdf:resource='#ProfileApplication'/>
+ <rdfs:comment rdf:datatype='&xsd;string'
+ >subsets packageImport</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Profile.metamodelReference'>
+ <rdfs:domain rdf:resource='#Profile'/>
+ <rdfs:range rdf:resource='&Constructs;PackageImport'/>
+ <rdfs:comment rdf:datatype='&xsd;string'
+ >subsets packageImport</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Profile.metaclassReference'>
+ <rdfs:domain rdf:resource='#Profile'/>
+ <rdfs:range rdf:resource='&Constructs;ElementImport'/>
+ <rdfs:comment rdf:datatype='&xsd;string'
+ >subsets elementImport</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='ExtensionEnd.type'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#ExtensionEnd'/>
+ <rdfs:range rdf:resource='#Stereotype'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Extension.ownedEnd'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Extension'/>
+ <rdfs:range rdf:resource='#ExtensionEnd'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Class.extension'>
+ <rdfs:domain rdf:resource='#Class'/>
+ <rdfs:range rdf:resource='#Extension'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Extension.metaclass'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Extension'/>
+ <rdfs:range rdf:resource='#Class'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='ProfileApplication.importedProfile'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#ProfileApplication'/>
+ <rdfs:range rdf:resource='#Profile'/>
+ <rdfs:comment rdf:datatype='&xsd;string'
+ >subsets importedPackage</rdfs:comment>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Stereotype.icon'>
+ <rdfs:domain rdf:resource='#Stereotype'/>
+ <rdfs:range rdf:resource='#Image'/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID='Extension.isRequired'>
+ <rdf:type rdf:resource='&owl;FunctionalProperty'/>
+ <rdfs:domain rdf:resource='#Extension'/>
+ <rdfs:range rdf:resource='&PrimitiveTypes;Boolean'/>
+</owl:ObjectProperty>
+</rdf:RDF>

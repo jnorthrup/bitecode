@@ -1,0 +1,8 @@
+# 1999/5/28
+
+# Richard S. Latimer:
+# A simple initial cut at concept-types might be:
+# axiomatic, attribute, entity, relation, action, power, measure, method, linguistic. 
+# However, at this stage I remain inconclusive.
+# Also, my initial thrust is to focus on concepts,
+# leaving other mental-unit types, like "nocepts", for possible later efforts. 

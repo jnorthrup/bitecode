@@ -1,0 +1,339 @@
+# INFO: myopen: command line files: ke arg(list[1]) <summary.ku>
+# INFO: input  file <summary.ku>
+# INFO: output file <summary.out>
+# INFO: error  file <summary.err>
+# INFO: log    file <summary.log>
+# INFO: kversion = "McCullough Knowledge Explorer version 6.4  October 6, 2003"
+# INFO: iversion = "Unicon Version 11.0 (beta).  July 8, 2003"
+# INFO: wexplore = C:/WINDOWS/EXPLORER.EXE
+# INFO: iexplore = C:/Program Files/Internet Explorer/iexplore.exe
+# INFO: systype = Cygwin
+# INFO: kehome = /home/ke
+# clock <2003/10/06 15:58:25> # finished opening files
+
+########## McCullough Knowledge Explorer ##########
+# debug <NO> kformat <ku> hoseparator </> relseparator <,> nvseparator <=>
+
+##### loading knowledge base #####
+# INFO: ke: TABRASA(string[3]) <mkr>
+# INFO: new_knit: creating newview(string[11]) <tabula rasa>
+##### read_knit kb/tabrasa.html  KFORMAT <ku> #####
+##### read_knit kb/ke.html  KFORMAT <ku> #####
+# clock <2003/10/06 15:58:32> # finished loading tabula rasa
+# command <do read from kb/initial.mkr done;>
+##### read_knit kb/initial.mkr  KFORMAT <ku> #####
+# assignment <set echo = off;>
+##### read_knit kb/kvalue.ku  KFORMAT <ku> #####
+# assignment <set echo = on;>
+# command <do check od unknown done;>
+# unknown count:         0
+# clock <2003/10/06 15:58:32> # finished user initialization script
+# INFO: kbmode = mke
+# INFO: kbdata = &null
+# INFO: kbfile = &null
+
+##### ready for new knowledge #####
+##### use <do menu done;> for MKE input menu #####
+##### use <exit;> or <EOF> to exit ke #####
+# s_html << html >>
+# s_html << pre >>
+# command <do read from expense.rel done;>
+##### read_knit expense.rel  KFORMAT <ku> #####
+# s_html << HTML >>
+# s_html << XMP >>
+# statement <expense isa object ;>
+# s_hierarchy <expense isa object ;>
+# statement <r_expense is relation with label = [date,cost,receipt,payee,category,note],format = [time:1,cost:2,receipt:3,payee:4,category:5,note:6],automatic = ISU,meaning = { x := do unique od $5 done;  $x isu expense ;  $x has date = $1,cost = $2,receipt = $3,payee = $4,type = $5,note = $6 ;  y := do year od $1 done; $x has year = $y ;} ;>
+# assignment <set hfocus = [expense,s_attribute,newstatement,newword];>
+# assignment <set echo = off;>
+hardware_358
+1996
+software_367
+1996
+supplies_376
+1996
+software_385
+1996
+software_394
+1996
+ISP_403
+1997
+books_412
+1997
+software_421
+1997
+supplies_430
+1997
+software_439
+1997
+advertising_448
+1997
+supplies_457
+1997
+software_466
+1997
+books_475
+1997
+hardware_484
+1997
+books_493
+1997
+books_502
+1997
+books_511
+1997
+books_520
+1997
+hardware_529
+1997
+software_538
+1997
+supplies_547
+1997
+ISP_556
+1998
+supplies_565
+1998
+books_574
+1998
+books_583
+1998
+# assignment <set echo = on;>
+# command <do usize od expense done;>
+26 # do usize od expense done
+# command <do usize od category done;>
+6 # do usize od category done
+# s_html << /XMP >>
+# s_html << /HTML >>
+# question <category isc* ? ;>
+category
+/  ISP
+/  advertising
+/  books
+/  hardware
+/  software
+/  supplies
+# question <? has cost ;>
+ISP_403 has cost = 240.00;
+ISP_556 has cost = 19.49;
+advertising_448 has cost = 49.34;
+books_412 has cost = 35.00;
+books_475 has cost = 24.92;
+books_493 has cost = 98.67;
+books_502 has cost = 78.31;
+books_511 has cost = 27.76;
+books_520 has cost = 17.68;
+books_574 has cost = 63.33;
+books_583 has cost = 32.95;
+hardware_358 has cost = 281.75;
+hardware_484 has cost = 257.40;
+hardware_529 has cost = 195.23;
+software_367 has cost = 40.00;
+software_385 has cost = 389.61;
+software_394 has cost = 29.00;
+software_421 has cost = 20.00;
+software_439 has cost = 381.07;
+software_466 has cost = 211.00;
+software_538 has cost = 79.97;
+supplies_376 has cost = 26.81;
+supplies_430 has cost = 26.81;
+supplies_457 has cost = 42.81;
+supplies_547 has cost = 26.81;
+supplies_565 has cost = 26.81;
+# command <do differentiate od expense with year,type done;>
+# INFO: do_differentiate: multi-level differentiation: dcharlist(list[2]) <[year,type]>
+# question <expense isc* ? ;>
+expense
+/  expense_year_1996
+//    expense_year_1996_type_ISP
+//    expense_year_1996_type_advertising
+//    expense_year_1996_type_books
+//    expense_year_1996_type_hardware
+///      hardware_358
+//    expense_year_1996_type_software
+///      software_367
+///      software_385
+///      software_394
+//    expense_year_1996_type_supplies
+///      supplies_376
+/  expense_year_1997
+//    expense_year_1997_type_ISP
+///      ISP_403
+//    expense_year_1997_type_advertising
+///      advertising_448
+//    expense_year_1997_type_books
+///      books_412
+///      books_475
+///      books_493
+///      books_502
+///      books_511
+///      books_520
+//    expense_year_1997_type_hardware
+///      hardware_484
+///      hardware_529
+//    expense_year_1997_type_software
+///      software_421
+///      software_439
+///      software_466
+///      software_538
+//    expense_year_1997_type_supplies
+///      supplies_430
+///      supplies_457
+///      supplies_547
+/  expense_year_1998
+//    expense_year_1998_type_ISP
+///      ISP_556
+//    expense_year_1998_type_advertising
+//    expense_year_1998_type_books
+///      books_574
+///      books_583
+//    expense_year_1998_type_hardware
+//    expense_year_1998_type_software
+//    expense_year_1998_type_supplies
+///      supplies_565
+# every <every vyear isa expense { set echo = off ;  do print od "==================================" done;  do print od $vyear done;  every vcat isa $vyear { $vcat isall 0.00 ;  every vexp isa $vcat { vexp_cost := $vexp has cost = ? ; $vcat isall ${vexp_cost} ;} ;  vcat_cost := do sum od $vcat done;  $vcat has cost = ${vcat_cost} ; $vyear isall ${vcat_cost} ;} ;  vyear_cost := do sum od $vyear done;  $vyear has cost = ${vyear_cost} ;  expense isall ${vyear_cost} ;  do print od "----------------------------------" done; set echo = on ;} ;>
+# assignment <set echo = off;>
+==================================
+expense_year_1996
+0.0
+0.0
+0.0
+hardware_358 has cost = 281.75;
+281.75
+software_367 has cost = 40.00;
+software_385 has cost = 389.61;
+software_394 has cost = 29.00;
+458.61
+supplies_376 has cost = 26.81;
+26.81
+767.17
+----------------------------------
+# assignment <set echo = on;>
+# assignment <set echo = off;>
+==================================
+expense_year_1997
+ISP_403 has cost = 240.00;
+240.0
+advertising_448 has cost = 49.34;
+49.34
+books_412 has cost = 35.00;
+books_475 has cost = 24.92;
+books_493 has cost = 98.67;
+books_502 has cost = 78.31;
+books_511 has cost = 27.76;
+books_520 has cost = 17.68;
+282.34
+hardware_484 has cost = 257.40;
+hardware_529 has cost = 195.23;
+452.63
+software_421 has cost = 20.00;
+software_439 has cost = 381.07;
+software_466 has cost = 211.00;
+software_538 has cost = 79.97;
+692.04
+supplies_430 has cost = 26.81;
+supplies_457 has cost = 42.81;
+supplies_547 has cost = 26.81;
+96.43000000000001
+1812.78
+----------------------------------
+# assignment <set echo = on;>
+# assignment <set echo = off;>
+==================================
+expense_year_1998
+ISP_556 has cost = 19.49;
+19.49
+0.0
+books_574 has cost = 63.33;
+books_583 has cost = 32.95;
+96.28
+0.0
+0.0
+supplies_565 has cost = 26.81;
+26.81
+142.58
+----------------------------------
+# assignment <set echo = on;>
+# production <expense_cost := do sum od expense done;>
+# command <do sum od expense done;>
+2722.53
+# statement <expense has cost = 2722.53 ;>
+# question <? has cost ;>
+ISP_403 has cost = 240.00;
+ISP_556 has cost = 19.49;
+advertising_448 has cost = 49.34;
+books_412 has cost = 35.00;
+books_475 has cost = 24.92;
+books_493 has cost = 98.67;
+books_502 has cost = 78.31;
+books_511 has cost = 27.76;
+books_520 has cost = 17.68;
+books_574 has cost = 63.33;
+books_583 has cost = 32.95;
+expense has cost = 2722.53;
+expense_year_1996 has cost = 767.17;
+expense_year_1996_type_ISP has cost = 0.0;
+expense_year_1996_type_advertising has cost = 0.0;
+expense_year_1996_type_books has cost = 0.0;
+expense_year_1996_type_hardware has cost = 281.75;
+expense_year_1996_type_software has cost = 458.61;
+expense_year_1996_type_supplies has cost = 26.81;
+expense_year_1997 has cost = 1812.78;
+expense_year_1997_type_ISP has cost = 240.0;
+expense_year_1997_type_advertising has cost = 49.34;
+expense_year_1997_type_books has cost = 282.34;
+expense_year_1997_type_hardware has cost = 452.63;
+expense_year_1997_type_software has cost = 692.04;
+expense_year_1997_type_supplies has cost = 96.43000000000001;
+expense_year_1998 has cost = 142.58;
+expense_year_1998_type_ISP has cost = 19.49;
+expense_year_1998_type_advertising has cost = 0.0;
+expense_year_1998_type_books has cost = 96.28;
+expense_year_1998_type_hardware has cost = 0.0;
+expense_year_1998_type_software has cost = 0.0;
+expense_year_1998_type_supplies has cost = 26.81;
+hardware_358 has cost = 281.75;
+hardware_484 has cost = 257.40;
+hardware_529 has cost = 195.23;
+software_367 has cost = 40.00;
+software_385 has cost = 389.61;
+software_394 has cost = 29.00;
+software_421 has cost = 20.00;
+software_439 has cost = 381.07;
+software_466 has cost = 211.00;
+software_538 has cost = 79.97;
+supplies_376 has cost = 26.81;
+supplies_430 has cost = 26.81;
+supplies_457 has cost = 42.81;
+supplies_547 has cost = 26.81;
+supplies_565 has cost = 26.81;
+# clock <2003/10/06 15:58:40> # exiting ke
+#####  exit  #####
+# INFO: db_close: dbdir(string[20]) </home/ke/db/netscape>
+# lines:           910
+# propositions:    373
+#   newpropositions:  0
+#   productions:      101
+#   contexts:         0
+#   nullpropositions: 0
+#   ku sentences:    373
+#     ku statements:   108
+#     questions:       30
+#     commands:        92
+#     assignments:     35
+#     conditionals:    0
+#     everys:          22
+#     whiles:          0
+#     whens:           0
+#     foralls:         0
+#     forsomes:        0
+#     groups:          7
+# ho   statements: 268
+# rel  statements: 26
+# dir  statements: 0
+# html statements: 22
+# mcf  statements: 0
+# nt   statements: 0
+# owl  statements: 0
+# rdf  statements: 0
+# xml  statements: 0

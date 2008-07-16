@@ -1,0 +1,24 @@
+# 1999/5/8
+
+# 4x4 relational matrix
+
+# Roger Bissell
+
+		(not essentially relational)	(essentially relational)
+
+"intrinsic"	transcendental			predicamental
+cognition indep	(internal)			(external)
+
+"objective"	imaginational			logical
+cognition dep.	(non-intentional)		(intentional)
+
+
+# Dick McCullough
+
+		within				between
+
+things		entity-characteristic		entity-entity
+		existence-existent		entity-part
+		identity-relation		entity-percept
+
+thoughts	nocept-concept			concept-percept

@@ -1,0 +1,44 @@
+# KEHOME/knowledge/applications/SemanticWeb/Google/PhoneBook.ku
+# Apr/23/2003
+
+# Google PhoneBook
+# 
+#  Google has added the convenience of US street address and phone number
+# lookup to the information we provide through our search box. You'll see
+# publicly listed phone numbers and addresses at the top of results pages
+# for searches that contain specific kinds of keywords. 
+# 
+# To find listings for a US business, type the business name into the
+# Google search box, along with the city and state. Or type the business
+# name and zip code. Entering the phone number with area code will also
+# return a complete business listing.
+# 
+# 
+# To find listings for a US residence, type any of the following combinations
+# into the Google search box:
+# 
+# first name (or first initial), last name, city (state is optional) 
+# first name (or first initial), last name, state 
+# first name (or first initial), last name, area code 
+# first name (or first initial), last name, zip code 
+# phone number, including area code 
+# last name, city, state 
+# last name, zip code 
+
+
+business has
+	name,
+	city,
+	state,
+	zip code,
+	phone number;  # with area code
+
+person has
+	first name,
+	first initial,
+	last name,
+	city,
+	state,
+	zip code,
+	phone number,  # with area code
+	area code;

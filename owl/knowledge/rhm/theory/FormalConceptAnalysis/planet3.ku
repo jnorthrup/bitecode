@@ -1,0 +1,51 @@
+# 11:00 pm 9/27/97
+
+#=====================================#
+# combined context (edited KE output) #
+#=====================================#
+
+at view = v_planet
+
+# question <existent ise* ?>
+existent
+	entity
+		object
+			planet
+				Earth
+				Jupiter
+				Mars
+				Mercury
+				Neptune
+				Pluto
+				Saturn
+				Uranus
+				Venus
+	characteristic
+		attribute
+			distance
+			living
+			moon
+			non-living
+			non-space-time-dependent
+			primary
+			secondary
+			size
+			space-time-dependent
+		relationship
+			"concept isa genus; concept ise unit"
+				"relationship isa characteristic"
+			"concept is genus with differentia"
+				"enity is existent with primary"
+				"object is entity with non-living"
+				"characteristic is existent with secondary"
+				"attribute is characteristic with non-space-time-dependence"
+			"entity has attribute=value"
+				"Earth   has size=small, distance=near, moon=YES"
+				"Jupiter has size=large, distance=far,  moon=YES"
+				"Mars    has size=small, distance=near, moon=YES"
+				"Mercury has size=small, distance=near, moon=NO"
+				"Neptune has size=medium,distance=far,  moon=YES"
+				"Pluto   has size=small, distance=far,  moon=YES"
+				"Saturn  has size=large, distance=far,  moon=YES"
+				"Uranus  has size=medium,distance=far,  moon=YES"
+				"Venus   has size=small, distance=near, moon=NO"

@@ -1,0 +1,69 @@
+# KEHOME/knowledge/theory/KRdesign/kr.ku
+# 1999/3/30
+
+#============================================#
+# Knowledge Representation language (KR)     #
+#	grammatical structure                #
+#	grammatical relationships (keywords) #
+#============================================#
+
+knowledge := man do identify existent
+
+object		ise	knowledge,
+			ke,file,
+			enumeration,requisite,sequence,set,
+			hierarchy,lattice
+knowledge	ise	knit
+knit		haspart	chit
+knit		ise	sentence
+sentence	ise	statement,question,command,assignment
+statement	ise	newstatement,
+			s_context,s_hierarchy,s_definition,
+			s_attribute,s_action,s_relation,
+			s_conditional,s_iteration,s_method,
+			s_causality,s_meaning
+sentence	haspart	word
+word		ise	newword
+
+relationship	ise	separator,quantifier,
+			verb,preposition,conjunction,
+			pronoun
+
+# grammatical relationships
+# are added to hierarchy by new_knit()
+# see lists in token.icn
+#-------------------------------------
+# separator	ise	blank tab newline newpage
+# separator	ise	# " [ ]
+# separator	ise	= += -= :=
+# separator	ise	, ;
+# separator	ise	& | ~
+# separator	ise	!
+# separator	ise	done,fi
+
+# and		is	&
+# or		is	|
+# not		is	~	# relative to existent
+# non		is	~	# relative to genus
+# next		is	;
+
+# verb		ise	isa,isa*,isa**n, ise,ise*,ise**n,
+#			is,has,do,isin,
+#			changes,
+#			isd,isi,
+# verb		ise	isapart,haspart,
+#			isaval,hasval,
+#			isaenum,isenum,
+#			isareq,isreq,
+#			isaseq,isseq,
+#			isaset,isset
+# preposition	ise	at,with,from,to,
+# conjunction	ise	causes,means
+# conjunction	ise	if,then,else
+# conjunction	ise	every
+# quantifier	ise	a,all,any,no,some,the,
+#			either
+# pronoun	ise	I,we,he,she,they,
+#			it,
+#			none,
+#			?

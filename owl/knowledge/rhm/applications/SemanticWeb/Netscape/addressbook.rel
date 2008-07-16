@@ -1,0 +1,9 @@
+begin relation nab479;
+"John Doe",Doe,John, testing guru, San Francisco,CA, johnd@wharf.com, Knowledge Engineer,, "Pier 10, Fisherman's Wharf", 12345-678,USA, 555-1234,555-1235,555-1236, MKE Inc., johnd, 555-1237,555-1238,;
+    ;
+"Jane Doe",Doe,Jane,,,,janed@wharf.com,,,,,,janed@hotmail.com,,,,janed,,,;
+"McCullough, Richard H.",McCullough,Richard H.,,,,rhm@volcano.net,,,,,,,,,Bell Labs,rhmbtl,,,;
+"McCullough, Richard H.",McCullough,Richard H.,,,,rhm@cdepot.net,,,,,,,,,"Richard H. McCullough, Knowledge Engineer",dick,,,;
+"McCullough, Richard H.",McCullough,Richard H.,,,,rhmccullough@netzero.net,,,,,,,,,,rhmzero,,,;
+"McCullough, Robert B.",McCullough,Robert B.,,,,drbobm11@attbi.com,,,,,,bob.mccullough@smartm.com,drbobm11@attbi.com,apexdata@netcom.com,,drbob,drbobm@hotmail.com,bob.mccullough@netzero.net,;
+end relation nab479;

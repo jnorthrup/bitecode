@@ -1,0 +1,61 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/tree1.mkr
+# 1999/Aug/3
+# new syntax Jul/23/2005
+
+#========================================================#
+# family tree                                            #
+#   do ancestor od name done;	ancestors and spouses    #
+#   do descendant od name done;	descendants and spouses  #
+#========================================================#
+
+# execution time
+# 133 MHz pentium, Windows 98
+# 0:27 min:sec  total
+#   0:08 min:sec  reading knowledge
+#   0:03 min:sec  checking knowledge
+#   0:01 min:sec  defining methods
+#   0:05 min:sec  executing tests
+
+do read from family.ku done;
+do clock od "finished reading family history" done;
+
+#set debug = TIME;
+
+ancestor is method with
+    label=[name],
+    format=[person:*],
+    meaning={
+        every q in $* {
+            set . = $q;
+            do print od $q done;
+            if $q has spouse; fi;
+            if $q has exspouse; fi;
+            if $q has parent; then do ancestor od $parent done; fi;
+        };
+    };
+
+descendant is method with
+    label=[name],
+    format=[person:*],
+    meaning={
+        every q in $* {
+            set . = $q;
+            do print od $q done;
+            if $q has spouse; fi;
+            if $q has exspouse; fi;
+            if $q has child; then do descendant od $child done; fi;
+        };
+    };
+do clock od "finished defining methods" done;
+
+
+# test
+person isc* ?;
+set echo=off;
+do ancestor od Steven Cates 1955 done;
+do descendant od Kay Stecker 1910 done;
+do ancestor od Jane Doe 1933 done;
+do clock od "finished tests" done;
+
+# </xmp></html>

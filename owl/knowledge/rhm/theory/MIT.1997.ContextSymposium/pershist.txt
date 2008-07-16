@@ -1,0 +1,70 @@
+
+
+#===============================#
+# Where did my ideas come from? #
+#   My Personal History         #
+#     => my decision            #
+#===============================#
+Richard H. McCullough
+
+
+1950s	Spanish, German
+1960s	French
+19xx	dozens of computer languages
+
+1950s	SBEE, SMEE  from MIT
+1960s	PhDEE  from Polytechnic University
+
+1960s	AT&T Bell Labs  pattern recognition, information theory
+1970s	AT&T Bell Labs  language design, compiler design
+1980s	AT&T Network Systems  UNIX internals, database design, AI
+
+1971		"Truth, Prior Information and Entropy"
+1973		Dave Burnett philosophy club
+	(1967)	Ayn Rand "Intro. to Ojbectivist Epistemology"
+		  => use Objectivist epistemology
+1974	(197x)	Leonard Peikoff logic
+1979	(1974)	Roger Schank conceptual dependency
+		  => use simple English-like KR
+		"Intro. to Languages and Patterns"
+1989	(1983)	Joe Hall Icon user
+		  => use Icon for implementation
+	(1984)	John Sowa semantic network
+		  => permit lattice for error checking
+		"Efficient Knowledge Representation"
+		  Knowledge Browser (input KR is Icon)
+1996		surfing the Internet
+		begin implementation of KR, KE
+		"entity haspart p" vs. "entity has part=p"
+		  => entity haspart p=count
+1997 1st half
+		Knowledge Representation language
+		Knowledge Explorer tool
+	(1996)	Ralph Griswold "The Icon Programming Language"
+	(1996)	Clint Jeffery Icon for Windows
+	(1996)	MKS UNIX Toolkit for Windows
+	(1997)	GLBS WISE auto. install for Windows
+		download.com
+	(199x)	Microsoft Help Workshop (C++)
+		"Knowledge Explorer User Manual"
+		FileMine
+		"entity do action" vs. "entity has action"
+		  => entity do action=event
+		  => event changes ... from ... to ...
+	(1989)	Leonard Peikoff grammar
+		"Knowledge Explorer Home Page"
+1997 2nd half
+	(1996)	Robert Kent "Web Conceptual Space" (WAVE)
+	(1982)	Rudolf Wille Formal Concept Analysis
+		  => FCA (lattice) is fuzzy concept
+		  => FCA (hierarchy) is special case of KR
+		Kagi secure credit card processing
+	(1993)	David Kelley "The Art of Reasoning"
+	(1996)	John Sowa context
+		  => attend AAAI context symposium at MIT
+	(1997)	Amati & Pirri fixed point solutions
+		  => same as KR concept algebra
+		"What is Context?"
+	(1988)	David Kelley "The Evidence of the Senses"
+		  => percept do record entity, entity has attribute
+		  => percept is axiomatic concept

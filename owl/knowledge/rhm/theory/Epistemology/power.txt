@@ -1,0 +1,38 @@
+Subject: power
+Date: July 27, 2002
+From: Dick McCullough
+To:   Richard Latimer
+
+I agree with you -- "power" is an attribute,
+the potential or ability to perform an action.
+Taking two of your examples, I would represent
+them as
+	man has power = [move oneself, think]
+or
+	man has mobility, reason
+
+I generally prefer the first form, just to avoid
+introducing lots of extra, unnecessary concepts.
+
+The current KR way of representing them is
+
+	man do* move oneself, think done
+
+where "do*" denotes the power, as opposed to "do"
+which denotes an event -- an actual occurence of
+an action.  I'm not really crazy about using "do*",
+but it does have the advantage of allowing you to
+qualify the action with any of the prepositions
+("od","in","out","with","from","to") as appropriate.
+
+With respect to "instrument" and "end", those are
+the kind of action modifiers that "with" is intended
+to handle.  Using another of your examples, I would
+represent it as (I like "purpose" better than "end")
+
+	literacy is power=read
+	literate human has literacy
+	literate human do* read + evaluate od book
+		with instrument = [eyes, brain],
+		     purpose = [comprehend, communicate]
+		done

@@ -1,18 +1,22 @@
 <?xml version="1.0"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <parent>
-    <artifactId>bitecode-parent</artifactId>
-    <groupId>inc.glamdring</groupId>
-    <version>1.1</version>
-  </parent>
+  <!--<parent>-->
+    <!--<artifactId>bitecode-parent</artifactId>-->
+    <!--<groupId>inc.glamdring</groupId>-->
+    <!--<version>1.1</version>-->
+  <!--</parent>-->
   <modelVersion>4.0.0</modelVersion>
   <groupId>inc.glamdring</groupId>
   <artifactId>bitecode</artifactId>
   <name>bitecode</name>
   <version>1.1</version>
   <url>http://maven.apache.org</url>
-	<dependencies>
-		<dependency>
+	<dependencies><dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.4</version>
+</dependency>
+        <dependency>
 			<groupId>org.javolution</groupId>
 			<artifactId>javolution</artifactId>
 			<version>5.2.6</version>
@@ -32,24 +36,26 @@
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-	</dependencies>     <profiles>
-    <profile>
-      <id>default-tools.jar</id>
-      <activation>
-        <property>
-          <name>java.vendor</name>
-          <value>Sun Microsystems Inc.</value>
-       </property>
-     </activation>
-      <dependencies>
-        <dependency>
-          <groupId>com.sun</groupId>
-          <artifactId>tools</artifactId>
-          <version>1.4.2</version>
-          <scope>system</scope>
-          <systemPath>${java.home}/../lib/tools.jar</systemPath>
-       </dependency>
-     </dependencies>
-   </profile>
- </profiles>
+	</dependencies>
+    <!--<profiles>-->
+    <!--<profile>-->
+      <!--<id>default-tools.jar</id>-->
+      <!--<activation>-->
+        <!--<property>-->
+          <!--<name>java.vendor</name>-->
+          <!--<value>Sun Microsystems Inc.</value>-->
+       <!--</property>-->
+     <!--</activation>-->
+      <!--<dependencies>-->
+        <!--<dependency>-->
+          <!--<groupId>com.sun</groupId>-->
+          <!--<artifactId>tools</artifactId>-->
+          <!--<version>1.4.2</version>-->
+          <!--<scope>system</scope>-->
+          <!--suppress MavenModelInspection -->
+            <!--<systemPath>${java.home}/../lib/tools.jar</systemPath>-->
+       <!--</dependency>-->
+     <!--</dependencies>-->
+   <!--</profile>-->
+ <!--</profiles>-->
 </project>

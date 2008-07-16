@@ -1,0 +1,23 @@
+# 6:34 PM 2/24/97
+
+#===========#
+# Deduction #
+#===========#============================#
+# Reasoning from universal to particular #
+#========================================#
+
+
+# Proposition Type
+#=================
+all  S isa* P		# all	S is P		# A
+no   S isa* P		# no	S is P		# E
+some S isa* P		# some	S is P		# I
+some S isa* not P	# some	S is not P	# O
+
+# Immediate Inference
+#====================
+
+
+
+# Syllogism
+#==========

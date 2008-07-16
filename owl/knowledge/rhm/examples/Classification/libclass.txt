@@ -1,0 +1,31 @@
+# 1999/5/21
+# Reference:
+# Richard S. Latimer 1999/5/20
+
+!begin hierarchy
+relation
+/    know types
+/    Francis Bacon
+/    d'Alembert class
+/    Jefferson class
+/    topics	# knowledge domains
+
+know types
+
+Francis Bacon
+
+d'Alembert class
+/	H  1  Sacred history: of the mythology mixed with actual history
+/       H  2  Eccelesiastical history: of the church
+/       FA  16  Arts and sciences, and misc. literatures
+/           17  Gazettes
+/           18  Maps, Charts and plans
+
+Jefferson class
+/	1  History, civil: ancient history
+/	2  Modern history, foreign: Southern: General works, Italy Rome, Florence
+/	44  Polygraphical
+
+topics	# knowledge domains
+
+!end hierarchy

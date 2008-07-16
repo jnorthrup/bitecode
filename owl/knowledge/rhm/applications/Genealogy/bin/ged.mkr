@@ -1,0 +1,30 @@
+# <HTML><XMP>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/ged.mkr
+# 1999/Aug/7
+# new syntax May/21/2003
+
+#======================#
+# generate GEDCOM file #
+#======================#
+# execution time
+# Aug/1999
+# 133 MHz Pentium, Windows 98
+# 0:15 min:sec
+# Aug/16/2005
+# 2 GHz Pentium 4, Windows XP
+# 0:07 min:sec
+
+#debug := child;
+
+do read from family.ku done;
+
+echo := off;
+do clock od "generating GEDCOM file" done;
+
+do dump/ged to family.ged done;
+
+do clock od "finished GEDCOM file" done;
+echo := on;
+
+exit;
+# </XMP></HTML>

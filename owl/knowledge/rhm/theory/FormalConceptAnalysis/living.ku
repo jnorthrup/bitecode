@@ -1,0 +1,64 @@
+# 7:30 pm 11/28/97
+
+# living example
+# Robert E. Kent, "Rough Concept Analysis",
+# International Workshop on Rough Sets and Knowledge Discovery (RSKD'93),
+# Banff, Alberta, Candada, October 1993.
+
+entity ise \
+	leech,
+	bream,
+	frog,
+	dog,
+	spike-weed,
+	reed,
+	bean,
+	maize
+attribute ise \
+	"needs water",
+	"lives in water",
+	"lives on land",
+	"needs chlorophyll",
+	"2 leaf germination",
+	"1 leaf germination",
+	"is motile",
+	"has limbs",
+	"suckles young"
+leech has "needs water","lives in water","is motile"
+bream has "needs water","lives in water","is motile","has limbs"
+frog has "needs water","lives in water","lives on land","is motile","has limbs"
+dog has "needs water","lives on land","is motile","has limbs","suckles young"
+spike-weed has "needs water","lives in water","needs chlorophyll","1 leaf germination"
+reed has "needs water","lives in water","lives on land","needs chlorophyll","1 leaf germination"
+bean has "needs water","lives on land","needs chlorophyll","2 leaf germination"
+maize has "needs water","lives on land","needs chlorophyll","1 leaf germination"
+
+# indiscernibility equivalence relation
+entity ise i1,i2,i3,i4
+i1 isi leech,bream,frog
+i2 isi dog
+i3 isi spike-weed,reed
+i4 isi bean,maize
+
+# output (question and answer in error file)
+i1,i2,i3,i4 ise ?
+$ has ?
+
+
+# upper approximation
+at view=v_living  at view=v_living/upper
+i1 has "needs water","lives in water","lives on land","is motile","has limbs"
+i2 has "needs water","lives on land","is motile","has limbs","suckles young"
+i3 has "needs water","lives in water","lives on land","needs chlorophyll","1 leaf germination"
+i4 has "needs water","lives on land","needs chlorophyll","2 leaf germination","1 leaf germination"
+
+i1,i2,i3,i4 has ?
+
+# lower approximation
+at view=v_living  at view=v_living/lower
+i1 has "needs water","lives in water","lives on land","is motile"
+i2 has "needs water","lives on land","is motile","has limbs","suckles young"
+i3 has "needs water","lives in water","needs chlorophyll","1 leaf germination"
+i4 has "needs water","lives on land","needs chlorophyll"
+
+i1,i2,i3,i4 has ?

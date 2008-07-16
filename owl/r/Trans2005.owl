@@ -1,0 +1,1343 @@
+<?xml version="1.0"?>
+<!-- $Date: 2008/02/27 12:37:57 $, by $Author: ivan $, $Revision: 1.128 $ -->
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:recs="http://www.w3.org/2003/03/recsSchema#" xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#">
+	<trans:Translation rdf:about="http://www.dkg.it/w3c/TR/2004/REC-webarch-20041215/it/index.htm">
+		<rdfs:comment>Web architecture</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-webarch-20041215/"/>
+		<dc:title xml:lang="it">Architettura del World Wide Web, Volume Uno</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Gabriele"/>
+		<dc:date>2005-01-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.dkg.it/w3c/TR/2001/REC-xmlbase-20010627/it/index.htm">
+		<rdfs:comment>XML Base</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-xmlbase-20010627/"/>
+		<dc:title xml:lang="it">Base di XML</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Gabriele"/>
+		<dc:date>2005-01-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3ctuto/qatips.html">
+		<rdfs:comment>Quality Tips for Webmasters</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="pt-br">Dicas de garantia de qualidade para Webmasters</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-01-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3ctuto/qatips/clickhere.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/noClickHere"/>
+		<dc:title xml:lang="pt-br">Não use "Clique aqui" para texto de link</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-01-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mobilewebsites.it/w3c/indipendenzadevice.htm">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/NOTE-di-princ-20030901/"/>
+		<dc:title xml:lang="it">Principi per l'indipendenza dal dispositivo finale</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrea_Crevola"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mobilewebsites.it/w3c/deliverycontext.htm">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/di-dco/"/>
+		<dc:title xml:lang="it">Il contesto di distribuzione per l'indipendenza dal dispositivo finale</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrea_Crevola"/>
+		<dc:date>2005-02-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.robertoscano.info/files/wcag10/WCAG1-Conformance.html.it">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1-Conformance.html.en"/>
+		<dc:title xml:lang="it">Loghi di conformità alle Linee Guida W3C per l'accessibilità dei contenuti del Web versione 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roberto_Scano"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.robertoscano.info/files/wcag10/WCAG1A-Conformance.html.it">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1A-Conformance.html.en"/>
+		<dc:title xml:lang="it">Conformità al Livello A delle Linee Guida per l'Accessibilità dei Contenuti per il Web 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roberto_Scano"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.robertoscano.info/files/wcag10/WCAG1AA-Conformance.html.it">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1AA-Conformance.html.en"/>
+		<dc:title xml:lang="it">Conformità al Livello Doppia-A delle Linee Guida per l'Accessibilità dei Contenuti per il Web 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roberto_Scano"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.robertoscano.info/files/wcag10/WCAG1AAA-Conformance.html.it">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1AAA-Conformance.html.en"/>
+		<dc:title xml:lang="it">Conformità al Livello Tripla-A delle Linee Guida per l'Accessibilità dei Contenuti per il Web 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roberto_Scano"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/WAI/WCAG1-Conformance.html.de">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1-Conformance.html.en"/>
+		<dc:title xml:lang="de">W3C Web Content Accessibility Guidelines 1.0 Konformitätslogos</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/WAI/WCAG1A-Conformance.html.de">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1A-Conformance.html.en"/>
+		<dc:title xml:lang="de">Erfüllung von Level A der Web Content Accessibility Guidelines 1.0</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/WAI/WCAG1AA-Conformance.html.de">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1AA-Conformance.html.en"/>
+		<dc:title xml:lang="de">Erfüllung von Level Doppel-A der Web Content Accessibility Guidelines 1.0</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/WAI/WCAG1AAA-Conformance.html.de">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/WCAG1AAA-Conformance.html.en"/>
+		<dc:title xml:lang="de">Erfüllung von Level Dreifach-A der Web Content Accessibility Guidelines 1.0</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+		<dc:date>2005-01-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3ctuto/webkit.html">
+		<!-- Web Standard Switch -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2003/03/web-kit"/>
+		<dc:title xml:lang="pt-br">Mudando para Web Standards </dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-01-06</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/QA/Tips/">
+		<rdfs:comment>Quality Tips for Webmasters</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="it">Quality Tips per Webmasters</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>
+		<dc:date>2005-01-06</dc:date>
+	</trans:Translation>
+	<!--
+	
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/QA/Tips/noClickHere">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/noClickHere"/>
+		<dc:title xml:lang="it">Non usate "clicca qui" come link testuale</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>		
+		<dc:date>2005-01-06</dc:date>
+	</trans:Translation>
+	-->
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/QA/2003/03/web-kit">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2003/03/web-kit"/>
+		<dc:title xml:lang="it">Passate a Standards Web</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>
+		<dc:date>2005-01-11</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/SW/2005/owlfaq">
+		<trans:translationFrom rdf:resource="http://www.w3.org/2003/08/owlfaq"/>
+		<dc:title xml:lang="es">Preguntas frecuentes sobre el Lenguaje de Ontologías Web (OWL) del W3C</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Carlos_Iglesias_Moro"/>
+		<dc:date>2005-01-13</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.org.hk/TR/REC-CCPP-struct-vocab-20040115.html.cn">
+		<rdfs:comment>CC/PP</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-CCPP-struct-vocab-20040115/"/>
+		<dc:title xml:lang="zh-hans">复合能力/偏好设置文件：(CC/PP)结构和词汇 1.0</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shan_Chen"/>
+		<dc:date>2005-01-13</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.org.hk/TR/REC-CCPP-struct-vocab-20040115.html.hk">
+		<rdfs:comment>CC/PP</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-CCPP-struct-vocab-20040115/"/>
+		<dc:title xml:lang="zh-hant">複合能力/偏好設置文件：(CC/PP)結構和詞彙 1.0</dc:title>
+		<dc:language>zh-hant</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shan_Chen"/>
+		<dc:date>2005-01-16</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/firstcss.html">
+		<!-- Figures &amp; Captions -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="it">Primi passi con HTML + CSS</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-01-16</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/traducciones/es/MarkUp/Forms/2003/xforms-faq">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Forms/2003/xforms-faq.html"/>
+		<dc:title xml:lang="es">Preguntas Frecuentes sobre XForms 1.0</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Carlos_Iglesias_Moro"/>
+		<dc:date>2005-01-17</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://css.artnau.com/traduccions/w3c/xhtml-faq-ca.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+		<dc:title xml:lang="ca">Preguntes més freqüents d'HTML i XHTML</dc:title>
+		<dc:language>ca</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Arnau_Siches"/>
+		<dc:date>2005-01-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.lucagabriele.net/w3c/TR/SMIL-access/it/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/NOTE-SMIL-access-19990921"/>
+		<dc:title xml:lang="it">Caratteristiche di Accessibilità in SMIL</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Luca_Gabriele"/>
+		<dc:date>2005-01-21</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-lang-priorities.es.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-lang-priorities.en.html"/>
+		<dc:title xml:lang="es">FAQ: Establecimiento de las preferencias de idioma en un navegador</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Carlos_Iglesias_Moro"/>
+		<dc:date>2005-01-21</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www4.uji.es/~al076668/HTML4-access.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/References/HTML4-access"/>
+		<dc:title xml:lang="es">HTML 4.0 Mejoras de accesibilidad</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Anna_Estelles_Palanca"/>
+		<dc:date>2005-01-25</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/Style/Examples/011/firstcss.es.html">
+		<!-- Starting with HTML + CSS -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="es">Comenzando con HTML + CSS</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+		<dc:date>2005-01-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://ferguweb.tx.com.ru/w3/Overview.html">
+		<!-- Figures &amp; Captions -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Guide/"/>
+		<dc:title xml:lang="es">Comenzando con HTML</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Fernando_Gutierrez_Ferrerias"/>
+		<dc:date>2005-01-27</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://ferguweb.tx.com.ru/w3/Advanced.html">
+		<!-- Figures &amp; Captions -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Guide/Advanced.html"/>
+		<dc:title xml:lang="es">Características más avanzadas</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Fernando_Gutierrez_Ferrerias"/>
+		<dc:date>2005-01-27</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.cincplug.com/W3C/Tutorials/firstcss.htm">
+		<!-- Starting with HTML + CSS -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="sr">CSS упутство, Први кораци у HTML и CSS језицима</dc:title>
+		<dc:language>sr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Luka_Stanisavljevic"/>
+		<dc:date>2005-01-28</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.schumacher-netz.de/TR/2004/REC-xml-names11-20040204-de.html">
+		<rdfs:comment>Namespaces 1.1</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-xml-names11-20040204"/>
+		<dc:title xml:lang="de">Namenräume in XML 1.1</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Stefan_Schumacher"/>
+		<dc:date>2005-02-01</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="es">Introducción a la Accesibilidad Web</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+		<dc:date>2005-02-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://zh.transwiki.org/cn/owlguide.htm">
+		<rdfs:comment>OWL Guide</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-guide-20040210/"/>
+		<dc:title xml:lang="zh-hans">OWL Web本体语言 指南</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shengping_Liu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yue_Ni"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Collin_Hsu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#W3CHina"/>
+		<dc:date>2005-02-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://zh.transwiki.org/cn/rdfconcepts.htm">
+		<rdfs:comment>RDF Concepts and Abstract Syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"/>
+		<dc:title xml:lang="zh-hans">资源描述框架（RDF）：概念与抽象语法</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shengping_Liu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Hao_Wu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Zipeng_Zhan"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Collin_Hsu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#W3CHina"/>
+		<dc:date>2005-02-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/wai/intro/accessibility.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="it">Introduzione all'Accessibilità del Web</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-02-09</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/wai/intro/components.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="it">I componenti interdipendenti dell'Accessibilità del Web</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-02-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/traducciones/es/2003/01/svg11-faq">
+		<trans:translationFrom rdf:resource="http://www.w3.org/2003/01/svg11-faq"/>
+		<dc:title xml:lang="es">Preguntas frecuentes sobre SVG 1.1 y SVG Móvil</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Carlos_Iglesias_Moro"/>
+		<dc:date>2005-02-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/components">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="es">Componentes Interdependientes de Accesibilidad Web</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+		<dc:date>2005-02-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/QA/2002/09/Step-by-step.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2002/09/Step-by-step"/>
+		<dc:title xml:lang="it">Realizzare il vostro sito web valido: una guida passo passo</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>
+		<dc:date>2005-02-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/QA/2002/07/WebAgency-Requirements.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2002/07/WebAgency-Requirements"/>
+		<dc:title xml:lang="it">Comprare un sito web conforme agli standards</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>
+		<dc:date>2005-02-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.sidar.org/recur/desdi/traduc/es/di-gloss/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/WD-di-gloss-20050118/"/>
+		<dc:title xml:lang="es">Glosario de términos relativos a la independencia de dispositivos</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Marta_Trejo"/>
+		<dc:date>2005-02-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.opikanoba.org/tr/w3c/webarch/">
+		<rdfs:comment>Web architecture</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-webarch-20041215/"/>
+		<dc:title xml:lang="fr">Architecture du World Wide Web, Volume un</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Frederic_Laurent"/>
+		<dc:date>2005-02-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/inline-bidi-markup/Overview.fr.html">
+		<rdfs:comment>Inline bidi Markup</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/inline-bidi-markup/"/>
+		<dc:title xml:lang="fr">Ce que vous devez savoir au sujet du bidi et du balisage au sein des blocs</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Patrick_Andries"/>
+		<dc:date>2005-02-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/charmod-20050215/">
+		<rdfs:comment>Character Model Fundamentals</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-charmod-20050215/"/>
+		<dc:title xml:lang="fr">Un modèle de caractères pour le Web 1.0 : Les principes de base</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-02-28</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2005/02/XOP-pt.html">
+		<rdfs:comment>Character Model Fundamentals</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xop10-20050125/"/>
+		<dc:title xml:lang="pt">Empacotamento Optimizado das Matérias em Código XML-binário</dc:title>
+		<dc:language>pt</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Alexandre_Claudio"/>
+		<dc:date>2005-02-28</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/Voice/Guide/">
+		<rdfs:comment>Getting started with VoiceXML 2.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Voice/Guide/"/>
+		<dc:title xml:lang="de">Einführung in VoiceXML 2.0</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+		<dc:date>2005-03-01</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-owl-features-20040210.html">
+		<rdfs:comment>OWL Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-features-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv — Áttekintés</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-owl-guide-20040210.html">
+		<rdfs:comment>OWL Guide</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-guide-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv — Útmutató</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-owl-ref-20040210.html">
+		<rdfs:comment>OWL Reference</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-ref-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv — Referencia</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-owl-semantics-20040210/main.html">
+		<rdfs:comment>OWL Semantics and abstract syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv — Szemantika és absztrakt szintaxis</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-owl-test-20040210.html">
+		<rdfs:comment>OWL Tests</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-test-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv — Tesztsorozat</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/OWL/REC-webont-req-20040210.html">
+		<rdfs:comment>OWL Semantics and abstract syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-webont-req-20040210/"/>
+		<dc:title xml:lang="hu">Az OWL Web Ontológia Nyelv - Alkalmazási esetek és követelmények</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-03-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://w3qc.org/docs/accessibilite.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="fr">Introduction à l'accessibilité du Web</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Catherine_Roy"/>
+		<dc:date>2005-03-16</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/xml-in-10-points.ro.html">
+		<!--XML in 10 Points-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/XML/1999/XML-in-10-points.html.en"/>
+		<dc:title xml:lang="ro">XML in 10 puncte</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-03-21</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.y-adagio.com/public/standards/ts_owl_overview/toc.htm">
+		<rdfs:comment>OWL Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-features-20040210/"/>
+		<dc:title xml:lang="en">OWL Overview</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-03-24</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yushi_Komachi"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.y-adagio.com/public/standards/ts_owl_guide/toc.htm">
+		<rdfs:comment>OWL Guide</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-guide-20040210/"/>
+		<dc:title xml:lang="en">OWL Guide</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-03-24</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yushi_Komachi"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.y-adagio.com/public/standards/ts_owl_reference/toc.htm">
+		<rdfs:comment>OWL Reference</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-ref-20040210/"/>
+		<dc:title xml:lang="en">OWL Reference</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-03-24</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yushi_Komachi"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.y-adagio.com/public/standards/ts_owl_semantics/toc.htm">
+		<rdfs:comment>OWL Semantics and abstract syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/"/>
+		<dc:title xml:lang="en">OWL Semantics and Abstract Syntax</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-03-24</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yushi_Komachi"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://creuz.de/artikel/Der+Titel%3A+Das+wichtigste+Element/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/good-titles"/>
+		<dc:title xml:lang="de">Der Titel: Das wichtigste Element</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Auke_Creutz"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://creuz.de/artikel/Mehr+als+nur+richtig/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/beyond-validation"/>
+		<dc:title xml:lang="de">Mehr als nur richtig</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Auke_Creutz"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://creuz.de/artikel/Hier+klicken+ist+kein+Link-Text/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/noClickHere"/>
+		<dc:title xml:lang="de">Hier klicken ist kein Link-Text</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Auke_Creutz"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://creuz.de/artikel/Vorsicht+bei+der+Schriftgr%F6%DFe/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/font-size"/>
+		<dc:title xml:lang="de">Vorsicht bei der Schriftgröße</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Auke_Creutz"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/craccss.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/1999/08/NOTE-CSS-access-19990804"/>
+		<dc:title xml:lang="pt-br">Características de acessibilidade das CSS</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/introwac.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="pt-br">Introdução à Acessibilidade na Web</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2005/03/DOM3Core-es/descripcion.html">
+		<!-- DOM3 Core -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407"/>
+		<dc:title xml:lang="es">Especificación del Núcleo del Modelo de Objetos del Documento (DOM) Nivel 3</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Salishan"/>
+		<dc:date>2005-03-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/webagency-requirements.ro.html">
+		<!--Buy standards compliant Web sites-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2002/07/WebAgency-Requirements"/>
+		<dc:title xml:lang="ro">Cumpara website-uri care respecta standardele</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-03-25</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.fxis.co.jp/xmlcafe/W3Ctranslation/REC-webarch-20041215-jpn.html">
+		<rdfs:comment>Web architecture</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-webarch-20041215/"/>
+		<dc:title xml:lang="ja">Webアーキテクチャ 第1巻</dc:title>
+		<dc:language>ja</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tomoko_Taniguchi"/>
+		<dc:date>2005-03-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/datetime.html">
+		<!-- date and time -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1998/NOTE-datetime-19980827"/>
+		<dc:title xml:lang="pt-br">Formatação de data e hora</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-03-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/clistcpointac.html">
+		<!--Web Content Accessibility Guidelines 1.0-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/full-checklist"/>
+		<dc:title xml:lang="pt-br">Checklist para os Pontos de Checagem para a Acessibilidade ao conteúdo da Web - Diretrizes 1.0</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-03-31</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/wcagnavigating.html">
+		<!--Navigating WCAG1.0 documents and techniques -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag10.html"/>
+		<dc:title xml:lang="pt-br">Navegação pelas Diretrizes e Documentos Técnicos das WCAG 1.0</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-04-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/wcagoverview.html">
+		<!--WCAG Overview-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag.html"/>
+		<dc:title xml:lang="pt-br">Diretrizes de Acessibilidade ao Conteúdo da Web (WCAG) - Uma Visão Geral</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-04-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.gizax.it/vtre/TR/chips.html">
+		<!--WCAG Overview-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/NOTE-chips-20030128/"/>
+		<dc:title xml:lang="it">Problemi Comuni nell'Implementazione HTTP</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Daniele_Florio"/>
+		<dc:date>2005-04-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/web-quality.ro.html">
+		<!-- Web Quality -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2002/04/Web-Quality"/>
+		<dc:title xml:lang="ro">Siteul meu este standard! Dar al tau?</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-04-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/serving-xhtml/Overview.ro.html">
+		<rdfs:comment>Serving XHTML 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/serving-xhtml/"/>
+		<dc:title xml:lang="ro">Servirea Documentelor XHTML 1.0</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-04-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/wai/intro/wcag.html">
+		<!--WCAG Overview-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag.html"/>
+		<dc:title xml:lang="it">Generalità sulle Linee Guida dell'Accessibilità del contenuto del Web (WCAG)</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-04-09</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-syntax-grammar-20040210.html">
+		<rdfs:comment>RDF/XML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF/XML szintaxis specifikációja (átdolgozott kiadás)</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-schema-20040210.html">
+		<rdfs:comment>RDF Schema</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-schema-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF Szókészlet Leíró Nyelv 1.0: RDF Séma</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-primer-20040210.html">
+		<rdfs:comment>RDF Primer</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF bevezető tankönyve</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-concepts-20040210.html">
+		<rdfs:comment>RDF Concepts and Abstract Syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF Erőforrás Leíró Keretrendszer alapfogalmai és absztrakt szintaxisa</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-mt-20040210.html">
+		<rdfs:comment>RDF Semantics</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF szemantikája</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.hu/forditasok/RDF/REC-rdf-testcases-20040210.html">
+		<rdfs:comment>RDF Test cases</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-testcases-20040210/"/>
+		<dc:title xml:lang="hu">Az RDF tesztsorozata</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2005-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pataki_Erno"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/wai/intro/uaag.html">
+		<!-- UAAG Overview -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/uaag.php"/>
+		<dc:title xml:lang="it">Generalità sulle Linee Guida dell'Accessibilità degli User Agent (UAAG)</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-04-22</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.osservatoriosullacomunicazione.com/w3c/wai/intro/wcag10.html">
+		<!-- Navigating WCAG 1.0 Guidelines and Techniques Documents -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag10.html"/>
+		<dc:title xml:lang="it">Alla scoperta dei documenti delle Linee Guida e delle Tecniche delle WCAG 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-04-22</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.rakanmedik.org/w3c/ms-wai-overview-slides.html">
+		<!-- Overview of the Web Accessibility Initiative (WAI) Slides -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wai-overview-slides"/>
+		<dc:title xml:lang="ms">Slaid Gambaran Am Inisiatif Ketercapaian Web (WAI)</dc:title>
+		<dc:language>ms</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Basil_Algalez"/>
+		<dc:date>2005-04-22</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.pdimension.net/w3c/QA-Tips/">
+		<rdfs:comment>Quality Tips for Webmasters</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="fr">Techniques de qualité à l'usage des webmasters</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Patrick_Blanchenay"/>
+		<dc:date>2005-04-25</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.rakanmedik.org/w3c/ms-accessibility.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="ms">Pengenalan kepada Ketercapaian Web</dc:title>
+		<dc:language>ms</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Basil_Algalez"/>
+		<dc:date>2005-04-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.rakanmedik.org/w3c/ms-wcag.html">
+		<!-- Web Content Accessibility Guidelines (WCAG) Overview -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag.html"/>
+		<dc:title xml:lang="ms">Gambaran Keseluruhan Garis Panduan Ketercapaian Kandungan Web (WCAG)</dc:title>
+		<dc:language>ms</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Basil_Algalez"/>
+		<dc:date>2005-04-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/xhtml-faq.ro.html">
+		<rdfs:comment>XHTML FAQ</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+		<dc:title xml:lang="ro">Intrebari frecvente despre HTML si XHTML</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-04-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/xforms-faq.ro.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Forms/2003/xforms-faq.html"/>
+		<dc:title xml:lang="ro">Intrebari frecvente despre XForms 1.0</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-04-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/xforms-for-html-authors.ro.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Forms/2003/xforms-for-html-authors.html"/>
+		<dc:title xml:lang="ro">XForms pentru autori HTML</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-04-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mcnnabee.vilabol.uol.com.br/uaag.html">
+		<!-- UAAG Overview -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/uaag.php"/>
+		<dc:title xml:lang="pt-br">Visão Geral das diretrizes de acessibilidade para agentes do usuário (UAAG)</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Joildo_Santos"/>
+		<dc:date>2005-05-03</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://desenaviegas.com/XML_Primer(1).htm">
+		<!-- XML Schema part 0 -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/"/>
+		<dc:title xml:lang="pt">Esquema XML, Parte 0: Princípios Básicos, 2ª. Edição</dc:title>
+		<dc:language>pt</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Alexandre_Claudio"/>
+		<dc:date>2005-05-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.rakanmedik.org/w3c/ms-impl-expanded.html">
+		<!-- Implementation Plan for Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/impl/expanded"/>
+		<dc:title xml:lang="ms">Pelan Pelaksanaan untuk Ketercapaian Web</dc:title>
+		<dc:language>ms</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Basil_Algalez"/>
+		<dc:date>2005-05-11</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/wcacomponents.html">
+		<rdfs:comment>Interdependent Components of Web Accessibility</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="pt-br">Componentes essenciais para Acessibilidade à Web</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-05-11</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tradic.jp/tr/w3c/WAI/intro/wai-overview-slides.html">
+		<!-- Overview of the Web Accessibility Initiative (WAI) Slides -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wai-overview-slides"/>
+		<dc:title xml:lang="ja">Web Accessibility Initiative (WAI) 概要スライド</dc:title>
+		<dc:language>ja</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Kenji_Inoue"/>
+		<dc:date>2005-05-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tradic.jp/tr/w3c/Talks/WAI-Intro/Overview.html">
+		<!--WAI Slides -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Talks/WAI-Intro/Overview.html"/>
+		<dc:title xml:lang="ja">オンライン版 Web Accessibility Initiative 概要</dc:title>
+		<dc:language>ja</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Kenji_Inoue"/>
+		<dc:date>2005-05-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.transwiki.org/cn/xhtmlfaq.htm">
+		<!--(X)HTML FAQ -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+		<dc:title xml:lang="zh-hans">HTML和XHTML常见问答</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Collin_Hsu"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#W3CHina"/>
+		<dc:date>2005-05-26</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://w3tipps.creuz.de/">
+		<rdfs:comment>Quality Tips for Webmasters</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="de">Qualitäts-Tipps für Webmaster</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Auke_Creutz"/>
+		<dc:date>2005-06-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://iwaw3c.cjb.net/">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="id">Perkenalan akan Aksesibilitas Web</dc:title>
+		<dc:language>id</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roy_Sukamto"/>
+		<dc:date>2005-06-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/owl-test/">
+		<rdfs:comment>OWL Tests</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-test-20040210/"/>
+		<dc:title xml:lang="ja">OWLウェブ・オントロジー言語 テストケース</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-06-29</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/owlfaq.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/2003/08/owlfaq"/>
+		<dc:title xml:lang="ja">W3Cのウェブ・オントロジー言語（OWL）に関するFAQ</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-06-29</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://sebastienguillon.com/traduction/types-de-media-xhtml">
+		<rdfs:comment>XHTML Media Types</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/xhtml-media-types/"/>
+		<dc:title xml:lang="fr">Types de Media XHTML</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Sebastien_Guillon"/>
+		<dc:date>2005-06-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.websemantico.org/traduzioni/n3primer.php">
+		<!--Primer: Getting into RDF & Semantic Web using N3-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/2000/10/swap/Primer.html"/>
+		<dc:title xml:lang="it">RDF e Web Semantico attraverso N3: introduzione</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pasquale_Popolizio"/>
+		<dc:date>2005-06-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.cincplug.com/W3C/TR/xhtml1/">
+		<!-- XHTML 1.0 -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2002/REC-xhtml1-20020801"/>
+		<dc:title xml:lang="sr"> XHTML™ 1.0 Отворени хипертекстуални знаковни језик (друго издање)</dc:title>
+		<dc:language>sr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Luka_Stanisavljevic"/>
+		<dc:date>2005-07-01</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/serving-xhtml/Overview.fr.html">
+		<rdfs:comment>Serving XHTML 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/serving-xhtml/"/>
+		<dc:title xml:lang="fr">Servir du XHTML 1.0</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Sebastien_Guillon"/>
+		<dc:date>2005-07-04</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.siteuri.ro/developer/accessibility.ro.html">
+		<!-- Introduction to Web Accessibility -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="ro">Introducere in accesibilitatea web</dc:title>
+		<dc:language>ro</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrei_Stanescu"/>
+		<dc:date>2005-07-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.allster.info/glossary.htm">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/WD-di-gloss-20050118/"/>
+		<dc:title xml:lang="it">Glossario dei termini per l'Indipendenza dal Dispositivo Finale</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrea_Crevola"/>
+		<dc:date>2005-07-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/serving-xhtml/Overview.pt-br.html">
+		<rdfs:comment>Serving XHTML 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/serving-xhtml/"/>
+		<dc:title xml:lang="pt-br">Servindo XHTML 1.0</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-07-14</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/O-HTTP-charset.fr.html">
+		<rdfs:comment>HTTP Charset</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/O-HTTP-charset.en.html"/>
+		<dc:title xml:lang="fr">Le paramètre HTTP Charset</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pierre_Goiffon"/>
+		<dc:date>2005-07-14</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mojol.com/">
+		<rdfs:comment>Ruby Annotation</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-ruby-20010531"/>
+		<dc:title xml:lang="it">Annotazione Ruby</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+		<dc:date>2005-07-15</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.riblo.com/">
+		<rdfs:comment>Ruby Annotation</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-ruby-20010531"/>
+		<dc:title xml:lang="es">Anotación Ruby</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+		<dc:date>2005-07-16</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.geocities.com/ioannespetrus/traduzioni/w3c/owloverview.html">
+		<rdfs:comment>OWL Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-features-20040210/"/>
+		<dc:title xml:lang="it">OWL Linguaggio ontologico del Web, Panoramica</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-07-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Gianpiero_Pedone"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-css-charset.fr.html">
+		<rdfs:comment>FAQ: CSS Character Encoding Declarations</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-css-charset.en.html"/>
+		<dc:title xml:lang="fr">FAQ: déclaration du codage de caractères utilisé dans un fichier CSS</dc:title>
+		<dc:language>fr</dc:language>
+		<dc:date>2005-07-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pierre_Goiffon"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/O-charset.pt-br.html">
+		<rdfs:comment>Character Encodings</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/O-charset.en.html"/>
+		<dc:title xml:lang="pt-br">Codificação de caracteres</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-css-charset.pt-br.html">
+		<rdfs:comment>FAQ: CSS character encoding declarations</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-css-charset.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Declaração de codificação de caracteres em arquivo CSS</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-navigation-select.pt-br.html">
+		<rdfs:comment>FAQ: Using &lt;select&gt; to Link to Localized Content</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-navigation-select.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Usando &lt;select&gt; para lincar à um conteúdo específico</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-07-29</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-controls.pt-br.html">
+		<rdfs:comment>FAQ: HTML, XHTML, XML and Control Codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-controls.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: HTML, XHTML, XML e os códigos de controle</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-03</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-lang-priorities.pt-br.html">
+		<rdfs:comment>FAQ: Setting language preferences in a browser</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-lang-priorities.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Configurando as preferências de idioma no navegador</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-04</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3ctuto/fonts.html">
+		<rdfs:comment>Web Style Sheets, CSS tips &amp; tricks: Fonts</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+		<dc:title xml:lang="pt-br">Folhas de Estilo para Web, CSS dicas &amp; macetes: Famílias de fontes</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-05</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-lang-2or3.pt-br.html">
+		<rdfs:comment>FAQ: Two-letter or three-letter language codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-lang-2or3.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Codificar idiomas com duas ou três letras</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-05</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.robertoscano.info/files/wcag10/wai_web_content_techs_it.htm">
+		<!--Techniques for WCAG 1.0-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/WAI-WEBCONTENT-TECHS/"/>
+		<dc:title xml:lang="it">Tecniche per le Linee Guida 1.0 di Accessibilità dei Contenuti Web</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-08-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Giovanni_Losacco"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.media.uoa.gr/~andreas/wcag/">
+		<rdfs:comment>Web Content Accessibility Guidelines 1.0, WCAG </rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/"/>
+		<dc:title xml:lang="el">Οδηγίες για την Προσβασιμότητα του Περιεχομένου του Παγκόσμιου Ιστού 1.0</dc:title>
+		<dc:language>el</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andreas_Giannakoulopoulos"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Giorgos_Theocharis"/>
+		<dc:date>2005-08-20</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-who-uses-unicode.pt-br.html">
+		<rdfs:comment>FAQ: Who uses Unicode?</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-who-uses-unicode.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Quem usa Unicode?</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-headers-charset.pt-br.html">
+		<rdfs:comment>FAQ: verfying HTTP headers</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-headers-charset.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Verificando o cabeçalho HTTP</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://digilander.libero.it/giovannideangelis/OWLWebOntologyLanguageGuida.htm">
+		<rdfs:comment>OWL Guide</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-guide-20040210/"/>
+		<dc:title xml:lang="it">OWL Linguaggio Ontologico per il Web, Guida</dc:title>
+		<dc:language>it</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Giovanni_De_Angelis"/>
+		<dc:date>2005-08-22</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-headers-charset.fr.html">
+		<rdfs:comment>FAQ: verfying HTTP headers</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-headers-charset.en.html"/>
+		<dc:title xml:lang="fr">FAQ: Vérifier les en-têtes HTTP</dc:title>
+		<dc:language>fr</dc:language>
+		<dc:date>2005-08-23</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Steve_Frecinaux"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-non-eng-tags.pt-br.html">
+		<rdfs:comment>FAQ: Non-English tags</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-non-eng-tags.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Tags em outros idiomas</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2005-08-23</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Joildo_Santos"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.kosek.cz/w3c/webarch/">
+		<rdfs:comment>Web architecture</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-webarch-20041215/"/>
+		<dc:title xml:lang="cs">Architektura WWW, první vydání</dc:title>
+		<dc:language>cs</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Filip_Rychetsky"/>
+		<dc:date>2005-08-23</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.geocities.com/pan_andrew/ResourceDescriptionFramework.htm">
+		<rdfs:comment>RDF Concepts and Abstract Syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"/>
+		<dc:title xml:lang="pl"> Struktura Opisu Zasobów (RDF): Koncepcje i Składnia Abstrakcyjna</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<dc:date>2005-08-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.geocities.com/pan_andrew/WebContentAccessibilityGuidelines1_0.htm">
+		<rdfs:comment>WCAG</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/"/>
+		<dc:title xml:lang="pl">Wytyczne Dotyczące Ułatwień Dostępu Do Zawartości Sieci 1.0</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<dc:date>2005-08-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/xkms2/">
+		<rdfs:comment>XKMS</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xkms2-20050628/"/>
+		<dc:title xml:lang="fr">La spécification de la gestion des clés XML (XKMS 2.0)</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-08-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/xkms2-bindings/">
+		<rdfs:comment>XKMS Bindings</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xkms2-bindings-20050628/"/>
+		<dc:title xml:lang="fr">Les liaisons de la spécification de la gestion des clés XML (XKMS 2.0)</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-08-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/xml-id/">
+		<rdfs:comment>xml:id</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xml-id-20050909/"/>
+		<dc:title xml:lang="fr">xml:id version 1.0</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-09-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/xml-id.html">
+		<rdfs:comment>xml:id</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xml-id-20050909/"/>
+		<dc:title xml:lang="pt-br">xml:id Versão 1.0</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-09-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3qc.org/ressources/traductions/composantes-essentielles/">
+		<rdfs:comment>Essential components for WAI</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="fr">Composantes essentielles de l'accessibilité Web</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Catherine_Roy"/>
+		<dc:date>2005-09-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://maujor.com/w3c/xml-base.html">
+		<!--XML Base-->
+		<dc:title xml:lang="pt-br">XML Base</dc:title>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-xmlbase-20010627/"/>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-09-23</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://maujor.com/w3c/xmlevents-for-html-authors.html">
+		<!--XML Base-->
+		<dc:title xml:lang="pt-br">XML Base</dc:title>
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xmlevents-for-html-authors"/>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-09-24</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/rdf-primer.html">
+		<rdfs:comment>RDF Primer</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/"/>
+		<dc:title xml:lang="ja">RDF入門</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-09-28</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/xformfaq.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/Forms/2003/xforms-faq.html"/>
+		<dc:title xml:lang="pt-br">XForms 1.0 FAQ - Perguntas frequentes</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-10-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-navigation-select.zh-cn.html">
+		<rdfs:comment>FAQ: Using &lt;select&gt; to Link to Localized Content</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-navigation-select.en.html"/>
+		<dc:title xml:lang="zh-hans">使用&lt;select&gt;链接到本地化内容</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<dc:date>2005-10-22</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#WTB_Language_Group"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.webaccessibilite.net/traduction/impl/pol_FR.html">
+		<rdfs:comment>Developing Organizational Policies on Web Accessibility</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/impl/pol.html"/>
+		<dc:title xml:lang="fr">Développer une politique organisationnelle en matière d'accessibilité Web</dc:title>
+		<dc:language>fr</dc:language>
+		<dc:date>2005-11-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Eric_Gateau"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.cs.man.ac.uk/~yesilady/docs/accessibility.html">
+		<rdfs:comment>Introduction to Web Accessibility</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="tr">Web Erişilebilirliğine Giriş</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2005-11-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yeliz_Yesilada"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/rdf-syntax-grammar.html">
+		<rdfs:comment>RDF/XML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/"/>
+		<dc:title xml:lang="ja">RDF/XML構文仕様（改訂版）</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-11-13</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2005/11/TranslationPolicy-fr.html">
+		<rdfs:comment>Auth. Translation policy</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/2005/02/TranslationPolicy.html"/>
+		<dc:title xml:lang="fr">La politique de traductions agréées du W3C</dc:title>
+		<dc:date>2005-11-15</dc:date>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/inline-bidi-markup/Overview.he.html">
+		<rdfs:comment>Inline bidi markup</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/inline-bidi-markup/"/>
+		<dc:title xml:lang="he"> מה שאתם צריכים לדעת לגבי האלגוריתם הדו-כיווני וסימון פנימי</dc:title>
+		<dc:date>2005-11-19</dc:date>
+		<dc:language>he</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Katerina_Shechtman"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Oleg_Gaivoronsky"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-navigation-select.ar.html">
+		<rdfs:comment>AQ: Using &lt;select&gt; to Link to Localized Content</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-navigation-select.en.html"/>
+		<dc:title xml:lang="ar">أسئلة شائعة: استخدام &lt;select&gt; للربط بمحتوى مترجم</dc:title>
+		<dc:date>2005-11-19</dc:date>
+		<dc:language>ar</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#WTB_Language_Group"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/rdf-schema.html">
+		<rdfs:comment>RDF Schema</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-schema-20040210/"/>
+		<dc:title xml:lang="ja">RDF語彙記述言語1.0: RDFスキーマ</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-11-25</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.maujor.com/w3c/timezone.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/NOTE-timezone-20051013/"/>
+		<dc:title xml:lang="pt-br">Trabalhando com zonas horárias</dc:title>
+		<dc:language>pt-br</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mauricio_Samy_Silva"/>
+		<dc:date>2005-11-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/process-20051014/cover.html">
+		<!--Process document of W3C-->
+		<trans:translationFrom rdf:resource="http://www.w3.org/2005/10/Process-20051014/"/>
+		<dc:title xml:lang="fr">Le Document de processus du World Wide Web Consortium</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-12-02</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://poseidon.home.tlink.de/w3c/REC-soap12-part0-20030624-de_DE/">
+		<rdfs:comment>SOAP Primer</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/REC-soap12-part0-20030624/"/>
+		<dc:title xml:lang="de">SOAP-Version 1.2 Teil 0: Einführung</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Alo_Clemens"/>
+		<dc:date>2005-12-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/turingtest-20051123/">
+		<rdfs:comment>Inaccessibility of CAPTCHA</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/NOTE-turingtest-20051123/"/>
+		<dc:title xml:lang="fr">L'inaccessibilité des « CAPTCHA »</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2005-12-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://standards.blaut.biz/xhtml-faq/">
+		<rdfs:comment>HTML and XHTML Frequently Answered Questions</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+		<dc:title xml:lang="pl">HTML i XHTML - najczęściej zadawane pytania (FAQ)</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Robert_Blaut"/>
+		<dc:date>2005-12-08</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/rdf/rdf-concepts.html">
+		<rdfs:comment>RDF Concepts and abstract syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"/>
+		<dc:title xml:lang="ja">RDF（Resource Description Framework）: 概念および抽象構文</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-12-18</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://homepage3.nifty.com/terrace/w3c/csslayout-howto-ja/">
+		<rdfs:comment>Tableless layout HOWTO</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/2002/03/csslayout-howto"/>
+		<dc:title xml:lang="ja">table 要素未使用でのレイアウト構築法</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Ryuuta_Hasegawa"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.stylesheetsxml.com/it/">
+		<rdfs:comment>Associating Style Sheets with XML documents</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629"/>
+		<dc:title xml:lang="it">Associare Fogli di Stile con documenti XML Versione 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xmlsigxpath.com/it/">
+		<rdfs:comment>XML-Signature XPath Filter 2.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2002/REC-xmldsig-filter2-20021108/"/>
+		<dc:title xml:lang="it">Firma XML del Filtro XPath 2.0</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xpointerelement.com/it/">
+		<rdfs:comment>XPointer: Schema elemento()</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/REC-xptr-element-20030325/"/>
+		<dc:title xml:lang="it">Firma XML del Filtro XPath 2.0</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xpointerframework.com/it/">
+		<rdfs:comment>XPointer Framework</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/"/>
+		<dc:title xml:lang="en">XPointer Framework</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xpointerxmlns.com/it/">
+		<rdfs:comment>XPointer xmlns() Scheme</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/REC-xptr-xmlns-20030325/"/>
+		<dc:title xml:lang="it">Xpointer: Schema xmlns()</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xmlbinarypackaging.com/it/">
+		<rdfs:comment>XML-binary Optimized Packaging</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xop10-20050125/"/>
+		<dc:title xml:lang="it">Pacchetto Ottimizzato XML-binario</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2005/12/tableless-de/">
+		<rdfs:comment>Tableless layout HOWTO</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/2002/03/csslayout-howto"/>
+		<dc:title xml:lang="de">Tabellenloses Webseitendesign</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2005-12-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Simon_Wilper"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/atag">
+		<rdfs:comment>Authoring Tool Accessibility Guidelines (ATAG) Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/atag.php"/>
+		<dc:title xml:lang="es">Introducción a las Pautas de Accesibilidad para Herramientas de Autor (ATAG)</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2005-12-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/wcag10">
+		<rdfs:comment>Navigating WCAG 1.0 Guidelines and Techniques Documents</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag10.html"/>
+		<dc:title xml:lang="es">Navegando en las pautas y documentos de técnicas de WCAG 1.0</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2005-12-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/wcag">
+		<rdfs:comment>Web Content Accessibility Guidelines (WCAG) Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/wcag.html"/>
+		<dc:title xml:lang="es">Introducción a las Pautas de Accesibilidad al Contenido en la Web (WCAG)</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2005-12-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3c.es/Traducciones/es/WAI/intro/uaag">
+		<rdfs:comment>User Agent Accessibility Guidelines (UAAG) Overview</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/uaag.php"/>
+		<dc:title xml:lang="es">Introducción a las Pautas de Accesibilidad para Agentes de Usuario (UAAG)</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2005-12-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Encarnacion_Quesada_Ruiz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.geocities.com/jangminsu/csslayout-howto-20051221-ko">
+		<rdfs:comment>Tableless layout HOWTO</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/2002/03/csslayout-howto"/>
+		<dc:title xml:lang="ko">Table 태그 안쓰고 레이아웃하기</dc:title>
+		<dc:language>ko</dc:language>
+		<dc:date>2005-12-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Minsu_Jang"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mig.webpark.pl/w3c/xhtml11/xhtml11.html">
+		<rdfs:comment>XHTML™ 1.1 - Module-based XHTML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-xhtml11-20010531"/>
+		<dc:title xml:lang="pl">XHTML™ 1.1 – XHTML oparty na modułach</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Michal_Gorny"/>
+		<dc:date>2005-12-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mig.webpark.pl/w3c/ruby/ruby.html">
+		<rdfs:comment>Ruby Annotation</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/REC-ruby-20010531"/>
+		<dc:title xml:lang="pl">Notacja ruby</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Michal_Gorny"/>
+		<dc:date>2005-12-30</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.xmlinfoset.com/it/">
+		<!--XML Information Set, 2nd ed. -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-xml-infoset-20040204"/>
+		<dc:title xml:lang="it">Set d’Informazione XML (Seconda Edizione)</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2005-12-31</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tadas_Talaikis"/>
+	</trans:Translation>
+</rdf:RDF>

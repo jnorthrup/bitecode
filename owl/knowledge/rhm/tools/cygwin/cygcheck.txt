@@ -1,0 +1,507 @@
+
+Cygwin Win95/NT Configuration Diagnostics
+Current System Time: Wed Sep 17 15:55:37 2003
+
+Windows XP Professional Ver 5.1 Build 2600 Service Pack 1
+
+Path:	C
+	c:\home\ke\bin
+	c:\home\rebol
+	c:\cygwin\bin
+	c:\Documents and Settings\rhm\bin
+	C:\cygwin\usr\local\bin
+	C:\cygwin\bin
+	C:\cygwin\bin
+	c:\WINDOWS\system32
+	c:\WINDOWS
+	c:\WINDOWS\system32\WBEM
+	c:\SFU\Perl\bin\
+	c:\SFU\common\
+	c:\Program Files\Common Files\Adaptec Shared\System
+	C:\cygwin\usr\X11R6\bin
+
+Output from C:\cygwin\bin\id.exe (nontsec)
+UID: 1003(rhm) GID: 513(None)
+513(None)
+
+Output from C:\cygwin\bin\id.exe (ntsec)
+UID: 1003(rhm) GID: 513(None)
+513(None)                             
+544(Administrators)                   556(Network Configuration Operators)
+555(Remote Desktop Users)             
+545(Users)                            1005(PasswordPropDeny)
+
+SysDir: C:\WINDOWS\System32
+WinDir: C:\WINDOWS
+
+HOME = `c:\Documents and Settings\rhm'
+LD_LIBRARY_PATH = `C:\cygwin\usr\lib:\usr\X11R5\lib'
+MAKE_MODE = `unix'
+PWD = `/home/ke/knowledge/tools/cygwin'
+USER = `rhm'
+
+Use `-r' to scan registry
+
+a:  fd           N/A    N/A                    
+c:  hd  NTFS   60000Mb  19% CP CS UN PA FC     WINXP
+d:  cd           N/A    N/A                    
+e:  cd           N/A    N/A                    
+f:  hd  FAT32   4345Mb  75% CP    UN           COMMON DATA
+g:  hd  FAT       46Mb  29% CP    UN           BOOT MAGIC
+
+C:\cygwin                          /                         system  binmode
+C:\cygwin/bin                      /usr/bin                  system  binmode
+C:\cygwin/lib                      /usr/lib                  system  binmode
+C:\cygwin\usr\X11R6\lib\X11\fonts  /usr/X11R6/lib/X11/fonts  system  binmode
+.                                  /cygdrive                 system  binmode,cygdrive
+
+Found: c:\cygwin\bin\awk.exe
+Found: c:\cygwin\bin\bash.exe
+Found: c:\cygwin\bin\cat.exe
+Found: c:\SFU\common\cat.exe
+Found: c:\cygwin\bin\cp.exe
+Found: c:\SFU\common\cp.exe
+Found: c:\cygwin\bin\cpp.exe
+Found: c:\cygwin\bin\find.exe
+Found: c:\SFU\common\find.exe
+Found: c:\cygwin\bin\gcc.exe
+Found: c:\cygwin\bin\gdb.exe
+Found: c:\cygwin\bin\grep.exe
+Found: c:\SFU\common\grep.exe
+Found: c:\cygwin\bin\ld.exe
+Found: c:\cygwin\bin\ls.exe
+Found: c:\SFU\common\ls.exe
+Found: c:\cygwin\bin\make.exe
+Found: c:\cygwin\bin\mv.exe
+Found: c:\SFU\common\mv.exe
+Found: c:\cygwin\bin\rm.exe
+Found: c:\SFU\common\rm.exe
+Found: c:\cygwin\bin\sed.exe
+Found: c:\SFU\common\sed.exe
+Found: c:\cygwin\bin\sh.exe
+Found: c:\cygwin\bin\tar.exe
+
+   61k 2003/08/09 c:\cygwin\bin\cygbz2-1.dll
+   54k 2002/01/27 c:\cygwin\bin\cygbz21.0.dll
+   14k 2003/08/10 c:\cygwin\bin\cygcharset-1.dll
+  849k 2003/08/11 c:\cygwin\bin\cygcrypto-0.9.7.dll
+  645k 2003/04/11 c:\cygwin\bin\cygcrypto.dll
+  551k 2003/04/02 c:\cygwin\bin\cygcurl-2.dll
+   28k 2003/08/11 c:\cygwin\bin\cygcygipc-2.dll
+  380k 2002/07/24 c:\cygwin\bin\cygdb-3.1.dll
+  326k 2002/06/26 c:\cygwin\bin\cygdb2.dll
+  487k 2002/07/24 c:\cygwin\bin\cygdb_cxx-3.1.dll
+  135k 2003/04/13 c:\cygwin\bin\cygexpat-0.dll
+   61k 2003/06/10 c:\cygwin\bin\cygexslt-0.dll
+   45k 2001/04/25 c:\cygwin\bin\cygform5.dll
+   35k 2002/01/09 c:\cygwin\bin\cygform6.dll
+   48k 2003/08/09 c:\cygwin\bin\cygform7.dll
+   28k 2003/07/20 c:\cygwin\bin\cyggdbm-3.dll
+   30k 2003/08/11 c:\cygwin\bin\cyggdbm-4.dll
+   19k 2003/03/22 c:\cygwin\bin\cyggdbm.dll
+   15k 2003/07/20 c:\cygwin\bin\cyggdbm_compat-3.dll
+   15k 2003/08/11 c:\cygwin\bin\cyggdbm_compat-4.dll
+   69k 2003/08/10 c:\cygwin\bin\cyggettextlib-0-12-1.dll
+   12k 2003/08/10 c:\cygwin\bin\cyggettextpo-0.dll
+  134k 2003/08/10 c:\cygwin\bin\cyggettextsrc-0-12-1.dll
+  490k 2002/09/21 c:\cygwin\bin\cygguile-12.dll
+  489k 2003/07/28 c:\cygwin\bin\cygguile-12abi13.dll
+  488k 2002/07/18 c:\cygwin\bin\cygguile-14.dll
+   24k 2003/07/28 c:\cygwin\bin\cygguile-ltdl-1abi13.dll
+   63k 2002/07/18 c:\cygwin\bin\cygguile-srfi-srfi-13-14-1.dll
+   63k 2002/09/21 c:\cygwin\bin\cygguile-srfi-srfi-13-14-v-1-1.dll
+   62k 2003/07/28 c:\cygwin\bin\cygguile-srfi-srfi-13-14-v-1-1abi13.dll
+   24k 2002/07/18 c:\cygwin\bin\cygguile-srfi-srfi-4-1.dll
+   24k 2002/09/21 c:\cygwin\bin\cygguile-srfi-srfi-4-v-1-1.dll
+   23k 2003/07/28 c:\cygwin\bin\cygguile-srfi-srfi-4-v-1-1abi13.dll
+   14k 2002/07/18 c:\cygwin\bin\cygguilereadline-14.dll
+   14k 2002/09/21 c:\cygwin\bin\cygguilereadline-v-12-12.dll
+   11k 2003/07/28 c:\cygwin\bin\cygguilereadline-v-12-12abi13.dll
+   17k 2001/06/28 c:\cygwin\bin\cyghistory4.dll
+   29k 2003/08/10 c:\cygwin\bin\cyghistory5.dll
+  306k 2002/04/27 c:\cygwin\bin\cyghttpd.dll
+  958k 2003/08/10 c:\cygwin\bin\cygiconv-2.dll
+   22k 2001/12/13 c:\cygwin\bin\cygintl-1.dll
+   37k 2003/08/10 c:\cygwin\bin\cygintl-2.dll
+   21k 2001/06/20 c:\cygwin\bin\cygintl.dll
+   12k 2003/02/17 c:\cygwin\bin\cygioperm-0.dll
+   48k 2003/08/10 c:\cygwin\bin\cygjbig1.dll
+  132k 2003/08/11 c:\cygwin\bin\cygjpeg-62.dll
+  119k 2002/02/09 c:\cygwin\bin\cygjpeg6b.dll
+   61k 2003/03/05 c:\cygwin\bin\cygkpathsea-3.dll
+   60k 2003/07/27 c:\cygwin\bin\cygkpathsea-3abi13.dll
+   32k 2003/08/18 c:\cygwin\bin\cygltdl-3.dll
+   26k 2001/04/25 c:\cygwin\bin\cygmenu5.dll
+   20k 2002/01/09 c:\cygwin\bin\cygmenu6.dll
+   29k 2003/08/09 c:\cygwin\bin\cygmenu7.dll
+  156k 2001/04/25 c:\cygwin\bin\cygncurses++5.dll
+  175k 2002/01/09 c:\cygwin\bin\cygncurses++6.dll
+  226k 2001/04/25 c:\cygwin\bin\cygncurses5.dll
+  202k 2002/01/09 c:\cygwin\bin\cygncurses6.dll
+  224k 2003/08/09 c:\cygwin\bin\cygncurses7.dll
+   15k 2001/04/25 c:\cygwin\bin\cygpanel5.dll
+   12k 2002/01/09 c:\cygwin\bin\cygpanel6.dll
+   19k 2003/08/09 c:\cygwin\bin\cygpanel7.dll
+   67k 2003/08/22 c:\cygwin\bin\cygpcre-0.dll
+   63k 2003/04/11 c:\cygwin\bin\cygpcre.dll
+   15k 2003/08/22 c:\cygwin\bin\cygpcreposix-0.dll
+   61k 2003/04/11 c:\cygwin\bin\cygpcreposix.dll
+ 1100k 2003/08/29 c:\cygwin\bin\cygperl5_8_0.dll
+  168k 2003/08/10 c:\cygwin\bin\cygpng10.dll
+  173k 2003/08/10 c:\cygwin\bin\cygpng12.dll
+  170k 2002/01/21 c:\cygwin\bin\cygpng2.dll
+   22k 2002/06/09 c:\cygwin\bin\cygpopt-0.dll
+  108k 2001/06/28 c:\cygwin\bin\cygreadline4.dll
+  148k 2003/08/10 c:\cygwin\bin\cygreadline5.dll
+  689k 2003/08/11 c:\cygwin\bin\cygruby18.dll
+  176k 2003/08/11 c:\cygwin\bin\cygssl-0.9.7.dll
+  165k 2003/04/11 c:\cygwin\bin\cygssl.dll
+  281k 2003/02/24 c:\cygwin\bin\cygtiff3.dll
+  282k 2003/08/11 c:\cygwin\bin\cygtiff4.dll
+   25k 2002/07/14 c:\cygwin\bin\cygungif-4.dll
+ 2689k 2002/11/16 c:\cygwin\bin\cygxerces-c21.dll
+ 2984k 2003/02/07 c:\cygwin\bin\cygxerces-c22.dll
+ 3088k 2003/06/11 c:\cygwin\bin\cygxerces-c23.dll
+  903k 2003/06/09 c:\cygwin\bin\cygxml2-2.dll
+   50k 2003/08/09 c:\cygwin\bin\cygXpm-noX4.dll
+   54k 2003/08/09 c:\cygwin\bin\cygXpm-X4.dll
+  174k 2003/06/10 c:\cygwin\bin\cygxslt-1.dll
+   13k 2003/06/10 c:\cygwin\bin\cygxsltbreakpoint-1.dll
+   60k 2003/08/09 c:\cygwin\bin\cygz.dll
+  945k 2003/09/01 c:\cygwin\bin\cygwin1.dll
+    Cygwin DLL version info:
+        DLL version: 1.5.3
+        DLL epoch: 19
+        DLL bad signal mask: 19005
+        DLL old termios: 5
+        DLL malloc env: 28
+        API major: 0
+        API minor: 90
+        Shared data: 3
+        DLL identifier: cygwin1
+        Mount registry: 2
+        Cygnus registry name: Cygnus Solutions
+        Cygwin registry name: Cygwin
+        Program options name: Program Options
+        Cygwin mount registry name: mounts v2
+        Cygdrive flags: cygdrive flags
+        Cygdrive prefix: cygdrive prefix
+        Cygdrive default prefix: 
+        Build date: Mon Sep 1 13:15:28 EDT 2003
+        Shared id: cygwin1S3
+
+  671k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygdps-1.dll
+   53k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygdpstk-1.dll
+  146k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygexpat-1.dll
+  174k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygfontconfig-1.dll
+  340k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygfreetype-9.dll
+  524k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygGL-1.dll
+  592k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygGLU-1.dll
+  109k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygICE-6.dll
+   25k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygoldX-6.dll
+ 1510k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygOSMesa-4.dll
+   41k 2002/05/14 C:\cygwin\usr\X11R6\bin\cygPropList-0.dll
+   40k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygpsres-1.dll
+   54k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygSM-6.dll
+ 1067k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygX11-6.dll
+   57k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXcursor-1.dll
+   77k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXext-6.dll
+   83k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXft-1.dll
+  105k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXft-2.dll
+   53k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXi-6.dll
+   29k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXmuu-1.dll
+   58k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXp-6.dll
+   81k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXpm-4.dll
+   29k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXrandr-2.dll
+   49k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXrender-1.dll
+  384k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXTrap-6.dll
+   38k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXtst-6.dll
+   34k 2003/08/01 C:\cygwin\usr\X11R6\bin\cygXv-1.dll
+
+Cygwin Package Information
+Package                 Version            
+_update-info-dir        00211-1            
+a2ps                    4.13-1             
+agetty                  2.1-1              
+apache                  1.3.24-5           
+ash                     20020731-3         
+astyle                  1.15.3-3           
+autoconf                2.57a-1            
+autoconf-devel          2.57-2             
+autoconf-stable         2.13-5             
+automake                1.7.5a-1           
+automake-devel          1.7.6-2            
+automake-stable         1.4p5-6            
+base-files              2.5-1              
+base-passwd             1.1-1              
+bash                    2.05b-13           
+bc                      1.06-1             
+binutils                20030901-1         
+bison                   20030307-1         
+byacc                   1.9-1              
+bzip2                   1.0.2-5            
+ccache                  2.2-1              
+cgoban                  1.9.14-1           
+chkconfig               1.2.24h-1          
+clear                   1.0-1              
+cmake                   1.6.7-1            
+compface                1.4-5              
+cpio                    2.5-3              
+cron                    3.0.1-11           
+crypt                   1.0-2              
+ctags                   5.5-4              
+curl                    7.10.4-1           
+curl-devel              7.10.4-1           
+cvs                     1.11.6-3           
+cygipc                  2.01-2             
+cygrunsrv               0.96-2             
+cygutils                1.2.1-2            
+cygwin                  1.5.3-1            
+cygwin-doc              1.3-6              
+db2                     2.7.7-4            
+db3.1                   3.1.17-2           
+dejagnu                 20021217-2         
+diff                    1.0-1              
+diffutils               2.8.4-1            
+doxygen                 1.2.18-1           
+dpkg                    1.10.4-2           
+ed                      0.2-1              
+ELFIO                   1.0.0-1            
+enscript                1.6.3-3            
+exim                    4.22-1             
+expat                   1.95.6-1           
+expect                  20030128-1         
+fetchmail               6.2.4-1            
+figlet                  2.2-1              
+file                    4.03-2             
+fileutils               4.1-2              
+findutils               4.1.7-4            
+flex                    2.5.4-2            
+fortune                 1.8-2              
+fvwm                    2.4.7-2            
+gawk                    3.1.3-3            
+gcc                     3.2-3              
+gcc-mingw               20020817-5         
+gcc2                    2.95.3-10          
+gdb                     20030901-1         
+gdbm                    1.8.3-7            
+gettext                 0.12.1-3           
+gettext-devel           0.12.1-3           
+ghostscript             7.05-2             
+ghostscript-base        7.05-2             
+ghostscript-x11         7.05-2             
+gnugo                   3.4-1              
+gnupg                   1.2.2-1            
+gperf                   2.7.2-1            
+grace                   5.1.12-1           
+grep                    2.5-1              
+groff                   1.18.1-2           
+gsl                     1.4-1              
+guile                   1.6.4-2            
+guile-devel             1.6.4-2            
+guile-doc               1.6.4-2            
+gzip                    1.3.3-4            
+indent                  2.2.8-1            
+inetutils               1.3.2-24           
+initscripts             0.9-1              
+ioperm                  0.4-1              
+irc                     20010101-3         
+jbigkit                 1.5-3              
+jpeg                    6b-11              
+keychain                1.9-1              
+less                    381-1              
+lesstif                 0.93.41-1          
+libbz2_0                1.0.2-1            
+libbz2_1                1.0.2-5            
+libcharset1             1.9.1-3            
+libdb2                  2.7.7-4            
+libdb2-devel            2.7.7-4            
+libdb3.1                3.1.17-2           
+libdb3.1-devel          3.1.17-2           
+libgdbm                 1.8.0-5            
+libgdbm-devel           1.8.3-7            
+libgdbm3                1.8.3-3            
+libgdbm4                1.8.3-7            
+libgettextpo0           0.12.1-3           
+libguile12              1.6.0-1            
+libguile12abi13         1.6.4-2            
+libguile14              1.5.6-5            
+libiconv                1.9.1-3            
+libiconv2               1.9.1-3            
+libintl                 0.10.38-3          
+libintl1                0.10.40-1          
+libintl2                0.12.1-3           
+libjpeg62               6b-11              
+libjpeg6b               6b-8               
+libkpathsea3            2.0.2-1            
+libkpathsea3abi13       2.0.2-2            
+libltdl3                1.5-3              
+libncurses-devel        5.3-4              
+libncurses5             5.2-1              
+libncurses6             5.2-8              
+libncurses7             5.3-4              
+libpcre                 4.1-1              
+libpcre0                4.4-1              
+libpng                  1.2.5-4            
+libpng10                1.0.15-4           
+libpng10-devel          1.0.15-4           
+libpng12                1.2.5-4            
+libpng12-devel          1.2.5-4            
+libpng2                 1.0.12-1           
+libpopt0                1.6.4-4            
+libPropList             0.10.1-3           
+libreadline4            4.1-2              
+libreadline5            4.3-5              
+libtiff-devel           3.6.0-5            
+libtiff3                3.6.0-2            
+libtiff4                3.6.0-5            
+libtool                 1.5a-1             
+libtool-devel           1.5-3              
+libtool-stable          1.4.3-2            
+libungif                4.1.0-2            
+libxerces-c21           2.1.0-1            
+libxerces-c22           2.2.0-1            
+libxerces-c23           2.3.0-2            
+libxml2                 2.5.7-1            
+libxslt                 1.0.30-2           
+lilypond                1.6.11-1           
+lilypond-doc            1.6.11-1           
+links                   0.96-1             
+login                   1.9-7              
+lynx                    2.8.4-7            
+m4                      1.4-1              
+make                    3.80-1             
+man                     1.5j-2             
+mc                      4.6.0-4            
+mingw-runtime           3.0-1              
+mktemp                  1.5-3              
+mod_auth_mysql          1.11-1             
+mod_auth_ntsec          1.7-1              
+mod_dav                 1.0.3-1.3.6-1      
+mod_php4                4.2.0-2            
+mod_ssl                 2.8.8-1.3.24-1     
+more                    2.11o-1            
+mt                      2.0.1-2            
+mutt                    1.4-1              
+nasm                    0.98.37-1          
+ncftp                   3.1.4-1            
+ncurses                 5.3-4              
+ncurses-demo            5.3-4              
+netcat                  1.10-2             
+newlib-man              20020801           
+openbox                 0.99.1-3           
+opengl                  1.1.0-6            
+openssh                 3.6.1p2-2          
+openssl                 0.9.7b-3           
+openssl-devel           0.9.7b-3           
+openssl096              0.9.6j-1           
+par                     1.52-1             
+patch                   2.5.8-7            
+pcre                    4.4-1              
+pcre-doc                4.4-1              
+pdksh                   5.2.14-2           
+perl                    5.8.0-5            
+perl_manpages           5.8.0-5            
+pine                    4.55-1             
+pinfo                   0.6.6p1-1          
+pkgconfig               0.15.0-4           
+popt                    1.6.4-4            
+postgresql              7.3.4-2            
+procmail                3.22-8             
+procps                  010801-2           
+proftpd                 1.2.9rc1-3         
+psutils                 1.17-1             
+python                  2.3-2              
+rcs                     5.7-3              
+readline                4.3-5              
+rebase                  2.2-3              
+robots                  2.0-3              
+rpm                     4.1-1              
+rpm-build               4.1-1              
+rpm-doc                 4.1-1              
+rsync                   2.5.6-1            
+ruby                    1.8.0-1            
+rxvt                    2.7.10-3           
+sed                     4.0.7-3            
+sh-utils                2.0.15-4           
+sharutils               4.2.1-3            
+shutdown                1.3-1              
+splint                  3.1.1-1            
+squid                   2.4.STABLE7-1      
+ssmtp                   2.38.7-4           
+sunrpc                  4.0-1              
+swig                    1.3.19-1           
+sysvinit                2.84-4             
+tar                     1.13.25-3          
+tcltk                   20030901-1         
+tcp_wrappers            7.6-1              
+tcsh                    6.12.00-7          
+termcap                 20021106-2         
+terminfo                5.3_20030726-1     
+tetex                   2.0.2-1            
+tetex-base              2.0.2-1            
+tetex-bin               2.0.2-2            
+tetex-devel             2.0.2-2            
+tetex-doc               2.0.2-1            
+tetex-extra             2.0.2-1            
+tetex-tiny              2.0.2-1            
+tetex-x11               2.0.2-2            
+texinfo                 4.2-4              
+texmf                   20020911-1         
+texmf-base              20020911-1         
+texmf-doc               20020911-1         
+texmf-extra             20020911-1         
+texmf-tiny              20020911-1         
+textutils               2.0.21-1           
+tidy                    030201-1           
+tiff                    3.6.0-5            
+time                    1.7-1              
+tin                     1.6.1-1            
+ttcp                    19980512-1         
+ucl                     1.01-1             
+units                   1.77-1             
+unzip                   5.50-5             
+upx                     1.24-1             
+uw-imap                 2002d-1            
+uw-imap-imapd           2002d-1            
+uw-imap-util            2002d-1            
+vim                     6.2-3              
+w32api                  2.3-1              
+wget                    1.8.2-2            
+which                   1.5-2              
+whois                   4.6.2-1            
+WindowMaker             0.80.0-2           
+x2x                     1.27-2             
+Xaw3d                   1.5-1              
+xerces-c                2.3.0-2            
+xerces-c-devel          2.3.0-2            
+xerces-c-doc            2.3.0-2            
+XFree86-base            4.3.0-1            
+XFree86-bin             4.3.0-1            
+XFree86-doc             4.3.0-1            
+XFree86-etc             4.3.0-3            
+XFree86-f100            4.2.0-3            
+XFree86-fcyr            4.2.0-3            
+XFree86-fenc            4.2.0-3            
+XFree86-fnts            4.2.0-3            
+XFree86-fscl            4.2.0-3            
+XFree86-fsrv            4.3.0-1            
+XFree86-html            4.3.0-1            
+XFree86-jdoc            4.3.0-1            
+XFree86-lib             4.3.0-1            
+XFree86-lib-compat      4.3.0-1            
+XFree86-man             4.3.0-1            
+XFree86-nest            4.3.0-1            
+XFree86-prog            4.3.0-4            
+XFree86-prt             4.3.0-1            
+XFree86-ps              4.3.0-1            
+XFree86-startup-scripts 4.2.0-5            
+XFree86-vfb             4.3.0-1            
+XFree86-xserv           4.3.0-6            
+XFree86-xwinclip        4.3.0-1            
+xinetd                  2.3.9-1            
+xpm-nox                 4.2.0-4            
+zip                     2.3-5              
+zlib                    1.1.4-4            
+zsh                     4.0.6-5            
+Use -h to see help about each section

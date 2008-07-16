@@ -1,0 +1,163 @@
+# 1999/1/27
+
+#==================================#
+# my favorite Ayn Rand definitions #
+#==================================#
+# Reference:
+# Ayn Rand, "Introduction to Objectivist Epistemology",
+# Expanded Second Edition, Meridian, 1990.
+
+# NOTE:
+# In order to integrate all of Rand's definitions
+# into a single context, I made the following "changes".
+# 1. These are attributes of concepts:
+#	genus, unit, definition, meaning, referent
+#    To make the definitions easier to understand, they
+#    are stated in the form
+#	attribute/value is ... with ...
+#    For further detail, see KEHOME/define/genus.txt.
+# 2. These are products of man's actions:
+#	concept, knowledge, measurement, percept
+#    Products of actions are denoted by
+#	product := entity do action aobject with differentia
+#    where
+#	":="		may be read as "is the product of" the action
+#	"with ..."	characterizes the action (new in version 2.3)
+# 3. Some differentia were converted to attribute=value format,
+#    but for most I kept Rand's orginal wording.
+
+hfocus = existent
+
+# context
+#=============================================
+# additions to tabula rasa
+kformat = ho
+attribute
+/	faculty		# man do faculty-action
+/	genus
+/	unit
+/	definition
+/	meaning
+/	referent
+action
+/	integrate
+/	grasp
+/	regard
+/	perceive
+object
+/	physical object
+//		physical referent
+//		symbol
+/	mental object
+//		mental integration	# concept
+//		mental grasp		# knowledge
+//		mental symbol		# number
+//		group of sensations	# percept
+//		code			# symbol means referent
+knowledge
+/	art
+/	science
+characteristic
+/	distinguishing characteristic
+/	conceptual common denominator
+
+kformat = ku
+concept isa* existent	# any existent
+concept has genus, unit, definition, meaning, referent
+man has faculty
+man do integrate, grasp, regard, perceive
+
+# corrections to tabula rasa
+knowledge isd mental grasp
+number isd mental symbol
+word isd symbol
+
+
+# definitions
+#=============================================
+concept := man do integrate "two or more units" with
+	"same distinguishing_characteristic(s), \
+		with their particular measurements omitted"
+
+conceptual common denominator is characteristic with
+	"reducible to a unit of measurement",
+	"means by which man differentiates two or more existents \
+		from other existents possessing it"
+# for example
+triangle,rectangle has "number of sides"
+
+consciousness is faculty with
+	"entity do perceive existent"
+
+definition/value is statement with
+	"that identifies the nature of the units subsumed under a concept"
+definition has purpose="distinguish a concept from all other concepts \
+	and thus to keep its units differentiated from all other existents"
+
+differentia/value is the distinguishing characteristic(s) with
+	"which separate the units of the concept being defined \
+	from all other existents subsumed under the genus of the concept"
+
+epistemology is science with
+	purpose="to discover the proper methods of acquiring and validating knowledge"
+
+essential characteristic/value is the distinguishing characteristic with
+	"that explains the greatest number of other characteristics"
+# at view=metaphysics \
+# essential characteristic/value is the distinguishing characteristic with
+#	"that makes possible the greatest number of other characteristics"
+
+genus/value is the wider class of existents with
+	"which share a conceptual common denominator(s) \
+	with the exsistents being defined"
+
+grammar is science with
+	purpose="to deal with the formulation of the proper methods \
+		of verbal expression and communication"
+grammar has goal="the methods of organizing words into sentences"
+
+knowledge := man do grasp "fact of reality" with
+	method="either perceptual observation or \
+		process of reason based on perceptual observation"
+
+language is code with
+	symbol=word,
+	referent=concept,
+	"psycho-epistemological function" = "to convert concepts \
+		into the mental equivalent of concretes"
+
+logic is art with
+	"noncontradictory identification"
+
+measurement := man do identify "quantitative relation" with
+	"established by means of a standard that serves as a unit"
+measurement has purpose="to expand the range of man's consciousness \
+	beyond the perceptual level"
+
+meaning/value is existents with
+	"subsumed under a concept"
+
+number is mental symbol with
+	"integrates units into a single larger unit \
+	(or subdivides a unit into fractions) \
+	with reference to the basic number of 'one', \
+	which is the basic mental symbol of 'unit'"
+
+percept := "the brain of a living organism" do
+	retain,integrate "group of sensations" with automatic
+
+science is knowledge with
+	"organized body of knowledge",
+	"acquired by and communicable to a human consciousness"
+
+similarity is relation with
+	"between two or more existents which possess the same characteristic(s), \
+	but in different measure or degree"
+
+unit/value is existent with
+	"regarded as a separate member of a group \
+	of two or more similar members"
+
+word is symbol with
+	type=visual-auditory,
+	referent="a concept"

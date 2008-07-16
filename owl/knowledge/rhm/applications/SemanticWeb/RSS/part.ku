@@ -1,0 +1,7 @@
+rssfeed haspart
+	channel
+
+channel haspart
+	image,
+	item,  # multiple
+	textinput

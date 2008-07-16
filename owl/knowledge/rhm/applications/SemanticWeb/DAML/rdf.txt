@@ -1,0 +1,66 @@
+# KEHOME/knowledge/application/SemanticWeb/DAML/rdf.txt
+# rhm Nov/7/2002
+
+#=============================================================#
+# KR version of "http://www.w3.org/1999/02/22-rdf-syntax-ns#" #
+#=============================================================#
+
+#<?xml version="1.0"?>
+
+#<RDF
+#  xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#  xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+#<!--
+#  This is the RDF Schema for the RDF data model as described in the
+#  Resource Description Framework (RDF) Model and Syntax Specification
+#  http://www.w3.org/TR/REC-rdf-syntax -->
+
+# RDF - KR aliases
+#=================
+Class is concept
+Instance is unit
+Resource is existent
+Property is attribute
+Container is group
+Alt is enumeration
+Bag is multiset
+Seq is list
+
+# hierarchy
+#==========
+Statement iss statement  # is subclass of KR statement
+value     isu Property   # is instance of
+
+# definition
+#===========
+# Statement ::=
+#	subject has predicate = object
+triple iss relation with
+	label=[predicate, subject, object],
+	format=[Property:1, Resource:2, value:3],
+	meaning={$2 has $1 = $3}
+
+# Properties
+#===========
+Resource has type
+Statement has
+	predicate = Property,
+	subject = Resource,
+	object = value
+
+# comments
+#=========
+type has comment="Identifies the Class of a resource"
+Statement has comment="A triple consisting of a predicate, a subject, and an object."
+Property has comment="A name of a property, defining specific meaning for the property"
+Bag has comment="An unordered collection"
+Seq has comment="An ordered collection"
+Alt has comment="A collection of alternatives"
+predicate has comment="Identifies the property used in a statement when representing the statement in reified form"
+subject has comment="Identifies the resource that a statement is describing when representing the statement in reified form"
+object has comment="Identifies the object of a statement when representing the statement in reified form"
+value has comment="Identifies the principal value (usually a string) of a property when the property value is a structured resource"
+
+#</RDF>

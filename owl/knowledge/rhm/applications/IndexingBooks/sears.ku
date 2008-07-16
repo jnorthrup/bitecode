@@ -1,0 +1,12 @@
+# 3:30 pm 1998/1/10
+
+# Sears classification
+
+term has \
+	BT,	# broader term
+	NT,	# narrower term
+	RT,	# related term
+	PQ,	# parenthetical qualification
+	SN,	# scope notes
+	UF,	# used for
+	SA	# see also

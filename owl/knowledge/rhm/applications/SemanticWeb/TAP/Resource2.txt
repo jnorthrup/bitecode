@@ -1,0 +1,3 @@
+set echo=off,kbmode=tap;
+Resource isc**2 ?;
+exit;

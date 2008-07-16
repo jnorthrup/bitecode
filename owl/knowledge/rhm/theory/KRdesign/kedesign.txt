@@ -1,0 +1,13 @@
+# KEHOME/knowledge/theory/KRdesign/kedesign.txt
+# 11:30 pm 5/2/97
+
+Knowledge Explorer design
+
+Philosophy
+==========
+powerful search capability
+extensive error checks
+flexible input/output
+external relations
+user adjustable parameters
+self knowledge

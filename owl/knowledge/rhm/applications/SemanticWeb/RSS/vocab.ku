@@ -1,0 +1,385 @@
+# KEHOME/knowledge/application/SemanticWeb/RSS/vocab.ku
+# Jan/4/2003
+
+# http://web.resource.org/rss/1.0/spec
+
+tag isp ?xml
+?xml has
+	reference=5.1,
+	definition="\n
+As an XML application, an RSS document is not required to begin \n
+with an XML declaration. As a best practice suggestion and to \n
+further ensure backward compatibility with RSS 0.9 (the specification \n
+for 0.9 required it), this specification recommends doing so. \n
+",
+	Syntax= '<?xml version="1.0"?>',
+	Requirement= "Optional (unless specifying encoding)"
+
+tag isp rdf:RDF
+rdf:RDF has
+	reference=5.2,
+	definition="\n
+The outermost level in every RSS 1.0 compliant document is \n
+the RDF element. The opening RDF tag assocaties the rdf: namespace \n
+prefix with the RDF syntax schema and establishes the RSS 1.0 \n
+schema as the default namespace for the document. \n
+While any valid namespace prefix may be used, document creators \n
+are advised to consider "rdf:" normative. Those wishing to be strictly \n
+backward-compatible with RSS 0.9 must use "rdf:\n
+". 
+	Syntax='<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns="http://purl.org/rss/1.0/">',
+	Requirement="Required exactly as shown, aside from any additional namespace declarations",
+	Model="(channel, image?, item+, textinput?)"
+
+tag isp channel
+channel has
+	reference=5.3,
+	definition="\n
+The channel element contains metadata describing the channel itself, \n
+including a title, brief description, and URL link to the described \n
+resource (the channel provider's home page, for instance). \n
+The {resource} URL of the channel element's rdf:about \n
+attribute must be unique with respect to any other rdf:about \n
+attributes in the RSS document and is a URI which \n
+identifies the channel. Most commonly, this is either \n
+the URL of the homepage being described or a URL where \n
+the RSS file can be found. \n
+",
+	Syntax='<channel rdf:about="{resource}">', 
+	Requirement= Required,
+	Required Attribute(s)= rdf:about,
+	Model='(title, link, description, image?, items, textinput?)',
+	Example="\n
+  <channel rdf:about="http://www.xml.com/xml/news.rss"> \n
+    <title>XML.com</title> \n
+    <link>http://xml.com/pub</link> \n
+    <description> \n
+      XML.com features a rich mix of information and  \n
+services  \n
+      for the XML community. \n
+    </description> \n
+ \n
+    <image  \n
+rdf:resource="http://xml.com/universal/images/xml_tiny.gi \n
+f" /> \n
+ \n
+    <items> \n
+      <rdf:Seq> \n
+        <rdf:li  \n
+resource="http://xml.com/pub/2000/08/09/xslt/xslt.html"  \n
+/> \n
+        <rdf:li  \n
+resource="http://xml.com/pub/2000/08/09/rdfdb/index.html"  \n
+/> \n
+      </rdf:Seq> \n
+    </items> \n
+ \n
+    <textinput rdf:resource="http://search.xml.com" /> \n
+ \n
+  </channel> \n
+"
+
+tag isp title
+title has
+	reference=5.3.1,
+	definition="\n
+A descriptive title for the channel. \n
+",
+	Syntax='<title>{channel_title}</title>',
+	Requirement= Required,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 40 (characters)
+
+tag isp link
+link has
+	reference=5.3.2,
+	definition="\n
+The URL to which an HTML rendering of the channel \n
+title will link, commonly the \n
+parent site's home or news page. \n
+",
+	Syntax='<link>{channel_link}</link>',
+	Requirement= Required,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+tag isp description
+description has
+	reference=5.3.3,
+	definition="\n
+A brief description of the channel's content, function, source, etc. \n
+",
+	Syntax='<description>{channel_description}</description>',
+	Requirement= Required, 
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+tag isp image
+image has
+	reference=5.3.4,
+	definition="\n
+Establishes an RDF association between the optional \n
+image element [5.4] and this particular RSS channel. \n
+The rdf:resource's {image_uri} must be the same as the \n
+image element's rdf:about {image_uri}. \n
+",
+	Syntax='<image rdf:resource="{image_uri}" />',
+	Requirement= Required only if image element present,
+	Model= Empty
+
+tag isp items
+items has
+	reference=5.3.5,
+	definition="\n
+An RDF table of contents, associating the document's items \n
+[5.5] with this particular RSS channel. \n
+Each item's rdf:resource {item_uri} must be the same as the \n
+associated item element's rdf:about {item_uri}. \n
+An RDF Seq (sequence) is used to contain all the items rather \n
+than an RDF Bag to denote item order for rendering and \n
+reconstruction. Note that items appearing in the document \n
+but not as members of the channel level items sequence are \n
+likely to be discarded by RDF parsers. \n
+",
+	Syntax= <items><rdf:Seq><rdf:li resource="{item_uri}" /> ... </rdf:Seq></items> 
+	Requirement= Required
+
+tag isp textinput
+textinput has
+	reference=5.3.6,
+	definition="\n
+Establishes an RDF association between the optional textinput \n
+element [5.6] and this particular RSS channel. \n
+The {textinput_uri} rdf:resource must be the same as \n
+the textinput element's rdf:about {textinput_uri}. \n
+",
+	Syntax='<textinput rdf:resource="{textinput_uri}" />',
+	Requirement= Required only if texinput element present, 
+	Model= Empty
+
+tag isp image
+image has
+	reference=5.4,
+	definition="\n
+An image to be associated with an HTML rendering of the channel. \n
+This image should be of a format supported by the majority of \n
+Web browsers. While the later 0.91 specification allowed \n
+for a width of 1-144 and height of 1-400, convention \n
+(and the 0.9 specification) dictate 88x31. \n
+",
+	Syntax='<image rdf:about="{image_uri}">',
+	Requirement='Optional; if present, must also be present in channel element [5.3.4]',
+	Required Attribute(s)= rdf:about 
+	Model= (title, url, link) 
+	Example="\n
+  <image  \n
+rdf:about="http://xml.com/universal/images/xml_tiny.gif"> \n
+    <title>XML.com</title> \n
+    <link>http://www.xml.com</link> \n
+     \n
+<url>http://xml.com/universal/images/xml_tiny.gif</url> \n
+  </image> \n
+"
+
+tag isp title
+title has
+	reference=5.4.1,
+	definition="\n
+The alternative text ("alt" attribute) associated with \n
+the channel's image tag when rendered as HTML. \n
+",
+	Syntax= <title>{image_alt_text}</title> 
+	Requirement= Required if the image element is present 
+	Model= (#PCDATA) 
+	(Suggested) Maximum Length= 40
+
+tag isp url
+url has
+	reference=5.4.2,
+	definition="\n
+The URL of the image to used in the "src" attribute of the \n
+channel's image tag when rendered as HTML. \n
+",
+	Syntax= <url>{image_url}</url> 
+	Requirement= Required if the image element is present 
+	Model= (#PCDATA) 
+	(Suggested) Maximum Length= 500
+
+tag isp link
+link has
+	reference=5.4.3,
+	definition="\n
+The URL to which an HTML rendering of the channel image \n
+will link. This, as with the channel's title link, is commonly the \n
+parent site's home or news page. \n
+",
+	Syntax= <link>{image_link}</link> 
+	Requirement= Required if the image element is present 
+	Model= (#PCDATA) 
+	Member of= image 
+	(Suggested) Maximum Length= 500
+
+tag isp item
+item has
+	reference=5.5,
+	definition="\n
+While commonly a news headline, with RSS 1.0's modular \n
+extensibility, this can be just about anything: \n
+discussion posting, job listing, software patch -- any object \n
+with a URI. There may be a minimum of one item per RSS document. \n
+While RSS 1.0 does not enforce an upper limit, for backward \n
+compatibility with RSS 0.9 and 0.91, a maximum of fifteen \n
+items is recommended. {item_uri} must be unique with respect to \n
+any other rdf:about attributes in the RSS document and \n
+is a URI which identifies the item. {item_uri} should be identical to \n
+the value of the <link> sub-element of the <item> element, if possible. \n
+",
+	Syntax= <item rdf:about="{item_uri}"> 
+	Requirement= >= 1 
+	Recommendation (for backward compatibility with 0.9x)= 1-15 
+	Required Attribute(s)= rdf:about 
+	Model= (title, link, description?) 
+	Example="\n
+  <item  \n
+rdf:about="http://xml.com/pub/2000/08/09/xslt/xslt.html"> \n
+    <title>Processing Inclusions with XSLT</title> \n
+     \n
+<link>http://xml.com/pub/2000/08/09/xslt/xslt.html</link> \n
+    <description> \n
+     Processing document inclusions with general XML  \n
+tools can be  \n
+     problematic. This article proposes a way of  \n
+preserving inclusion  \n
+     information through SAX-based processing. \n
+    </description> \n
+  </item> \n
+"
+
+tag isp title
+title has
+	reference=5.5.1,
+	definition="\n
+The item's title. \n
+",
+	Syntax='<title>{item_title}</title>',
+	Requirement= Required ,
+	Model= (#PCDATA) ,
+	(Suggested) Maximum Length= 100
+
+tag isp link
+link has
+	reference=5.5.2,
+	definition="\n
+The item's URL. \n
+",
+	Syntax= <link>{item_link}</link>,
+	Requirement= Required,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+tag isp description
+description has
+	reference=5.5.3,
+	definition="\n
+A brief description/abstract of the item. \n
+",
+	Syntax='<description>{item_description}</description>',
+	Requirement= Optional,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+tag isp textinput
+textinput has
+	reference=5.6,
+	definition="\n
+The textinput element affords a method for submitting \n
+form data to an arbitrary URL -- usually located at \n
+the parent website. The form processor at the receiving end \n
+only is assumed to handle the HTTP GET method. \n
+The field is typically used as a search box or subscription \n
+form -- among others. While this is of some use \n
+when RSS documents are rendered as channels (see \n
+MNN) and accompanied by human readable title and description, \n
+the ambiguity in automatic determination of meaning of this \n
+overloaded element renders it otherwise not particularly useful. \n
+RSS 1.0 therefore suggests either deprecation or augmentation \n
+with some form of resource discovery of this element in future \n
+versions while maintaining it for backward compatiblity with RSS 0.9. \n
+{textinput_uri} must be unique with respect to any other rdf:about \n
+attributes in the RSS document and is a URI which identifies \n
+the textinput. {textinput_uri} should be identical to the value \n
+of the <link> sub-element of the <textinput> element, if possible. \n
+",
+	Syntax='<textinput rdf:about="{textinput_uri}">',
+	Requirement='Optional; if present, must also be present in channel element [5.3.6]',
+	Required Attribute(s)= rdf:about,
+	Model='(title, description, name, link)',
+	Example="\n
+  <textinput rdf:about="http://search.xml.com"> \n
+    <title>Search XML.com</title> \n
+    <description>Search XML.com's XML  \n
+collection</description> \n
+    <name>s</name> \n
+    <link>http://search.xml.com</link> \n
+  </textinput> \n
+"
+
+tag isp title
+title has
+	reference=5.6.1,
+	definition="\n
+A descriptive title for the textinput field. For example: \n
+"Subscribe" or "Search!" \n
+",
+	Syntax='<title>{textinput_title}</title>',
+	Description= Textinput title,
+	Requirement= Required if textinput,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 40
+
+tag isp description
+description has
+	reference=5.6.2,
+	definition="\n
+A brief description of the textinput field's purpose. \n
+For example: "Subscribe to our newsletter for..." \n
+or "Search our site's archive of..." \n
+",
+	Syntax='<description>{textinput_description}</description>',
+	Requirement= Required if textinput,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 100
+
+tag isp name
+name has
+	reference=5.6.3,
+	definition="\n
+The text input field's (variable) name. \n
+",
+	Syntax='<name>{textinput_varname}</name>',
+	Requirement= Required if textinput,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+tag isp link
+link has
+	reference=5.6.4,
+	definition="\n
+The URL to which a textinput submission will be directed \n
+(using GET). \n
+",
+	Syntax='<link>{textinput_action_url}</link>',
+	Description= Textinput form action URL,
+	Requirement= Required if textinput,
+	Model= (#PCDATA),
+	(Suggested) Maximum Length= 500
+
+
+#####6. Modules
+#####Namespace-based modularization affords RSS 1.0 compartmentalized extensibility. 
+#####The only modules that ship "in the box" with RSS 1.0 are Dublin Core and 
+#####Syndication, Consult the appropriate module documentation for further information. 
+#####Refer to RSS 1.0 Modules for module creation guidelines and registered core RSS 
+#####1.0 modules. 
+#####Some examples of module usage may be found in the Examples section below. 

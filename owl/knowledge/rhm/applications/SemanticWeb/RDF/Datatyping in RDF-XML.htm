@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0148)file://C:\Documents%20and%20Settings\Dick%20McCullough\Local%20Settings\Temporary%20Internet%20Files\Content.IE5\GTIZOX2N\datatyping-in-RDF-XML.html -->
+<!-- saved from url=(0022)http://internet.e-mail --><HTML lang=en-US 
+xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Datatyping in RDF/XML</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1126" name=GENERATOR></HEAD>
+<BODY>
+<H2 align=center>Datatyping in RDF/XML</H2>
+<H3><A name=intro></A>Introduction</H3>
+<P>The original RDF <A href="http://www.w3.org/TR/REC-rdf-syntax/">Model and 
+Syntax</A> specification states a property value (i.e. the <EM>object</EM> of a 
+triple) may be denoted by any of the following:</P>
+<OL>
+  <LI>Literal (a simple untyped string that is self-denoting) 
+  <LI>Blank node (also known as anonymous nodes) 
+  <LI>A URI Reference per (<A 
+  href="http://www.ietf.org/rfc/rfc2396.txt">RFC2396</A>) 
+  <LI>XML literal (this is a special case of Literal; it is supported 
+  syntactically via the <B>rdf:parseType="Literal"</B> attribute/value pair) 
+  </LI></OL>
+<P>Note, however, the Model and Syntax specification and the (2000-03-27) <A 
+href="http://www.w3.org/TR/2000/CR-rdf-schema-20000327/">RDF Schema Candidate 
+Recommendation</A> do not provide any direct support for datatyping - that is, 
+they do not define a way to denote datatype values (i.e. no mechanism to state 
+lexical constraints for a property's values). The only loosely-related 
+mechanisms are the <B>rdfs:range</B> and <B>rdfs:domain</B> properties but they 
+are designed to place <B>rdfs:Class</B> constraints on a property and do not 
+provide any semantics for lexical constraints. Note the <B>rdfs:range</B> of 
+<B>rdfs:range</B> is <B>rdfs:Class</B> and <EM>not </EM>a datatype.</P>
+<H3><A name=changes></A>Datatyping Support in RDF</H3>
+<P>To facilitate datatyping in RDF, the new RDF specifications (see <A 
+href="file:///C:/Documents%20and%20Settings/Dick%20McCullough/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/GTIZOX2N/datatyping-in-RDF-XML.html#seealso">More 
+Information</A>) allow a property value to be a <EM><A 
+href="http://www.w3.org/TR/rdf-concepts/#dfn-typed-literal">typed 
+literal</A></EM>. A property has a <EM>typed literal</EM> value if and only if 
+the property element in the RDF/XML has a <B>rdf:datatype</B> attribute. For 
+example a property for a person's age could have a <B>rdf:datatype</B> attribute 
+with a value of something like <B><A 
+href="http://www.w3.org/TR/xmlschema-2/#nonNegativeInteger">xsd:nonNegativeInteger</A></B>. 
+Thus with the new specifications, a property's value may be denoted by any of 
+the values listed above but it may also be denoted by the following:</P>
+<OL start=5>
+  <LI>A typed literal (denotes a datatype value) </LI></OL>
+<P>Additionally, the Model and Syntax specification is unclear about whether a 
+<B>rdfs:Literal</B> is a sub-class of a <B>rdfs:Resource</B>. The new 
+specifications have clarified this relationship: <B>rdfs:Literal</B> is a 
+sub-class of <B>rdfs:Resource</B>. Consequently, a property's value is 
+<EM>always</EM> a resource.</P>
+<H3><A name=key-concepts></A>Key Concepts</H3>
+<P>Note the following key concepts regarding datatyping and RDF:</P>
+<UL>
+  <LI>RDF has no built-in or native datatypes of its own. Thus RDF does not 
+  define datatypes for abstractions such as integers or real numbers. One 
+  exception, however, is the new <A 
+  href="file:///C:/Documents%20and%20Settings/Dick%20McCullough/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/GTIZOX2N/">rdf:XMLLiteral 
+  datatype</A> (defined for XML literal property values). 
+  <LI>RDF does not define any mechanisms for <EM>creating</EM> a datatype. 
+  <LI>RDF Schema's <B>rdfs:Datatype</B> class (<A 
+  href="file:///C:/Documents%20and%20Settings/Dick%20McCullough/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/GTIZOX2N/datatyping-in-RDF-XML.html#create-datatype">described 
+  below</A>) is used to <EM>declare</EM> (not <EM>create</EM>) a datatype. 
+  <LI>RDF provides a mechanism by which a datatype is associated with a lexical 
+  form. In RDF/XML this is done by placing a <B>rdf:datatype</B> attribute on 
+  the property element enclosing the lexical form. 
+  <LI>RDF defines no mechanism for verifying that the value of a 
+  <B>rdf:datatype</B> attribute actually denotes a datatype. However, the use of 
+  the <B>rdf:datatype</B> attributes constitutes an (implicit) assertion that 
+  the resource denoted by the attribute value is in fact a member of 
+  <B>rdfs:Datatype</B>. 
+  <LI>RDF does not state how an application should verify that the lexical form 
+  (the data content of the property element) is a valid lexical form for the 
+  datatype specified by the <B>rdf:datatype</B> attribute and hence represents 
+  an actual datatype value. 
+  <LI>Although XML Schema is used illustratively in the RDF specifications, 
+  datatypes from other systems - which conform to the characteristics defined 
+  for instances of <B>rdfs:Datatype</B> - may be used. 
+  <LI>Since a datatype from any system may be used, a processor may encounter 
+  datatypes it does not support (i.e. the semantics and/or lexical space for the 
+  datatype are not known). </LI></UL>
+<H3><A name=xml-schema></A>Using XML Schema Datatypes in RDF</H3>
+<P>The following fragment of RDF/XML shows the usage of XML Schema's <EM><A 
+href="http://www.w3.org/TR/xmlschema-2/#nonNegativeInteger">nonNegativeInteger</A></EM> 
+datatype for the <EM>ex:age</EM> property:</P><PRE> &lt;rdf:Description rdf:about="http://www.example.org/index.html"&gt;
+   &lt;ex:age rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"&gt;23&lt;/ex:age&gt;
+ &lt;/rdf:Description&gt;
+</PRE>
+<P>There are several important things to note regarding using XML Schema 
+datatypes in RDF/XML:</P>
+<UL>
+  <LI>The base URI <EM>http://www.w3.org/2001/XMLSchema</EM> must be used (per 
+  <A href="http://www.w3.org/TR/xmlschema-2/#namespaces">XML Schema's namespace 
+  considerations</A>) to avoid interoperability problems. 
+  <LI>The value of a <B>rdf:datatype</B> attribute must be a <A 
+  href="http://www.w3.org/TR/rdf-concepts/#section-Graph-URIref">RDF URI 
+  Reference</A> for the datatype. 
+  <LI>If an application must operate on a datatype value for a typed literal, 
+  the application is responsible for verifying the property value matches the 
+  lexical space defined by the datatype. </LI></UL>
+<P>An application is free to define its own datatypes in any language(s). 
+However, XML Schema is expected to be a popular choice for applications of 
+RDF.</P>
+<H3><A name=create-datatype></A>Creating a Datatype Using XML Schema</H3>
+<P>The following XML Schema fragment defines two datatypes: the <EM>Boolean</EM> 
+datatype is constrained to strings with the values <EM>Yes</EM> or <EM>No</EM>; 
+the <EM>Dimension</EM> datatype is constrained to a non-negative integer 
+followed by the 'x' character followed by another non-negative integer.</P><PRE> &lt;xsd:simpleType name="Boolean"&gt;
+   &lt;xsd:restriction base="xsd:anySimpleType"&gt;
+     &lt;xsd:enumeration value="Yes"/&gt;
+     &lt;xsd:enumeration value="No"/&gt;
+   &lt;/xsd:restriction&gt;
+ &lt;/xsd:simpleType&gt;
+
+ &lt;xsd:simpleType name="Dimension"&gt;
+   &lt;xsd:restriction base="xsd:anySimpleType"&gt;
+     &lt;xsd:pattern value="[0-9]+x[0-9]+"/&gt;
+   &lt;/xsd:restriction&gt;
+ &lt;/xsd:simpleType&gt;
+</PRE>
+<P>The following RDF/XML fragment shows the usage of these two datatypes 
+(assuming the entity reference <EM>prf-dt</EM> is appropriately defined):</P><PRE> &lt;ex:SoundEnabled rdf:datatype="&amp;prf-dt;#Boolean"&gt;Yes&lt;/ex:SoundEnabled&gt;
+
+ &lt;ex:ScreenSize rdf:datatype="&amp;prf-dt;#Dimension"&gt;160x160&lt;/ex:ScreenSize&gt;
+</PRE>
+<P>Although it is not a requirement, it is recommended that datatypes created in 
+XML Schema (or any other language) to have <B>rdfs:Datatype</B> statements in 
+the relevant RDF schema. The following RDF schema fragment contains such 
+definitions for the <EM>Boolean</EM> and <EM>Dimension</EM> datatypes created 
+above:</P><PRE> &lt;rdfs:Datatype rdf:about="&amp;prf-dt;Boolean"&gt;
+   &lt;rdfs:comment xml:lang="en"&gt;...&lt;/rdfs:comment&gt;
+   &lt;rdfs:subClassOf rdf:resource="&amp;xsd;boolean"/&gt;
+ &lt;/rdfs:Datatype&gt;
+
+ &lt;rdfs:Datatype rdf:about="&amp;prf-dt;Dimension"&gt;
+   &lt;rdfs:comment xml:lang="en"&gt;...&lt;/rdfs:comment&gt;
+   &lt;rdfs:subClassOf rdf:resource="&amp;xsd;anySimpleType"/&gt;
+ &lt;/rdfs:Datatype&gt;
+</PRE>
+<P>Note that since <B>rdfs:Datatype</B> is a subclass of <B>rdfs:Literal</B>, a 
+plain/untyped literal denotes an instance of <B>rdfs:Literal</B> and not an 
+instance of <B>rdfs:Datatype</B>. The interpretation of untyped literals is 
+fixed - they denote themselves.</P>
+<P>If a property definition in a RDF schema contains a <B>rdfs:range</B> 
+property whose <B>rdf:resource</B> attribute value is a datatype and an instance 
+of this property (i.e. a property element in RDF/XML) does <EM>NOT</EM> contain 
+an appropriate <B>rdf:datatype</B> attribute then the property element's value 
+is considered an <EM>untyped</EM> literal. A property element <EM>MUST</EM> 
+contain a <B>rdf:datatype</B> attribute for its value to be a <EM>typed</EM> 
+literal. This requirement holds even if the property's definition in a schema 
+contains a <B>rdfs:range</B> property whose value is a datatype.</P>
+<H3><A name=seealso></A>More Information</H3>
+<P>As of this writing the <A href="http://www.w3.org/2001/sw/RDFCore/">RDF Core 
+Working Group</A> has published several Working Drafts that contain information 
+about datatyping in RDF. See the following documents and the sections listed for 
+more information:</P>
+<UL>
+  <LI><A href="http://www.w3.org/TR/rdf-primer/">RDF Primer</A> 
+  <UL>
+    <LI><A href="http://www.w3.org/TR/rdf-primer/#typedliterals">Typed 
+    Literals</A> 
+    <LI><A href="http://www.w3.org/TR/rdf-primer/#basicprinciples">Basic 
+    Principles</A> </LI></UL>
+  <LI><A href="http://www.w3.org/TR/rdf-syntax-grammar/">RDF/XML Syntax 
+  Specification (Revised)</A>: 
+  <UL>
+    <LI><A 
+    href="http://www.w3.org/TR/rdf-syntax-grammar/#section-Syntax-datatyped-literals">Typed 
+    Literals - rdf:datatype</A> </LI></UL>
+  <LI><A href="http://www.w3.org/TR/rdf-schema/">RDF Vocabulary Description 
+  Language 1.0: RDF Schema</A> 
+  <LI><A href="http://www.w3.org/TR/rdf-concepts/">RDF Concepts and Abstract 
+  Syntax</A>: 
+  <UL>
+    <LI><A 
+    href="http://www.w3.org/TR/rdf-concepts/#section-Datatypes">Datatypes</A> 
+    <LI><A 
+    href="http://www.w3.org/TR/rdf-concepts/#section-Literals">Literals</A> 
+  </LI></UL>
+  <LI><A href="http://www.w3.org/TR/rdf-mt/">RDF Semantics</A>: 
+  <UL>
+    <LI><A href="http://www.w3.org/TR/rdf-mt/#dtype_interp">Datatype 
+    interpretations</A> </LI></UL></LI></UL>
+<HR>
+
+<P><B>Last Modified</B>: 2002-12-23<BR><B>Author</B>: <A 
+href="mailto:art.barstow@nokia.com">Art Barstow</A> <BR><A 
+title="RDF Resource Description&#13;&#10;  Framework" 
+href="http://www.w3.org/RDF/"><IMG alt="RDF Resource Description Framework Icon" 
+src="Datatyping in RDF-XML_files/rdf_w3c_icon.48" border=0></A> 
+</P></BODY></HTML>

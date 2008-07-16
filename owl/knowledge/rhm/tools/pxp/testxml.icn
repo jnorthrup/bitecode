@@ -1,0 +1,33 @@
+#
+# $Id: testxml.icn,v 1.1.1.1 2002/01/12 23:00:41 rparlett Exp $
+#
+# This file is in the public domain.
+#
+# Author: Robert Parlett (parlett@dial.pipex.com)
+#
+
+import xml
+
+procedure main(a)
+   p := XmlParser()
+
+   every e := !a do {
+      f := open(e) | stop("couldnt open" || e)
+      s := ""
+      every s ||:= !f || "\n"
+      close(f)
+      if d := p.parse(s) then {
+         write(d.format())
+         d.print_structure()
+         d.show_entities()
+         d.show_element_declarations()
+         d.show_notation_declarations()
+         d.show_attribute_lists()
+         d.show_id_attributes()
+      } else {
+         write("couldnt parse\n" || p.get_err())
+      }
+
+   }
+end
+

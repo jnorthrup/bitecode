@@ -1,0 +1,103 @@
+
+#========================#
+# axiomatic propositions #
+#                        #
+# Richard H. McCullough  #
+# Jun/27/2002            #
+#========================#
+#
+# Reference:
+# Ayn Rand, "Introduction to Objectivist Epistemology",
+# Expanded Second Edition, Meridian, 1990.
+#
+#
+# Rand describes three axiomatic concepts:
+# existence, identity, consciousness.
+# Her discussion can be neatly summarized
+# using KR:
+
+	existent is existent
+	entity, characteristic isa existent
+	entity has characteristic
+
+	man isa entity
+	man has consciousness
+	man do sense od existent done
+
+# Adding in the implied propositions (with some
+# refinement of characteristic)
+
+	attribute, action, relation isa characteristic
+	consciousness isa attribute
+	sense isa action
+	"is", "isa" isa relation
+	"has", "do od done" isa relation
+
+# we get the total set of axiomatic propositions.
+# This total context, or "view", can be conveniently
+# displayed as an entity-characteristic-proposition
+# hierarchy:
+
+    existent
+        entity
+            man
+        characteristic
+            attribute
+                consciousness
+            action
+                sense
+            relation
+		"is"
+                "has"
+		"do od done"
+		"isa"
+        proposition
+            { entity has characteristic }
+            { man has consciousness }
+            { man do sense od existent done }
+
+
+# Note that the hierarchy
+
+	existent
+	    entity
+	    characteristic
+
+# is equivalent to the three propositions
+
+	{ existent is existent }
+	{ entity isa existent }
+	{ characteristic isa existent }
+
+# Seeing where Rand's axiomatic concepts of existence, identity
+# and consciousness fit into the picture is more difficult.
+# From my current perspective, I consider those three concepts
+# to be different views of the set of axiomatic propositions.
+# Here are my best interpretations of Rand's three views
+# (leaving out the implied propositions):
+
+	at view=existence {
+	    existent
+		entity
+		characteristic
+		{ entity has characteristic }
+	}
+
+	at view=identity {
+	    existent
+		{ entity isa existent }
+		{ characteristic isa existent }
+		{ entity has characteristic }
+	}
+
+	at view=consciousness {
+		man isa entity
+		man has consciousness
+		man do sense od existent done
+	}
+
+When Rand says that
+
+	existence is identity
+
+she means that these two views subsume the same propositions.

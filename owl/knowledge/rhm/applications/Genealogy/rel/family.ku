@@ -1,0 +1,41 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/rel/family.ku
+# Aug/11/1999 Mar/19/2007
+
+# read family history data
+#   For faster response, comment out files you don't need.
+#   Use group.mkr or lattice.mkr to create family lattice.
+
+echo := off;
+do clock od "loading family history" done;
+do read from ../bin/family.env done;  # set db/view directory and kbmode 
+
+do read from birth.rel done;
+do read from alias.rel done;
+do read from aka.rel done;
+do read from death.rel done;
+do read from marriage.rel done;
+do read from divorce.rel done;
+do read from child.rel done;
+
+do read from note.rel done;
+do read from school.rel done;
+do read from work.rel done;
+do read from address.rel done;
+do read from phone.rel done;
+
+do clock od "finished family history" done;
+
+do clock od "checking family history" done;
+do check od person,family done;
+do check od unknown done;
+##do simplify lattice od person done;
+do check od person,family done;
+do check done;
+
+do clock od "finished checking family history" done;
+echo := on;
+
+##exit;
+
+# </xmp></html>

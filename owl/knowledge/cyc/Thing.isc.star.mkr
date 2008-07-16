@@ -1,0 +1,10 @@
+# KEHOME/knowledge/cyc/Thing.isc.star.mkr
+# Feb/18/2007
+
+# complete Thing subhierarchy
+do clock od "begin" done;
+
+Thing isc* ?;
+
+do clock od "end" done;
+exit;

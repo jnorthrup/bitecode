@@ -1,0 +1,37 @@
+# directory unicon/ipl/procs
+# grep procedure io.icn
+
+procedure ClearOut()			#: remove contents of output buffer
+procedure DOS_FileParts(filename)	#: parse DOSfile name
+procedure Flush()			#: flush output buffer
+procedure GetBack()			#: get back line written
+procedure LookAhead()			#: look at next line
+procedure PutBack(s)			#: put back line read
+procedure Read()			#: read a line in buffered mode
+procedure ReadAhead(n)			#: read ahead
+procedure Write(s)			#: write in buffered mode
+procedure components(s,separator)	#: get components of file name
+procedure dopen(s)			#: open file on DPATH
+procedure dosdir( diropts )		#: process DOS directory
+procedure dosdir_62()
+procedure dosdir_xx()
+procedure dosdirlist(			#: get list of DOS directory
+procedure dosfiles(pfn)			#: DOS file names
+procedure dosname(namein)		#: convert file name to DOS format
+procedure dpath(s)			#: full path to file on DPATH
+procedure exists(name)			#: test file existence
+procedure directory(name)		#: succeed if name is a directory
+procedure extract_name(fnloc)
+procedure fcopy(fn1,fn2)		#: copy file
+procedure filelist(spec, x)		#: get list of files
+procedure filetext(f)			#: read file into list
+procedure getdrive()			#: get current DOS drive
+procedure getwd(drive)			#: get DOS working directory
+procedure pathfind(fname, path)		#: find file on path
+procedure pathload(fname, entry)	#: load C function from $FPATH
+procedure readline(file)		#: assemble backslash-continued lines
+procedure splitline(file,line,limit)	#: split line into pieces
+procedure suffix(s,separator)		#: find suffix of file name
+procedure tail(s,separator)		#: find tail of file name 
+procedure tempfile(			#: get temporary file
+procedure tempname(			#: get temporary file name

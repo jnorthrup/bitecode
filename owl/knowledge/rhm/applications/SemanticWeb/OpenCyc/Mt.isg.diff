@@ -1,0 +1,59 @@
+<html><pre>
+$ wc *isg*
+     107     215    2698 Mt.isg.txt
+      70     141    1840 simplified.Mt.isg.txt
+     177     356    4538 total
+$ lf *isg*
+Mt.isg.txt              simplified.Mt.isg.txt
+$ diff *isg*
+4,7d3
+< /  #$CodeOfConduct;
+< //    #$FormalCOC;
+< ///      #$GovernmentCOC;
+< ////        #$LegalCode;
+9,10d4
+< /  #$DataMicrotheory;
+< //    #$SourceMicrotheory;
+15d8
+< /  #$EnglishLexicalMicrotheory;
+17,22d9
+< /  #$FormalCOC;
+< //    #$GovernmentCOC;
+< ///      #$LegalCode;
+< /  #$GeneralMicrotheory;
+< /  #$GovernmentCOC;
+< //    #$LegalCode;
+27d13
+< /  #$LegalCode;
+31,36d16
+< /  #$Obligation;
+< //    #$CodeOfConduct;
+< ///      #$FormalCOC;
+< ////        #$GovernmentCOC;
+< /////          #$LegalCode;
+< //    #$WorkAgreement;
+55,59d34
+< //    #$AuthorizedAgreement;
+< ///      #$Account;
+< ////        #$FinancialAccount;
+< ///      #$Stock;
+< ///      #$Warranty;
+62,66d36
+< //    #$FinancialAccount;
+< //    #$LegalAgreement;
+< ///      #$Account;
+< ////        #$FinancialAccount;
+< //    #$Memory;
+71,72d40
+< //    #$OrganizationPolicy;
+< //    #$Permission;
+74,76d41
+< //    #$SalesAgreement;
+< //    #$SensoryInformation;
+< //    #$Stock;
+79d43
+< //    #$Warranty;
+103d66
+< /  #$TemplateParsingMicrotheory;
+$
+</pre></html>

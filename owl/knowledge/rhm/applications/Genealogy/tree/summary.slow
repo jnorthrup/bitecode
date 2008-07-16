@@ -1,0 +1,222 @@
+# clock <1999/07/23 14:11:55> # finished opening files
+# input  file <SUMMARY.KU>
+# output file <summary.out>
+# error  file <summary.err>
+# log    file <summary.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Windows Icon version 9.3.1  1997/11/18
+# INFO: kversion = Knowledge Explorer version 3.8  1999/7/23
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/07/23 14:11:57> # finished loading tabula_rasa
+# command <!read kb/init.ku >
+##### Loading tabula_rasa definitions #####
+##### Loading ke definitions #####
+# clock <1999/07/23 14:12:02> # finished reading definitions
+# clock <1999/07/23 14:12:02> # finished menu
+# command <!read SUMMARY.KU >
+# assignment <charformat = column>
+# command <!clock "read,parse,process infon" >
+# clock <1999/07/23 14:12:02> # read,parse,process infon
+# command <!read family.ku >
+# command <!psize person >
+9 # !psize person
+# assignment <hfocus = [ person , newstatement , newword ]>
+# clock <1999/07/23 14:12:23> # generate summary using !dump
+#------------------------------------------------#
+Bob McCullough isa person
+Bob McCullough has ctype = entity
+Bob McCullough has 
+    birthday=1938,
+    birthplace=GA/Ft. Benning,
+    parent=[Kay Stecker,
+    Homer McCullough],
+    sex=male
+Bob McCullough isin 
+    r_birth=r_birth_299
+#------------------------------------------------#
+Carl Cates isa person
+Carl Cates has ctype = entity
+Carl Cates has 
+    child=Steven Cates,
+    exspouse=Pauline Neal,
+    spouse=[]
+at space=CA, time=1955, view=v_input {
+Carl Cates,
+    Pauline Neal do adopt = adopt_317 (Steven Cates) ;
+}
+at space=NV, time=1977, view=v_input {
+Carl Cates,
+    Pauline Neal do divorce = divorce_347 ;
+}
+Carl Cates isin 
+    r_adopt=r_adopt_312,
+    r_divorce=r_divorce_345
+#------------------------------------------------#
+Dick McCullough isa person
+Dick McCullough is person with 
+    uniquename=Dick McCullough
+Dick McCullough has ctype = entity
+Dick McCullough has gtype = person
+Dick McCullough has 
+    birthday=1936,
+    birthplace=GA/Ft. Benning,
+    city=Pioneer,
+    company=[self,
+    Bell Labs],
+    country=USA,
+    degree=[SMEE,
+    Valedictorian,
+    SBEE,
+    PhDEE],
+    email=rhm@cdepot.net,
+    fax=209-295-1365,
+    gtype=person,
+    job=[electrical engineer,
+    knowledge engineer],
+    nickname=Dick,
+    othername=[Dr. Richard H. McCullough,
+    Richard Homer McCullough],
+    parent=[Kay Stecker,
+    Homer McCullough],
+    phone=209-295-1365,
+    prefername=Dick McCullough,
+    sex=male,
+    spouse=Pauline Neal,
+    state=CA,
+    street=26459 Parkwood Drive,
+    uniquename=Dick McCullough,
+    zip=95666-9586
+at space=KY/Ft. Knox, time=1954, view=v_input {
+Dick McCullough do graduate = graduate_378 from school = Ft. Knox High School with degree = [ Valedictorian ];
+}
+at space=MA/Cambridge, time=1960, view=v_input {
+Dick McCullough do graduate = graduate_384 from school = MIT with degree = [ SBEE,SMEE ];
+}
+at space=NY/Brooklyn, time=1967, view=v_input {
+Dick McCullough do graduate = graduate_390 from school = Polytechnic University with degree = [ PhDEE ];
+}
+at space=Internet/CNET download.com, time=1997/5/28, view=v_input {
+Dick McCullough do list = list_357 (Knowledge Explorer 1.2) ;
+}
+at space=NV/Stateline, time=1984, view=v_input {
+Pauline Neal,
+    Dick McCullough do marry = marry_336 ;
+}
+at space=NJ-IL-CA, time=1960, view=v_input {
+Dick McCullough do work for = work for_402 (Bell Labs) from time = 1960 to time = 1989;
+}
+at space=CA/Pioneer, time=1996, view=v_input {
+Dick McCullough do work for = work for_407 (self) from time = 1996 to time = unknown;
+}
+Dick McCullough isin 
+    r_address=r_address_369,
+    r_birth=r_birth_295,
+    r_marriage=r_marriage_334,
+    r_note=r_note_355,
+    r_phone=r_phone_363,
+    r_school=r_school_388,
+    r_work=r_work_404
+#------------------------------------------------#
+Homer McCullough isa person
+Homer McCullough has ctype = entity
+Homer McCullough has 
+    child=[Bob McCullough,
+    Dick McCullough]
+Homer McCullough isin 
+    r_birth=r_birth_299
+#------------------------------------------------#
+Jane Doe isa person
+Jane Doe has ctype = entity
+Jane Doe has 
+    birthday=1933,
+    birthplace=Kansas,
+    parent=unknown,
+    sex=female
+Jane Doe isin 
+    r_birth=r_birth_303
+#------------------------------------------------#
+Kay Stecker isa person
+Kay Stecker has ctype = entity
+Kay Stecker has 
+    child=[Bob McCullough,
+    Dick McCullough]
+Kay Stecker isin 
+    r_birth=r_birth_299
+#------------------------------------------------#
+Pauline Neal isa person
+Pauline Neal is person with 
+    uniquename=Pauline Neal
+Pauline Neal has ctype = entity
+Pauline Neal has gtype = person
+Pauline Neal has 
+    child=Steven Cates,
+    deathday=1996/9/17,
+    deathplace=CA/Pioneer,
+    exspouse=Carl Cates,
+    gtype=person,
+    nickname=Pauline,
+    othername=[Althea Pauline Neal,
+    Pauline Cates],
+    prefername=Pauline McCullough,
+    spouse=Dick McCullough,
+    uniquename=Pauline Neal
+at space=CA, time=1955, view=v_input {
+Carl Cates,
+    Pauline Neal do adopt = adopt_317 (Steven Cates) ;
+}
+at space=CA/Pioneer, time=1996/9/17, view=v_input {
+Pauline Neal do die = die_326 ;
+}
+at space=NV, time=1977, view=v_input {
+Carl Cates,
+    Pauline Neal do divorce = divorce_347 ;
+}
+at space=NV/Stateline, time=1984, view=v_input {
+Pauline Neal,
+    Dick McCullough do marry = marry_336 ;
+}
+Pauline Neal isin 
+    r_adopt=r_adopt_312,
+    r_death=r_death_324,
+    r_divorce=r_divorce_345,
+    r_marriage=r_marriage_334
+#------------------------------------------------#
+Steven Cates isa person
+Steven Cates has ctype = entity
+Steven Cates has 
+    adopted=[],
+    birthday=1955,
+    birthplace=CA,
+    parent=[Carl Cates,
+    Pauline Neal],
+    sex=male
+Steven Cates isin 
+    r_adopt=r_adopt_312
+#------------------------------------------------#
+unknown isa time,
+    existent,
+    person
+unknown is time,
+    existent,
+    person with 
+    ~identified=[]
+unknown has ctype = unknown
+unknown has gtype = existent
+unknown has 
+    child=Jane Doe,
+    gtype=existent,
+    ~identified=[]
+unknown isin 
+    r_birth=r_birth_303,
+    r_work=r_work_404
+#------------------------------------------------#
+# clock <1999/07/23 14:12:23> # done
+# command <!exit [] >
+# clock <1999/07/23 14:12:24> # finished reading knowledge
+
+##### Goodbye. #####
+# clock <1999/07/23 14:12:24> # closing files

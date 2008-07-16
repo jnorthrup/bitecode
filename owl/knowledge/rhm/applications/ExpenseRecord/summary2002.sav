@@ -1,0 +1,301 @@
+# input  file <summary.ku>
+# output file <summary.out>
+# error  file <summary.err>
+# log    file <summary.log>
+# INFO: kehome = C:/Program Files/ke
+# INFO: keview = C:/Program Files/ke/view
+# INFO: systype = MS Windows
+# INFO: iversion = Unicon Version 10.0 (beta-3).  August 24, 2002
+# INFO: kversion = Knowledge Explorer version 4.5  December 22, 2002
+# INFO: wexplore = C:/WINDOWS/EXPLORER.EXE
+# clock <2002/12/22 13:39:49> # finished opening files
+
+##### Hello. I am ke. #####
+##### Please wait ... loading knowledge base ... #####
+# INFO: new_knit: creating newview(string[11]) <tabula_rasa>
+##### read_knit kb/tabrasa.ku #####
+# 0 errors found in hierarchy tabhi
+# 0 errors found in unithierarchy tabprim
+# 0 errors found in file kb/tabrasa.ku
+##### read_knit kb/ke.ku #####
+# 0 errors found in hierarchy kehi
+# 0 errors found in unithierarchy keprim
+##### read_knit kb/kvalue.ku #####
+# 0 errors found in file kb/kvalue.ku
+# 0 errors found in file kb/ke.ku
+# clock <2002/12/22 13:39:51> # finished loading tabula_rasa
+# command <do read from kb/init.ku done>
+##### read_knit kb/init.ku #####
+##### read_knit kb/tabrasa.def #####
+# 0 errors found in file kb/tabrasa.def
+##### read_knit kb/ke.def #####
+# 0 errors found in file kb/ke.def
+# clock <2002/12/22 13:39:59> # finished loading definitions
+# 0 errors found in file kb/init.ku
+
+##### Ready. #####
+##### Do you have new knowledge? #####
+##### Do you have questions? #####
+##### For KE input menu enter: do menu done #####
+# command <do read from summary.ku done>
+##### read_knit summary.ku #####
+# s_html << HTML >>
+# s_html << XMP >>
+# command <do read from expense.rel done>
+##### read_knit expense.rel #####
+# s_html << HTML >>
+# s_html << XMP >>
+# statement <expense isa object>
+# statement <r_expense is relation with label = [ date,cost,receipt,payee,category,note ],format = [ time:1,cost:2,receipt:3,payee:4,category:5,note:6 ],automatic = ISA,meaning = { x := do unique od $5 done ; $x isa expense ; $x has date = $1,cost = $2,receipt = $3,payee = $4,type = $5,note = $6 ; y := do year od $1 done ; $x has year = $y ;}>
+# assignment <set hfocus = [ expense , s_attribute , newstatement , newword ]>
+hardware_344
+1996
+software_355
+1996
+supplies_366
+1996
+software_377
+1996
+software_388
+1996
+ISP_399
+1997
+books_410
+1997
+software_421
+1997
+supplies_432
+1997
+software_443
+1997
+advertising_454
+1997
+supplies_465
+1997
+software_476
+1997
+books_487
+1997
+hardware_498
+1997
+books_509
+1997
+books_520
+1997
+books_531
+1997
+books_542
+1997
+hardware_553
+1997
+software_564
+1997
+supplies_575
+1997
+ISP_586
+1998
+supplies_597
+1998
+books_608
+1998
+books_619
+1998
+# 0 errors found in relation r_expense
+# command <do psize od expense done>
+26 # do psize od expense done
+# command <do psize od category done>
+6 # do psize od category done
+# s_html << /XMP >>
+# s_html << /HTML >>
+# 0 errors found in file expense.rel
+# question <? has cost>
+ISP_399 has cost = 240.00
+ISP_586 has cost = 19.49
+advertising_454 has cost = 49.34
+books_410 has cost = 35.00
+books_487 has cost = 24.92
+books_509 has cost = 98.67
+books_520 has cost = 78.31
+books_531 has cost = 27.76
+books_542 has cost = 17.68
+books_608 has cost = 63.33
+books_619 has cost = 32.95
+hardware_344 has cost = 281.75
+hardware_498 has cost = 257.40
+hardware_553 has cost = 195.23
+software_355 has cost = 40.00
+software_377 has cost = 389.61
+software_388 has cost = 29.00
+software_421 has cost = 20.00
+software_443 has cost = 381.07
+software_476 has cost = 211.00
+software_564 has cost = 79.97
+supplies_366 has cost = 26.81
+supplies_432 has cost = 26.81
+supplies_465 has cost = 42.81
+supplies_575 has cost = 26.81
+supplies_597 has cost = 26.81
+# command <do isd od expense with year,type done>
+# question <expense isc* ?>
+expense
+/  expense/year_1996
+//    expense/year_1996/type_hardware
+///      hardware_344
+//    expense/year_1996/type_software
+///      software_355
+///      software_377
+///      software_388
+//    expense/year_1996/type_supplies
+///      supplies_366
+/  expense/year_1997
+//    expense/year_1997/type_ISP
+///      ISP_399
+//    expense/year_1997/type_advertising
+///      advertising_454
+//    expense/year_1997/type_books
+///      books_410
+///      books_487
+///      books_509
+///      books_520
+///      books_531
+///      books_542
+//    expense/year_1997/type_hardware
+///      hardware_498
+///      hardware_553
+//    expense/year_1997/type_software
+///      software_421
+///      software_443
+///      software_476
+///      software_564
+//    expense/year_1997/type_supplies
+///      supplies_432
+///      supplies_465
+///      supplies_575
+/  expense/year_1998
+//    expense/year_1998/type_ISP
+///      ISP_586
+//    expense/year_1998/type_books
+///      books_608
+///      books_619
+//    expense/year_1998/type_supplies
+///      supplies_597
+# every <every vyear isa expense { set echo = off ; do print od "==================================" done ; do print od $vyear done ; every vcat isa $vyear { $vcat isall 0.00 ; every vexp isa $vcat { vexp_cost := $vexp has cost = ? ; $vcat isall $vexp_cost ; } ; vcat_cost := do sum od $vcat done ; $vcat has cost = $vcat_cost ; $vyear isall $vcat_cost ; } ; vyear_cost := do sum od $vyear done ; $vyear has cost = $vyear_cost ; expense isall $vyear_cost ; do print od "----------------------------------" done ; set echo = on ; }>
+==================================
+expense/year_1996
+hardware_344 has cost = 281.75
+281.75
+software_355 has cost = 40.00
+software_377 has cost = 389.61
+software_388 has cost = 29.00
+458.61
+supplies_366 has cost = 26.81
+26.81
+767.17
+----------------------------------
+==================================
+expense/year_1997
+ISP_399 has cost = 240.00
+240.0
+advertising_454 has cost = 49.34
+49.34
+books_410 has cost = 35.00
+books_487 has cost = 24.92
+books_509 has cost = 98.67
+books_520 has cost = 78.31
+books_531 has cost = 27.76
+books_542 has cost = 17.68
+282.34
+hardware_498 has cost = 257.40
+hardware_553 has cost = 195.23
+452.63
+software_421 has cost = 20.00
+software_443 has cost = 381.07
+software_476 has cost = 211.00
+software_564 has cost = 79.97
+692.04
+supplies_432 has cost = 26.81
+supplies_465 has cost = 42.81
+supplies_575 has cost = 26.81
+96.43000000000001
+1812.78
+----------------------------------
+==================================
+expense/year_1998
+ISP_586 has cost = 19.49
+19.49
+books_608 has cost = 63.33
+books_619 has cost = 32.95
+96.28
+supplies_597 has cost = 26.81
+26.81
+142.58
+----------------------------------
+# production <expense_cost := do sum od expense done>
+# command <do sum od expense done>
+2722.53
+# assignment <set expense_cost = $Product>
+# statement <expense has cost = 2722.53>
+# question <? has cost>
+ISP_399 has cost = 240.00
+ISP_586 has cost = 19.49
+advertising_454 has cost = 49.34
+books_410 has cost = 35.00
+books_487 has cost = 24.92
+books_509 has cost = 98.67
+books_520 has cost = 78.31
+books_531 has cost = 27.76
+books_542 has cost = 17.68
+books_608 has cost = 63.33
+books_619 has cost = 32.95
+expense has cost = 2722.53
+expense/year_1996 has cost = 767.17
+expense/year_1996/type_hardware has cost = 281.75
+expense/year_1996/type_software has cost = 458.61
+expense/year_1996/type_supplies has cost = 26.81
+expense/year_1997 has cost = 1812.78
+expense/year_1997/type_ISP has cost = 240.0
+expense/year_1997/type_advertising has cost = 49.34
+expense/year_1997/type_books has cost = 282.34
+expense/year_1997/type_hardware has cost = 452.63
+expense/year_1997/type_software has cost = 692.04
+expense/year_1997/type_supplies has cost = 96.43000000000001
+expense/year_1998 has cost = 142.58
+expense/year_1998/type_ISP has cost = 19.49
+expense/year_1998/type_books has cost = 96.28
+expense/year_1998/type_supplies has cost = 26.81
+hardware_344 has cost = 281.75
+hardware_498 has cost = 257.40
+hardware_553 has cost = 195.23
+software_355 has cost = 40.00
+software_377 has cost = 389.61
+software_388 has cost = 29.00
+software_421 has cost = 20.00
+software_443 has cost = 381.07
+software_476 has cost = 211.00
+software_564 has cost = 79.97
+supplies_366 has cost = 26.81
+supplies_432 has cost = 26.81
+supplies_465 has cost = 42.81
+supplies_575 has cost = 26.81
+supplies_597 has cost = 26.81
+# 0 errors found in input after last group r_expense
+# lines:           1017
+# propositions:    1027
+#   newpropositions:  0
+#   nullpropositions: 0
+#   productions:      96
+#   context:          0
+#   kusentences:     783
+#     kustatements:    392
+#     questions:       29
+#     commands:        89
+#     assignments:     132
+#     condtionals:     0
+#     iterations:      16
+#   hosentences:     213
+#     hostatements:    213
+#   dirsentences:     0
+#     dirstatements:    0
+#   relsentences:    26
+#     relstatements:   26 infons
+# htmlstatements:  23

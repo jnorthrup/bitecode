@@ -1,0 +1,32 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/group.mkr
+# 1999/Aug/11
+# new syntax Aug/10/2005
+
+#========================================#
+# family group                           #
+#   name ismem* ?;	ancestor tree    #
+#   name isall* ?;	descendant tree  #
+#========================================#
+# execution time
+# 133 MHz pentium, Windows 98
+# 0:22 min:sec
+
+do read from family.ku done;
+
+let echo=off;
+every q isa person {
+	set . = $q;
+	if $q has parent; then $q ismem $parent; fi;
+	if $q has child;  then $q isall $child;  fi;
+};
+let echo=on;
+
+
+# test
+person isc* ?;
+Steven Cates 1955 ismem* ?;
+Kay Stecker 1910 isall* ?;
+Jane Doe 1933 ismem* ?;
+
+# </xmp></html>

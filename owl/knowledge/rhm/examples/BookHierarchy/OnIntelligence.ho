@@ -1,0 +1,78 @@
+<html><pre>
+# KEHOME/knowledge/examples/BookHierarchy/OnIntelligence.ho
+# Jun/26/2005
+
+# Jeff Hawkins with Sandra Blakeslee
+# "On Intelligence"
+# Times Books, Henry Holt and Company, 2004
+
+begin hierarchy oi;
+book;
+/	On Intelligence;
+
+On Intelligence;
+/    Prologue				1;
+//	Can computers be intelligent?		5;
+//	Weren't neural networks supposed to lead to intelligent machines?	5;
+//	Why has it been so hard to figure out how the brain works?	5;
+//	What is intelligence if it isn't defined by behavior?	6;
+//	How does the brain work?		6;
+//	What are the implications of this theory?	6;
+/    1. Artificial Intelligence		9;
+/    2. Neural Networks			23;
+/    3. The Human Brain			40;
+/    4. Memory				65;
+/    5. A New Framework of Intelligence	85;
+/    6. How the Cortex Works		106;
+//	Invariant representations		109;
+//	Integrating the senses			117;
+//	A new view of V1			120;
+//	A model of the world			125;
+//	Sequences of sequences			129;
+//	What a region of cortex looks like	137;
+//	How a region of cortex works: the details	147;
+//	Flowing up and flowing down		158;
+//	Can feedback really do that?		161;
+//	How the cortex learns			164;
+//	The hippocampus: on top of it all	168;
+//	An alternate path up the hierarchy	171;
+//	Closing thoughts			174;
+/    7. Consciousness and Creativity	177;
+//	Are animals intelligent?		177;
+//	What's different about human intelligence?	180;
+//	What is creativity?			183;
+//	Are some people more creative than others?	187;
+//	Can you train yourself to be more creative?	189;
+//	Can creativity lead me astray? Can I fool myself?	192;
+//	What is consciousness?			193;
+//	What is imagination?			200;
+//	What is reality?			202;
+/    8. The Future of Intelligence	205;
+//	Can we build intelligent machines?	207;
+//	Should we build intelligent machines?	213;
+//	Why build intelligent machines?		217;
+//	Speed					223;
+//	Capacity				224;
+//	Replicability				226;
+//	Sensory Systems				227;
+/    Epilogue				234;
+/    Appendix: Testable Predictions	237;
+//	Prediction 1				237;
+//	Prediction 2				238;
+//	Prediction 3				238;
+//	Prediction 4				239;
+//	Prediction 5				240;
+//	Prediction 6				240;
+//	Prediction 7				241;
+//	Prediction 8				242;
+//	Prediction 9				242;
+//	Prediction 10				243;
+//	Prediction 11				244;
+/    Bibliography			247;
+//	History of AI and Neural Networks	248;
+//	Neocortex and General Neuroscience	249;
+//	Specific Neuroscience Articles		251;
+/    Acknowledgments			253;
+/    Index				255;
+end hierarchy oi;
+</pre></html>

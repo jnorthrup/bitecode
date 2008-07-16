@@ -1,0 +1,39 @@
+# KEHOME/knowledge/application/SematicWeb/TAP/tapmkr.def
+# Jan/24/2003
+
+# Stanford TAP knowledge base
+# high-level definitions
+
+# MKR hierarchy
+#==============#
+tabhi is begin hierarchy;
+Existent
+/   Entity
+//	animal
+///	    Person
+//	Plant
+//	OBJECT
+/   Characteristic
+//	Part
+//	Attribute
+//	Relation
+//	Action
+//	Interaction
+/   Proposition
+end hierarchy tabhi;
+
+# TAP additions
+#==============#
+Tangible is Entity with space,time,not purpose;
+Intangible is Entity with not space,not time;
+Agent is Entity with purpose;
+Class is OBJECT with xxx;
+Literal is OBJECT with xxx;
+PropertyType is Attribute with xxx;
+Activity is Interaction with xxx;
+Event is Interaction with xxx;
+
+# TAP corrections
+#================#
+Person is Agent with live,move,rational;
+Animal is Agent with live,move,not rational;

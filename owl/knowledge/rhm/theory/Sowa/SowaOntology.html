@@ -1,0 +1,91 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/theory/Sowa/SowaOntology.html
+# Jan/22/2003
+
+# http://www.jtsowa.com/ontology/toplevel.htm
+
+# attributes
+#===========
+attribute isg
+	physical, abstract,
+	independent, relative, mediating,
+	continuant, occurrent
+
+# lattice
+#========
+Sowalat is begin lattice
+Entity
+/	Physical	# space, time
+/	Abstract	# not space, not time
+Entity
+/	Independent	# one entity
+/	Relative	# two entities
+/	Mediating	# three or more entities
+Entity
+/	Continuant	# not time
+/	Occurrent	# time
+
+Entity
+/   Physical
+//	Actuality
+///	    Object
+///	    Process
+//	Prehension
+///	    Juncture
+///	    Participation
+//	Nexus
+///	    Structure
+///	    Situation
+/   Abstract
+//	Form
+///	    Schema
+///	    Script
+//	Proposition
+///	    Description
+///	    History
+//	Intention
+///	    Reason
+///	    Purpose
+end lattice Sowalat
+
+# definitions
+#============
+Absurdity is bottom
+Entity is top
+	Physical is Entity with physical
+	Abstract is Entity with abstract
+
+	Independent is Entity with independent
+	Relative is Entity with relative
+	Mediating is Entity with mediating
+
+	Continuant is Entity with continuant
+	Occurrent is Entity with occurrant
+
+Actuality is Physical with independent
+	Object is Actuality with continuant
+	Process is Actuality with occurrent
+Prehension is Physical with relative
+	Juncture is Prehension with continuant
+	Participation is Prehension with occurrent
+Nexus is Physical with mediating
+	Structure is Nexus with continuant
+	Situation is Nexus with occurrent
+
+Form is Abstract with independent
+	Schema is Form with continuant
+	Script is Form with occurrent
+Proposition is Abstract with relative
+	Description is Proposition with continuant
+	History is Proposition with occurrent
+Intention is Abstract with mediating
+	Reason is Intention with continuant
+	Purpose is Intention with occurrent
+
+
+# KE output
+#==========
+set hfocus = Entity
+</XMP>
+</HTML>

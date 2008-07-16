@@ -1,0 +1,119 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/OpenDirectoryProject/dmoztags.ho
+# Nov/16/2002
+
+# dmoz attribute hierarchy
+# Reference: "http://dmoz.org/rdf/tags.htm"
+#      Date: 2002/11/15
+ 
+begin hierarchy dmozhi;
+ 
+attribute;
+
+# dmoz
+/   structure ;
+//	Alias ;
+//	Target ;
+//	Topic ;
+//	altlang ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	editor ;
+//	lastUpdate ;
+//	letterbar ;
+//	narrow ;
+//	narrow1 ;
+//	narrow2 ;
+//	newsGroup ;
+//	related ;
+//	symbolic ;
+//	symbolic1 ;
+//	symbolic2 ;
+/   content ;
+//	ExternalPage ;
+//	Topic ;
+//	ages ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	link ;
+//	link1 ;
+//	mediadate ;
+//	priority ;
+/   redirect ;
+//	Topic ;
+//	redirect ;
+/   terms ;
+//	Topic ;
+//	d:charset ;
+//	d:term ;
+
+# kids and teens
+/   kt-structure ;
+//	Alias ;
+//	Target ;
+//	Topic ;
+//	altlang ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	d:charset ;
+//	editor ;
+//	lastUpdate ;
+//	letterbar ;
+//	narrow ;
+//	narrow1 ;
+//	narrow2 ;
+//	newsGroup ;
+//	related ;
+//	symbolic ;
+//	symbolic1 ;
+//	symbolic2 ;
+/   kt-content ;
+//	ExternalPage ;
+//	Topic ;
+//	ages ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	link ;
+//	link1 ;
+//	mediadate ;
+//	priority ;
+/   kt-terms ;
+//	Topic ;
+//	d:charset ;
+//	d:term ;
+
+# netscape
+/   netscape-structure ;
+//	Alias ;
+//	Target ;
+//	Topic ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	editor ;
+//	lastUpdate ;
+//	narrow ;
+//	related ;
+//	symbolic ;
+/   netscape-content ;
+//	ExternalPage ;
+//	Topic ;
+//	catid ;
+//	d:Description ;
+//	d:Title ;
+//	link ;
+//	link1 ;
+//	mediadate ;
+//	priority ;
+/   netscape-terms ;
+//	Topic ;
+//	d:term ;
+ 
+end hierarchy dmozhi;
+</XMP>
+</HTML>

@@ -1,0 +1,135 @@
+# KEHOME/knowledge/identify/identity.txt
+# 1999/4/28
+
+#==========#
+# Identity #
+#==========#
+
+Rand and Peikoff discuss three aspects of identity.
+
+1. identity & existence
+Rand, IOE, page 56
+	"The units of the concepts 'existence' and
+	'identity' are every entity, attribute, action,
+	event, or phenomenon (including consciousness)
+	that exists, has ever existed or will ever
+	exist."
+Peikoff, OPAR, page 6,7
+	"Ayn Rand offers a new formulation of this axiom:
+	existence is identity. She does not say 'existence
+	has identity' -- which might suggest that identity
+	is a feature separable from existence ...
+	Existence and identity are indivisible; either
+	implies the other. ... Why, one might ask, use
+	two concepts to identify one fact? ...
+	several perspectives on a single fact ...
+	consider it from different aspects or in
+	different contexts ..."
+I interpret this to mean that "existence" and "identity"
+are the tops of two different hierarchies (views), with
+the same primitive units (at the bottom of the hierarchy)
+but with different intermediate concepts.  Although I
+would say that
+	"existence is all existent"
+in one hierarchy and
+	"identity is all existent"
+in the other hierarchy, I don't think it is correct to
+say that
+	"identity is existence"
+because "identity" and "existence" are in different
+hierarchies.
+
+2. identity of an existent
+Peikoff, OPAR, page 6
+	"The 'identity' of an existent means that which it
+	is, the sum of its attributes or characteristics."
+In my KR language, the relations of an existent are
+expressed as
+	"existent isin relationship"
+so I would translate Peikoff's statement as
+	"identity is all [existent isin relationship]"
+or simply
+	"identity is all relation"
+
+3. law of identity
+Rand, AS, page 942
+	"Whatever you choose to consider, be it an object,
+	an attribute or an action, the law of identity
+	remains the same.  A leaf cannot be a stone at the
+	same time, it cannot be all red and all green at the
+	same time, it cannot freeze and burn at the same time.
+	A is A. Or, if you wish it stated in simpler language:
+	You cannot have your cake and eat it, too."
+I would translate Rand's statement as
+	"identity is [existent is either A or not A]"
+or
+	"identity is [A is A]"
+
+A similar characterization is given in
+H.W.B. Joseph, "An Introduction to Logic", page 13 -- laws of thought
+	law of identity:	A is A
+	law of contradiction:	A cannot be B and not be B
+	law of excluded middle:	A either is or is not B
+In my KR language, I would translate these laws as
+	A is B
+	not ((A isa B) and (A isa not B))
+	either (A isa B) or (A isa not B)
+or
+	existent is existent
+	not existent is all B and not B
+	existent is either B or not B
+("is all ... and ..." applies to two or more "requisite" conditions.)
+
+
+
+My current interpretation of Rand's meaning
+===========================================
+
+	identity is all relation
+
+From the appropriate point of view, this is
+the same as
+
+	identity is all existent
+
+Here's the reasoning.  The whole "trick" depends on the fact
+that the concept hierarchy itself is defined by relations. 
+
+1. The hierarchy 
+    existent 
+        entity 
+        characteristic 
+        relation 
+is defined by 
+    entity isa existent 
+    characteristic isa existent 
+    relation isa existent 
+2. "delete" entity and characteristic, and "file" them
+under relation: 
+    existent 
+        relation 
+            [entity isa existent] 
+            [characteristic isa existent] 
+            other relations 
+3. This makes existent an invalid concept, because it does not
+consist of two or more units, so "merge" existent and relation,
+i.e., 
+    existent is relation 
+yielding the hierarchy 
+    existent 
+        [relation is existent] 
+        [entity isa existent] 
+        [characteristic isa existent] 
+        other relations 
+4. Define identity as 
+    identity is all relation 
+which is the same as 
+    identity is all existent 
+Q.E.D. 
+
+NOTE:
+Since
+    existence is all existent
+Rand's statement that
+    identity is existence
+is true in this view.

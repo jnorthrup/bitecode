@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.zenadsl6357.zen.co.uk/unicon/packages.html -->
+<HTML><HEAD><TITLE>Unicon packages</TITLE>
+<META http-equiv=content-type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2800.1141" name=GENERATOR></HEAD>
+<BODY>
+<H1>Unicon packages</H1><BR>In large programs, the global name space becomes 
+crowded. You can create a disaster if one of your undeclared local variables 
+uses the same name as a built-in function, but at least you can memorize the 
+names of all the built-in functions and avoid them. Memorization is no
+longer an option after you add in hundreds of global names from unfamiliar
+code libraries. 
+You may accidentally overwrite some other programmer's global variable,
+without any clue that it happened.<BR><BR>Packages allow you to partition
+and protect the global name space. &nbsp;Every global declaration
+(variables, procedures, records, and classes) is "invisible" outside the
+package, unless imported explicitly.<BR><BR>
+<H2>The package declaration</H2>A source file declares that its global 
+declarations are to be placed in a package using the package declaration 
+:-<BR><BR><PRE>package &lt;packagename&gt;<BR><BR></PRE>&lt;packagename&gt;
+should be a valid identifier. &nbsp;There can be only one package declaration
+in each source file. &nbsp;It needn't appear at the top of the file, but
+that is conventional.
+<BR><BR>Here is an example source file which declares some global 
+declarations and adds them to a package.<BR><BR><PRE># File pack1.icn
+<BR>package first<BR><BR>procedure my_proc()<BR>   write("In my_proc")
+<BR>end<BR><BR>class SomeClass()<BR>   method f()
+<BR>      write("In SomeClass.f()")<BR>   end<BR>end<BR><BR></PRE>
+When this is compiled, the unicon compiler updates its database to record
+the fact that the package "first" includes the global symbols "my_proc"
+and "SomeClass", and is defined (at least in part) in "pack1.icn".
+&nbsp;The compiler also applies a "name mangling" process to the global
+symbols. &nbsp;This means that in the generated ucode file, "my_proc"
+and "SomeClass" actually appear as "first__my_proc" and "first__SomeClass"
+respectively. &nbsp;This is how the package system prevents global symbol
+clashes.<BR><BR>
+<H2>The import declaration</H2><BR>Having created a package, it is very simple 
+to access its global symbols, by using the "import" statement, which has the 
+following syntax :-<BR><PRE>import&nbsp;&lt;packagename&gt;<BR></PRE>This
+causes the compiler to look up the package in its database. &nbsp;From that
+information it can deduce which link statements are necessary, and which
+symbols in the source file need to be mangled to correspond to the package's
+imported symbols. &nbsp;For example 
+:-<BR><BR><PRE>import first<BR><BR>procedure main()<BR>   local c
+<BR>   c := SomeClass()<BR>   c.f()<BR>   my_proc()<BR>end<BR></PRE>
+The compiler will automatically link the resulting object file to the file
+"pack1" above, and will mangle the references to "SomeClass" and "my_proc"
+so that they work as expected.<BR><BR>
+<H2>Explicit package references</H2>It may happen that two imported packages 
+define the same symbol. &nbsp;Or, it may be that a symbol is imported from a 
+package but is also defined in the global namespace. &nbsp;To resolve these 
+problems, it is possible to explicitly specify which package a particular 
+occurrence of a symbol refers to. &nbsp;For example if packages "first" and 
+"second" both defined a procedure named "write", then<BR><BR><PRE>import
+first, second<BR><BR>procedure main()<BR>   first::write()   # Calls
+write() in package first<BR>   second::write()  # Calls write() in package
+second<BR>   ::write()        # Calls the normal write() method<BR>end
+<BR><BR></PRE>As an aside, the use of the "::" operator on its own, as in
+"::write()", is a useful way to refer to a top-level procedure from within
+a class with a method of the same name :-<BR><BR><PRE>class Abc(x)
+<BR>   method write()<BR>      ::write("Abc x=", x)<BR>   end<BR>end
+<BR></PRE>In this example, omitting the "::" would cause the write() method
+to repeatedly call itself, eventually leading to stack overflow.<BR>
+<H2>Compilation order</H2>One complication of using packages is that
+compilation order becomes significant. &nbsp;To see why this is the
+case consider three source files, as follows :-<BR><BR><PRE># File
+order1.icn<BR>package demo<BR><BR>procedure first()<BR>   write("first")
+<BR>end<BR><BR># File order2.icn<BR>package demo<BR><BR>procedure second()
+<BR>   write("second")<BR>   first()<BR>end<BR><BR># File order3.icn
+<BR>import demo<BR><BR>procedure main()<BR>   second()<BR>end<BR><BR></PRE>
+The files "order1.icn" and "order2.icn" create a package called "demo",
+with two procedures, whilst "order3.icn" imports the package and uses one
+of the procedures? &nbsp;What is the correct way to compile these three
+files? &nbsp;If we compile "order3.icn" first, then the compilation will
+fail with the message "Unable to import package demo". &nbsp;So, we should
+compile "order1.icn" or "order2.icn" first. &nbsp;If we try "order2.icn"
+first, then at least the code compiles, but it doesn't work as expected :-
+<BR><BR><PRE>$ unicon -c order2.icn<BR>$ unicon -c order1.icn
+<BR>$ unicon -c order3.icn<BR>$ unicon -o order order1.u order2.u order3.u
+<BR>$ ./order<BR>second<BR><BR>Run-time error 106<BR>File order2.icn; Line 7
+<BR>procedure or integer expected<BR>offending value: &amp;null
+<BR>Traceback:<BR>   main()<BR>   demo__second() from line 8 in order3.icn
+<BR>   &amp;null() from line 7 in order2.icn<BR><BR></PRE>
+What has happened here is that by compiling "order2.icn" first, we have
+not yet put the symbol "first" into the package demo (to do that we must
+compile "order1.icn"). &nbsp;So, when compiling "order2.icn" the reference
+to "first" is not mangled as it should be. &nbsp;Hence it refers to an
+non-existent procedure at runtime.<BR><BR>The correct order of compilation
+is therefore "order1.icn", "order2.icn", "order3.icn".<BR><BR>One particularly
+confusing point to note is that if we run the incorrect compilation sequence
+a second time, then we find the program mysteriously works! &nbsp;The reason
+for this is that the first attempt at compilation has added "first" to the
+compiler's database, so on the second attempt at compilation the compiler
+picks this up. &nbsp;But on any "clean" compilation (where the database has
+been deleted) the problem will present itself again.<BR><BR>
+<H2>The unidep utility</H2>As can be seen from the above example, even with a 
+small example the compilation order needs some thought. &nbsp;With a large 
+library (such as the Unicon gui library) determining the correct compilation 
+order becomes a very difficult task, in fact one which cannot practically be 
+done manually. &nbsp;Unidep is a utility program to automate this task.
+&nbsp;It takes as command line parameters several source files, and produces
+a set of makefile dependencies which will guarantee correct compilation order. 
+&nbsp;These dependencies are appended to an existing makefile, which for the 
+above example might be as follows :-<BR><BR><PRE>all: order</PRE>
+<PRE>clean:</PRE><PRE>&nbsp;&nbsp;&nbsp; rm -f order *.u uniclass.dir
+uniclass.pag </PRE><PRE>deps:</PRE><PRE>&nbsp;&nbsp;&nbsp; unidep order1.icn
+order2.icn order3.icn</PRE><PRE>order: order1.u order2.u order3.u</PRE><PRE>&nbsp;&nbsp;&nbsp; unicon -o order order1.u order2.u order3.u</PRE><PRE>%.u: %.icn</PRE><PRE>&nbsp;&nbsp;&nbsp; unicon -c $*</PRE>&nbsp;Now running the command "make 
+deps" will append the required additional dependencies to the makefile. &nbsp;In 
+this case these are :-<BR><BR><PRE>### Autogenerated dependencies<BR>order1.u : order1.icn<BR>order2.u : order2.icn order1.u<BR>order3.u : order3.icn order2.u<BR><BR></PRE>With 
+these dependencies appended, the makefile will now compile the files in the 
+correct order. &nbsp;Re-running "make deps" will simply update the autogenerated 
+dependencies. &nbsp;This may be necessary if any of the source files 
+change.<BR><BR><BR><PRE>&nbsp;</PRE><PRE><BR></PRE><PRE><BR><BR></PRE><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></BODY></HTML>

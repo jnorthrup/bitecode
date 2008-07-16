@@ -1,0 +1,33 @@
+<Property rdf:ID="equivalentTo"> <!-- equals? equiv? renames? -->
+<Property rdf:ID="sameClassAs">
+<Property rdf:ID="samePropertyAs">
+<Property rdf:ID="sameIndividualAs">
+<rdf:Property rdf:ID="disjointWith">
+<Property rdf:ID="differentIndividualFrom">
+<rdf:Property rdf:ID="unionOf">
+<rdf:Property rdf:ID="disjointUnionOf">
+<rdf:Property rdf:ID="intersectionOf">
+<rdf:Property rdf:ID="complementOf">
+<rdf:Property rdf:ID="oneOf">
+<rdf:Property rdf:ID="onProperty">
+<rdf:Property rdf:ID="allValuesFrom">
+<rdf:Property rdf:ID="hasValue">
+<rdf:Property rdf:ID="someValuesFrom">
+<rdf:Property rdf:ID="minCardinality">
+<rdf:Property rdf:ID="maxCardinality">
+<rdf:Property rdf:ID="cardinality">
+
+<!-- Classes and Properties for different kinds of Property -->
+<rdf:Property rdf:ID="inverseOf">
+<rdf:Property rdf:ID="versionInfo">
+<rdf:Property rdf:ID="imports">
+<rdf:Property rdf:ID="subPropertyOf">
+<rdf:Property rdf:ID="type">
+<rdf:Property rdf:ID="value">
+<rdf:Property rdf:ID="subClassOf">
+<rdf:Property rdf:ID="domain">
+<rdf:Property rdf:ID="range">
+<rdf:Property rdf:ID="label">
+<rdf:Property rdf:ID="comment">
+<rdf:Property rdf:ID="seeAlso">
+<rdf:Property rdf:ID="isDefinedBy">

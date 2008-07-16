@@ -1,0 +1,24 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/N3/Formulae.ku
+# Nov/15/2002
+
+# "Formulae" example
+
+    at view = doc {
+        forSome c1 isa view {
+            at view = $c1 {
+                forSome g1 isa person {
+                    forSome g2 isa book {
+                        $g1 has firstname = "Ora";
+                        $g2 has title = "Moby Dick";
+                        at time = past { $g1 do write od $g2 done };
+                    } # end forSome g2
+                } # end forSome g1
+            }; # end at view
+        $c1 has type = falsehood;
+        } # end forSome c1
+    } # end view = doc
+
+</XMP>
+</HTML>

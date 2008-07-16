@@ -1,0 +1,41 @@
+4,5c4,5
+< /	Yahoo
+< //		Directory
+---
+> /	InfoSeek
+> //		Channel
+7,11c7,11
+< Directory
+< /	Arts
+< /	Business & Economy
+< /	Computers & Internet
+< /	Education
+---
+> Channel
+> /	Automotive
+> /	Business
+> /	Careers
+> /	Computer
+13c13
+< /	Government
+---
+> /	Good Life
+15,23c15,22
+< /	News & Media
+< /	Recreation & Sports
+< /	Reference
+< /	Regional
+< /	Science
+< /	Social Science
+< /	Society & Culture
+< 
+< #!read internet/yahooCI.ho
+---
+> /	Internet
+> /	Kids & Family
+> /	News
+> /	Personal Finance
+> /	Real Estate
+> /	Shopping
+> /	Sports
+> /	Travel

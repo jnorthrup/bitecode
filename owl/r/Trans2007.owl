@@ -1,0 +1,1032 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:recs="http://www.w3.org/2003/03/recsSchema#" xmlns:trans="http://www.w3.org/2003/03/Translations/transSchema#">
+	<trans:Translation rdf:about="http://petra.euitio.uniovi.es/~i1767201/DIP/DIP.html">
+		<!-- DI Principles -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/NOTE-di-princ-20030901/"/>
+		<dc:title xml:lang="es">Principios de independencia de dispositivos</dc:title>
+		<dc:language>es</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tania_Estebanez_Alvarez"/>
+		<dc:date>2007-01-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tlumaczenia-angielski.info/w3c/css/csstricks.htm">
+		<!-- CSS Tips and tricks -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/figures.html"/>
+		<dc:title xml:lang="pl">Arkusze CSS - rady i pomoc</dc:title>
+		<dc:language>pl</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<dc:date>2007-01-15</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tlumaczenia-angielski.info/w3c/css/css-beginner/firstcss.pl.html">
+		<rdfs:comment>Web Style Sheets, CSS tips &amp; tricks: Starting with HTML + CSS</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="pl">Tutorial CSS Początki z HTML + CSS</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-01-25</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tlumaczenia-angielski.info/w3c/css/styling-XML.htm">
+		<rdfs:comment>Web Style Sheets, CSS tips &amp; tricks: Starting with HTML + CSS</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="pl">Jak dodać styl do XML</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-01-25</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tlumaczenia-angielski.info/w3c/css/W3CCoreStyles.htm">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="en">W3C Core Styles</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-02-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.tlumaczenia-angielski.info/w3c/css/CSS-vs-XSL.htm">
+		<rdfs:comment>CSS &amp; XSL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="pl">CSS &amp; XSL</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-02-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-doc-charset.ru.php">
+		<rdfs:comment>Document character set</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-doc-charset.en.html"/>
+		<dc:title xml:lang="ru">Набор символов документа</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-02-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Elena_Nellson"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/O-charset.ru.php">
+		<rdfs:comment>Character encodings</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/O-charset.en.html"/>
+		<dc:title xml:lang="ru">Кодировка символов</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-02-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Elena_Nellson"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www3.fctv.ne.jp/~takamu/mathml-units-ja.htm">
+		<rdfs:comment>units in mathml</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2003/NOTE-mathml-units-20031110/"/>
+		<dc:title xml:lang="ja">MathMLにおける単位</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2007-02-12</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Yosikazu_Takamura"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://gabrieleromanato.altervista.org/css/w3c/note-tecniche-css-wcag-10/">
+		<rdfs:comment>WCAG CSS Note</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/WCAG10-CSS-TECHS/"/>
+		<dc:title xml:lang="it">Note sulle Tecniche CSS per le WCAG 1.0</dc:title>
+		<dc:language>it</dc:language>
+		<dc:date>2007-02-26</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Gabriele_Romanato"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2007/03/rdf_concepts_ru/Overview.html">
+		<rdfs:comment>RDF Concepts and Abstract Syntax</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"/>
+		<dc:title xml:lang="ru">Среда Описания Ресурса (RDF): Понятия и Абстрактный Синтаксис</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-03-04</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Rabchevsky"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-lang-2or3.pl.php">
+		<rdfs:comment>FAQ: Two-letter or three-letter language codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-lang-2or3.en.html"/>
+		<dc:title xml:lang="pl">Dwuliterowe czy trzyliterowe kody języka</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-03-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Rabchevsky"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tomasz_Namyslowski"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Agata_Bogacka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jan_Dlugosz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-lang-why.pl.php">
+		<rdfs:comment>FAQ: Two-letter or three-letter language codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-lang-why.en"/>
+		<dc:title xml:lang="pl">Dlaczego stosujemy atrybuty języka?</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-03-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Rabchevsky"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tomasz_Namyslowski"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Agata_Bogacka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jan_Dlugosz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-ruby.pl.php">
+		<rdfs:comment>FAQ: Two-letter or three-letter language codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-ruby.en"/>
+		<dc:title xml:lang="pl">Ruby</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-03-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Rabchevsky"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Tomasz_Namyslowski"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Agata_Bogacka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jan_Dlugosz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-navigation-select.pl.php">
+		<rdfs:comment>FAQ: Using &lt;select&gt; to Link to Localized Content</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-navigation-select.en.html"/>
+		<dc:title xml:lang="pl">Zastosowanie elementu &lt;select&gt; do treści lokalnych</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-03-15</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/serving-xhtml/Overview.pl.php">
+		<rdfs:comment>Serving XHTML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/serving-xhtml/"/>
+		<dc:title xml:lang="pl">Wysyłanie XHTML 1.0</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-03-15</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://mgl.uw.hu/XML1_0_3rd/Extensible%20Markup%20Language%20(XML)%201_0%20(Third%20Edition).htm">
+		<rdfs:comment>XML 3rd edition</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-xml-20040204"/>
+		<dc:title xml:lang="hu">Extensible Markup Language (XML) 1.0 (Harmadik kiadás)</dc:title>
+		<dc:language>hu</dc:language>
+		<dc:date>2007-04-11</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Gabor_Mate"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://zdyx.org/w3c/QATips/">
+		<rdfs:comment>QA Tips</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="zh-hans">优质小贴士列表</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<dc:date>2007-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#ZDYX"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://zdyx.org/w3c/QATips/cht/">
+		<rdfs:comment>QA Tips</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/Tips/"/>
+		<dc:title xml:lang="zh-hant">優質小貼士列表</dc:title>
+		<dc:language>zh-hant</dc:language>
+		<dc:date>2007-04-21</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#ZDYX"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://w4ard.s26.xrea.com/translation/W3C/REC-xml11-20060816">
+		<rdfs:comment>XML 1.1</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2006/REC-xml11-20060816"/>
+		<dc:title xml:lang="ja">Extensible Markup Language (XML) 1.1 (第二版)</dc:title>
+		<dc:language>ja</dc:language>
+		<dc:date>2007-05-04</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Hiroaki_Hasegawa"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml-names/">
+		<rdfs:comment>Namespaces 1.0 2nd</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2006/REC-xml-names-20060816"/>
+		<dc:title xml:lang="tr">XML 1.0'da İsim-alanları (İkinci Düzeltme)</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-05-22</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml/">
+		<rdfs:comment>XML 4th</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2006/REC-xml-20060816"/>
+		<dc:title xml:lang="tr">Genişletilebilir İmlenim Dili (XML) 1.0 (Dördüncü Düzeltme)</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-05-31</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/O-HTTP-charset.pt-br.php">
+		<rdfs:comment>HTTP Charset</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/O-HTTP-charset.en.html"/>
+		<dc:title xml:lang="pt-br">Configurando o parâmetro HTTP da codificação de caracteres (charset)</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2007-05-31</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Rafael_Zanella"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml11/">
+		<rdfs:comment>XML 1.1</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2006/REC-xml11-20060816"/>
+		<dc:title xml:lang="tr">Genişletilebilir İmlenim Dili (XML) 1.1 (İkinci Düzeltme)</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml-names11/">
+		<rdfs:comment>XML Namespaces</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2006/REC-xml-names11-20060816"/>
+		<dc:title xml:lang="tr">XML 1.1'de İsim-alanları (İkinci Düzeltme)</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xpath/">
+		<rdfs:comment>XPath</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/REC-xpath-19991116"/>
+		<dc:title xml:lang="tr">XML Adresleme Dili (XPath) Sürüm 1.0</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml-infoset/">
+		<rdfs:comment>Infoset 2nd</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-xml-infoset-20040204"/>
+		<dc:title xml:lang="tr">XML Bilgi Kümesi (İkinci Düzeltme)</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xml-stylesheet/">
+		<rdfs:comment>Associating style sheets</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629"/>
+		<dc:title xml:lang="tr">Biçembentlerin XML Belgelerle İlişkilendirilmesi</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://beshenov.ru/xml-stylesheet-ru.html">
+		<rdfs:comment>Associating style sheets</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629"/>
+		<dc:title xml:lang="ru">Связывание таблиц стилей с документами XML</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksey_Beshenov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://beshenov.ru/mathml-faq-ru.html">
+		<rdfs:comment>MathML FAQ</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Math/mathml-faq.html"/>
+		<dc:title xml:lang="ru">Часто задаваемые вопросы по языку математической разметки (MathML)</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-06-08</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksey_Beshenov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-when-xmllang.pl.php">
+		<rdfs:comment>Serving XHTML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-when-lang-neg.en"/>
+		<dc:title xml:lang="pl">FAQ: xml:lang w schematach dokumentów XML</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-06-14</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://beshenov.ru/wcag10-css-techs-ru.html">
+		<rdfs:comment>CSS WAI Techniques</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/WCAG10-CSS-TECHS/"/>
+		<dc:title xml:lang="ru">Руководство по созданию доступного веб-контента. Версия 1.0. Приемы CSS</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-06-19</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksey_Beshenov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/articles/language-tags/Overview.es.php">
+		<rdfs:comment>Language tags in XML/HTML</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/articles/language-tags/Overview.en.php"/>
+		<dc:title xml:lang="es">Etiquetas de idioma en HTML y XML</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-06-23</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/xslt/">
+		<rdfs:comment>XSLT 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1999/REC-xslt-19991116"/>
+		<dc:title xml:lang="tr">XSL Dönüşümleri (XSLT) Sürüm 1.0</dc:title>
+		<dc:language>tr</dc:language>
+		<dc:date>2007-06-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/QA/2003/03/web-kit.html.po">
+		<rdfs:comment>Web Standard Switch</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/QA/2003/03/web-kit"/>
+		<dc:title xml:lang="en">Web Standards Switch</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-07-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Sebastian_Snopek"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-controls.pl.php">
+		<rdfs:comment>FAQ: HTML, XHTML, XML and Control Codes</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-controls.en.html"/>
+		<dc:title xml:lang="pl">FAQ: HTML, XHTML, XML i kody kontroli</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-07-11</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-css-lang.pl.php">
+		<rdfs:comment>FAQ: Styling using the lang attribute</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-css-lang.en"/>
+		<dc:title xml:lang="pl">FAQ: Stylizacja z użyciem atrybutu "lang"</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-07-11</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/getting-started/characters.pl.php">
+		<rdfs:comment>FAQ: Styling using the lang attribute</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/getting-started/characters.en"/>
+		<dc:title xml:lang="pl">Wprowadzenie do zbiorów znaków i kodowania</dc:title>
+		<dc:language>pl</dc:language>
+		<dc:date>2007-07-11</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Andrew_Osobka"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Natalia_Fabisz"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/011/firstcss/">
+		<rdfs:comment>Starting with HTML+CSS</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="de">CSS Tutorial, HTML + CSS - ein Einstieg</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-18</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/menus.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/menus.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Ein fest stehendes Menu</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/indent.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/indent.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Eingerückte Absätze</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/alternatives.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/alternatives.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Alternative Style Sheets</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/maps.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/maps.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Ein Konfetti Menu</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/scrollbars.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/scrollbars.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Scrollbars - ohne Farben</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/evenodd.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/evenodd.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Gerade/Ungerade Farben ändern beim Zeilenwechsel</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/target.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/target.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Die ':target' Pseudo-Klasse</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/fonts.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Font Familien</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/center.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/center.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Horizontale und vertikale Zentrierung</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/shadows.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/shadows.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Boxen mit Schattenwurf</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/roundshadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/roundshadow.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Abgerundete Ecken und Schatten</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/Examples/007/text-shadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/text-shadow.html"/>
+		<dc:title xml:lang="de">CSS Tips &amp; Tricks: Text mit Schatten</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/styling-XML.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="de">XML mit Style</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-26</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.wssexpert.de/Style/CSS-vs-XSL">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="de">CSS &amp; XSL</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-07-26</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Axel_Friedrich"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/Overview.html"/>
+		<dc:title xml:lang="uk">Каскадні таблиці стилів – CSS поради &amp; прийоми</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/figures.html">
+		<!-- CSS Tips and tricks -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/figures.html"/>
+		<dc:title xml:lang="uk">CSS поради &amp; прийоми - rady i pomoc Зображення &amp; описи</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/menus.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/menus.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Фіксоване меню</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/indent.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/indent.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Абзац з червоного рядку</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/alternatives.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/alternatives.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Альтернативні таблиці стилів</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/maps.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/maps.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Меню "конфетті"</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/scrollbars.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/scrollbars.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Безкольорова прокрутка</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/evenodd.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/evenodd.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Парні й непарні лінії</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/target.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/target.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Псевдо клас ':target'</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/fonts.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Групи шрифтів</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/center.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/center.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Центрування</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/shadows.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/shadows.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Відкидання тіней</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/text-shadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/text-shadow.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Тіні тексту</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/Example007ukr/roundshadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/roundshadow.html"/>
+		<dc:title xml:lang="uk">CSS поради  &amp;  прийоми - Закруглені кути та блоки з тінню</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-08-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://beshenov.ru/styling-xml.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="ru">Внешние таблицы стилей</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksey_Beshenov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://beshenov.ru/css-vs-xsl.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="ru">CSS и XSL: что я должен использовать?</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksey_Beshenov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/CSS-vs-XSL.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="uk">CSS та XSL</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.dp76.com/Style/styling-XML.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="ru">Как добавить стиль к XML</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/styling-XML.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="uk">Як додати стиль до XML</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.dp76.com/Style/W3CCoreStyles.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="ru">Основные стили W3C</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.viewer.org.ua/Style/W3CCoreStyles.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="uk">Основні стилі W3C</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/customdtd_ru.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/customdtd"/>
+		<dc:title xml:lang="ru">Не используйте «пользовательский DTD»!</dc:title>
+		<dc:language>ru</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.mirrors.org.ua/Style/customdtd_uk.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/customdtd"/>
+		<dc:title xml:lang="uk">Не вікористовуйте «власні DTD»!</dc:title>
+		<dc:language>uk</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Evgeny_Skripec"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://eu-by.org/Style/CSS-vs-XSL.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="be">Беларускі пераклад “CSS &amp; XSL”</dc:title>
+		<dc:language>be</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksei_Petrov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://eu-by.org/Style/styling-XML.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/styling-XML"/>
+		<dc:title xml:lang="be">Як дадаць стыль да XML</dc:title>
+		<dc:language>be</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksei_Petrov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.pocket-book.com/Style/W3CCoreStyles.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="be">Асноўныя стылі W3C</dc:title>
+		<dc:language>be</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksei_Petrov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://eu-by.org/Style/customdtd.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/customdtd"/>
+		<dc:title xml:lang="be">Не выкарыстоўвайце «карыстацкі DTD»!</dc:title>
+		<dc:language>be</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksei_Petrov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.pocket-book.com/MarkUp/xhtml-faq.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/MarkUp/2004/xhtml-faq"/>
+		<dc:title xml:lang="be">Адказы на часта зададзеныя пытанні па XHTML і HTML</dc:title>
+		<dc:language>be</dc:language>
+		<dc:date>2007-09-02</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Aleksei_Petrov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.reviewmydomain.com/Style/customdtd/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/customdtd"/>
+		<dc:title xml:lang="de">Custom DTDs “nicht benutzen”!</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-09-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mark_Goeder_Tarant"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/2007/09/OWL-Overview-es.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2004/REC-owl-features-20040210/"/>
+		<dc:title xml:lang="es">Lenguaje de Ontología Web (OWL), Vista General</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-09-07</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Pablo_Diez_Suarez"/>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Carlos_Tejo_Alonso"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.reviewadomain.com/StyleSheets/Core/">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="en">W3C Core Styles</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-09-11</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mark_Goeder_Tarant"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.web2site.info/Style/CSS-vs-XSL.html">
+		<rdfs:comment>CSS &amp; XSL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="cs">CSS &amp; XSL</dc:title>
+		<dc:language>cs</dc:language>
+		<dc:date>2007-09-24</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Miroslav_Rocek"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://dove188.go3.icpcn.com/translation/CssForWCAG10.html">
+		<rdfs:comment>CSS Techniques for Web Content Accessibility Guidelines 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/WCAG10-CSS-TECHS/"/>
+		<dc:title xml:lang="zh-hans">Web内容可用性指南1.0中的CSS技术</dc:title>
+		<dc:language>zh-hans</dc:language>
+		<dc:date>2007-09-25</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Liang_Guo"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-i18n.es.php">
+		<rdfs:comment>FAQ: Localization vs. Internationalization</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-i18n.en.html"/>
+		<dc:title xml:lang="es">FAQ: diferencias entre localización e internacionalización</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-09-26</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.w3.org/International/questions/qa-htaccess-charset.pt-br.php">
+		<rdfs:comment>FAQ: Setting 'charset' Information in .htaccess</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/International/questions/qa-htaccess-charset.en.html"/>
+		<dc:title xml:lang="pt-br">FAQ: Configurando a codificação de caracteres no .htaccess</dc:title>
+		<dc:language>pt-br</dc:language>
+		<dc:date>2007-09-26</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Rafael_Zanella"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.web2site.info/Style/W3CCoreStyles.html">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="cs">Základní styly W3C</dc:title>
+		<dc:language>cs</dc:language>
+		<dc:date>2007-10-01</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Miroslav_Rocek"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/grddl-primer/">
+		<rdfs:comment>GRDDL Primer</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2007/NOTE-grddl-primer-20070628/"/>
+		<dc:title xml:lang="fr">Introduction à GRDDL</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2007-10-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/grddl/">
+		<rdfs:comment>GRDDL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2007/REC-grddl-20070911/"/>
+		<dc:title xml:lang="fr">Glaner les descriptions de ressources des dialectes de langages (GRDDL)</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2007-10-14</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/grddl-scenarios/">
+		<rdfs:comment>GRDDL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2007/NOTE-grddl-scenarios-20070406/"/>
+		<dc:title xml:lang="fr">Cas d'utilisation GRDDL : Scénarios pour l'extraction de données RDF de documents XML</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2007-10-19</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/uri-clarification/">
+		<rdfs:comment>URI Clarification</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2001/NOTE-uri-clarification-20010921/"/>
+		<dc:title xml:lang="fr">Adresses URI, URL et URN : Clarifications et recommandations 1.0</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2007-10-25</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/Overview.html"/>
+		<dc:title xml:lang="es">Hojas de estilo para la Web - Trucos y sugerencias para CSS</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/figures.html">
+		<!-- CSS Tips and tricks -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/figures.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Figuras y leyendas</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/menus.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/menus.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Un menú fijo en pantalla</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/indent.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/indent.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Párrafos con sangría</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/alternatives.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/alternatives.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Hojas de estilo alternativas</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/maps.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/maps.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Un menú de fantasía</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/scrollbars.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/scrollbars.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Barras de desplazamiento sin color</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/evenodd.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/evenodd.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Reglas pares e impares</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/target.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/target.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - La pseudoclase ":target"</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/fonts.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Familias de fuentes</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/center.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/center.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Centrado de objetos</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/shadows.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/shadows.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Sombras</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/text-shadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/text-shadow.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Texto con sombra</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.spanish-translator-services.com/espanol/t/007/roundshadow.html">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/roundshadow.html"/>
+		<dc:title xml:lang="es">Trucos y sugerencias para CSS - Esquinas redondeadas y cuadros con sombra</dc:title>
+		<dc:language>es</dc:language>
+		<dc:date>2007-10-27</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Trusted_Translations"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.idebagus.com/w3/StyleSheets/Core/">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="en">W3C Core Styles</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-11-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Roberta_Asparsa"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://w3c.stanprog.com/WAI/References/QuickTips/">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/References/QuickTips/"/>
+		<dc:title xml:lang="bg">Подсказки за създаване на достъпни уеб сайтове</dc:title>
+		<dc:language>bg</dc:language>
+		<dc:date>2007-11-06</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Stanislav_Yordanov"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.asahi-net.or.jp/~ax2s-kmtn/internet/grddl/rec-grddl-20070911.html">
+		<rdfs:comment>GRDDL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2007/REC-grddl-20070911/"/>
+		<dc:title xml:lang="ja">言語方言からの資源記述収集（GRDDL）</dc:title>
+		<dc:language>ja</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Shuji_Kamitsuna"/>
+		<dc:date>2007-11-07</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.nationsfinance.co.uk/w3/StyleSheets/Core/">
+		<rdfs:comment>W3C Core Styles</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/StyleSheets/Core/"/>
+		<dc:title xml:lang="zh-hant">W3C 核心樣式</dc:title>
+		<dc:language>zh-hant</dc:language>
+		<dc:date>2007-11-23</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Huan-Ching-Kuo"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://meiert.com/de/w3/TR/xml-id/">
+		<rdfs:comment>xml:id Version 1.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2005/REC-xml-id-20050909/"/>
+		<dc:title xml:lang="en">xml:id Version 1.0</dc:title>
+		<dc:language>de</dc:language>
+		<dc:date>2007-11-23</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jens_Meiert"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/011/firstcss.id.html">
+		<rdfs:comment>Web Style Sheets, CSS tips &amp; tricks: Starting with HTML + CSS</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/011/firstcss"/>
+		<dc:title xml:lang="id">Pelajaran CSS Mengawali dengan HTML + CSS</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-11-29</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://belgeler.org/recs/css2/">
+		<!-- CSS 2 -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/1998/REC-CSS2-19980512"/>
+		<dc:title xml:lang="tr">Bütünleşik Biçembentler, 2. Aşama</dc:title>
+		<dc:language>tr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Nilgun_Belma_Buguner"/>
+		<dc:date>2007-11-29</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://domainreviews.us/W3C/WAI/components/">
+		<!-- WAI Intro components -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="de">Grundlegende Komponenten der Webzugänglichkeit</dc:title>
+		<dc:language>de</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Mark_Goeder_Tarant"/>
+		<dc:date>2007-12-10</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.nationsfinance.co.uk/w3/Style/CSS-vs-XSL/">
+		<rdfs:comment>CSS &amp; XSL</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/CSS-vs-XSL"/>
+		<dc:title xml:lang="zh-hant">CSS 與 XSL</dc:title>
+		<dc:language>zh-hant</dc:language>
+		<dc:date>2007-12-10</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Huan-Ching-Kuo"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.nationsfinance.co.uk/w3/Style/customdtd/">
+		<rdfs:comment>Custom DTDs</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/customdtd"/>
+		<dc:title xml:lang="zh-hant"> 不要使用"自訂文件類型定義" (custom DTDs)!</dc:title>
+		<dc:language>zh-hant</dc:language>
+		<dc:date>2007-12-10</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Huan-Ching-Kuo"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.yoyodesign.org/doc/w3c/webcgm/Overview.html.gz">
+		<rdfs:comment>WebCGM 2.0</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/TR/2007/REC-webcgm20-20070130/"/>
+		<dc:title xml:lang="fr">WebCGM 2.0</dc:title>
+		<dc:language>fr</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Jean-Jacques_Solari"/>
+		<dc:date>2007-12-13</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://pristupnost.inspirative.cz/wai-accessibility.html">
+		<rdfs:comment>WAI Intro</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/accessibility.php"/>
+		<dc:title xml:lang="cs">Úvod do problematiky přístupného webu</dc:title>
+		<dc:language>cs</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Vladimir_Matejicek"/>
+		<dc:date>2007-12-13</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://pristupnost.inspirative.cz/wai-components.html">
+		<rdfs:comment>WAI Intro</rdfs:comment>
+		<trans:translationFrom rdf:resource="http://www.w3.org/WAI/intro/components"/>
+		<dc:title xml:lang="cs">Základní součásti přístupného webu</dc:title>
+		<dc:language>cs</dc:language>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Vladimir_Matejicek"/>
+		<dc:date>2007-12-13</dc:date>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/Overview.html"/>
+		<dc:title xml:lang="en">Web Style Sheets — CSS tips &amp; tricks</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/figures/">
+		<!-- CSS Tips and tricks -->
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/figures.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Gambar dan keterangan gambar</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/menus/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/menus.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Sebuah menu yang terpaku</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/indent/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/indent.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Indentasi paragraf</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/alternatives/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/alternatives.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - style sheet Alternatif</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/maps/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/maps.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Sebuah Menu Konfeti</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/scrollbars/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/scrollbars.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - scrollbar tak berwarna</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/evenodd/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/evenodd.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Baris genap dan ganjil</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/target/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/target.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Pseudo-class ':target'</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/fonts/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/fonts.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Keluarga Fonta</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/center/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/center.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Menengahkan hal</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/shadows/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/shadows.html"/>
+		<dc:title xml:lang="en">CSS Tips &amp; Tricks - Drop shadows</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/text-shadow/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/text-shadow.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Bayangan Teks</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+	<trans:Translation rdf:about="http://www.erasparsa.com/w3/Style/Examples/007/roundshadow/">
+		<trans:translationFrom rdf:resource="http://www.w3.org/Style/Examples/007/roundshadow.html"/>
+		<dc:title xml:lang="id">CSS Tips &amp; Tricks - Pojok yang melengkung dan kotak berbayang</dc:title>
+		<dc:language>id</dc:language>
+		<dc:date>2007-12-20</dc:date>
+		<trans:translator rdf:resource="http://www.w3.org/2003/03/RDFData/translators.rdf#Edwin_Rene"/>
+	</trans:Translation>
+</rdf:RDF>
+<!-- $Date: 2008/03/04 13:51:33 $, by $Author: ivan $, $Revision: 1.65 $ 
+
+
+-->

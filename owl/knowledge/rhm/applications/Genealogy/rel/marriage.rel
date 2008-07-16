@@ -1,0 +1,32 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/marriage.rel
+# Oct/5/2003 Mar/19/2007
+
+marriagetype isa attribute;
+
+r_marriage is relation with 
+    arraymode=gdbm,arraykey="$1_$2",
+    label=[husband, wife, marriagetype, marriagedate, marriageplace, divorcedate, divorceplace],
+    format=[person:1, person:2, marriagetype:3, time:4, space:5, time:6, space:7],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_marriage;
+#    meaning={
+#	$1,$2 do $3 done;
+#	$1_$2 isu family with husband=$1,wife=$2;
+#	$1_$2 has marriagetype=$3,
+#		marriagedate=$4,marriageplace=$5,
+#		divorcedate=$6,divorceplace=$7;
+#	$1,$2 rel family_spouse +=$1_$2;
+#	$1 has sex=male,rel spouse +=$2;
+#	$2 has sex=female,rel spouse +=$1;
+#	};
+
+begin relation r_marriage; 
+Carl Cates 1927, Pauline Neal 1934, marry/1953, NV, 1977, NV;
+Dick McCullough 1936, Pauline Neal 1934, marry/1984, NV/Stateline, NA, NA;
+end relation r_marriage;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

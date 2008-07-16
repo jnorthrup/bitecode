@@ -1,0 +1,32 @@
+<HTML> <XMP>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/checkval.mkr
+# 1999/7/5
+# new syntax Jun/26/2005 Mar/17/2007
+# check unique names and other names
+#   fast version using
+#     a_value (set of all values of an attribute)
+#     product := question
+
+do read from family.ku done;
+#Dr. Richard H. McCullough isa person;
+#do psize od person done;
+
+let echo=off;
+PERSON := ? isa person;
+UNIQUE := uniquename has a_value=?;
+OTHER  := othername has a_value=?;
+
+#let debug = ASSIGN;
+let MISSING = $PERSON; let MISSING -= $UNIQUE;
+let CONFLICT = $OTHER; let CONFLICT *= $PERSON;
+
+every p in $MISSING {
+	do print od "# MISSING uniquename: $p" done;
+};
+every p in $CONFLICT {
+	do print od "# CONFLICT othername: $p" done;
+};
+let echo=on;
+
+exit;
+</XMP> </HTML>

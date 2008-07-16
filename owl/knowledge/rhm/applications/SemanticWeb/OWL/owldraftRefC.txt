@@ -1,0 +1,50 @@
+Appendix C. OWL Quick Reference
+Classes in the OWL vocabulary:
+
+rdfs:Class 
+owl:AllDifferent 
+owl:AnnotationProperty 
+owl:Class 
+owl:DataRange 
+owl:DatatypeProperty 
+owl:DeprecatedClass 
+owl:DeprecatedProperty 
+owl:FunctionalProperty 
+owl:InverseFunctionalProperty 
+owl:Nothing 
+owl:ObjectProperty 
+owl:Ontology 
+owl:OntologyProperty 
+owl:Restriction 
+owl:SymmetricProperty 
+owl:Thing 
+owl:TransitiveProperty 
+
+
+Properties in the OWL vocabulry:
+
+rdf:Property rdfs:domain rdfs:range 
+owl:allValuesFrom owl:Restriction rdfs:Class 
+owl:backwardCompatibleWith owl:Ontology owl:Ontology 
+owl:cardinality owl:Restriction xsd:nonNegativeInteger 
+owl:complementOf owl:Class owl:Class 
+owl:differentFrom owl:Thing owl:Thing 
+owl:disjointWith owl:Class owl:Class 
+owl:distinctMembers owl:AllDifferent rdf:List 
+owl:equivalentClass owl:Class owl:Class 
+owl:equivalentProperty rdf:Property rdf:Property 
+owl:hasValue owl:Restriction  
+owl:imports owl:Ontology owl:Ontology 
+owl:incompatibleWith owl:Ontology owl:Ontology 
+owl:intersectionOf owl:Class rdf:List 
+owl:inverseOf owl:ObjectProperty owl:ObjectProperty 
+owl:maxCardinality owl:Restriction xsd:nonNegativeInteger 
+owl:minCardinality owl:Restriction xsd:nonNegativeInteger 
+owl:oneOf owl:Class rdf:List 
+owl:onProperty owl:Restriction rdf:Property 
+owl:priorVersion owl:Ontology owl:Ontology 
+owl:sameAs owl:Thing owl:Thing 
+owl:sameIndividualAs owl:Thing owl:Thing 
+owl:someValuesFrom owl:Restriction rdfs:Class 
+owl:unionOf owl:Class rdf:List 
+owl:versionInfo   

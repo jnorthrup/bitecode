@@ -1,0 +1,46 @@
+<HTML>
+<H3>
+<XMP>
+# KEHOME/knowledge/theory/KRdesign/variable.html
+# 1999/1/20
+# new syntax Sep/29/2002
+
+#===========#
+# variables #
+#===========#
+
+variables are used in
+
+    every variable is   clist    { ... $variable ... }
+    every variable isa  cname    { ... $variable ... }
+    every variable isin relation { ... $variable ... }
+    every variable isin method   { ... $variable ... }
+
+    m is method with
+	format=[class:1,...],
+	meaning={... $1 ...}
+
+    r is relation with
+	format=[class:1,...],
+	meaning={... $1 ...}
+
+    set . = concept  # current concept
+
+
+To facilitate accessing the attributes and actions of the
+current concept, set records the following $ variables:
+
+    $class	# list of all class (concept isa* class)
+    $genus	# list of all genus (more than one for a lattice)
+    $unit	# list of all units
+    $alias	# list of all aliases
+    $attribute	# list of all attributes
+    $attr	# value of an individual attr
+    $action	# list of all actions
+    $act	# event of an individual act
+    $1,$2,...	# role values of a relation unit
+    $fact	# input text (if applicable)
+</XMP>
+<BR>
+<A HREF="../../../doc/ref.html"> General References </A> <BR>
+</H3>

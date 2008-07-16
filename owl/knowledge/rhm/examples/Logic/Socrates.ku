@@ -1,0 +1,27 @@
+# KEHOME/knowledge/ExamplesLogic/Socrates.ku
+# Jul/26/2002
+
+
+# hypothetical argument
+#======================
+if	man      isa* mortal
+and	Socrates isa* man
+#---------------------------
+then	Socrates isa* mortal
+fi
+
+
+# hypothetical view
+#==================
+at view = hypothesis {
+  man      isa* mortal
+  Socrates isa* man
+  #---------------------
+  Socrates isa* mortal ?
+}
+
+
+
+# output
+#=======
+mortal ise* ?

@@ -1,6 +1,5 @@
 package inc.glamdring.bitecode;
 import java.nio.*;
-import java.lang.reflect.*;
 
 /**
  * <p>recordSize: 8
@@ -134,7 +133,7 @@ Utf8Index(0x2),AttributeLength(0x4),ExceptionsCount(0x2);
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);

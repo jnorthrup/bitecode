@@ -1,0 +1,59 @@
+# KEHOME/knowledge/TheoryContextSymposium/excx.txt
+# 1999/5/7
+# new syntac Sep/29/2002
+
+#==================#
+# context examples #
+#==================#
+
+Here are two simple examples to illustrate the specification of the
+context which is necessary to determine the meaning of a statement.
+
+1. Sue is a man.
+In this example, the meanings of Sue and man are ambiguous, and must
+be determined by the context.
+1a. In every day conversation, Sue is a female person,
+      and a man is a male person, so the statement is contradictory.
+1b. In philosophical discussions, a man is a species of animal, so the
+      statement simply means Sue is a person.
+1c. In a popular Country-Western song, Sue is a male person.
+For this example, a concept-hierarchy is a convenient way to
+describe these 3 different contexts:
+
+at view=every day conversation
+context1 is begin hierarchy
+animal
+/    person
+//        man
+//        woman
+///            Sue
+end hierarchy context1
+
+at view=philosophical discussion
+context2 is begin hierarchy
+animal
+/    man
+//        Sue
+end hierarchy context2
+
+at view=Country-Western song
+context3 is begin hierarchy
+animal
+/    person
+//        man
+///            Sue
+//        woman
+end hierarchy context3
+
+2. I'll phone you at 10 o'clock.
+In this example, the time reference is ambiguous, and
+must be resolved by the context.  Given that I live in
+Pioneer, CA and that today is May 7, 1999, and I don't
+call anyone after 9 pm, the meaning of the statement
+can be expressed as
+
+at space=California/Pioneer,time=today/10 am PDT {I do phone od you done}
+
+
+Note that a general context is specified by space, time, view
+where view denotes a group of propositions.

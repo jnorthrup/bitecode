@@ -1,0 +1,38 @@
+# 10:00 am 1998/6/5
+
+#==========================================#
+# definition of artificial intelligence    #
+# focus on reality: entity, relation, view #
+#==========================================#
+
+My view of reality, at a given space and time, is my identification
+of existing entities and the relations between those entities.
+My current view of reality includes these entities
+	Bill Gates
+	Jaqui Faber
+	Deep Blue
+	Knowledge Explorer
+	Auto Pilot
+	Furnace Thermostat
+and these relations
+	Bill Gates is a man
+	Bill Gates has intelligence
+	Jaqui Faber is my granddaughter
+	Jaqui Faber does not have artificial intelligence
+	Deep Blue plays chess
+	Deep Blue has artificial intelligence
+	Knowledge Explorer helps me organize my knowledge
+	Knowledge Explorer has artificial intelligence
+	Auto Pilot flew me from Chicago to Sacramento
+	Auto Pilot has artificial intelligence
+	Furnace Thermostat keeps my house comfortable
+	Furnace Thermostat does not have artificial intelligence
+
+Focusing on the essentials, my view is that
+	entity has artificial intelligence
+if and only if
+	entity does not live
+	entity is created by man
+	entity does (intelligent) action
+	if man does same (intelligent) action then man has intelligence
+

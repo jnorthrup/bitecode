@@ -1,0 +1,188 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "Teijgeler, Hans" <hans.teijgeler@quicknet.nl>
+Cc: "Ayers, Danny" <danny.ayers@gmail.com>
+Subject: killed rdfs:comment bug
+Date: Sun, 11 Sep 2005 20:48:13 -0700
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0006_01C5B712.20A3FEC0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2180
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0006_01C5B712.20A3FEC0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0007_01C5B712.20A3FEC0"
+
+
+------=_NextPart_001_0007_01C5B712.20A3FEC0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+It was a lot more involved than I thought.
+I got into interesting side issues such as:
+
+    Is /rdfs:comment one word ("/rdfs:comment")
+    or two words ("/" "rdfs:comment").
+    What happens if you're expecting one,
+    but you get two (or vice versa).
+
+I have attached the files I used for testing.
+
+    bug1.rdf  (small excerpt from your ISO file)
+    bug1.test (MKR test script)
+    bug1.mkr  (MKR translation of bug1.rdf)
+
+It's worth noting that MKE supplies many declarations
+automatically.  In this case, we know that the
+arguments of "intersectionOf" are all classes.
+
+Dick McCullough
+knowledge :=3D man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/
+------=_NextPart_001_0007_01C5B712.20A3FEC0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2900.2722" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DCourier size=3D2>It was a lot more involved than I=20
+thought.</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>I got into interesting side issues =
+such=20
+as:</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; Is /rdfs:comment one =
+word=20
+("/rdfs:comment")</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; or </FONT><FONT =
+face=3DCourier=20
+size=3D2>two words ("/" "rdfs:comment").</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; What happens if =
+you're=20
+expecting one,</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; but you get two =
+(or vice=20
+versa).</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DCourier size=3D2>I have attached the files I used for=20
+testing.</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; bug1.rdf&nbsp; =
+(small excerpt=20
+from your ISO file)</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; bug1.test (MKR =
+test=20
+script)</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>&nbsp;&nbsp;&nbsp; bug1.mkr&nbsp; =
+(MKR=20
+translation of bug1.rdf)</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DCourier size=3D2>It's worth noting that MKE supplies =
+many=20
+declarations</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>automatically.&nbsp; In this case, we =
+know that=20
+the</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2>arguments of "intersectionOf" are all =
+
+classes.</FONT></DIV>
+<DIV><FONT face=3DCourier size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DCourier size=3D2>Dick McCullough<BR>knowledge :=3D man =
+do identify=20
+od existent done;<BR>knowledge haspart proposition list;<BR><A=20
+href=3D"http://rhm.cdepot.net/">http://rhm.cdepot.net/</A></FONT></DIV></=
+BODY></HTML>
+
+------=_NextPart_001_0007_01C5B712.20A3FEC0--
+
+------=_NextPart_000_0006_01C5B712.20A3FEC0
+Content-Type: application/octet-stream;
+	name="bug1.mkr"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename="bug1.mkr"
+
+# /test/hans/bug1.mkr
+# Sep/11/2005
+
+# MKR translation of bug1.rdf 
+
+ClassOfAbstractObject intersectionOf
+	ClassOfClass,
+	ClassOfRelationship,
+	ClassOfMultidimensionalObject;
+
+ClassOfAbstractObject owl:disjointWith ClassOfIndividual;
+
+rdfs:comment has rdf:datatype = "http://www.w3.org/2001/XMLSchema#string",
+ClassOfAbstractObject has rdfs:comment = 
+	" DEFINITION A ClassOfAbstractObject is a Class
+      whose members classify members of AbstractObject .";
+
+
+# automatic declarations (arguments of intersectionOf)
+owl:Class isall
+	ClassOfAbstractObject,
+	ClassOfClass,
+	ClassOfRelationship,
+	ClassOfMultidimensionalObject,
+	ClassOfIndividual;
+
+------=_NextPart_000_0006_01C5B712.20A3FEC0
+Content-Type: application/octet-stream;
+	name="bug1.rdf"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="bug1.rdf"
+
+# /test/hans/bug1.rdf
+# Sep/6/2005
+
+    <owl:Class rdf:ID=3D"ClassOfAbstractObject">
+        #####<rdfs:subClassOf rdf:resource=3D"#Class"/>
+        <owl:intersectionOf rdf:parseType=3D"Collection"> =20
+            <owl:Class rdf:about=3D"#ClassOfClass"/> =20
+            <owl:Class rdf:about=3D"#ClassOfRelationship"/> =20
+            <owl:Class rdf:about=3D"#ClassOfMultidimensionalObject"/> =20
+        </owl:intersectionOf>
+        <owl:disjointWith rdf:resource=3D"#ClassOfIndividual"/>
+        <rdfs:comment =
+rdf:datatype=3D"http://www.w3.org/2001/XMLSchema#string">
+            DEFINITION A ClassOfAbstractObject is a Class whose members =
+classify members
+            of AbstractObject .
+        </rdfs:comment>
+    </owl:Class>
+
+------=_NextPart_000_0006_01C5B712.20A3FEC0
+Content-Type: application/octet-stream;
+	name="bug1.test"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="bug1.test"
+
+# /test/hans/bug1.test=0A=
+# Sep/8/2005=0A=
+=0A=
+do read rdf from bug1.rdf done;=0A=
+=0A=
+# save MKR translation=0A=
+! grep od 'MKR trans' from bug1.log to bug1.mkrtrans done;=0A=
+=0A=
+exit;=0A=
+
+------=_NextPart_000_0006_01C5B712.20A3FEC0--

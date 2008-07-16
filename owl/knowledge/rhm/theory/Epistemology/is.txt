@@ -1,0 +1,82 @@
+# KEHOME/knowledge/TheoryEpistemology/is.txt
+# 1999/4/28
+# new syntax Sep/29/2002
+
+#=====================#
+# the meaning of "is" #
+#=====================#
+# Reference:
+# Webster's II New Riverside Dictionary,
+# The Riverside Publishing Company, 1984.
+# (listed under "be")
+
+#=======#
+# sense #
+#=======#
+1. to exist in actuality : have reality or life
+2. to occupy a given position
+3. to take place : OCCUR
+4. to go -- used chiefly in the past and perfect tenses
+5. (Archaic) to belong : befall
+6. used as a copula linking a subject and a predicate
+   nominative, adjective, or pronoun, in senses such as
+   6a. to equal in meaning or identity
+   6b. to symbolize : signify
+   6c. to belong to a given class or group
+   6d. to have or exhibit a given quality or characteristic
+
+#=========#
+# example #
+#=========#
+1. I think, therefore I am.
+2. The paper is on the desk.
+3. ?
+4. Have you ever been to France?
+5. ?
+6a. To be a Christian was to be a Roman.
+6b. A is excellent, B is good.
+6c. The human being is a primate.
+6d. The coat is beautiful.  All of us are human.
+
+#==============================#
+# KR translation of "is" sense #
+#==============================#
+1.   isa existent
+2.   isa existent  # at location
+3.   ?
+4.   do go
+5.   ?
+6a1. is*           # meaning: see NOTE 6a below
+6a2. is            # identity
+6b.  means
+6c1. iss*          # species
+6c2. isu*          # unit
+6d.  has           # attribute
+
+#===========================#
+# KR translation of example #
+#===========================#
+1. I do think done implies I isa existent
+2. at space=on the desk { paper isa existent }
+3. ?
+4. at time=past { you do go to France ? }
+5. ?
+6a1. Christian is* Roman  # see NOTE 6a below
+6a2. at time=past { Christian is Roman }
+	but I think the actual meaning is
+	at time=past { Christian iss* Roman }
+6b. A means excellent; B means good
+6c1. human being iss primate      # species
+6c2. the human being isu primate  # unit
+6d. the coat has beautiful; all we has human
+
+NOTE 6a:
+"x is y" means that x and y are in the same concept hierarchy
+(view), and that x and y are different names for the same
+concept.  On the other hand, "x is* y" means that x and y
+are in different hierarchies, and that the x subhierarchy
+and the y subhierarchy are different views of the same
+units (the bottom of the concept subhierarchy).
+
+"is*" is not implemented in the current version of KR.
+

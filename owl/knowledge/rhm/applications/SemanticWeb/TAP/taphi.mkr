@@ -1,0 +1,18 @@
+# KEHOME/knowledge/applications/SemanticWeb/TAP/taphi.mkr
+# May/30/2003
+
+# create TAP instance-Class hierarchy
+
+set dir = F:/download/tap;
+
+#do read rdf from "${dir}/tap.rdf" done;
+ do read mcf from "${dir}/tap.mcf" done;
+
+Class isall* ?;
+Resource isg* ?;
+Property isc* ?;
+
+! deletecomment od taphi.out to taphi.save done;
+
+do check od knit done;
+exit;

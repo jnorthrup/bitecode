@@ -1,0 +1,478 @@
+# KEHOME/knowledge/application/SemanticWeb/DAML/SuperSports.txt
+# rhm Nov/1/2002
+
+#<?xml version="1.0" encoding="UTF-8"?>
+#<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+#        xmlns:daml="http://www.w3.org/2001/10/daml+oil#"
+#        xmlns:dt="http://rdfinference.org/eg/supersports/dt"
+#        xmlns:ss="http://rdfinference.org/eg/supersports/metadata/"
+#        xmlns:xsd="http://www.w3.org/2000/10/XMLSchema#"
+#        xml:base="http://rdfinference.org/eg/supersports/metadata/">
+
+# general context
+Ontology isu view
+Class is concept
+Property is attribute
+Product iss object
+Person is person
+                             
+# <daml:Ontology rdf:about="">
+#   <daml:versionInfo>1.0</daml:versionInfo>
+#   <rdfs:comment>
+#     An ontology of Super Sports Inc. store products
+#   </rdfs:comment>
+#   <daml:imports rdf:resource="http://www.daml.org/2001/03/daml+oil"/>
+# </daml:Ontology>
+at view = Super Sports Products
+$kname has  # current knowledge unit
+    rdf:about = "",
+    daml:version = 1.0,
+    rdfs:comment = "An ontology of Super Sports Inc. store products",
+    daml:imports = "http://www.daml.org/2001/03/daml+oil"
+
+# <daml:Class rdf:ID="Product">
+#   <rdfs:label>Product</rdfs:label>
+#   <rdfs:comment>An item sold by Super Sports Inc.</rdfs:comment>
+#   <daml:disjointUnionOf parseType="daml:collection">
+#     <daml:Class rdf:ID="CurrentProduct">
+#       <rdfs:label>Current Product</rdfs:label>
+#       <rdfs:comment>An item currently sold by Super Sports Inc. at the time of query</rdfs:comment>
+#     </daml:Class>
+#     <daml:Class rdf:ID="DiscontinuedProduct">
+#       <rdfs:label>Discontinued Product</rdfs:label>
+#       <rdfs:comment>An item no longer sold by Super Sports Inc. at the time of query</rdfs:comment> </daml:Class> <daml:Class rdf:ID="UnreleasedProduct">
+#       <rdfs:label>Unreleased Product</rdfs:label>
+#       <rdfs:comment>An item under planning or preparation for sale by Super Sports Inc., but not yet on sale at the time of query</rdfs:comment>
+#     </daml:Class>
+#   </daml:disjointUnionOf>
+# </daml:Class>
+Product has
+    rdfs:label = "Product",
+    rdfs:comment = "An item sold by Super Sports Inc."
+Product isg
+    CurrentProduct,
+    DiscontinuedProduct,
+    UnreleasedProduct
+CurrentProduct has
+    rdfs:label = "Current Product",
+    rdfs:comment = "An item currently sold by Super Sports Inc. at the time of query"
+DiscontinuedProduct has
+    rdfs:label = "Discontinued Product",
+    rdfs:comment = "An item no longer sold by Super Sports Inc. at the time of query"
+UnreleasedProduct has
+    rdfs:label = "Unreleased Product",
+    rdfs:comment = "An item under planning or preparation for sale by Super Sports Inc., but not yet on sale at the time of query"
+    
+  
+# <!-- *****************SIMPLE INHERITANCE***************** -->
+# 
+# <daml:Class rdf:ID="Tool">
+#   <rdfs:label>Tool</rdfs:label>
+#   <rdfs:comment>
+#     Tools used in sports, ice axe for instance.
+#   </rdfs:comment>
+#   <rdfs:subClassOf rdf:resource="#Product"/>
+# </daml:Class>
+Tool iss Product
+Tool has
+    rdfs:label = "Tool",
+    rdfs:comment = "Tools used in sports, ice axe for instance."
+  
+# <daml:Class rdf:ID="Shoe">
+#   <rdfs:label>Shoe</rdfs:label>
+#   <rdfs:subClassOf rdf:resource="#Product"/>
+# </daml:Class>
+Shoe iss Product
+Shoe has
+    rdfs:label = "Shoe"
+  
+# <daml:Class rdf:ID="SleepingBag">
+#   <rdfs:label>Sleeping Bag</rdfs:label>
+#   <rdfs:subClassOf rdf:resource="#Product"/>
+# </daml:Class>
+SleepingBag iss Product
+SleepingBag has
+    rdfs:label = "Sleeping Bag"
+  
+# <daml:Class rdf:ID="BackPack">
+#   <rdfs:label>Back Pack</rdfs:label>
+#   <rdfs:subClassOf rdf:resource="#Product"/>
+# </daml:Class>
+BackPack iss Product
+BackPack has
+    rdfs:label = "Back Pack"
+  
+# <!-- *****************INSTANCES***************** -->
+# 
+# <ss:BackPack rdf:ID="ReadyRuck">
+#   <rdfs:label>Ready Ruck back pack</rdfs:label>
+#   <rdfs:comment>
+#     The ideal pack for your most rugged adventures
+#   </rdfs:comment>
+#   <ss:productNumber>23456</ss:productNumber>
+#   <ss:packCapacity>45</ss:packCapacity>
+#   <ss:usedFor rdf:resource="#Hiking"/>
+# </ss:BackPack>
+ReadyRuck isu BackPack
+ReadyRuck has
+    rdfs:label = "Ready Ruck back pack",
+    rdfs:comment = "The ideal pack for your most rugged adventures",
+    productNumber = 23456,
+    packCapacity = 45,
+    usedFor = Hiking
+  
+# <!-- *****************DATATYPE PROPERTIES*****************-->
+# 
+# <daml:DatatypeProperty rdf:ID="productNumber">
+#   <rdfs:label>Product Number</rdfs:label>
+#   <daml:samePropertyAs rdf:resource="http://rosettanet.org/FundamentalBusiness/DataEntities#ProprietaryProductIdentifier"/>
+#   <rdfs:domain rdf:resource="#Product"/>
+#   <rdfs:range rdf:resource="http://www.w3.org/2000/10/XMLSchema#nonNegativeInteger"/>
+#   <rdf:type rdf:resource="http://www.daml.org/2001/03/daml+oil#UniqueProperty"/>
+# </daml:DatatypeProperty>
+Product has productNumber
+productNumber is "http://rosettanet.org/FundamentalBusiness/DataEntities#ProprietaryProductIdentifier"
+productNumber has
+    rdfs:label = "Product Number",
+    rdfs:range = "http://www.w3.org/2000/10/XMLSchema#nonNegativeInteger",
+    rdf:type = "http://www.daml.org/2001/03/daml+oil#UniqueProperty"
+  
+# <daml:DatatypeProperty rdf:ID="packCapacity">
+#   <rdfs:label>capacity</rdfs:label>
+#   <rdfs:comment>The capacity of a back pack</rdfs:comment>
+#   <rdfs:domain rdf:resource="#BackPack"/>
+#   <rdfs:range rdf:resource="http://rdfinference.org/eg/supersports/dt#packCapacity"/>
+# </daml:DatatypeProperty>
+BackPack has packCapacity
+packCapacity has
+    rdfs:label = "capacity",
+    rdfs:comment = "The capacity of a back pack",
+    rdfs:range = "http://rdfinference.org/eg/supersports/dt#packCapacity"
+  
+# <!-- *****************OBJECT PROPERTIES*****************-->
+# 
+# <daml:ObjectProperty rdf:ID="gear">
+#   <rdfs:label>gear</rdfs:label>
+#   <rdfs:comment>Indicates a product that is used in association with an activity</rdfs:comment>
+#   <daml:domain rdf:resource="#Activity"/>
+#   <daml:range rdf:resource="#Product"/>
+# </daml:ObjectProperty>
+Activity has gear = Product
+gear has
+    rdfs:label = "gear",
+    rdfs:comment = "Indicates a product that is used in association with an activity"
+  
+# <daml:ObjectProperty rdf:ID="usedFor">
+#   <rdfs:label>used for</rdfs:label>
+#   <rdfs:comment>Indicates an activity for which a product is designed</rdfs:comment>
+#   <daml:inverseOf rdf:resource="#gear"/>
+#   <daml:domain rdf:resource="#Product"/>
+#   <daml:range rdf:resource="#Activity"/>
+# </daml:ObjectProperty>
+Product has usedFor = Activity
+usedFor has
+    rdfs:label = "used for",
+    rdfs:comment = "Indicates an activity for which a product is designed"
+# usedFor isinverseOf gear  # could use new KR verb
+Product  has usedFor = Activity  iff
+Activity has gear    = Product
+  
+# <daml:ObjectProperty rdf:ID="targetSex">
+#   <rdfs:label>target sex</rdfs:label>
+#   <rdfs:comment>Indicates the sex for which a product is primarily designed.</rdfs:comment>
+#   <daml:domain rdf:resource="#Product"/>
+#   <daml:range rdf:resource="#Sex"/>
+# </daml:ObjectProperty>
+Product has targetSex = Sex
+targetSex has
+    rdfs:label = "target sex",
+    rdfs:comment = "Indicates the sex for which a product is primarily designed."
+  
+# <!-- *****************ENUMERATIONS*****************-->
+# <daml:Class ID="Availability">
+#   <rdfs:label>Availability</rdfs:label>
+#   <rdfs:comment>Whether and when an item is available for purchase</rdfs:comment>
+#   <daml:oneOf parseType="daml:collection">
+#     <daml:Thing rdf:ID="InStock">
+#       <rdfs:label>In stock</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="BackOrdered">
+#       <rdfs:label>Back ordered</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="SpecialOrder">
+#       <rdfs:label>Special order</rdfs:label>
+#     </daml:Thing>
+#   </daml:oneOf>
+# </daml:Class>
+Availability isu enumeration
+Availability has
+    rdfs:label = "Availability",
+    rdfs:comment = "Whether and when an item is available for purchase"
+Availability isany
+      InStock,
+      BackOrdered,
+      SpecialOrder
+InStock has
+      rdfs:label = "In stock"
+BackOrdered has
+      rdfs:label = "Back ordered"
+SpecialOrder has
+      rdfs:label = "Special order"
+  
+# <daml:Class rdf:ID="Activity">
+#   <rdfs:label>Activity</rdfs:label>
+#   <rdfs:comment>A sport activity</rdfs:comment>
+#   <daml:oneOf rdf:parseType="daml:collection">
+#     <daml:Thing rdf:ID="Hiking">
+#       <rdfs:label>Hiking</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="Travel">
+#       <rdfs:label>Travel</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="Camping">
+#       <rdfs:label>Camping</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="Mountaineering">
+#       <rdfs:label>Mountaineering</rdfs:label>
+#     </daml:Thing>
+#   </daml:oneOf>
+Activity isu enumeration
+Activity has
+    rdfs:label = "Activity",
+    rdfs:comment = "A sport activity"
+Activity isany
+    Hiking,
+    Travel,
+    Camping,
+    Mountaineering
+Hiking has
+    rdfs:label = "Hiking"
+Travel has
+    rdfs:label = "Travel"
+Camping has
+    rdfs:label = "Camping"
+Mountaineering has
+    rdfs:label = "Mountaineering"
+  
+# <daml:Class ID="Sex">
+#   <rdfs:label>Sex</rdfs:label>
+#   <rdfs:comment>Male, female or unisex</rdfs:comment>
+#   <daml:oneOf parseType="daml:collection">
+#     <daml:Thing rdf:ID="Male">
+#       <rdfs:label>Male</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="Female">
+#       <rdfs:label>Female</rdfs:label>
+#     </daml:Thing>
+#     <daml:Thing rdf:ID="Unisex">
+#       <rdfs:label>Unisex</rdfs:label>
+#     </daml:Thing>
+#   </daml:oneOf>
+# </daml:Class>
+Sex isu enumeration
+Sex has
+    rdfs:label = "Sex",
+    rdfs:comment = "Male, female or unisex"
+Sex isany
+    Male,
+    Female,
+    Unisex
+Male has
+    rdfs:label = "Male"
+Female has
+    rdfs:label = "Female"
+Unisex has
+    rdfs:label = "Unisex"
+  
+# <!-- *****************UNION OF*****************-->
+# 
+# <daml:Class rdf:ID="CampingGear">
+#   <rdfs:label>Camping Gear</rdfs:label>
+#   <rdfs:comment>An item designed for use while camping</rdfs:comment>
+# </daml:Class>
+CampingGear iss Product  # implied
+CampingGear has
+    rdfs:label = "Camping Gear",
+    rdfs:comment = "An item designed for use while camping"
+  
+# <daml:Class rdf:ID="HikingGear">
+#   <rdfs:label>Hiking Gear</rdfs:label>
+#   <rdfs:comment>An item designed for use while hiking</rdfs:comment>
+# </daml:Class>
+HikingGear iss Product  # implied
+HikingGear has
+    rdfs:label = "Hiking Gear",
+    rdfs:comment = "An item designed for use while hiking"
+
+# <daml:Class rdf:ID="FamilyProduct">
+#   <rdfs:label>Family Product</rdfs:label>
+#   <rdfs:comment>An item designed for family use</rdfs:comment>
+#   <daml:unionOf parseType="daml:collection">
+#     <daml:Class rdf:about="#CampingGear"/>
+#     <daml:Class rdf:about="#HikingGear"/>
+#   </daml:unionOf>
+# </daml:Class>
+FamilyProduct iss Product  # implied
+# FamilyProduct isunionOf CampingGear, HikingGear  # could use new KR verb
+FamilyProduct is CampingGear or HikingGear
+FamilyProduct has
+    rdfs:label = "Family Product",
+    rdfs:comment = "An item designed for family use"
+  
+# <!-- *****************INTERSECTION OF*****************-->
+# 
+# <daml:Class rdf:ID="Footwear">
+#   <rdfs:label>Footwear</rdfs:label>
+#   <rdfs:comment>An item worn on the feet</rdfs:comment>
+# </daml:Class>
+Footware iss Product  # implied
+Footware has
+    rdfs:label = "Footwear",
+    rdfs:comment = "An item worn on the feet"
+
+# <daml:Class rdf:ID="HikingShoes">
+#   <rdfs:label>Hiking Shoes</rdfs:label>
+#   <rdfs:comment>An item worn on the feet while hiking</rdfs:comment>
+#   <daml:intersectionOf parseType="daml:collection">
+#     <daml:Class rdf:about="#HikingGear"/>
+#     <daml:Class rdf:about="#Footwear"/>
+#   </daml:intersectionOf>
+# </daml:Class>
+HikingShoes iss Product  # implied
+# HikingShoes isintersectionOf HikingGear, Footwear  # could use new KR verb
+HikingShoes is HikingGear and Footwear
+HikingShoes has
+    rdfs:label = "Hiking Shoes",
+    rdfs:comment = "An item worn on the feet while hiking"
+  
+# <!-- ***********SUB CLASS OF A RESTRICTION*************-->
+# 
+# <daml:Class rdf:ID="MensProduct">
+#   <rdfs:label>Men's Product</rdfs:label>
+#   <rdfs:comment>A product particularly designed to be used by men</rdfs:comment>
+#   <rdfs:subClassOf>
+#     <daml:Restriction>
+#       <daml:onProperty rdf:resource="#targetSex"/>
+#       <daml:hasValue rdf:resource="#Male"/>
+#     </daml:Restriction>
+#   </rdfs:subClassOf>
+# </daml:Class>
+MensProduct iss Product with
+    targetSex = Male
+MensProduct has
+    rdfs:label = "Men's Product",
+    rdfs:comment = "A product particularly designed to be used by men"
+
+# <!-- *******INTERSECTION OF A CLASS AND A HASCLASS RESTRICTION********-->
+# 
+# <daml:Class rdf:ID="Ball">
+#   <rdfs:label>Ball</rdfs:label>
+#   <rdfs:comment>A ball designed to be in sports</rdfs:comment>
+#   <rdfs:subClassOf rdf:resource="#Product"/>
+# </daml:Class>
+Ball iss Product
+Ball has
+    rdfs:label = "Ball",
+    rdfs:comment = "A ball designed to be in sports"
+  
+# <daml:Class rdf:ID="BallSport">
+#   <rdfs:label>Ball Sport</rdfs:label>
+#   <rdfs:comment>Activities that involve play using balls</rdfs:comment>
+#   <daml:intersectionOf parseType="daml:collection">
+#     <daml:Class rdf:resource="#Activity"/>
+#     <daml:Restriction>
+#       <daml:onProperty rdf:resource="#gear"/>
+#       <daml:hasClass rdf:resource="#Ball"/>
+#     </daml:Restriction>
+#   </daml:intersectionOf>
+# </daml:Class>
+BallSport iss Activity with
+   gear = Ball
+BallSport has
+    rdfs:label = "Ball Sport",
+    rdfs:comment = "Activities that involve play using balls"
+  
+# <!-- *******INTERSECTION OF A CLASS AND A TOCLASS RESTRICTION********-->
+# 
+# <daml:Class rdf:ID="ObsoleteActivity">
+#   <rdfs:label>Obsolete activity</rdfs:label>
+#   <rdfs:comment>Activities for which all related products have been discontinued</rdfs:comment>
+#   <daml:intersectionOf parseType="daml:collection">
+#     <daml:Class rdf:resource="#Activity"/>
+#     <daml:Restriction>
+#       <daml:onProperty rdf:resource="#gear"/>
+#       <daml:toClass rdf:resource="#DiscontinuedProduct"/>
+#     </daml:Restriction>
+#   </daml:intersectionOf>
+# </daml:Class>
+ObsoleteActivity iss Activity with
+    gear = DiscontinuedProduct
+ObsoleteActivity has
+    rdfs:label = "Obsolete activity",
+    rdfs:comment = "Activities for which all related products have been discontinued"
+  
+# <!-- *****************TRANSITIVE PROPERTY*****************-->  
+# 
+# <daml:TransitiveProperty rdf:ID="member">
+#   <rdfs:label>member</rdfs:label>
+#   <rdfs:comment>Indicates a group which a person or another group has joined</rdfs:comment>
+# </daml:TransitiveProperty>
+member iss attribute
+member has
+    daml:TransitiveProperty,
+    rdfs:label = "member",
+    rdfs:comment = "Indicates a group which a person or another group has joined"
+  
+# <daml:Class rdf:ID="Person">
+#   <rdfs:label>Person</rdfs:label>
+#   <rdfs:comment>An individual human being</rdfs:comment>
+# </daml:Class>
+Person has
+    rdfs:label = "Person",
+    rdfs:comment = "An individual human being"
+  
+# <daml:Class rdf:ID="Organization">
+#   <rdfs:label>Organization</rdfs:label>
+#   <rdfs:comment>An collection of affiliated human beings</rdfs:comment>
+# </daml:Class>
+Organization iss set of person
+Organization has
+    rdfs:label = "Organization",
+    rdfs:comment = "An collection of affiliated human beings"
+  
+# <!-- Instances related to transitive properties -->
+# <Organization rdf:ID="AmericanCrossCountrySkiers">
+#   <rdfs:label>American Cross Country Skiers (AXCS)</rdfs:label>
+#   <rdfs:comment>An association that serves U.S. Master (age 30 and older) cross country skiers with a wide range of education, promotion and communication programs. </rdfs:comment>
+# </Organization>
+AmericanCrossCountrySkiers isu Organization
+AmericanCrossCountrySkiers has
+    rdfs:label = "American Cross Country Skiers (AXCS)",
+    rdfs:comment = "An association that serves U.S. Master (age 30 and older) cross country skiers with a wide range of education, promotion and communication programs."
+  
+# <Organization rdf:ID="BoulderNordicClub">
+#   <rdfs:label>Boulder Nordic Club</rdfs:label>
+#   <rdfs:comment>A club organized to support cross country skiing in the Boulder area</rdfs:comment>
+#   <member rdf:resource="#AmericanCrossCountrySkiers"/>
+# </Organization>
+BoulderNordicClub isu Organization
+BoulderNordicClub has
+    rdfs:label = "Boulder Nordic Club",
+    rdfs:comment = "A club organized to support cross country skiing in the Boulder area",
+    member = AmericanCrossCountrySkiers
+
+#<!--  
+# <Person rdf:ID="jsmith">
+#   <rdfs:label>Mr. John Smith</rdfs:label>
+#   <rdfs:comment>Mr. John Smith is a cross-country skier from Boulder, Colorado</rdfs:comment>
+#   <member rdf:resource="#BoulderNordicClub"/>
+# </Person>
+#-->
+jsmith isu Person
+jsmith has
+    rdfs:label = "Mr. John Smith",
+    rdfs:comment = "Mr. John Smith is a cross-country skier from Boulder, Colorado",
+    member = BoulderNordicClub
+
+#</rdf:RDF>

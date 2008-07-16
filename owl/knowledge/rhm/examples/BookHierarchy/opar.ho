@@ -1,0 +1,82 @@
+<HTML><pre>
+# KEHOME/knowledge/examples/BookHierarchy/opar.ho
+# Jan/1/1998
+# new syntax Jun/26/2005
+
+# Leonard Peikoff
+
+begin hierarchy opar;
+book;
+/    Objectivism: The Philosophy of Ayn Rand;
+
+Objectivism: The Philosophy of Ayn Rand;
+
+/    1: Reality;
+//        existence, consciousness, and identity as the basic axioms;
+//        causality as a corollary of identity;
+//        existence as possessing primacy over consciousness;
+//        the metaphysically given as absolute;
+//        idealism and materialism as the rejection of basic axioms;
+/    2: Sense Perception and Volition;
+//        the senses as necessarily valid;
+//        sensory qualities as real;
+//        consciousness as possessing identity;
+//        the perceptual level as the given;
+//        the primary choice as the choice to focus or not;
+//        human actions, mental and physical, as both caused and free;
+//        volition as axiomatic;
+/    3: Concept-formation;
+//        differentiation and integration as the means to a unit-perspective;
+//        concept-formation as a mathematical process;
+//        concepts of consciousness as involving measurement-omission;
+//        definition as the final step in concept-formation;
+//        concepts as devices to achieve unit-economy;
+/    4: Objectivity;
+//        concepts as objective;
+//        objectivity as volitional adherence to reality by the method of logic;
+//        knowledge as contextual;
+//        knowledge as hierarchical;
+//        intrinsicism and subjectivism as the two forms of rejecting objectivity;
+/    5: Reason;
+//        emotions as a product of ideas;
+//        reason as man's only means of knowledge;
+//        the arbitrary as neither true nor false;
+//        certainty as contextual;
+//        mysticism and skepticism as denials of reason;
+/    6: Man;
+//        living organisms as goal-directed and conditional;
+//        reason as man's basic means of survival;
+//        reason as an attribute of the individual;
+/    7: The Good;
+//        "life" as the essential root of "value";
+//        man's life as the standard of moral value;
+//        rationality as the primary virtue;
+//        the individual as the proper beneficiary of his own moral action;
+//        values as objective;
+/    8: Virtue;
+//        independence as a primary orientation to reality, not to other men;
+//        integrity as loyalty to rational principles;
+//        honesty as the rejection of unreality;
+//        justice as rationality in the evaluation of men;
+//        productiveness as the adjustment of nature to man;
+//        pride as moral ambitiousness;
+//        the initiation of physical force as evil;
+/    9: Happiness;
+//        virtue as practical;
+//        happiness as the normal condition of man;
+//        sex as metaphysical;
+/    10: Government;
+//        individual rights as absolutes;
+//        government as an agency to protect rights;
+//        statism as the politics of unreason;
+/    11: Capitalism;
+//        capitalism as the only moral social system;
+//        capitalism as the system of objectivity;
+//        opposition to capitalism as dependent on bad epistemology;
+/    12: Art;
+//        art as a concretization of metaphysics;
+//        romantic literature as illustrating the role of philosophy in art;
+//        esthetic value as objective;
+/    Epilogue: The Duel between Plato and Aristotle;
+end hierarchy opar;
+</pre></HTML>

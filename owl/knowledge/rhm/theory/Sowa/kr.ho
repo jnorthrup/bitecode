@@ -1,0 +1,595 @@
+<HTML>
+<title>
+Book Hierarchy - Knowledge Representation by John F. Sowa
+</title>
+<XMP>
+# KEHOME/knowledge/theory/Sowa/kr.ho
+# Jan/25/2003
+
+#===========================================================#
+# book hierarchy					    #
+#   John F. Sowa, "Knowledge Representation:		    #
+#   Logical, Philosophical, and Computational Foundations", #
+#   Brooks/Cole, 2000.					    #
+#===========================================================#
+
+kr is Knowledge Representation;
+kr isu book;
+kr has
+	author = John F. Sowa,
+	publisher = Brooks/Cole,
+	date = 2000;
+
+krhi is begin hierarchy;
+Knowledge Representation
+/   Preface
+# Chapter
+/   1. Logic
+/   2. Ontology
+/   3. Knowledge Representations
+/   4. Processes
+/   5. Purposes, Contexts, and Agents
+/   6. Knowledge Soup
+/   7. Knowledge Acquisition and Sharing
+# Appendix
+/   A. Summary of Notations
+/   B. Sample Ontology
+/   C. Extended Example
+/   Answers to Selected Exercises
+/   Bibliography
+/   Name Index
+/   Subject Index
+/   Special Symbols
+
+#================================================#
+
+Preface
+/  logic, ontology, and computation
+/  exercises
+/  organization
+/  cast of characters
+
+1. Logic
+/  1.1. Historical Background
+/  1.2. Representing Knowledge in Logic
+/  1.3. Varieties of Logic
+/  1.4. Names, Types, and Measures
+/  1.5. Unity Amidst Diversity
+
+2. Ontology
+/  2.1. Ontological Categories
+/  2.2. Philosophical Background
+/  2.3. Top-Level Categories
+/  2.4. Describing Physical Entities
+/  2.5. Defining Abstractions
+/  2.6. Sets, Collections, Types, and Categories
+/  2.7. Space and Time
+
+3. Knowledge Representations
+/  3.1. Knowledge Engineering
+/  3.2. Representing Structure in Frames
+/  3.3. Rules and Data
+/  3.4. Object-Oriented Systems
+/  3.5. Natural Language Semantics
+/  3.6. Levels of Representation
+
+4. Processes
+/  4.1. Times, Events, and Situations
+/  4.2. Classification of Processes
+/  4.3. Procedures, Processes, and Histories
+/  4.4. Concurrent Processes
+/  4.5. Computation
+/  4.6. Constraint Satisfaction
+/  4.7. Change
+
+5. Purposes, Contexts, and Agents
+/  5.1. Purpose
+/  5.2. Syntax of Contexts
+/  5.3. Semantics of Contexts
+/  5.4. First-Order Reasoning in Contexts
+/  5.5. Modal Reasoning in Contexts
+/  5.6. Encapsulating Objects in Contexts
+/  5.7. Agents
+
+6. Knowledge Soup
+/  6.1. Vagueness, Uncertainty, Randomness, and Ignorance
+/  6.2. Limitations of Logic
+/  6.3. Fuzzy Logic
+/  6.4. Nonmonotonic Logic
+/  6.5. Theories, Models, and the World
+/  6.6. Semiotics
+
+7. Knowledge Acquisition and Sharing
+/  7.1. Sharing Ontologies
+/  7.2. Conceptual Schema
+/  7.3. Accommodating Multiple Paradigms
+/  7.4. Relating Different Knowledge Representations
+/  7.5. Language Patterns
+/  7.6. Tools for Knowledge Acquisition
+
+A. Summary of Notations
+/  A.1. Predicate Calculus
+/  A.2. Conceptual Graphs
+/  A.3. Knowledge Interchange Format
+
+B. Sample Ontology
+/  B.1. Principles of Ontology
+/  B.2. Top-Level Categories
+/  B.3. Role and Relation Types
+/  B.4. Thematic Roles
+/  B.6. Placement of the Thematic Roles
+
+C. Extended Example
+/  C.1. Hotel Reservation System
+/  C.2. Library Database
+/  C.3. ACE Vocabulary
+/  C.4. Translating ACE to Logic
+
+#================================================#
+
+1. Logic
+/  1.1. Historical Background
+//	terminology
+//	syllogisms
+//	Scholastic logic
+//	semantic networks
+//	automated reasoning
+//	mathematical logic
+//	T-box and A-box
+//	Boolean algebra
+//	truth tables
+//	Frege's Begriffsscrrift
+//	algebraic notation
+/  1.2. Representing Knowledge in Logic
+//	propositional logic
+//	subject and predicate
+//	choice of predicates
+//	logic and ontology
+//	representing music
+//	existential-conjunctive logic
+//	definitions  # of music predicates (methods)
+/  1.3. Varieties of Logic
+///	    syntax
+///	    subsets
+///	    proof theory
+///	    model theory
+///	    ontology
+///	    metalanguage
+//	typed logic
+//	lambda calculus
+//	conceptual graphs  # ANSI standard
+//	KIF		   # ANSI standard
+///	    forall
+///	    exists
+//	modal logic
+//	higher-order logic
+//	metalanguage
+/  1.4. Names, Types, and Measures
+//	names and types
+//	higher-order types
+//	surrogates
+//	unique naming convention
+//	representing measures
+//	representing musical entities
+/  1.5. Unity Amidst Diversity
+///	    vocabulary
+///	    syntax
+///	    semantics
+///	    rules of inference
+//	semantics of propositional logic
+//	status of FOL
+//	relating various logics
+///	    fewer axioms
+///	    more natural translations
+///	    more efficient computation
+/  Exercises
+
+2. Ontology
+/  2.1. Ontological Categories
+//	Quine's criterion
+//	microworlds
+//	Cyc categories
+/  2.2. Philosophical Background
+//	Aristotle's categories
+//	Kant's categories
+//	triads
+//	Peirce's categories
+//	Husserl's categories
+//	Whitehead's categories
+//	Heidegger's categories
+//	categories of emotions
+/  2.3. Top-Level Categories
+//	synthesis
+//	contrasts, distinctions, and categories
+//	continuants and occurrents
+///	    continuant: enduring object with stable characteristics
+///	    occurrent: process or event with unstable characteristics, only identified by space-time location
+//	viewpoint
+//	lattice of categories  # with examples
+///	    Object (IPC) isa actuality (IP) considered as continuant (C)
+///	    Process (IPO) isa actuality (IP) considered as occurrent (O)
+///	    Schema (IAC) isa form (IA) with structure of continuant (C)
+///	    Script (IAO) isa form (IA) with structure of occurrent (O)
+///	    Juncture (RPC) isa prehension (RP) considered as continuant (C)
+///	    Participation (RPO) isa prehension (RP) considered as occurrent (O)
+///	    Description (RAC) isa proposition (RA) about continuant (C) relating schema (IAC)
+///	    History (RAO) isa proposition (RA) about occurrent (O) relating script (IAO)
+///	    Structure (MPC) isa nexus (MP) considered as continuant (C) for reason (MAC)
+///	    Situation (MPO) isa nexus (MP) considered as occurrent (O) for purpose (MAO)
+///	    Reason (MAC) isa intention (MA) of agent concerning continuant (C)
+///	    Purpose (MAO) isa intention (MA) of agent determining interaction in situation (MPO)
+//	axioms and inferences
+///	    location  # space-time
+///	    mass and energy
+///	    representation  # encoding
+///	    causality
+///	    independent  # 1 entity
+///	    relative	 # 2 entities
+///	    mediating	 # 3 or more entities
+///	    continuant	 # time-independent predicate
+///	    occurrent	 # time-dependent predicate
+/  2.4. Describing Physical Entities
+//	possible confusions
+//	intentionality
+//	phenomenon, role, and sign
+//	adjectives modifying nouns
+//	has test
+//	representational primitives
+///	    coreference
+///	    prehension
+///	    containment
+//	classifying roles
+//	independence
+/  2.5. Defining Abstractions
+//	categories of forms
+//	monads
+//	spatial forms
+//	methods of definition
+//	hierarchies of theories
+///	    transitivity
+///	    reflexivity
+///	    symmetry
+///	    antisymmetry
+//	lattice operations
+/  2.6. Sets, Collections, Types, and Categories
+//	sets and types
+//	set theory
+//	criticisms of set theory
+///	    ontological extravagance
+///	    discrete elements
+///	    paradoxes
+///	    grotesque contortions
+///	    nonconstructive definitions
+//	mereology
+///	    simpler ontology
+///	    continuity
+///	    no paradoxes
+///	    more natural definitions
+///	    constructive definitions
+//	axioms for mereology
+///	    sets
+///	    aggregates
+///	    proper part
+///	    overlap
+///	    supplement
+///	    extensionality
+///	    disjoint
+///	    generalized union
+///	    union
+///	    intersection
+///	    discrete
+///	    continuous
+///	    lumpy
+//	collective nouns
+/  2.7. Space and Time
+//	space without points
+//	sets at the metalevel
+//	time without instants
+//	Zeno's paradox
+//	time's arrow
+//	continuants and occurents
+//	identity conditions
+//	granularity
+//	search for primitives
+/  Exercises
+
+3. Knowledge Representations
+/  3.1. Knowledge Engineering
+//	informal specifications
+//	formalization
+//	principles of knowledge representation
+//	surrogate
+//	ontological commitments
+//	medium for efficient computation
+//	fragmentary theory of reasoning
+//	medium for human expression
+//	simulation and theorem proving
+//	persistance
+/  3.2. Representing Structure in Frames
+//	schemata
+//	frames
+//	mapping frames to logic
+//	frames and syllogisms
+//	multiple inheritance
+//	KL-ONE
+//	classification
+//	reasoning in frame systems
+//	definitional logics
+///	    LOOM
+/  3.3. Rules and Data
+//	Microplanner, Prolog, and SQL
+//	plurals and sets
+//	rules and views
+//	logical foundations
+//	forward chaining
+//	SQL triggers
+//	implementing logic in practical systems
+/  3.4. Object-Oriented Systems
+//	O-O declarations
+//	mapping frames and rules to objects
+//	encapsulation
+//	logic-based O-O systems
+//	zooming in and zooming out
+//	translations to natural language
+//	objects and theories
+/  3.5. Natural Language Semantics
+//	background knowledge
+//	language analysis
+//	concepts and relations
+//	resolving ambiguities
+//	question answering
+//	inference
+/  3.6. Levels of Representation
+//	knowledge levels
+//	competence levels
+//	design levels
+//	meaning triangle
+//	metalevels
+//	mental processes
+/  Exercises
+
+4. Processes
+/  4.1. Times, Events, and Situations
+//	situations and events
+//	multiple occurrences
+//	adverbial modifiers
+//	actions as roles
+/  4.2. Classification of Processes
+//	fluents
+//	basic distinctions
+/  4.3. Procedures, Processes, and Histories
+//	mapping to logic
+//	branches and loops
+//	procedural or declarative
+/  4.4. Concurrent Processes
+//	flow of tokens
+//	timing diagram
+//	measuring time
+//	synchronizing processes
+//	theorems about Petri nets
+/  4.5. Computation
+//	dataflow diagrams
+//	computing with Petri nets
+//	message passing
+//	Linda
+/  4.6. Constraint Satisfaction
+//	generate and test
+//	cryptarithmetic problem
+//	optimization
+//	observations on the method
+//	metalevel heuristics
+/  4.7. Change
+//	situation calculus
+//	solving the frame problem
+//	Yale shooting problem
+//	distributed situations
+//	causal networks
+/  Exercises
+
+5. Purposes, Contexts, and Agents
+/  5.1. Purpose
+//	final causes
+//	complementarity
+//	contexts
+//	identity
+//	verbs as nexus
+//	defining verb senses
+/  5.2. Syntax of Contexts
+//	Peirce's contexts
+//	discourse representation theory
+//	resolving indexicals
+//	tranformation rules
+//	conversational implicatures
+/  5.3. Semantics of Contexts
+//	situations and propositions
+//	McCarthy's contexts
+//	meaningful situations
+//	meaning-preserving translations
+//	examples of meaning-preserving translations
+//	meaning in natural languages
+//	tinctured existential graphs
+//	classifying contexts
+/  5.4. First-Order Reasoning in Contexts
+//	soundness and completeness
+//	import-export rules
+//	Peirce's rules of inference
+//	proof in existential graphs
+//	proof in algebraic notation
+//	cut-and-paste theorem
+//	generalized modus ponens
+//	exporting information from a context
+/  5.5. Modal Reasoning in Contexts
+//	Kripke's worlds
+//	criticism of possible worlds
+//	Hintikka's model sets
+//	Dunn's laws and Facts
+//	completing the pushout
+//	situations as pullbacks
+//	legislating modalities
+//	exporting modal information
+//	stratified metalevels
+//	example
+//	model theory in contexts
+/  5.6. Encapsulating Objects in Contexts
+//	object instance
+//	object methods
+//	passing messages
+//	executing a procedure
+//	resulting state
+//	using multiple notations
+/  5.7. Agents
+//	psychology of agents
+//	artificial psyches
+//	consciousness
+//	reactive agents
+//	beliefs, desires, and intentions
+//	combining rational and reactive techniques
+/  Exercises
+
+6. Knowledge Soup
+/  6.1. Vagueness, Uncertainty, Randomness, and Ignorance
+//	multiple uses of the same words
+//	vagueness in scientific language
+//	paradox of the heap
+//	liquids
+//	multiple perspectives
+//	intentional granularity
+/  6.2. Limitations of Logic
+//	case-based reasoning
+//	exceptions
+//	prototypes and definitions
+//	propositions and continuous models
+/  6.3. Fuzzy Logic
+//	fuzzy predicates and operators
+//	computing certainty factors
+//	context dependence
+//	fuzzy control systems
+//	analog control systems
+//	criticism of fuzzy logic
+///	    incomplete generalizations
+///	    abnormal conditions
+///	    incomplete definitions
+///	    conflicting defaults
+///	    unanticipated applications
+//	quantifying continuity and vagueness
+/  6.4. Nonmonotonic Logic
+//	variation by discrete steps
+//	defaults in frames
+//	default logic
+//	abnormality
+//	open and closed worlds
+//	knowledge and belief
+//	conflicting defaults
+//	prioritized defaults
+//	computational complexity
+/  6.5. Theories, Models, and the World
+//	facts, fictions, and hypotheses
+//	finding the best theory
+//	navigating the lattice of theories
+///	    contraction
+///	    expansion
+///	    analogy
+//	theory revision
+//	theories as explanations
+//	abduction
+//	combining knowledge sources
+/  6.6. Semiotics
+//	arbitrary nature of symbols
+//	classes of signs
+///	    material trichotomy: qualisign, sinsign, legisign
+///	    relational trichotomy: icon, index, symbol
+///	    formal trichotomy: rheme, dicent sign, argument
+//	semiotic analysis
+//	applications of semiotics
+///	    Chinese room
+///	    symbolic and imagelike reasoning
+///	    subsymbolic processes
+///	    phenomenology
+/  Exercises
+
+7. Knowledge Acquisition and Sharing
+/  7.1. Sharing Ontologies
+//	problems of aligning ontologies
+//	ontologies and axioms
+//	natural language and problem solving
+//	representations for problem solving
+//	elaboration tolerance
+/  7.2. Conceptual Schema
+//	integrated systems
+//	universal languages
+///	    natural languages
+///	    logic
+//	need for logic
+//	entity-relationship diagrams
+//	conceptual graphs and KIF
+//	quantifiers
+//	query graphs
+/  7.3. Accommodating Multiple Paradigms
+//	trees
+//	parse tree
+//	models and metamodels
+//	unified modeling language
+/  7.4. Relating Different Knowledge Representations
+//	reorganizing a database
+//	answering queries
+//	mapping to natural language
+/  7.5. Language Patterns
+//	co-occurrence patterns
+//	verb patterns
+//	subject patterns
+//	object patterns
+//	but test
+//	business rules and types
+/  7.6. Tools for Knowledge Acquisition
+//	conceptual schema modeling facilities
+//	varieties of domain knowledge
+//	mapping specifications to logic
+//	controlled natural language
+//	developing CSMF and MDM
+/  Exercises
+
+A. Summary of Notations
+/  A.1. Predicate Calculus
+//	predicates
+//	predicate logic
+//	formation rules
+//	rules of inference
+//	rules for quantifiers
+//	typed predicate logic
+//	extended quantifiers
+/  A.2. Conceptual Graphs
+//	definition A.2.1: conceptual graph
+//	definition A.2.2: concept
+//	definition A.2.3: conceptual relation
+//	definition A.2.4: lambda expression
+//	definition A.2.5: concept type
+//	definition A.2.6: relation type
+//	definition A.2.7: referent
+//	definition A.2.8: context
+//	definition A.2.9: coreference set
+//	definition A.2.10: knowledge base
+///	    type hierarchy
+///	    relation hierarchy
+///	    catalog of individuals
+///	    outermost context
+//	transformation rules
+/  A.3. Knowledge Interchange Format
+//	conceptual graphs: designed for direct mapping to/from natural language
+//	KIF: designed for direct mapping to/from computer systems
+
+B. Sample Ontology
+/  B.1. Principles of Ontology
+//	glossary
+/  B.2. Top-Level Categories
+/  B.3. Role and Relation Types
+/  B.4. Thematic Roles
+/  B.6. Placement of the Thematic Roles
+
+C. Extended Example
+/  C.1. Hotel Reservation System
+/  C.2. Library Database
+/  C.3. ACE Vocabulary
+/  C.4. Translating ACE to Logic
+end hierarchy krhi; 
+</XMP>
+</HTML>

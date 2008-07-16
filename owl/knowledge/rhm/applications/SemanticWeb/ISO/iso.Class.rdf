@@ -1,0 +1,87 @@
+#<html><xmp>
+# KEHOME/knowledge/applications/SemanticWeb/ISO/iso.Class.rdf
+# Sep/23/2005
+
+# ISO 15926-2 definition of owl:Class
+# Hans Teijgeler August 2005
+
+<owl:Ontology rdf:about="">
+        <rdfs:comment>EXPRESS model of ISO 15926-2 mapped to OWL</rdfs:comment>
+        <rdfs:label>DataModel</rdfs:label>
+        <versionInfo>August 2005</versionInfo>
+    </owl:Ontology>
+
+
+    <owl:Class rdf:ID="Class">
+        <rdf:type rdf:resource="#ClassOfClass"/>
+        <rdfs:subClassOf rdf:resource="#AbstractObject"/>
+        <owl:intersectionOf rdf:parseType="Collection">  
+            <owl:Class rdf:about="#Cardinality"/>  
+            <owl:Class rdf:about="#RoleAndDomain"/>  
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">  
+                    <owl:Class rdf:about="#ClassOfAbstractObject"/>  
+                    <owl:Class rdf:about="#ClassOfIndividual"/>  
+                </owl:unionOf>
+            </owl:Class>
+        </owl:intersectionOf>
+        <rdfs:comment>
+            DEFINITION A Class is a Thing that is an understanding of the nature of
+            things and that divides things into those which are members of the class and
+            those which are not according to one or more criteria.
+            The identity of a Class is ultimately defined by its members. No two classes
+            have the same membership. However, a distinction must be made between a Class
+            having members, and those members being known, so within an information
+            system the members recorded may change over time, even though the true
+            membership does not change.
+        </rdfs:comment>
+        <rdfs:comment>
+            NOTE The membership of a Class is unchanging as a result of the
+            spatio-temporal paradigm upon which this schema is based. In another paradigm
+            it might be stated that a car is red at one time, and green at another time,
+            indicating that the class of red things and class of green things changed
+            members. However, using a spatio-temporal paradigm, a temporal part, state 1,
+            of the car is red, and another temporal part of the car, state 2, is green.
+            In this way the members of the classes red and green are unchanging. The same
+            principle applies to future temporal parts as to past temporal parts, it is
+            just more likely that the membership of these is not known.
+        </rdfs:comment>
+        <rdfs:comment>
+            NOTE A class may be a member of another class or itself.
+        </rdfs:comment>
+        <rdfs:comment>
+            NOTE The set theory that applies to classes in this model is non-wellfounded
+            set theory (see: ACZEL, Peter. Non-Well-Founded Sets, Center for the Study of
+            Language and Information, Stanford, California, 1988, ISBN 0937073229).
+            This permits statements like "class is a member of class", unlike traditional
+            set theories such as Zermelo-Fraenkel set theory found in standard texts
+            (see: ITҬ K. (editor). Encyclopedic Dictionary of Mathematics, Mathematical
+            Society of Japan, Edition 2, Cambridge, Massachusetts, MIT Press, 1993,
+            ISBN 0262590204)
+        </rdfs:comment>
+        <rdfs:comment>
+            NOTE There is a null Class that has no members. Although there is only one
+            Class that has no members, there can be a Class that has no members in the
+            actual world, but which does have members in other possible worlds.
+        </rdfs:comment>
+        <rdfs:comment>
+            NOTE The known members of a Class are identified by Classification .
+        </rdfs:comment>
+        <rdfs:comment>
+            EXAMPLE Centrifugal pump is a Class .
+        </rdfs:comment>
+        <rdfs:comment>
+            EXAMPLE Mechanical equipment type is a Class .
+        </rdfs:comment>
+        <rdfs:comment>
+            EXAMPLE Temperature is a Class .
+        </rdfs:comment>
+        <rdfs:comment>
+            EXAMPLE Commercial fusion reactor is a Class, with no members at present.
+        </rdfs:comment>
+        <rdfs:comment>
+            EXAMPLE The Centigrade scale is a Class .
+        </rdfs:comment>
+    </owl:Class>
+
+#</xmp></html>

@@ -1,0 +1,28 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/summary.mkr
+# 1999/Aug/11
+# new syntax Jun/26/2005
+
+#===================#
+# Summary by person #
+#===================#
+# execution time
+# 133 MHz pentium, Windows 98
+# 0:16 min:sec
+
+do read from family.ku done;
+
+let echo=off;
+do clock od "generating summary" done;
+every x isa person {
+	do print od "#================================================#" done;
+	do dump od $x done;
+	do print od "#------------------------------------------------#" done;
+};
+
+do clock od "finished summary" done;
+let echo=on;
+
+exit;
+
+# </xmp></html>

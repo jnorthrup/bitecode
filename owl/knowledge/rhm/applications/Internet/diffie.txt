@@ -1,0 +1,61 @@
+4,5c4,6
+< /	InfoSeek
+< //		Channel
+---
+> /  Excite
+> //    Directory
+> //    Search
+7,9c8,9
+< Channel
+< /	Automotive
+< /	Business
+---
+> Directory
+> /      Autos
+11c11,15
+< /	Computer
+---
+> /      City Guides
+> /      Classifieds & Auctions
+> /      Communities
+> /      Computers & Internet
+> /      Education
+13c17
+< /	Good Life
+---
+> /      Games
+15,16c19,21
+< /	Internet
+< /	Kids & Family
+---
+> /      Home & Real Estate
+> /      Lifestyle
+> /      Money & Investing
+18,19c23
+< /	Personal Finance
+< /	Real Estate
+---
+> /      People & Chat
+22a27,48
+> 
+> Search
+> /      Airline Tickets
+> /      Auctions
+> /      Chat
+> /      Daily Crossword
+> /      Email Lookup
+> /      Horoscopes
+> /      Hot! Excite Movies
+> /      Job Finder
+> /      Maps&Directions
+> /      More...
+> /      People Finder
+> /      Personals
+> /      Search Help
+> /      Stock Quotes
+> /      Weather
+> /      Web Site Guide
+> /      Yellow Pages
+> /      [ Movie Showtimes ]
+> 
+> #!read exciteCE.ho

@@ -1,0 +1,41 @@
+
+Example: "I is man1"
+====================
+
+at space=here, time=now, view=context_I
+existent
+    entity
+        animal
+            man is person
+                man1
+        plant
+        object
+    characteristic
+        attribute
+            space
+            time
+            view
+        action
+            identify
+        relationship
+            context_I := man1 do identify existent
+
+Integrating "I is man1" gives the updated knowledge unit.
+
+existent
+    entity
+        animal
+            man is person
+                I is man1
+        plant
+        object
+    characteristic
+        attribute
+            space
+            time
+            view
+        action
+            identify
+        relationship
+            context_I := man1 do identify existent
+            "I is man1"

@@ -1,0 +1,20 @@
+# 1999/4/23
+# new syntax Jul/24/2005
+
+# Reference
+# Richard S. Latimer
+# Five Aspects of Activities
+
+activity is relation with
+  label=[possessor of; power to; activity via; means toward; end],
+  format=[entity:1; attribute:2; action:3; instrument:4; goal:5],
+  meaning={$1 has $2; $5 := $1 do $3 with $4;};
+
+begin relation activity;
+sensing, sense, sensing, sensor, sensed;
+seer, vision, seeing, eye(s), the visible;
+discriminators, discrimination, discrimination, reason, choice;
+knower, intellect, knowing, memory, knowledge;
+desirer, desire, desiring, "desiror", desired;
+actor, [skills,ability], acting, instrument(s), [objective,goal];
+end relation activity;

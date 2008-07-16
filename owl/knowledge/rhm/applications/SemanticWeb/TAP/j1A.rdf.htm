@@ -1,0 +1,99 @@
+<html>
+
+<body bgcolor="white">
+
+<table width=800><tr><td>
+<center>
+<h1>TAP: Towards a Web of Data</h1>
+
+<table width=60%>
+<tr>
+<td>
+<center>
+R.V.Guha <br>
+IBM Research, Almaden <br>
+guha @ us.ibm.com
+</center>
+</td>
+<td>
+<center>
+Rob McCool<br>
+KSL, Stanford University<br>
+robm @ ksl.stanford.edu
+</center>
+</td>
+</tr>
+</table>
+
+</center>
+
+    
+<h2>Appendix</h2>  
+
+Here are the SOAP messages associated with the examples of GetData presented in the
+paper.
+
+<pre>
+
+<b>Example:</b> GetData(&lt;Yo-Yo Ma&gt;, birthplace) =&gt; &lt;Paris&gt;
+
+<b>Request</b>
+    &lt;a:GetData&gt;
+      &lt;rdf:Resource rdf:about="http://tap.stanford.edu/data/MusicianMa,_Yo-Yo"/&gt;
+      &lt;tap:birthplace/&gt;
+    &lt;/a:GetData&gt;
+
+<b>Response</b>
+    &lt;a:Data&gt;
+      &lt;tap:Musician rdf:ID="http://tap.stanford.edu/data/MusicianMa,_Yo-Yo"&gt;
+        &lt;tap:birthplace&gt;
+          &lt;tap:City rdf:ID="http://tap.stanford.edu/data/CityParis,_France"&gt;
+            &lt;rdfs:label xml:lang="en"&gt;Paris&lt;/rdfs:label&gt;
+          &lt;/tap:City&gt;
+        &lt;/tap:birthplace&gt;
+      &lt;/tap:Musician&gt;
+    &lt;/a:Data&gt;
+
+
+<b>Example:</b> GetData(&lt;Paris&gt;, temperature) =&gt; 57 F
+
+<b>Request</b>
+    &lt;a:GetData&gt;
+      &lt;tap:City rdf:about=""http://tap.stanford.edu/data/"&gt;CityParis,_France"/&gt;
+      &lt;tap:temperature/&gt;
+    &lt;/a:GetData&gt;
+
+<b>Response</b>
+    &lt;a:Data&gt;
+      &lt;tap:City rdf:about="http://tap.stanford.edu/data/CityParis,_France"&gt;
+        &lt;tap:temperature&gt;57 F&lt;/tap:temperature&gt;
+      &lt;/tap:City&gt;
+    &lt;/a:Data&gt;
+
+
+<b>Example:</b> GetData(&lt;Paris&gt;, locatedIn) =&gt; &lt;France&gt;
+    &lt;a:GetData&gt;
+      &lt;tap:City rdf:resource="http://tap.stanford.edu/data/CityParis,_France"/&gt;
+      &lt;tap:locatedIn/&gt;
+    &lt;/a:GetData&gt;
+
+<b>Response</b>
+    &lt;a:Data&gt;
+      &lt;tap:City rdf:ID="http://tap.stanford.edu/data/CityParis,_France"&gt;
+        &lt;tap:locatedIn&gt;
+          &lt;tap:Country rdf:ID="http://tap.stanford.edu/data/CountryFrance"&gt;
+            &lt;tap:longFormName&gt;French Republic&lt;/tap:longFormName&gt;
+            &lt;tap:placeLetterCode&gt;FR&lt;/tap:placeLetterCode&gt;
+            &lt;rdfs:label xml:lang="en"&gt;France&lt;/rdfs:label&gt;
+            &lt;tap:adjective&gt;French&lt;/tap:adjective&gt;
+          &lt;/tap:Country&gt;
+        &lt;/tap:locatedIn&gt;
+      &lt;/tap:City&gt;
+    &lt;/a:Data&gt;
+
+
+
+
+</pre>
+
+</td></tr><table>

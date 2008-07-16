@@ -1,0 +1,1264 @@
+Cygwin Package Information
+Last downloaded files to: F:\download\cygwin
+Last downloaded files from: http://archive.progeny.com/cygwin
+
+Package                 Version            Status
+_update-info-dir        00219-1            OK
+a2ps                    4.13-1             OK
+agetty                  2.1-1              OK
+Missing directory: /etc/apache.new/ from package apache
+Missing file: /etc/apache.new/access.conf from package apache
+Missing file: /etc/apache.new/access.conf.default from package apache
+Missing file: /etc/apache.new/httpd.conf from package apache
+Missing file: /etc/apache.new/httpd.conf.default from package apache
+Missing file: /etc/apache.new/magic from package apache
+Missing file: /etc/apache.new/magic.default from package apache
+Missing file: /etc/apache.new/mime.types from package apache
+Missing file: /etc/apache.new/mime.types.default from package apache
+Missing file: /etc/apache.new/srm.conf from package apache
+Missing file: /etc/apache.new/srm.conf.default from package apache
+Missing directory: /var/www.new/ from package apache
+Missing directory: /var/www.new/cgi-bin/ from package apache
+Missing file: /var/www.new/cgi-bin/printenv from package apache
+Missing file: /var/www.new/cgi-bin/test-cgi from package apache
+Missing directory: /var/www.new/htdocs/ from package apache
+Missing file: /var/www.new/htdocs/apache_pb.gif from package apache
+Missing file: /var/www.new/htdocs/index.html.ca from package apache
+Missing file: /var/www.new/htdocs/index.html.cz from package apache
+Missing file: /var/www.new/htdocs/index.html.de from package apache
+Missing file: /var/www.new/htdocs/index.html.dk from package apache
+Missing file: /var/www.new/htdocs/index.html.ee from package apache
+Missing file: /var/www.new/htdocs/index.html.el from package apache
+Missing file: /var/www.new/htdocs/index.html.en from package apache
+Missing file: /var/www.new/htdocs/index.html.es from package apache
+Missing file: /var/www.new/htdocs/index.html.fr from package apache
+Missing file: /var/www.new/htdocs/index.html.he.iso8859-8 from package apache
+Missing file: /var/www.new/htdocs/index.html.it from package apache
+Missing file: /var/www.new/htdocs/index.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/index.html.kr.iso-kr from package apache
+Missing file: /var/www.new/htdocs/index.html.lu from package apache
+Missing file: /var/www.new/htdocs/index.html.nl from package apache
+Missing file: /var/www.new/htdocs/index.html.nn from package apache
+Missing file: /var/www.new/htdocs/index.html.no from package apache
+Missing file: /var/www.new/htdocs/index.html.po.iso-pl from package apache
+Missing file: /var/www.new/htdocs/index.html.pt from package apache
+Missing file: /var/www.new/htdocs/index.html.pt-br from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.cp-1251 from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.cp866 from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.iso-ru from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.koi8-r from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.ucs2 from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.ucs4 from package apache
+Missing file: /var/www.new/htdocs/index.html.ru.utf8 from package apache
+Missing file: /var/www.new/htdocs/index.html.se from package apache
+Missing file: /var/www.new/htdocs/index.html.zh.Big5 from package apache
+Missing directory: /var/www.new/htdocs/manual/ from package apache
+Missing file: /var/www.new/htdocs/manual/bind.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/bind.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/bind.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/cgi_path.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/cgi_path.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/cgi_path.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/configuring.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/configuring.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/configuring.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/configuring.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/content-negotiation.html from package apache
+Missing file: /var/www.new/htdocs/manual/custom-error.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/custom-error.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/custom-error.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/custom-error.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/cygwin.html from package apache
+Missing file: /var/www.new/htdocs/manual/dns-caveats.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/dns-caveats.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/dns-caveats.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/dso.html from package apache
+Missing file: /var/www.new/htdocs/manual/ebcdic.html from package apache
+Missing file: /var/www.new/htdocs/manual/env.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/env.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/env.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/handler.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/handler.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/handler.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/header.html from package apache
+Missing directory: /var/www.new/htdocs/manual/howto/ from package apache
+Missing file: /var/www.new/htdocs/manual/howto/auth.html from package apache
+Missing file: /var/www.new/htdocs/manual/howto/cgi.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/howto/cgi.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/howto/cgi.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/howto/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/howto/header.html from package apache
+Missing file: /var/www.new/htdocs/manual/howto/ssi.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/howto/ssi.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/howto/ssi.html.ja.jis from package apache
+Missing directory: /var/www.new/htdocs/manual/images/ from package apache
+Missing file: /var/www.new/htdocs/manual/images/apache_header.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/custom_errordocs.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/home.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/index.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/mod_rewrite_fig1.fig from package apache
+Missing file: /var/www.new/htdocs/manual/images/mod_rewrite_fig1.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/mod_rewrite_fig2.fig from package apache
+Missing file: /var/www.new/htdocs/manual/images/mod_rewrite_fig2.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/pixel.gif from package apache
+Missing file: /var/www.new/htdocs/manual/images/sub.gif from package apache
+Missing file: /var/www.new/htdocs/manual/index.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/index.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/index.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/index.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/install-tpf.html from package apache
+Missing file: /var/www.new/htdocs/manual/install.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/install.html.es from package apache
+Missing file: /var/www.new/htdocs/manual/install.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/install.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/install.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/invoking.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/invoking.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/invoking.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/keepalive.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/keepalive.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/keepalive.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/LICENSE from package apache
+Missing file: /var/www.new/htdocs/manual/location.html from package apache
+Missing file: /var/www.new/htdocs/manual/logs.html from package apache
+Missing file: /var/www.new/htdocs/manual/man-template.html from package apache
+Missing directory: /var/www.new/htdocs/manual/misc/ from package apache
+Missing file: /var/www.new/htdocs/manual/misc/API.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/client_block_api.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/compat_notes.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/custom_errordocs.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/descriptors.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/FAQ.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/fin_wait_2.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/header.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/howto.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/HTTP_Features.tsv from package apache
+Missing file: /var/www.new/htdocs/manual/misc/index.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/known_client_problems.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/nopgp.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/perf-bsd44.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/perf-dec.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/perf-hp.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/perf-tuning.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/perf.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/rewriteguide.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/security_tips.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/tutorials.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/vif-info.html from package apache
+Missing file: /var/www.new/htdocs/manual/misc/windoz_keepalive.html from package apache
+Missing directory: /var/www.new/htdocs/manual/mod/ from package apache
+Missing file: /var/www.new/htdocs/manual/mod/core.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/core.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/mod/core.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directive-dict.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directive-dict.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directive-dict.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directive-dict.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directives.html.de from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directives.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directives.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directives.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/directives.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/header.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index-bytype.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index-bytype.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index-bytype.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/index.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/module-dict.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/module-dict.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/module-dict.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_access.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_access.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_actions.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_alias.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_asis.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_auth.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_auth_anon.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_auth_db.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_auth_dbm.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_auth_digest.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_autoindex.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_browser.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_cern_meta.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_cgi.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_cookies.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_digest.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_dir.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_dir.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_dir.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_dld.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_env.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_env.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_env.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_example.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_expires.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_headers.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_imap.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_include.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_info.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_isapi.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_log_agent.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_log_common.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_log_config.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_log_referer.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_mime.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_mime.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_mime.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_mime_magic.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_mmap_static.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_negotiation.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_negotiation.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_negotiation.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_proxy.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_rewrite.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_setenvif.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_setenvif.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_setenvif.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_so.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_speling.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_status.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_unique_id.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_userdir.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_usertrack.html from package apache
+Missing file: /var/www.new/htdocs/manual/mod/mod_vhost_alias.html from package apache
+Missing file: /var/www.new/htdocs/manual/mpeix.html from package apache
+Missing file: /var/www.new/htdocs/manual/multilogs.html from package apache
+Missing file: /var/www.new/htdocs/manual/netware.html from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_0.html from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_1.html from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_2.html from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_3.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_3.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_1_3.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/new_features_2_0.html from package apache
+Missing file: /var/www.new/htdocs/manual/process-model.html from package apache
+Missing directory: /var/www.new/htdocs/manual/programs/ from package apache
+Missing file: /var/www.new/htdocs/manual/programs/ab.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/apachectl.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/apxs.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/dbmmanage.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/header.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/htdigest.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/htpasswd.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/httpd.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/index.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/programs/index.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/index.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/programs/logresolve.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/other.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/rotatelogs.html from package apache
+Missing file: /var/www.new/htdocs/manual/programs/suexec.html from package apache
+Missing file: /var/www.new/htdocs/manual/readme-tpf.html from package apache
+Missing directory: /var/www.new/htdocs/manual/search/ from package apache
+Missing file: /var/www.new/htdocs/manual/search/manual-index.cgi from package apache
+Missing file: /var/www.new/htdocs/manual/sections.html from package apache
+Missing file: /var/www.new/htdocs/manual/server-wide.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/server-wide.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/server-wide.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/server-wide.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/sitemap.html from package apache
+Missing file: /var/www.new/htdocs/manual/sourcereorg.html from package apache
+Missing file: /var/www.new/htdocs/manual/stopping.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/stopping.html.fr from package apache
+Missing file: /var/www.new/htdocs/manual/stopping.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/suexec.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/suexec.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/suexec.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/suexec_1_2.html from package apache
+Missing file: /var/www.new/htdocs/manual/unixware.html from package apache
+Missing file: /var/www.new/htdocs/manual/upgrading_to_1_3.html from package apache
+Missing file: /var/www.new/htdocs/manual/urlmapping.html from package apache
+Missing directory: /var/www.new/htdocs/manual/vhosts/ from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/details.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/details_1_2.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/examples.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/fd-limits.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/footer.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/header.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/host.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/index.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/index.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/index.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/ip-based.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/mass.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/name-based.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/name-based.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/name-based.html.ja.jis from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/vhosts-in-depth.html from package apache
+Missing file: /var/www.new/htdocs/manual/vhosts/virtual-host.html from package apache
+Missing file: /var/www.new/htdocs/manual/windows.html from package apache
+Missing file: /var/www.new/htdocs/manual/win_compiling.html from package apache
+Missing file: /var/www.new/htdocs/manual/win_service.html.en from package apache
+Missing file: /var/www.new/htdocs/manual/win_service.html.html from package apache
+Missing file: /var/www.new/htdocs/manual/win_service.html.ja.jis from package apache
+Missing directory: /var/www.new/icons/ from package apache
+Missing file: /var/www.new/icons/a.gif from package apache
+Missing file: /var/www.new/icons/a.png from package apache
+Missing file: /var/www.new/icons/alert.black.gif from package apache
+Missing file: /var/www.new/icons/alert.black.png from package apache
+Missing file: /var/www.new/icons/alert.red.gif from package apache
+Missing file: /var/www.new/icons/alert.red.png from package apache
+Missing file: /var/www.new/icons/apache_pb.gif from package apache
+Missing file: /var/www.new/icons/apache_pb.png from package apache
+Missing file: /var/www.new/icons/back.gif from package apache
+Missing file: /var/www.new/icons/back.png from package apache
+Missing file: /var/www.new/icons/ball.gray.gif from package apache
+Missing file: /var/www.new/icons/ball.gray.png from package apache
+Missing file: /var/www.new/icons/ball.red.gif from package apache
+Missing file: /var/www.new/icons/ball.red.png from package apache
+Missing file: /var/www.new/icons/binary.gif from package apache
+Missing file: /var/www.new/icons/binary.png from package apache
+Missing file: /var/www.new/icons/binhex.gif from package apache
+Missing file: /var/www.new/icons/binhex.png from package apache
+Missing file: /var/www.new/icons/blank.gif from package apache
+Missing file: /var/www.new/icons/blank.png from package apache
+Missing file: /var/www.new/icons/bomb.gif from package apache
+Missing file: /var/www.new/icons/bomb.png from package apache
+Missing file: /var/www.new/icons/box1.gif from package apache
+Missing file: /var/www.new/icons/box1.png from package apache
+Missing file: /var/www.new/icons/box2.gif from package apache
+Missing file: /var/www.new/icons/box2.png from package apache
+Missing file: /var/www.new/icons/broken.gif from package apache
+Missing file: /var/www.new/icons/broken.png from package apache
+Missing file: /var/www.new/icons/burst.gif from package apache
+Missing file: /var/www.new/icons/burst.png from package apache
+Missing file: /var/www.new/icons/c.gif from package apache
+Missing file: /var/www.new/icons/c.png from package apache
+Missing file: /var/www.new/icons/comp.blue.gif from package apache
+Missing file: /var/www.new/icons/comp.blue.png from package apache
+Missing file: /var/www.new/icons/comp.gray.gif from package apache
+Missing file: /var/www.new/icons/comp.gray.png from package apache
+Missing file: /var/www.new/icons/compressed.gif from package apache
+Missing file: /var/www.new/icons/compressed.png from package apache
+Missing file: /var/www.new/icons/continued.gif from package apache
+Missing file: /var/www.new/icons/continued.png from package apache
+Missing file: /var/www.new/icons/dir.gif from package apache
+Missing file: /var/www.new/icons/dir.png from package apache
+Missing file: /var/www.new/icons/down.gif from package apache
+Missing file: /var/www.new/icons/down.png from package apache
+Missing file: /var/www.new/icons/dvi.gif from package apache
+Missing file: /var/www.new/icons/dvi.png from package apache
+Missing file: /var/www.new/icons/f.gif from package apache
+Missing file: /var/www.new/icons/f.png from package apache
+Missing file: /var/www.new/icons/folder.gif from package apache
+Missing file: /var/www.new/icons/folder.open.gif from package apache
+Missing file: /var/www.new/icons/folder.open.png from package apache
+Missing file: /var/www.new/icons/folder.png from package apache
+Missing file: /var/www.new/icons/folder.sec.gif from package apache
+Missing file: /var/www.new/icons/folder.sec.png from package apache
+Missing file: /var/www.new/icons/forward.gif from package apache
+Missing file: /var/www.new/icons/forward.png from package apache
+Missing file: /var/www.new/icons/generic.gif from package apache
+Missing file: /var/www.new/icons/generic.png from package apache
+Missing file: /var/www.new/icons/generic.red.gif from package apache
+Missing file: /var/www.new/icons/generic.red.png from package apache
+Missing file: /var/www.new/icons/generic.sec.gif from package apache
+Missing file: /var/www.new/icons/generic.sec.png from package apache
+Missing file: /var/www.new/icons/hand.right.gif from package apache
+Missing file: /var/www.new/icons/hand.right.png from package apache
+Missing file: /var/www.new/icons/hand.up.gif from package apache
+Missing file: /var/www.new/icons/hand.up.png from package apache
+Missing file: /var/www.new/icons/icon.sheet.gif from package apache
+Missing file: /var/www.new/icons/icon.sheet.png from package apache
+Missing file: /var/www.new/icons/image1.gif from package apache
+Missing file: /var/www.new/icons/image1.png from package apache
+Missing file: /var/www.new/icons/image2.gif from package apache
+Missing file: /var/www.new/icons/image2.png from package apache
+Missing file: /var/www.new/icons/image3.gif from package apache
+Missing file: /var/www.new/icons/image3.png from package apache
+Missing file: /var/www.new/icons/index.gif from package apache
+Missing file: /var/www.new/icons/index.png from package apache
+Missing file: /var/www.new/icons/layout.gif from package apache
+Missing file: /var/www.new/icons/layout.png from package apache
+Missing file: /var/www.new/icons/left.gif from package apache
+Missing file: /var/www.new/icons/left.png from package apache
+Missing file: /var/www.new/icons/link.gif from package apache
+Missing file: /var/www.new/icons/link.png from package apache
+Missing file: /var/www.new/icons/movie.gif from package apache
+Missing file: /var/www.new/icons/movie.png from package apache
+Missing file: /var/www.new/icons/p.gif from package apache
+Missing file: /var/www.new/icons/p.png from package apache
+Missing file: /var/www.new/icons/patch.gif from package apache
+Missing file: /var/www.new/icons/patch.png from package apache
+Missing file: /var/www.new/icons/pdf.gif from package apache
+Missing file: /var/www.new/icons/pdf.png from package apache
+Missing file: /var/www.new/icons/pie0.gif from package apache
+Missing file: /var/www.new/icons/pie0.png from package apache
+Missing file: /var/www.new/icons/pie1.gif from package apache
+Missing file: /var/www.new/icons/pie1.png from package apache
+Missing file: /var/www.new/icons/pie2.gif from package apache
+Missing file: /var/www.new/icons/pie2.png from package apache
+Missing file: /var/www.new/icons/pie3.gif from package apache
+Missing file: /var/www.new/icons/pie3.png from package apache
+Missing file: /var/www.new/icons/pie4.gif from package apache
+Missing file: /var/www.new/icons/pie4.png from package apache
+Missing file: /var/www.new/icons/pie5.gif from package apache
+Missing file: /var/www.new/icons/pie5.png from package apache
+Missing file: /var/www.new/icons/pie6.gif from package apache
+Missing file: /var/www.new/icons/pie6.png from package apache
+Missing file: /var/www.new/icons/pie7.gif from package apache
+Missing file: /var/www.new/icons/pie7.png from package apache
+Missing file: /var/www.new/icons/pie8.gif from package apache
+Missing file: /var/www.new/icons/pie8.png from package apache
+Missing file: /var/www.new/icons/portal.gif from package apache
+Missing file: /var/www.new/icons/portal.png from package apache
+Missing file: /var/www.new/icons/ps.gif from package apache
+Missing file: /var/www.new/icons/ps.png from package apache
+Missing file: /var/www.new/icons/quill.gif from package apache
+Missing file: /var/www.new/icons/quill.png from package apache
+Missing file: /var/www.new/icons/README from package apache
+Missing file: /var/www.new/icons/right.gif from package apache
+Missing file: /var/www.new/icons/right.png from package apache
+Missing file: /var/www.new/icons/screw1.gif from package apache
+Missing file: /var/www.new/icons/screw1.png from package apache
+Missing file: /var/www.new/icons/screw2.gif from package apache
+Missing file: /var/www.new/icons/screw2.png from package apache
+Missing file: /var/www.new/icons/script.gif from package apache
+Missing file: /var/www.new/icons/script.png from package apache
+Missing directory: /var/www.new/icons/small/ from package apache
+Missing file: /var/www.new/icons/small/back.gif from package apache
+Missing file: /var/www.new/icons/small/back.png from package apache
+Missing file: /var/www.new/icons/small/binary.gif from package apache
+Missing file: /var/www.new/icons/small/binary.png from package apache
+Missing file: /var/www.new/icons/small/binhex.gif from package apache
+Missing file: /var/www.new/icons/small/binhex.png from package apache
+Missing file: /var/www.new/icons/small/blank.gif from package apache
+Missing file: /var/www.new/icons/small/blank.png from package apache
+Missing file: /var/www.new/icons/small/broken.gif from package apache
+Missing file: /var/www.new/icons/small/broken.png from package apache
+Missing file: /var/www.new/icons/small/burst.gif from package apache
+Missing file: /var/www.new/icons/small/burst.png from package apache
+Missing file: /var/www.new/icons/small/comp1.gif from package apache
+Missing file: /var/www.new/icons/small/comp1.png from package apache
+Missing file: /var/www.new/icons/small/comp2.gif from package apache
+Missing file: /var/www.new/icons/small/comp2.png from package apache
+Missing file: /var/www.new/icons/small/compressed.gif from package apache
+Missing file: /var/www.new/icons/small/compressed.png from package apache
+Missing file: /var/www.new/icons/small/continued.gif from package apache
+Missing file: /var/www.new/icons/small/continued.png from package apache
+Missing file: /var/www.new/icons/small/dir.gif from package apache
+Missing file: /var/www.new/icons/small/dir.png from package apache
+Missing file: /var/www.new/icons/small/dir2.gif from package apache
+Missing file: /var/www.new/icons/small/dir2.png from package apache
+Missing file: /var/www.new/icons/small/doc.gif from package apache
+Missing file: /var/www.new/icons/small/doc.png from package apache
+Missing file: /var/www.new/icons/small/forward.gif from package apache
+Missing file: /var/www.new/icons/small/forward.png from package apache
+Missing file: /var/www.new/icons/small/generic.gif from package apache
+Missing file: /var/www.new/icons/small/generic.png from package apache
+Missing file: /var/www.new/icons/small/generic2.gif from package apache
+Missing file: /var/www.new/icons/small/generic2.png from package apache
+Missing file: /var/www.new/icons/small/generic3.gif from package apache
+Missing file: /var/www.new/icons/small/generic3.png from package apache
+Missing file: /var/www.new/icons/small/image.gif from package apache
+Missing file: /var/www.new/icons/small/image.png from package apache
+Missing file: /var/www.new/icons/small/image2.gif from package apache
+Missing file: /var/www.new/icons/small/image2.png from package apache
+Missing file: /var/www.new/icons/small/index.gif from package apache
+Missing file: /var/www.new/icons/small/index.png from package apache
+Missing file: /var/www.new/icons/small/key.gif from package apache
+Missing file: /var/www.new/icons/small/key.png from package apache
+Missing file: /var/www.new/icons/small/movie.gif from package apache
+Missing file: /var/www.new/icons/small/movie.png from package apache
+Missing file: /var/www.new/icons/small/patch.gif from package apache
+Missing file: /var/www.new/icons/small/patch.png from package apache
+Missing file: /var/www.new/icons/small/ps.gif from package apache
+Missing file: /var/www.new/icons/small/ps.png from package apache
+Missing file: /var/www.new/icons/small/rainbow.gif from package apache
+Missing file: /var/www.new/icons/small/rainbow.png from package apache
+Missing file: /var/www.new/icons/small/README.txt from package apache
+Missing file: /var/www.new/icons/small/sound.gif from package apache
+Missing file: /var/www.new/icons/small/sound.png from package apache
+Missing file: /var/www.new/icons/small/sound2.gif from package apache
+Missing file: /var/www.new/icons/small/sound2.png from package apache
+Missing file: /var/www.new/icons/small/tar.gif from package apache
+Missing file: /var/www.new/icons/small/tar.png from package apache
+Missing file: /var/www.new/icons/small/text.gif from package apache
+Missing file: /var/www.new/icons/small/text.png from package apache
+Missing file: /var/www.new/icons/small/transfer.gif from package apache
+Missing file: /var/www.new/icons/small/transfer.png from package apache
+Missing file: /var/www.new/icons/small/unknown.gif from package apache
+Missing file: /var/www.new/icons/small/unknown.png from package apache
+Missing file: /var/www.new/icons/small/uu.gif from package apache
+Missing file: /var/www.new/icons/small/uu.png from package apache
+Missing file: /var/www.new/icons/sound1.gif from package apache
+Missing file: /var/www.new/icons/sound1.png from package apache
+Missing file: /var/www.new/icons/sound2.gif from package apache
+Missing file: /var/www.new/icons/sound2.png from package apache
+Missing file: /var/www.new/icons/sphere1.gif from package apache
+Missing file: /var/www.new/icons/sphere1.png from package apache
+Missing file: /var/www.new/icons/sphere2.gif from package apache
+Missing file: /var/www.new/icons/sphere2.png from package apache
+Missing file: /var/www.new/icons/tar.gif from package apache
+Missing file: /var/www.new/icons/tar.png from package apache
+Missing file: /var/www.new/icons/tex.gif from package apache
+Missing file: /var/www.new/icons/tex.png from package apache
+Missing file: /var/www.new/icons/text.gif from package apache
+Missing file: /var/www.new/icons/text.png from package apache
+Missing file: /var/www.new/icons/transfer.gif from package apache
+Missing file: /var/www.new/icons/transfer.png from package apache
+Missing file: /var/www.new/icons/unknown.gif from package apache
+Missing file: /var/www.new/icons/unknown.png from package apache
+Missing file: /var/www.new/icons/up.gif from package apache
+Missing file: /var/www.new/icons/up.png from package apache
+Missing file: /var/www.new/icons/uu.gif from package apache
+Missing file: /var/www.new/icons/uu.png from package apache
+Missing file: /var/www.new/icons/uuencoded.gif from package apache
+Missing file: /var/www.new/icons/uuencoded.png from package apache
+Missing file: /var/www.new/icons/world1.gif from package apache
+Missing file: /var/www.new/icons/world1.png from package apache
+Missing file: /var/www.new/icons/world2.gif from package apache
+Missing file: /var/www.new/icons/world2.png from package apache
+apache                  1.3.24-5           Incomplete
+ash                     20020731-3         OK
+aspell                  0.50.3-1           OK
+aspell-dev              0.50.3-1           OK
+aspell-doc              0.50.3-1           OK
+aspell-en               0.51.0-1           OK
+astyle                  1.15.3-3           OK
+autoconf                2.57a-1            OK
+autoconf-devel          2.57-2             OK
+autoconf-stable         2.13-5             OK
+automake                1.7.5a-1           OK
+automake-devel          1.7.6-2            OK
+automake-stable         1.4p5-6            OK
+base-files              2.6-1              OK
+base-passwd             1.1-1              OK
+bash                    2.05b-15           OK
+bc                      1.06-1             OK
+Missing file: /usr/bin/c++filt.exe from package binutils
+binutils                20030901-1         Incomplete
+bison                   20030307-1         OK
+byacc                   1.9-1              OK
+bzip2                   1.0.2-5            OK
+c-client                2002e-1            OK
+ccache                  2.2-1              OK
+ccdoc                   0.8.39-1           OK
+cgoban                  1.9.14-1           OK
+chkconfig               1.2.24h-1          OK
+clear                   1.0-1              OK
+clisp                   2.31-2             OK
+cmake                   1.6.7-1            OK
+compface                1.4-5              OK
+cpio                    2.5-3              OK
+cron                    3.0.1-11           OK
+crypt                   1.0-2              OK
+ctags                   5.5-4              OK
+curl                    7.10.4-1           OK
+curl-devel              7.10.4-1           OK
+cvs                     1.11.6-3           OK
+cygipc                  2.01-2             OK
+cygrunsrv               0.96-2             OK
+cygutils                1.2.1-2            OK
+cygwin                  1.5.5-1            OK
+cygwin-doc              1.3-6              OK
+db2                     2.7.7-4            OK
+db3.1                   3.1.17-2           OK
+db4.1                   4.1.25-1           OK
+dejagnu                 20021217-2         OK
+Empty package diff
+diff                    1.0-1              OK
+diffutils               2.8.4-1            OK
+docbook-xml42           4.2-1              OK
+docbook-xsl             1.62.0-1           OK
+doxygen                 1.2.18-1           OK
+dpkg                    1.10.4-2           OK
+ed                      0.2-1              OK
+ELFIO                   1.0.0-1            OK
+emacs                   21.2-12            OK
+emacs-el                21.2-12            OK
+emacs-X11               21.2-12            OK
+enscript                1.6.3-3            OK
+exim                    4.22-1             OK
+expat                   1.95.6-2           OK
+expect                  20030128-1         OK
+fetchmail               6.2.4-1            OK
+figlet                  2.2-1              OK
+file                    4.03-2             OK
+fileutils               4.1-2              OK
+findutils               4.1.7-4            OK
+flex                    2.5.31-1           OK
+fortune                 1.8-2              OK
+Missing directory: /usr/X11R6/doc/Cygwin/ from package fvwm
+fvwm                    2.4.7-2            Incomplete
+gawk                    3.1.3-3            OK
+gcc                     3.3.1-1            OK
+gcc-mingw               20030911-2         OK
+gcc2                    2.95.3-10          OK
+gdb                     20030919-1         OK
+gdbm                    1.8.3-7            OK
+gettext                 0.12.1-3           OK
+gettext-devel           0.12.1-3           OK
+ghostscript             7.05-2             OK
+ghostscript-base        7.05-2             OK
+ghostscript-x11         7.05-2             OK
+gnugo                   3.4-1              OK
+gnupg                   1.2.2-3            OK
+gperf                   2.7.2-1            OK
+grace                   5.1.12-1           OK
+grep                    2.5-1              OK
+groff                   1.18.1-2           OK
+gsl                     1.4-1              OK
+guile                   1.6.4-12           OK
+guile-devel             1.6.4-12           OK
+guile-doc               1.6.4-12           OK
+gzip                    1.3.5-1            OK
+indent                  2.2.8-1            OK
+inetutils               1.3.2-25           OK
+initscripts             0.9-1              OK
+ioperm                  0.4-1              OK
+irc                     20010101-3         OK
+jbigkit                 1.5-3              OK
+jgraph                  8.3-1              OK
+jpeg                    6b-11              OK
+keychain                1.9-1              OK
+less                    381-1              OK
+lesstif                 0.93.91-1          OK
+lftp                    2.6.6-1            OK
+libaspell15             0.50.3-1           OK
+libbz2_0                1.0.2-1            OK
+libbz2_1                1.0.2-5            OK
+libcharset1             1.9.1-3            OK
+libdb2                  2.7.7-4            OK
+libdb2-devel            2.7.7-4            OK
+libdb3.1                3.1.17-2           OK
+libdb3.1-devel          3.1.17-2           OK
+libdb4.1                4.1.25-1           OK
+libdb4.1-devel          4.1.25-1           OK
+libgdbm                 1.8.0-5            OK
+libgdbm-devel           1.8.3-7            OK
+libgdbm3                1.8.3-3            OK
+libgdbm4                1.8.3-7            OK
+libgettextpo0           0.12.1-3           OK
+libguile12              1.6.4-12           OK
+libguile12abi13         1.6.4-2            OK
+libguile14              1.5.6-5            OK
+libiconv                1.9.1-3            OK
+libiconv2               1.9.1-3            OK
+libintl                 0.10.38-3          OK
+libintl1                0.10.40-1          OK
+libintl2                0.12.1-3           OK
+libjpeg62               6b-11              OK
+libjpeg6b               6b-8               OK
+libkpathsea3            2.0.2-13           OK
+libkpathsea3abi13       2.0.2-2            OK
+libltdl3                1.5-3              OK
+libncurses-devel        5.3-4              OK
+libncurses5             5.2-1              OK
+libncurses6             5.2-8              OK
+libncurses7             5.3-4              OK
+libpcre                 4.1-1              OK
+libpcre0                4.4-2              OK
+libpng                  1.2.5-4            OK
+libpng10                1.0.15-4           OK
+libpng10-devel          1.0.15-4           OK
+libpng12                1.2.5-4            OK
+libpng12-devel          1.2.5-4            OK
+libpng2                 1.0.12-1           OK
+libpopt0                1.6.4-4            OK
+Missing directory: /usr/X11R6/doc/Cygwin/ from package libPropList
+libPropList             0.10.1-3           Incomplete
+libreadline4            4.1-2              OK
+libreadline5            4.3-5              OK
+libtiff-devel           3.6.0-5            OK
+libtiff3                3.6.0-2            OK
+libtiff4                3.6.0-5            OK
+libtool                 1.5a-1             OK
+libtool-devel           1.5-3              OK
+libtool-stable          1.4.3-2            OK
+libungif                4.1.0-2            OK
+libxerces-c21           2.1.0-1            OK
+libxerces-c22           2.2.0-1            OK
+libxerces-c23           2.3.0-2            OK
+libxml2                 2.5.7-1            OK
+libxslt                 1.0.30-2           OK
+lilypond                1.8.2-1            OK
+lilypond-doc            1.8.2-1            OK
+links                   0.96-1             OK
+login                   1.9-7              OK
+lynx                    2.8.4-7            OK
+m4                      1.4-1              OK
+make                    3.80-1             OK
+man                     1.5j-2             OK
+mc                      4.6.0-4            OK
+mingw-runtime           3.1-1              OK
+mingw-zlib              1.1.4-4            OK
+mktemp                  1.5-3              OK
+Missing file: /usr/lib/apache/new/mod_auth_mysql.dll from package mod_auth_mysql
+mod_auth_mysql          1.11-1             Incomplete
+Missing file: /usr/lib/apache/new/mod_auth_ntsec.dll from package mod_auth_ntsec
+mod_auth_ntsec          1.7-1              Incomplete
+Missing file: /usr/lib/apache/new/libdav.dll from package mod_dav
+mod_dav                 1.0.3-1.3.6-1      Incomplete
+Missing file: /usr/lib/apache/new/libphp4.dll from package mod_php4
+mod_php4                4.2.0-2            Incomplete
+Missing file: /usr/lib/apache/new/libssl.dll from package mod_ssl
+mod_ssl                 2.8.8-1.3.24-1     Incomplete
+more                    2.11o-1            OK
+mt                      2.0.1-2            OK
+mutt                    1.4-1              OK
+naim                    0.11.6-2           OK
+nano                    1.2.2-1            OK
+nasm                    0.98.38-1          OK
+ncftp                   3.1.4-1            OK
+ncurses                 5.3-4              OK
+ncurses-demo            5.3-4              OK
+netcat                  1.10-2             OK
+Empty package newlib-man
+newlib-man              20020801           OK
+Missing directory: /usr/X11R6/doc/Cygwin/ from package openbox
+openbox                 0.99.1-3           Incomplete
+opengl                  1.1.0-6            OK
+openssh                 3.7.1p2-1          OK
+openssl                 0.9.7b-3           OK
+openssl-devel           0.9.7b-3           OK
+openssl096              0.9.6j-1           OK
+par                     1.52-1             OK
+patch                   2.5.8-8            OK
+patchutils              0.2.22-2           OK
+pcre                    4.4-2              OK
+pcre-devel              4.4-2              OK
+pcre-doc                4.4-2              OK
+pdksh                   5.2.14-2           OK
+perl                    5.8.0-5            OK
+perl_manpages           5.8.0-5            OK
+pine                    4.55-1             OK
+pinfo                   0.6.8-1            OK
+pkgconfig               0.15.0-4           OK
+popt                    1.6.4-4            OK
+postgresql              7.3.4-2            OK
+procmail                3.22-8             OK
+procps                  010801-2           OK
+proftpd                 1.2.9rc1-3         OK
+psutils                 1.17-1             OK
+python                  2.3-2              OK
+rcs                     5.7-3              OK
+readline                4.3-5              OK
+rebase                  2.2-3              OK
+regex                   4.4-3              OK
+robots                  2.0-3              OK
+rpm                     4.1-1              OK
+rpm-build               4.1-1              OK
+rpm-doc                 4.1-1              OK
+rsync                   2.5.6-2            OK
+ruby                    1.8.0-1            OK
+rxvt                    2.7.10-3           OK
+sed                     4.0.7-3            OK
+setsid                  0.0-3              OK
+sh-utils                2.0.15-4           OK
+sharutils               4.2.1-3            OK
+shutdown                1.4-1              OK
+splint                  3.1.1-1            OK
+squid                   2.4.STABLE7-1      OK
+ssmtp                   2.38.7-4           OK
+stunnel                 4.04-3             OK
+sunrpc                  4.0-1              OK
+SWI-Prolog              5.2.6-1            OK
+swig                    1.3.19-1           OK
+sysvinit                2.84-4             OK
+tar                     1.13.25-3          OK
+tcltk                   20030901-1         OK
+tcp_wrappers            7.6-1              OK
+tcsh                    6.12.00-7          OK
+termcap                 20021106-2         OK
+terminfo                5.3_20030726-1     OK
+Empty package tetex
+tetex                   2.0.2-13           OK
+Missing file: /etc/postinstall/post-texmf.sh from package tetex-base
+tetex-base              2.0.2-13           Incomplete
+tetex-bin               2.0.2-13           OK
+tetex-devel             2.0.2-13           OK
+tetex-doc               2.0.2-13           OK
+tetex-extra             2.0.2-13           OK
+Missing file: /etc/postinstall/post-texmf.sh from package tetex-tiny
+tetex-tiny              2.0.2-13           Incomplete
+tetex-x11               2.0.2-13           OK
+texinfo                 4.2-4              OK
+Empty package texmf
+texmf                   20020911-1         OK
+Empty package texmf-base
+texmf-base              20020911-1         OK
+Empty package texmf-doc
+texmf-doc               20020911-1         OK
+Empty package texmf-extra
+texmf-extra             20020911-1         OK
+Empty package texmf-tiny
+texmf-tiny              20020911-1         OK
+textutils               2.0.21-1           OK
+tidy                    030901-1           OK
+tiff                    3.6.0-5            OK
+time                    1.7-1              OK
+tin                     1.6.1-1            OK
+ttcp                    19980512-1         OK
+ucl                     1.01-1             OK
+units                   1.77-1             OK
+unzip                   5.50-5             OK
+upx                     1.24-1             OK
+uw-imap                 2002e-1            OK
+uw-imap-imapd           2002e-1            OK
+uw-imap-util            2002e-1            OK
+vim                     6.2.098-1          OK
+w32api                  2.4-1              OK
+wget                    1.8.2-2            OK
+which                   1.5-2              OK
+whois                   4.6.7-1            OK
+Missing directory: /usr/X11R6/doc/Cygwin/ from package WindowMaker
+WindowMaker             0.80.0-2           Incomplete
+wtf                     0.0.4-4            OK
+x2x                     1.27-2             OK
+Xaw3d                   1.5E-1             OK
+xerces-c                2.3.0-2            OK
+xerces-c-devel          2.3.0-2            OK
+xerces-c-doc            2.3.0-2            OK
+Empty package XFree86-base
+XFree86-base            4.3.0-1            OK
+XFree86-bin             4.3.0-4            OK
+XFree86-bin-icons       4.3.0-3            OK
+XFree86-doc             4.3.0-1            OK
+XFree86-etc             4.3.0-3            OK
+XFree86-f100            4.2.0-3            OK
+XFree86-fcyr            4.2.0-3            OK
+XFree86-fenc            4.2.0-3            OK
+XFree86-fnts            4.2.0-3            OK
+XFree86-fscl            4.2.0-3            OK
+XFree86-fsrv            4.3.0-3            OK
+XFree86-html            4.3.0-1            OK
+XFree86-jdoc            4.3.0-1            OK
+XFree86-lib             4.3.0-1            OK
+XFree86-lib-compat      4.3.0-1            OK
+XFree86-man             4.3.0-1            OK
+XFree86-nest            4.3.0-3            OK
+XFree86-prog            4.3.0-6            OK
+XFree86-prt             4.3.0-3            OK
+XFree86-ps              4.3.0-1            OK
+XFree86-startup-scripts 4.2.0-5            OK
+XFree86-vfb             4.3.0-3            OK
+XFree86-xserv           4.3.0-14           OK
+XFree86-xwinclip        4.3.0-1            OK
+xinetd                  2.3.9-1            OK
+xmlto                   0.0.14-1           OK
+xpm-nox                 4.2.0-4            OK
+zip                     2.3-5              OK
+zlib                    1.1.4-4            OK
+zsh                     4.0.7-2            OK
+
+Cygwin Win95/NT Configuration Diagnostics
+Current System Time: Wed Sep 24 08:10:54 2003
+
+Windows XP Professional Ver 5.1 Build 2600 Service Pack 1
+
+Path:	C
+	c:\home\ke\bin
+	c:\home\rebol
+	c:\cygwin\bin
+	c:\Documents and Settings\rhm\bin
+	C:\cygwin\usr\local\bin
+	C:\cygwin\bin
+	C:\cygwin\bin
+	c:\WINDOWS\system32
+	c:\WINDOWS
+	c:\WINDOWS\system32\WBEM
+	c:\SFU\Perl\bin\
+	c:\SFU\common\
+	c:\Program Files\Common Files\Adaptec Shared\System
+	C:\cygwin\bin
+	C:\cygwin\usr\X11R6\bin
+
+Output from C:\cygwin\bin\id.exe (nontsec)
+UID: 1003(rhm) GID: 513(None)
+513(None)
+
+Output from C:\cygwin\bin\id.exe (ntsec)
+UID: 1003(rhm) GID: 513(None)
+513(None)                             
+544(Administrators)                   556(Network Configuration Operators)
+555(Remote Desktop Users)             
+545(Users)                            1005(PasswordPropDeny)
+
+SysDir: C:\WINDOWS\System32
+WinDir: C:\WINDOWS
+
+HOME = `c:\Documents and Settings\rhm'
+LD_LIBRARY_PATH = `C:\cygwin\usr\lib:\usr\X11R5\lib'
+MAKE_MODE = `unix'
+PWD = `/home/ke/knowledge/tools/cygwin'
+USER = `rhm'
+
+ALLUSERSPROFILE = `C:\Documents and Settings\All Users'
+APPDATA = `C:\Documents and Settings\rhm\Application Data'
+CLIENTNAME = `Console'
+COMMONPROGRAMFILES = `C:\Program Files\Common Files'
+COMPUTERNAME = `RHM8200'
+COMSPEC = `C:\WINDOWS\system32\cmd.exe'
+CVS_RSH = `/bin/ssh'
+CYGWIN_HOME = `/cygdrive/c/cygwin'
+DISPLAY = `RHM8200:0.0'
+EDITOR = `vi'
+HOMEDRIVE = `C:'
+HOMEPATH = `\Documents and Settings\rhm'
+HOSTNAME = `rhm8200'
+INTERIX_ROOT = `/dev/fs/C/SFU/'
+INTERIX_ROOT_WIN = `C:\SFU\'
+KEHOME = `C:/home/ke'
+KEVIEW = `C:/home/ke/view'
+LOGONSERVER = `\\RHM8200'
+MANPATH = `:/usr/ssl/man'
+MSTKSIZE = `1000000'
+NUMBER_OF_PROCESSORS = `1'
+OLDPWD = `/home/tap/C'
+OPENNT_ROOT = `/dev/fs/C/SFU/'
+OS = `Windows_NT'
+PATHEXT = `.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH'
+PROCESSOR_ARCHITECTURE = `x86'
+PROCESSOR_IDENTIFIER = `x86 Family 15 Model 2 Stepping 4, GenuineIntel'
+PROCESSOR_LEVEL = `15'
+PROCESSOR_REVISION = `0204'
+PROGRAMFILES = `C:\Program Files'
+PROMPT = `$P$G'
+PS1 = `\[\033]0;\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ '
+REBOL_HOME = `/cygdrive/c/home/rebol'
+SESSIONNAME = `Console'
+SFUDIR = `C:\SFU\'
+SFUDIR_INTERIX = `/dev/fs/C/SFU/'
+SHLVL = `1'
+SYSTEMDRIVE = `C:'
+SYSTEMROOT = `C:\WINDOWS'
+TEMP = `c:\DOCUME~1\rhm\LOCALS~1\Temp'
+TERM = `cygwin'
+TEXMF = `{/usr/share/lilypond/1.8.2,/usr/share/texmf}'
+TMP = `c:\DOCUME~1\rhm\LOCALS~1\Temp'
+USERDOMAIN = `RHM8200'
+USERNAME = `rhm'
+USERPROFILE = `C:\Documents and Settings\rhm'
+WINDIR = `C:\WINDOWS'
+XAPPLRESDIR = `/usr/X11R5/lib/X11/app-defaults'
+XCMSDB = `/usr/X11R5/lib/X11/Xcms.txt'
+XKEYSYMDB = `/usr/X11R5/lib/X11/XKeysymDB'
+XNLSPATH = `/usr/X11R5/lib/X11/nls'
+_ = `/cygdrive/c/cygwin/bin/cygcheck'
+
+Use `-r' to scan registry
+
+a:  fd           N/A    N/A                    
+c:  hd  NTFS   60000Mb  19% CP CS UN PA FC     WINXP
+d:  cd           N/A    N/A                    
+e:  cd           N/A    N/A                    
+f:  hd  FAT32   4345Mb  81% CP    UN           COMMON DATA
+g:  hd  FAT       46Mb  29% CP    UN           BOOT MAGIC
+
+C:\cygwin                          /                         system  binmode
+C:\cygwin/bin                      /usr/bin                  system  binmode
+C:\cygwin/lib                      /usr/lib                  system  binmode
+C:\cygwin\usr\X11R6\lib\X11\fonts  /usr/X11R6/lib/X11/fonts  system  binmode
+.                                  /cygdrive                 system  binmode,cygdrive
+
+Found: c:\cygwin\bin\awk.exe
+Found: c:\cygwin\bin\bash.exe
+Found: c:\cygwin\bin\cat.exe
+Found: c:\SFU\common\cat.exe
+Warning: c:\cygwin\bin\cat.exe hides c:\SFU\common\cat.exe
+Found: c:\cygwin\bin\cp.exe
+Found: c:\SFU\common\cp.exe
+Warning: c:\cygwin\bin\cp.exe hides c:\SFU\common\cp.exe
+Found: c:\cygwin\bin\cpp.exe
+Found: c:\cygwin\bin\find.exe
+Found: c:\SFU\common\find.exe
+Warning: c:\cygwin\bin\find.exe hides c:\SFU\common\find.exe
+Found: c:\cygwin\bin\gcc.exe
+Found: c:\cygwin\bin\gdb.exe
+Found: c:\cygwin\bin\grep.exe
+Found: c:\SFU\common\grep.exe
+Warning: c:\cygwin\bin\grep.exe hides c:\SFU\common\grep.exe
+Found: c:\cygwin\bin\ld.exe
+Found: c:\cygwin\bin\ls.exe
+Found: c:\SFU\common\ls.exe
+Warning: c:\cygwin\bin\ls.exe hides c:\SFU\common\ls.exe
+Found: c:\cygwin\bin\make.exe
+Found: c:\cygwin\bin\mv.exe
+Found: c:\SFU\common\mv.exe
+Warning: c:\cygwin\bin\mv.exe hides c:\SFU\common\mv.exe
+Found: c:\cygwin\bin\rm.exe
+Found: c:\SFU\common\rm.exe
+Warning: c:\cygwin\bin\rm.exe hides c:\SFU\common\rm.exe
+Found: c:\cygwin\bin\sed.exe
+Found: c:\SFU\common\sed.exe
+Warning: c:\cygwin\bin\sed.exe hides c:\SFU\common\sed.exe
+Found: c:\cygwin\bin\sh.exe
+Found: c:\cygwin\bin\tar.exe
+
+  802k 2003/09/15 c:\cygwin\bin\cygaspell-15.dll - os=4.0 img=1.0 sys=4.0
+                  "cygaspell-15.dll" v0.0 ts=2003/9/15 5:32
+   61k 2003/08/09 c:\cygwin\bin\cygbz2-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygbz2-1.dll" v0.0 ts=2003/8/8 23:35
+   54k 2002/01/27 c:\cygwin\bin\cygbz21.0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygbz21.0.dll" v0.0 ts=2002/1/26 17:07
+   14k 2003/08/10 c:\cygwin\bin\cygcharset-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygcharset-1.dll" v0.0 ts=2003/8/10 13:57
+  849k 2003/08/11 c:\cygwin\bin\cygcrypto-0.9.7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygcrypto-0.9.7.dll" v0.0 ts=2003/8/11 1:58
+  645k 2003/04/11 c:\cygwin\bin\cygcrypto.dll - os=4.0 img=1.0 sys=4.0
+                  "cygcrypto.dll" v0.0 ts=2003/4/11 3:37
+  551k 2003/04/02 c:\cygwin\bin\cygcurl-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygcurl-2.dll" v0.0 ts=2003/4/2 13:09
+   28k 2003/08/11 c:\cygwin\bin\cygcygipc-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygcygipc-2.dll" v0.0 ts=2003/8/10 17:54
+  380k 2002/07/24 c:\cygwin\bin\cygdb-3.1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdb-3.1.dll" v0.0 ts=2002/7/24 9:24
+  831k 2003/09/20 c:\cygwin\bin\cygdb-4.1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdb-4.1.dll" v0.0 ts=2003/9/20 14:51
+  326k 2002/06/26 c:\cygwin\bin\cygdb2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdb2.dll" v0.0 ts=2002/6/26 10:48
+  487k 2002/07/24 c:\cygwin\bin\cygdb_cxx-3.1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdb_cxx-3.1.dll" v0.0 ts=2002/7/24 9:25
+ 1080k 2003/09/20 c:\cygwin\bin\cygdb_cxx-4.1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdb_cxx-4.1.dll" v0.0 ts=2003/9/20 14:53
+  132k 2003/07/12 c:\cygwin\bin\cygexpat-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygexpat-0.dll" v0.0 ts=2003/7/12 4:33
+   61k 2003/06/10 c:\cygwin\bin\cygexslt-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygexslt-0.dll" v0.0 ts=2003/6/10 11:07
+   45k 2001/04/25 c:\cygwin\bin\cygform5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygform5.dll" v0.0 ts=2001/4/24 22:28
+   35k 2002/01/09 c:\cygwin\bin\cygform6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygform6.dll" v0.0 ts=2002/1/8 22:03
+   48k 2003/08/09 c:\cygwin\bin\cygform7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygform7.dll" v0.0 ts=2003/8/9 2:25
+   28k 2003/07/20 c:\cygwin\bin\cyggdbm-3.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggdbm-3.dll" v0.0 ts=2003/7/20 0:58
+   30k 2003/08/11 c:\cygwin\bin\cyggdbm-4.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggdbm-4.dll" v0.0 ts=2003/8/10 19:12
+   19k 2003/03/22 c:\cygwin\bin\cyggdbm.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggdbm.dll" v0.0 ts=2002/2/19 19:05
+   15k 2003/07/20 c:\cygwin\bin\cyggdbm_compat-3.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggdbm_compat-3.dll" v0.0 ts=2003/7/20 1:00
+   15k 2003/08/11 c:\cygwin\bin\cyggdbm_compat-4.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggdbm_compat-4.dll" v0.0 ts=2003/8/10 19:13
+   69k 2003/08/10 c:\cygwin\bin\cyggettextlib-0-12-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggettextlib-0-12-1.dll" v0.0 ts=2003/8/10 15:10
+   12k 2003/08/10 c:\cygwin\bin\cyggettextpo-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggettextpo-0.dll" v0.0 ts=2003/8/10 15:11
+  134k 2003/08/10 c:\cygwin\bin\cyggettextsrc-0-12-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cyggettextsrc-0-12-1.dll" v0.0 ts=2003/8/10 15:10
+  489k 2003/08/09 c:\cygwin\bin\cygguile-12.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-12.dll" v0.0 ts=2003/8/9 7:17
+  489k 2003/07/28 c:\cygwin\bin\cygguile-12abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-12abi13.dll" v0.0 ts=2003/7/28 11:18
+  488k 2002/07/18 c:\cygwin\bin\cygguile-14.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-14.dll" v0.0 ts=2002/7/18 3:35
+   24k 2003/08/09 c:\cygwin\bin\cygguile-ltdl-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-ltdl-1.dll" v0.0 ts=2003/8/9 7:16
+   24k 2003/07/28 c:\cygwin\bin\cygguile-ltdl-1abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-ltdl-1abi13.dll" v0.0 ts=2003/7/28 10:48
+   63k 2002/07/18 c:\cygwin\bin\cygguile-srfi-srfi-13-14-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-13-14-1.dll" v0.0 ts=2002/7/18 3:35
+   62k 2003/08/09 c:\cygwin\bin\cygguile-srfi-srfi-13-14-v-1-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-13-14-v-1-1.dll" v0.0 ts=2003/8/9 7:17
+   62k 2003/07/28 c:\cygwin\bin\cygguile-srfi-srfi-13-14-v-1-1abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-13-14-v-1-1abi13.dll" v0.0 ts=2003/7/28 11:18
+   24k 2002/07/18 c:\cygwin\bin\cygguile-srfi-srfi-4-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-4-1.dll" v0.0 ts=2002/7/18 3:35
+   23k 2003/08/09 c:\cygwin\bin\cygguile-srfi-srfi-4-v-1-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-4-v-1-1.dll" v0.0 ts=2003/8/9 7:17
+   23k 2003/07/28 c:\cygwin\bin\cygguile-srfi-srfi-4-v-1-1abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguile-srfi-srfi-4-v-1-1abi13.dll" v0.0 ts=2003/7/28 11:18
+   14k 2002/07/18 c:\cygwin\bin\cygguilereadline-14.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguilereadline-14.dll" v0.0 ts=2002/7/18 3:35
+   11k 2003/08/09 c:\cygwin\bin\cygguilereadline-v-12-12.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguilereadline-v-12-12.dll" v0.0 ts=2003/8/9 7:17
+   11k 2003/07/28 c:\cygwin\bin\cygguilereadline-v-12-12abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygguilereadline-v-12-12abi13.dll" v0.0 ts=2003/7/28 11:18
+   17k 2001/06/28 c:\cygwin\bin\cyghistory4.dll - os=4.0 img=1.0 sys=4.0
+                  "cyghistory4.dll" v0.0 ts=2001/1/6 20:34
+   29k 2003/08/10 c:\cygwin\bin\cyghistory5.dll - os=4.0 img=1.0 sys=4.0
+                  "cyghistory5.dll" v0.0 ts=2003/8/10 16:16
+  306k 2002/04/27 c:\cygwin\bin\cyghttpd.dll - os=4.0 img=1.0 sys=4.0
+                  "cyghttpd.dll" v0.0 ts=2002/4/27 6:23
+  958k 2003/08/10 c:\cygwin\bin\cygiconv-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygiconv-2.dll" v0.0 ts=2003/8/10 13:57
+   22k 2001/12/13 c:\cygwin\bin\cygintl-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygintl-1.dll" v0.0 ts=2001/12/13 1:28
+   37k 2003/08/10 c:\cygwin\bin\cygintl-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygintl-2.dll" v0.0 ts=2003/8/10 14:50
+   21k 2001/06/20 c:\cygwin\bin\cygintl.dll - os=4.0 img=1.0 sys=4.0
+                  "cygintl.dll" v0.0 ts=2001/6/20 10:09
+   12k 2003/02/17 c:\cygwin\bin\cygioperm-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygioperm-0.dll" v0.0 ts=2003/2/17 11:58
+   48k 2003/08/10 c:\cygwin\bin\cygjbig1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygjbig1.dll" v0.0 ts=2003/8/10 16:58
+  132k 2003/08/11 c:\cygwin\bin\cygjpeg-62.dll - os=4.0 img=1.0 sys=4.0
+                  "cygjpeg-62.dll" v0.0 ts=2003/8/10 17:37
+  119k 2002/02/09 c:\cygwin\bin\cygjpeg6b.dll - os=4.0 img=1.0 sys=4.0
+                  "cygjpeg6b.dll" v0.0 ts=2002/2/8 21:19
+   60k 2003/09/17 c:\cygwin\bin\cygkpathsea-3.dll - os=4.0 img=1.0 sys=4.0
+                  "cygkpathsea-3.dll" v0.0 ts=2003/9/17 9:37
+   60k 2003/07/27 c:\cygwin\bin\cygkpathsea-3abi13.dll - os=4.0 img=1.0 sys=4.0
+                  "cygkpathsea-3abi13.dll" v0.0 ts=2003/7/27 13:23
+   32k 2003/08/18 c:\cygwin\bin\cygltdl-3.dll - os=4.0 img=1.0 sys=4.0
+                  "cygltdl-3.dll" v0.0 ts=2003/8/17 22:35
+   26k 2001/04/25 c:\cygwin\bin\cygmenu5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygmenu5.dll" v0.0 ts=2001/4/24 22:27
+   20k 2002/01/09 c:\cygwin\bin\cygmenu6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygmenu6.dll" v0.0 ts=2002/1/8 22:03
+   29k 2003/08/09 c:\cygwin\bin\cygmenu7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygmenu7.dll" v0.0 ts=2003/8/9 2:25
+  453k 2003/07/27 c:\cygwin\bin\cygnaim_core-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygnaim_core-0.dll" v0.0 ts=2003/7/26 22:46
+  156k 2001/04/25 c:\cygwin\bin\cygncurses++5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygncurses++5.dll" v0.0 ts=2001/4/24 22:29
+  175k 2002/01/09 c:\cygwin\bin\cygncurses++6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygncurses++6.dll" v0.0 ts=2002/1/8 22:03
+  226k 2001/04/25 c:\cygwin\bin\cygncurses5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygncurses5.dll" v0.0 ts=2001/4/24 22:17
+  202k 2002/01/09 c:\cygwin\bin\cygncurses6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygncurses6.dll" v0.0 ts=2002/1/8 22:03
+  224k 2003/08/09 c:\cygwin\bin\cygncurses7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygncurses7.dll" v0.0 ts=2003/8/9 2:24
+   15k 2001/04/25 c:\cygwin\bin\cygpanel5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpanel5.dll" v0.0 ts=2001/4/24 22:27
+   12k 2002/01/09 c:\cygwin\bin\cygpanel6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpanel6.dll" v0.0 ts=2002/1/8 22:03
+   19k 2003/08/09 c:\cygwin\bin\cygpanel7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpanel7.dll" v0.0 ts=2003/8/9 2:24
+   67k 2003/09/10 c:\cygwin\bin\cygpcre-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpcre-0.dll" v0.0 ts=2003/9/10 7:25
+   63k 2003/04/11 c:\cygwin\bin\cygpcre.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpcre.dll" v0.0 ts=2003/4/11 1:31
+   15k 2003/09/10 c:\cygwin\bin\cygpcreposix-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpcreposix-0.dll" v0.0 ts=2003/9/10 7:25
+   61k 2003/04/11 c:\cygwin\bin\cygpcreposix.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpcreposix.dll" v0.0 ts=2003/4/11 1:31
+ 1100k 2003/08/29 c:\cygwin\bin\cygperl5_8_0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygperl5_8_0.dll" v0.0 ts=2003/8/29 3:20
+  168k 2003/08/10 c:\cygwin\bin\cygpng10.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpng10.dll" v0.0 ts=2003/8/10 15:31
+  173k 2003/08/10 c:\cygwin\bin\cygpng12.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpng12.dll" v0.0 ts=2003/8/10 15:35
+  170k 2002/01/21 c:\cygwin\bin\cygpng2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpng2.dll" v0.0 ts=2002/1/20 17:05
+   22k 2002/06/09 c:\cygwin\bin\cygpopt-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpopt-0.dll" v0.0 ts=2002/6/8 22:45
+  108k 2001/06/28 c:\cygwin\bin\cygreadline4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygreadline4.dll" v0.0 ts=2001/1/6 20:34
+  148k 2003/08/10 c:\cygwin\bin\cygreadline5.dll - os=4.0 img=1.0 sys=4.0
+                  "cygreadline5.dll" v0.0 ts=2003/8/10 16:16
+   66k 2001/11/20 c:\cygwin\bin\cygregex.dll - os=4.0 img=1.0 sys=4.0
+                  "cygregex.dll" v0.0 ts=2001/11/20 6:44
+  689k 2003/08/11 c:\cygwin\bin\cygruby18.dll - os=4.0 img=1.0 sys=4.0
+                  "cygruby18.dll" v0.0 ts=2003/8/11 6:27
+  176k 2003/08/11 c:\cygwin\bin\cygssl-0.9.7.dll - os=4.0 img=1.0 sys=4.0
+                  "cygssl-0.9.7.dll" v0.0 ts=2003/8/11 1:58
+  165k 2003/04/11 c:\cygwin\bin\cygssl.dll - os=4.0 img=1.0 sys=4.0
+                  "cygssl.dll" v0.0 ts=2003/4/11 3:37
+  254k 2003/09/18 c:\cygwin\bin\cygtidy-0-99-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygtidy-0-99-0.dll" v0.0 ts=2003/9/18 8:52
+  281k 2003/02/24 c:\cygwin\bin\cygtiff3.dll - os=4.0 img=1.0 sys=4.0
+                  "cygtiff3.dll" v0.0 ts=2003/2/23 20:58
+  282k 2003/08/11 c:\cygwin\bin\cygtiff4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygtiff4.dll" v0.0 ts=2003/8/10 19:32
+   25k 2002/07/14 c:\cygwin\bin\cygungif-4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygungif-4.dll" v0.0 ts=2002/7/14 7:58
+ 2689k 2002/11/16 c:\cygwin\bin\cygxerces-c21.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxerces-c21.dll" v0.0 ts=2002/11/15 20:07
+ 2984k 2003/02/07 c:\cygwin\bin\cygxerces-c22.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxerces-c22.dll" v0.0 ts=2003/2/7 10:50
+ 3088k 2003/06/11 c:\cygwin\bin\cygxerces-c23.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxerces-c23.dll" v0.0 ts=2003/6/11 16:40
+  903k 2003/06/09 c:\cygwin\bin\cygxml2-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxml2-2.dll" v0.0 ts=2003/6/9 16:49
+   50k 2003/08/09 c:\cygwin\bin\cygXpm-noX4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXpm-noX4.dll" v0.0 ts=2003/8/9 0:21
+   54k 2003/08/09 c:\cygwin\bin\cygXpm-X4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXpm-X4.dll" v0.0 ts=2003/8/9 0:22
+  174k 2003/06/10 c:\cygwin\bin\cygxslt-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxslt-1.dll" v0.0 ts=2003/6/10 10:42
+   13k 2003/06/10 c:\cygwin\bin\cygxsltbreakpoint-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygxsltbreakpoint-1.dll" v0.0 ts=2003/6/10 11:07
+   60k 2003/08/09 c:\cygwin\bin\cygz.dll - os=4.0 img=1.0 sys=4.0
+                  "cygz.dll" v0.0 ts=2003/8/8 23:28
+  949k 2003/09/20 c:\cygwin\bin\cygwin1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygwin1.dll" v0.0 ts=2003/9/20 13:31
+    Cygwin DLL version info:
+        DLL version: 1.5.5
+        DLL epoch: 19
+        DLL bad signal mask: 19005
+        DLL old termios: 5
+        DLL malloc env: 28
+        API major: 0
+        API minor: 94
+        Shared data: 3
+        DLL identifier: cygwin1
+        Mount registry: 2
+        Cygnus registry name: Cygnus Solutions
+        Cygwin registry name: Cygwin
+        Program options name: Program Options
+        Cygwin mount registry name: mounts v2
+        Cygdrive flags: cygdrive flags
+        Cygdrive prefix: cygdrive prefix
+        Cygdrive default prefix: 
+        Build date: Sat Sep 20 16:31:15 EDT 2003
+        CVS tag: cr-0x9b
+        Shared id: cygwin1S3
+
+  673k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygdps-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdps-1.dll" v0.0 ts=2003/9/19 23:37
+  184k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygdpstk-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygdpstk-1.dll" v0.0 ts=2003/9/19 23:37
+  176k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygfontconfig-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygfontconfig-1.dll" v0.0 ts=2003/9/19 23:38
+  340k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygfreetype-9.dll - os=4.0 img=1.0 sys=4.0
+                  "cygfreetype-9.dll" v0.0 ts=2003/9/19 23:38
+  520k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygGL-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygGL-1.dll" v0.0 ts=2003/9/19 23:35
+  593k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygGLU-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygGLU-1.dll" v0.0 ts=2003/9/19 23:36
+  111k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygICE-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygICE-6.dll" v0.0 ts=2003/9/19 23:28
+   25k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygoldX-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygoldX-6.dll" v0.0 ts=2003/9/19 23:27
+ 1511k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygOSMesa-4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygOSMesa-4.dll" v0.0 ts=2003/9/19 23:35
+   41k 2002/05/14 C:\cygwin\usr\X11R6\bin\cygPropList-0.dll - os=4.0 img=1.0 sys=4.0
+                  "cygPropList-0.dll" v0.0 ts=2002/5/13 20:13
+   40k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygpsres-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygpsres-1.dll" v0.0 ts=2003/9/19 23:37
+   54k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygSM-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygSM-6.dll" v0.0 ts=2003/9/19 23:28
+ 1073k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygX11-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygX11-6.dll" v0.0 ts=2003/9/19 23:27
+  701k 2003/09/23 C:\cygwin\usr\X11R6\bin\cygXaw3d-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXaw3d-1.dll" v0.0 ts=2003/9/23 0:34
+   68k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXcursor-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXcursor-1.dll" v0.0 ts=2003/9/19 23:39
+   84k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXext-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXext-6.dll" v0.0 ts=2003/9/19 23:28
+   99k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXft-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXft-1.dll" v0.0 ts=2003/9/19 23:39
+  118k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXft-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXft-2.dll" v0.0 ts=2003/9/19 23:39
+   53k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXi-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXi-6.dll" v0.0 ts=2003/9/19 23:30
+   29k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXmuu-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXmuu-1.dll" v0.0 ts=2003/9/19 23:29
+   59k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXp-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXp-6.dll" v0.0 ts=2003/9/19 23:31
+   83k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXpm-4.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXpm-4.dll" v0.0 ts=2003/9/19 23:29
+   34k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXrandr-2.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXrandr-2.dll" v0.0 ts=2003/9/19 23:39
+   49k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXrender-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXrender-1.dll" v0.0 ts=2003/9/19 23:38
+  386k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXTrap-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXTrap-6.dll" v0.0 ts=2003/9/19 23:39
+   38k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXtst-6.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXtst-6.dll" v0.0 ts=2003/9/19 23:30
+   34k 2003/09/20 C:\cygwin\usr\X11R6\bin\cygXv-1.dll - os=4.0 img=1.0 sys=4.0
+                  "cygXv-1.dll" v0.0 ts=2003/9/19 23:31
+Use -h to see help about each section

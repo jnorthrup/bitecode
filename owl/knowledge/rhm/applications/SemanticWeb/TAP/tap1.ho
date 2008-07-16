@@ -1,0 +1,106 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tap1.ho
+# Jan/8/2003
+
+#======================================#
+# merged TAP and tabula rasa contexts  #
+#--------------------------------------#
+# contexts still need to be integrated #
+#======================================#
+
+#====================================#
+# Knowledge Explorer output, part 1  #
+#------------------------------------#
+#    $ rdf2mkr tap.daml		     #
+#    $ ke			     #
+#    <> do read from tap.mkr done    #
+#    <> existent isc**2 ? 	     #
+#    <> exit			     #
+#    $				     #
+#====================================#
+
+# 1 errors found in file tap.mkr
+<tabula_rasa:.=existent> existent isc**2 ?
+# question <existent isc**2 ?>
+existent
+/  Activity
+//    Service
+//    Sport
+//    TransitivePropertyType
+/  Agent
+//    Organization
+//    Person
+//    PopularCharacter
+/  Class
+//    ActivityType
+//    AttributeValueType
+//    EventType
+//    MediaObjectType
+//    ProductType
+//    ProfessionalType
+//    QuantityType
+/  Event
+//    AttributeValueType
+//    BiologicalEvent
+//    Broadcast
+//    Concert
+//    ConflictEvent
+//    Convention
+//    HistoricEvent
+//    Project
+//    SocioReligiousEvent
+//    SportsEvent
+/  Intangible
+//    Account
+//    Award
+//    BeliefSystem
+//    Brand
+//    CommunicationMedium
+//    Cuisine
+//    CyberPlace
+//    FieldOfStudy
+//    FoodActivity
+//    Genre
+//    MediaObject
+//    Quantity
+//    SpatialDirection
+//    StateOfMatter
+//    UnitOfMeasure
+/  Literal
+//    Array
+//    Bitmap
+//    Number
+//    String
+/  PropertyType
+//    ReflexivePropertyType
+//    TaxonomicPropertyType
+//    TitlePropertyType
+//    TransitivePropertyType
+/  Tangible
+//    Animal
+//    BodyPart
+//    Material
+//    Place
+//    Plant
+//    Product
+/  characteristic
+//    action
+//    attribute
+//    differentia
+//    interaction
+//    part
+//    relation
+/  entity
+//    OBJECT
+//    animal
+//    plant
+/  proposition
+//    causality relation
+//    context
+//    newproposition
+//    sentence
+/  unknown
+<tabula_rasa:.=existent> exit
+</XMP>
+</HTML>

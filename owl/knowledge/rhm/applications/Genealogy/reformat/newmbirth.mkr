@@ -1,0 +1,18 @@
+# newmbirth.mkr
+# 1999/Aug/6
+# new syntax Aug/10/2005
+
+# update r_birth relation
+#   from r_death relation
+
+set echo=off;
+do read from mbirth.rel done;
+do read from death.rel done;
+
+every x isa person {
+  set . = $x;
+  do print od "$x, $sex, $birthtype, $birthdate, $birthplace, $deathdate, $deathplace, $deathcause;";
+};
+set echo=on;
+
+exit;

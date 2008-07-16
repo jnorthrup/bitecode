@@ -1,0 +1,10 @@
+# 1:00 am 1998/1/10
+
+# Dewey Decimal Classification
+# measure additional attributes
+
+
+at view=subject/ddcn
+#------------------#
+!measure subject with alpha  # first letter
+!measure subject with dewey  # d100,d010,d001

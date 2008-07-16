@@ -1,0 +1,201 @@
+# KEHOME/knowledge/application/SemanticWeb/DAML/rdfs.txt
+# rhm Nov/7/2002
+
+#=======================================================#
+# KR version of "http://www.w3.org/2000/01/rdf-schema#" #
+#=======================================================#
+
+#<rdf:RDF
+#   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+# RDF - KR aliases
+#=================
+Class is concept
+Instance is unit
+Resource is existent
+Property is attribute
+Container is group
+Alt is enumeration
+Bag is multiset
+Seq is list
+
+# hierarchy (outline format)
+#==========
+# NOTE: ContainerMembershipProperty corresponds to
+#       KR relations: ismem, isalt
+rdfshi is begin hierarchy
+Resource
+/   Statement
+/   Property
+//	type
+//	label
+///	    label "en"
+///	    label "fr"
+//	comment
+//	subClassOf
+//	subPropertyOf
+//	seeAlso
+///	    isDefinedBy
+//	ContainerMembershipProperty
+//	ConstraintProperty
+///	    domain
+///	    range
+/   ConstraintResource
+/   Container
+//	Alt
+//	Bag
+//	Seq
+/   Literal
+end hierarchy rdfshi
+
+# Instances
+#==========
+value isu Property
+
+schema isu Description
+schema has
+  seeAlso = "http://www.w3.org/2000/01/rdf-schema-more"
+
+# Properties
+#===========
+Resource has
+	type = Class,
+	label = Literal,
+	comment = Literal,
+	seeAlso = Resource,
+	isDefinedBy = Resource
+Statement has
+	subject = Resource,
+	predicate = Property,
+	object = value
+Property has
+	range = Class,
+	subPropertyOf = Property	# Property:1 iss Property:2
+Class has
+	subClassOf = Class		# Class:1 iss Class:2
+
+
+# labels and comments
+#====================
+subClassOf has
+  label "en"="subClassOf",
+  label "fr"="sousClasseDe",
+  comment="Indicates membership of a class"
+
+subPropertyOf has
+  label "en"="subPropertyOf",
+  label "fr"="sousPropri&#233;t&#233;De",
+  comment="Indicates specialization of properties"
+
+Resource has
+  label "en" = "Resource",
+  label "fr" = "Ressource",
+  comment = "The most general class"
+
+type has
+  label "en" = "type",
+  label "fr" = "type",
+  comment = "Indicates membership of a class"
+
+label has
+  type = Property,
+  label "en"="label",
+  label "fr"="label",
+  comment="Provides a human-readable version of a resource name"
+
+comment has
+  label "en"="comment",
+  label "fr"="commentaire",
+  comment="Use this for descriptions"
+
+Class has
+  label "en"="Class",
+  label "fr"="Classe",
+  comment="The concept of Class"
+
+seeAlso has
+  label "en"="seeAlso",
+  label "fr"="voirAussi",
+  comment="Indicates a resource that provides information about the subject resource."
+
+isDefinedBy has
+  type = Property,
+  label "en"="isDefinedBy",
+  label "fr"="esD&#233;finiPar",
+  comment="Indicates a resource containing and defining the subject resource."
+
+ConstraintResource has
+  type = Class,
+  label "en"="ConstraintResource",
+  label "fr"="RessourceContrainte",
+  comment="Resources used to express RDF Schema constraints."
+
+ConstraintProperty has
+  label "en" = "ConstraintProperty",
+  label "fr" = "Propri&#233;t&#233;Contrainte",
+  comment="Properties used to express RDF Schema constraints."
+
+domain has
+  label "en"="domain",
+  label "fr"="domaine",
+  comment="This is how we associate a class with properties that its instances can have"
+
+range has
+  label "en"="range",
+  label "fr"="&#233;tendue",
+  comment="Properties that can be used in a schema to provide constraints"
+
+Property has
+  label "en"="Property",
+  label "fr"="Propri&#233;t&#233;",
+  comment="The concept of a property"
+
+Literal has
+  type = Class,
+  label "en"="Literal",
+  label "fr"="Litt&#233;ral",
+  comment="This represents the set of atomic values, eg. textual strings."
+
+Statement has
+  label "en"="Statement",
+  label "fr"="D&#233;claration",
+  comment="This represents the set of reified statements."
+
+subject has
+  label "en"="subject",
+  label "fr"="sujet"
+
+predicate has
+  label "en"="predicate",
+  label "fr"="pr&#233;dicat"
+
+object has
+  label "en"="object",
+  label "fr"="objet"
+
+Container has
+  label "en"="Container",
+  label "fr"="Enveloppe",
+  comment="This represents the set Containers."
+
+Bag has
+  label "en"="Bag",
+  label "fr"="Ensemble"
+
+Seq has
+  label "en"="Sequence",
+  label "fr"="S&#233;quence"
+
+Alt has
+  label "en"="Alt",
+  label "fr"="Choix"
+
+ContainerMembershipProperty has
+  label "en"="ContainerMembershipProperty"
+
+value has
+  label "en"="object",
+  label "fr"="value"
+
+#</rdf:RDF>

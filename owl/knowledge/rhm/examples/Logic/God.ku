@@ -1,0 +1,29 @@
+# KEHOME/knowledge/ExamplesLogic/God.ku
+# Jul/26/2002
+
+#=====#
+# God #
+#=====#
+
+God isa nonexistent
+
+#set debug=context
+
+at view=imagination
+#=================#
+God isa* existent
+
+God isa entity
+God has
+	omnipotent,
+	omniscient,
+	benevolent
+
+#set debug=event
+
+at time = past {
+	God do create od universe done;
+	God do create od man done;
+}
+
+Bible is word of God

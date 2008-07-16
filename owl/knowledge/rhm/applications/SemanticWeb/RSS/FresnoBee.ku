@@ -1,0 +1,40 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/RSS/FresnoBee.ku
+# Jan/19/2003
+
+# Fresno Bee ontology (context)
+# for GetLetter,ExtractData commands
+# NOTE: "tothe" used because "to","the" are reserved words
+
+The McClatchy Company isu newspaper and Internet publisher
+The Fresno Bee isu newspaper
+fresnoBee.com isu electronic publication of The Fresno Bee
+
+The McClatchy Company do publish od The Fresno Bee done
+at time=5 am {The McClatchy Company do publish od fresnoBee.com done}
+
+fresnoBee.com haspart
+	opinion page,
+	letter tothe editor
+opinion page haspart
+	letter tothe editor list
+letter tothe editor has
+	title,
+	author,
+	date,
+	text
+author isa person
+author has
+	hometown
+
+set site = http://www.fresnobee.com
+fresnoBee.com has
+	url = $site/
+opinion page has
+	url = $site/opinion/index.html
+letter tothe editor has
+	letterid,
+	urlformat = $site/opinion/lets_ed/story/letterid.html
+</XMP>
+</HTML>

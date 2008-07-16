@@ -1,0 +1,28 @@
+# 1999/4/27
+
+#===================#
+# Truth in LaLaLand #
+#===================#
+
+Welcome to LaLaLand.
+
+A La is a linguistic animal that directly perceives reality
+in the form of a linguistic statement.  There are three species
+of Las: Northern La, Central La and Southern La.
+
+Here is an example of how the Las function.
+The three Las open their minds and perceive
+	I has thirst
+	the water has hot
+The Northern La conceives these facts as
+	j'ai soif
+	l'eau est chaude
+The Central La conceives these facts as
+	I am thirsty
+	the water is hot
+The Southern La conceives these facts as
+	yo tengo sed
+	el agua es caliente
+
+The moral of this example is: truth is perceived and
+conceived in many different forms.

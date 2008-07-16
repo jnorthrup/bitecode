@@ -1,0 +1,64 @@
+From - Tue Nov 18 22:17:18 1997
+Received: (from rhm@localhost) by pumpkin.cdepot.net (8.8.5/8.6.9) id WAA28037; Mon, 10 Nov 1997 22:53:28 -0800 (PST)
+Date: Mon, 10 Nov 1997 22:53:27 -0800 (PST)
+From: Richard H McCullough <rhm@pumpkin.cdepot.net>
+To: "Patrick J. Hayes" <phayes@nuts.coginst.uwf.edu>,
+        John McCarthy <jmc@cs.sanford.edu>
+cc: David Kelley <ios@ios.org>, "David S. Burnett" <dsburnett@lucent.com>,
+        "Richard H. McCullough" <rhm@cdepot.net>
+Subject: Montague-Scott structure
+Message-ID: <Pine.BSD/.3.91.971110215607.25667A-100000@pumpkin.cdepot.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-UIDL: 67a6dacfb54654aed377ebd44447e580
+Status: O
+X-Status: 
+X-Mozilla-Status: 0001
+Content-Length: 1752
+
+I have done a lot of reading today in "Reasoning About Knowledge"
+by Fagin, Halpern, Moses, Vardi.
+The most pertinent issues are discussed in "Logical Omniscience"
+(Chap. 9).  The Montague-Scott structure appears to be the closest
+of their models to my KR.
+
+My model is
+in KR:
+  knowledge := I do identify existent
+in English:
+  knowledge is the identification of a fact of reality
+
+The axiomatic concept "identify" is the action of concept-formation.
+It is not the same as "know".  "focus" (roughly "is aware of") is
+one of its components.  I have worked at the decomposition of
+"identify" off and on over the past year.  My latest decomposition is
+  identify is "sense; perceive; focus; partition; measure; choose; define"
+where the component actions are
+  sense-data := I do sense entity      # transient
+  percept := I do perceive sense-data  # permanent memory
+  I do focus percept
+  entity := I do partition percept
+  attribute := I do measure percept
+  name := I do choose word
+  definition := I do define entity
+
+In this decomposition the "focus; partition; measure"
+sequence is the biggest problem area, in terms of my
+being able to identify what is going on.  I expect to
+get some new insights by reading "The Evidence of the
+Senses" by David Kelley.  I have just started reading;
+I think he is saying that a percept is actually a
+proposition of the form
+  this has that
+where I have to discover what the entity "this" is,
+and what its attribute "that" is.
+If this is true, it is saying that I directly
+perceive "low-level" attributes, but I consciously
+measure "high-level" attributes.  For example,
+I perceive the color of an object, but I measure
+its length.
+
+Dick McCullough
+<rhm@cdepot.net>
+
+

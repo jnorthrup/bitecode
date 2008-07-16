@@ -1,0 +1,20 @@
+<HTML><XMP>
+# KEHOME/knowledge/applications/SemanticWeb/OWL/lattice.mkr
+# May/29/2003
+
+at view = owl;
+
+do print od "","<--  original OWL ontology lattice -->" done;
+#####do read from owlRefB.rdf done;
+owl:Thing isc* ?;
+
+do print od "","<--  simplify lattice -->" done;
+do simplify lattice od owl:Thing done;
+
+do print od "","<--  simplified OWL ontology lattice -->" done;
+owl:Thing isc* ?;
+
+! deletecomment od lattice.out to lattice.save done;
+#exit;
+
+</XMP></HTML>

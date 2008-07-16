@@ -1,0 +1,52 @@
+4c4
+< /  Excite
+---
+> /	MyExcite
+6d5
+< //    Search
+9a9
+> /	Business
+11,15c11
+< /      City Guides
+< /      Classifieds & Auctions
+< /      Communities
+< /      Computers & Internet
+< /      Education
+---
+> /	Computers
+16a13
+> /	Fun
+18,19d14
+< /      Health
+< /      Home & Real Estate
+21d15
+< /      Money & Investing
+27,42d20
+< 
+< Search
+< /      Airline Tickets
+< /      Auctions
+< /      Chat
+< /      Daily Crossword
+< /      Email Lookup
+< /      Horoscopes
+< /      Hot! Excite Movies
+< /      Job Finder
+< /      Maps&Directions
+< /      More...
+< /      People Finder
+< /      Personals
+< /      Search Help
+< /      Stock Quotes
+44,46d21
+< /      Web Site Guide
+< /      Yellow Pages
+< /      [ Movie Showtimes ]
+48c23,27
+< #!read exciteCE.ho
+---
+> /	Services:
+> //		Book Flights
+> //		Maps
+> //		People Finder
+> //		Yellow Pages

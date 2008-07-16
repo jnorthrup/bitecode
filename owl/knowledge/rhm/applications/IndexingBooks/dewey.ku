@@ -1,0 +1,20 @@
+# 11:00 am 1998/1/9
+
+# Dewey Decimal Classification
+
+# subject/ddcn lattice
+#--------------------#
+!read dlat.ku
+
+!read dmeasure.ku
+
+!read dclass.ku
+
+!read dexlat.ku
+
+
+# book/ddcn hierarchy
+#-------------------#
+!read dhier.ku
+
+!read dexhier.ku

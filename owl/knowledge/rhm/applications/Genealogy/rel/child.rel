@@ -1,0 +1,46 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/child.rel
+# Oct/5/2003 Mar/19/2007
+
+# automatic: 5 proposition/infon
+# meaning:   8 proposition/infon
+
+childtype isa attribute;
+
+r_child is relation with
+    arity="*",
+    arraymode=gdbm,arraykey="$1_$2",
+    label=[husband, wife, childtype/child...],
+    format=[person:1, person:2, childtype/person:*],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_child;
+#    meaning={
+#	$1_$2 isu family with husband=$1,wife=$2;
+#	$1_$2 has child +=$*;
+#	$1,$2 has family_spouse +=$1_$2;
+#	$1 has sex=male;
+#	$2 has sex=female;
+#	$1 rel spouse +=$2;
+#	$2 rel spouse +=$1;
+#	$* has family_child +=$1_$2;
+#	$* rel parent +=[$1,$2];
+#	};
+
+#set debug=relation;
+#set debug=token;
+#set debug=symbol;
+
+begin relation r_child;
+Carl Cates 1927, Pauline Neal 1934, adopted/Steven Cates 1955;
+Homer McCullough 1907, Kay Stecker 1910, natural/Dick McCullough 1936, natural/Bob McCullough 1938;
+end relation r_child;
+
+do check od person done;  # number of persons
+
+#r_child isc* ?;
+#person isc* ?;
+#? has child;
+#? has parent;
+
+# </xmp></html>

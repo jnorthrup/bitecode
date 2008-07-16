@@ -1,0 +1,29 @@
+# KEHOME/knowledge/application/SemanticWeb/RSS/news_mkr.txt
+# Dec/22/2002
+
+$ ke rss1.ku
+$ deletecomment <rss1.out
+
+
+"http://www.xml.com/cs/xml/query/q/19" has items = ["http://www.xml.com/pub/a/2002/12/04/som.html",
+    "http://www.xml.com/pub/a/2002/12/04/svg.html",
+    "http://www.xml.com/pub/a/2002/12/04/normalizing.html"]
+ 
+title: "Normalizing XML, Part 2"
+link: "http://www.xml.com/pub/a/2002/12/04/normalizing.html"
+description: "In this second and final look at applying relational normalization techniques to W3C XML Schema data modeling, Will Provost discusses when not to normalize, the scope of uniqueness and the fourth and fifth normal forms."
+date: 2002-12-04
+author: Will Provost
+ 
+title: "The .NET Schema Object Model"
+link: "http://www.xml.com/pub/a/2002/12/04/som.html"
+description: "Priya Lakshminarayanan describes in detail the use of the .NET Schema Object Model for programmatic manipulation of W3C XML Schemas."
+date: 2002-12-04
+author: Priya Lakshminarayanan
+ 
+title: "SVG's Past and Promising Future"
+link: "http://www.xml.com/pub/a/2002/12/04/svg.html"
+description: "In this month's SVG column, Antoine Quint looks back at SVG's journey through 2002 and looks forward to 2003."
+date: 2002-12-04
+author: Antoine Quint
+ 

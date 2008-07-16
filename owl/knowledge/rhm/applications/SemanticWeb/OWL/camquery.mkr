@@ -1,0 +1,11 @@
+# KEHOME/knowledge/applications/SemanticWeb/OWL/camquery.mkr
+# May/29/2003
+
+at view = owl;
+
+do read from camera.nt done;
+SLR ? Camera;
+
+! deletecomment od camquery.out done;
+do check od knit done;
+exit;

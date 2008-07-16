@@ -1,0 +1,11 @@
+# KEHOME/knowledge/ApplicationInternet/bookmark.ku
+# Aug/15/2002
+
+bookmark is relation with
+    format = [url:1, title:2, keyword:3], 
+    meaning = {
+	$1 has title=$2;
+	$1 has keyword+=[$3];
+    }
+
+do read from bookmark.rel done

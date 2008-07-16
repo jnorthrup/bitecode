@@ -1,0 +1,92 @@
+# 5:30 pm 1998/2/10
+
+# Biedermann example
+# ICCS'97 page 304
+# interaction with Knowledge Explorer 2.0
+
+# general context
+#================
+at view = tabula_rasa
+existent ise* ?
+# see the file "general.txt"
+
+# gospel context
+#===============
+at view = tabula_rasa  at view = v_gospel
+hfocus = [newstatement, newword, person, r_reference]
+passage isa object
+passage has reference=person
+
+r_reference is relation with \
+	format = "passage:1; reference:2",
+	meaning = "$1 has reference=$2;
+			$2 isa person"
+
+# NOTE: I could have used the more abstract view
+at view=tabula_rasa  at view=v_event
+passage isa event
+passage changes person
+
+# Matthew
+#--------
+at view=v_gospel  at view=v_matthew
+!read matthew.rel with cname=r_reference
+
+# Mark
+#-----
+at view=v_gospel  at view=v_mark
+!read mark.rel with cname=r_reference
+
+# Luke
+#-----
+at view=v_gospel  at view=v_luke
+!read luke.rel with cname=r_reference
+
+#===========#
+# questions #
+#===========#
+# NOTES:
+# at view=v question	searches 1 view
+# !vfind question	searches all views
+# questions using "other" are not translated exactly
+
+# which passages mention Peter in all gospels?
+# approximate translation
+!vfind ? has reference+=Peter
+
+# which passages mention Peter in Mark?
+at view=v_mark
+? has reference+=Peter
+
+# which passages mention all disciples?
+!vfind ? has reference="Peter,Andrew,James,John,Philip,Bartholomew,Thomas,Matthew,James_Alphaeus,Thadaeus,Simon,Judas"
+
+# is Peter mentioned in passage 3 of Matthew?
+at view=v_matthew
+3 has reference+=Peter ?
+
+# are disciples other than Peter mentioned in passage 8 of Matthew?
+at view=v_matthew
+8 has reference=?
+
+# does Peter occur in passage 8 of other gospels?
+!vfind 8 has reference+=Peter ?
+
+# does Peter occur in other passages in Matthew?
+at view=v_matthew
+? has reference+=Peter
+
+# what passages mention Peter and John in Matthew?
+at view=v_matthew
+? has reference+=[Peter,John]
+
+# what passages in what gospels mention Peter and James?
+!vfind ? has reference+=[Peter,James]
+
+# Mark mentions some disciples in passage 2. what other passages of Mark mention the same disciples?
+at view=v_mark
+2 has reference=?; ? has reference+=$
+
+# which passages in Matthew mention John?
+at view=v_matthew
+? has reference+=John

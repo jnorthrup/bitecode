@@ -1,0 +1,86 @@
+# KEHOME/knowledge/application/SemanticWeb/DAML/rdf.txt
+# rhm Nov/2/2002
+
+#<?xml version="1.0"?>
+
+#<RDF
+#  xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+#  xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+#<!--
+#  This is the RDF Schema for the RDF data model as described in the
+#  Resource Description Framework (RDF) Model and Syntax Specification
+#  http://www.w3.org/TR/REC-rdf-syntax -->
+
+#<s:Class rdf:ID="Statement"
+#  s:comment="A triple consisting of a predicate, a subject, and an object." />
+Statement is statement
+Statement iss relation with
+  label=[predicate,subject,object],
+  format=[Property:1,Resource:2,value:3],
+  meaning={$2 has $1=$3}
+Statement has
+  comment="A triple consisting of a predicate, a subject, and an object."
+
+#<s:Class rdf:ID="Property"
+#  s:comment="A name of a property, defining specific meaning for the property" />
+Property is attribute
+Property has
+  comment="A name of a property, defining specific meaning for the property"
+
+#<s:Class rdf:ID="Bag"
+#  s:comment="An unordered collection" />
+Bag is multiset
+Bag has
+  comment="An unordered collection"
+
+#<s:Class rdf:ID="Seq"
+#  s:comment="An ordered collection" />
+Seq is list
+Seq has
+  comment="An ordered collection"
+
+#<s:Class rdf:ID="Alt"
+#  s:comment="A collection of alternatives" />
+Alt is enumeration
+Alt has
+  comment="A collection of alternatives"
+
+#<Property ID="predicate"
+#  s:comment="Identifies the property used in a statement when representing the statement in reified form">
+#  <s:domain rdf:resource="#Statement" />
+#  <s:range rdf:resource="#Property" />
+#</Property>
+Statement has predicate
+predicate has
+  comment="Identifies the property used in a statement when representing the statement in reified form",
+  range = Property
+
+#<Property ID="subject"
+#  s:comment="Identifies the resource that a statement is describing when representing the statement in reified form">
+#  <s:domain rdf:resource="#Statement" />
+#</Property>
+Statement has subject
+subject has
+  comment="Identifies the resource that a statement is describing when representing the statement in reified form"
+
+#<Property ID="object"
+#  s:comment="Identifies the object of a statement when representing the statement in reified form" />
+Statement has object
+object has
+  comment="Identifies the object of a statement when representing the statement in reified form"
+
+#<Property ID="type"
+#  s:comment="Identifies the Class of a resource" />
+resource has type
+type has
+  comment="Identifies the Class of a resource"
+
+#<Property ID="value"
+#  s:comment="Identifies the principal value (usually a string) of a property when the property value is a structured resource" />
+Property isp value  # is primitive concept of
+value has
+  comment="Identifies the principal value (usually a string) of a property when the property value is a structured resource"
+
+#</RDF>

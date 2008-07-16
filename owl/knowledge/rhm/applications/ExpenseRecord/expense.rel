@@ -1,0 +1,72 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/ApplicationExpenseRecord/expense.rel
+# 1999/Aug/9
+# new syntax Sep/13/2002
+# new syntax Jan/21/2003
+# new syntax Oct/6/2003
+
+# expenses
+
+expense isa object;
+r_expense is relation with
+    label=[date, cost, receipt, payee, category, note],
+    format=[time:1, cost:2, receipt:3, payee:4, category:5, note:6],
+    automatic=ISU,
+    meaning={
+	x := do unique od $5 done;
+	$x isu expense;
+	$x has date=$1,cost=$2,receipt=$3,payee=$4,type=$5,note=$6;
+	y := do year od $1 done;
+	$x has year=$y;
+	};
+
+set hfocus = [expense,s_attribute, newstatement,newword];
+
+set echo=off;
+begin relation r_expense;
+
+#-----------------------------------------------------------------#
+
+1996/4/9,    281.75, BA 144,   The Computer Depot, hardware, U.S. Robotics modem;
+1996/4/9,     40.00, BA 144,   The Computer Depot, software, Netscape Navigator Personal Edition 2.01;
+1996/5/16,    26.81, BA 2214,  Copies Plus, supplies, print cartridge;
+1996/11/18,  389.61, BA 2212,  Egghead Software, software, [LapLink, Norton, VirusScan, "Visual C++"];
+1996/12/18,   29.00, BA 2229,  ATT Visa, software, WinZip 6.2;
+
+#-----------------------------------------------------------------#
+
+1997/1-12,   240.00, [BA,WF],  The Computer Depot, ISP, $20/month;
+1997/1/7,     35.00, BA 2252,  ATT Visa, books, The Icon Programming Language;
+1997/1/19,    20.00, BA 2253,  First Card, software, Lemmy;
+1997/2/19,    26.81, BA 2269,  Pine Grove Computers, supplies, print cartridge;
+1997/2/19,   381.07, BA 2270,  First Card, software, MKS Toolkit 5.2;
+1997/3/11,    49.34, BA 2280,  Pioneer Printing, advertising, business cards;
+1997/5/12,    42.81, BA 2321,  Copies Plus, supplies, printer paper;
+1997/6/18,   211.00, BA 2339,  First Card, software, WISE 5.0;
+1997/7/19,    24.92, BA 2355,  First Card, books, Indexing Books;
+1997/7/21,   257.40, BA 2356,  The Computer Depot, hardware, 32MB RAM;
+1997/9/25,    98.67, WF,       USAA Visa, books, "proc. ICCS'97";
+1997/10/19,   78.31, BA 2377,  ATT Visa, books, by David Kelley;
+1997/10/20,   27.76, WF,       USAA Visa, books, "Intro. to Lattices";
+1997/12/29,   17.68, WF,       First Card, books, Ancestors;
+1997/12/29,  195.23, BA 2389,  ATT Visa, hardware, Iomega ZIP drive;
+1997/12/29,   79.97, BA 2389,  ATT Visa, software, PartitionMagic;
+1997/12/29,   26.81, cash,     Copies Plus, supplies, print cartridge;
+
+#-----------------------------------------------------------------#
+
+1998/1/8,     19.49, BA 2390,  Volcano Internet Provider, ISP, 1 mo.;
+1998/1/8,     26.81, cash,     Copies Plus, supplies, print cartridge;
+1998/1/22,    63.33, BA 2391,  First Card, books, by Keith Devlin;
+1998/1/22,    32.95, BA 2391,  First Card, books, UML;
+
+#-----------------------------------------------------------------#
+
+end relation r_expense;
+set echo=on;
+
+do usize od expense done;	# how many expenses ?
+do usize od category done;	# how many categories ?
+</XMP>
+</HTML>

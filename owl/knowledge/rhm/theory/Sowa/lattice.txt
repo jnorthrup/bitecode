@@ -1,0 +1,68 @@
+# KEHOME/knowledge/theory/Sowa/lattice.txt
+# Jan/23/2003
+
+#========================================#
+# book hierarchy search example		 #
+#   find all concepts named *lattice*	 #
+#   and display their ancestors		 #
+# excerpt from Knowledge Explorer output #
+#========================================#
+
+$ ke
+...
+<myview:.=existent> do read from kr.ho done;
+# command <do read from kr.ho done>
+...
+<myview:.=existent> topiclist := do find od *lattice* done;
+# production <topiclist := do find od *lattice* done>
+# command <do find od *lattice* done>
+*lattice*
+LATTICE
+lattice
+lattice of categories
+lattice operations
+navigating the lattice of theories
+...
+<myview:.=existent> every x in $topiclist {$x isa* ?;};
+# every <every x in $topiclist { $x isa* ? ; } ;>
+# question <*lattice* isa* ?>
+unit:*lattice*
+\  pattern
+\\    variable
+\\\      attribute
+\\\\        characteristic
+\\\\\          existent
+# question <LATTICE isa* ?>
+LATTICE
+\  group
+\\    OBJECT
+\\\      entity
+\\\\        existent
+# question <lattice isa* ?>
+lattice
+\  LATTICE
+\\    group
+\\\      OBJECT
+\\\\        entity
+\\\\\          existent
+# question <lattice of categories isa* ?>
+lattice of categories
+\  2.3. Top-Level Categories
+\\    2. Ontology
+\\\      unit:Knowledge Representation
+\\\\        book
+# question <lattice operations isa* ?>
+lattice operations
+\  2.5. Defining Abstractions
+\\    2. Ontology
+\\\      unit:Knowledge Representation
+\\\\        book
+# question <navigating the lattice of theories isa* ?>
+navigating the lattice of theories
+\  6.5. Theories , Models , and the World
+\\    6. Knowledge Soup
+\\\      unit:Knowledge Representation
+\\\\        book
+<myview:.=existent> exit;
+...
+$

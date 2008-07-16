@@ -1,0 +1,23 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/address.rel
+# Oct/5/2003 Mar/19/2007
+
+# automatic: 7 proposition/infon
+# meaning:   1 proposition/infon
+
+street,city,state,zip,country isa space;
+
+r_address is relation with
+    arraymode=gdbm,arraykey="$1",
+    label=[pid..., street, city, state, zip, country],
+    format=[person:1, street:2, city:3, state:4, zip:5, country:6],
+    automatic=ISU,
+    meaning={$1 has street=$2,city=$3,state=$4,zip=$5,country=$6;};
+
+begin relation r_address;
+[Dick McCullough 1936, Pauline Neal 1934], 26459 Parkwood Drive, Pioneer, CA, 95666-9586, USA;
+end relation r_address;
+
+do check od person done;  # number of persons
+
+# </xmp></html>

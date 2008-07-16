@@ -1,0 +1,117 @@
+<html><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/Person.html
+# Sep/14/2003
+</pre>
+<title> OpenCyc: Person isa ?; </title>
+<h1> OpenCyc: Person isa ?; </h1>
+
+<h3> Notes </h3>
+<ul>
+<li> "x isa y;" means "x iss y;" if x is a concept.
+<br> "x isa y;" means "x isu y;" if x is a unit.
+</li>
+<li> Person isa* ?;
+<br>	<a href="./mkePerson.html">MKE</a>
+<br>	<a href="../TAP/tapPerson.html">TAP</a>
+<br>	<a href="./cycPerson.html">OpenCyc</a>
+</li>
+<li> The OpenCyc KB contains a contradiction;
+<br> it considers Person to be both a unit
+<br>	Person isu Collection;
+<br> and a concept
+<br>	Person iss Individual;
+</li>
+</ul>
+<ul>
+<li> context:
+<br>	#$UniversalVocabularyMt </li>
+<li> subcontexts:
+<br>	to be supplied </li>
+<li> simplify lattice:
+<br>	see <a href="./Notes.Person.html"> The bottom line </a> </li>
+<li> list-generation functions:
+<br>	Person iss CollectionUnionFn (...); </li>
+</ul>
+
+
+<h2> Person iss ?;
+<br> (CycL #$genls) </h2>
+<pre>
+$ echo '#$Person iss ?x'| cycprint
+#$Agent
+#$Agent-Generic
+#$Animal
+#$BiologicalLivingObject
+#$CollectionUnionFn (#$TheSet #$Agent-Generic (#$GroupFn #$Agent-Generic))
+#$CollectionUnionFn (#$TheSet #$BiologicalLivingObject (#$GroupFn #$BiologicalLivingObject))
+#$CollectionUnionFn (#$TheSet #$InformationBearingThing #$Agent-Generic)
+#$CollectionUnionFn (#$TheSet #$Person (#$GroupFn #$Person))
+#$ComplexPhysicalObject
+#$CompositeTangibleAndIntangibleObject
+#$Individual
+#$IndividualAgent
+#$InformationStore
+#$IntelligentAgent
+#$LegalAgent
+#$NaturalTangibleStuff
+#$OrganicStuff
+#$Organism-Whole
+#$PartiallyIntangible
+#$PartiallyIntangibleIndividual
+#$PartiallyTangible
+#$PerceptualAgent
+#$Person
+#$SocialBeing
+#$SomethingExisting
+#$SpatialThing
+#$SpatialThing-Localized
+#$TemporalThing
+#$Thing
+#$TwoOrHigherDimensionalThing
+$
+</pre>
+<h2> Person isu ?;
+<br> (CycL #$isa) </h2>
+<pre>
+$ echo '#$Person isu ?x'| cycprint
+#$Collection
+#$ConventionalClassificationType
+#$CycLAtomicTerm
+#$CycLClosedAtomicTerm
+#$CycLClosedDenotationalTerm
+#$CycLClosedExpression
+#$CycLConstant
+#$CycLDenotationalTerm
+#$CycLExpression
+#$CycLIndexedTerm
+#$CycLReifiableDenotationalTerm
+#$CycLReifiedDenotationalTerm
+#$CycLRepresentedAtomicTerm
+#$CycLRepresentedTerm
+#$CycLTerm
+#$ELExpression
+#$ExistingObjectType
+#$FirstOrderCollection
+#$FixedOrderCollection
+#$HLExpression
+#$HLIndexedTerm
+#$HLReifiedDenotationalTerm
+#$Intangible
+#$MathematicalOrComputationalThing
+#$MathematicalThing
+#$ObjectType
+#$OrganismClassificationType
+#$PartiallyIntangible
+#$PublicConstant
+#$PublicConstant-CommentOK
+#$PublicConstant-DefinitionalGAFsOK
+#$SetOrCollection
+#$StuffType
+#$SubLExpression
+#$TemporalStuffType
+#$Thing
+$
+</pre>
+
+<a href="../../../../index.html">MKE home</a>
+</html>

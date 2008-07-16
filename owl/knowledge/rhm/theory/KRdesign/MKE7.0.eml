@@ -1,0 +1,67 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "KR-language" <KR-language@YahooGroups.com>
+Cc: "Apollo, Adrian" <thinkonaut@yahoo.com>,
+	"Latimer, Richard S." <rslatimer@comcast.net>,
+	"Jetton, Merlin" <merjet@comcast.net>
+Subject: MKE 7.0 new syntax: name[char]
+Date: Sun, 14 Aug 2005 13:10:09 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	format=flowed;
+	charset="iso-8859-1";
+	reply-type=original
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2180
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+Why the new syntax?  When I invented MKR in 1996,
+I decided NOT to allow name[char] because it is 
+not English-like.  I have three reasons for
+changing my mind.  First, it is a convenient 
+shorthand, and useful for working with lists.
+Second, I also want MKR to be UNIX-shell-like,
+and modern versions of the UNIX shell include
+associative arrays.  Third, I am willing to have
+some mathematics-like features in MKR.
+
+Here is a brief summary of the new features.
+These new forms
+
+Dick[sex] := male;
+x := Bob[sex];
+Dick[sex] := Bob[sex];
+
+are equivalent to these old forms
+
+Dick has sex=male;
+x := Bob has sex=?;
+x := Bob has sex=?; Dick has sex=$x;
+
+Here are a couple of examples using lists
+
+x isu list of number;
+y isu list of color;
+x isall 1,2,3,4,5;
+y isall red,blue,green;
+z := x[2];     # 2
+y[3] := $z;    # 2
+y[2] := x[-1]; # 5
+
+The last three statements are equivalent to
+
+z := do list member from x,2 done;
+do list member od $z to y,3 done;
+do list member from x,-1 to y,2 done;
+
+where "list member" is a method supplied
+as part of the MKE system.
+(See http://rhm.cdepot.net/kb/method.def)
+
+
+Dick McCullough
+knowledge := man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/

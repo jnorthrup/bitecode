@@ -1,0 +1,146 @@
+0 HEAD
+1 SOUR my Knowledge Explorer
+2 VERS 7.3
+2 CORP Richard H. McCullough, Knowledge Engineer
+1 DATE 19 Mar 2007
+2 TIME 15:21:46
+1 FILE family.ged
+1 GEDC
+2 VERS 5.5
+1 CHAR ANSEL
+1 SUBM @SUB1@
+0 @SUB1@ SUBM
+1 NAME Richard H. McCullough
+1 ADDR 26459 Parkwood Drive
+2 CONT Pioneer, CA 95666-9586
+1 PHON 209-295-1365
+1 _EMAIL rhm@PioneerCA.com
+0 @P1@ INDI
+1 NAME Robert Burns /McCullough/
+2 GIVN Robert Burns
+2 SURN McCullough
+2 NSFX 1938
+2 NICK []
+1 SEX M
+1 BIRT
+2 DATE 1938
+2 PLAC GA/Ft. Benning
+1 FAMC @F3@
+0 @P6@ INDI
+1 NAME Carl /Cates/
+2 GIVN Carl
+2 SURN Cates
+2 NSFX 1927
+2 NICK []
+1 SEX M
+1 BIRT
+2 DATE unknownTime
+2 PLAC unknownSpace
+1 FAMS @F1@
+0 @P2@ INDI
+1 NAME Richard Homer /McCullough/
+2 GIVN Richard Homer
+2 SURN McCullough
+2 NICK Dick
+2 _AKA Dr. Richard H. McCullough
+1 _EMAIL rhm@PioneerCA.com
+1 SEX M
+1 BIRT
+2 DATE 1936
+2 PLAC GA/Ft. Benning
+1 FAMC @F3@
+1 FAMS @F2@
+0 @P7@ INDI
+1 NAME Homer /McCullough/
+2 GIVN Homer
+2 SURN McCullough
+2 NSFX 1907
+2 NICK []
+1 SEX M
+1 BIRT
+2 DATE unknownTime
+2 PLAC unknownSpace
+1 FAMS @F3@
+0 @P3@ INDI
+1 NAME Jane /Doe/
+2 GIVN Jane
+2 SURN Doe
+2 NSFX 1933
+2 NICK []
+1 SEX F
+1 BIRT
+2 DATE 1933
+2 PLAC Kansas
+0 @P8@ INDI
+1 NAME Kay /Stecker/
+2 GIVN Kay
+2 SURN Stecker
+2 NSFX 1910
+2 NICK []
+2 _MARNM Kay Stecker McCullough
+1 SEX F
+1 BIRT
+2 DATE unknownTime
+2 PLAC unknownSpace
+1 FAMS @F3@
+0 @P4@ INDI
+1 NAME Althea Pauline /Neal/
+2 GIVN Althea Pauline
+2 SURN Neal
+2 NICK Pauline
+2 _AKA Paula Johnson
+2 _MARNM Pauline McCullough,Althea Neal McCullough,Althea Neal Cates,Pauline Johnson,Pauline Cates
+1 SEX F
+1 BIRT
+2 DATE 1934
+2 PLAC AR/Heber Springs
+1 DEAT
+2 DATE 17 Sep 1996
+2 PLAC CA/Pioneer
+2 CAUS liver disease
+1 FAMS @F2@
+1 FAMS @F1@
+0 @P5@ INDI
+1 NAME Steven Virgil /Cates/
+2 GIVN Steven Virgil
+2 SURN Cates
+2 NSFX 1955
+2 NICK []
+1 SEX M
+1 BIRT
+2 DATE 1955
+2 PLAC CA
+1 FAMC @F1@
+2 PEDI adopted
+0 @F1@ FAM
+1 DIV Y
+1 HUSB @P6@
+1 WIFE @P4@
+1 CHIL @P5@
+1 MARR
+2 DATE NV
+2 PLAC NV
+1 DIV
+2 DATE 1977
+2 PLAC NV
+0 @F2@ FAM
+1 HUSB @P2@
+1 WIFE @P4@
+1 MARR
+2 DATE Stateline NV
+2 PLAC NV/Stateline
+1 DIV
+2 DATE NA
+2 PLAC NA
+0 @F3@ FAM
+1 HUSB @P7@
+1 WIFE @P8@
+1 CHIL @P2@
+1 CHIL @P1@
+1 MARR
+2 DATE unknownTime
+2 PLAC unknownSpace
+1 DIV
+2 DATE NA
+2 PLAC NA
+0 TRLR

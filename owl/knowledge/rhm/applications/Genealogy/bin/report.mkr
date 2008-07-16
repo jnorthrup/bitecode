@@ -1,0 +1,68 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/report.mkr
+# 1999/7/22
+# new syntax Jun/26/2005
+
+# do report od name done
+report is method with
+	label=[name],
+	format=[person:1],
+	meaning={
+
+set . = $1;
+do print od "$1 is person with uniquename=$uniquename" done;
+do print od "$1 has" done;
+
+# alias.rel
+do print od "  prefername=$prefername, nickname=$nickname, othername=$othername," done;
+
+# birth.rel
+# adopt.rel
+# death.rel
+do print od "  sex=$sex, birthtype=$birthtype," done;
+do print od "  birthdate=$birthdate, birthplace=$birthplace," done;
+do print od "  deathdate=$deathdate, deathplace=$deathplace," done;
+every parent in $parent {
+  do print od "  parenttype=$parenttype, parent=$parent," done;
+};
+every child in $child {
+  do print od "  childtype=$childtype, child=$child," done;
+};
+
+# marriage.rel
+# divorce.rel
+every spouse in $spouse {
+  do print od "  spouse=$spouse, marriagedate=$marriagedate, marriageplace=$marriageplace," done;
+};
+every exspouse in $exspouse {
+  do print od "  exspouse=$exspouse, divorcedate=$divorcedate, divorceplace=$divorceplace," done;
+};
+
+# phone.rel
+# address.rel
+do print od "  email=$email, phone=$phone, fax=$fax," done;
+do print od "  street=$street, city=$city, state=$state, zip=$zip, country=$country," done;
+
+# work.rel
+every company in $company {
+  do print od "  company=$company, job=$job," done;
+  do print od "  location=$location, hiredate=$hiredate, retiredate=$retiredate," done;
+};
+
+# school.rel
+every school in $school {
+  do print od "  schooltype=$type, school=$school, degree=$degree," done;
+  do print od "  location=$location, graduationdate=$graduationdate," done;
+};
+
+# note.rel
+every note in $note {
+  do print od "  location=$location, time=$time, verbphrase=$verbphrase" done;
+};
+
+# end of statement
+do print od ";" done;
+
+}; # end meaning
+
+# </xmp></html>

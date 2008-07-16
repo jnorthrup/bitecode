@@ -1,0 +1,20 @@
+# 7:30 pm 9/28/97
+# Davey & Priestley page 221
+
+#===========================#
+# formal context (KE input) #
+#===========================#
+at view = tabula_rasa  at view = v_planet
+
+planet isa object
+planet ise Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune,Pluto
+
+Mercury has size=small, distance=near, moon=NO
+Venus   has size=small, distance=near, moon=NO
+Earth   has size=small, distance=near, moon=YES
+Mars    has size=small, distance=near, moon=YES
+Jupiter has size=large, distance=far,  moon=YES
+Saturn  has size=large, distance=far,  moon=YES
+Uranus  has size=medium,distance=far,  moon=YES
+Neptune has size=medium,distance=far,  moon=YES
+Pluto   has size=small, distance=far,  moon=YES

@@ -1,0 +1,61 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "Hans Teijgeler" <hans.teijgeler@quicknet.nl>
+Cc: "OWL at W3C" <www-rdf-logic@w3.org>,
+	"semantic-web at W3C" <semantic-web@w3c.org>,
+	"KR-language" <KR-language@YahooGroups.com>
+Subject:  OWL genus-differentia definitions
+Date: Thu, 13 Oct 2005 15:28:34 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	format=flowed;
+	charset="iso-8859-1";
+	reply-type=original
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2670
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2670
+
+I did my homework -- read up on OWL Restrictions. and
+figured out how to do OWL genus-differentia definitions.
+Here are the genus-differentia definitions of your two
+ISO classes.
+
+# MKR
+AbstractObject is Entity with no space, no time;
+PossibleIndividual is Entity with space, time;
+
+# OWL
+<owl:Class rdf:id = "AbstractObject">
+    <rdfs:subClassOf rdfs:resource = "#Entity">
+    <rdfs:subClassOf><owl:Restriction>
+        <owl:onProperty rdf:resource = "#space"/>
+        <owl:cardinality 
+rdf:datatype="&xsd;nonNegativeInteger">0<owl:cardinality>
+    </owl:Restriction></rdfs:subClassOf>
+   <rdfs:subClassOf><owl:Restriction>
+        <owl:onProperty rdf:resource = "#time"/>
+        <owl:cardinality 
+rdf:datatype="&xsd;nonNegativeInteger">0<owl:cardinality>
+    </owl:Restriction></rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:id = "PossibleIndividual">
+    <rdfs:subClassOf rdfs:resource = "#Entity">
+    <rdfs:subClassOf><owl:Restriction>
+        <owl:onProperty rdf:resource = "#space"/>
+        <owl:minCardinality 
+rdf:datatype="&xsd;nonNegativeInteger">1<owl:minCardinality>
+    </owl:Restriction></rdfs:subClassOf>
+   <rdfs:subClassOf><owl:Restriction>
+        <owl:onProperty rdf:resource = "#time"/>
+        <owl:minCardinality 
+rdf:datatype="&xsd;nonNegativeInteger">1<owl:minCardinality>
+    </owl:Restriction></rdfs:subClassOf>
+</owl:Class>
+
+
+Dick McCullough
+knowledge := man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/ 

@@ -1,0 +1,10 @@
+begin relation r_surname;
+McCullough, Bob McCullough 1938, [];
+Cates, Carl Cates 1927, [];
+McCullough, Dick McCullough 1936, Dick McCullough;
+McCullough, Homer McCullough 1907, [];
+Doe, Jane Doe 1933, [];
+Stecker, Kay Stecker 1910, [];
+Neal, Pauline Neal 1934, Pauline McCullough;
+Cates, Steven Cates 1955, [];
+end relation r_surname;

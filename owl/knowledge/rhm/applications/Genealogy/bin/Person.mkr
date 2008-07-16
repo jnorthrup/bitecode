@@ -1,0 +1,93 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/Person.mkr
+# Aug/29/2005
+
+# Execution time
+# 2 GHz Pentium 4, Windows XP, MKE 7.0, GDBM
+# Aug/27/2205
+# 0:53 min:sec  for    8 persons,   3 families
+# Aug/29/2205
+# 4:13 min:sec for 1170 persons, 391 families
+
+# create GDBM "summary" tables
+#	Person  # all persons
+#	Family  # all families
+# NOTE:
+# In the "ideal" case, all persons would appear in r_aka,
+# and all families would appear in r_marriage.
+# But in the "real" world, as the relations in the KB
+# are edited over time, there are some "missing"
+# persons and families.  This MKR script finds all
+# the "missing" persons and families.
+# NOTE:
+# r_marriage has been redefined, so that it can
+# include all the information from r_divorce.
+# However, as the KB is edited over time, it may not
+# include all the information from r_divorce.
+# Likewise, r_birth may (or may not) include all the
+# information from r_death.
+
+
+##do read from family.env done;  # set db/view directory and kbmode
+do read from family.ku done;
+
+every p isu person; {
+	do print od $p to Person.dump done;
+};
+every f isu family; {
+	do print od $f to Family.dump done;
+};
+exit;
+
+#========================================================#
+#========================================================#
+#========================================================#
+
+PersonRelation isall  # arraykey="$1"
+	r_aka,
+	r_birth, r_death,
+	r_address, r_phone,
+	r_school, r_work,
+	r_note;
+FamilyRelation isall  # arraykey="$1_$2"
+	r_marriage, r_divorce,
+	r_child;
+
+Person, Family has arraymode = gdbm;
+
+every r ismem PersonRelation {
+	$r has arraymode = gdbm;
+	every p in $r {
+		# $p may be a list for r_address,r_phone
+		every q in $p {
+			Person[$q] +:= 1;
+		};
+	};
+};
+every r ismem FamilyRelation {
+	$r has arraymode = gdbm;
+	every f_m in $r {
+		Family[$f_m] +:= 1;
+		tuple  := $r[$f_m];
+		father := tuple[1]; Person[$father] +:= 1;
+		mother := tuple[2]; Person[$mother] +:= 1;
+		do print od "##### father=$father, mother=$mother #####" done;
+		if $r is r_child; then
+		n := do size od tuple done;
+		do print od $n done;
+		every i from 3 to $n {
+			child := tuple[$i]; Person[$child] +:= 1;
+			do print od "##### child=$child #####" done;
+		};
+		fi;
+	};
+};
+
+do size/gdbm od Person, Family done;
+do dump/gdbm od Person to Person.dump done;
+! sort with -o Person.dump od Person.dump done;
+do dump/gdbm od Family to Family.dump done;
+! sort with -o Family.dump od Family.dump done;
+
+exit;
+# </xmp></html>

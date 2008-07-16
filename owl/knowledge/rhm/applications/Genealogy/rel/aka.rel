@@ -1,0 +1,39 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/aka.rel
+# Oct/5/2003 Mar/19/2007
+
+# automatic: 7 proposition/infon
+# meaning:   3 proposition/infon
+
+birthname,marriedname isa name;  # official names
+nickname,prefername,othername isa name;
+
+r_aka is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, birthname, prefername, nickname, marriedname..., othername...],
+    format=[person:1, name:2, name:3, name:4, name:5, name:6],
+    automatic=ISU,
+    meaningtype=procedure,
+    meaning=procedure_aka;
+#    meaning={
+#	$1 isu person with pid=$1;
+#	$1 has birthname=$2, prefername=$3, nickname=$4;
+#	$1 has marriedname +=$5, othername +=$6;
+#	};
+
+#set debug=relation;
+#set debug=token;
+#set debug=symbol;
+
+begin relation r_aka;
+Dick McCullough 1936, Richard Homer McCullough, Dick McCullough, Dick, [], [Dr. Richard H. McCullough];
+Pauline Neal 1934, Althea Pauline Neal, Pauline McCullough, Pauline, [Pauline Cates,Pauline Johnson,Pauline McCullough], [Paula Johnson];
+end relation r_aka;
+
+do check od person done;  # number of persons
+
+#r_aka isc* ?;
+#person isc* ?;
+#name isc* ?;
+
+# </xmp></html>

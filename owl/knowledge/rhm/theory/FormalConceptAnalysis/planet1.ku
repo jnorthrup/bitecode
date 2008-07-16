@@ -1,0 +1,29 @@
+# 11:00 pm 9/27/97
+
+#====================================#
+# general context (edited KE output) #
+#====================================#
+
+at view=tabula_rasa
+
+# question <existent ise* ?>
+existent
+	entity
+		object
+	characteristic
+		attribute
+			living
+			non-living
+			non-space-time-dependent
+			primary
+			secondary
+			space-time-dependent
+		relationship
+			"concept isa genus; concept ise unit"
+				"relationship isa characteristic"
+			"concept is genus with differentia"
+				"entity is existent with primary"
+				"object is entity with non-living"
+				"characteristic is existent with secondary"
+				"attribute is characteristic with non-space-time-dependence"
+			"entity has attribute=value"

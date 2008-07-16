@@ -1,0 +1,461 @@
+# KEHOME/knowledge/application/Internet/icontext.ku
+# rhm Oct/16/2002
+
+#==================#
+# internet context #
+#==================#
+
+object isg
+	computer,
+	internet
+internet haspart
+	inetwork,
+	iresource
+computer haspart
+	hardware,
+	software
+iresource has
+	iknit		# see iresource.txt
+man do search, browse
+	with computer
+	od iresource
+    done
+
+inethi is begin hierarchy
+inetwork
+/   connection
+//	dial-up
+//	broadband
+///	    DSL
+///	    cable
+/   server
+//	domain
+///	    cdepot.net
+////		www.cdepot.net
+////		pumpkin.cdepot.net
+///	    volcano.net
+////		www.volcano.net
+////		ftp.volcano.net
+/   client
+//	rhm586
+//	rhm8200
+//	rhmlinux
+service
+/   http
+/   ftp
+/   mailto
+/   pop3
+end hierarchy inethi
+
+person has email address
+
+inetprim is begin primitive
+email address
+/   rhm@cdepot.net
+/   rhm@volcano.net
+end primitive inetprim
+
+#-------------------------------------#
+# man context
+
+EVENT isg
+	arts
+object isg
+	knowledge,
+	money
+ingroup isg
+	club,
+	company,
+	family,
+	friend,
+	government,
+	school,
+	society
+man ismem
+	club,
+	company,
+	family,
+	friend,
+	government,
+	school,
+	society
+man has
+	age,
+	health,
+	weight
+man do
+	play, work,
+	watch,
+	nurture,
+	buy, sell,
+	browse, search, chat,
+	teach
+    done
+play iss action with fun
+work iss action with money
+shop iss browse with buy
+
+society has culture
+
+man do play
+	od game, sport
+	at clubhouse
+    done
+man do watch
+	od EVENT
+    done
+man do work
+	at office
+    done
+man do chat
+	with computer
+	od friend
+    done
+
+family do live
+	at home
+    done
+family do nurture
+	od man
+    done
+man do own, rent
+	od home
+    done
+company do own, rent
+	od office
+    done
+
+company has
+	product,
+	service
+company do sell
+	od product, service
+    done
+man do buy
+	od product, service
+    done
+
+government do protect, tax
+	od man
+    done
+
+#-------------------------------------#
+# classification characteristics:
+#   space,time
+#   play,work,watch
+#   buy,sell
+#   browse,search,chat
+#   company,school,government
+#   product,service
+
+iclass isall
+	space,
+	time,
+	object,
+	person,
+	ingroup,
+	attribute,
+	action,
+	EVENT
+
+iclasshi is begin hierarchy
+   space
+/	home
+/	office
+/	clubhouse
+/	schoolhouse
+/	library
+
+/	local
+/	city
+/	county
+/	state
+/	country
+/	continent
+/	world
+   object
+/	internet
+/	computer
+/	knowledge
+//	    news
+//	    reference
+//	    science
+/	money
+//	    stocks
+//	    bonds
+//	    real estate
+   part
+/	inetwork
+/	iresource
+/	hardware
+/	software
+   ingroup
+/	family
+/	friend
+/	club
+/	church
+/	school
+/	company
+/	government
+/	society
+   attribute
+/	age
+/	sex
+/	single
+/	author
+/	keyword
+/	language
+/	title
+   action
+/	buy
+/	sell
+/	play
+//	    play/game
+//	    play/sport
+/	work
+/	watch
+//	    watch/arts
+/	travel
+/	search
+/	browse
+//	    shop
+/	chat
+   EVENT  # interaction
+/	arts
+/	auction
+/	election
+end hierarchy iclasshi
+
+auction    iss EVENT     with buy, sell
+news       iss knowledge with EVENT, time=current
+technology iss science   with product, service
+
+# NOTE: iclass units become idirectory species
+iclassprim is begin primitive
+   time
+/	ALL
+/	current
+/	today
+/	yesterday
+/	this week
+   company
+#/	Apple
+#/	McAfee
+#/	Microsoft
+#/	Norton
+#/	RedHat
+   continent
+#/	Asia
+#/	Europe
+#/	North America
+   person
+/	Bill Gates
+/	Linus Torvalds
+/	Dick McCullough
+   sport
+#/	baseball
+#/	basketball
+#/	football
+#/	soccer
+#/	tennis
+end primitive iclassprim
+
+
+#-------------------------------------#
+# some iresource categories
+# from Excite, Google, InfoSeek, Yahoo
+# includes most level 1 & major level 2 categories
+
+# iclass aliases
+entertainment is arts
+finance       is money
+regional      is continent
+
+idirectory isu lattice of iresource
+
+# small clear categories
+iclear isall
+	arts,
+	company,
+	computer,
+	game,
+	language,  # Google world
+	regional,
+	school,  # education
+	software,
+	sport
+
+# large fuzzy cateogories
+ifuzzy isall
+	business,
+	finance,
+	health category,
+	home category,
+	internet,
+	kids and teens category,
+	knowledge,
+	news,
+	recreation,
+	shopping,
+	society,
+	travel
+
+
+idirhi is begin lattice
+   arts
+/	movies
+/	music
+/	television
+/	theater
+   business
+/	careers
+#/	finance
+/	industries
+/	jobs
+   company
+/	Apple
+/	McAfee
+/	Microsoft
+/	Norton
+/	RedHat
+   computer
+   hardware
+   software
+   school  # education
+#//	careers
+/	teaching
+/	pre school
+/	grade school
+/	high school
+/	college
+   game
+/	board game
+/	crossword
+/	roleplaying
+/	video game
+   health category
+/	alternative medicine
+/	diet
+/	disease
+/	exercise
+/	fitness
+/	food
+/	medicine
+   home category
+/	consumer information
+/	homeowners
+/	children
+/	parenting
+   internet
+#/	auction
+#/	chat
+#/	idirectory  # infinite loop
+/	email
+/	intranet
+/	web publishing
+   kids and teens category
+#/	computer
+#/	entertainment
+/	school time
+   knowledge
+/	reference
+/	science
+/	news
+   language  # Google world
+/	Dutch
+/	English
+/	French
+/	German
+/	Italian
+/	Japanese
+/	Korean
+/	Polish
+/	Spanish
+/	Swedish
+   recreation
+/	dining
+/	hobby
+/	outdoors
+/	vacation
+   reference
+/	city guide
+/	directions
+#//	education
+/	horoscope
+/	libraries
+/	maps
+/	white pages
+/	yellow pages
+   regional
+/	Asia
+/	Europe
+/	North America
+   shopping
+/	boats
+/	books
+/	cars,  # autos
+/	classified
+/	clothing
+/	gifts
+/	music CDs
+   society
+/	communities
+#/	culture
+/	issues
+/	lifestyle
+/	people
+/	religion and spirituality
+   software
+/	anti-virus
+/	browser
+/	firewall
+/	operating system
+   sport
+/	baseball
+/	basketball
+/	football
+/	soccer
+/	tennis
+   travel
+/	airline
+/	hotel
+/	motel
+/	rental car
+/	reservation
+
+   finance
+/	banking
+/	economy
+/	investing
+/	mortgage
+/	mutual funds
+/	real estate
+/	stock quotes
+/	taxes
+   food
+/	beer
+/	wine
+   news
+/	business
+/	current events
+/	international
+/	media
+/	newspapers
+#/	technology
+/	weather
+   operating system
+/	Linux
+/	Mac
+/	UNIX
+/	Windows
+   science
+/	biology
+/	social science
+//          psychology
+/	physics
+end lattice idirhi
+
+idirprim is begin primitive
+end primitive idirprim
+
+#-------------------------------------#

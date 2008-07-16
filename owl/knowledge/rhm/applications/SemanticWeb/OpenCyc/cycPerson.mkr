@@ -1,0 +1,26 @@
+#<html><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/cycPerson.mkr
+# Sep/14/2003
+
+# 1. get Cyc hierarchy: #$Person isa* ?;
+#    cache in MKE as we go
+# 2. switch to MKE
+#    run consistency checks
+# 3. simplify #$Thing lattice
+#    rerun consistency checks
+# 4. redo MKE hierarchy: #$Person isa* ?
+
+set echo=off, kbmode=cyc;
+#$Person iss* ?;
+
+set kbmode=mke, CommentMode=cyc;
+do check od knit done;
+
+do simplify lattice od #$Thing done;
+do check od knit done;
+
+#$Person iss* ?;
+
+exit;
+
+#</pre></html>

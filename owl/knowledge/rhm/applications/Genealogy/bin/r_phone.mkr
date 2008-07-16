@@ -1,0 +1,30 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/r_phone.mkr
+# Mar/8/2007
+
+
+#==========================#
+# print GDBM r_phone table #
+#==========================#
+# input  GDBM r_phone (C:/cygwin/home/family/db/test/r_phone)
+# output MKR  r_phone.txt
+
+outfile := ../report/r_phone.txt;
+
+do read from ../bin/family.env done;  # set kbmode,kedb,view
+r_phone has arraymode = gdbm;	# GDBM r_phone
+
+! rm -f $outfile done;
+do size/gdbm od r_phone done;
+every p in r_phone; {
+    every q in $p; {
+	name  := r_aka[$q][5];
+	tuple := r_phone[$q];
+	do print od "$name: $tuple" to $outfile done;
+    };
+};
+
+! sort -u -o $outfile $outfile done;
+
+exit;
+# </xmp></html>

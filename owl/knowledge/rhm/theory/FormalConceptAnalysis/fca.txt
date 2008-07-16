@@ -1,0 +1,59 @@
+# KEHOME/knowledge/TheoryFormalConceptAnalysis/fca.txt
+# 9:30 am 1998/1/26
+# new systax Sep/29/2002
+
+#================================#
+# KR vs. Formal Concept Analysis #
+#================================#
+
+# Reference:
+# "Formal Concept Analysis", Chapter 11 of
+# B.A. Davey and H.A. Priestley,
+# "Introduction to Lattices and Order",
+# Cambridge University Press, 1990
+
+1. isomorphic context
+=====================
+For the simplest case, the contexts are isomorphic.
+FCA
+  A context, x, is a triple (object,attribute,relation)
+  where
+  object is a set {g, ...}
+  attribute is a set {m, ...}
+  relation is a map {g has m, ...}
+KR
+  # context x is a concept-hierarchy
+  at view=x
+  existent  isc object,attribute,relation #concept
+  object    isc g, ...                    #concept
+  attribute isc m, ...                    #concept
+  relation  isc "g has m", ...            #concept
+
+2. new concepts
+===============
+FCA
+  Match attributes
+  to determine lattice of all possible concepts.
+KR
+  Match attributes (integrate/differentiate)
+  to determine new hierarchy.
+  This new hierarchy is a new context.
+
+3. algebraic variables
+======================
+FCA
+  ?
+KR
+  Concepts may be viewed as simple algebraic variables
+  in the usual sense.  For example, given
+    Dutchess, Reno isu dog
+    Dutchess has color=black; Dutchess do bark done
+    Reno has color=white; Reno do bark done
+  then the statements
+    dog has color
+    dog do bark done
+  are both meaningful.  The meaning is obtained
+  by substituting
+    dog -> Dutchess
+  or
+    dog -> Reno

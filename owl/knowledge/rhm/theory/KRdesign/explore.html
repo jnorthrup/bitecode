@@ -1,0 +1,49 @@
+<HTML>
+# KEHOME/knowledge/theory/KRdesign/explore.html <br>
+# May/13/2003 <br>
+
+<H2> Exploring a concept-hierarchy </H2>
+<H3>
+<XMP>
+
+# 1. find a concept
+#------------------#
+    do find od *name* done;    # search by name ("*" wildcard)
+    ? has attribute;           # search by attribute
+    ? do action done;          # search by action
+    ? isin relation;           # search by relation
+
+# 2. change concept
+#------------------#
+    set . = $Question;         # set "." to the concept found
+
+# 3. explore details
+#-------------------#
+    $. is ?;                   # definition
+    $. has ?;                  # attributes (intension)
+    $. do ? done;              # actions
+    $. isa* ?;                 # wider concepts
+    $. isc* ?;                 # referents (extension)
+
+    set ..  = next;            # step through genus of concept
+    set ... = next;            # step through species|unit of concept
+
+    $. isa**1 ?; $Question isc**1 ?;    # siblings
+    $. isa**2 ?; $Question isc**2 ?;    # cousins
+
+# 4. calculate attribute
+#-----------------------#
+    # new attribute (conceptual scaling)
+    do measure od $. with newattr done; 
+
+# 5. differentiate concept
+#-------------------------#
+    # new concept-hierarchy (concept-formation)
+    do differentiate od $. with newattr done;
+
+</XMP>
+<BR>
+<BR>
+<A HREF="../../../doc/ref.html"> General References </A> <BR>
+</H3>
+</HTML>

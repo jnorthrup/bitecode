@@ -1,0 +1,11 @@
+# 9:20 pm 5/12/97
+# new syntax Jul/24/2005
+
+# hate context
+at view=v_schank;
+at view=v_hate;
+
+action isc hate,hit;
+
+beat   isa hit;
+sock   isa hit;

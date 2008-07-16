@@ -1,0 +1,125 @@
+# <HTML> <XMP>
+# KEHOME/knowledge/google/Directory.ho
+# May/2/2003
+directory is hierarchy;
+
+# Note: 2nd level topics are a popular subset of all 2nd level topics
+
+<rdf:RDF
+    xmlns:google = "http://directory.google.com/"
+    xmlns:dmoz   = "http://dmoz.org/"
+>
+
+##begin directory dmoz;
+begin hierarchy dmoz;
+Top;
+
+/ Arts;
+// Movies;
+// Music;
+// Television;
+// ...;
+
+/ Business;
+// Industries;
+// Finance;
+// Jobs;
+// ...;
+
+/ Computers;
+// Hardware;
+// Internet;
+// Software;
+// ...;
+
+/ Games;
+// Board;
+// Roleplaying;
+// Video;
+// ...;
+
+/ Health;
+// Alternative;
+// Fitness;
+// Medicine;
+// ...;
+
+/ Home;
+// Consumers;
+// Homeowners;
+// Family;
+// ...;
+
+/ Kids and Teens;
+// Computers;
+// Entertainment;
+// School;
+// ...;
+
+/ News;
+// Media;
+// Newspapers;
+// Current Events;
+// ...;
+
+/ Recreation;
+// Food;
+// Outdoors;
+// Travel;
+// ...;
+
+/ Reference;
+// Education;
+// Libraries;
+// Maps;
+// ...;
+
+/ Regional;
+// Asia;
+// Europe;
+// North America;
+// ...;
+
+/ Science;
+// Biology;
+// Psychology;
+// Physics;
+// ...;
+
+/ Shopping;
+// Autos;
+// Clothing;
+// Gifts;
+// ...;
+
+/ Society;
+// Issues;
+// People;
+// Religion;
+// ...;
+
+/ Sports;
+// Basketball;
+// Football;
+// Soccer;
+// ...;
+
+
+/ World;
+// Deutsch;
+// Español;
+// Français;
+// Italiano;
+// Japanese;
+// Korean;
+// Nederlands;
+// Polska;
+// Svenska;
+// ...;
+
+end hierarchy dmoz;
+##end directory dmoz;
+
+</rdf:RDF>
+
+# </XMP> </HTML>

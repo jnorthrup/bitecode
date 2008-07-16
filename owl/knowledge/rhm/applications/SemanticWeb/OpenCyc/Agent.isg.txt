@@ -1,0 +1,70 @@
+ke$ #$Agent isg* ?;
+#$Agent
+/  #$Animal
+//    #$CollectionDifferenceFn #$Animal #$Person
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JuvenileFn #$Person
+//    #$Person
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+/  #$CollectionDifferenceFn #$Animal #$Person
+/  #$CollectionUnionFn (#$TheSet #$Athlete #$SportsOrganization
+/  #$CollectionUnionFn (#$TheSet #$EntertainmentOrRecreationOrganization #$Enter
+tainer
+/  #$FemaleFn #$Person
+/  #$HumanAdult
+/  #$JudicialAgent
+/  #$JuvenileFn #$Person
+/  #$LegalAgent
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JuvenileFn #$Person
+//    #$Person
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+/  #$PerceptualAgent
+//    #$Animal
+///      #$CollectionDifferenceFn #$Animal #$Person
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+///      #$Person
+////        #$FemaleFn #$Person
+////        #$HumanAdult
+////        #$JuvenileFn #$Person
+//    #$CollectionDifferenceFn #$Animal #$Person
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JuvenileFn #$Person
+//    #$Person
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+/  #$Person
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JuvenileFn #$Person
+/  #$SocialBeing
+//    #$CollectionUnionFn (#$TheSet #$Athlete #$SportsOrganization
+//    #$CollectionUnionFn (#$TheSet #$EntertainmentOrRecreationOrganization #$En
+tertainer
+//    #$FemaleFn #$Person
+//    #$HumanAdult
+//    #$JudicialAgent
+//    #$JuvenileFn #$Person
+//    #$LegalAgent
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+///      #$Person
+////        #$FemaleFn #$Person
+////        #$HumanAdult
+////        #$JuvenileFn #$Person
+//    #$Person
+///      #$FemaleFn #$Person
+///      #$HumanAdult
+///      #$JuvenileFn #$Person
+ke$

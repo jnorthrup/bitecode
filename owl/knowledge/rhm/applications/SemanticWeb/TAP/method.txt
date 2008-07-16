@@ -1,0 +1,82 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/method.txt
+# Dec/30/2002
+
+
+#================#
+# namespaces.txt #
+#================#
+tap	http://tap.stanford.edu/data/
+dc	http://purl.org/dc/elements/1.1/
+rdf	http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs	http://www.w3.org/2000/01/rdf-schema#
+
+
+#======#
+# perl #
+#======#
+
+# GetData
+#========#
+# ex1a.pl
+use TAP::Client;
+TAP::Abbrev::LoadNamespaces("namespaces.txt");
+my $tap = new TAP::Client(server);
+my $answer = $tap->GetData(resource,property,direction,...);
+print $answer->value."\n";
+
+# GetResourcesNamed
+#==================#
+# ex5.pl
+use TAP::Client;
+TAP::Abbrev::LoadNamespaces("namespaces.txt");
+my $tap = new TAP::Client(server);
+my $answer = $tap->GetResourcesNamed(text,resource)
+print $answer->value."\n";
+
+
+#======#
+# java #
+#======#
+
+# GetData
+#========#
+import edu.stanford.TAP.Abbrev;
+import edu.stanford.TAP.Client;
+import edu.stanford.TAP.Resource;
+
+public class ex1a
+{
+    public static void main(String argv[])
+    {
+	Client tap = new Client(server);
+	Resource answer = tap.GetData(resource,property);
+	System.out.println(answer.value);
+    }
+}
+
+# GetResourcesNamed
+#==================#
+import edu.stanford.TAP.Abbrev;
+import edu.stanford.TAP.Client;
+import edu.stanford.TAP.Resource;
+
+public class ex5
+{
+    public static void main(String argv[])
+    {
+	Abbrev.LoadNamespaces("namespaces.txt");
+	Client tap = new Client(server);
+	Resource res = new Resource(resource);
+	Resource answer = tap.GetResourcesNamed(text,res);
+
+	for(int n = 0; n < answer.count(); ++n) {
+	    System.out.println(n + ") " + answer.item(n).value);
+	}
+	// This should print out http://tap.stanford.edu/tap/CityParis,_France 
+	// and http://tap.stanford.edu/tap/CityParisTX
+    }
+}
+</XMP>
+</HTML>

@@ -1,0 +1,58 @@
+# 1999/3/24
+
+#=================================#
+# the genus of genus is attribute #
+#=================================#
+
+The purpose of this note (KEHOME/define/genus.txt)
+is to discuss the definition of genus,
+in order to illustrate
+	my "changes" to Ayn Rand's definition
+	the use of KR
+
+1. the KR language
+KR is a highly structured, English-like language.
+The purpose of KR is provide a thinking tool that
+represents knowledge in computer-processable form.
+
+2. genus-differentia definitions
+KR expresses a genus-differential definition as
+	C is G with D
+where
+C is the concept being defined
+G is the genus of the concept - the wider concept that is
+	one level higher in the entity-relation hierarchy
+	of the context
+D is the differentia of the concept - the characteristics
+	which distinguish C from other concepts with the
+	same genus G
+
+The most basic characteristics are attribute and action.
+
+3. Ayn Rand's definition of genus
+genus is the wider class of existents
+which share a conceptual common denominator(s)
+with the existents subsumed by the concept being defined.
+
+Using the quote mark for grouping, the literal KR
+translation is
+	genus is "the wider class of existents" with
+	"share a conceptual common denominator(s) with the \
+	existents subsumed by the concept being defined"
+
+4. my definition of genus
+"the wider class of existents" actually describes the value
+of the genus of genus.  The genus of a concept is an attribute
+of a concept.  A more correct definition is
+	genus is attribute with
+	"the wider class of existents which share a conceptual \
+	common denominator(s) with the existents subsumed by the \
+	concept being defined"
+
+5. more convenient form
+The correct definition, given in 4, is very awkward because of
+the "extra" level of attribute.  That problem can be avoided
+by simply acknowledging the extra level as follows:
+	genus/value is "the wider class of existents" with
+	"share a conceptual common denominator(s) with the \
+	existents subsumed by the concept being defined"

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<RDF xmlns:r="http://www.w3.org/TR/RDF/"
+     xmlns:d="http://purl.org/dc/elements/1.0/"  
+     xmlns="http://dmoz.org/rdf">
+
+<!-- Generated at 2003-03-31 22:33:13 GMT on  -->
+
+<Topic r:id="Top">
+  <catid>1</catid>
+  <d:Title>Top</d:Title>
+  <lastUpdate>2003-03-20 23:29:31</lastUpdate>
+  <narrow r:resource="Top/Adult"/>
+  <narrow r:resource="Top/Arts"/>
+  <narrow r:resource="Top/Business"/>
+  <narrow r:resource="Top/Computers"/>
+  <narrow r:resource="Top/Games"/>
+  <narrow r:resource="Top/Health"/>
+  <narrow r:resource="Top/Home"/>
+  <narrow r:resource="Top/News"/>
+  <narrow r:resource="Top/Recreation"/>
+  <narrow r:resource="Top/Reference"/>
+  <narrow r:resource="Top/Regional"/>
+  <narrow r:resource="Top/Science"/>
+  <narrow r:resource="Top/Shopping"/>
+  <narrow r:resource="Top/Society"/>
+  <narrow r:resource="Top/Sports"/>
+  <narrow r:resource="Top/Test"/>
+  <narrow r:resource="Top/World"/>
+  <narrow r:resource="Top/Private"/>
+  <narrow r:resource="Top/Kids_and_Teens"/>
+  <narrow r:resource="Top/Bookmarks"/>
+  <narrow r:resource="Top/Netscape"/>
+  <narrow r:resource="Top/UTF8"/>
+  <editor r:resource="djerladina"/>
+</Topic>
+
+<Topic r:id="Top/Adult">
+  <catid>17</catid>
+  <d:Title>Adult</d:Title>
+#####  <d:Description>The Adult category lists adult-oriented web sites. Included here are primarily sites with explicit sexual content. Please refer to the &lt;A HREF=&quot;http://dmoz.org/guidelines/adult/adultguidelines.html&quot;&gt;&lt;b&gt; Adult Guidelines&lt;/b&gt;&lt;/A&gt; for more specific information.
+#####
+#####                          This area can only be found if you search for an &quot;adult&quot; term.
+#####
+#####       &lt;!-- Do not submit sites into the top level Adult/ category as it is too general; your submission will be deleted on sight if you do this. --&gt;
+#####
+#####                      Please look through the categories to find where your site would best be placed. 
+#####
+#####               &lt;I&gt;The editors reserve the right not to list your site, and to delete it after its addition. Multiple submissions, especially to inappropriate categories, will not be tolerated.&lt;/I&gt;  </d:Description>
+  <lastUpdate>2003-03-10 11:48:06</lastUpdate>
+  <narrow r:resource="Top/Adult/Business"/>
+  <narrow r:resource="Top/Adult/Arts"/>
+  <narrow r:resource="Top/Adult/Shopping"/>
+  <narrow r:resource="Top/Adult/Games"/>
+  <narrow r:resource="Top/Adult/Regional"/>
+  <narrow r:resource="Top/Adult/News"/>
+  <narrow r:resource="Top/Adult/World"/>
+  <narrow r:resource="Top/Adult/Society"/>
+  <narrow r:resource="Top/Adult/Recreation"/>
+  <narrow r:resource="Top/Adult/Image_Galleries"/>
+  <narrow r:resource="Top/Adult/Computers"/>
+  <symbolic r:resource="Sexuality:Top/Adult/Society/Sexuality"/>
+  <symbolic r:resource="Internet:Top/Adult/Computers/Internet"/>
+  <symbolic r:resource="Movies:Top/Adult/Image_Galleries/Movies"/>
+  <editor r:resource="ettore"/>
+  <editor r:resource="freenetpassdave"/>
+  <editor r:resource="ffabris"/>
+  <editor r:resource="gigi"/>
+  <editor r:resource="hotpink"/>
+  <editor r:resource="hudson"/>
+  <editor r:resource="jezebel"/>
+  <editor r:resource="peterrobson"/>
+  <editor r:resource="pepe"/>
+  <editor r:resource="seepatrick"/>
+  <editor r:resource="susies"/>
+  <editor r:resource="wilky"/>
+  <newsGroup r:resource="news:soc.sexuality.general"/>
+</Topic>
+
+<Alias r:id="Sexuality:Top/Adult/Society/Sexuality">
+  <d:Title>Sexuality</d:Title>
+  <Target r:resource="Top/Adult/Society/Sexuality"/>
+</Alias>
+
+<Alias r:id="Internet:Top/Adult/Computers/Internet">
+  <d:Title>Internet</d:Title>
+  <Target r:resource="Top/Adult/Computers/Internet"/>
+</Alias>
+
+<Alias r:id="Movies:Top/Adult/Image_Galleries/Movies">
+  <d:Title>Movies</d:Title>
+  <Target r:resource="Top/Adult/Image_Galleries/Movies"/>
+</Alias>
+
+##### snip
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука">
+  <catid>861850</catid>
+  <d:Title>Наука</d:Title>
+  <d:Description>Сайты этой категории относятся к отраслям знаний, изучаемым в средней школе. Они помогают учащимся в выполнении домашних работ, а так же знакомят школьников с интересными научными явлениями.  </d:Description>
+  <lastUpdate>2003-03-17 10:54:29</lastUpdate>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Химия"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Литература"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Русский_язык"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Астрономия"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/История"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Математика"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Биология"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Физика"/>
+  <narrow r:resource="Top/Kids_and_Teens/International/Russian/Школа/Наука/Риторика"/>
+  <altlang r:resource="Английский:Top/Kids_and_Teens/School_Time/Science"/>
+  <altlang r:resource="Французский:Top/Kids_and_Teens/International/Français/Scolaire/Sciences"/>
+  <altlang r:resource="Испанский:Top/Kids_and_Teens/International/Español/Actividades_escolares/Ciencia_y_tecnología"/>
+  <altlang r:resource="Итальянский:Top/Kids_and_Teens/International/Italiano/Età_Scolare/Scienze"/>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Химия">
+  <catid>861851</catid>
+  <d:Title>Химия</d:Title>
+  <lastUpdate>2003-03-12 08:11:10</lastUpdate>
+  <altlang r:resource="Английский:Top/Kids_and_Teens/School_Time/Science/Chemistry"/>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Литература">
+  <catid>886255</catid>
+  <d:Title>Литература</d:Title>
+  <lastUpdate>2003-03-07 05:16:58</lastUpdate>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Русский_язык">
+  <catid>889799</catid>
+  <d:Title>Русский_язык</d:Title>
+  <lastUpdate>2003-02-05 01:25:48</lastUpdate>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Астрономия">
+  <catid>910296</catid>
+  <d:Title>Астрономия</d:Title>
+  <lastUpdate>2002-12-27 15:03:45</lastUpdate>
+  <altlang r:resource="Английский:Top/Kids_and_Teens/School_Time/Science/Astronomy_and_Space"/>
+  <altlang r:resource="Французский:Top/Kids_and_Teens/International/Français/Scolaire/Sciences/Astronomie_et_espace"/>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/История">
+  <catid>902602</catid>
+  <d:Title>История</d:Title>
+  <lastUpdate>2003-02-11 12:17:12</lastUpdate>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Математика">
+  <catid>937620</catid>
+  <d:Title>Математика</d:Title>
+  <lastUpdate>2003-03-26 17:37:09</lastUpdate>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Биология">
+  <catid>937642</catid>
+  <d:Title>Биология</d:Title>
+  <lastUpdate>2003-04-04 17:20:45</lastUpdate>
+  <altlang r:resource="Английский:Top/Kids_and_Teens/School_Time/Science/Living_Things"/>
+  <altlang r:resource="Французский:Top/Kids_and_Teens/International/Français/Scolaire/Sciences/Biologie"/>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Физика">
+  <catid>937720</catid>
+  <d:Title>Физика</d:Title>
+  <lastUpdate>2002-12-27 15:06:40</lastUpdate>
+  <altlang r:resource="Английский:Top/Kids_and_Teens/School_Time/Science/Physics"/>
+  <altlang r:resource="Французский:Top/Kids_and_Teens/International/Français/Scolaire/Sciences/Physiques"/>
+</Topic>
+
+<Topic r:id="Top/Kids_and_Teens/International/Russian/Школа/Наука/Риторика">
+  <catid>1100055</catid>
+  <d:Title>Риторика</d:Title>
+  <lastUpdate>2003-02-08 00:56:30</lastUpdate>
+</Topic>
+
+<Topic r:id="Top/UTF8">
+  <catid>816296</catid>
+  <d:Title>UTF8</d:Title>
+</Topic>
+
+
+</RDF>

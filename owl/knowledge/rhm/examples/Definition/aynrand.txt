@@ -1,0 +1,81 @@
+# KEHOME/knowledge/ExamplesDefinition/aynrand.txt
+# 1:30 pm 1998/4/7
+
+#==================================#
+# my favorite Ayn Rand definitions #
+#==================================#
+# Reference:
+# Ayn Rand, "Introduction to Objectivist Epistemology",
+# Expanded Second Edition, Meridian, 1990.
+
+# concept is mental integration of two or more units possessing
+# the same distinguishing characteristic(s), with their particular
+# measurements omitted.
+
+# conceptual common denominator is the characteristic(s) reducible to
+# a unit of measurement, by means of which man differentiates two or
+# or more existents possessing it.  (For example, number of sides is
+# a common characteristic which can be used to differentiate between
+# triangles and rectangles.)
+
+# consciousness is the faculty of perceiving that which exists.
+
+# definition is a statment that identifies the nature of the units
+# subsumed under a concept.  (The purpose of a definition is to
+# distinguish a concept from all other cocnepts and thus to keep its
+# units differentiated from all other existents.)
+
+# differentia is the distinguishing characteristic(s) which separate
+# the units of the concept being defined from all other existents
+# subsumed under the genus of the concept.
+
+# epistemology is the science of the discovery of the proper methods
+# of acquiring and validating knowledge.
+
+# essential characteristic is the distinguishing characteristic that
+# explains the greatest number of other characteristics.  (Metaphysically,
+# the distinctive characteristic which makes possible the greatest
+# number of other characteristics.)
+
+# genus of a concept is the wider class of existents which share a conceptual
+# common denominator(s) with the existents subsumed by the concept
+# being defined.
+
+# grammar is the science which deals with the formulation of the
+# proper methods of verbal expression and communication (i.e., the
+# methods of organizing words into sentences).
+
+# knowledge is a mental grasp of a fact(s) of reality, reached either
+# by perceptual observation or by a process of reason based on
+# perceptual observation.
+
+# language is a code of visual-auditory symbols that serves the
+# psycho-episemological function of converting concepts into the
+# mental equivalent of concretes.
+
+# logic is the art of noncontradictory identification.
+
+# measurement is the identification of a quantitative relationship
+# established by means of a standard that serves as a unit.  (The
+# purpose of measurement is to expand the range of man's consciousness,
+# beyond the perceptual level.)
+
+# meaning of a concept is the existents subsumed under the concept.
+
+# number is a mental symbol that integrates units into a single larger
+# unit (or subdivides a unit into fractions) with reference to the basic
+# number of "one", which is the basic mental symbol of "unit".
+
+# percept is a group of sensations automatically retained and integrated
+# by the brain of a living organism.
+
+# science is an organized body of knowledge, acquired by and communicable
+# to a human consciousness.
+
+# similarity is the relationship between two or more existents which
+# possess the same characteristic(s), but in different measure or degree.
+
+# unit is an existent regarded as a separate member of a group of two
+# or more similar members.
+
+# word is a visual-auditory symbol used to represent a concept. 

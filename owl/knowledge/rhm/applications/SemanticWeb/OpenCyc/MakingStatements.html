@@ -1,0 +1,371 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/MakingStatements.html
+# Oct/29/2005
+</pre>
+
+<title> Making Statements with MKE + OpenCyc </title>
+<H2> Making Statements with MKE + OpenCyc </H2>
+
+<UL>
+<H3><LI> MKR to CycL shell script </H3>
+<xmp>
+# KEHOME/bin/mkr2cyc
+# Sep/15/2003
+# new MKR assignment verb names Sep/30/2005
+
+#####exec 2>&1  # send errors to stdout
+
+# translate MKR propositions to CycL expressions
+#
+# Usage:
+#	mkr2cyc [-q]
+#	proposition
+#	...
+#	EOF
+#
+# proposition ::=
+#   exit;
+#   at view = mt;
+#   do action od directobject with modifier from/to indirectobject done;
+#   let variable op value;
+#   subject predicate object mod1 mod2 mod3 mod4 mod5 mod6;
+# predicate ::=
+#   MKR verb
+#   CycL predicate
+#
+# expression ::=
+#   see below
+#
+# Notes:
+# MKR commands for special CycL commands
+#	do CYC-CREATE od "name" done;
+#	do write-image to "world/name" done;
+#	do generate-phrase from expression done;
+# context for most questions and statements is
+#	#$UniversalVocabularyMt
+# MKR verb (is,has,do,rel,means,causes,...)
+#	see below
+# MKR characteristic (part,attribute,relation,action,interaction)
+#	begins with letter
+# MKR variable (attribute)
+#	begins with letter
+# MKR question variable
+#	begins with "?"
+#
+# CycL predicate
+#	begins with "#$"
+# CycL constant
+#	begins with "#$"
+# CycL variable
+#	begins with "?"
+
+#echo "# mkr2cyc $@" >&2  # echo command line
+
+if [ -n "$1" ]
+then prompt=''		# mkr2cyc -q
+else prompt='ke$ \c'	# mkr2cyc
+fi
+
+#####query="(CYC-QUERY '"
+#####assert="(CYC-ASSERT '"
+#####context=' #$UniversalVocabularyMt)'
+inverse="no"
+
+if [ -n "$prompt" ]
+then echo -e "$prompt" >&2
+fi
+while read subject predicate object mod1 mod2 mod3 mod4 mod5 mod6; do
+
+	##### context, command, assignment #####
+	subject="${subject%;}"
+	case "$subject" in
+	\(*)	# ( CycL pass thru )
+		echo "$subject $predicate $object $mod1 $mod2 $mod3 $mod4 $mod5 $mod6";
+		continue;;
+	exit)	# exit;
+		echo "(exit)";
+		break;;
+	at)	mt=${mod1%;};
+		if -n "$mod3"
+		then  # at view = mt { proposition } ;
+			proposition="${mod3%;}";
+			echo "( '#\$ist' $mt $proposition )"
+		else  # at view = mt ;
+			echo "( WITH-MT $mt )"
+		fi;
+		continue;;
+	do|hdo|vdo)
+		# do action od direct with modifier from/to indirect done;
+		# do ke-create-now od "name" done;
+		# do write-image to "world/name" done;
+		# do generate-phrase from expression done;
+		verb="$subject";
+		subject="cyc";
+		action="${predicate%;}";
+		direct="${mod1%;}";
+		modifier="${mod3%;}";
+		fromto="${mod4%;}";
+		indirect="${mod5%;}";
+		echo "( $action $direct $modifier $indirect )";
+		continue;;
+	let|unlet|vlet)
+		# let variable op value;
+		verb="$subject";
+		subject="cyc";
+		variable="${predicate%;}";
+		op="${object%;}";
+		value="${mod1%;}";
+		echo "( $verb $variable $op $value )";
+		continue;;
+
+	*)	# subject predicate object;
+		predicate="${predicate%;}";
+		object="${object%;}";
+		value="${mod2%;}";;
+	esac
+
+	##### question, statement #####
+	prefix="$assert"
+	case "$subject" in
+	\?*) prefix="$query";;
+	esac
+	case "$object" in
+	\?*) prefix="$query";;
+	esac
+	suffix="$context"
+
+	#####echo "# INFO: mkr2cyc: ( $predicate $subject $object )" >&2
+
+	case "$predicate" in
+	##### hierarchy verbs #####
+	isa)	echo "$subject iss $object" | mkr2cyc -q;
+		echo "$subject isu $object" | mkr2cyc -q;
+		continue;;
+	iss)	predicate='#$genls';;
+	isu)	predicate='#$isa';;
+	isc)	echo "$subject isg $object" | mkr2cyc -q;
+		echo "$subject isp $object" | mkr2cyc -q;
+		continue;;
+	isg)	predicate='#$specs';;
+	isp)	predicate='#$instances';;
+
+	isa\*)	echo "$subject iss* $object" | mkr2cyc -q;
+		echo "$subject isu* $object" | mkr2cyc -q;
+		continue;;
+	iss\*)	predicate='#$all-genls';;
+	isu\*)	predicate='#$all-isa';;
+	isc\*)	echo "$subject isg* $object" | mkr2cyc -q;
+		echo "$subject isp* $object" | mkr2cyc -q;
+		continue;;
+	isg\*)	predicate='#$all-specs';;
+	isp\*)	predicate='#$all-instances';;
+
+	##### other MKR verbs #####
+	haspart)predicate='#$physicalParts';;
+	isapart)predicate='#$physicalParts';;
+	ismem)	predicate='#$groupMembers';;
+	isall)	predicate='#$groupMembers';;
+	isalt)	predicate='#$groupMembers';;
+	isany)	predicate='#$groupMembers';;
+
+	is)	if [ -n "$mod1" ]  # "with"
+		then  # subject is genus with differentia ;
+			genus="$object";
+			diff="$mod2 $mod3 $mod4 $mod5 $mod6";
+			diff="${diff%;}"
+			echo "( '#\$defnIff' $subject ('#\$and'";
+			echo "  ( '#\$genls' $subject $genus }";
+			echo "  ( $diff )))"
+		else  # subject is object;
+			case "$object" in
+			\?) echo "( DEFINING-DEFNS '( $subject $mt ) )";;
+			*)  echo "( equals  $subject $object )";;
+			esac;
+		fi;
+		continue;;
+	has)	case "$object" in
+		\?) echo "( ALL-TERM-ASSERTIONS '( $subject T ))";;
+		*)  echo "( $object $subject $value )";;
+		esac;
+		continue;;
+	do)	predicate="$object"; object="$value";;
+	rel)	predicate="$object"; object="$value";;
+	isin)	predicate="$object"; object="$value";;
+
+	means)	 predicate="signifies";;
+	isref)	 predicate="signifies"; inverse="yes";;
+	causes)	 predicate="causedBy"; inverse="yes";;
+	causedBy)predicate="causedBy";;
+
+	##### other predicates #####
+	genlmt)	predicate='#$genlMt';;
+	specmt)	predicate='#$genlMt'; inverse="yes";;
+	*)	;;
+	esac  # end case "$predicate"
+
+	case "$inverse" in
+	yes) temp="$subject"; subject="$object"; object="$temp";;
+	esac
+	#####echo "$prefix ($predicate $subject $object) $suffix"
+	echo "($predicate $subject $object)"
+
+	if [ -n "$prompt" ]
+	then echo -e "$prompt" >&2
+	fi
+done
+
+</xmp>
+</LI>
+
+
+<H3><LI> example MKR input to OpenCyc </H3>
+<xmp>
+. cyc.env
+$ ke
+ke$ let kbmode=cyc;
+ke$ do open cyc from dick done;
+
+CYC(): ##### create constants
+CYC(): do cyc-create od "DickMcCullough" done;
+CYC(): do cyc-create od "PioneerCA", "CaliforniaState" done;
+
+CYC(): ##### input data
+CYC(): DickMcCullough isu Person;
+CYC(): DickMcCullough has
+CYC(): 	label = Richard H. McCullough,
+CYC(): 	hasGender = male,
+CYC(): 	hasResidence = PioneerCA;
+CYC(): 
+CYC(): PioneerCA isu UnitedStatesCity;
+CYC(): PioneerCA has
+CYC(): 	hasZipCode = 95666,
+CYC(): 	locatedIn = CaliforniaState;
+
+CYC(): do write-image to dick done;
+CYC(): exit;
+
+ke$ exit;
+$
+</xmp>
+</LI>
+
+
+<H3><LI> example CycL output from OpenCyc </H3>
+<xmp>
+. cyc.env
+$ ke
+ke$ let kbmode=cyc;
+ke$ do open cyc from dick done;
+CYC(1): #$DickMcCullough isu ?x;
+(
+((?X . #$ComputerUser))
+((?X . #$Cyclist))
+((?X . #$TerrestrialOrganism))
+((?X . #$LeftAndRightSidedObject))
+((?X . #$FrontAndBackSidedObject))
+((?X . #$BilateralObject))
+((?X . #$TopAndBottomSidedObject))
+((?X . #$HexalateralObject))
+((?X . #$SentientAnimal))
+((?X . #$HumanScaleObject))
+((?X . #$CellularTangibleThing))
+((?X . #$MulticellularOrganism))
+((?X . #$Coelomate))
+((?X . #$ChordataPhylum))
+((?X . #$Vertebrate))
+((?X . #$AirBreathingVertebrate))
+((?X . #$Homeotherm))
+((?X . #$Mammal))
+((?X . #$ViviparousAnimal))
+((?X . #$Eutheria))
+((?X . #$Primate))
+((?X . #$HominidaeFamily))
+((?X . #$Omnivore))
+((?X . #$HomoGenus))
+((?X #$CollectionUnionFn (#$TheSet #$HomoSapiens (#$GroupFn #$HomoSapiens))))
+((?X . #$HomoSapiens))
+((?X . #$HumanCyclist))
+((?X #$CollectionUnionFn (#$TheSet #$Pers on (#$GroupFn #$Person))))
+((?X . #$Expression-Underspecified))
+((?X #$Collectio nUnionFn (#$TheSet #$SpecifiedInformationBearingThingType #$InformationStore)))
+((?X . #$InformationStore))
+((?X . #$IntelligentAgent))
+((?X . #$SocialBeing))
+((?X . #$LegalAgent))
+((?X . #$Person))
+((?X . #$PersonWithOccupation))
+((?X . #$Professional))
+((?X . #$SexuallyMature))
+((?X #$CollectionUnionFn (#$TheSet #$SolidTangibleThing #$LiquidTangibleThing)))
+((?X . #$NonFluidlikeTangibleThing))
+((?X . #$SolidTangibleThing))
+((?X . #$PerceptualAgent))
+((?X . #$AnimalBLO))
+((?X . #$CompositeTangibleAndIntangibleObject))
+((?X . #$Agent-PartiallyTangible))
+((?X . #$PartiallyIntangible))
+((?X . #$PartiallyIntangibleIndividual))
+((?X . #$Agent-Underspecified))
+((?X #$CollectionUnionFn (#$TheSet #$InformationBearingThing #$Agent-Generic)))
+((?X . #$Agent-Generic))
+((?X . #$IndividualAgent))
+((?X . #$Container-Underspecified))
+((?X #$CollectionUnionFn (#$TheSet #$Person #$An imal)))
+((?X #$CollectionUnionFn (#$TheSet #$Agent-Generic (#$GroupFn #$Agent-Generic))))
+((?X #$CollectionUnionFn (#$TheSet #$Animal (#$GroupFn #$Animal))))
+((?X . #$Heterotroph))
+((?X . #$OrganicMaterial))
+((?X . #$SpatiallyBoundedThing))
+((?X . #$NaturalTangibleStuff))
+((?X . #$FiniteSpatialThing))
+((?X . #$Opaque))
+((?X . #$System))
+((?X #$CollectionUnionFn (#$TheSet #$BiologicalLivingObject #$FictionalCharacter)))
+((?X . #$Landmark-Underspecified))
+((?X . #$Region-Underspecified))
+((?X . #$Boundary-Underspecified))
+((?X . #$SpatialThing-Localized))
+((?X . #$TemporalThing))
+((?X . #$TemporallyExistingThing))
+((?X . #$SomethingExisting))
+((?X . #$EnduringThing-Localized))
+((?X . #$PositiveDimensionalThing))
+((?X . #$PolyDimensionalThing))
+((?X . #$ThreeDimensionalThing))
+((?X . #$PartiallyTangible))
+((?X #$CollectionUnionFn (#$TheSet #$BiologicalLivingObject (#$GroupFn #$BiologicalLivingObject))))
+((?X . #$BiologicalLivingObject))
+((?X . #$Thing))
+((?X . #$Location-Underspecified))
+((?X . #$Trajector-Underspecified))
+((?X . #$Individual))
+((?X . #$SpatialThing))
+((?X . #$SpatiallyContinuousThing))
+((?X . #$Organism-Whole))
+((?X . #$EukaryoticOrganism))
+((?X . #$Animal))
+((?X . #$AdultAnimal))
+((?X . #$Professional-Adult))
+((?X . #$Engineer))
+((?X . #$KnowledgeEngineer))
+)
+:EXHAUST-TOTAL
+CYC(2): #$DickMcCullough is ?x;
+NIL
+:ILL-FORMED
+CYC(3): #$DickMcCullough has ?x;
+NIL
+:EXHAUST-TOTAL
+CYC(4): exit;
+NIL
+CYC(5): ke$ exit;
+# clock <2005/10/02 16:56:55> # exiting ke
+##### 0 errors found in input before/after last group r_chartype #####
+#####  exit  #####
+
+</xmp>
+</LI>
+</UL>
+
+<br>
+<a href="../../../../index.html">MKE home</a>

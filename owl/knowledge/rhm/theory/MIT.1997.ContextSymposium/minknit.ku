@@ -1,0 +1,79 @@
+# 5:30 pm 1998/2/10
+
+#===================================#
+# minimal consistent knowledge unit #
+# (omit space-time for simplicity)  #
+#===================================#
+
+# as a sequence of propositions
+#==============================
+at view=minknit
+minknit := I do identify existent
+existent ise entity, characteristic
+characteristic ise attribute, action, relationship
+I, minknit isa entity
+identify isa action
+view, format, meaning isa attribute
+r_identify is relationship with \
+	format="knit:1 := entity:2 do identify existent:3",
+	meaining="knit:1 := entity:2 do identify existent:3"
+r_hierarchy is relationship with \
+	format="concept:1 isa genus:2; concept:3 ise unit:4",
+	meaning="concept:1 isa genus:2; concept:3 ise unit:4"
+r_definition is relationship with \
+	format="concept:1 is genus:2 with differentia:3",
+	meaning="concept:1 is genus:2 with differentia:3"
+r_attribute is relationship with \
+	format="concept:1 has attribute:2=value:3",
+	meaning="concept:1 has attribute:2=value:3"
+r_action is relationship with \
+	format="entity:1 do action:2",
+	meaing="entity:1 do action:2"
+r_context is relationship with \
+	format="at view=knit:1",
+	meaning="at view=knit:1"
+
+
+# as a concept-hierarchy
+#=======================
+at view=minknit
+existent
+	entity
+		I
+		minknit
+	characteristic
+		attribute
+			view
+			format
+			meaning
+		action
+			identify
+		relationship
+			r_identify
+				"minknit := I do identify existent"
+			r_hierarchy
+				"existent ise ..."
+				"entity ise ..."
+				"characteristic ise ..."
+				"attribute ise ..."
+				"action ise ..."
+				"relationship ise ..."
+			r_definition
+				"r_identify is ..."
+				"r_hierarchy is ..."
+				"r_definition is ..."
+				"r_attribute is ..."
+				"r_action is ..."
+				"r_context is ..."
+			r_attribute
+				"minknit has view=minknit"
+				"r_identify has ..."
+				"r_hierarchy has ..."
+				"r_definition has ..."
+				"r_attribute has ..."
+				"r_action has ..."
+				"r_context has ..."
+			r_action
+				"I do identify"
+			r_context
+				"at view=minknit"

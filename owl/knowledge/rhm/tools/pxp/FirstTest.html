@@ -1,0 +1,94 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/tools/pxp/FirstTest.html
+# Mar/8/2003
+
+from Dick McCullough:
+
+I ran the first big test of the Parlett XML parser today,
+using the complete Stanford TAP knowledge base.
+
+	pxp tap.rdf >tap.pxp.out
+
+The gross numbers are
+
+	system:	Windows XP Pro, 2 GHz CPU, 512 MB RAM
+	input:	tap.rdf        360,855 lines
+	output:	tap.pxp.out  4,602,786 lines
+	time:	14 hours 8 minutes
+
+The output includes 866,772 lines of validation errors,
+because this version of pxp does not read XML namespaces.
+
+Here's what a typical rdf input & pxp output look like.
+
+  <rdf:Description rdf:about="MusicianUncle_Tupelo">
+    <rdf:type>Musician</rdf:type>
+    <rdf:type>MusicGroup</rdf:type>
+    <rdfs:label xml:lang="en">Uncle Tupelo</rdfs:label>
+    <sortPriority>10</sortPriority>
+    <hasMember>MusicianTweedy,_Jeff</hasMember>
+    <hasMember>MusicianHeidorn,_Michael</hasMember>
+    <hasMember>MusicianFarrar,_Jay</hasMember>
+  </rdf:Description>
+
+
+     40:
+          Tag : <rdf:Description>
+          Attributes : rdf:about="MusicianUncle_Tupelo" 
+          Contents :
+          1:"\n    "
+          2:
+               Tag : <rdf:type>
+               Attributes : 
+               Contents :
+               1:"Musician"
+               End of tag : </rdf:type>
+          3:"\n    "
+          4:
+               Tag : <rdf:type>
+               Attributes : 
+               Contents :
+               1:"MusicGroup"
+               End of tag : </rdf:type>
+          5:"\n    "
+          6:
+               Tag : <rdfs:label>
+               Attributes : xml:lang="en" 
+               Contents :
+               1:"Uncle Tupelo"
+               End of tag : </rdfs:label>
+          7:"\n    "
+          8:
+               Tag : <sortPriority>
+               Attributes : 
+               Contents :
+               1:"10"
+               End of tag : </sortPriority>
+          9:"\n    "
+          10:
+               Tag : <hasMember>
+               Attributes : 
+               Contents :
+               1:"MusicianTweedy,_Jeff"
+               End of tag : </hasMember>
+          11:"\n    "
+          12:
+               Tag : <hasMember>
+               Attributes : 
+               Contents :
+               1:"MusicianHeidorn,_Michael"
+               End of tag : </hasMember>
+          13:"\n    "
+          14:
+               Tag : <hasMember>
+               Attributes : 
+               Contents :
+               1:"MusicianFarrar,_Jay"
+               End of tag : </hasMember>
+          15:"\n  "
+          End of tag : </rdf:Description>
+     41:"\n  "
+
+</XMP>
+</HTML>

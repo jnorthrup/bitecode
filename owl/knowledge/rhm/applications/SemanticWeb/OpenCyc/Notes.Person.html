@@ -1,0 +1,57 @@
+<html><pre>
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/Notes.Person.html
+# Sep/14/2003
+</pre>
+
+<title> The bottom line: OpenCyc: Person isa* ?; </title>
+<h1> The bottom line: OpenCyc: Person isa* ?; </h1>
+
+
+<h2> Processing </h2>
+The
+<a href="http://rhm.cdepot.net/knowledge/applications/SemanticWeb/OpenCyc/cycPerson.html">
+results </a>
+were obtained using this
+<a href="http://rhm.cdepot.net/knowledge/applications/SemanticWeb/OpenCyc/cycPerson.mkr">
+MKR script</a>.
+<pre>
+set echo=off,kbmode=cyc;
+#$Person iss* ?;
+
+set kbmode=mke,CommentMode=cyc;
+do check od knit done;
+
+do simplify lattice od #$Thing done;
+do check od knit done;
+
+#$Person iss* ?;
+exit;
+</pre>
+<p>MKE caching changes processing time from hours to minutes.
+
+<h2> Contradictions </h2>
+OpenCyc states that a thing must be
+either an Individual or a Collection
+-- they are disjoint.
+But this context (#$UniversalVocabularyMt)
+does not enforce that distinction.
+<p> RDF has no contexts, and explicitly permits this same contradiction.
+<p> TAP permits this contradiction.
+<p> MKE enforces the unit/concept dichotomy as a matter of principle.
+The "same thing" cannot be both a unit and a concept in the same context.
+
+<h2> Combinatorial growth </h2>
+OpenCyc has combinatorial growth in paths through the hierarchy.
+The "#$Person isa* ?;" lattice has 2840 different paths
+from #$Person to #$Thing.
+The simplified hierarchy has only 1172 different paths.
+<p> MKE uses disjoint, genus-differentia hierarchies/contexts.
+The "person isa* ?;" lattice has exactly 1 path from person to existent.
+
+<h2> Infinite loops </h2>
+MKE consistency checks show 16 items in genls/specs loops.
+<br>
+<br>
+
+<a href="../../../../index.html">MKE home</a>
+</html>

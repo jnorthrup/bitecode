@@ -1,0 +1,62 @@
+# 1999/4/8
+
+# Reference:
+# "Webster's II New Riverside University Dictionary"
+# The Riverside Publishing Company, 1984.
+
+# faith1 : confident belief in the truth, value, or trustworthiness of a person, idea, or thing
+# faith2 : belief not based on logical proof or material evidence
+# faith3 : loyalty to a person of thing
+  # synonym : ALLEGIANCE
+  # example : <keeping faith with the President>
+# faith4a : belief and trust in God
+# faith4b : religious conviction
+# faith5 : a system of religious beliefs
+# faith6 : a set of principles or beliefs
+
+# belief1 : the mental act, condition, or habit of placing trust or confidence in a person or thing
+# belief2 : mental acceptance of or conviction in the truth or actuality of something
+# belief3 : something believed or accepted as true, esp. a particular tenet or a body of tenets accepted by a group of persons
+  # synomyms: BELIEF, CONVICTION, FEELING, IDEA, NOTION, OPINION, PERSUASION, POSITION, SENTIMENT, VIEW
+  # core meaning: something believed or accepted as true
+  # example : <a belief in life after death> <liberal political belief>
+
+# confidence1 : trust or faith
+  # synonyms: CONFIDENCE, BELIEF, FAITH, RELIANCE, TRUST
+  # core meaning: absolute certainty in the trustworthiness of another
+  # example: <had confidence in the President>
+  # antonym: doubt
+# confidence2 : a trusting relationship
+# confidence3 : something confided: SECRET
+# confidence4 : a feeling of assurance, esp. of self-assurance
+  # synonyms: CONFIDENCE, APLOMB, ASSURANCE, SECURITY, SELF-ASSURANCE, SELF-CONFIDENCE, SELF-POSSESSION
+  # core meaning: a firm belief in one's own powers
+  # example: <a person lacking confidence>
+# confidence5 : the assurance that someone will keep a secret
+  # example: <tole them in strict confidence>
+
+# trust1 : total confidence in the integrity, ability, and good character of another
+# trust2 : one in whom confidence is placed
+# trust3 : custody; care
+# trust4 : something committed into the care of another
+# trust5: the condition and resulting obligation of having confidence placed in one
+  # example: <officials who had violated their public trust>
+# trust6 : reliance on something in the future
+  # synonym : HOPE
+# trust7 : reliance on the intention and ability of a purchaser to pay in the future
+  # synonym : CREDIT
+# trust8a : (Law) a legal title to property held by one party for the benefit of another
+# trust8b : (Law) the confidence reposed in a trustee in giving him or her legal title to property to administer for another, and his or her obligation with respect to the property and the beneficiary
+# trust8c : (Law) the property so held
+# trust9 : a combination of firms or corporations for the purpose of reducing competition and controlling prices throughout a business or industry
+  # example : <tried to break the great steel trusts>
+
+
+belief is statement with
+	accepted as true
+faith1 is belief with
+	absolute (psychological) certainty
+faith2 is belief with
+	not based on logical proof or material evidence
+faith4a is belief with
+	benevolent God

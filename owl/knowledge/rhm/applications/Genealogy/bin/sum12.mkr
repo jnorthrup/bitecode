@@ -1,0 +1,54 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/sum12.mkr
+# 1999/7/20
+# new syntax Jun/26/2005
+
+# Summary by person
+
+# execution time using 133 MHz pentium, Windows 98
+# ------------------------------------------------
+#			size of knowledge base
+#			----------------------
+# 			 9 people	 697 people
+# function		17 infons	1750 infons
+# ----------------	---------	-----------
+# load tabula_rasa	0:08 min:sec	 0:08 min:sec
+# read family.ku	0:29 min:sec	21:15 min:sec
+# dump $x; ...		0:01 min:sec	 1:05 min:sec
+# $x is ?; ...		0:02 min:sec	11:30 min:sec
+
+# Note that dump is about 10 x faster than questions
+# on large knowledge base.
+
+set charformat = column;
+#set hrelation = NO
+
+do clock od "read,parse,process infon" done;
+do read from family.ku done;
+
+let echo=off;
+do clock od "generate summary using dump" done;
+do print od "#------------------------------------------------#" done;
+#set debug=generator;
+every x isa person {
+	do dump od $x done;
+	do print od "#------------------------------------------------#" done;
+};
+do clock od "done" done;
+
+do clock od "generate summary using questions" done;
+let echo=off;
+do print od "#------------------------------------------------#" done;
+every x isa person {
+	$x is ?;
+	$x has ?;
+	$x do ? done;
+	$x isin ?;
+	do print od "#------------------------------------------------#" done;
+};
+do clock od "done" done;
+let echo=on;
+
+exit;
+
+# </xmp></html>

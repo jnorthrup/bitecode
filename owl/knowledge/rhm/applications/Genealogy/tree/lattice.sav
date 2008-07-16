@@ -1,0 +1,367 @@
+# input  file <LATTICE.KU>
+# output file <lattice.out>
+# error  file <lattice.err>
+# log    file <lattice.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Icon Version 9.3.  November 25, 1996
+# INFO: kversion = Knowledge Explorer version 4.0  1999/Aug/11
+# clock <1999/08/11 09:24:55> # finished opening files
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/08/11 09:24:57> # finished loading tabula_rasa
+# command <!read kb/init.ku>
+# clock <1999/08/11 09:25:02> # finished loading definitions
+# clock <1999/08/11 09:25:02> # finished !menu
+# command <!read LATTICE.KU>
+# command <!read family.ku>
+# clock <1999/08/11 09:25:02> # loading family history
+# clock <1999/08/11 09:25:06> # checking family history
+############################################################
+########## CHECKING KNIT view = tabula_rasa ##########
+# genus error <2> <CA isa [space,
+    state]>
+# genus error <2> <Dick McCullough isa [name,
+    person]>
+# genus error <4> <NA isa [cause,
+    name,
+    space,
+    time]>
+# genus error <0> <action object change isa []>
+# genus error <0> <cause isa []>
+# genus error <0> <school isa []>
+# genus count:          1038 units, 6 errors
+# loop count:           1038 units, 0 units with loops
+# link count:           1038 units, 0 units with broken genus or unit links
+# link count:           1038 units, 0 units with broken group or member links
+# newproposition count: 0
+# unknown count:        0
+# chit count:           1
+# event count:          13
+# primitive unit genus error:  Dick McCullough is [name,
+    person] with 
+    pid=Dick McCullough
+#   birthtype is attribute with unknown differentia
+#   city is space with unknown differentia
+#   company is group with unknown differentia
+#   country is space with unknown differentia
+#   degree is attribute with unknown differentia
+#   email is attribute with unknown differentia
+#   job is attribute with unknown differentia
+#   list is action with unknown differentia
+#   marriagetype is attribute with unknown differentia
+#   name is attribute with unknown differentia
+#   not live is action with unknown differentia
+#   not move is action with unknown differentia
+#   phone is attribute with unknown differentia
+#   receive is action with unknown differentia
+#   sex is attribute with unknown differentia
+#   state is space with unknown differentia
+#   street is space with unknown differentia
+#   work for is action with unknown differentia
+#   zip is space with unknown differentia
+# definition count:     1038 units, 264 concepts with 0 bad genus, 19 undefined
+# definition count:     1038 units, 774 prim. units with 1 bad genus, 653 undefined
+# definition count:     1038 units, 7 negated units
+# alias count:          1038 units, 21 units have 23 aliases
+# attribute count:      253 attributes total, 234 prim. with 129 unused
+# action count:         114 actions total, 104 prim.
+# value count:          451 char. total, 451 char. have 4 values
+# part count:           1 parts total, 1 prim. with 1 unused
+# enumeration count:    1038 units, 10 enumerations
+# requisite count:      1038 units, 0 requisites
+# set count:            1038 units, 8 sets
+# sequence count:       1038 units, 1 sequences
+# group count:          1038 units, 9 groups
+# hierarchy count:      1038 units, 0 hierarchies
+# lattice count:        1038 units, 0 lattices
+# person count:         8 persons total
+# family count:         6 families total
+#========== END KNIT view = tabula_rasa ==========
+#============================================================
+# clock <1999/08/11 09:25:09> # finished family history
+# question <newproposition ise* ?>
+newproposition
+# question <unknown ise* ?>
+unknown
+# command <!clock "finished unknown">
+# clock <1999/08/11 09:25:09> # finished unknown
+Bob McCullough has parent=Kay Stecker,Homer McCullough
+Carl Cates has child=Steven Cates
+Dick McCullough has parent=Kay Stecker,Homer McCullough
+Homer McCullough has child=Bob McCullough,Dick McCullough
+Kay Stecker has child=Bob McCullough,Dick McCullough
+Pauline Neal has child=Steven Cates
+Steven Cates has parent=Carl Cates,Pauline Neal
+# question <person ise* ?>
+person
+/  Bob McCullough
+/  Carl Cates
+//    Steven Cates
+/  Dick McCullough
+/  Homer McCullough
+//    Bob McCullough,Dick McCullough
+/  Jane Doe
+/  Kay Stecker
+//    Bob McCullough,Dick McCullough
+/  Pauline Neal
+//    Steven Cates
+/  Steven Cates
+# question <Steven Cates isa* ?>
+Steven Cates
+\  Carl Cates
+\\    person
+\\\      animal
+\\\\        entity
+\\\\\          existent
+\  Carl Cates,Pauline Neal
+\  Pauline Neal
+\\    person
+\\\      animal
+\\\\        entity
+\\\\\          existent
+\  person
+\\    animal
+\\\      entity
+\\\\        existent
+# question <Kay Stecker ise* ?>
+Kay Stecker
+/  Bob McCullough,Dick McCullough
+# question <Jane Doe isa* ?>
+Jane Doe
+\  person
+\\    animal
+\\\      entity
+\\\\        existent
+# clock <1999/08/11 09:25:13> # finished reading knowledge
+############################################################
+################### PROCESSING KNOWLEDGE ###################
+# knitlog
+#   knit_tabula_rasa
+# chitlog
+#   chit_here_now_tabula_rasa
+
+############################################################
+########## CHECKING KNIT view = tabula_rasa ##########
+# genus error <2> <Bob McCullough isa [Kay Stecker,Homer McCullough,
+    person]>
+# genus error <2> <Bob McCullough,Dick McCullough isa [Homer McCullough,
+    Kay Stecker]>
+# genus error <2> <CA isa [space,
+    state]>
+# genus error <0> <Carl Cates,Pauline Neal isa []>
+# genus error <3> <Dick McCullough isa [Kay Stecker,Homer McCullough,
+    name,
+    person]>
+# genus error <0> <Kay Stecker,Homer McCullough isa []>
+# genus error <4> <NA isa [cause,
+    name,
+    space,
+    time]>
+# genus error <4> <Steven Cates isa [Carl Cates,
+    Carl Cates,Pauline Neal,
+    Pauline Neal,
+    person]>
+# genus error <0> <action object change isa []>
+# genus error <0> <cause isa []>
+# genus error <0> <school isa []>
+# genus count:          1131 units, 11 errors
+# loop count:           1131 units, 0 units with loops
+# link count:           1131 units, 0 units with broken genus or unit links
+# link count:           1131 units, 0 units with broken group or member links
+# newproposition count: 0
+# unknown count:        0
+# chit count:           1
+# event count:          13
+# primitive unit genus error:  Bob McCullough is [Kay Stecker,Homer McCullough,
+    person] with 
+    pid=Bob McCullough
+#   Carl Cates is person with unknown differentia
+# primitive unit genus error:  Dick McCullough is [Kay Stecker,Homer McCullough,
+    name,
+    person] with 
+    pid=Dick McCullough
+#   Homer McCullough is person with unknown differentia
+#   Kay Stecker is person with unknown differentia
+# primitive unit genus error:  Steven Cates is [Carl Cates,
+    Carl Cates,Pauline Neal,
+    Pauline Neal,
+    person] with 
+    pid=Steven Cates
+#   birthtype is attribute with unknown differentia
+#   city is space with unknown differentia
+#   company is group with unknown differentia
+#   country is space with unknown differentia
+#   degree is attribute with unknown differentia
+#   email is attribute with unknown differentia
+#   job is attribute with unknown differentia
+#   list is action with unknown differentia
+#   marriagetype is attribute with unknown differentia
+#   name is attribute with unknown differentia
+#   not live is action with unknown differentia
+#   not move is action with unknown differentia
+#   phone is attribute with unknown differentia
+#   receive is action with unknown differentia
+#   sex is attribute with unknown differentia
+#   state is space with unknown differentia
+#   street is space with unknown differentia
+#   work for is action with unknown differentia
+#   zip is space with unknown differentia
+# definition count:     1131 units, 253 concepts with 0 bad genus, 22 undefined
+# definition count:     1131 units, 878 prim. units with 3 bad genus, 761 undefined
+# definition count:     1131 units, 7 negated units
+# alias count:          1131 units, 21 units have 23 aliases
+# attribute count:      284 attributes total, 265 prim. with 155 unused
+# action count:         114 actions total, 104 prim.
+# value count:          482 char. total, 482 char. have 6 values
+# part count:           1 parts total, 1 prim. with 1 unused
+# enumeration count:    1131 units, 10 enumerations
+# requisite count:      1131 units, 0 requisites
+# set count:            1131 units, 8 sets
+# sequence count:       1131 units, 1 sequences
+# group count:          1131 units, 9 groups
+# hierarchy count:      1131 units, 0 hierarchies
+# lattice count:        1131 units, 0 lattices
+# person count:         8 persons total
+# family count:         6 families total
+#========== END KNIT view = tabula_rasa ==========
+#============================================================
+# clock <1999/08/11 09:25:16> # finished checking knit: view = tabula_rasa
+############################################################
+########## WRITING KNIT  view = tabula_rasa ##########
+!begin hierarchy
+nonexistent
+event
+group
+/  company
+//    Bell Labs
+//    self
+/  differentia
+/  enumeration
+//    boolean
+//    enum_automatic
+//    enum_charformat
+//    enum_check
+//    enum_debug
+//    enum_echo
+//    enum_hformat
+//    enum_kformat
+//    enum_substitute
+//    yes-no
+/  family
+//    CC-PN
+//    Carl Cates_Pauline Neal
+//    DM-PN
+//    Dick McCullough_Pauline Neal
+//    HM-KS
+//    Homer McCullough_Kay Stecker
+/  hierarchy
+/  lattice
+/  requisite
+/  sequence
+//    knowledge
+///      knit
+////        knit_tabula_rasa
+/  set
+//    chit
+///      chit_here_now_tabula_rasa
+//    events
+//    existence
+//    identity
+//    infons
+//    partvalues
+//    phenomenon
+//    values
+newproposition
+person
+/  Bob McCullough
+/  Carl Cates
+//    Steven Cates
+/  Dick McCullough
+/  Homer McCullough
+//    Bob McCullough,Dick McCullough
+/  Jane Doe
+/  Kay Stecker
+//    Bob McCullough,Dick McCullough
+/  Pauline Neal
+//    Steven Cates
+/  Steven Cates
+unknown
+!end hierarchy
+#========== END KNIT  view = tabula_rasa ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = tabula_rasa ##########
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = birth ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = death ;
+}
+at space=here, time=now, view=tabula_rasa {
+knowledge := man do identify = identify_023* (existent) ;
+}
+at space=Internet/CNET download.com, time=1997/5/28, view=v_input {
+Dick McCullough do list = list_325 (Knowledge Explorer 1.2) ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant,
+    animal do live = live_095* ;
+}
+at space=here, time=now, view=tabula_rasa {
+measurement := man do measure = measure_020* (characteristic) ;
+}
+at space=here, time=now, view=tabula_rasa {
+animal do move = move_097* ;
+}
+at space=here, time=now, view=tabula_rasa {
+object do not live = not live_101* ;
+}
+at space=here, time=now, view=tabula_rasa {
+plant do not move = not move_099* ;
+}
+at space=MA/Cambridge, time=1960, view=v_input {
+Dick McCullough do receive = receive_335 (SMEE,
+    SBEE)
+  receive_335 changes 
+    SBEE from school = MIT
+		
+    SMEE from school = MIT
+}
+at space=NY/Brooklyn, time=1967, view=v_input {
+Dick McCullough do receive = receive_340 (PhDEE) from school = Polytechnic University;
+}
+at space=NJ-IL-CA, time=1960, view=v_input {
+Dick McCullough do work for = work for_351 (Bell Labs) from time = 1960 to time = 1989;
+}
+at space=CA/Pioneer, time=1996, view=v_input {
+Dick McCullough do work for = work for_356 (self) from time = 1996 to time = NA;
+}
+#========== END CHIT  view = tabula_rasa ==========
+#============================================================
+# clock <1999/08/11 09:25:16> # finished writing knit: view = tabula_rasa
+# command <!exit []>
+
+##### Goodbye. #####
+# clock <1999/08/11 09:25:16> # closing files
+# lines:           962
+# propositions:    557
+#   newpropositions:  0
+#   nullpropositions: 10
+#   productions:      2
+#   context:          6
+#   kusentences:     363
+#     kustatements:    242
+#     commands:        63
+#     assignments:     30
+#     questions:       6
+#     condtionals:     16
+#     iterations:      1
+#   hosentences:     156
+#     hostatements:    156
+#   relsentences:    20
+#     relstatements:   20 infons

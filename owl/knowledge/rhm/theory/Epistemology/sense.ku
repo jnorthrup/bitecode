@@ -1,0 +1,17 @@
+# 1999/4/9
+
+#=======================#
+# the six senses of man #
+#=======================#
+
+sensation := man do sense existent with sense-organ
+
+image   := man do see   existent with eye
+sound   := man do hear  existent with ear
+TOUCH   := man do touch existent with skin
+TASTE   := man do taste existent with tongue
+SMELL   := man do smell existent with nose
+
+# our "sixth sense" - shortcut for emergencies
+#--------------------------------------------#
+emotion := man do feel  existent with subconscious

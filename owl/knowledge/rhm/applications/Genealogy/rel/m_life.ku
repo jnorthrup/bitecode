@@ -1,0 +1,40 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/rel/m_life.ku
+# 1999/6/30
+# new syntax Jun/26/2005
+
+r_life is relation with 
+    label=[father, mother, sex, child, birthdate, birthplace, deathdate, deathplace],
+    format=[person:1, person:2, sex:3, person:4, time:5, space:6, time:7, space:8],
+    meaning={
+	$4 has sex=$3,birthplace=$6,birthdate=$5;
+	$4 has parent +=$2,parent +=$1;
+	$4 has mother +=$2,father +=$1;
+	$1,$2 has child +=$4;
+	$4 has deathdate=$7,deathplace=$8;
+    };
+
+
+m_life is method with
+    label=[comment],
+    format=[value:1],
+    meaning={
+	echo := off;
+	do print od $1 done;
+	r_life is ?;
+	do print od "begin relation r_life;" done;
+	every x isa person {
+		. is $x;
+		do print od "$father, $mother, $sex, $x, $birthdate, $birthplace, $deathdate, $deathplace;" done;
+	};
+	do print od "end relation r_life;" done;
+	echo := on;
+    };
+
+m_life is ?;
+
+do read from family.ku done;
+do m_life od "##### executing m_life #####" done;
+exit;
+
+# </xmp></html>

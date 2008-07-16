@@ -1,0 +1,14 @@
+# KEHOME/knowledge/ApplicationInternet/addressbook.ku
+# Sep/15/2002
+
+# Netscape address book relation
+
+address is relation with
+    format = [url:1; person:2; name:3; elist:4],
+    meaning = {
+	$2 has nickname=$3;
+	$2 is person with email=$1;
+	$2 has elist+=[$4];
+    }
+
+do read from address.rel done

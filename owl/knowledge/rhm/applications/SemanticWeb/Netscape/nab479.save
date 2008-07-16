@@ -1,0 +1,70 @@
+
+
+
+<!--  all " John Doe " info.  -->
+"John Doe" has  
+    Address = "Pier 10, Fisherman's Wharf",
+    Cellular = 555-1237,
+    City = San Francisco,
+    Country = USA,
+    Display Name = "John Doe",
+    Email = johnd@wharf.com,
+    Fax = 555-1235,
+    First Name = John,
+    Home = 555-1236,
+    Last Name = Doe,
+    Nickname = johnd,
+    Notes = testing guru,
+    Organization = MKE Inc.,
+    Pager = 555-1238,
+    State = CA,
+    Title = Knowledge Engineer,
+    Work = 555-1234,
+    Zip = 12345-678,
+    classname = "John Doe"\Person,
+    ctype = concept,
+    firstlevel = false,
+    gtype = existent,
+    htype = ,
+    nickname = ,
+    ptype = none,
+    rootname = Person/"John Doe",
+    shortname = "John Doe",
+    utype = none 
+
+<!--  all email addresses  -->
+"Jane Doe" has Email = janed@wharf.com
+"John Doe" has Email = johnd@wharf.com
+"Last Name, First Name" has Email = Email
+"McCullough, Richard H." has Email = [rhm@volcano.net,
+    rhmccullough@netzero.net,
+    rhm@cdepot.net]
+"McCullough, Robert B." has Email = drbobm11@attbi.com
+$1 has Email = [Member1 Email,
+    $7,
+    Member2 Email,
+    Membern Email]
+List Name has Email = $7
+<!--  all snailmail addresses  -->
+Jane Doe
+${10}
+$5, $6 ${11} ${12}
+John Doe
+"Pier 10, Fisherman's Wharf"
+San Francisco, CA 12345-678 USA
+Last Name, First Name
+Address line 1 Address line 2 ...
+City, State Zip Country
+McCullough, Richard H.
+${10}
+$5, $6 ${11} ${12}
+McCullough, Robert B.
+${10}
+$5, $6 ${11} ${12}
+List Name
+${10}
+$5, $6 ${11} ${12}
+<!--  all Bell Labs employees  -->
+"McCullough, Richard H." has Organization += [${16},
+    Bell Labs,
+    "Richard H. McCullough, Knowledge Engineer"]

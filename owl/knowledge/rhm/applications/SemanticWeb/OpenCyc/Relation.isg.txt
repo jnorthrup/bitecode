@@ -1,0 +1,17 @@
+$ printhi '#$Relation' isg ?
+#$AssociativeRelation
+#$CommutativeRelation
+#$ELRelation
+#$EvaluatableRelation
+#$FixedArityRelation
+#$Function-Denotational
+#$FunctionalRelation
+#$LogicalConnective
+#$MacroRelation
+#$MicrotheoryDesignatingRelation
+#$ModalOperator
+#$NLPredicate
+#$PartiallyCommutativeRelation
+#$ScopingRelation
+#$TruthFunction
+#$VariableArityRelation

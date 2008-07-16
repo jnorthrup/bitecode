@@ -1,0 +1,64 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "OWL at W3C" <www-rdf-logic@w3.org>,
+	"semantic-web at W3C" <semantic-web@w3c.org>
+Cc: "KR-language" <KR-language@YahooGroups.com>
+Subject: ISO 15926-2 definition of owl:Class
+Date: Thu, 13 Oct 2005 19:44:10 -0700  edited Oct/13/2005
+MIME-Version: 1.0
+Content-Type: text/plain;
+	format=flowed;
+	charset="iso-8859-1";
+	reply-type=original
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2670
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2670
+
+Hans Teijgeler has done an excellent job of describing owl:Class.
+Here is a short excerpt from the ISO standard.
+
+    http://rhm.cdepot.net/knowledge/applications/SemanticWeb/ISO/iso.Class.rdf
+
+Here is the MKR translation of iso.Class.rdf,  including all the comments.
+(The best information is in the comments.)
+
+    http://rhm.cdepot.net/knowledge/applications/SemanticWeb/ISO/iso.Class.mkr
+
+iso.Class.mkr pinpoints what I don't like about owl:Class.
+In particular, I do not like the
+     "non-wellfounded set theory"  #12
+and its consequences
+    Class isu Class;  # 1, 13
+    Class isu anotherClass;  # 14
+
+Stated a little differently, the consequences are
+    infinite loops in the OWL ontology
+    "strange things" which are both Individuals and Classes
+
+Here is a brief summary of my previous proposals
+to get rid of the infinite loops and "strange things".
+1. Get rid of  "Class"; replace it with "ClassSet",
+which is the set of all Classes.
+Get rid of "Individual"; replace it with "IndividualSet",
+which is the set of all Individuals.
+2. Define the meaning of
+    <Class  rdf:id = "myclass"/>
+to be
+    myclass is a class
+    myclass is a member of the set ClassSet
+3. Define the meaning of
+    <myindividual rdf:type = "myclass"/>
+to be
+    myindividual is an individual
+    myindividual is a member of the set IndividualSet
+    myindividual is an instance of myclass
+
+Please accept my proposal, and return to the world
+of wellfounded set theory.
+
+Dick McCullough
+knowledge := man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/ 

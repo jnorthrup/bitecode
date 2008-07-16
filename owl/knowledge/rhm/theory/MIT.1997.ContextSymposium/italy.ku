@@ -1,0 +1,54 @@
+# 6:30 pm 12/28/97
+
+# Gianni Amati and Fiora Pirri example
+# AAAI 1997 context symposium
+# interaction with Knowledge Explorer 1.5
+
+# Italians go to church on Sunday,
+#	love soccer and
+#	eat pasta for dinner.
+# Neapolitans eat pizza for dinner.
+# No one eats pasta and pizza for dinner.
+# Neapolitans are Italians.
+
+# NOTES:
+# 1. The statements listed above are contradictory,
+#    and therefore are NOT knowledge.
+# 2. The contexts listed below are very primitive.
+#    Full integration of knowledge requires
+#    many more concepts and definitions.
+
+# general context
+#================
+at view = tabula_rasa
+existent ise* ?
+# see the file KEHOME/context/tabrasa.txt
+
+hfocus = [newstatement, newword, person, event]
+at view = tabula_rasa  at view = v_general
+person has livingplace
+person do go,love,eat
+Italy,Italy/Naples,church isa space
+Sunday,dinner isa time
+soccer isa event
+pasta,pizza isa object
+
+# Italy context
+#==============
+at view = v_general  at view = v_Italy
+Italian is person with livingplace=Italy
+at time=Sunday Italian do go to space=church
+Italian do love soccer
+at time=dinner Italian do eat pasta
+
+# Naples context
+#===============
+at view = v_Italy  at view = v_Naples
+Neapolitan is Italian with livingplace=Italy/Naples
+at time=dinner Neapolitan do eat pizza
+
+# false context
+#==============
+at view = v_general  at view = v_nonexistent
+at time=dinner no person do eat pasta,pizza
+#at time=dinner person do not eat pasta,pizza

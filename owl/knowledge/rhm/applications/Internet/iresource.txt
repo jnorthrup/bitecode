@@ -1,0 +1,52 @@
+# KEHOME/knowledge/ApplicationInternet/iresource.txt
+# Oct/11/2002
+ 
+ 
+#=============================#
+# internet resource knowledge #
+#=============================#
+ 
+# context
+#--------#
+ihi is begin hierarchy
+object
+/    iresource
+/    ingroup
+//       company
+//       government
+attribute
+/    product
+/    service
+end hierarchy ihi
+ 
+# attributes
+#-----------#
+iresource has
+      type,       # html,gif, etc.
+      language,
+      url,        # this resource
+      href,       # resource list
+      author,
+      title,
+      keyword,
+      description,
+      iknit       # hierarchy w/product, person, company, etc.
+ 
+# iresource knowledge template
+# insert details for this iresource
+#----------------------------------#
+iknit is begin hierarchy
+space
+time
+EVENT
+ 
+action
+attribute
+relation
+ 
+person
+product
+service
+company
+government
+end hierarchy iknit

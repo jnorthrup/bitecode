@@ -1,0 +1,235 @@
+
+##### Ready. #####
+##### Do you have new knowledge? #####
+##### Do you have questions? #####
+##### For KE input menu enter: do menu done #####
+# command <do read from ARLsearch.ku done>
+##### read_knit ARLsearch.ku #####
+# command <do read from AynRandLexicon.rel done>
+##### read_knit AynRandLexicon.rel #####
+# statement <topic isu set of existent>
+# statement <xref_see is relation with automatic = ISMEM,label = [ topic,See ],format = [ topic:1,topic:2 ],meaning = { $1 has See = [ $2 ] ;}>
+# statement <xref_seealso is relation with automatic = ISMEM,label = [ topic,See Also ],format = [ topic:1,topic:2 ],meaning = { $1 has See Also = [ $2 ] ;}>
+# 0 errors found in relation xref_see
+# 0 errors found in relation xref_seealso
+# 0 errors found in file AynRandLexicon.rel
+# command <do size_member od topic done>
+452 # do size_member od topic done
+# command <do find od *dichotomy* done>
+"is"-"ought" dichotomy
+analytic-synthetic dichotomy
+mind-body dichotomy
+moral-practical dichotomy
+soul-body dichotomy
+theory-practice dichotomy
+# assignment <set x = psycho-epistemology>
+# question <? has See += psycho-epistemology>
+# question <? has See Also += psycho-epistemology>
+anti-conceptual mentality has See Also += [psycho-epistemology,
+    tribalism,
+    racism,
+    concepts,
+    reason,
+    perception]
+artistic creation has See Also += [psycho-epistemology,
+    emotions,
+    stylization,
+    sense of life,
+    creation,
+    art]
+automatization has See Also += [psycho-epistemology,
+    integration (mental),
+    learning,
+    subconscious]
+decorative arts has See Also += [psycho-epistemology,
+    visual arts,
+    beauty,
+    esthetics,
+    art]
+emotions has See Also += [psycho-epistemology,
+    motivation by love vs. by fear,
+    happiness,
+    introspection,
+    automatization,
+    love,
+    values,
+    rationality,
+    loneliness,
+    whims/whim-worship,
+    hostility,
+    pleasure and pain,
+    rationalization,
+    sense of life,
+    subconscious,
+    motivation,
+    soul-body dichotomy,
+    reason,
+    Freud,
+    'envy/hatred of the good for being the good']
+integration (mental) has See Also += [psycho-epistemology,
+    sensations,
+    consciousness,
+    understanding,
+    concepts,
+    learning,
+    concept-formation]
+language has See Also += [psycho-epistemology,
+    communication,
+    grammar,
+    concepts,
+    words,
+    linguistic analysis,
+    reason,
+    perception,
+    concept-formation]
+literature has See Also += [psycho-epistemology,
+    theme (literary),
+    plot-theme,
+    novel,
+    thrillers,
+    modern art,
+    popular literature,
+    characterization,
+    style,
+    plot,
+    concepts,
+    Aristotle,
+    sense of life,
+    romanticism,
+    classicism,
+    art,
+    naturalism,
+    determinism]
+mathematics has See Also += [psycho-epistemology,
+    'method, concepts of',
+    unit-economy,
+    measurement,
+    unit,
+    science,
+    epistemology,
+    numbers]
+mental health has See Also += [neurosis vs. psychosis,
+    psycho-epistemology,
+    evasion,
+    imagination,
+    subconscious,
+    self-esteem,
+    Freud,
+    psychology,
+    behaviorism]
+music has See Also += [psycho-epistemology,
+    sensations,
+    emotions,
+    sense of life,
+    dance,
+    performing arts,
+    opera and operetta,
+    art,
+    ballet,
+    concept-formation]
+performing arts has See Also += [psycho-epistemology,
+    music,
+    integration (mental),
+    metaphysical value-judgments,
+    dance,
+    opera and operetta,
+    esthetics,
+    art,
+    ballet]
+sculpture has See Also += [psycho-epistemology,
+    philosophy,
+    metaphysics,
+    visual arts,
+    man,
+    free will,
+    ancient Greece,
+    esthetics,
+    art,
+    painting,
+    determinism]
+style has See Also += [psycho-epistemology,
+    metaphysics,
+    identity,
+    stylization,
+    sense of life,
+    focus,
+    subject (in art),
+    art]
+subconscious has See Also += [psycho-epistemology,
+    introspection,
+    consciousness,
+    automatization,
+    philosophy,
+    values,
+    "psychologizing",
+    emotions,
+    integration (mental),
+    free will,
+    logic,
+    sense of life,
+    context,
+    Freud,
+    psychology]
+subject (in art) has See Also += [psycho-epistemology,
+    sculpture,
+    metaphysics,
+    style,
+    sense of life,
+    art,
+    painting,
+    literature]
+subjectivism (psychological) has See Also += [psycho-epistemology,
+    amoralism,
+    psychology]
+tribalism has See Also += [psycho-epistemology,
+    'Kant, Immanuel',
+    altruism,
+    America,
+    racism,
+    self,
+    individualism,
+    amoralism,
+    irrationalism,
+    collectivism,
+    selfishness,
+    language,
+    statism,
+    self-esteem,
+    anti-conceptual mentality,
+    "ethnicity",
+    reason]
+unit-economy has See Also += [psycho-epistemology,
+    consciousness,
+    automatization,
+    "Rand's razor",
+    identity,
+    meaning (of concepts),
+    definitions,
+    words]
+words has See Also += [psycho-epistemology,
+    unit-economy,
+    communication,
+    grammar,
+    concepts,
+    meaning (of concepts),
+    unit,
+    language,
+    definitions,
+    nominalism,
+    linguistic analysis,
+    perception,
+    concept-formation]
+# question <psycho-epistemology has See = ?>
+# question <psycho-epistemology has See Also = ?>
+psycho-epistemology has See Also = [consciousness,
+    automatization,
+    rationality,
+    integration (mental),
+    style,
+    free will,
+    learning,
+    subconscious,
+    epistemology,
+    anti-conceptual mentality,
+    psychology]
+# 0 errors found in file ARLsearch.ku

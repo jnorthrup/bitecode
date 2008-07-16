@@ -1,0 +1,162 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "RDF-Interest" <www-rdf-interest@w3.org>
+Cc: "Richard S. Latimer" <latimer1@att.net>,
+	"William Thomas" <wthomas@nycap.rr.com>
+Subject: a hierarchy is an unambiguous lattice
+Date: Sun, 24 Nov 2002 19:26:44 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_000D_01C293EF.6C654C40"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000D_01C293EF.6C654C40
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Words are ambiguous because the same word is used in different contexts =
+with different meanings.  We can pin down the meaning of a word, in a =
+given context, by using a genus-differentia definition.  When we do that =
+we can arrange our words into a genus-species hierarchy (often called a =
+taxonomy).  If we merge two different contexts together, using the same =
+word even though it has different meanings, we get a lattice (often =
+called an ontology).
+
+I very deliberately used the word "ontology".  It is a sad fact that =
+many brilliant researchers in the field of Artificial Intelligence have =
+used ontologies instead of taxonomies.  This AI research is the =
+foundation of the current Semantic Web activity.
+
+Enough abstractions.  Let me give you a very simple example.
+Aristotle said: man is a rational animal.
+Ms. Feminist said: You chauvinist pig! Women are people too.
+Dr. AI said: OK, let's collect everything we know about "man".
+From Aristotle, we know that:
+    man is an animal
+    man is rational
+    man has sex =3D male or female
+From Ms. Feminist, we know that
+    person is an animal
+    woman is a person with sex =3D female
+    man is a person with sex =3D male
+    woman is better than man
+Now that we have all this information together, we can see that
+    the genus of man is animal and person
+    man is rational
+    man has sex =3D male or female
+
+Now I don't believe that any AI researcher is that naive.  But I do =
+believe that many AI researchers have used ambiguous "definitions" of =
+words in less obvious cases, while simultaneously proclaiming that it is =
+"impossible" to define words.
+
+That is why genus-differentia definitions are part of the KR language.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart list of proposition
+
+------=_NextPart_000_000D_01C293EF.6C654C40
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Words are ambiguous because the same =
+word is used=20
+in different contexts with different meanings.&nbsp; We can pin down the =
+meaning=20
+of a word, in a given context, by using a genus-differentia =
+definition.&nbsp;=20
+When we do that we can arrange&nbsp;our words into a genus-species =
+hierarchy=20
+(often&nbsp;called a taxonomy).&nbsp; If we merge two different contexts =
+
+together, using the same word even though it has different meanings, we =
+get a=20
+lattice (often called an ontology).</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>I very deliberately used the word =
+"ontology".&nbsp;=20
+It is a sad fact that many brilliant researchers in the field of =
+Artificial=20
+Intelligence have used ontologies instead of taxonomies.&nbsp; This AI =
+research=20
+is the foundation of the current Semantic Web activity.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Enough abstractions.&nbsp; Let me give =
+you a very=20
+simple example.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Aristotle said: man is a rational=20
+animal.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Ms. Feminist said: You chauvinist pig! =
+Women are=20
+people too.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Dr. AI said: OK, let's collect =
+everything we know=20
+about "man".</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>From Aristotle, we know =
+that:</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man is an =
+animal</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man is =
+rational</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man has sex =3D male =
+or=20
+female</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>From Ms. Feminist, we know =
+that</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; person is an =
+animal</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; woman is a person =
+with sex =3D=20
+female</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man is a person with =
+sex =3D=20
+male</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp;&nbsp;woman is better =
+
+than&nbsp;man</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Now that we have all this information =
+together, we=20
+can see that</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; the genus of man is =
+animal and=20
+person</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man is =
+rational</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; man has sex =3D male =
+or=20
+female</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Now I don't believe that any AI =
+researcher is that=20
+naive.&nbsp; But I do believe that many AI researchers have used =
+ambiguous=20
+"definitions" of words in less obvious cases,&nbsp;while simultaneously=20
+proclaiming that it is "impossible" to define words.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>That is why genus-differentia =
+definitions are part=20
+of&nbsp;the KR language.</FONT></DIV>
+<DIV>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D <BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> list =
+<B>of</B>=20
+proposition<BR></DIV></BODY></HTML>
+
+------=_NextPart_000_000D_01C293EF.6C654C40--

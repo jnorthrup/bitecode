@@ -1,0 +1,65 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/applications/SemanticWeb/Microsoft/addressbook.def
+# Apr/5/2003
+
+#========================#
+# Microsoft Address Book #
+#   Outlook Express      #
+#   .csv export file     #
+#   version 6.0          #
+#========================#
+
+msoe6 is relation with
+    arity = 29,
+    format = [
+	First Name:1,
+	Last Name:2,
+	Middle Name:3,
+	Name:4,
+	Nickname:5,
+	E-mail Address:6,
+	Home Street:7,
+	Home City:8,
+	Home Postal Code:9,
+	Home State:10,
+	Home Country/Region:11,
+	Home Phone:12,
+	Home Fax:13,
+	Mobile Phone:14,
+	Personal Web Page:15,
+	Business Street:16,
+	Business City:17,
+	Business Postal Code:18,
+	Business State:19,
+	Business Country/Region:20,
+	Business Web Page:21,
+	Business Phone:22,
+	Business Fax:23,
+	Pager:24,
+	Company:25,
+	Job Title:26,
+	Department:27,
+	Office Location:28,
+	Notes:29
+	],
+    meaning = {
+	$4 has Name=$4;
+	$4 has First Name += $1,Middle Name += $3; Last Name += $2;
+	$4 has Nickname += $5;
+	$4 has Email += $6;
+	$4 has Home Street=$7,Home City=$8,Home State=${10},
+		Home Postal Code=$9,Home Country/Region=${11};
+	$4 has Home Phone=${12},Home Fax=${13},Mobile Phone=${14};
+	$4 has Personal Web Page=${15};
+	$4 has Business Street=${16},Business City=${17},Business State=${19},
+		Business Postal Code=${18},Business Country/Region=${20};
+	$4 has Business Web Page=${21};
+	$4 has Business Phone=${22},Business Fax=${23};Pager=${24};
+	$4 has Company=${25},Job Title=${26},Department=${27},
+		Office Location=${28};
+	$4 has Notes += ${29};
+	};
+
+</XMP>
+</HTML>

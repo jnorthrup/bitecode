@@ -1,0 +1,50 @@
+Reply-To: "Richard H. McCullough" <rhm@cdepot.net>
+From: "Richard H. McCullough" <rhm@volcano.net>
+To: "KR-language" <KR-language@YahooGroups.com>
+Cc: "OWL at W3C" <www-rdf-logic@w3.org>,
+	"semantic-web at W3C" <semantic-web@w3c.org>
+Subject: intersection & union definitions in OWL and MKR
+Date: Thu, 13 Oct 2005 22:47:19 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	format=flowed;
+	charset="iso-8859-1";
+	reply-type=original
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.2670
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2670
+
+I'm going to make these even more abbreviated
+because I'm getting tired of writing OWL.
+
+Note: line boundaries are invisible in MKR.
+Each definition could have been written on a single line.
+
+# OWL definition                            # MKR definition
+<Class ... "subject">                        subject
+<intersectionOf>                                   isand
+<Class ... "c1"/>                                        c1,
+...                                                               ...,
+</intersectionOf>                                        ;
+</Class>
+
+<Class ... "subject">                            subject
+<unionOf>                                            isor
+<Class ... "c1"/>                                      c1,
+...                                                              ...,
+</unionOf>                                                ;
+</Class>
+
+<Class ... "subject">                                subject
+<disjointUnionOf>                                    isxor
+<Class ... "c1"/>                                        c1,
+...                                                                ...,
+</disjointUnionOf>                                        ;
+</Class>
+
+Dick McCullough
+knowledge := man do identify od existent done;
+knowledge haspart proposition list;
+http://rhm.cdepot.net/

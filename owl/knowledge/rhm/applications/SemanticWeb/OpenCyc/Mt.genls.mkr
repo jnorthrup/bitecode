@@ -1,0 +1,11 @@
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/Mt.genls.mkr
+# Aug/31/2003
+
+# generate OpenCyc Microtheory genls hierarchy
+
+set echo=off, kbmode=cyc;
+
+#$Microtheory isg* ?;
+#$Microtheory isp* ?;
+
+exit;

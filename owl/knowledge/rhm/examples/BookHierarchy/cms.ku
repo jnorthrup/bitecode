@@ -1,0 +1,36 @@
+# 1999/4/24
+
+# Mario Bunge,
+# "Causality and Modern Science", Third Revised Edition,
+# Dover Publications, Inc., 1979.
+
+!begin hierarchy
+book
+/    Causality and Modern Science
+
+Causality and Modern Science
+/    Preface to the Dover Edition
+/    Preface to the Second Edition
+/    Preface to the First Edition
+/    Acknowledgments
+/    Part I A Clarification of Meaning
+//	1. Causation and Determination, Causalism and Determinism
+//	2. Formulations of the Causal Principle
+/    Part II What Causal Determinism Does Not Assert
+//	3. An Examination of the Empiricist Critique of Causality
+//	4. An Examination of the Romantic Critique of Causality
+/    Part III What Causal Determinism Does Assert
+//	5. The Linearity of Causation
+//	6. The Unidirectionality of Causation
+//	7. The Externality of Causation
+//	8. Causality and Novelty
+/    Part IV The Function of the Causal Principle in Science
+//	9. Causality and Rational Knowledge
+//	10. Causality and Scientific Law
+//	11. Causality and Scientific Explanation
+//	12. Causality and Scientific Prediction
+//	13. The Place of the Causal Principle in Modern Science
+/    Appendix
+/    Bibliography
+/    Index
+!end hierarchy

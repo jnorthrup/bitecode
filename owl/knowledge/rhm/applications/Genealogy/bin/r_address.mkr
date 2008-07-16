@@ -1,0 +1,30 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/r_address.mkr
+# Mar/8/2007
+
+
+#============================#
+# print GDBM r_address table #
+#============================#
+# input  GDBM r_address (C:/cygwin/home/family/db/test/r_address)
+# output MKR  r_address.txt
+
+outfile := ../report/r_address.txt;
+
+do read from ../bin/family.env done;  # set kbmode,kedb,view
+r_address has arraymode = gdbm;	# GDBM r_phone
+
+! rm -f $outfile done;
+do size/gdbm od r_address done;
+every p in r_address; {
+    every q ismem $p; {
+	name  := r_aka[$q][5];
+	tuple := r_address[$q];
+	do print od "$name: $tuple" to $outfile done;
+    };
+};
+
+! sort -u -o $outfile $outfile done;
+
+exit;
+# </xmp></html>

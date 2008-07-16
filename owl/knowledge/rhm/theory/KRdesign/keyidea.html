@@ -1,0 +1,120 @@
+<HTML>
+<H3>
+<XMP>
+# KEHOME/knowledge/theory/KRdesign/keyidea.html
+# Jul/16/2002
+# new syntax Sep/3/2002
+
+#=======================================#
+# key ideas of knowledge representation #
+#=======================================#
+
+# existence
+	entity isa existent
+# identity
+	entity has attribute = value
+	entity do action = event od aobject done
+	entity isin relation = infon
+# consciousness
+	I do perceive od entity done
+
+
+# knowledge
+	knowledge := I do identify od existent done
+# knowledge unit (knit)
+	knit isa knowledge
+	knit has view=v
+	at view=v				# context
+	knit := I do identify od existent done	# concept-hierarchy
+
+# change
+	event changes eobject \
+		from attribute=initial \
+		to attribute=final
+# change unit (chit)
+	knit haspart chit
+	chit has space=s,time=t,view=v
+	at space=s, time=t, view=v	# context
+	entity do action = event od aobject done
+	event changes eobject \
+		from attribute=initial \
+		to attribute=final
+
+
+# definition by differentiation (genus-differentia)
+	concept is genus with essential-characteristic
+# definition by integration (ostensive)
+	concept is either unit:1 or unit:2 or ...
+# definition by identity
+	concept:1 is concept:2
+
+
+# relation
+	relation is existent with
+		format=[class:1; ...; class:n],
+		meaning={... $1 ... $n ...}
+# causality (phenomenon)
+	event:1 causes event:2
+# part
+	entity haspart part=partcount
+
+
+# concept-formation by integration
+	concept isi unit:1,unit:2,... with
+		common-characteristic
+# concept-formation by differentiation
+	concept:1,concept:2,... isd genus with
+		distinguishing-characteristic
+# meaning
+	symbol means referent
+
+
+# sentence
+	sentence isa knit
+	sentence ise statement,command,question,assignment
+# conditional
+	if sentence:1 then sentence:2 else sentence:3 fi
+# iteration (use $variable within sentence)
+	every variable isa concept { sentence }
+# method
+	method is action with
+		format=[class:1; ...; class:n],
+		meaning={... $1 ... $n ...}
+
+
+# statement
+	subject verb object pplist
+
+# command
+	do action od aobject pplist done
+	do method od aobject pplist done
+	vdo find od name done	# all views
+
+# question
+	subject verb object ?	# true or false
+	subject verb ?		# matching objects
+	subject ? object	# relation between subject and object
+	? verb object		# matching subjects
+
+# assignment
+	set variable = value
+
+
+
+# characteristic and part
+	hchar is begin hierarchy
+	existent
+	/    characteristic
+	//	attribute
+	///	    space
+	///	    time
+	///	    view
+	//	action
+	//	relation
+	//      part
+	end hierarchy hchar
+</XMP>
+<BR>
+<A HREF="../../../doc/ref.html"> General References </A> <BR>
+</H3>
+</HTML>

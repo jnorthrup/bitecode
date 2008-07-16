@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TAP KB Fragment. Made available under the TAP KB Open License. Please
+     see http://tap.stanford.edu/license.html -->
+<rdf:RDF
+    xmlns:tkb=""
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:a="http://tap.stanford.edu/2002/05/GetDataSchema#"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tap="http://tap.stanford.edu/data/">
+  <rdfs:Class rdf:ID="Person"/>
+  <rdf:Description rdf:about="Mary">
+    <sex>female</sex>
+  </rdf:Description>
+  <Person rdf:ID="Bob"/>
+  <rdf:Description rdf:about="John">
+    <playsFor>Angels</playsFor>
+  </rdf:Description>
+  <rdf:Description rdf:about="Sue">
+    <sex>female</sex>
+  </rdf:Description>
+  <Person rdf:ID="ElleMacPherson"/>
+  <Person rdf:ID="DickMcCullough"/>
+  <Person rdf:ID="Sue"/>
+  <rdfs:Class rdf:ID="Class"/>
+  <rdf:Description rdf:about="who">
+    <sameAs>you</sameAs>
+  </rdf:Description>
+</rdf:RDF>

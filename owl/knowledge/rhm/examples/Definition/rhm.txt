@@ -1,0 +1,38 @@
+# KEHOME/knowledge/ExamplesDefinition/rhm.txt
+# 1999/6/10
+
+#===================================#
+# Richard H. McCullough definitions #
+#===================================#
+
+A concept is an exclusive mental integration
+of two or more similar units.
+Note that the units are unordered.
+The KR expression of a concept is
+  concept is either unit:1 or unit:2 or ...
+
+A group is an inclusive mental integration
+of two or more similar units (members).
+Note that the members may be either ordered
+(e.g., a sequence) or unordered (e.g., a set).
+The KR expression of a group is
+  group is all member:1 and member:2 and ...
+
+A sequence is a group with numerically ordered members.
+
+A set is a group with unordered members.
+
+A proposition is a sequence of mental units assembled
+using rules of grammar; each mental unit is either
+  a nocept (no referents in reality) or
+  a percept (one particular referent in reality) or
+  a concept (disjunction of two or more referents in reality) or
+  a group (conjunction of two or more referents in reality).
+A proposition consists of two parts: a sentence,
+and the context (space,time,view) of the sentence.
+
+Believability is a (contextual, psychological) measurement
+assigned by a person to a statement, which defines that
+person's degree of certainty that the statement is a
+fact of reality.  Believability is a real number ranging
+from -1.0 (certainly false) to +1.0 (certainly true).

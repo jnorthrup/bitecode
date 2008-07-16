@@ -1,0 +1,74 @@
+<HTML>
+# KEHOME/knowledge/theory/KRdesign/dot.html <BR>
+# May/13/2003 <BR>
+<BR>
+<H2> Exploring the ... concept </H2>
+<BR>
+<H3>
+To facilitate the exploration of concept-hierarchies <BR>
+(or concept-lattices), I have extended the UNIX directory <BR>
+"dot" notation to three levels: <BR>
+<UL>
+<TABLE>
+  <TR><TD><B>/   <TD><B>is existent <BR>
+  <TR><TD><B>..  <TD><B>is the current genus of the current concept <BR>
+  <TR><TD><B>.   <TD><B>is the current concept <BR>
+  <TR><TD><B>... <TD><B>is the current species|unit of the current concept<BR>
+</TABLE>
+</UL>
+The three "dot" concepts can be used in any Knowledge Explorer <BR>
+statement, command or question.  The "next" concept <BR>
+steps through all possible values of ".." or "...".  The "dot" <BR>
+concepts are especially handy when the concept names are long. <BR>
+ <BR>
+ <BR>
+For example, consider the heading lattice from Keith Devlin's book <BR>
+"Goodbye, Descartes" (KEHOME/knowledge/examples/BookHierarchy/gd.ho). <BR>
+It is a lattice, not a hierarchy,
+because "Goodbye, Descartes" is <BR>
+the heading for both the book (the title) and a chapter section. <BR>
+If I hadn't included the chapter number, straight from the <BR>
+table of contents, "Goodbye, Descartes" would also be the <BR>
+heading of chapter 11. <BR>
+ <BR>
+After loading the lattice
+<UL>
+    do read from gd.ho done; <BR>
+</UL>
+and making "Goodbye, Descartes" the current concept
+<UL>
+    do find od Goodbye* done; <BR>
+    set . = $Command; <BR>
+</UL>
+successive applications of the next concept assignment
+<UL>
+    set ... = next; <BR>
+</UL>
+give all the chapter headings, and
+<UL>
+    set .. = next; <BR>
+</UL>
+gives the heading of chapter 11. <BR>
+ <BR>
+ <BR>
+The Knowledge Explorer input prompt can have one of the three forms
+<UL>
+    &lt;cview:..=cgenus&gt; <BR>
+    &lt;cview:.=cconcept&gt; <BR>
+    &lt;cview:...=cspecies&gt; <BR>
+</UL>
+depending on whether or not the "next" concept assignment is in progress. <BR>
+The names are
+<UL>
+<TABLE>
+    <TR><TD><B>cview    <TD><B>current view <BR>
+    <TR><TD><B>cgenus   <TD><B>current genus of current concept <BR>
+    <TR><TD><B>cconcept <TD><B>current concept <BR>
+    <TR><TD><B>cspecies <TD><B>current species|unit of current concept <BR>
+</TABLE>
+</UL>
+<BR>
+<BR>
+<A HREF="../../../doc/ref.html"> General References </A> <BR>
+</H3>
+</HTML>

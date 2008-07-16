@@ -1,0 +1,200 @@
+############################################################
+########## WRITING KNIT <view = v_compare> ##########
+nonexistent
+hfocus = channel
+debug = NO
+channel
+/  arts
+/  autos
+//    ...
+//    buy a car
+//    cars
+//    makes & models
+//    racing
+//    vehicles
+/  business
+//    ...
+//    business resources
+//    small businesses
+/  business & economy
+//    business
+///      ...
+///      business resources
+///      small businesses
+//    economy
+/  business & investing
+//    business
+///      ...
+///      business resources
+///      small businesses
+//    investing
+//    investments
+//    mutual funds
+//    portfolio
+/  careers
+//    ...
+//    at work
+//    education
+//    find an ideal job
+/  careers & education
+//    careers
+///      ...
+///      at work
+///      education
+///      find an ideal job
+//    education
+//    job listings
+//    k-12
+//    universities
+/  computer
+//    ...
+//    buy a pc
+//    download
+//    shareware
+/  computers & internet
+//    computers
+///      ...
+///      buy a pc
+///      download
+///      shareware
+//    hardware
+//    internet
+///      ...
+///      intranet
+///      web publishing
+//    software
+/  education
+/  entertainment
+//    ...
+//    books
+//    games
+///      consoles
+///      internet
+////        ...
+////        intranet
+////        web publishing
+///      new releases
+//    movies
+//    music
+//    tv
+/  fun
+/  games
+//    consoles
+//    internet
+///      ...
+///      intranet
+///      web publishing
+//    new releases
+/  government
+/  health
+//    ...
+//    diseases
+//    drugs
+//    fitness
+/  internet
+//    ...
+//    intranet
+//    web publishing
+/  kids & family
+//    ...
+//    family
+//    hobbies & interests
+//    kids
+//    parenting
+/  lifestyle
+//    health
+///      ...
+///      diseases
+///      drugs
+///      fitness
+//    horoscopes
+//    relationships
+/  my channel
+//    personalize your page!
+/  news
+//    ...
+//    business
+///      ...
+///      business resources
+///      small businesses
+//    custom news
+//    tech
+//    top stories
+//    world
+/  news & media
+//    media
+//    news
+///      ...
+///      business
+////        ...
+////        business resources
+////        small businesses
+///      custom news
+///      tech
+///      top stories
+///      world
+/  people & chat
+//    boards
+//    chat
+//    chat rooms
+//    people
+/  personal finance
+//    ...
+//    investing
+//    mutual funds
+//    taxes
+/  real estate
+//    ...
+//    buy a home
+//    financing
+//    fix it up
+/  recreation & sports
+//    recreation
+//    sports
+///      ...
+///      basketball
+///      football
+///      golf
+///      hockey
+/  reference
+/  regional
+/  science
+/  services:
+//    book flights
+//    maps
+//    people finder
+//    yellow pages
+/  shopping
+//    ...
+//    bargains
+//    clothes
+//    gifts
+//    music
+//    music cds
+//    online malls
+/  social science
+/  society & culture
+//    culture
+//    society
+/  sports
+//    ...
+//    basketball
+//    football
+//    golf
+//    hockey
+/  the good life
+//    ...
+//    beer
+//    dining
+//    wine
+/  travel
+//    ...
+//    air travel
+//    farefinder
+//    maps
+//    money savers
+//    reservations
+//    vacation ideas
+/  weather
+#========== END KNIT <view = v_compare> ==========
+#============================================================

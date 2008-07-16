@@ -1,0 +1,148 @@
+<HTML>
+<XMP>
+
+<!--  Class  -->
+Class
+/  Body
+/  BodyWithNonAdjustableShutterSpeed
+/  Camera
+/  Digital
+/  Large-Format
+/  Lens
+/  Money
+/  Property
+/  PurchaseableItem
+/  Range
+/  Resource
+/  SLR
+/  Viewer
+/  Window
+/  Alt
+/  Bag
+/  List
+/  Literal
+/  Seq
+/  Statement
+/  XMLLiteral
+/  Container
+/  ContainerMembershipProperty
+/  Datatype
+<!--  Class hierarchy  -->
+PurchaseableItem
+/  Body
+/  Camera
+//    Digital
+//    Large-Format
+/  Lens
+part
+/  body
+/  lens
+/  _n
+/  first
+/  rest
+Money
+Range
+Window
+/  ThroughTheLens
+/  WindowOnTopOfCamera
+Viewer
+<!--  Properties  -->
+PurchaseableItem has  
+    classname = PurchaseableItem\Thing,
+    cost = &null,
+    rootname = Thing/PurchaseableItem,
+    shortname = PurchaseableItem,
+    xmlname = PurchaseableItem,
+    xmlns = [] 
+    ;
+Camera has  
+    body = &null,
+    classname = Camera\PurchaseableItem\Thing,
+    gtype = part,
+    lens = &null,
+    rootname = Thing/PurchaseableItem/Camera,
+    shortname = Camera,
+    viewFinder = &null,
+    xmlname = Camera,
+    xmlns = [] 
+    ;
+Body has  
+    classname = Body\PurchaseableItem\Thing,
+    gtype = part,
+    rootname = Thing/PurchaseableItem/Body,
+    shortname = Body,
+    shutter-speed = &null,
+    xmlname = Body,
+    xmlns = [] 
+    ;
+Lens has  
+    aperture = &null,
+    classname = Lens\PurchaseableItem\Thing,
+    f-stop = &null,
+    focal-length = &null,
+    rootname = Thing/PurchaseableItem/Lens,
+    shortname = Lens,
+    size = &null,
+    xmlname = Lens,
+    xmlns = [] 
+    ;
+SLR has  
+    classname = SLR,
+    rootname = SLR,
+    shortname = SLR,
+    xmlname = SLR,
+    xmlns = [] 
+    ;
+Digital has  
+    classname = Digital\Camera\PurchaseableItem\Thing,
+    rootname = Thing/PurchaseableItem/Camera/Digital,
+    shortname = Digital,
+    xmlname = Digital,
+    xmlns = [] 
+    ;
+Large-Format has  
+    classname = Large-Format\Camera\PurchaseableItem\Thing,
+    rootname = Thing/PurchaseableItem/Camera/Large-Format,
+    shortname = Large-Format,
+    xmlname = Large-Format,
+    xmlns = [] 
+    ;
+Money has  
+    classname = Money\Thing,
+    currency = &null,
+    rootname = Thing/Money,
+    shortname = Money,
+    xmlname = Money,
+    xmlns = [] 
+    ;
+Range has  
+    classname = Range\Thing,
+    max = &null,
+    min = &null,
+    rootname = Thing/Range,
+    shortname = Range,
+    units = &null,
+    xmlname = Range,
+    xmlns = [] 
+    ;
+Window has  
+    classname = Window\Thing,
+    rootname = Thing/Window,
+    shortname = Window,
+    xmlname = Window,
+    xmlns = [] 
+    ;
+Viewer has  
+    classname = Viewer,
+    rootname = Viewer,
+    shortname = Viewer,
+    xmlname = Viewer,
+    xmlns = [] 
+    ;
+<!--  equivalences  -->
+[aperture is f-stop] iss DatatypeProperty with unknown differentia;
+[focal-length is size] iss DatatypeProperty with unknown differentia;
+<!--  check knit  -->
+
+</XMP>
+</HTML>

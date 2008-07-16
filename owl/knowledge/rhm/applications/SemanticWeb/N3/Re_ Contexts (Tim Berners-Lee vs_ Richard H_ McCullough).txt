@@ -1,0 +1,216 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "Graham Klyne" <GK@ninebynine.org>
+Cc: "Danny Ayers" <danny666@virgilio.it>; "RDF-Interest" <www-rdf-interest@w3.org>; "Tim Berners-Lee" <timbl@mit.edu>
+Subject: Re: Contexts (Tim Berners-Lee vs. Richard H. McCullough)
+Date: Thursday, November 14, 2002 5:23 PM
+
+Okay, folks, here's the scoop.
+I read [1] carefully, and concluded that Tim's definition of context is essentially the same as mine.  Despite the fact that [1] says
+    "Context is the relationship between a statement and the formula it is directly part of."
+the examples and discussion indicate that
+    The context of a statement is the (sub)formula that is necessary to understand its meaning.
+Note that the (sub)formula does not include the statement, and may be part of some enclosing context which is physically separated from the statement.  In rare cases, such as axiomatic concepts or inter-dependent concepts, the statement may be part of its own context.  Since the context of a statement logically precedes it, it is to be expected that the order of statements is important.
+
+The rest of this email displays the KR version of the "Anonymous nodes" and "Formulae" examples from [1].  If you don't understand the KR version, ask me for clarification or consult [2],[3].
+
+"Anonymous nodes" example
+    at view = doc {
+        forSome g1 isa person {
+            forSome g2 isa book {
+                $g1 has firstname = "Ora";
+                $g2 has title = "Moby Dick";
+                at time = past { $g1 do write od $g2 done }
+            } # end forSome g2
+        } # end forSome g1
+    } # end view = doc
+
+"Formulae" example
+    at view = doc {
+        forSome c1 isa view {
+            at view = $c1 {
+                forSome g1 isa person {
+                    forSome g2 isa book {
+                        $g1 has firstname = "Ora";
+                        $g2 has title = "Moby Dick";
+                        at time = past { $g1 do write od $g2 done }
+                    } # end forSome g2
+                } # end forSome g1
+        } # end view = $c1
+        $c1 has type = falsehood
+    } # end view = doc
+
+References
+[1] http://www.w3.org/DesignIssues/Notation3
+[2] http://rhm.cdepot.net/doc/KRgrammar.txt
+[3] http://rhm.cdepot.net/doc/KEtutorial.txt
+============ 
+Dick McCullough 
+knowledge := man do identify od existent done
+knowledge haspart list of proposition
+
+  ----- Original Message ----- 
+  From: Graham Klyne 
+  To: Richard H. McCullough 
+  Cc: Danny Ayers ; RDF-Interest 
+  Sent: Thursday, November 14, 2002 8:14 AM
+  Subject: Re: Contexts (not again!)
+
+
+  At 06:06 AM 11/14/02 -0800, Richard H. McCullough wrote:
+  >I'm having trouble understanding your notion of "context".
+
+  As I am yours.   The term has been much abused (and I don't excuse myself).
+
+  Because it's working software, Notation 3 is probably a useful common 
+  ground, with its notions of formulae (roughly: collections of statements) 
+  and context "Context is the relationship between a statement and the 
+  formula it is directly part of" [1].
+
+  I don't fully understand the last bit, but the idea of context as a 
+  relationship rather than a thing seems to sidestep the discussion of 
+  forward/backward view of these things.
+
+  #g
+  --
+
+  [1] http://www.w3.org/DesignIssues/Notation3
+
+  >Paraphrasing your three properties:
+  >     Resource has context = Statement
+  >     Statement has contains = Resource
+  >     Bag has contents = Resource
+  >
+  >This seems backwards to me.  I think of context
+  >as follows:
+  >     Statement has context = cname
+  >     cname is List of Statement
+  >
+  >Remarks:
+  >1. Although a Bag of Statements will work in some
+  >cases, I think that a List is necessary in general.
+  >2. If you want to include actions (as opposed to static
+  >Properties), then context should include space and
+  >time.
+  >3. In my KR language, I put the context before the
+  >Statement (I call the static context "view")
+  >     at view = cname { Statement }
+  >My static Statement is written as
+  >     subject has predicate = object
+  >============
+  >Dick McCullough
+  ><http://www.volcano.net/~rhm>knowledge := man do identify od existent done
+  >knowledge haspart list of proposition
+  >----- Original Message -----
+  >From: <mailto:GK@ninebynine.org>Graham Klyne
+  >To: <mailto:danny666@virgilio.it>Danny Ayers
+  >Cc: <mailto:www-rdf-interest@w3.org>RDF-Interest
+  >Sent: Wednesday, November 13, 2002 4:59 AM
+  >Subject: Re: Contexts (not again!)
+  >
+  >
+  >
+  >I think the "dark triples" approach fizzled out.  My take is that we're not
+  >ready to standardize context mechanisms yet, but  still have hopes of
+  >prototyping my ideas in this area, which aren't vastly different from what
+  >I think you're describing.  I think that reification, or a variation of it,
+  >can be used (in a prototype implementation) to encode the triples that
+  >aren't asserted.
+  >
+  >In the longer run, a standard solution may call for something more
+  >"hard-wired", with scope for optimization.  I think this might come about
+  >without invalidating/isolating the
+  >prototype approaches.
+  >
+  >#g
+  >--
+  >
+  >At 10:59 PM 11/2/02 +0100, Danny Ayers wrote:
+  >
+  > >Hi folks,
+  > >
+  > >Did any kind of consensus, or even decision (!?) result from Pat's 'dark
+  > >triples' suggestion [1] etc. earlier in the year (or any other of the
+  > >familiar context discussions)? I've had a look through the archives and as
+  > >usual the threads are hard to follow. I'm wondering because I'm running up
+  > >against this thing again.
+  > >
+  > >If there isn't anything sorted or on the cards in this area, I'd appreciate
+  > >comments on the following first crack hackiness for a context vocabulary.
+  > >I've not really got a grip on the reification angle with it yet, but the 
+  > use
+  > >I'm after is really just to be able to tag triples (make 'em quads in
+  > >memory), and it'd be nice to do it in a moderately sound fashion.
+  > >
+  > >Just three terms (the pseudo-schemas are undoubtedly way out) : context,
+  > >contains, contents
+  > >
+  > >*context* - a group of statements (identified collectively by a single URI)
+  > >with which a particular statement can be associated. In practice this would
+  > >usually be
+  > >
+  > >[triple]-context->[RDF file]
+  > >
+  > >Property "context"
+  > >    domain Resource
+  > >    range Statement
+  > >    inverseOf contains
+  > >
+  > >
+  > >*contains* - the other way around,
+  > >
+  > >[RDF file]-contains->[triple]
+  > >
+  > >Property "contains"
+  > >    domain Statement
+  > >    range  Resource
+  > >
+  > >
+  > >*contents* - a list/collection whatever of (references to) the 
+  > statements to
+  > >be identified by a given URI (i.e. the triples in a file)
+  > >
+  > >Property "contents"
+  > >    domain Bag
+  > >    range Resource
+  > >
+  > >[RDF file]-contents->[s1, s2...]
+  > >
+  > >The first of these is probably all that I'd need, but the second 
+  > insisted on
+  > >coming along. The third heard there was a party.
+  > >When I started thinking of a way around this, the first thing that came to
+  > >mind was a Context class, akin to a collection/bag, instances of which 
+  > could
+  > >be used to identify a file but with this it seemed to get messy a lot
+  > >quicker...
+  > >I'm pretty sure I'm badly conflating the unreified/reified triples here, 
+  > and
+  > >it does seem like it goes a bit beyond what can be expressed in RDF(S) 
+  > alone
+  > >(i.e. a minilayer on top) but I'm hoping that something usable won't be far
+  > >away. I'm willing to bet there's something along these lines already, but I
+  > >can think of worse ways to spend a Sunday evening.
+  > >
+  > >Cheers,
+  > >Danny.
+  > >
+  > >[1] 
+  > <http://lists.w3.org/Archives/Public/w3c-rdfcore-wg/2002Mar/0253.html>http://lists.w3.org/Archives/Public/w3c-rdfcore-wg/2002Mar/0253.html 
+  >
+  > >
+  > >
+  > >-----------
+  > >Danny Ayers
+  > >
+  > >Semantic Web Log :
+  > >http://www.citnames.com/blog
+  >
+  >-------------------
+  >Graham Klyne
+  ><<mailto:GK@NineByNine.org>GK@NineByNine.org>
+
+  -------------------
+  Graham Klyne
+  <GK@NineByNine.org>
+
+ 

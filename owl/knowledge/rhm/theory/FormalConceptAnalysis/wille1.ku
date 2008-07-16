@@ -1,0 +1,98 @@
+# 9:30 pm 9/28/97
+
+# Wille example
+# ICCS'97 page 290
+# Wille view (Figure 1)
+
+# NOTES:
+# 1. This is a direct KR translation of the
+# Conceptual Graph (Figure 1).
+# 2. I have simplified the location information by
+# using the same attribute, LOCATION, for all forms.
+
+at view = v_wille1
+
+#------------------------------------------------------------
+# Seattle's central business district, bounded by Yesler Way,
+# Route 5, Stewart Street, and the waterfront, has among its
+# sleek glass monoliths smaller buildings with gargoyles and
+# other lively early-twentieth-century decorations that give
+# it an interesting texture.
+#------------------------------------------------------------
+building_1, building_2 isa BUILDING
+gargoyle_1 isa GARGOYLE
+decoration_1 isa DECORATION
+"Central Business" isa DISTRICT
+
+"Central Business" has \
+	BOUND = "Yesler Way, Route 5, Stewart St., Waterfront",
+	TEXTURE = INTERESTING
+"Central Business" haspart building_1, building_2
+building_1 is "SLEEK GLASS MONOLITH"
+building_2 has SMALL
+building_2 haspart gargoyle_1, decoration_1
+decoration_1 has "LIVELY EARLY-TWENTIETH-CENTURY DECORATION"
+
+"Central Business" haspart building_1,building_2 do GIVE \
+	"Central Business" has TEXTURE=INTERESTING
+
+#------------------------------------------------------------
+# The restored Arctic Building (1917), on the corner of Third
+# Avenue and Cherry Street, is a Renaissance Revival palazzo
+# in terra-cotta decorated with a set of walrus heads.
+#------------------------------------------------------------
+terra_cotta_1 isa TERRA_COTA
+"Arctic Building" isa BUILDING
+
+head_1 isa HEAD
+head_1 isapart WALRUS
+
+"Arctic Building" has \
+	restored,
+	LOCATION = "corner of Third Avenue and Cherry Street"
+
+"Arctic Building" is "Renaissance Revival palazzo"
+"Renaissance Revival palazzo" has \
+	LOCATION = terra-cotta_1
+"Renaissance Revival palazzo" haspart head_1
+
+#------------------------------------------------------------
+# Eight Indian heads distinguish an upper-story frieze of the
+# brick-and-terra-cotta Cobb Building (1910), on the corner of
+# Fourth and University Street, which reflects the Beaux-Arts
+# orientation of its New York architects, Howells and Stokes.
+#------------------------------------------------------------
+"brick_1" isa BRICK
+"terra-cotta_1" isa TERRA-COTTA
+"Cobb Building" isa BUILDING
+
+head_8 isa HEAD
+head_8 isapart INDIAN
+
+"Cobb Building" has \
+	LOCATION += "corner of Fourth and University Street",
+	LOCATION += brick_1,
+	LOCATION += terra-cota_1,
+	ARCHITECT-OF += [Howells, Stokes]
+
+"Cobb Building" haspart FRIEZE 
+FRIEZE has UPPER-STORY
+head_8 do DISTINGUISH FRIEZE
+
+Howells, Stokes isa ARCHITECT
+Howells, Stokes has LOCATION = "New York"
+Howells, Stokes haspart "BEAUX-ARTS ORIENTATION"
+"Cobb Building" do REFLECT "BEAUX-ARTS ORIENTATION"
+
+#------------------------------------------------------------
+# The Seattle Tower (1928-1929), 1218 Third Avenue, has a lobby
+# of dark marble walls and a gilt ceiling.
+#------------------------------------------------------------
+wall_4 isa WALL
+"Seattle Tower" isa BUILDING
+
+"Seattle Tower" has LOCATION = "1218 Third Avenue"
+"Seattle Tower" haspart LOBBY
+LOBBY haspart wall_4, CEILING
+wall_4 has "DARK MARBLE"
+CEILING has GILT

@@ -1,0 +1,101 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/rhm/applications/Genealogy/greadme.html
+# Mar/12/2007
+
+#================#
+# Family History #
+#================#
+
+The most important question regarding Genealogy data is:
+
+	What are the essential concepts?
+
+My answer is:
+
+	person, birth, death, alias
+	marriage, divorce, children
+	other info. such as
+		address, phone, email,
+		work, school
+
+The files in this directory support all the functions
+of a typical Genealogy application.
+
+To protect your family history data, I recommend that
+you copy all the files to your own private directory.
+Edit each .rel file, adding your own data.
+
+
+#===========#
+# Searching #
+#===========#
+
+Searching for information is simple, e.g.,
+
+  do read from family.ku done;
+  name has child=?;	# children of name
+  name has parent=?;	# parents of name
+  name has phone=?;	# phone number of name
+  ? has phone;		# all phone numbers
+  ? do  marry done;	# all marriages
+  ? has sex=female;	# all females
+  ? isa person;		# all persons
+
+  do read from tree.ku done;
+  do ancestor   od name done;	# ancestors and spouses
+  do descendant od name done;	# descendants and spouses
+
+  do read from group.ku done;		# or lattice.ku using isa*,isc*
+  name isa* ?;				# ancestor tree (up)
+  name isc* ?;				# descendant tree (down)
+  name isa**1 ?; $Question isc**1 ?;	# siblings (up 1, down 1)
+  name isa**2 ?; $Question isc**2 ?;	# cousins (up 2, down 2)
+  name isa**2 ?; $Question isc**1 ?;	# aunts & uncles (up 2, down 1)
+
+You can use "." (current concept) to simplify searches, e.g.,
+
+  . is name;			# change "." to name
+  do print od $child  done;	# children
+  do print od $parent done;	# parents
+  do print od $phone  done;	# phone number
+  . has ?;			# all attributes
+  . do ? done;			# all actions
+
+
+#==============#
+# unique names #
+#==============#
+
+Each person must have a unique "name" for recording information.
+The easiest solution is to use unique names of the form "person/1",
+"person/2", etc.  Many other choices are possible, e.g., using
+birthdate as a suffix
+
+    Richard McCullough 1936
+    Richard McCullough 1940
+    Richard McCullough 1966
+
+aka.rel records unique name, birthname, preferred name,
+nickname, married names and other names.
+
+You can use the "*" wildcard to get a list of all names that
+match a pattern, e.g.,
+
+  do find od *Richard*McCullough* done;
+
+You can use these commands to retrieve the different parts
+of a name
+
+  name := Dr. Richard H. McCullough 1936;
+  do title-name  od $name done;	# Dr.
+  do first-name  od $name done;	# Richard
+  do middle-name od $name done;	# H.
+  do last-name   od $name done;	# McCullough
+  do suffix-name od $name done;	# 1936
+
+</XMP>
+You can use <a href="bin/check.mkr">check.mkr</a> to find
+MISSING unique names and other name CONFLICTs.
+
+</HTML>

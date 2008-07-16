@@ -1,0 +1,86 @@
+# 7:00 pm 1998/1/31
+# new syntax Jul/24/2005
+
+# file systems
+
+begin hierarchy file systems;
+rhm586;
+/	a: floppy;			# 1.4 MB
+/	c: Windows 95, application c;	# 512 MB
+/	d: user, application d;		# 256 MB
+/	e: host for j:,k:;		# 256 MB
+/	f: host for l:,m:;		# 256 MB
+/	g: Iomega Zip;			# 100 MB
+/	h: CD-ROM;			# 560 MB
+/	j: special tools;		# 256 MB compressed
+/	k: Microsoft tools;		# 256 MB compressed
+/	l: media;			# 256 MB compressed
+/	m: download;			# 256 MB compressed
+
+c: Windows 95, application c;
+/	Windows 95;
+//		MS-DOS;
+/	application c;
+//		game;
+//		internet;
+///			Eudora Light 3.0.2;
+///			Juno 1.49;
+///			LapLink 7.5;
+///			Marimba Castanet Tuner 1.0;
+///			MS Internet Explorer 3.02;
+///			Netscape Navigator Gold 3.02;
+///			Real Player;
+///			Unmozify 6.1;
+///			USRobotics RapidComm 1.2;
+///			WS_FTP Light;
+//		utility;
+///			ACDSee;
+///			Adobe Acrobat Reader 3.0;
+///			Clean Sweep Deluxe 3.0;
+///			HyperSnap;
+///			Lemmy;
+///			McAfee VirusScan;
+///			Norton Utilities;
+///			PartitionMagic 3.0, MagicMover 1.0;
+///			QualCom PureVoice 1.2.1;
+///			SuperPad;
+///			WinZip 6.3;
+///			WISE 5.0;
+
+d: user, application d;
+/	user;
+//		ke;
+//		rhm;
+/	application d;
+//		game;
+///			yahtzee;
+//		internet;
+///			LapLink 4.0;
+///			Quick Link 2;
+///			WAVE;
+//		utility;
+///			Lview Pro;
+///			Paint Shop Pro;
+
+j: special tools;
+/	Knowledge Explorer 2.1;
+/	MKS UNIX Toolkit 5.2;
+/	Netscape Communicator 4.04;
+/	Windows Icon 9.3.1;
+
+k: Microsoft tools;
+/	MS Books94;
+/	MS Office;
+/	MS Visual C++ 4.0;
+
+l: media;
+/	audio;
+/	icon;
+/	image;
+/	multimedia;
+/	video;
+
+m: download;
+/	Windows 3.1;
+/	Windows 95;
+end hierarchy file systems;

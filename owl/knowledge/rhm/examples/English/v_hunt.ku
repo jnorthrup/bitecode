@@ -1,0 +1,10 @@
+# 8:20 pm 5/12/97
+# new syntax Jul/24/2005
+
+# hunt context
+at view=v_schank;
+at view=v_hunt;
+
+deer  isa animal;
+buck  is  deer   with sex=male;
+shoot is  action with instrument=gun;

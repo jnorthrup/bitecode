@@ -1,0 +1,24 @@
+    Class isg Person;
+    Person has
+        label = "people",
+        comment = "The collection of all human beings.  The\n
+            collection #$Person constitutes the species Homo Sapiens;\n
+            thus, #$Person is an instance of #$BiologicalSpecies in the\n
+            #$BiologyMt.  (See also #$HomoGenus, of which Homo Sapiens\n
+            is the only nonextinct species.)  Persons constitute the\n
+            most intelligent subset of #$Primate, and it is the only\n
+            class whose elements are known to be naturally capable of\n
+            speaking a language.  All cultural activity requires\n
+            participation of persons.  #$Person excludes non-human legal\n
+            persons; see #$Agent.",
+        guid = "bd588092-9c29-11b1-9dad-c379636f7270";
+    Person rel
+        isu BiologicalSpecies,
+        isu OrganismClassificationType,
+        isu ExistingObjectType,
+        iss Omnivore,
+        iss Animal,
+        iss HumanOccupationConstructResident,
+        iss Primate,
+        iss LegalAgent,
+        xor NonPersonAnimal;

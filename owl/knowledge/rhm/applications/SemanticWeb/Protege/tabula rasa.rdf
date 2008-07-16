@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY a 'http://protege.stanford.edu/system#'>
+	 <!ENTITY tabula_rasa 'http://protege.stanford.edu/tabula_rasa#'>
+	 <!ENTITY rdfs 'http://www.w3.org/TR/1999/PR-rdf-schema-19990303#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:a="&a;"
+	 xmlns:tabula_rasa="&tabula_rasa;"
+	 xmlns:rdfs="&rdfs;">
+<tabula_rasa:dog rdf:about="&tabula_rasa;Fido"
+	 tabula_rasa:height="25"
+	 tabula_rasa:weight="15"
+	 rdfs:label="Fido"/>
+<tabula_rasa:person rdf:about="&tabula_rasa;Jane Doe"
+	 tabula_rasa:height="68"
+	 tabula_rasa:weight="110"
+	 rdfs:label="Jane Doe"/>
+<tabula_rasa:person rdf:about="&tabula_rasa;John Doe"
+	 tabula_rasa:height="70"
+	 tabula_rasa:weight="180"
+	 rdfs:label="John Doe"/>
+<tabula_rasa:dog rdf:about="&tabula_rasa;Rover"
+	 tabula_rasa:height="10"
+	 tabula_rasa:weight="8"
+	 rdfs:label="Rover"/>
+<a:_pal_constraint rdf:about="&tabula_rasa;tabula rasa_00059"
+	 rdfs:label="tabula rasa_00059"/>
+<a:_pal_constraint rdf:about="&tabula_rasa;tabula rasa_00060"
+	 rdfs:label="tabula rasa_00060"/>
+<a:_pal_constraint rdf:about="&tabula_rasa;tabula rasa_00062"
+	 rdfs:label="tabula rasa_00062"/>
+</rdf:RDF>

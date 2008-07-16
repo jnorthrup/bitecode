@@ -1,0 +1,33 @@
+# 6:30 pm 1998/1/8
+
+# Dewey Decimal Classification
+# The 10 Classes
+
+at view = book/ddcn
+
+book
+/	000 General Works
+/	100 "Philosophy & Psychology"
+/	200 Religion
+/	300 Social Sciences
+/	400 Language
+/	500 Science
+/	600 "Applied Science & Useful Arts"
+/	700 "Fine Arts & Recreation"
+/	800 Literature
+/	900 "Biography, Geography, History"
+
+
+# definitions
+#-----------#
+kformat = ku
+000 General Works			is book with d100=000
+100 "Philosophy & Psychology"		is book with d100=100
+200 Religion				is book with d100=200
+300 Social Sciences			is book with d100=300
+400 Language				is book with d100=400
+500 Science				is book with d100=500
+600 "Applied Science & Useful Arts"	is book with d100=600
+700 "Fine arts & Recreation"		is book with d100=700
+800 Literature				is book with d100=800
+900 "Biography, Geography, History"	is book with d100=900

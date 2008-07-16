@@ -1,0 +1,59 @@
+# KEHOME/knowledge/ExamplesLogic/Identify.ku
+# 5:30 pm 1998/2/10
+
+proposition := man do identify existent
+relationship is proposition with truth-value=true
+false-proposition is proposition with truth-value=false
+
+knowledge means relationship
+knowledge ise word, sentence, relation
+relation means sentence
+relation has format  = "class:1; class:2; ..."
+relation has meaning = "sentence1; sentence2; ..."
+
+
+# concept
+word means concept
+
+sensation         := man do sense entity            # automatic (transient)
+percept           := man do integrate sensation     # automatic (permanent)
+similarity        := man do differentiate percept   # automatic
+concept-hierarchy := man do partition percept       # volitional (view)
+characteristic    := man do measure entity          # volitional
+word              := man do choose                  # volitional
+definition        := man do define concept          # volitional
+
+# proposition
+proposition := man do combine concept           # volitional (thought)
+proposition has truth-value
+truth-value has vtype=boolean
+boolean isenum true,false
+
+
+sentence ise \
+        "at space=s,time=t,view=v",
+
+        "entity has attribute=value",
+        "entity has part=count",
+        "entity do action=event",
+        "event changes eobject \
+                from attribute=initial \
+                to   attribute=final",
+        "sentence1 causes sentence2",           # phenomenon
+        "if sentence1 then sentence2 else sentence3 fi",
+
+        "concept is genus with differentia",
+        "alias is concept",
+        "concept isa genus; concept ise unit"
+
+existent ise entity, characteristic, proposition
+entity ise animal, plant, object
+man isa animal
+knowledge isa object
+
+characteristic ise \
+        attribute, part,
+        action, event, phenomenon
+
+proposition ise \
+        relationship, false-proposition

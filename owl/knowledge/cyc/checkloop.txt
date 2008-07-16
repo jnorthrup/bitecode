@@ -1,0 +1,1104 @@
+
+# context <at view = spo ;>
+Thing
+/  Relation
+//    FixedArityRelation
+/  SetOrCollection
+//    Collection
+//    Set-Mathematical
+//    myIndiviudal
+/  entity
+//    IndexicalConcept
+//    Individual
+//    Intangible
+//    PartiallyIntangible
+//    PartiallyTangible
+//    TangibleThing
+//    TemporalThing
+/  proposition
+//    Microtheory
+//    sentence
+Loading cyc definition ...
+# INFO: update_knit: cyc context copied from spo
+ERROR: add_species: same concept(string[27]) <CycLTerm iss CycLExpression>
+ERROR: get_symbol(ku/,=): unexpected token pattern in state(string[17]) <m_group_statement>
+INFO: get_symbol(ku/,=): tokenlist(string[4]) <wRG;>
+INFO: get_symbol(ku/,=): input line(string[23]) <Quantifier isp forAll ;>
+""newproposition(ku) <Quantifier isp forAll ;>
+WARNING: parse_file: leftover tokens in line <(string[20]) <# < /xmp > < /html >>
+INFO: parse_file: leftover tokenlist(list[7]) <[TOKEN(w,#),TOKEN(<,<),TOKEN(w,/xmp),TOKEN(>,>),TOKEN(<,<),TOKEN(w,/html),TOKEN(>,>)]>
+
+# context <at view = cyc ;>
+Thing
+/  Relation
+//    AssociativeRelation
+//    CommutativeRelation
+//    EvaluatableRelation
+//    FixedArityRelation
+//    Function-Denotational
+//    FunctionOrFunctionalPredicate
+//    MicrotheoryDesignatingRelation
+//    PartiallyCommutativeRelation
+//    ScopingRelation
+//    TruthFunction
+//    VariableArityRelation
+/  SetOrCollection
+//    Collection
+//    Set-Mathematical
+//    myIndiviudal
+//    i:Individual
+/  entity
+//    IndexicalConcept
+//    i:Individual
+//    Intangible
+//    PartiallyIntangible
+//    PartiallyIntangibleIndividual
+//    PartiallyTangible
+//    TangibleThing
+//    TemporalThing
+/  proposition
+//    Microtheory
+//    sentence
+##### knowledge base #####
+# INFO: kbmode = mke
+# INFO: kedb = C:\Documents and Settings\rhm/db
+# INFO: kbworld = &null
+# INFO: kbdata = &null
+# INFO: kbfile = &null
+
+
+##### aliasloop <view = cyc> #####
+# INFO: check_aliasloop: possible alias: CycLTerm is CycLTerm;
+# aliasloop count:  26704 items, 1 possible alias loops
+
+##### check loop <view = cyc> #####
+# species-genus loop error: AbandoningSomething loopset <[Event,Thing,entity]>
+# species-genus multiple path error: Ablation loopset <entity>
+# species-genus loop error: AboveGroundLevelInAConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: AbradingSomething loopset <entity>
+# species-genus loop error: AcademicProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Acceleration loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: AccessingAnIBT loopset <entity>
+# species-genus loop error: Account loopset <[Thing,entity]>
+# species-genus loop error: Acknowledging-CommunicationAct loopset <[Thing,entity]>
+# species-genus loop error: Admiration loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: AdultAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: AdultFemalePerson loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Advertising loopset <[Action,AnimalActivity,Event,Thing,entity]>
+# species-genus multiple path error: Agent loopset <entity>
+# species-genus loop error: Agreement loopset <[Thing,entity]>
+# species-genus multiple path error: Air loopset <entity>
+# species-genus loop error: AirTransportationDevice loopset <[TemporalThing,entity]>
+# species-genus loop error: AirlineCompany loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: AirplaneRunway loopset <[PartiallyTangible,SomethingExisting,SpatialThing,TemporalThing,Thing,entity]>
+# species-genus loop error: AirportOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: Alertness loopset <entity>
+# species-genus loop error: Ambulance loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Amphibian loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: AnatomicalVessel loopset <[SomethingExisting,Thing,entity]>
+# species-genus loop error: Anesthesia loopset <[Action,AnimalActivity,Event,TemporalThing,entity]>
+# species-genus loop error: Anger loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: AngularAccelerationRate loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Animal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: AnimalBLO loopset <entity>
+# species-genus multiple path error: AnimalBodyPart loopset <entity>
+# species-genus multiple path error: AnimalBodyRegion loopset <entity>
+# species-genus loop error: AnimalMigration loopset <[Thing,entity]>
+# species-genus loop error: AnimalSound loopset <[Thing,entity]>
+# species-genus loop error: AnimalWalkingProcess loopset <[Action,Event,Thing,entity]>
+# species-genus multiple path error: AntiSymmetricBinaryPredicate loopset <Thing>
+# species-genus multiple path error: AntiTransitiveBinaryPredicate loopset <Thing>
+# species-genus loop error: Anticipation-Feeling loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Apathy loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Appendage-AnimalBodyPart loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: AppropriatingSomething loopset <[Thing,entity]>
+# species-genus loop error: Approval loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: AquaticOrganism loopset <entity>
+# species-genus loop error: Area loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: ArgGenlAttributeBinaryPredicate loopset <Thing>
+# species-genus multiple path error: ArgGenlAttributeTernaryPredicate loopset <Thing>
+# species-genus multiple path error: ArgGenlBinaryPredicate loopset <Thing>
+# species-genus loop error: ArgGenlTernaryPredicate loopset <[Thing,entity]>
+# species-genus multiple path error: ArgIsaBinaryPredicate loopset <Thing>
+# species-genus loop error: ArgIsaTernaryPredicate loopset <[Thing,entity]>
+# species-genus multiple path error: ArgTypeBinaryPredicate loopset <Thing>
+# species-genus multiple path error: ArgTypeTernaryPredicate loopset <Thing>
+# species-genus multiple path error: Arm loopset <entity>
+# species-genus loop error: ArrestingSomeone loopset <[Thing,entity]>
+# species-genus multiple path error: ArtObject loopset <entity>
+# species-genus loop error: Arthropod loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: AssociativeRelation loopset <Thing>
+# species-genus multiple path error: AstronomicalObject loopset <entity>
+# species-genus multiple path error: AsymmetricBinaryPredicate loopset <Thing>
+# species-genus multiple path error: AtLeastPartiallyMentalEvent loopset <entity>
+# species-genus loop error: Athlete loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: AthleticActivity loopset <[Action,entity]>
+# species-genus loop error: AudibleSound loopset <[Thing,entity]>
+# species-genus loop error: AudioCommunicating loopset <[Thing,entity]>
+# species-genus loop error: AuthorizedAgreement loopset <[Thing,entity]>
+# species-genus loop error: AutoDealership loopset <[Agent,Agent-Generic,Organization,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: Automobile loopset <[PartiallyTangible,PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: BalconyLevelInAConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: BankDebitCard loopset <[InformationBearingThing,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: Bartering loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: BasementLevelInAConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: Bicycle loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: BinaryFunction loopset <[Thing,entity]>
+# species-genus multiple path error: BinaryRelation loopset <Thing>
+# species-genus multiple path error: BioDeteriorationResistance loopset <entity>
+# species-genus loop error: BiologicalIntakeEvent loopset <[Event,Thing,entity]>
+# species-genus multiple path error: BiologicalLivingObject loopset <entity>
+# species-genus loop error: BiologicalTransportationEvent loopset <[Event,Thing,entity]>
+# species-genus loop error: Bird loopset <[Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: BirthEvent loopset <[Action,Event,GeneralizedTransfer,TemporalThing,Thing,entity]>
+# species-genus loop error: BlimpTheAirship loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: BlueCollarWorker loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: BodyOfWater loopset <[PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus multiple path error: BookkeepingPredicate loopset <Thing>
+# species-genus loop error: Boredom loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: BorrowingSomething loopset <[Action,AnimalActivity,Event,GeneralizedTransfer,Thing,entity]>
+# species-genus multiple path error: BotanicalOrgan loopset <entity>
+# species-genus multiple path error: Brain loopset <entity>
+# species-genus multiple path error: BroadMicrotheory loopset <Thing>
+# species-genus loop error: Building loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus multiple path error: BuildingMaterial loopset <entity>
+# species-genus loop error: Bus-RoadVehicle loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Bush loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Business loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: BusinessEvent loopset <[AnimalActivity,entity]>
+# species-genus loop error: BusinessPerson loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: BusinessRelationshipActivity loopset <[AnimalActivity,entity]>
+# species-genus loop error: Buying loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,Event,GeneralizedTransfer,HumanActivity,SocialOccurrence,Thing,entity]>
+# species-genus loop error: BuyingActivity loopset <[AnimalActivity,Event,entity]>
+# species-genus loop error: CGSUnitOfMeasure loopset <[Thing,entity]>
+# species-genus multiple path error: CalendarAutumn loopset <entity>
+# species-genus multiple path error: CalendarSeason loopset <entity>
+# species-genus multiple path error: CalendarSpring loopset <entity>
+# species-genus multiple path error: CalendarSummer loopset <entity>
+# species-genus multiple path error: CalendarWinter loopset <entity>
+# species-genus loop error: Calm loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Canal loopset <[PartiallyTangible,SomethingExisting,SpatialThing,Thing,entity]>
+# species-genus loop error: Canoe loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: CapitalCityOfRegion loopset <[Agent-Generic,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: CaptiveAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: CapturingAnimal loopset <[Thing,entity]>
+# species-genus multiple path error: Carnivore loopset <entity>
+# species-genus loop error: CausingAnotherObjectsTranslationalMotion loopset <[Thing,entity]>
+# species-genus multiple path error: Cell loopset <entity>
+# species-genus multiple path error: CellPart loopset <entity>
+# species-genus loop error: CerealFoodGroup loopset <[TemporalThing,entity]>
+# species-genus loop error: Check-TenderObject loopset <[InformationBearingObject,InformationBearingThing,PartiallyIntangible,PartiallyIntangibleIndividual,SomethingExisting,entity]>
+# species-genus loop error: Chest-BodyPart loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: ChordataPhylum loopset <[PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: CirculatorySystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: City loopset <[Agent-Generic,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus multiple path error: Cleaning loopset <entity>
+# species-genus loop error: CleaningDevice loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: CleaningImplement loopset <[PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,entity]>
+# species-genus loop error: Cloth loopset <[TemporalThing,entity]>
+# species-genus loop error: Cloudiness loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Cohesiveness loopset <entity>
+# species-genus loop error: CollectionDenotingFunction loopset <[Thing,entity]>
+# species-genus multiple path error: Color loopset <entity>
+# species-genus loop error: CommercialActivity loopset <[AnimalActivity,Event,entity]>
+# species-genus loop error: CommercialOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: CommercialServiceOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Communicating loopset <[Thing,entity]>
+# species-genus loop error: CommunicationAct-Single loopset <[Thing,entity]>
+# species-genus multiple path error: CommutativeRelation loopset <Thing>
+# species-genus multiple path error: Competition loopset <entity>
+# species-genus multiple path error: ComplexTemporalRelation loopset <Thing>
+# species-genus multiple path error: CompositePhysicalAndMentalEvent loopset <entity>
+# species-genus multiple path error: CompositeTangibleAndIntangibleObject loopset <entity>
+# species-genus loop error: CompositionPredicate loopset <[Relation,Thing,entity]>
+# species-genus multiple path error: Compressibility loopset <entity>
+# species-genus multiple path error: Concrete loopset <entity>
+# species-genus loop error: Confidence loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: ConnectionPredicate loopset <Thing>
+# species-genus loop error: Connector loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Constructing loopset <[TemporalThing,entity]>
+# species-genus multiple path error: ConstructionArtifact loopset <entity>
+# species-genus loop error: ConstructionCompany loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Consultant loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus multiple path error: ConsumableProduct loopset <entity>
+# species-genus loop error: ConsumingFoodOrDrink loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: ContainerProduct loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Contempt loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: ContractNegotiation loopset <[Action,AnimalActivity,Event,Thing,entity]>
+# species-genus loop error: ControlDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: ControlledLand loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: ControllingSomething loopset <entity>
+# species-genus loop error: CordlikeObject loopset <[Thing,entity]>
+# species-genus loop error: CorporateOfficer loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: CorrosionResistance loopset <entity>
+# species-genus multiple path error: CostBreakdownSlot loopset <Thing>
+# species-genus multiple path error: CotemporalObjectsSlot loopset <Thing>
+# species-genus multiple path error: CotemporalPredicate loopset <Thing>
+# species-genus multiple path error: CounterfactualContext loopset <Thing>
+# species-genus loop error: Country loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: CountrySubsidiary loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: County loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: CountyGovernment loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Court-Judicial loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Credential loopset <[Thing,entity]>
+# species-genus loop error: CreditCard loopset <[InformationBearingObject,InformationBearingThing,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus multiple path error: Currency loopset <entity>
+# species-genus loop error: CuttingDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: CycLAssertedAssertion loopset <[CycLTerm,Thing]>
+# species-genus loop error: CycLAssertion loopset <[CycLTerm,Thing]>
+# species-genus loop error: CycLAtomicAssertion loopset <[CycLTerm,Thing]>
+# species-genus multiple path error: CycLAtomicSentence loopset <CycLTerm>
+# species-genus multiple path error: CycLAtomicTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLClosedAtomicSentence loopset <CycLTerm>
+# species-genus multiple path error: CycLClosedAtomicTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLClosedDenotationalTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLClosedExpression loopset <CycLTerm>
+# species-genus multiple path error: CycLClosedFormula loopset <CycLTerm>
+# species-genus loop error: CycLClosedNonAtomicTerm loopset <[CycLDenotationalTerm,CycLTerm]>
+# species-genus multiple path error: CycLClosedSentence loopset <CycLTerm>
+# species-genus loop error: CycLConstant loopset <[CycLClosedExpression,CycLDenotationalTerm,CycLIndexedTerm,CycLTerm,HLExpression,sentence]>
+# species-genus loop error: CycLDeducedAssertion loopset <[CycLTerm,Thing]>
+# species-genus multiple path error: CycLDenotationalTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLExpression-Askable loopset <CycLTerm>
+# species-genus multiple path error: CycLExpression-Assertible loopset <CycLTerm>
+# species-genus multiple path error: CycLFormula loopset <CycLTerm>
+# species-genus loop error: CycLGAFAssertion loopset <[CycLClosedExpression,CycLClosedSentence,CycLSentence,CycLTerm,Thing,entity]>
+# species-genus loop error: CycLGenericRelationFormula loopset <[CycLTerm,sentence]>
+# species-genus multiple path error: CycLIndexedTerm loopset <CycLTerm>
+# species-genus loop error: CycLNonAtomicReifiedTerm loopset <[CycLClosedExpression,CycLDenotationalTerm,CycLTerm]>
+# species-genus multiple path error: CycLNonAtomicTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLNonAtomicTerm-Askable loopset <CycLTerm>
+# species-genus multiple path error: CycLNonAtomicTerm-Assertible loopset <CycLTerm>
+# species-genus multiple path error: CycLNonAtomicTerm-ClosedFunctor loopset <CycLTerm>
+# species-genus multiple path error: CycLOpenDenotationalTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLOpenExpression loopset <CycLTerm>
+# species-genus multiple path error: CycLOpenFormula loopset <CycLTerm>
+# species-genus multiple path error: CycLOpenNonAtomicTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLOpenSentence loopset <CycLTerm>
+# species-genus multiple path error: CycLPropositionalSentence loopset <CycLTerm>
+# species-genus loop error: CycLQuery loopset <[CycLTerm,Thing,sentence]>
+# species-genus multiple path error: CycLReformulationRulePredicate loopset <Thing>
+# species-genus multiple path error: CycLReifiableDenotationalTerm loopset <CycLTerm>
+# species-genus loop error: CycLReifiableNonAtomicTerm loopset <[CycLClosedExpression,CycLDenotationalTerm,CycLTerm]>
+# species-genus multiple path error: CycLReifiedDenotationalTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLRepresentedAtomicTerm loopset <CycLTerm>
+# species-genus multiple path error: CycLRepresentedTerm loopset <CycLTerm>
+# species-genus loop error: CycLRuleAssertion loopset <[CycLTerm,Thing]>
+# species-genus multiple path error: CycLSentence loopset <CycLTerm>
+# species-genus multiple path error: CycLSentence-Askable loopset <CycLTerm>
+# species-genus multiple path error: CycLSentence-Assertible loopset <CycLTerm>
+# species-genus multiple path error: CycLSentence-ClosedPredicate loopset <CycLTerm>
+# species-genus multiple path error: CycLTerm loopset <CycLTerm>
+# species-genus loop error: CycLUnreifiedReifiableNonAtomicTerm loopset <[CycLClosedExpression,CycLDenotationalTerm,CycLFormula,CycLTerm,sentence]>
+# species-genus loop error: CycLVariable loopset <[CycLDenotationalTerm,CycLTerm]>
+# species-genus multiple path error: DailyPersonalCleaning loopset <entity>
+# species-genus multiple path error: DataMicrotheory loopset <Thing>
+# species-genus loop error: Database-AbstractContent loopset <[PartiallyIntangible,entity]>
+# species-genus multiple path error: Database-Physical loopset <entity>
+# species-genus loop error: DeciduousPlant loopset <[PartiallyTangible,entity]>
+# species-genus multiple path error: DefaultMonotonicPredicate loopset <Thing>
+# species-genus multiple path error: Density loopset <entity>
+# species-genus loop error: Dentist loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: DeskWorker loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Device-SingleUser loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Device-UserPowered loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: DiagnosingAndRepairingSomething loopset <entity>
+# species-genus loop error: DigestionEvent loopset <[Event,Thing,entity]>
+# species-genus loop error: DigestiveSystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: DimensionlessUnitOfMeasure loopset <[Thing,entity]>
+# species-genus multiple path error: DirectedAcyclicGraph loopset <Thing>
+# species-genus multiple path error: DirectedGraph loopset <Thing>
+# species-genus multiple path error: DirectedMultigraph loopset <Thing>
+# species-genus loop error: DirectedTranslation loopset <[Event,Thing,entity]>
+# species-genus multiple path error: DirectionExpression loopset <entity>
+# species-genus multiple path error: Dirtiness loopset <entity>
+# species-genus loop error: Disappointment loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Disapproval loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Disgust loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Dislike loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: DisputeEvent loopset <[Action,Event,entity]>
+# species-genus loop error: Dissatisfaction loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Distance loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: DistributingMetaKnowledgePredicate loopset <Thing>
+# species-genus loop error: DistributionEvent loopset <[Event,Thing,entity]>
+# species-genus multiple path error: Dock loopset <entity>
+# species-genus loop error: Doctor-Medical loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,HumanAdult,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,entity]>
+# species-genus multiple path error: DocumentationPredicate loopset <Thing>
+# species-genus loop error: DomesticPet loopset <[PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: Drink loopset <[TemporalThing,entity]>
+# species-genus loop error: DrinkingEvent loopset <[Action,Event,Thing,entity]>
+# species-genus multiple path error: DrugPrescription loopset <entity>
+# species-genus loop error: DrugProduct loopset <[TemporalThing,entity]>
+# species-genus loop error: DrugTherapy loopset <[Action,AnimalActivity,Event,TemporalThing,entity]>
+# species-genus multiple path error: Ductility loopset <entity>
+# species-genus loop error: ELAssertion loopset <[CycLFormula,CycLSentence,CycLTerm,ELExpression,Thing,entity,sentence]>
+# species-genus loop error: ELExpression loopset <[CycLTerm,sentence]>
+# species-genus multiple path error: ELExpression-Askable loopset <CycLTerm>
+# species-genus loop error: ELExpression-Assertible loopset <[CycLTerm,sentence]>
+# species-genus multiple path error: ELFormula loopset <CycLTerm>
+# species-genus loop error: ELNonAtomicTerm loopset <[CycLTerm,sentence]>
+# species-genus loop error: ELNonAtomicTerm-Askable loopset <[CycLTerm,sentence]>
+# species-genus loop error: ELNonAtomicTerm-Assertible loopset <[CycLDenotationalTerm,CycLFormula,CycLNonAtomicTerm,CycLTerm,ELExpression,sentence]>
+# species-genus loop error: ELSentence loopset <[CycLTerm,sentence]>
+# species-genus loop error: ELSentence-Askable loopset <[CycLFormula,CycLTerm,sentence]>
+# species-genus loop error: ELSentence-Assertible loopset <[CycLFormula,CycLSentence,CycLTerm,ELExpression,Thing,sentence]>
+# species-genus multiple path error: ELSentenceTemplate loopset <Thing>
+# species-genus loop error: ELVariable loopset <[CycLDenotationalTerm,CycLTerm,Thing,entity,sentence]>
+# species-genus multiple path error: Ear loopset <entity>
+# species-genus loop error: EatingEvent loopset <[Action,Event,Thing,entity]>
+# species-genus multiple path error: EcologicalRegion loopset <entity>
+# species-genus multiple path error: EdgeOnObject loopset <Thing>
+# species-genus loop error: EdibleStuff loopset <[TemporalThing,entity]>
+# species-genus multiple path error: EducationLevelAttribute loopset <entity>
+# species-genus loop error: EducationalDegree loopset <[Thing,entity]>
+# species-genus loop error: EducationalOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: Elasticity loopset <entity>
+# species-genus loop error: ElectricalCharge loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: ElectricalComponent loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: ElectricalDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: ElectricalResistance loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Electron loopset <entity>
+# species-genus loop error: ElectronicDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Embarrassment loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Embryo loopset <entity>
+# species-genus loop error: Emirate-Geopolitical loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Emission loopset <[Thing,entity]>
+# species-genus loop error: EmittingAWave loopset <[Thing,entity]>
+# species-genus loop error: EmittingAnObject loopset <[Event,GeneralizedTransfer,Thing,entity]>
+# species-genus loop error: EmittingSound loopset <[Thing,entity]>
+# species-genus loop error: Employee loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: EmployeeHiring loopset <[Thing,entity]>
+# species-genus loop error: EmploymentTermination loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: EndingAnAgreement loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: Engine loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Engineer loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: EnglishWord loopset <[CycLClosedExpression,CycLIndexedTerm,CycLTerm,Thing]>
+# species-genus loop error: Enjoyment loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: EntertainmentEvent loopset <[AnimalActivity,TemporalThing,entity]>
+# species-genus loop error: EntertainmentOrArtsProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: EntertainmentPerformance loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,TemporalThing,Thing,entity]>
+# species-genus multiple path error: EukaryoticCell loopset <entity>
+# species-genus loop error: EvaluatableFunction loopset <[Relation,Thing,entity]>
+# species-genus multiple path error: EvaluatableRelation loopset <Thing>
+# species-genus multiple path error: EvenNumber loopset <entity>
+# species-genus loop error: EvergreenPlant loopset <[PartiallyTangible,entity]>
+# species-genus multiple path error: ExceptionRelation loopset <Thing>
+# species-genus loop error: ExchangeOfUserRights loopset <[AnimalActivity,Event,entity]>
+# species-genus loop error: Excitement loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Executive loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Exercising loopset <[AnimalActivity,entity]>
+# species-genus loop error: Exhaling loopset <[Event,GeneralizedTransfer,Thing,entity]>
+# species-genus multiple path error: ExtensionalRepresentationPredicate loopset <Thing>
+# species-genus loop error: Eye loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: FPSUnitOfMeasure loopset <[Thing,entity]>
+# species-genus loop error: FaceOfAnimal loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Family-SocialEntity loopset <[PartiallyIntangible,SomethingExisting,TemporalThing,entity]>
+# species-genus multiple path error: FamilyRelationSlot loopset <Thing>
+# species-genus loop error: Farmer loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus loop error: Fear loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: FeelingAttribute loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: FemaleAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: FemalePerson loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: FictionalContext loopset <[Thing,entity]>
+# species-genus loop error: FinancialAccount loopset <[Thing,entity]>
+# species-genus multiple path error: FinancialAccountTenderObject loopset <entity>
+# species-genus loop error: FinancialCompany loopset <[Agent,Agent-Generic,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: FinancialOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Finger loopset <[BiologicalLivingObject,PartiallyIntangible,entity]>
+# species-genus loop error: Fish loopset <[Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,SomethingExisting,TemporalThing,entity]>
+# species-genus multiple path error: FixedArityRelation loopset <Thing>
+# species-genus loop error: FixedAritySkolemFuncN loopset <[Thing,entity]>
+# species-genus loop error: FixedAritySkolemFunction loopset <[Thing,entity]>
+# species-genus loop error: FixedStructure loopset <[SomethingExisting,TemporalThing,entity]>
+# species-genus multiple path error: FlowPath loopset <Thing>
+# species-genus loop error: FloweringPlant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: FloweryPlant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Food loopset <[PartiallyTangible,TangibleProduct,TemporalThing,entity]>
+# species-genus loop error: Food-ReadyToEat loopset <[TemporalThing,entity]>
+# species-genus loop error: FoodAndDrink loopset <[TemporalThing,entity]>
+# species-genus loop error: FoodOrDrinkComposite loopset <[TemporalThing,entity]>
+# species-genus loop error: FoodOrDrinkPreparationDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: FoodProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: FoodServiceOrganization loopset <[Agent,Agent-Generic,Organization,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: FoodUtensil loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: FoodVessel loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Foot-AnimalBodyPart loopset <[PartiallyIntangible,entity]>
+# species-genus multiple path error: Form-StandardizedIBO loopset <entity>
+# species-genus multiple path error: FormalProduct loopset <TemporalThing>
+# species-genus multiple path error: Fragility loopset <entity>
+# species-genus loop error: FreeSpaceContent loopset <[PartiallyTangible,entity]>
+# species-genus multiple path error: Freezing loopset <entity>
+# species-genus loop error: Frequency loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: FreshWaterLake loopset <[GeographicalRegion,PartiallyTangible,SomethingExisting,SpatialThing,Surface-Physical,entity]>
+# species-genus multiple path error: Fruit loopset <entity>
+# species-genus loop error: Frustration loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Function-Denotational loopset <[Thing,entity]>
+# species-genus loop error: FunctionFromQuantitiesToQuantities loopset <[Relation,Thing,entity]>
+# species-genus multiple path error: FunctionOrFunctionalPredicate loopset <Thing>
+# species-genus loop error: FunctionalPredicate loopset <[Thing,entity]>
+# species-genus loop error: FunctionalSlot loopset <[Thing,entity]>
+# species-genus multiple path error: Fungus loopset <entity>
+# species-genus loop error: FurniturePiece loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: GeneralMicrotheory loopset <Thing>
+# species-genus multiple path error: GenericQuantity loopset <entity>
+# species-genus loop error: GenericValueFunction loopset <[Thing,entity]>
+# species-genus multiple path error: GeographicalDirection loopset <entity>
+# species-genus multiple path error: GeographicalRegion loopset <entity>
+# species-genus loop error: GeometricThing-Abstract loopset <[PartiallyIntangible,entity]>
+# species-genus multiple path error: GeometricThing-Localized loopset <entity>
+# species-genus loop error: GeopoliticalEntity loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: GiftGiving loopset <[Event,Thing,entity]>
+# species-genus loop error: GivingSomething loopset <[Event,Thing,entity]>
+# species-genus multiple path error: Glass loopset <entity>
+# species-genus multiple path error: GoingToSleep loopset <entity>
+# species-genus loop error: GolfCart loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: GovernmentMilitaryOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: GovernmentOfCountry loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: GraspingImplement loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: Gratitude loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: GreetingSomeone loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: GroundsOfOrganization loopset <[SomethingExisting,SpatialThing,TemporalThing,entity]>
+# species-genus loop error: GuidingAMovingObject loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: Guilt loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: HLAssertion loopset <[CycLClosedExpression,CycLTerm,Thing,sentence]>
+# species-genus loop error: HLExpression loopset <[CycLTerm,sentence]>
+# species-genus loop error: HLIndexedTerm loopset <[CycLTerm,sentence]>
+# species-genus loop error: HLNonAtomicReifiedTerm loopset <[CycLClosedDenotationalTerm,CycLClosedExpression,CycLDenotationalTerm,CycLIndexedTerm,CycLNonAtomicTerm,CycLReifiableDenotationalTerm,CycLTerm,sentence]>
+# species-genus loop error: HLReifiedDenotationalTerm loopset <[CycLClosedExpression,CycLIndexedTerm,CycLTerm]>
+# species-genus loop error: HLReifiedFormula loopset <[CycLTerm,sentence]>
+# species-genus loop error: HLVariable loopset <[CycLDenotationalTerm,CycLTerm,sentence]>
+# species-genus multiple path error: HailStone loopset <entity>
+# species-genus loop error: Hand loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: HandTool loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: HandlingADevice loopset <[Action,Event,entity]>
+# species-genus loop error: HandlingAnObject loopset <[Event,entity]>
+# species-genus loop error: Happiness loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Harbor loopset <[PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus multiple path error: Hardness loopset <entity>
+# species-genus loop error: HardwareTool loopset <[PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: HarvestingAPlant loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: Hate loopset <[AttributeValue,IntangibleIndividual,entity]>
+# species-genus loop error: HavingAMeal loopset <[Action,AnimalActivity,Event,Thing,entity]>
+# species-genus loop error: Head-AnimalBodyPart loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Head-Vertebrate loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: HeadOfGovernment loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: HeadOfState loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: HealthProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: Heart loopset <entity>
+# species-genus loop error: HeatingDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: HeavenlyBody loopset <entity>
+# species-genus loop error: Helicopter loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Herbivore loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: HerdAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Hope loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Hospital loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: HospitalCareEvent loopset <[TemporalThing,entity]>
+# species-genus loop error: HostileSocialAction loopset <[Action,Event,entity]>
+# species-genus loop error: Hostility loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: HouseholdAppliance loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: HumanAdult loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: HumanOccupationConstruct loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: HumanOccupationConstructResident loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: HumanResidence loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: HumanResidenceArea loopset <[SomethingExisting,entity]>
+# species-genus loop error: HumanShelterConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: HypotheticalContext loopset <Thing>
+# species-genus loop error: IBOCreation loopset <[Event,Thing,entity]>
+# species-genus loop error: IBTCopying loopset <[Thing,entity]>
+# species-genus loop error: IBTGeneration loopset <[Thing,entity]>
+# species-genus loop error: IBTGeneration-Original loopset <[Event,Thing,entity]>
+# species-genus loop error: IBTGeneration-Replication loopset <[Thing,entity]>
+# species-genus loop error: IBTRecoding loopset <[Thing,entity]>
+# species-genus multiple path error: IDDocument loopset <entity>
+# species-genus loop error: IndependentCountry loopset <[Agent-Generic,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: IndependentOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: IndexedInfoSource loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: IndividualDenotingFunction loopset <[Thing,entity]>
+# species-genus multiple path error: InferenceRelatedBookkeepingPredicate loopset <Thing>
+# species-genus loop error: Inform-CommunicationAct loopset <[Event,Thing,entity]>
+# species-genus multiple path error: InformationBearingObject loopset <entity>
+# species-genus loop error: InformationRecordingDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: InformationRecordingProcess loopset <[Event,Thing,entity]>
+# species-genus loop error: Ingesting loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: Inhaling loopset <[Event,Thing,entity]>
+# species-genus multiple path error: InorganicStuff loopset <entity>
+# species-genus loop error: Insect loopset <[Agent-Generic,Animal,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: InsuranceProvider loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: IntangibleObjectPredicate loopset <Thing>
+# species-genus multiple path error: Integer loopset <entity>
+# species-genus loop error: IntelligentAgent loopset <[PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: IntensionalRepresentationPredicate loopset <Thing>
+# species-genus multiple path error: InterActorSlot loopset <Thing>
+# species-genus multiple path error: InterExistingObjectSlot loopset <Thing>
+# species-genus multiple path error: InterPersonalRelationSlot loopset <Thing>
+# species-genus loop error: InternationalOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: InternationalOrganizationOfCountries loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: InternationalWaters loopset <[PartiallyTangible,SomethingExisting,SpatialThing,Surface-Physical,entity]>
+# species-genus loop error: IntervalBasedQuantitySlot loopset <[Thing,entity]>
+# species-genus multiple path error: IntervalOnNumberLine loopset <entity>
+# species-genus loop error: Invertebrate loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: InvoluntaryBodyMovement loopset <entity>
+# species-genus multiple path error: IrreflexiveBinaryPredicate loopset <Thing>
+# species-genus loop error: Island loopset <[SomethingExisting,SpatialThing,entity]>
+# species-genus loop error: Jealousy loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Joint-AnimalBodyPart loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: JuvenileAnimal loopset <[PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus loop error: KineticEnergyPoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: KnowledgeBase loopset <entity>
+# species-genus loop error: Lake loopset <[PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus loop error: LandBody loopset <[SomethingExisting,SpatialThing,entity]>
+# species-genus loop error: LandTransportationDevice loopset <[TemporalThing,entity]>
+# species-genus loop error: LawEnforcementOfficer loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus loop error: LawEnforcementOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Leader loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: Learning loopset <entity>
+# species-genus multiple path error: Leather loopset <entity>
+# species-genus multiple path error: Leg loopset <entity>
+# species-genus loop error: LegalAgent loopset <[PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: LegalAgreement loopset <[Thing,entity]>
+# species-genus loop error: LegalCorporation loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: LegalGovernmentOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: LegalProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: LevelOfAConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: LevelOfDiscomfort loopset <entity>
+# species-genus multiple path error: LevelOfHunger loopset <entity>
+# species-genus loop error: LevelOfPain loopset <[AttributeValue,IntangibleIndividual,entity]>
+# species-genus loop error: LexicalItem loopset <[CycLClosedExpression,CycLIndexedTerm,CycLTerm,Thing]>
+# species-genus loop error: LexicalWord loopset <[CycLClosedExpression,CycLIndexedTerm,CycLTerm,Thing]>
+# species-genus loop error: LightIntensity loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: LightingDevice loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: LightningEvent loopset <[Thing,entity]>
+# species-genus multiple path error: ListeningDeliberately loopset <entity>
+# species-genus multiple path error: Liver loopset <entity>
+# species-genus loop error: LocalGovernmentOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: LocalOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: LocomotionProcess-Animal loopset <[Event,Thing,entity]>
+# species-genus multiple path error: LogicalConnective loopset <Thing>
+# species-genus loop error: Loneliness loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: LookingForSomething loopset <entity>
+# species-genus multiple path error: Lung loopset <entity>
+# species-genus loop error: MKSUnitOfMeasure loopset <[Thing,entity]>
+# species-genus loop error: MakingAGesture loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: MakingAnAgreement loopset <[Thing,entity]>
+# species-genus loop error: MakingAnOralSound loopset <[Event,Thing,entity]>
+# species-genus loop error: MaleAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: MalePerson loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: Malleability loopset <entity>
+# species-genus loop error: Mammal loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: ManufacturingOrganization loopset <[Agent,Agent-Generic,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: MarkingOnASurface loopset <[Event,Thing,entity]>
+# species-genus multiple path error: Mass loopset <entity>
+# species-genus loop error: MeasuringDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: MeasuringSomething loopset <entity>
+# species-genus loop error: MechanicalDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: MedicalCareEvent loopset <[TemporalThing,entity]>
+# species-genus loop error: MedicalCareInstitution loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: MedicalCareOrganization loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: MedicalCareProfessional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: MedicalCareProvider loopset <[PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: MedicalPatient loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: MedicalTesting loopset <[TemporalThing,entity]>
+# species-genus loop error: MedicalTreatmentEvent loopset <[Action,AnimalActivity,Event,TemporalThing,entity]>
+# species-genus loop error: MeetingSomeone loopset <[Event,entity]>
+# species-genus loop error: MeetingTakingPlace loopset <[Action,AnimalActivity,entity]>
+# species-genus multiple path error: Memory loopset <Thing>
+# species-genus multiple path error: MentalInformation loopset <Thing>
+# species-genus multiple path error: MetaKnowledgePredicate loopset <Thing>
+# species-genus loop error: MetaPredicate loopset <[Thing,entity]>
+# species-genus multiple path error: MetaRelation loopset <Thing>
+# species-genus multiple path error: Metal loopset <entity>
+# species-genus multiple path error: MetalAlloy loopset <entity>
+# species-genus multiple path error: Microtheory loopset <Thing>
+# species-genus multiple path error: MicrotheoryDesignatingRelation loopset <Thing>
+# species-genus multiple path error: MicrotheoryPredicate loopset <Thing>
+# species-genus loop error: MigratoryAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: MilitaryAircraft loopset <[TemporalThing,entity]>
+# species-genus loop error: MilitaryOfficer loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: MilitaryOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: Mineral loopset <entity>
+# species-genus multiple path error: MineralOre loopset <entity>
+# species-genus loop error: ModernHumanResidence loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,Place,SolidTangibleProduct,SomethingExisting,TemporalThing,entity]>
+# species-genus loop error: ModernShelterConstruction loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,Place,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus loop error: MoneraKingdom loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: MonetaryExchangeOfUserRights loopset <[AnimalActivity,AtLeastPartiallyMentalEvent,Event,GeneralizedTransfer,HumanActivity,Thing,entity]>
+# species-genus multiple path error: MonetaryFlowRate loopset <entity>
+# species-genus multiple path error: Money loopset <entity>
+# species-genus multiple path error: MoneyRate loopset <entity>
+# species-genus loop error: MoneyTransaction loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,GeneralizedTransfer,Thing,entity]>
+# species-genus loop error: MoneyTransfer loopset <[Action,AnimalActivity,GeneralizedTransfer,Thing,entity]>
+# species-genus loop error: Motorboat loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Motorcycle loopset <[PartiallyTangibleProduct,PhysicalDevice,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Mouth loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Movement-TranslationProcess loopset <[Thing,entity]>
+# species-genus loop error: MultiDirectionalCommunication loopset <[Thing,entity]>
+# species-genus multiple path error: Multigraph loopset <Thing>
+# species-genus loop error: MusclePoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: MuscleTissue loopset <entity>
+# species-genus loop error: MuscularSystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Music loopset <[Thing,WavePropagation,entity]>
+# species-genus multiple path error: NTupleInterval loopset <entity>
+# species-genus loop error: NamedRoadway loopset <[SomethingExisting,entity]>
+# species-genus loop error: NationalOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: NationalTaxAgency loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: NavigationDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: NegativeInteger loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: NegativeNumber loopset <entity>
+# species-genus loop error: Negotiating loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: Nerve loopset <[PathSystem,SomethingExisting,Thing,entity,sentence]>
+# species-genus loop error: NervousSystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Nervousness loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Neutron loopset <entity>
+# species-genus loop error: NonNegativeInteger loopset <[IntangibleIndividual,ScalarInterval,entity]>
+# species-genus loop error: NonNegativeNumber loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: NonNegativeScalarInterval loopset <entity>
+# species-genus loop error: NonPersonAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: NonPhysicalPartPredicate loopset <Thing>
+# species-genus loop error: NonPoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: NonProfitCorporation loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: NonProfitEmployee loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: NonProfitOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: NonVerbalCommunicating loopset <[Thing,entity]>
+# species-genus loop error: Nose loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: NuclearPoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: Nucleon loopset <entity>
+# species-genus multiple path error: NumericComparison loopset <Thing>
+# species-genus loop error: Nurse loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: Nutrient loopset <[TemporalThing,entity]>
+# species-genus loop error: ObtainingPermission loopset <[Action,entity]>
+# species-genus loop error: Ocean loopset <[PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus multiple path error: OddNumber loopset <entity>
+# species-genus loop error: Offering-CommunicationAct loopset <[Thing,entity]>
+# species-genus multiple path error: OfficialDocument loopset <entity>
+# species-genus loop error: Oil loopset <[TemporalThing,entity]>
+# species-genus loop error: OneStoryBuilding loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus multiple path error: OrderOfMagnitudeInterval loopset <entity>
+# species-genus loop error: Ordering-CommunicationAct loopset <[Event,Thing,entity]>
+# species-genus multiple path error: Organ loopset <entity>
+# species-genus multiple path error: Organism-Whole loopset <entity>
+# species-genus multiple path error: OrganismPart loopset <entity>
+# species-genus loop error: Organization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: OrganizationPolicy loopset <[Thing,entity]>
+# species-genus loop error: OrganizationWithBusinessCustomers loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: OrganizationWithIndividualCustomers loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: OrganizationalChart loopset <[PartiallyIntangible,PartiallyIntangibleIndividual,entity]>
+# species-genus multiple path error: OutdoorLocation loopset <entity>
+# species-genus loop error: Paper loopset <[TemporalThing,entity]>
+# species-genus multiple path error: PartPredicate loopset <Thing>
+# species-genus multiple path error: PartiallyCommutativeRelation loopset <Thing>
+# species-genus multiple path error: PartiallyTangibleProduct loopset <entity>
+# species-genus multiple path error: Particle loopset <entity>
+# species-genus loop error: Partnership loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Party-Celebration loopset <[Action,AnimalActivity,entity]>
+# species-genus multiple path error: Passport loopset <entity>
+# species-genus multiple path error: Pasteurization loopset <entity>
+# species-genus loop error: PathArtifact loopset <[SomethingExisting,TemporalThing]>
+# species-genus loop error: PathForWheeledVehicles loopset <[PartiallyTangible,SomethingExisting,SpatialThing,TemporalThing,Thing,entity]>
+# species-genus loop error: Paying loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,ChangeInUserRights,Event,GeneralizedTransfer,HumanActivity,SocialOccurrence,Thing,entity]>
+# species-genus loop error: PayingCasualUseFee loopset <[AnimalActivity,AtLeastPartiallyMentalEvent,Event,GeneralizedTransfer,HumanActivity,Thing,entity]>
+# species-genus loop error: Pensive loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Perceiving-Voluntary loopset <entity>
+# species-genus loop error: Permission loopset <[Thing,entity]>
+# species-genus loop error: Person loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: PersonalCheck loopset <[InformationBearingObject,InformationBearingThing,PartiallyIntangible,PartiallyIntangibleIndividual,SomethingExisting,entity]>
+# species-genus loop error: Pharmacist loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: Pharmacy loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: PhysicalAmountSlot loopset <[Predicate,Relation,Thing,entity]>
+# species-genus multiple path error: PhysicalAttributeDescriptionSlot loopset <Thing>
+# species-genus loop error: PhysicalContactLocation loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: PhysicalDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: PhysicalFeatureDescribingPredicate loopset <Thing>
+# species-genus loop error: PhysicalPartPredicate loopset <[Relation,Thing,entity]>
+# species-genus multiple path error: PhysicalSeries loopset <entity>
+# species-genus loop error: PipeEndToCavityJunction loopset <[TemporalThing,Thing]>
+# species-genus loop error: Pity loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: PlanActionRestrictionPredicate loopset <Thing>
+# species-genus loop error: Plant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Plant-NonWoody loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Plant-Woody loopset <[PartiallyTangible,entity]>
+# species-genus multiple path error: PlantBLO loopset <entity>
+# species-genus multiple path error: PlantPart loopset <entity>
+# species-genus loop error: PlantProduct loopset <[TemporalThing,entity]>
+# species-genus loop error: PlumbingFixture loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: PolishingSomething loopset <entity>
+# species-genus loop error: PoliticalDispute loopset <[Action,Event,entity]>
+# species-genus loop error: PoliticalOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: PoliticalParty loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Politician loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: Porosity loopset <entity>
+# species-genus loop error: PositiveInteger loopset <[IntangibleIndividual,MathematicalObject,RealNumber,entity]>
+# species-genus loop error: PositiveNumber loopset <[IntangibleIndividual,MathematicalObject,entity]>
+# species-genus loop error: PoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: PrecipitationParticle loopset <entity>
+# species-genus multiple path error: Predicate loopset <Thing>
+# species-genus multiple path error: PregnancyEndingEvent loopset <entity>
+# species-genus loop error: PrepaidTelephoneCard loopset <[SomethingExisting,entity]>
+# species-genus loop error: PreparingFoodOrDrink loopset <[TemporalThing,entity]>
+# species-genus loop error: Prescriber loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: PrescriptionDrug loopset <[TemporalThing,entity]>
+# species-genus multiple path error: PreservingFood loopset <entity>
+# species-genus loop error: President-HeadOfGovernmentOrHeadOfState loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Pressure loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Pride loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Primate loopset <entity>
+# species-genus loop error: PrimeMinister-HeadOfGovernment loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: PrimitiveTemporalRelation loopset <Thing>
+# species-genus loop error: PrivateSectorEmployee loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: PrivatelyHeldCorporation loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: ProblemSolvingCntxt loopset <Thing>
+# species-genus multiple path error: ProcessPredicate loopset <Thing>
+# species-genus loop error: Professional loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: ProfessionalOffice loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: ProkaryoticCell loopset <entity>
+# species-genus multiple path error: Property loopset <Thing>
+# species-genus loop error: Proposal loopset <[Thing,entity]>
+# species-genus multiple path error: PropositionalInformationThing loopset <Thing>
+# species-genus loop error: ProtectiveAttire loopset <[PartiallyTangible,Product,TemporalThing,entity]>
+# species-genus multiple path error: ProtistaKingdom loopset <entity>
+# species-genus multiple path error: Proton loopset <entity>
+# species-genus multiple path error: Protozoan loopset <entity>
+# species-genus loop error: PublicEvent loopset <[Event,entity]>
+# species-genus loop error: PublicOfficial loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: PublicSectorEmployee loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: PubliclyHeldCorporation loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: PurposeSpecificationSlot loopset <Thing>
+# species-genus multiple path error: PurposefulAction loopset <entity>
+# species-genus multiple path error: PurposefulCompositePhysicalAndMentalActivity loopset <entity>
+# species-genus multiple path error: PurposefulMentalActivity loopset <entity>
+# species-genus loop error: PuttingOnAClothingItem loopset <[Action,Event,Thing,entity]>
+# species-genus multiple path error: Quantifier loopset <Thing>
+# species-genus loop error: QuaternaryFunction loopset <[Thing,entity]>
+# species-genus multiple path error: QuaternaryPredicate loopset <Thing>
+# species-genus multiple path error: QuaternaryRelation loopset <Thing>
+# species-genus loop error: QuintaryFunction loopset <[Thing,entity]>
+# species-genus multiple path error: QuintaryPredicate loopset <Thing>
+# species-genus multiple path error: QuintaryRelation loopset <Thing>
+# species-genus loop error: RadiationResistance loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: RailroadStation-Physical loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus loop error: Railway loopset <[PartiallyTangible,SomethingExisting,SpatialThing,TemporalThing,Thing,entity]>
+# species-genus multiple path error: Raindrop loopset <entity>
+# species-genus loop error: Raininess loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: Rate loopset <entity>
+# species-genus loop error: RateOfRotation loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: RationalNumber loopset <entity>
+# species-genus loop error: Reading loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: RealEstate loopset <[SomethingExisting,TemporalThing]>
+# species-genus multiple path error: RealNumber loopset <entity>
+# species-genus multiple path error: RecordedSoundProduct loopset <entity>
+# species-genus multiple path error: RecordedVideoProduct loopset <entity>
+# species-genus multiple path error: ReflexiveBinaryPredicate loopset <Thing>
+# species-genus multiple path error: ReformulatorDirectivePredicate loopset <Thing>
+# species-genus loop error: RegionalGovernment loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: ReifiableFunction loopset <[Thing,entity]>
+# species-genus multiple path error: Relation loopset <Thing>
+# species-genus multiple path error: RelationPredicate loopset <Thing>
+# species-genus loop error: RelativeHumidity loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Relaxed-Emotion loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Relief-TheEmotion loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: ReligiousOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: RemovingSomething loopset <entity>
+# species-genus loop error: RemovingSomethingByMovingIt loopset <[Event,Thing,entity]>
+# species-genus loop error: Renting loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,ChangeInUserRights,GeneralizedTransfer,HumanActivity,PurposefulAction,SocialOccurrence,TemporalThing,Thing,entity]>
+# species-genus loop error: ReproductiveSystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Reptile loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Requesting-CommunicationAct loopset <[Thing,entity]>
+# species-genus loop error: RequestingInformation loopset <[Thing,entity]>
+# species-genus loop error: Research loopset <[Action,entity]>
+# species-genus loop error: ResearchOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Researcher loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Resentment loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Respect loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: RespiratorySystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Restaurant-Organization loopset <[Agent,Agent-Generic,Organization,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: Restlessness loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: RetailOrganization loopset <[Agent,Agent-Generic,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: RetailStore loopset <[Agent,Agent-Generic,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus multiple path error: Rigidity loopset <entity>
+# species-genus multiple path error: Ritual loopset <entity>
+# species-genus loop error: River loopset <[GeographicalRegion,PartiallyTangible,SomethingExisting,SpatialThing,Surface-Physical,Thing,TopographicalFeature,entity]>
+# species-genus loop error: RoadVehicle loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus multiple path error: Role loopset <Thing>
+# species-genus loop error: RoomInAConstruction loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: Rowboat loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: RudeAction loopset <[Action,Event,entity]>
+# species-genus multiple path error: RuleMacroPredicate loopset <Thing>
+# species-genus loop error: Sadness loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: SaleByCheck loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,Event,GeneralizedTransfer,HumanActivity,SocialOccurrence,Thing,entity]>
+# species-genus loop error: SaleByCreditCard loopset <[Action,AnimalActivity,AtLeastPartiallyMentalEvent,Event,GeneralizedTransfer,HumanActivity,SocialOccurrence,Thing,entity]>
+# species-genus loop error: SalesActivity loopset <[AnimalActivity,Event,HumanActivity,entity]>
+# species-genus loop error: SalesAgreement loopset <[Thing,entity]>
+# species-genus loop error: SalesPerson loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus multiple path error: SaltingFood loopset <entity>
+# species-genus loop error: Satisfaction loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: ScalarInterval loopset <entity>
+# species-genus multiple path error: ScalarPointValue loopset <entity>
+# species-genus loop error: SchoolInstitution-KThrough12 loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Scientist loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus multiple path error: ScopingRelation loopset <Thing>
+# species-genus multiple path error: Sculpture loopset <entity>
+# species-genus loop error: Sea loopset <[PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus loop error: SeatingDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: SecretionEvent loopset <[Event,GeneralizedTransfer,Thing,entity]>
+# species-genus multiple path error: Seed loopset <entity>
+# species-genus loop error: SelfConfidence loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: SelfEmployedWorker loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: SelfPoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: SellingOrganization loopset <[Agent,Agent-Generic,PartiallyIntangible,SocialBeing,SomethingExisting,entity]>
+# species-genus loop error: SendingSomething loopset <[Action,Event,Thing,entity]>
+# species-genus multiple path error: SensoryInformation loopset <Thing>
+# species-genus loop error: ServiceEstablishment loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: ServiceEvent loopset <[TemporalThing,entity]>
+# species-genus loop error: ServiceOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: ServingFoodOrDrink loopset <[AnimalActivity,Event,TemporalThing,Thing,entity]>
+# species-genus multiple path error: Shaft loopset <entity>
+# species-genus loop error: Shame loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: ShapeDescribingPredicate loopset <Thing>
+# species-genus loop error: ShapeFunction loopset <[Thing,entity]>
+# species-genus loop error: Sharing loopset <[AnimalActivity,Event,entity]>
+# species-genus multiple path error: ShearStrength loopset <entity>
+# species-genus loop error: Shell-AnimalBodyPart loopset <[PartiallyIntangible,entity]>
+# species-genus multiple path error: ShippingLocation loopset <entity>
+# species-genus multiple path error: SimpleGraph-GraphTheoretic loopset <Thing>
+# species-genus multiple path error: SimpleRepairing loopset <entity>
+# species-genus multiple path error: SingleCellOrganism loopset <entity>
+# species-genus loop error: SingleResidenceUnit loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,Place,SolidTangibleProduct,SomethingExisting,TemporalThing,entity]>
+# species-genus loop error: SingleSiteLocalOrganizationWithClients loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: SingleSiteOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: SituationTypePred-Ternary loopset <Thing>
+# species-genus multiple path error: SituationTypeSlot loopset <Thing>
+# species-genus loop error: SkeletalSystem loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: Skin loopset <[PartiallyIntangible,entity]>
+# species-genus loop error: SkolemFuncN loopset <[Thing,entity]>
+# species-genus loop error: SkolemFunction loopset <[Thing,entity]>
+# species-genus multiple path error: SmokingFood loopset <entity>
+# species-genus multiple path error: SnowFlake loopset <entity>
+# species-genus loop error: SociabilityBasedAction loopset <[Event,entity]>
+# species-genus loop error: SocialBeing loopset <[PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: SocialClass-Lifestyle loopset <entity>
+# species-genus loop error: SocialGathering loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: SocialOccurrence loopset <[Event,entity]>
+# species-genus loop error: SocialRitual loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: SolarPoweredDevice loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: SoleProprietorship loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: SolidTangibleProduct loopset <entity>
+# species-genus multiple path error: Solubility loopset <entity>
+# species-genus multiple path error: SomethingToWear loopset <entity>
+# species-genus loop error: SoundInformationBearingThing loopset <[Thing,entity]>
+# species-genus multiple path error: SourceMicrotheory loopset <Thing>
+# species-genus loop error: SpaceInAHOC loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: SpaceTransportationEvent loopset <[Event,Thing,entity]>
+# species-genus loop error: Spacecraft loopset <[TemporalThing,entity]>
+# species-genus multiple path error: SpatialPredicate loopset <Thing>
+# species-genus loop error: Speaking loopset <[Event,Thing,entity]>
+# species-genus loop error: Speed loopset <[IntangibleIndividual,entity]>
+# species-genus multiple path error: SpermCell loopset <entity>
+# species-genus loop error: SpokenCommunicating loopset <[Thing,entity]>
+# species-genus loop error: StandardUnitOfMeasure loopset <[Thing,entity]>
+# species-genus loop error: State-Geopolitical loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: State-UnitedStates loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: StateCapital loopset <[Agent-Generic,PartiallyIntangible,PartiallyTangible,SomethingExisting,entity]>
+# species-genus multiple path error: StateOfMatter-SolidLiquidGaseous loopset <entity>
+# species-genus loop error: Stealing-Generic loopset <[Event,Thing,entity]>
+# species-genus loop error: Stock loopset <[Thing,entity]>
+# species-genus multiple path error: StockCertificate loopset <entity>
+# species-genus multiple path error: Stomach loopset <entity>
+# species-genus loop error: Stream loopset <[PartiallyTangible,SomethingExisting,SpatialThing,Surface-Physical,Thing,entity]>
+# species-genus loop error: Street-Generic loopset <[SomethingExisting,entity]>
+# species-genus loop error: Strength loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Student loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: SubAtomicParticle loopset <entity>
+# species-genus loop error: SubLAtomicTerm loopset <[CycLDenotationalTerm,CycLTerm]>
+# species-genus loop error: SubLCharacter loopset <[CycLDenotationalTerm,CycLTerm]>
+# species-genus loop error: SubLInteger loopset <[CycLDenotationalTerm,CycLTerm,Thing,entity]>
+# species-genus multiple path error: SubLKeyword loopset <Thing>
+# species-genus loop error: SubLNonVariableSymbol loopset <[CycLDenotationalTerm,CycLTerm,Thing,sentence]>
+# species-genus loop error: SubLRealNumber loopset <[CycLDenotationalTerm,CycLTerm,Thing,entity]>
+# species-genus loop error: SubLString loopset <[CycLDenotationalTerm,CycLTerm,Thing]>
+# species-genus multiple path error: SubLSymbol loopset <Thing>
+# species-genus multiple path error: SubLVariable loopset <Thing>
+# species-genus multiple path error: SubProcessSlot loopset <Thing>
+# species-genus loop error: Submarine loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: Subway loopset <[PartiallyTangible,SomethingExisting,SpatialThing,TemporalThing,Thing,entity]>
+# species-genus loop error: SubwayStation loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: SuccessCriterionSlot loopset <Thing>
+# species-genus loop error: SupplyCompany loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: SupposedToBeMicrotheory loopset <Thing>
+# species-genus loop error: Surgery loopset <[TemporalThing,entity]>
+# species-genus loop error: Surprise loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Swallowing loopset <[Event,Thing,entity]>
+# species-genus loop error: SymmetricBinaryPredicate loopset <[Thing,entity]>
+# species-genus loop error: SymmetryMemberFunction loopset <[Thing,entity]>
+# species-genus loop error: TakingOffAClothingItem loopset <[Action,Event,PhysicalEvent,Thing,entity]>
+# species-genus loop error: TakingSomething loopset <[Thing,entity]>
+# species-genus multiple path error: TangibleObjectPredicate loopset <Thing>
+# species-genus multiple path error: TangibleProduct loopset <entity>
+# species-genus multiple path error: TangibleSubstancePredicate loopset <Thing>
+# species-genus loop error: Tank-Vehicle loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus multiple path error: TaxonomicSlot loopset <Thing>
+# species-genus multiple path error: TaxonomicSlotForAnyUnit loopset <Thing>
+# species-genus multiple path error: TaxonomicSlotForCollections loopset <Thing>
+# species-genus loop error: Teaching loopset <[Action,Event,TemporalThing,Thing,entity]>
+# species-genus loop error: TechnicalWorker loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus multiple path error: TeethCleaning loopset <entity>
+# species-genus multiple path error: Temperature loopset <entity>
+# species-genus multiple path error: TemporalPartSlot loopset <Thing>
+# species-genus multiple path error: TemporalRelation loopset <Thing>
+# species-genus loop error: TemporaryChangeOfUserRights loopset <[Action,Event,entity]>
+# species-genus multiple path error: TenderObject loopset <entity>
+# species-genus multiple path error: TensileStrength loopset <entity>
+# species-genus loop error: TernaryFunction loopset <[Thing,entity]>
+# species-genus multiple path error: TernaryPredicate loopset <Thing>
+# species-genus multiple path error: TernaryRelation loopset <Thing>
+# species-genus multiple path error: TerrestrialDirection loopset <entity>
+# species-genus multiple path error: TerrestrialOrganism loopset <entity>
+# species-genus loop error: Territory loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: TextMicrotheory loopset <Thing>
+# species-genus multiple path error: TextileProduct loopset <entity>
+# species-genus loop error: ThermalConductivity loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: ThreeStoryBuilding loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus loop error: Time-Quantity loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Tool loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus loop error: TopographicalFeature loopset <[SomethingExisting,SpatialThing,entity]>
+# species-genus multiple path error: Torso loopset <entity>
+# species-genus loop error: Transaction loopset <[Action,entity]>
+# species-genus loop error: TransferringOwnership loopset <[Event,entity]>
+# species-genus loop error: TransferringPossession loopset <[Event,entity]>
+# species-genus multiple path error: TransitiveBinaryPredicate loopset <Thing>
+# species-genus loop error: Translation-LocationChange loopset <[Thing,entity]>
+# species-genus loop error: Translation-NonPeriodic loopset <[Thing,entity]>
+# species-genus loop error: Translation-Periodic loopset <[Thing,entity]>
+# species-genus loop error: Transparency loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: TransportationCompany loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: TransportationDevice loopset <[TemporalThing,entity]>
+# species-genus loop error: TransportationDevice-Vehicle loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus loop error: TransportationEvent loopset <[Event,Thing,entity]>
+# species-genus loop error: TransportingPeople loopset <[Event,Thing,entity]>
+# species-genus loop error: Trapping loopset <[Thing,entity]>
+# species-genus loop error: Tree-ThePlant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Truck loopset <[PartiallyTangibleProduct,SolidTangibleThing,TemporalThing,entity]>
+# species-genus multiple path error: TruthFunction loopset <Thing>
+# species-genus multiple path error: Tumor loopset <entity>
+# species-genus loop error: TwoStoryBuilding loopset <[Artifact,PartiallyTangible,PartiallyTangibleProduct,SolidTangibleProduct,SomethingExisting,TemporalThing]>
+# species-genus multiple path error: TypePredicate loopset <Thing>
+# species-genus loop error: USCity loopset <[Agent-Generic,PartiallyIntangible,PartiallyTangible,SomethingExisting,SpatialThing,entity]>
+# species-genus loop error: USFederalGovernmentOrganization loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus multiple path error: UnalloyedMetal loopset <entity>
+# species-genus loop error: UnaryFunction loopset <[Thing,entity]>
+# species-genus multiple path error: UnaryPredicate loopset <Thing>
+# species-genus multiple path error: UnaryRelation loopset <Thing>
+# species-genus loop error: UnemployedPerson loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: UnitOfAcceleration loopset <[Thing,entity]>
+# species-genus loop error: UnitOfAngularAcceleration loopset <[Thing,entity]>
+# species-genus loop error: UnitOfAngularDistance loopset <[Thing,entity]>
+# species-genus loop error: UnitOfAngularSpeed loopset <[Thing,entity]>
+# species-genus loop error: UnitOfArea loopset <[Thing,entity]>
+# species-genus loop error: UnitOfCapacitance loopset <[Thing,entity]>
+# species-genus loop error: UnitOfCharge loopset <[Thing,entity]>
+# species-genus loop error: UnitOfConcentration loopset <[Thing,entity]>
+# species-genus loop error: UnitOfCurrent loopset <[Thing,entity]>
+# species-genus loop error: UnitOfDistance loopset <[Thing,entity]>
+# species-genus loop error: UnitOfEnergy loopset <[Thing,entity]>
+# species-genus loop error: UnitOfFlowRate loopset <[Thing,entity]>
+# species-genus loop error: UnitOfFrequency loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMass loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMeasure loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMeasureNoPrefix loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMeasureWithPrefix loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMonetaryFlowRate loopset <[Thing,entity]>
+# species-genus loop error: UnitOfMoney loopset <[Thing,entity]>
+# species-genus loop error: UnitOfPower loopset <[Thing,entity]>
+# species-genus loop error: UnitOfPressure loopset <[Thing,entity]>
+# species-genus loop error: UnitOfRate loopset <[Thing,entity]>
+# species-genus loop error: UnitOfSpeed loopset <[Thing,entity]>
+# species-genus loop error: UnitOfTemperature loopset <[Thing,entity]>
+# species-genus loop error: UnitOfTime loopset <[Thing,entity]>
+# species-genus loop error: UnitOfVoltage loopset <[Thing,entity]>
+# species-genus loop error: UnitOfVolume loopset <[Thing,entity]>
+# species-genus multiple path error: UnitVector-Precise loopset <entity>
+# species-genus multiple path error: UnitVectorInterval loopset <entity>
+# species-genus loop error: UnitedStatesPerson loopset <[Agent,Agent-Generic,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,Organism-Whole,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: UnitedStatesPresident loopset <[Agent,Agent-Generic,Animal,BiologicalLivingObject,CompositeTangibleAndIntangibleObject,HumanAdult,Organism-Whole,PartiallyIntangible,PartiallyTangible,Person,entity]>
+# species-genus loop error: University loopset <[Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: UnreifiableFunction loopset <[Thing,entity]>
+# species-genus loop error: UrbanArea loopset <[SomethingExisting,entity]>
+# species-genus loop error: Utterance loopset <[Thing,WavePropagation,entity]>
+# species-genus multiple path error: VariableArityRelation loopset <Thing>
+# species-genus loop error: VariableAritySkolemFuncN loopset <[Thing,entity]>
+# species-genus loop error: VariableAritySkolemFunction loopset <[Thing,entity]>
+# species-genus multiple path error: Vector-Precise loopset <entity>
+# species-genus multiple path error: VectorInterval loopset <entity>
+# species-genus loop error: Vegetable-Food loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Vegetable-Plant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Vermin loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: Vertebrate loopset <[Agent-Generic,CompositeTangibleAndIntangibleObject,PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: VeterinaryHospital loopset <[Agent,Agent-Generic,PartiallyIntangible,SomethingExisting,entity]>
+# species-genus loop error: Vine-Plant loopset <[PartiallyTangible,entity]>
+# species-genus loop error: Visa-Permit loopset <[AbstractInformationalThing,IntangibleIndividual,Microtheory,Thing,entity]>
+# species-genus multiple path error: Viscosity loopset <entity>
+# species-genus loop error: Visibility loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: VisitingSomeone loopset <[Action,AnimalActivity,entity]>
+# species-genus loop error: VisualCommunicating loopset <[Thing,entity]>
+# species-genus loop error: VisualInformationConveyingAct loopset <[Thing,entity]>
+# species-genus multiple path error: VisualRepresentationMicrotheory loopset <Thing>
+# species-genus loop error: Volatility loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: Volume loopset <[IntangibleIndividual,entity]>
+# species-genus loop error: VoluntaryBodyMovement loopset <[Action,entity]>
+# species-genus loop error: Wagon loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: WakingUpFromSleep loopset <entity>
+# species-genus loop error: Warranty loopset <[Thing,entity]>
+# species-genus multiple path error: Washing loopset <entity>
+# species-genus loop error: WatchingSomething loopset <[Action,entity]>
+# species-genus multiple path error: Water-Saline loopset <entity>
+# species-genus loop error: WaterTransportationDevice loopset <[TemporalThing,entity]>
+# species-genus loop error: Watercraft loopset <[TemporalThing,entity]>
+# species-genus multiple path error: Weapon loopset <entity>
+# species-genus loop error: WildAnimal loopset <[PartiallyIntangible,PartiallyTangible,entity]>
+# species-genus loop error: WindPoweredDevice loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus multiple path error: WindowPane loopset <entity>
+# species-genus loop error: Wood loopset <[TemporalThing,entity]>
+# species-genus loop error: WorkAgreement loopset <[Thing,entity]>
+# species-genus loop error: Workplace loopset <[PartiallyTangible,PartiallyTangibleProduct,TemporalThing,entity]>
+# species-genus loop error: Writing loopset <[Thing,entity]>
+# species-genus loop error: WritingByHand loopset <[Action,Event,Thing,entity]>
+# species-genus loop error: WritingImplement loopset <[PartiallyTangible,TemporalThing,entity]>
+# species-genus multiple path error: buyingAgent loopset <preActors>
+# species-genus multiple path error: defendants loopset <actors>
+# species-genus loop error: driverActor loopset <[actors,temporallyIntersects]>
+# species-genus multiple path error: inputsCommitted loopset <actors>
+# species-genus multiple path error: litigants loopset <actors>
+# species-genus multiple path error: offspringActors loopset <temporallyIntersects>
+# species-genus loop error: passengers loopset <[actors,temporallyIntersects]>
+# species-genus multiple path error: plaintiffs loopset <actors>
+# species-genus multiple path error: sellingAgent loopset <preActors>
+# species-genus multiple path error: spouse loopset <positiveVestedInterest>
+# species-genus loop error: transportees loopset <[actors,temporallyIntersects]>
+# species-genus loop error: transporter loopset <[actors,temporallyIntersects]>
+# species-genus loop error: vehicle loopset <[actors,temporallyIntersects]>
+# loop count:  26703 items, 663 items with species-genus loops
+# loop count:  26703 items, 338 items with species-genus multiple paths
+# loop count:  26703 items, 0 items with unit-primitive loops
+# loop count:  26703 items, 0 items with unit-primitive multiple paths
+# loop count:  26703 items, 0 items with alternative-exgroup loops
+# loop count:  26703 items, 0 items with alternative-exgroup multiple paths
+# loop count:  26703 items, 0 items with member-ingroup loops
+# loop count:  26703 items, 0 items with member-ingroup multiple paths
+# loop count:  26703 items, 0 items with genlmt-specmt loops
+# loop count:  26703 items, 0 items with genlmt-specmt multiple paths
+# loop count:  26703 items, 0 items with symbol-referent loops
+# loop count:  26703 items, 0 items with symbol-referent multiple paths
+# loop count:  26703 items, 0 items with cause-effect loops
+# loop count:  26703 items, 0 items with cause-effect multiple paths
+# loop count:  26703 items, 0 items with before-after loops
+# loop count:  26703 items, 0 items with before-after multiple paths
+# loop count:  26703 items, 0 items with below-above loops
+# loop count:  26703 items, 0 items with below-above multiple paths
+# loop count:  26703 items, 0 items with beside loops
+# loop count:  26703 items, 0 items with beside multiple paths
+# loop count:  26703 items, 0 items with inside loops
+# loop count:  26703 items, 0 items with inside multiple paths
+# loop count:  26703 items, 0 items with outside loops
+# loop count:  26703 items, 0 items with outside multiple paths
+# loop count:  26703 items, 0 items with like loops
+# loop count:  26703 items, 0 items with like multiple paths
+# loop count:  26703 items, 0 items with happensod loops
+# loop count:  26703 items, 0 items with happensod multiple paths
+#####  exit  #####

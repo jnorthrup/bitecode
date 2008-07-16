@@ -1,0 +1,12 @@
+#####	svopad := [x,"isp","?"]
+#####	symbol := SYMBOL("qobject",svopad)
+#####	question := unparse(svopad," ")
+#####	answer := cyc_question("hwalk",question,symbol,"quiet")
+	cmdline := "cycprint '"||x||"' genlMt ?;"
+	answer := pipe2list(cmdline,"quiet")
+	answer := set(answer)
+	if member(answer,x) then {
+		line := x||" genlMt "||x
+		writes_type_all(line,warning||"ignoring ")
+		delete(answer,x)
+	}

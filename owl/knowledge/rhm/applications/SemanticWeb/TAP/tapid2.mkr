@@ -1,0 +1,57 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tapid2.mkr
+# Apr/8/2003
+
+#==============================#
+# MKR commands to integrate    #
+# TAP and tabula rasa contexts #
+# (step 2)		       #
+#==============================#
+
+#========#
+# entity #
+#========#
+Agent iss entity with purpose;  # definition
+person isd Agent; person is Person;
+PLANT isd Tangible; PLANT is Plant;
+##### OBJECT
+########## group
+Class isd Set;
+Literal isd group;
+
+#================#
+# characteristic #
+#================#
+##### part
+BodyPart isd part;
+##### attribute
+attribute isi
+	FieldOfStudy,
+	Genre,
+	Material,
+	PropertyType,
+	Quantity,
+	SpatialDirection,
+	StateOfMatter,
+	UnitOfMeasure;
+##### relation
+relation isi
+	subClassOf,
+	subPropertyOf,
+	locatedIn;
+##### action
+action isi
+	a:producesFood,
+	performedBy;
+##### interaction
+FoodActivity isd Activity;         # correct error
+AttributeValueType not iss Event;  # correct error
+Auction iss Event;                 # correct error
+
+#=============#
+# proposition #
+#=============#
+
+</XMP>
+</HTML>

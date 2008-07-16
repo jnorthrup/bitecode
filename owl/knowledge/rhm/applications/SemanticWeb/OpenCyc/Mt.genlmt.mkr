@@ -1,0 +1,12 @@
+# KEHOME/knowledge/applications/SemanticWeb/OpenCyc/Mt.genlmt.mkr
+# Sep/15/2003
+
+# generate OpenCyc Microtheory #$genlMt hierarchy
+# check hierarchy
+
+set echo=off, kbmode=cyc;
+
+?mt genlmt* #$BaseKB;
+do check od knit done;
+
+exit;

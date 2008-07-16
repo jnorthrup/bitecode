@@ -1,0 +1,113 @@
+<html><pre>
+# KEHOME/knowledge/theory/NaturalSemanticMetalanguage/happen.html
+# Oct/29/2003
+</pre>
+
+<title> NSM HAPPEN </title>
+
+<h1> NSM HAPPEN </h1>
+
+<p>
+From my perspective,
+HAPPEN [1] is the most unusual semantic prime,
+and the most difficult to map into MKR [2].
+HAPPEN deliberately suppresses the agent/actor information
+which MKR strives to preserve.
+</p>
+<p>
+To represent NSM HAPPEN,
+I have chosen to use the MKR command syntax
+with "do" replaced by "happens".
+</p>
+
+<h2> Basic Ideas </h2>
+<h3> Actions </h3>
+<p>
+In the MKR language, entity actions/events
+are characterized by propositions of the form
+<pre>
+at space=s, time=t, view=v {
+    entity do action = event
+	with action characteristics
+	out action products
+	od action direct objects
+	from action initial characteristics
+	to action final characteristics
+	done;
+};
+</pre>
+Event is the occurrence/instance of an action.
+If "= event" is omitted, a unique event name is
+automatically generated.
+</p>
+The NSM concept HAPPEN corresponds to
+<pre>
+at space=s, time=t, view=v {
+    entity do action = event od direct object done;
+};
+</pre>
+with entity omitted.
+The new MKR syntax is
+<pre>
+at space=s, time=t, view=v {
+    happens action = event od direct object done;
+};
+</pre>
+</p>
+
+<h3> Interactions </h3>
+<p>
+Although Wierzbicka describes HAPPEN in terms of
+a single action/event,
+I think that the concept is intended to apply to interactions.
+In other words, HAPPEN applies to a sequence of related actions/events.
+In MKR, interactions are characterized by a "script" of actions/events.
+The script does not have a single entity as subject.
+</p>
+<p>
+The only interaction which is explicitly represented in the
+current version of MKR/MKE is causality.
+<pre>
+    event:1 causes event:2;
+or
+    event:2 because event:1;
+</pre>
+An event may be expressed as an action proposition.
+</p>
+<p>
+For general interactions,
+the new syntax is the same as for actions.
+<pre>
+    happens interaction ... done;
+</pre>
+</p>
+
+<h2> Examples </h2>
+In NSM
+<ul>
+<li> something happened </li>
+<li> bad things happen to good people </li>
+<li> something bad happened to me </li>
+<li> something bad happened in this place </li>
+</ul>
+In MKR
+<ul>
+<li> at time=past { happens something done; }; </li>
+<li> happens some bad thing od some good person done; </li>
+<li> at time=past { happens bad something od I done; }; </li>
+<li> at space=this place, time=past { happens bad something done; }; </li>
+</ul>
+
+
+<h2> References </h2>
+<ol>
+<li>
+Anna Wierzbicka, "Semantics: Primes and Universals",
+Oxford University Press, 1996. </li>
+<li>
+Richard H. McCullough, "MKR/MKE Tutorial",
+http://rhm.cdepot.net/doc/MKEtutorial.html. </li>
+</ol>
+
+<a href="../../../../index.html"> mKE home </a>
+</html>

@@ -1,0 +1,54 @@
+# KEHOME/knowledge/TheoryContextSymposium/belief.txt
+# 1999/4/28
+# new syntax Nov/12/2002
+
+#======================#
+# Belief vs. Knowledge #
+#======================#
+
+A person's view of reality is the result of interpreting entities
+and their relations.  Depending on the method of interpreting,
+the result is called knowledge, error or belief.
+
+Knowledge is an identification of a fact of reality.  Knowledge
+is certain (true) because identifying is based on the evidence
+of perceptual observations and logical reasoning.  (To identify
+is to perceive, select and describe a group of existents and a
+relation between them.)
+
+An error is a misidentification of reality.  An error is false
+because it is the result of incorrect logical reasoning.
+
+A belief is a guess about reality.  A belief is uncertain (true or false)
+because guessing is based on insufficient evidence, or disregarding
+contradictory evidence.
+
+
+in my KR language
+=================
+proposition := man do recognize od existent done
+proposition is either knowledge or error or belief
+
+identify is correct recognize
+knowledge := man do identify od existent done
+
+misidentify is incorrect recognize
+error := man do misidentify od existent done
+
+belief := man do guess od existent done
+
+All input to Knowledge Explorer is assumed to be knowledge, e.g.:
+	at view=myview
+	sentence1
+implies
+	myview := I do identify od existent done
+
+When the input explicitly mentions knowledge or belief,
+Knowledge Explorer automatically creates additional views, e.g.:
+	John do know od {sentence2} done
+	John do believe od {sentence3} done
+produces (in addition to the 2 lines of knowledge above):
+	know_John := John do identify od existent done
+	believe_John := John do guess od existent done
+	at view=know_John {sentence2}
+	at view=believe_John {sentence3}

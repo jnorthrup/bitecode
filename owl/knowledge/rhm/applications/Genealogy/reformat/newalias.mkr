@@ -1,0 +1,14 @@
+# newalias.mkr
+# 1999/7/1
+# new syntax Aug/20/2005
+
+set echo=off;
+do read from alias.rel done;
+
+every x isa  r_alias {
+	set . = $x;
+	do print od "$1,$1,$2,$3;" done;
+};
+set echo=on;
+
+exit;

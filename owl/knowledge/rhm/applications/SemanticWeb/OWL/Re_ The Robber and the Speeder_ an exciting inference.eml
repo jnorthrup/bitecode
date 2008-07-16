@@ -1,0 +1,161 @@
+X-From_: www-rdf-logic-request@w3.org  Mon Mar 24 06:10:20 2003
+Return-Path: <www-rdf-logic-request@w3.org>
+Received: from frink.w3.org (frink.w3.org [18.29.1.71])
+	by mail41.megamailservers.com (8.12.8/8.12.0.Beta10) with ESMTP id h2OBAK5S028852
+	for <rhm@cdepot.net>; Mon, 24 Mar 2003 06:10:20 -0500 (EST)
+Received: from frink.w3.org (localhost [127.0.0.1])
+	by frink.w3.org (8.12.8/8.12.8) with ESMTP id h2OB9S4g013893;
+	Mon, 24 Mar 2003 06:09:28 -0500 (EST)
+Received: (from lists@localhost)
+	by frink.w3.org (8.12.8/8.12.8/Submit) id h2OB8paq013577;
+	Mon, 24 Mar 2003 06:08:51 -0500 (EST)
+Resent-Date: Mon, 24 Mar 2003 06:08:51 -0500 (EST)
+Resent-Message-Id: <200303241108.h2OB8paq013577@frink.w3.org>
+Received: from tux.w3.org (IDENT:root@tux [18.29.0.27])
+	by frink.w3.org (8.12.8/8.12.8) with ESMTP id h2OB8e4g013440
+	for <www-rdf-logic@frink.w3.org>; Mon, 24 Mar 2003 06:08:40 -0500 (EST)
+Received: from smtpproxy2.mitre.org (smtpproxy2.mitre.org [192.80.55.70])
+	by tux.w3.org (8.12.8/8.12.8) with ESMTP id h2OB8erB025355
+	for <www-rdf-logic@w3.org>; Mon, 24 Mar 2003 06:08:40 -0500
+Received: from avsrv2.mitre.org (avsrv2.mitre.org [128.29.154.4])
+	by smtpproxy2.mitre.org (8.12.8/8.12.8) with ESMTP id h2OB8dOC010535
+	for <www-rdf-logic@w3.org>; Mon, 24 Mar 2003 06:08:39 -0500 (EST)
+Received: from MAILHUB2 (mailhub2.mitre.org [129.83.221.18])
+	by smtpsrv2.mitre.org (8.12.8/8.12.8) with ESMTP id h2OB8bk2005005
+	for <www-rdf-logic@w3.org>; Mon, 24 Mar 2003 06:08:37 -0500 (EST)
+Received: from wmodempoo1-84.mitre.org (128.29.251.84) by mailhub2.mitre.org with SMTP
+        id 1637024; Mon, 24 Mar 2003 06:08:31 -0500
+Message-ID: <3E7EE7AD.B1BF55EF@mitre.org>
+Date: Mon, 24 Mar 2003 06:10:37 -0500
+From: "Roger L. Costello" <costello@mitre.org>
+Organization: The MITRE Corporation
+X-Mailer: Mozilla 4.61 [en]C-19990607M  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: www-rdf-logic@w3.org
+References: <3E75FF13.C14B44F4@mitre.org> <155987267415.20030321205908@internetalchemy.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Subject: Re: The Robber and the Speeder: an exciting inference
+X-Archived-At: http://www.w3.org/mid/3E7EE7AD.B1BF55EF@mitre.org
+Resent-From: www-rdf-logic@w3.org
+X-Mailing-List: <www-rdf-logic@w3.org> archive/latest/3442
+X-Loop: www-rdf-logic@w3.org
+Sender: www-rdf-logic-request@w3.org
+Resent-Sender: www-rdf-logic-request@w3.org
+Precedence: list
+List-Id: <www-rdf-logic.w3.org>
+List-Help: <http://www.w3.org/Mail/>
+List-Unsubscribe: <mailto:www-rdf-logic-request@w3.org?subject=unsubscribe>
+X-Symantec-Virus-Scan-Result: Definitions Date: 20030319; Definitions Version: 2; Virii Found: 0; Mon, 24 Mar 2003 06:10:21 -0500
+
+
+Outstanding!!!  This is exactly the thing I was looking for - a simple
+example with compelling inferences.  Thanks a lot Ian!  /Roger
+
+Ian Davis wrote:
+> 
+> On Monday, 17 March 2003 at 17:00, Roger L. Costello wrote:
+> > Does anyone have ideas on how to enhance my solution to use
+> > more of OWL's capabilities, and use more inferencing?
+> 
+> Here's my take on it...it's not as exciting as C.H.I.P.S. though...
+> 
+> First of all a robbery takes place. The robber drops his gun while
+> fleeing. A report is filed by the investigating officers:
+> 
+> <RobberyEvent>
+>   <date>...</date>
+>   <description>...</description>
+>   <evidence>
+>     <Gun>
+>       <serial>ABCD</serial>
+>     </Gun>
+>   </evidence>
+>   <robber>
+>     <Person /> <!-- an unknown person -->
+>   </robber>
+> </RobberyEvent>
+> 
+> Subsequently a car is pulled over for speeding. The traffic officer
+> files a report electronically while issuing a ticket:
+> 
+> <SpeedingOffence>
+>   <date>...</date>
+>   <description>...</description>
+>   <speeder>
+>     <Person>
+>       <name>John Doe</name>
+>       <driversLicenseNumber>ZXYZXY</driversLicenseNumber>
+>     </Person>
+>   </speeder>
+> </SpeedingOffence>
+> 
+> At police HQ, the computer analyses each report as it is filed. The
+> following OWL rule tells the computer that a driversLicenseNumber is
+> unique to a Person:
+> 
+> <owl:InverseFunctionalProperty rdf:ID="driversLicenseNumber">
+>   <rdfs:domain rdf:resource="Person" />
+>   <rdfs:range  rdf:resource="&rdf;Literal" />
+> </owl:FunctionalProperty>
+> 
+> The computer uses this information to look up any other records it has
+> about that person and finds a gun license:
+> 
+> <GunLicense>
+>   <registeredGun>
+>     <Gun>
+>       <serial>ABCD</serial>
+>     </Gun>
+>   </registeredGun>
+>   <holder>
+>     <Person>
+>       <name>Fred Bloggs</name>
+>       <driversLicenseNumber>ZXYZXY</driversLicenseNumber>
+>     </Person>
+>   </holder>
+> </GunLicense>
+> 
+> The next OWL rule tells the computer that the registeredGun property
+> uniquely identifies a GunLicense. i.e. each gun is associated with
+> only a single GunLicense
+> 
+> <owl:InverseFunctionalProperty rdf:ID="registeredGun">
+>   <rdfs:domain rdf:resource="GunLicense" />
+>   <rdfs:range  rdf:resource="Gun" />
+> </owl:FunctionalProperty>
+> 
+> The computer now knows that the person stopped for speeding owns a
+> gun. The next rule tells the computer that each gun is uniquely
+> identified by its serial.
+> 
+> <owl:InverseFunctionalProperty rdf:ID="serial">
+>   <rdfs:domain rdf:resource="Gun" />
+>   <rdfs:range  rdf:resource="&rdf;Literal" />
+> </owl:FunctionalProperty>
+> 
+> The computer uses this to determine that the gun on the license is the
+> same gun used in the robbery. This final rule, seals the speeder's
+> fate. It tells the computer that each GunLicense applies to only one
+> gun and one person, so there is no doubt that the speeder is the person
+> who owns the gun:
+> 
+> <owl:Class rdf:ID="GunLicense">
+>   <owl:intersectionOf rdf:parseType="Collection">
+>     <owl:Restriction>
+>       <owl:onProperty rdf:resource="#registeredGun"/>
+>       <owl:cardinality>1</owl:cardinality>
+>     </owl:Restriction>
+>     <owl:Restriction>
+>       <owl:onProperty rdf:resource="#holder"/>
+>       <owl:cardinality>1</owl:cardinality>
+>     </owl:Restriction>
+>   </owl:intersectionOf>
+> </Class>
+> 
+> The computer reports back to the traffic cop who duly arrests the
+> speeder on suspicion of armed robbery.
+> 
+> - Ian <iand@internetalchemy.org>
+> "The test of all knowledge is experiment."

@@ -1,0 +1,38 @@
+# <html><xmp>
+# KEHOME/knowledge/applications/Genealogy/school.rel
+# Oct/5/2003 Mar/15/2007
+
+# automatic: 6 proposition/infon
+# meaning:   2 proposition/infon
+
+r_school is relation with 
+    arraymode=gdbm,arraykey="$1",
+    label=[pid, degree ..., school, date, place],
+    format=[person:1, degree:2, school:3, time:4, space:5],
+    automatic=ISU,
+    meaning={
+	$1 has degree += $2;
+	at space=$5,time=$4 {$1 do receive od $2 from school=$3 done;};
+	};
+
+#set debug=relation;
+#set debug=token;
+#set debug=symbol;
+
+begin relation r_school; 
+Dick McCullough 1936, [SBEE,SMEE], MIT,                    1960, MA/Cambridge;
+Dick McCullough 1936, PhDEE,       Polytechnic University, 1967, NY/Brooklyn;
+Bob McCullough 1938,  SBEE,        MIT,                    1960, MA/Cambridge;
+Bob McCullough 1938,  PhDEE,       Stanford University,    19xx, CA;
+end relation r_school;
+
+do check od person done;  # number of persons
+
+#r_school isc* ?;
+#person isc* ?;
+#school isc* ?;
+#degree isc* ?;
+#space isc* ?;
+#time isc* ?;
+
+# </xmp></html>

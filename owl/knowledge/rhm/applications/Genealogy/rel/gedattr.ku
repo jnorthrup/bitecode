@@ -1,0 +1,43 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/rel/gedattr.ku
+# 1999/Aug/15
+# new syntax Jun/26/2005
+
+#============================#
+# attributes for GEDCOM file #
+#============================#
+
+person has
+	gedname,
+	uniquename,
+	prefername,
+	family_child,	# set
+	family_spouse,	# set
+	adopted,	# set of adoptive families
+	note,		# set
+	sex,
+	birthdate,
+	birthplace,
+	deathdate,
+	deathplace,
+	deathcause;
+
+family has
+	gedname,
+	uniquename,
+	husband,
+	wife,
+	child,		# set
+	adopted,	# set of adopted children
+	note,		# set
+	marriagedate,
+	marriageplace,
+	divorcedate,
+	divorceplace;
+
+note has
+	gedname,
+	uniquename,
+	text;
+
+# </xmp></html>

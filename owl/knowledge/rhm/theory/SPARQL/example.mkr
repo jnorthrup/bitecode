@@ -1,0 +1,26 @@
+# KEHOME/knowledge/theory/SPARQL/example.mkr
+# Oct/9/2005
+
+# from Gareth Andrew email Oct/9/2005
+
+#  PREFIX foaf: 
+#  PREFIX dc: 
+#  SELECT ?book
+#  WHERE { ?book dc:creator ?who
+#  ?who foaf:name "J. K. Rowling"
+#  }
+
+at view = foaf;
+at view = dc;
+
+# orignal query
+every b isa book; {
+    who := $b has dc:creator = ?;
+    if who has foaf:name = "J. K. Rowling";
+    then do print od $b done;
+    fi;
+};
+
+# faster query
+who := ? has foaf:name = "J. K. Rowling";
+book := ? has dc:creator = $who;

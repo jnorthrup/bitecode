@@ -1,0 +1,18 @@
+# 11:00 pm 1998/1/8
+
+# Dewey Decimal Classification
+# define & load book/ddcn hierarchy
+
+at view=v_dewey
+#--------------#
+book isa hierarchy
+#book has ddcn,subject
+subject isa lattice
+
+
+at view=v_dewey  at view=book/ddcn
+#--------------------------------#
+# define and load book/ddcn relation
+!read d100.ho
+!read d010.ho
+!read d001.ho

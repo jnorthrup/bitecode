@@ -1,0 +1,87 @@
+
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://masaka.cs.ohiou.edu/attack.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://masaka.cs.ohiou.edu/attack.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="LogicExploit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Means"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Input"/>
+  <owl:Class rdf:ID="Intrusion"/>
+  <owl:Class rdf:ID="Application">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SystemComponent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Network">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TCPIP">
+    <rdfs:subClassOf rdf:resource="#Network"/>
+  </owl:Class>
+  <owl:Class rdf:ID="InputValidationError">
+    <rdfs:subClassOf rdf:resource="#Means"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NetworkProtocol">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Other">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Consequence"/>
+  <owl:Class rdf:ID="KernelSpace">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="Causing">
+    <rdfs:domain rdf:resource="#Input"/>
+    <rdfs:range rdf:resource="#Means"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="EffectedBy">
+    <rdfs:domain rdf:resource="#Intrusion"/>
+    <rdfs:range rdf:resource="#Input"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ReceivedFrom">
+    <rdfs:range rdf:resource="#Location"/>
+    <rdfs:domain rdf:resource="#Input"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="DirectedTo">
+    <rdfs:range rdf:resource="#SystemComponent"/>
+    <rdfs:domain rdf:resource="#Input"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ResultingIn">
+    <rdfs:domain rdf:resource="#Intrusion"/>
+    <rdfs:range rdf:resource="#Consequence"/>
+  </owl:ObjectProperty>
+  <KernelSpace rdf:ID="OS"/>
+  <InputValidationError rdf:ID="BoundaryCondition"/>
+  <LogicExploit rdf:ID="SerializationError"/>
+  <Application rdf:ID="Root"/>
+  <Application rdf:ID="User"/>
+  <InputValidationError rdf:ID="MalformedInput"/>
+  <Consequence rdf:ID="UserToRoot"/>
+  <NetworkProtocol rdf:ID="UDPLayer"/>
+  <NetworkProtocol rdf:ID="TCPLayer"/>
+  <TCPIP rdf:ID="UDPPacket"/>
+  <Consequence rdf:ID="Probe"/>
+  <Consequence rdf:ID="RemoteToLocal"/>
+  <LogicExploit rdf:ID="RaceCondition"/>
+  <NetworkProtocol rdf:ID="IPLayer"/>
+  <Location rdf:ID="Local"/>
+  <KernelSpace rdf:ID="Module"/>
+  <TCPIP rdf:ID="TcpPacket"/>
+  <InputValidationError rdf:ID="BufferOverflow"/>
+  <TCPIP rdf:ID="ICMPPacket"/>
+  <Consequence rdf:ID="DenialOfService"/>
+  <LogicExploit rdf:ID="ExceptionCondition"/>
+  <Consequence rdf:ID="LossOfConf"/>
+  <LogicExploit rdf:ID="AtomicityError"/>
+</rdf:RDF>

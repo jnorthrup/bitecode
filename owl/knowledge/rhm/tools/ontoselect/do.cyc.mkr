@@ -1,0 +1,14 @@
+# KEHOME/knowledge/tools/ontoselect/do.cyc.mkr
+# Feb/7/2007
+
+at view = cyc;
+
+do read rdf from
+http://xbean.cs.ccu.edu.tw/~dan/opencyc-0.6.0/cyc.daml
+done;
+
+do size_species od Class done;
+do size_species od Property done;
+Thing isc* ?;
+
+exit;

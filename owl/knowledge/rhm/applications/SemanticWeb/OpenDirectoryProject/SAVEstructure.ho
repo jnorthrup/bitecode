@@ -1,0 +1,785 @@
+# KEHOME/knowledge/application/Internet/OpenDirectoryProject/structure.ho
+# Oct/24/2002
+
+# Example Open Directory Project structure file
+#
+# ODP species format:
+# <Topic r:id="Top/Arts">
+#   <tag catid="2"/>
+#   <d:Title>Arts</d:Title>
+#   <narrow r:resource="Top/Arts/Books"/>
+#   <narrow r:resource="Top/Arts/Music"/>
+
+Top isu lattice
+
+structure_example is begin hierarchy
+
+<RDF xmlns:r="http://www.w3.org/TR/RDF/"
+     xmlns:d="http://purl.org/dc/elements/1.0/"  
+     xmlns="http://directory.mozilla.org/rdf">
+
+<Topic r:id="Top">
+  <tag catid="1"/>
+  <d:Title>Top</d:Title>
+Top
+/	Arts
+/	Business
+/	Computers
+/	Games
+/	Health
+/	Home
+/	News
+/	Recreation
+/	Reference
+/	Regional
+/	Science
+/	Shopping
+/	Society
+/	Sports
+/	Test
+/	World
+/	Private
+/	Bookmarks
+</Topic>
+
+<Topic r:id="Top/Arts">
+  <tag catid="2"/>
+  <d:Title>Arts</d:Title>
+Arts
+/	Books
+/	Music
+/	Television
+/	Writing
+/	Animation
+/	Anime
+/	Bodyart
+/	Bonsai
+/	Comics
+/	Dance
+/	Fine_Arts
+/	Muppets
+/	Movies
+/	Poetry
+/	Theatre
+/	Photography
+/	Design
+/	Radio
+/	Online_Galleries
+/	Digital
+/	Graphic_Design
+/	Storytelling
+/	Publishing
+/	Asian_Arts
+/	Architecture
+/	Decorative_Arts
+/	Art_Directories_and_Links
+/	Illustration
+/	Magazines
+/	Literature
+/	Comedy
+/	Art_Theft_and_Crime
+/	Calligraphy
+/	Museums
+/	Art_History
+/	People
+/	Sculpture
+/	Internet_Design
+/	Ceramics
+/	Video
+/	Performing_Arts
+/	ASCII
+/	Artists
+  <symbolic r:resource="Typography:Top/Computers/Fonts"/>
+</Topic>
+
+<Topic r:id="Top/Business">
+  <tag catid="3"/>
+  <d:Title>Business</d:Title>
+Business
+/	Consulting
+/	Marketing
+/	Entrepreneurs
+/	Insurance
+/	Industries
+/	Investing
+/	Publications
+/	Jobs
+/	Advice
+/	Advertising
+/	Home_Business
+/	Management
+/	Classifieds
+/	Venture_Capital
+/	Books
+/	Accounting
+/	Financial_Services
+/	Manufacturing
+/	Business_Directories
+/	Training_and_Schools
+/	Business_Services
+/	International_Business_and_Trade
+/	Human_Resources
+/	Office_Services
+/	Real_Estate
+/	Opportunities
+/	Resources
+/	Office_Products
+  <symbolic r:resource="Transportation:Top/Business/Industries/Transportation"/>
+  <symbolic r:resource="Retail:Top/Business/Industries/Retail"/>
+  <symbolic r:resource="Internet:Top/Business/Industries/Information_Technology/Internet"/>
+  <symbolic r:resource="Information Technology:Top/Business/Industries/Information_Technology"/>
+  <symbolic r:resource="Legal:Top/Society/Law/Law_Firms"/>
+  <symbolic r:resource="Travel:Top/Recreation/Travel"/>
+</Topic>
+
+<Topic r:id="Top/Computers">
+  <tag catid="4"/>
+  <d:Title>Computers</d:Title>
+Computers
+/	Hacking
+/	Graphics
+/	CD_ROM
+/	Internet
+/	Security
+/	Software
+/	Hardware
+/	Operating_Systems
+/	Benchmarking
+/	CAD
+/	Algorithms
+/	Databases
+/	Data_Communications
+/	DSP
+/	Emulators
+/	Fonts
+/	Groupware
+/	Home_Automation
+/	Human_Factors
+/	Multimedia
+/	Programming
+/	Robotics
+/	Systems
+/	Desktop_Publishing
+/	Supercomputing
+/	Jobs
+/	Parallel_Computing
+/	Bulletin_Board_Systems
+/	Consultants
+/	Vendors
+/	Mobile_Computing
+/	Companies
+/	Learning
+/	News
+/	Organizations
+/	Intranets
+/	Artificial_Intelligence
+  <newsGroup r:resource="news:comp.misc"/>
+</Topic>
+
+<Topic r:id="Top/Games">
+  <tag catid="5"/>
+  <d:Title>Games</d:Title>
+Games
+/	MUDs
+/	Conventions
+/	Gambling
+/	Women-in-Gaming
+/	Video_Games
+/	Play_by_Mail
+/	Corewar
+/	Game_Design
+/	Miniatures
+/	Netrek
+/	Pinball
+/	Trading_Cards
+/	Puzzles
+/	Crossword_Puzzles
+/	Webgames
+/	IRC
+/	Game_Creation_Systems
+/	Fantasy_Sports
+/	Miscellaneous_Games
+/	Glass_Bead_Games
+/	Rogue-like
+/	Board_Games
+/	Card_Games
+/	Role-Playing_Games
+  <symbolic r:resource="Console Games:Top/Games/Video_Games/Console_Platforms"/>
+  <symbolic r:resource="Interactive Fiction:Top/Games/Video_Games/Interactive_Fiction"/>
+  <symbolic r:resource="Sports:Top/Sports"/>
+  <symbolic r:resource="Programming:Top/Computers/Programming/Games"/>
+  <symbolic r:resource="Computer Games:Top/Games/Video_Games/Computer_Platforms"/>
+  <symbolic r:resource="Arcade Games:Top/Games/Video_Games/Arcade_Games"/>
+  <newsGroup r:resource="news:rec.games.misc"/>
+</Topic>
+
+<Topic r:id="Top/Health">
+  <tag catid="6"/>
+  <d:Title>Health</d:Title>
+Health
+/	Emergency_Services
+/	Fitness
+/	Pharmacy
+/	Alternative
+/	Life_Extension
+/	Medicine
+/	Dentistry
+/	Nursing
+/	Nutrition
+/	Vision
+/	Services
+/	Beauty
+/	Substance_Abuse
+/	Patient_Education
+/	Womens_Health
+/	Children
+/	Conditions
+/	Occupational_Health_and_Safety
+/	Mental_Health
+/	Aging
+/	Healthcare_Industry
+/	Products
+/	Publications
+/	Education
+/	Men's_Health
+/	Consumer_Support_Groups
+/	Disabilities
+/	Organizations
+/	Chat,_Discussion,_ICQ
+/	References_and_Resources
+/	Conditions_and_Diseases
+  <related r:resource="Top/Business/Industries/Health_and_Fitness"/>
+  <related r:resource="Top/Computers/Internet/WWW/Directories/webring.org/Health"/>
+  <related r:resource="Top/Society/Issues/Health_Care"/>
+  <symbolic r:resource="Support Groups:Top/Society/Support_Groups"/>
+  <newsGroup r:resource="news:alt.health"/>
+</Topic>
+
+<Topic r:id="Top/Home">
+  <tag catid="7"/>
+  <d:Title>Home</d:Title>
+Home
+/	Consumers
+/	Houses
+/	Homeowners_Associations
+/	Financial_Planning
+/	Kids
+/	Rural
+/	Gardens
+/	Homemaking
+/	Tax_Preparation
+/	Recipes
+/	Entertainment
+</Topic>
+
+<Topic r:id="Top/News">
+  <tag catid="8"/>
+  <d:Title>News</d:Title>
+News
+/	Internet
+/	Online
+/	Media
+/	Newspapers
+/	Colleges_and_Universities
+/	Magazines
+/	News_Indexes
+/	Weather
+/	Filters
+/	Columnists
+/	Regional
+/	Services
+/	Tech_News
+  <symbolic r:resource="TV Industry News:Top/Arts/Television/Industry_News"/>
+  <symbolic r:resource="Business News:Top/News/Online/Business_News"/>
+  <symbolic r:resource="Political News:Top/News/Online/Political"/>
+  <symbolic r:resource="Scientific News:Top/Science/Journals_and_Magazines/News"/>
+  <symbolic r:resource="Radio:Top/Arts/Radio"/>
+</Topic>
+
+<Topic r:id="Top/Recreation">
+  <tag catid="9"/>
+  <d:Title>Recreation</d:Title>
+Recreation
+/	Food
+/	Outdoors
+/	Antiques
+/	Aquaria
+/	Theme_Parks
+/	Autos
+/	Aviation
+/	Birdwatching
+/	Boating
+/	Climbing
+/	Collecting
+/	Crafts
+/	Drugs
+/	Guns
+/	Humor
+/	Kites
+/	Knives
+/	Models
+/	Motorcycles
+/	Nudism
+/	Pets
+/	Ponds
+/	Scouting
+/	Travel
+/	Zoological
+/	Smoking
+/	Hot_Air_Ballooning
+/	Acrobatics
+/	Amateur_Radio
+/	Trains_and_Railroads
+  <symbolic r:resource="Reading:Top/Arts/Books"/>
+  <symbolic r:resource="Sports:Top/Sports"/>
+  <symbolic r:resource="Gardens:Top/Home/Gardens"/>
+  <symbolic r:resource="Games:Top/Games"/>
+</Topic>
+
+<Topic r:id="Top/Reference">
+  <tag catid="10"/>
+  <d:Title>Reference</d:Title>
+Reference
+/	Education
+/	Libraries
+/	Maps
+/	Archives
+/	Lexicon
+/	Dictionaries
+/	Style_Guides
+/	Directories
+/	Encyclopedia
+/	Quotations
+/	Thesauri
+/	Bibliography
+/	Knowledge_Management
+/	Handbooks
+/	Parliamentary_Procedure
+</Topic>
+
+<Topic r:id="Top/Regional">
+  <tag catid="11"/>
+  <d:Title>Regional</d:Title>
+Regional
+/	NZ
+/	US
+/	Canada
+/	UK
+/	Europe
+/	Australia
+/	Asia
+/	Africa
+/	Middle_East
+/	South_America
+/	Central_America
+/	Polar_Regions
+/	Atlantic_Islands
+/	Pacific_Islands
+/	Indian_Ocean_Islands
+/	Caribbean
+/	North_America
+/	A
+/	B
+/	C
+/	D
+/	E
+/	F
+/	L
+/	Z
+/	G
+/	N
+/	K
+/	M
+/	W
+/	R
+/	S
+/	I
+/	P
+/	U
+/	J
+/	Q
+/	T
+/	H
+/	Y
+/	V
+/	O
+  <related r:resource="Top/World"/>
+</Topic>
+
+<Topic r:id="Top/Science">
+  <tag catid="12"/>
+  <d:Title>Science</d:Title>
+Science
+/	Psychology
+/	Pyrotechnics
+/	Aeronautics
+/	Agriculture
+/	Archaeology
+/	Astronomy
+/	Futurism
+/	Ecology
+/	Evolution
+/	Paleontology
+/	Regional
+/	Chemistry
+/	Cognitive_Science
+/	Cryonics
+/	Cryptography
+/	Economics
+/	Electronics
+/	Energy
+/	Engineering
+/	Environment
+/	Math
+/	Geology
+/	Meteorology
+/	Navigation
+/	Language_and_Linguistics
+/	Logic
+/	Materials
+/	Laboratory_Medicine
+/	Military
+/	Optics
+/	Physics
+/	Polymers
+/	Skeptics
+/	Space
+/	Statistics
+/	Biology
+/	Physiology
+/	Software
+/	Geomatics
+/	Ethnology
+/	Molecular_Biology
+/	Immunology
+/	Food_Science
+/	Forensic
+/	FAQs
+/	Sociology
+/	Biochemistry
+/	Anomalies
+/	Cryptozoology
+/	Acoustics,_Noise_and_Vibration
+/	Oceanography
+/	Nanotechnology
+/	Crystallography
+/	About_Science
+/	Instruments_and_Supplies
+/	Political_Science
+/	Academia_and_Society
+/	About_Science_in_other_languages
+/	Journals_and_Magazines
+/	Museums
+/	A
+/	B
+/	C
+/	D
+/	E
+/	F
+/	G
+/	N
+/	V
+/	S
+/	M
+/	I
+/	P
+/	U
+/	O
+/	Physical_Sciences
+/	Fluid_Mechanics_and_Dynamics
+/	Z
+/	H
+/	R
+/	T
+/	X
+/	L
+/	W
+/	Q
+/	Science-Technology_Policy
+  <related r:resource="Top/Reference/Encyclopedia"/>
+  <symbolic r:resource="History of Science:Top/Society/History/Science"/>
+  <symbolic r:resource="Hydrology:Top/Science/Environment/Water_Resources"/>
+  <symbolic r:resource="History:Top/Society/History"/>
+  <symbolic r:resource="Anthropology:Top/Science/Biology/Anthropology"/>
+  <symbolic r:resource="Universities:Top/Reference/Education/Colleges_and_Universities"/>
+  <symbolic r:resource="Education:Top/Reference/Education/Science"/>
+  <symbolic r:resource="Medicine:Top/Health/Medicine"/>
+  <symbolic r:resource="Philosophy:Top/Society/Philosophy"/>
+  <newsGroup r:resource="news:sci.misc"/>
+</Topic>
+
+<Topic r:id="Top/Shopping">
+  <tag catid="13"/>
+  <d:Title>Shopping</d:Title>
+Shopping
+/	Autos
+/	Clothing
+/	Directories
+/	Online_Auctions
+/	Books
+/	Miscellaneous
+/	Gifts
+/	Music
+/	Jewelry
+/	Online_Malls
+/	Crafts
+/	Home_and_Garden
+/	International
+/	Pets
+/	Health_and_Beauty
+/	Computers
+/	Food
+/	Home_Electronics
+/	Children
+/	Antiques_and_Collectables
+/	Art_Galleries
+/	Office_Supplies
+/	Sporting_Goods
+/	Party_Supplies
+/	Housewares
+/	Flowers
+/	Videos
+/	Hardware_-_Home_Improvement
+/	General_Merchandise
+  <symbolic r:resource="Furniture:Top/Shopping/Home_and_Garden/Furniture"/>
+</Topic>
+
+<Topic r:id="Top/Society">
+  <tag catid="14"/>
+  <d:Title>Society</d:Title>
+Society
+/	Activism
+/	Heraldry
+/	Subcultures
+/	Death
+/	Future
+/	Genealogy
+/	History
+/	Men
+/	Transgendered
+/	Advice
+/	Military
+/	People
+/	Religion
+/	Human_Rights
+/	Support_Groups
+/	Women
+/	Law
+/	Paranormal
+/	Issues
+/	Politics
+/	Holidays
+/	Sexuality
+/	Relationships
+/	Disabled
+/	Gay,_Lesbian,_and_Bisexual
+/	Organizations
+/	Ethnicity
+/	Indigenous_People
+/	Government
+/	Philosophy
+/	Lifestyle_Choices
+/	Seniors
+/	Urban_Legends
+  <symbolic r:resource="Crime:Top/Society/Law/Crime_and_Criminal_Law"/>
+  <symbolic r:resource="Veterans:Top/Society/Military/Veterans"/>
+  <symbolic r:resource="Editors' Picks:Top/Society/People/Editors_Picks"/>
+  <symbolic r:resource="Education:Top/Reference/Education"/>
+  <symbolic r:resource="Language and Linguistics:Top/Science/Language_and_Linguistics"/>
+  <newsGroup r:resource="news:soc.misc"/>
+</Topic>
+
+<Topic r:id="Top/Sports">
+  <tag catid="15"/>
+  <d:Title>Sports</d:Title>
+Sports
+/	Marching
+/	Auto_Racing
+/	Bicycling
+/	Equestrian
+/	Hunting
+/	Juggling
+/	Martial_Arts
+/	Motorcycle_Racing
+/	Scuba_Diving
+/	Skiing
+/	Snowboarding
+/	Skydiving
+/	Archery
+/	Baseball
+/	Basketball
+/	Billiards
+/	Boxing
+/	Cricket
+/	Fencing
+/	Football
+/	Golf
+/	Hockey
+/	Bowling
+/	Officiating
+/	Olympics
+/	Paintball
+/	Pro_Wrestling
+/	Rodeo
+/	Rowing
+/	Rugby
+/	Inline_Skating
+/	Snowmobiles
+/	Soccer
+/	Softball
+/	Swimming
+/	Table_Soccer
+/	Table_Tennis
+/	Tennis
+/	Triathalon
+/	Volleyball
+/	Water_Skiing
+/	Windsurfing
+/	Horse_Racing
+/	Wrestling
+/	Unicycling
+/	Running
+/	Bocce
+/	Kitesailing
+/	Track_and_Field
+/	Personal_Watercraft
+/	Skateboarding
+/	Sailing
+/	Shooting
+/	Wakeboarding
+/	Highland_Games
+/	Merchandise
+/	Walking
+/	Cheerleading
+/	Gambling
+/	Canoe_and_Kayaking
+/	Skating
+/	Surfing
+/	Lacrosse
+/	Fishing
+/	Orienteering
+/	Gymnastics
+/	Croquet
+/	Skibob
+/	Ultimate_Frisbee
+/	Frisbee
+/	Fantasy
+/	College_and_University
+/	Flying_Discs
+/	News
+/	Curling
+/	Training
+  <related r:resource="Top/Games/Gambling/Sports"/>
+  <related r:resource="Top/Health/Fitness/Weightlifting/Bodybuilding"/>
+  <symbolic r:resource="Hiking:Top/Recreation/Outdoors/Hiking"/>
+  <symbolic r:resource="Paragliding:Top/Recreation/Aviation/Paragliding"/>
+  <symbolic r:resource="Bodybuilding:Top/Health/Fitness/Weightlifting/Bodybuilding"/>
+  <symbolic r:resource="Climbing:Top/Recreation/Climbing"/>
+</Topic>
+
+<Topic r:id="Top/Test">
+  <tag catid="20"/>
+  <d:Title>Test</d:Title>
+Test
+/	Test
+/	Chez_Bob
+/	another
+/	Private
+/	Rules
+/	alphabet
+/	Stay_Out_really
+/	Eeeek_Oh_Yes
+/	This_Cat_Will_Not_Die
+  <related r:resource="Top/Test/Chez_Bob/Dinner_with_Andre"/>
+  <symbolic r:resource="Blekko:Top/Test/Chez_Bob/Yikes"/>
+  <symbolic r:resource="Eeeek Link:Top/Test/Eeeek_Oh_Yes"/>
+  <symbolic r:resource="Wheee:Top/Society/Religion"/>
+  <symbolic r:resource="pbmtest:Top/Games/Play_by_Mail"/>
+  <symbolic r:resource="Hold:Top/Sports/Skiing/Nordic/Resorts"/>
+  <newsGroup r:resource="news:alt.test"/>
+  <newsGroup r:resource="news:comp.test"/>
+</Topic>
+
+<Topic r:id="Top/World">
+  <tag catid="16"/>
+  <d:Title>World</d:Title>
+World
+/	Español
+/	Chinese
+/	Deutsch
+/	Czech
+/	Bulgarian
+/	Français
+/	Italiano
+/	Nederlands
+/	Lietuviu
+/	Polska
+/	Indonesia
+/	Greek
+/	Portuguese
+/	Russian
+/	Svenska
+/	Esperanto
+/	Norsk
+/	Dansk
+/	Urdu
+/	Românã
+/	Català
+/	Gaelic
+/	Korean
+/	Simplified_Chinese
+/	Afrikaans
+/	Turkish
+/	Faroese
+/	Bosnian
+/	Malaysian
+/	Vlaams
+/	Thai
+/	Letzebuergesch
+/	Finland
+/	Farsi
+</Topic>
+
+<Topic r:id="Top/Private">
+  <tag catid="19"/>
+  <d:Title>Private</d:Title>
+Private
+/	Cybion
+</Topic>
+
+<Topic r:id="Top/Bookmarks">
+  <tag catid="18"/>
+  <d:Title>Bookmarks</d:Title>
+Bookmarks
+/	A
+/	B
+/	C
+/	D
+/	E
+/	F
+/	G
+/	H
+/	I
+/	J
+/	K
+/	L
+/	M
+/	N
+/	O
+/	P
+/	Q
+/	R
+/	S
+/	T
+/	U
+/	V
+/	W
+/	X
+/	Y
+/	Z
+</Topic>
+
+
+</RDF>
+
+end hierarchy structure_example

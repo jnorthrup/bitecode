@@ -1,0 +1,364 @@
+CYC(7): (CYC-QUERY '(#$genlMt ?x #$BaseKB) #$UniversalVocabularyMt)
+
+(((?X . #$PathSystemsMt)) 
+((?X . #$PathSystemsVocabularyMt)) 
+((?X . #$QueryMt))
+
+((?X . #$EverythingPSC)) 
+((?X . #$CapabilitiesMt)) 
+((?X . #$CapabilitiesVocabula
+ryMt)) 
+((?X . #$IntermediateVocabularyMt)) 
+((?X . #$DefaultVocabConstraintMt)) (
+(?X . #$EqualityReasoningMt)) 
+((?X . #$SpatialGMt)) 
+((?X . #$BordersVocabularyMt
+)) 
+((?X . #$NaiveSpatialVocabularyMt)) 
+((?X . #$EuclideanSpaceVocabularyMt)) 
+((?
+X . #$GeometryGVocabularyMt)) 
+((?X . #$SpatialGVocabularyMt)) 
+((?X . #$EqualityR
+easoningVocabularyMt)) 
+((?X . #$LanguageAndWritingSystemVocabularyMt)) 
+((?X . #$
+InformationTerminologyVocabularyMt)) 
+((?X . #$WorldPoliticalGeographyDataVocabul
+aryMt)) 
+((?X . #$PoliticalGeographyVocabularyMt)) 
+((?X . #$GeopoliticalEntityVoc
+abularyMt)) 
+((?X . #$OrganizationBuildingVocabularyMt)) 
+((?X . #$OrganizationGVo
+cabularyMt)) 
+((?X . #$AgentGVocabularyMt)) 
+((?X . #$NaturalGeographyVocabularyMt
+)) 
+((?X . #$WeatherVocabularyMt)) 
+((?X . #$GeographicalRegionGVocabularyMt)) 
+((?
+X . #$ClothingGVocabularyMt)) 
+((?X . #$ElectricalSystemsVocabularyMt)) 
+((?X . #$
+ArtifactGVocabularyMt)) 
+((?X . #$ChemistryVocabularyMt)) 
+((?X . #$TerrestrialFra
+meOfReferenceVocabularyMt)) 
+((?X . #$InterAgentArtifactVocabularyMt)) 
+((?X . #$P
+hysicalAgentVocabularyMt)) 
+((?X . #$CommunicationsSupportVocabMt)) 
+((?X . #$Naiv
+eStateChangeVocabularyMt)) 
+((?X . #$NaivePhysicsVocabularyMt)) 
+((?X . #$Movement
+VocabularyMt)) 
+((?X . #$HumanFoodGVocabularyMt)) 
+((?X . #$AmbientConditionsVocab
+ularyMt)) 
+((?X . #$WorldNaturalGeographyVocabularyMt)) 
+((?X . #$GeographyVocabul
+aryMt)) 
+((?X . #$EcologyVocabularyMt)) 
+((?X . #$LinnaeanTaxonomyVocabularyMt)) (
+(?X . #$BotanyVocabularyMt)) 
+((?X . #$DomesticBreedsVocabularyMt)) 
+((?X . #$Anim
+alMovementVocabularyMt)) 
+((?X . #$BiologyVocabularyMt)) 
+((?X . #$TransportationV
+ocabularyMt)) 
+((?X . #$DualistGeopoliticalVocabularyMt)) 
+((?X . #$CultureGVocabu
+laryMt)) 
+((?X . #$BiologicalSocialVocabularyMt)) 
+((?X . #$AnimalActivitiesVocabu
+laryMt)) 
+((?X . #$PerceptionVocabularyMt)) 
+((?X . #$HumanPhysiologyVocabularyMt)
+) 
+((?X . #$VertebratePhysiologyVocabularyMt)) 
+((?X . #$AnimalPhysiologyVocabular
+yMt)) 
+((?X . #$PharmaceuticalGVocabularyMt)) 
+((?X . #$FixedStructureVocabularyMt
+)) 
+((?X . #$PeopleVocabularyMt)) 
+((?X . #$OrganizationProductVocabularyMt)) 
+((?X
+ . #$ComputerHardwareVocabularyMt)) 
+((?X . #$ComputerSoftwareVocabularyMt)) 
+((?X
+ . #$ComputerGVocabularyMt)) 
+((?X . #$InformationGVocabularyMt)) 
+((?X . #$Produc
+tUsageVocabularyMt)) 
+((?X . #$ProductPhysicalCharacteristicsVocabularyMt)) 
+((?X
+. #$ProductGVocabularyMt)) 
+((?X . #$ContainerGVocabularyMt)) 
+((?X . #$CalendarsV
+ocabularyMt)) 
+((?X . #$GenericTemporalVocabularyMt)) 
+((?X . #$PharmaceuticalUseV
+ocabularyMt)) 
+((?X . #$AilmentVocabularyMt)) 
+((?X . #$MathMt)) 
+((?X . #$BordersM
+t)) 
+((?X . #$LanguageAndWritingSystemMt)) 
+((?X . #$InformationTerminologyMt)) 
+((
+?X . #$PoliticalGeographyMt)) 
+((?X . #$OrganizationGMt)) 
+((?X . #$AgentGMt)) 
+((?
+X . #$NonNaiveStateChangeMt)) 
+((?X . #$ClothingGMt)) 
+((?X . #$ArtifactGMt)) 
+((?X
+ . #$ObjectPhysicalCharacteristicsMt)) 
+((?X . #$ContainerGMt)) 
+((?X . #$Chemistr
+yMt)) 
+((?X . #$FixedStructureMt)) 
+((?X . #$TerrestrialFrameOfReferenceMt)) 
+((?X
+. #$NaturalGeographyMt)) 
+((?X . #$WeatherMt)) 
+((?X . #$GeographicalRegionGMt)) (
+(?X . #$PerceptionMt)) 
+((?X . #$HumanPerceptionMt)) 
+((?X . #$HumanPhysiologyMt))
+ 
+((?X . #$VertebratePhysiologyMt)) 
+((?X . #$AnimalPhysiologyMt)) 
+((?X . #$Molecu
+larBiologyMt)) 
+((?X . #$MicrobiologyMt)) 
+((?X . #$OrganizationBuildingMt)) 
+((?X
+. #$BuildingMt)) 
+((?X . #$NaiveInformationMt)) 
+((?X . #$ProductPhysicalCharacter
+isticsMt)) 
+((?X . #$OrganizationProductMt)) 
+((?X . #$InformationGMt)) 
+((?X . #$P
+roductGMt)) 
+((?X . #$HumanFoodGMt)) 
+((?X . #$GeographyMt)) 
+((?X . #$Pharmaceutic
+alUseMt)) 
+((?X . #$HumanAilmentMt)) 
+((?X . #$AilmentMt)) 
+((?X . #$AmbientConditi
+onsMt)) 
+((?X . #$EcologyMt)) 
+((?X . #$LinnaeanTaxonomyMt)) 
+((?X . #$BotanyMt)) (
+(?X . #$BiologyMt)) 
+((?X . #$TransportationMt)) 
+((?X . #$InterAgentArtifactMt))
+
+((?X . #$PhysicalAgentMt)) 
+((?X . #$NaivePhysicsMt)) 
+((?X . #$MovementMt)) 
+((?X
+. #$NaiveSpatialMt)) 
+((?X . #$GeometryGMt)) 
+((?X . #$SimpleAstronomyMt)) 
+((?X .
+#$InferencePSC)) 
+((?X . #$CalendarsMt)) 
+((?X . #$ComputerSoftwareMt)) 
+((?X . #$C
+omputerGMt)) 
+((?X . #$ComputerHardwareMt)) 
+((?X . #$PeopleMt)) 
+((?X . #$DualistG
+eopoliticalMt)) 
+((?X . #$CultureGMt)) 
+((?X . #$NaiveBiologicalDescentMt)) 
+((?X .
+ #$BiologicalSocialMt)) 
+((?X . #$ProductUsageMt)) 
+((?X . #$AnimalActivitiesMt))
+
+((?X . #$AnimalMovementMt)) 
+((?X . #$WorldPoliticalGeographyDataMt)) 
+((?X . #$Wo
+rldNaturalGeographyMt)) 
+((?X . #$CyclistDefinitionalMt)) 
+((?X . #$ManufacturingM
+t)) 
+((?X . #$JobMt)) 
+((?X . #$SportsMt)) 
+((?X . #$USGovernmentOrganizationDataMt
+)) 
+((?X . #$ModernWesternMedicineMt)) 
+((?X . #$WesternBusinessPracticesMt)) 
+((?X
+ . #$ShoppingGMt)) 
+((?X . #$FinancialTransactionMt)) 
+((?X . #$OrganizationMt)) (
+(?X . #$AcademicOrganizationVocabularyMt)) 
+((?X . #$SecurityMt)) 
+((?X . #$Modern
+MilitaryWeaponsMt)) 
+((?X . #$ModernMilitaryVehiclesMt)) 
+((?X . #$MilitaryGMt)) (
+(?X . #$MilitaryGVocabularyMt)) 
+((?X . #$VulnerabilityMt)) 
+((?X . #$HumanSocialL
+ifeMt)) 
+((?X . #$HumanActivitiesMt)) 
+((?X . #$UnitedStatesSocialLifeMt)) 
+((?X .
+#$UnitedStatesGeographyMt)) 
+((?X . #$WorldGeographyMt)) 
+((?X . #$ComputerRunning
+Mt)) 
+((?X . #$WorldLikeOursCollectorMt)) 
+((?X . #$MassMediaMt)) 
+((?X . #$America
+nProfessionalSportsMt)) 
+((?X . #$InternationalOrganizationDataMt)) 
+((?X . #$Worl
+dGeographyDualistMt)) 
+((?X . #$NameStringDefinitionMt)) 
+((?X . #$UMLStateMachine
+SpindleHeadMt)) 
+((?X . #$UMLStateMachineTest01Mt)) 
+((?X . #$UMLStateMachineSpind
+leCollectorMt)) 
+((?X . #$ChatterBotStateMachineMt)) 
+((?X . #$ModernMilitaryTacti
+csMt)) 
+((?X . #$CyclistsMt)) 
+((?X . #$KnowledgeExchangeDataMt)) 
+((?X . #$Knowled
+geExchangeMt)) 
+((?X . #$ComputerSoftwareDataMt)) 
+((?X . #$ComputerSecurityMt)) (
+(?X . #$ComputerNetworkMt)) 
+((?X . #$CommunicationsSupportMt)) 
+((?X . #$NewLatin
+LexicalMt)) 
+((?X . #$WordNetMappingMt)) 
+((?X . #$ComputereseLexicalMt)) 
+((?X . #
+$CommonEnglishMisspellingsMt)) 
+((?X . #$CyclishMt)) 
+((?X . #$TemporaryEnglishMt)
+) 
+((?X . #$TechnicalEnglishLexicalMt)) 
+((?X . #$AmericanEnglishMt)) 
+((?X . #$Aus
+tralianEnglishMt)) 
+((?X . #$IrishEnglishMt)) 
+((?X . #$ScottishEnglishMt)) 
+((?X .
+ #$SouthAfricanEnglishMt)) 
+((?X . #$NewZealandEnglishMt)) 
+((?X . #$CanadianEngli
+shMt)) 
+((?X . #$BritishEnglishMt)) 
+((?X . #$CommonWealthEnglishMt)) 
+((?X . #$Ame
+ricanEnglishCompositionalPhrasesLexicalMt)) 
+((?X . #$CommonWealthEnglishComposit
+ionalPhrasesLexicalMt)) 
+((?X . #$EnglishCompositionalPhrasesLexicalMt)) 
+((?X . #
+$NonAmericanEnglishMt)) 
+((?X . #$EnglishMt)) 
+((?X . #$DiseaseLexicalMt)) 
+((?X .
+#$GeneralEnglishMt)) 
+((?X . #$EnglishLexiconMt)) 
+((?X . #$NameLexicalMt)) 
+((?X .
+ #$NegationTemplateMt)) 
+((?X . #$RTPVBarTemplateMt)) 
+((?X . #$AuxInversionTempla
+teMt)) 
+((?X . #$CopulaConstructionTemplateMt)) 
+((?X . #$AuxVerbTemplateMt)) 
+((?X
+ . #$GappedNPTemplateParsingMt)) 
+((?X . #$EnglishGrammarTemplateMt)) 
+((?X . #$Te
+mplateParsingMt)) 
+((?X . #$GeneralScientificLexicalMt)) 
+((?X . #$RelationParaphr
+aseMt)) 
+((?X . #$CyclishParaphraseMt)) 
+((?X . #$TemporaryEnglishParaphraseMt)) (
+(?X . #$EnglishParaphraseMt)) 
+((?X . #$ParaphraseMt)) 
+((?X . #$ParaphraseVocabul
+aryMt)) 
+((?X . #$TemporaryLexicalAssertionsMt)) 
+((?X . #$TemporaryLexicalAsserti
+ons-GuessedMt)) 
+((?X . #$AllEnglishValidatedLexicalMicrotheoryPSC)) 
+((?X . #$Gen
+eralMilitaryLexicalMt)) 
+((?X . #$GeneralLexiconMt)) 
+((?X . #$BookkeepingMt)) 
+((?
+X . #$DataForNLMt)) 
+((?X . #$ModernMilitaryMt)) 
+((?X . #$CProgrammingLanguageMt)
+) 
+((?X . #$CSyntaxProgrammingLanguageMt)) 
+((?X . #$CProgrammingTestMt)) 
+((?X . #
+$CProgrammingDomainMt)) 
+((?X . #$CSyntaxProgrammingDomainMt)) 
+((?X . #$CommonLis
+pProgrammingTestMt)) 
+((?X . #$CommonLispProgrammingDomainMt)) 
+((?X . #$CommonLis
+pProgrammingLanguageMt)) 
+((?X . #$LispSyntaxProgrammingLanguageMt)) 
+((?X . #$Pro
+grammingDomainMt)) 
+((?X . #$ProgramModelMt)) 
+((?X . #$ProgrammingDomainVocabular
+yMt)) 
+((?X . #$SituationPredicateRepresentationMt)) 
+((?X . #$ModalityMt)) 
+((?X .
+ #$LogicalTruthMt)) 
+((?X . #$LogicalTruthImplementationMt)) 
+((?X . #$DeepCoverag
+eTemplateMt)) 
+((?X . #$AnthraxTemplateMt)) 
+((?X . #$RelativeClausesTemplateMt))
+
+((?X . #$GenFormatTemplateMt)) 
+((?X . #$GrammarInUseTemplateMt)) 
+((?X . #$AllEng
+lishTemplateMt)) 
+((?X . #$MostEnglishTemplateMt)) 
+((?X . #$AllLexicalMicrotheory
+PSC)) 
+((?X . #$AllEnglishLexicalMicrotheoryPSC)) 
+((?X . #$AllLexicalNonParaphras
+eMicrotheoryPSC)) 
+((?X . #$NeedsOELexicalMt)) 
+((?X . #$AllLanguageLexicalNonPara
+phraseMicrotheoryPSC)) 
+((?X . #$EnglishTemplateMt)) 
+((?X . #$CoreCycLMt)) 
+((?X .
+ #$UniversalVocabularyMt)) 
+((?X . #$UniversalVocabularyImplementationMt)) 
+((?X .
+ #$CoreCycLImplementationMt)) 
+((?X . #$BaseKB)))
+:EXHAUST
+CYC(8):

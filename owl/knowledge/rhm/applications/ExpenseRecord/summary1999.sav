@@ -1,0 +1,277 @@
+# input  file <SUMMARY.KU>
+# output file <summary.out>
+# error  file <summary.err>
+# log    file <summary.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Icon Version 9.3.  November 25, 1996
+# INFO: kversion = Knowledge Explorer version 4.0  1999/Aug/11
+# clock <1999/08/11 09:28:12> # finished opening files
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/08/11 09:28:15> # finished loading tabula_rasa
+# command <!read kb/init.ku>
+# clock <1999/08/11 09:28:19> # finished loading definitions
+# clock <1999/08/11 09:28:19> # finished !menu
+# command <!read SUMMARY.KU>
+# command <!read expense.rel>
+# statement <expense isa object>
+# statement <r_expense is relation with label = "date; cost; receipt; payee; category; note",format = "time:1; cost:2; receipt:3; payee:4; category:5; note:6",automatic = ISA,meaning = { ! unique $5 ; $x = $command ; $x isa expense ; $x has date = $1,cost = $2,receipt = $3,payee = $4,type = $5,note = $6 ; ! year $1 ; $x has year = $command ;}>
+# assignment <hfocus = [ expense , s_attribute , newstatement , newword ]>
+hardware_287
+1996
+software_295
+1996
+supplies_303
+1996
+software_311
+1996
+software_319
+1996
+ISP_327
+1997
+books_335
+1997
+software_343
+1997
+supplies_351
+1997
+software_359
+1997
+advertising_367
+1997
+supplies_375
+1997
+software_383
+1997
+books_391
+1997
+hardware_399
+1997
+books_407
+1997
+books_415
+1997
+books_423
+1997
+books_431
+1997
+hardware_439
+1997
+software_447
+1997
+supplies_455
+1997
+ISP_463
+1998
+supplies_471
+1998
+books_479
+1998
+books_487
+1998
+# command <!psize expense>
+26 # !psize expense
+# command <!psize category>
+6 # !psize category
+# command <!clock "finished loading expense data">
+# clock <1999/08/11 09:28:31> # finished loading expense data
+# command <!isd expense with year,type>
+# question <expense ise* ?>
+expense
+/  expense/year_1996
+//    expense/year_1996/type_hardware
+///      hardware_287
+//    expense/year_1996/type_software
+///      software_295
+///      software_311
+///      software_319
+//    expense/year_1996/type_supplies
+///      supplies_303
+/  expense/year_1997
+//    expense/year_1997/type_ISP
+///      ISP_327
+//    expense/year_1997/type_advertising
+///      advertising_367
+//    expense/year_1997/type_books
+///      books_335
+///      books_391
+///      books_407
+///      books_415
+///      books_423
+///      books_431
+//    expense/year_1997/type_hardware
+///      hardware_399
+///      hardware_439
+//    expense/year_1997/type_software
+///      software_343
+///      software_359
+///      software_383
+///      software_447
+//    expense/year_1997/type_supplies
+///      supplies_351
+///      supplies_375
+///      supplies_455
+/  expense/year_1998
+//    expense/year_1998/type_ISP
+///      ISP_463
+//    expense/year_1998/type_books
+///      books_479
+///      books_487
+//    expense/year_1998/type_supplies
+///      supplies_471
+# command <!clock "finished differentiating expense">
+# clock <1999/08/11 09:28:33> # finished differentiating expense
+# every <every vyear isa expense do echo = off ; ! print "==================================" ; ! print $vyear ; every vcat isa $vyear do $vcat isc 0 ; every vexp isa $vcat do ! cc $vexp ; $vcat isc $cost ; done ; $vcat isc ? ; ! sum $question ; $vcat has cost = $command ; $vyear isc $command ; done ; $vyear isc ? ; ! sum $question ; $vyear has cost = $command ; expense isc $command ; ! print "----------------------------------" ; echo = on ; done>
+==================================
+expense/year_1996
+expense/year_1996/type_hardware isc [0,
+    281.75]
+281.75
+expense/year_1996/type_software isc [0,
+    40.00,
+    389.61,
+    29.00]
+458.61
+expense/year_1996/type_supplies isc [0,
+    26.81]
+26.81
+expense/year_1996 isc [281.75,
+    458.61,
+    26.81]
+767.17
+----------------------------------
+==================================
+expense/year_1997
+expense/year_1997/type_ISP isc [0,
+    240.00]
+240.0
+expense/year_1997/type_advertising isc [0,
+    49.34]
+49.34
+expense/year_1997/type_books isc [0,
+    35.00,
+    24.92,
+    98.67,
+    78.31,
+    27.76,
+    17.68]
+282.34
+expense/year_1997/type_hardware isc [0,
+    257.40,
+    195.23]
+452.63
+expense/year_1997/type_software isc [0,
+    20.00,
+    381.07,
+    211.00,
+    79.97]
+692.04
+expense/year_1997/type_supplies isc [0,
+    26.81,
+    42.81,
+    26.81]
+96.43
+expense/year_1997 isc [240.0,
+    49.34,
+    282.34,
+    452.63,
+    692.04,
+    96.43]
+1812.78
+----------------------------------
+==================================
+expense/year_1998
+expense/year_1998/type_ISP isc [0,
+    19.49]
+19.49
+expense/year_1998/type_books isc [0,
+    63.33,
+    32.95]
+96.28
+expense/year_1998/type_supplies isc [0,
+    26.81]
+26.81
+expense/year_1998 isc [19.49,
+    96.28,
+    26.81]
+142.58
+----------------------------------
+# question <expense isc ?>
+expense isc [767.17,
+    1812.78,
+    142.58]
+# command <!sum [767.17,
+    1812.78,
+    142.58]>
+2722.53
+# statement <expense has cost = 2722.53>
+# question <? has cost>
+ISP_327 has cost=240.00
+ISP_463 has cost=19.49
+advertising_367 has cost=49.34
+books_335 has cost=35.00
+books_391 has cost=24.92
+books_407 has cost=98.67
+books_415 has cost=78.31
+books_423 has cost=27.76
+books_431 has cost=17.68
+books_479 has cost=63.33
+books_487 has cost=32.95
+expense has cost=2722.53
+expense/year_1996 has cost=767.17
+expense/year_1996/type_hardware has cost=281.75
+expense/year_1996/type_software has cost=458.61
+expense/year_1996/type_supplies has cost=26.81
+expense/year_1997 has cost=1812.78
+expense/year_1997/type_ISP has cost=240.0
+expense/year_1997/type_advertising has cost=49.34
+expense/year_1997/type_books has cost=282.34
+expense/year_1997/type_hardware has cost=452.63
+expense/year_1997/type_software has cost=692.04
+expense/year_1997/type_supplies has cost=96.43
+expense/year_1998 has cost=142.58
+expense/year_1998/type_ISP has cost=19.49
+expense/year_1998/type_books has cost=96.28
+expense/year_1998/type_supplies has cost=26.81
+hardware_287 has cost=281.75
+hardware_399 has cost=257.40
+hardware_439 has cost=195.23
+software_295 has cost=40.00
+software_311 has cost=389.61
+software_319 has cost=29.00
+software_343 has cost=20.00
+software_359 has cost=381.07
+software_383 has cost=211.00
+software_447 has cost=79.97
+supplies_303 has cost=26.81
+supplies_351 has cost=26.81
+supplies_375 has cost=42.81
+supplies_455 has cost=26.81
+supplies_471 has cost=26.81
+# command <!clock "finished generating report">
+# clock <1999/08/11 09:29:39> # finished generating report
+# command <!exit []>
+# clock <1999/08/11 09:29:39> # finished reading knowledge
+
+##### Goodbye. #####
+# clock <1999/08/11 09:29:39> # closing files
+# lines:           790
+# propositions:    772
+#   newpropositions:  0
+#   nullpropositions: 1
+#   productions:      2
+#   context:          1
+#   kusentences:     586
+#     kustatements:    363
+#     commands:        128
+#     assignments:     61
+#     questions:       18
+#     condtionals:     0
+#     iterations:      16
+#   hosentences:     156
+#     hostatements:    156
+#   relsentences:    26
+#     relstatements:   26 infons

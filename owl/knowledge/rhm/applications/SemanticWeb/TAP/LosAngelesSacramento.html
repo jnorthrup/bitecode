@@ -1,0 +1,252 @@
+<HTML><pre>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/LosAngelesSacramento.html
+# Aug/23/2003
+</pre><H3><pre>
+
+
+# When does Los Angeles play Sacramento?
+
+# tools used: MKE, TAP, google
+# Notes:
+# Los Angeles and Sacramento have many sports teams.
+# I picked the most likely meaning.
+# hasTeamCode might have been useful for TicketMaster.
+
+
+ke$ set echo=off, kbmode=tap;
+ke$ ? has name = Sacramento;
+  CitySacramentoCA
+  MusicianSacramento_Street
+  SportsTeamSacramentoKings
+# has name = Sacramento
+ke$ set sac = SportsTeamSacramentoKings;
+ke$ $sac has ?;
+# SportsTeamSacramentoKings has
+  hasTeamCode = sac
+  label = Sacramento Kings
+  locatedIn = CitySacramentoCA
+  plays = SportBasketball
+  type = BasketballTeam
+
+ke$ ? has name = "Los Angeles";
+  CityLosAngelesChile
+  CityLosAngelesCA
+  LosAngelesMagazine
+  SportsTeamLosAngelesDodgers
+  SportsTeamLosAngelesClippers
+  SportsTeamLosAngelesLakers
+  SportsTeamLosAngelesKings
+  CityELosAngelesCA
+  MusicianThe_Los_Angeles_Flute_Quartet
+  LosAngelesLittleTokyo
+  LosAngelesMiracleMile
+  LosAngelesUniversalStudios
+  LosAngelesMuseumOfContemporaryArt
+  LosAngelesCountyMuseumOfArt
+  UniversityOfCaliforniaLosAngeles
+  MovieCrocodile_Dundee_in_Los_Angeles
+  ElPueblodeLosAngelesHistoricalMonument
+# has name = Los Angeles
+ke$ set la = SportsTeamLosAngelesLakers;
+ke$ $la has ?;
+# SportsTeamLosAngelesLakers has
+  hasTeamCode = lal
+  label = Los Angeles Lakers
+  locatedIn = CityLosAngelesCA
+  plays = SportBasketball
+  type = BasketballTeam
+
+ke$ ! google search Los Angeles Lakers Sacramento Kings done;
+CLASSPATH=;/home/java
+Parameters:
+Client key = 00000000000000000000000000000000
+Directive  = search
+Args       = Los
+Google Search Results:
+======================
+{
+TM = 0.168469
+Q  = "Los"
+CT = ""
+TT = ""
+CATs =
+  {
+  {SE="", FVN="Top/Regional/North_America/United_States/California/Counties/Los_
+Angeles"}
+  }
+Start Index = 1
+End   Index = 10
+Estimated Total Results Number = 111000000
+Document Filtering = true
+Estimate Correct = false
+Rs =
+  {
+
+  [
+  URL  = "http://www.latimes.com/"
+  Title = "<b>Los</b> Angeles Times"
+  Snippet = "<b>Los</b> Angeles Times - Read the daily news at the LA Times, a C
+alifornia newspaper.<br> The <b>Los</b> <b>...</b> National Edition. <b>Los</b>
+Angeles Times - latimes.com, <b>...</b>  "
+  Directory Category = {SE="", FVN="Top/News/Newspapers/Regional/United_States/C
+alifornia"}
+  Directory Title = "<b>Los</b> Angeles Times"
+  Summary = "Online version of local daily paper. Contains links to world, natio
+n, and local news as well as weather,..."
+  Cached Size = "65k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.lanl.gov/"
+  Title = "<b>Los</b> Alamos National Laboratory | Homepage"
+  Snippet = " <b>...</b> The campaign supports a fund administered by the Labora
+tory and the <b>Los</b> Alamos National<br> Laboratory Foundation that awards co
+llege scholarships to Northern New <b>...</b>  "
+  Directory Category = {SE="", FVN="Top/Science/Physics/Plasma/Laboratories"}
+  Directory Title = "<b>Los</b> Alamos National Laboratory"
+  Summary = "Operated by the University of California for the US Department of E
+nergy."
+  Cached Size = "20k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.ucla.edu/"
+  Title = "UCLA Home Page"
+  Snippet = "UCLA (University of California, <b>Los</b> Angeles) is a public res
+earch university<br> founded in 1919. UCLA Text Home Page, Campaign UCLA, Direct
+ory <b>...</b>  "
+  Directory Category = {SE="", FVN="Top/Reference/Education/Colleges_and_Univers
+ities/North_America/United_States/California/University_of_California/Los_Angele
+s"}
+  Directory Title = "University of California, <b>Los</b> Angeles"
+  Summary = "UC campus in the Westwood neighborhood of <b>Los</b> Angeles."
+  Cached Size = "30k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://arxiv.org/"
+  Title = "arXiv.org e-Print archive"
+  Snippet = "gratuitous icon arXiv.org e-Print archive. Automated e-print archiv
+es<br> nlin. 6 Jul 2003: Cumulative &quot;What&#39;s New&quot; pages. <b>...</b>
+  "
+  Directory Category = {SE="", FVN="Top/Science/Technology/Cybernetics/K1_and_K2
+_-_General_Cybernetics/Systems_Science"}
+  Directory Title = "arXiv.org e-Print archive"
+  Summary = "The <b>Los</b> Alamos National Lab maintains a collections of e-pri
+nts dealing with nonlinear phenomena and others."
+  Cached Size = "13k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.ci.la.ca.us/"
+  Title = "City of <b>Los</b> Angeles"
+  Snippet = "The Official Web Site of The City of <b>Los</b> Angeles, text only
+- click here. <b>...</b>  "
+  Directory Category = {SE="", FVN="Top/Regional/North_America/United_States/Cal
+ifornia/Localities/L/Los_Angeles"}
+  Directory Title = "City of <b>Los</b> Angeles"
+  Summary = "Official <b>Los</b> Angeles site, includes government, residents, b
+usiness, recreation and tourism and online..."
+  Cached Size = "48k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://xxx.lanl.gov/"
+  Title = "lanl.arXiv.org e-Print archive mirror"
+  Snippet = "site icon lanl.arXiv.org e-Print archive mirror. Automated e-print
+archives<br> nlin. 13 Dec 2001: Cumulative &quot;What&#39;s New&quot; pages. <b>
+...</b>  "
+  Directory Category = {SE="", FVN="Top/Science/Physics/Plasma/Publications"}
+  Directory Title = "E-Print Archive of LANL"
+  Summary = "Open archive of publications from <b>Los</b> Alamos National Labora
+tory includes wide spectrum of topics..."
+  Cached Size = "13k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.lacma.org/"
+  Title = "LACMA: The <b>Los</b> Angeles County Museum of Art"
+  Snippet = "The <b>Los</b> Angeles County Museum of Art, LACMA is the premier v
+isual<br> arts museum in the Western United States. Its <b>...</b> present. <b>.
+..</b>  "
+  Directory Category = {SE="", FVN="Top/Reference/Museums/Arts_and_Entertainment
+/Art_Museums/North_American/American"}
+  Directory Title = "<b>Los</b> Angeles County Museum of Art"
+  Summary = "the premier visual arts museum is the Western United States. Holdin
+gs include more than 150000 works..."
+  Cached Size = "2k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.nba.com/lakers/"
+  Title = "THE OFFICIAL SITE OF THE <b>LOS</b> ANGELES LAKERS"
+  Snippet = " <b>...</b> Special Delivery; With Glove The <b>Los</b> Angeles Lak
+ers have signed free agent guard<br> Gary Payton and free agent forward Karl Mal
+one to contracts, it was announced <b>...</b>  "
+  Directory Category = {SE="", FVN="Top/Sports/Basketball/Professional/NBA/Los_A
+ngeles_Lakers"}
+  Directory Title = "<b>Los</b> Angeles Lakers"
+  Summary = "Official site: Provides news, players, statistics, schedule, scores
+, and tickets."
+  Cached Size = "56k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.calstatela.edu/"
+  Title = "California State University, <b>Los</b> Angeles"
+  Snippet = "Welcome to the California State University, <b>Los</b> Angeles home
+ page. Students <b>...</b> Security,<br> Copyright © by California State Univers
+ity, <b>Los</b> Angeles. "
+  Directory Category = {SE="", FVN="Top/Reference/Education/Colleges_and_Univers
+ities/North_America/United_States/California/California_State_University/CSU_Los
+_Angeles"}
+  Directory Title = "California State University, <b>Los</b> Angeles"
+  Summary = "Located near the Western San Gabriel Valley, CSULA is a public four
+-year university founded in 1947."
+  Cached Size = "18k"
+  Related information present = true
+  Host Name = ""
+  ],
+
+  [
+  URL  = "http://www.lakings.com/"
+  Title = "Welcome to the Official Site of the LA Kings"
+  Snippet = " <b>...</b>  The <b>Los</b> Angeles <b>...</b>  [READ ON]. MONARCHS
+ ANNOUNCE EXTENSIONS. MANCHESTER, NH - The<br> Manchester Monarchs, the AHL affi
+liate of the <b>Los</b> Angeles Kings . . . [READ ON]. <b>...</b>  "
+  Directory Category = {SE="", FVN=""}
+  Directory Title = ""
+  Summary = ""
+  Cached Size = "45k"
+  Related information present = true
+  Host Name = ""
+  ]
+  }
+}
+
+##### http://www.nba.com/lakers/
+##### links to the schedule page which contains
+##### Oct/24/2003  Sacramento Kings
+##### Jan/16/2004 @Sacramento Kings
+##### Feb/26/2004  Sacramento Kings
+##### Mar/24/2004  Sacramento Kings
+##### Apr/11/2004 @Sacramento Kings
+
+
+</pre></H3></HTML>

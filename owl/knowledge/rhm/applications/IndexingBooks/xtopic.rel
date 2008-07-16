@@ -1,0 +1,9 @@
+# 9:30 pm 8/3/97
+# topic; reference
+
+entity has attribute=value; 5
+enity do action=event; 6-7
+event change object from initial-state to final-state; 8-9
+read file kformat=rel; 12
+entity has ?; 15
+law of identity; 3

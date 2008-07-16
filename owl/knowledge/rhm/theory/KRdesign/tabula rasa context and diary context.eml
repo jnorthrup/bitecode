@@ -1,0 +1,231 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "Patrick J. Hayes" <phayes@ai.uwf.edu>
+Cc: "RDF-Interest" <www-rdf-interest@w3.org>,
+	"Richard S. Latimer" <latimer1@att.net>
+Subject: "tabula rasa" context & "diary" context
+Date: Sun, 15 Dec 2002 18:50:23 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0064_01C2A46A.D2DEA350"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0064_01C2A46A.D2DEA350
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+My "tabula rasa" context defines the most general concepts which are =
+used to express all knowledge. =20
+Such concepts are called "axiomatic" concepts. =20
+For efficiency, I have also included some non-axiomatic concepts in =
+tabula rasa.
+
+Here is a hierarchy outline (a taxonomy) of the most important concepts =
+in tabula rasa.
+
+    existent
+        entity
+            animal
+                person
+            plant
+            object
+        characteristic
+            attribute
+                purpose
+                space
+                time
+                view
+            part
+            action
+            relation
+        proposition
+
+This structure is defined by a set of KR species-genus propositions,
+which are part of the "first" set of propositions in a "diary" context.  =
+
+(For now, I am ignoring the "differentia" which distinguish the species =
+of a genus.)
+
+(1)    entity, characteristic, proposition iss existent
+(2)    animal, plant, object iss entity
+(3)    person iss animal
+(4)    attribute, part, action, relation iss characteristic
+(5)    purpose, space, time, view iss attribute
+
+Further KR propositions can be expressed using these concepts, e.g.
+
+(6)    Jane isu person
+(7)    Jane has sex=3Dfemale
+
+From (6),(7) KR/KE automatically infers that
+
+(8)    Jane has ctype=3Dunit
+(9)    sex iss attribute
+(10)    female isu sex
+
+Specifying the full meaning of a concept=20
+-- all the facts of reality it denotes=20
+-- all the extensions and intensions=20
+may require a large number of KR propositions. =20
+We can reduce that number by using genus-differentia definitions.
+But for some concepts we won't be able to capture the full meaning =20
+-- the "diary" context will be "less than" the "full human" context .
+Depending on our purpose, we may or may not care.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart proposition list
+
+------=_NextPart_000_0064_01C2A46A.D2DEA350
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>My "tabula rasa" context defines the =
+most=20
+general&nbsp;concepts which are used to express all knowledge.&nbsp;=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Such concepts are called "axiomatic"=20
+concepts.&nbsp; </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>For efficiency, I have also included =
+some=20
+non-axiomatic concepts in tabula rasa.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Here is&nbsp;a hierarchy outline (a =
+taxonomy) of=20
+the most important concepts in tabula rasa.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; =
+existent</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+entity</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; animal</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; person</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; plant</FONT></DIV>
+<DIV><FONT face=3DArial=20
+size=3D2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;=20
+object</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+characteristic</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; attribute</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; purpose</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; space</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; time</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; view</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; part</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; action</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+&nbsp;&nbsp;&nbsp; relation</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;=20
+proposition</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>This structure is defined by a set of =
+KR=20
+species-genus propositions,</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>which are&nbsp;part of the "first" set =
+of=20
+propositions in a "diary" context.&nbsp; </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(For now, I am ignoring the =
+"differentia" which=20
+distinguish the species of a genus.)</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>(1)&nbsp;&nbsp;&nbsp; entity, =
+characteristic,=20
+proposition <STRONG>iss</STRONG> existent</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(2)&nbsp;&nbsp;&nbsp; animal, plant, =
+object=20
+<STRONG>iss</STRONG> entity</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(3)&nbsp;&nbsp;&nbsp; person =
+<STRONG>iss</STRONG>=20
+animal</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(4)&nbsp;&nbsp;&nbsp; attribute, part, =
+action,=20
+relation <STRONG>iss</STRONG> characteristic</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(5)&nbsp;&nbsp;&nbsp; purpose, space, =
+time, view=20
+<STRONG>iss</STRONG> attribute</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Further KR propositions can be =
+expressed using=20
+these concepts, e.g.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>(6)&nbsp;&nbsp;&nbsp; Jane =
+<STRONG>isu</STRONG>=20
+person</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(7)&nbsp;&nbsp;&nbsp; Jane =
+<STRONG>has</STRONG>=20
+sex=3Dfemale</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>From (6),(7) KR/KE automatically infers =
+
+that</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>(8)&nbsp;&nbsp;&nbsp; Jane =
+<STRONG>has</STRONG>=20
+ctype=3Dunit</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(9)&nbsp;&nbsp;&nbsp; sex =
+<STRONG>iss</STRONG>=20
+attribute</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>(10)&nbsp;&nbsp;&nbsp; female =
+<STRONG>isu</STRONG>=20
+sex</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Specifying the full meaning of a =
+concept=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>-- all the facts of reality =
+</FONT><FONT face=3DArial=20
+size=3D2>it denotes </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>-- all the extensions and intensions =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>may&nbsp;</FONT><FONT face=3DArial =
+size=3D2>require a=20
+large number of KR propo</FONT><FONT face=3DArial =
+size=3D2>sitions.&nbsp;=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>We can reduce </FONT><FONT face=3DArial =
+size=3D2>that=20
+number by using genus-differentia definitions.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>But for some concepts we won't be able =
+to capture=20
+the full meaning &nbsp;</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>-- the "diary" context will be "less =
+than"=20
+</FONT><FONT face=3DArial size=3D2>the "full human" context </FONT><FONT =
+face=3DArial=20
+size=3D2>.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Depending on our purpose, we may or may =
+not=20
+care.</FONT></DIV>
+<DIV>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D <BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> proposition=20
+list<BR></DIV></BODY></HTML>
+
+------=_NextPart_000_0064_01C2A46A.D2DEA350--

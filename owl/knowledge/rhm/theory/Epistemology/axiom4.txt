@@ -1,0 +1,17 @@
+# 1999/2/24
+
+#==============================#
+# 4 primary axiomatic concepts #
+#==============================#
+
+relation	is [existent isin relation]	# Note 1
+identity	is [existent is existent]	# Note 2
+existence	is [existent is either entity or relation]
+consciousness	is [entity do perceive existent]
+
+
+# Note 1: "existent isin relation" is a generalization of
+#	  "entity has attribute" and "entity do action".
+#	  "existent isin relation" can be paraphrased as
+#	  "everything is a relative" or "everything is related".
+# Note 2: "A is A"

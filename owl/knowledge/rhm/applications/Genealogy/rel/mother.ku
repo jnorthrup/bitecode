@@ -1,0 +1,28 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/rel/mother.ku
+# 1999/6/26
+# new syntax Jul/22/2005
+
+# NOTE: mother & father deleted from relation meaning 1999/7/22
+#=================#
+# mother & father #
+#=================#
+
+#do read from family.ku done;
+
+echo := off;
+every q isa person {
+	. is $q;
+	if $q has parent; then $q has fm=$father_$mother; fi;
+};
+echo := on;
+
+#? has mother;
+#? has father;
+do differentiate od person with fm done;
+? has fm;
+do psize od person done;
+do psize od person/fm_unknown_unknown done;
+person isc* ?;
+
+# </xmp></html>

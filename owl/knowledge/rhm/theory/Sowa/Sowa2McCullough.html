@@ -1,0 +1,67 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/theory/Sowa/Sowa2McCullough.html
+# Jan/28/2003
+
+# integration of Sowa and McCullough high-level ontologies
+
+# Notes
+# Except in cases concerning "intention", "action" and "interaction",
+# the "entity" in MKR proposition can be generalized to "existent".
+
+#==============#
+# without time #
+#==============#
+
+#======#	#============#		#=================#
+# Sowa #	# McCullough #		# MKR proposition #
+#======#	#============#		#=================#
+
+Entity		existent		existent is existent
+
+Actuality	entity			entity isa existent
+Form		characteristic		characteristic isa existent
+
+Prehension	relation statement	entity:1 rel entity:2
+Proposition	char. statement		entity has characteristic
+
+Nexus		view			at view { proposition list }
+Intention	intention		entity has intention
+
+
+#===========#
+# with time #
+#===========#
+
+#======#	#============#		#=================#
+# Sowa #	# McCullough #		# MKR proposition #
+#======#	#============#		#=================#
+
+Entity		existent		existent is existent
+
+Actuality	entity			entity isa existent
+  Object	  entity		  entity isa existent
+  Process	  action		  action isa characteristic
+Form		characteristic		characteristic isa existent
+  Schema	  attribute		  attribute isa characteristic
+		  part			  part isa characteristic
+  Script	  action		  action isa characteristic
+		  interaction		  interaction isa characteristic
+
+Prehension	relation statement	entity:1 rel entity:2
+  Juncture	  ???
+  Participation	  ???
+Proposition	char. statement		entity has characteristic
+  Description	  attribute statement	  entity has attribute
+		  part statement	  entity haspart part
+  History	  action statement	  entity do action done
+		  interaction statement	  action:1 causes action:2
+
+Nexus		view			at view { proposition list }
+  Situation	  space,view		  at space,view {proposition list}
+  Execution	  space,time,view	  at space,time,view {proposition list}
+Intention	intention		entity has intention
+  Reason	  reason		  entity has reason
+  Purpose	  purpose		  entity do action with purpose done
+</XMP>
+</HTML>

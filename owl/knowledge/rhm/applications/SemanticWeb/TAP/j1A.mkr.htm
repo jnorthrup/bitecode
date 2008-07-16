@@ -1,0 +1,62 @@
+<html><body bgcolor="white">
+<table width=800><tr><td><left>
+<h3>KEHOME/knowledge/application/SemanticWeb/TAP/j1A.mkr.htm <br>
+January 3, 2003<br>
+mkr:GetData examples by Richard H. McCullough</h3>  
+</left><br><br>
+<center>
+<h1>TAP: Towards a Web of Data</h1>
+<table width=60%><tr><td>
+<center>
+R.V.Guha <br>
+IBM Research, Almaden <br>
+guha @ us.ibm.com
+</center></td><td>
+<center>
+Rob McCool<br>
+KSL, Stanford University<br>
+robm @ ksl.stanford.edu
+</center></td></tr></table></center>    
+<h2>Appendix</h2>  
+Here are the <b>MKR</b> messages associated with the examples of GetData presented in the paper.
+<pre><b>Example 1:</b> GetData(&lt;Yo-Yo Ma&gt;, birthplace) =&gt; &lt;Paris&gt;
+<b>Request</b>    
+    &lt;mkr:GetData&gt;      
+        Yo-Yo Ma <b>isa*</b> Person       
+        Yo-Yo Ma <b>has</b> birthplace = ?    
+    &lt;/mkr:GetData&gt;
+<b>Response</b>
+    &lt;mkr:Data&gt;      
+        Yo-Yo Ma <b>isa</b> Musician
+        Yo-Yo Ma <b>has</b> birthplace = Paris\France      
+        Paris\France <b>isa</b> City       
+        Paris\France <b>has</b> label lang en = Paris    
+    &lt;/mkr:Data&gt;
+<b>Example 2:</b> &lt;GetData(&lt;Paris&gt;, temperature) =&gt; 57 F
+<b>Request</b>
+    &lt;mkr:GetData&gt;      
+        Paris\France <b>isa</b> City       
+        Paris\France <b>has</b> temperature = ?    
+    &lt;/mkr:GetData&gt;
+<b>Response</b>    
+    &lt;mkr:Data&gt;      
+        Paris\France <b>isa</b> City       
+        Paris\France <b>has</b> temperature = 57 F    
+    &lt;/mkr:Data&gt;
+<b>Example 3:</b> GetData(&lt;Paris&gt;, locatedIn) =&gt; &lt;France&gt;    
+<b>Request</b>    
+    &lt;mkr:GetData&gt;      
+        Paris\France <b>isa</b> City       
+        Paris\France <b>has</b> locatedIn = ?    
+    &lt;/mkr:GetData&gt;
+<b>Response</b>    
+    &lt;mkr:Data&gt;      
+        Paris\France <b>isa</b> City
+        Paris\France <b>has</b> locatedIn = France
+           France <b>isa</b> Country
+           France <b>has</b> longFormName = French Republic,
+                placeLetterCode = FR,
+                label lang en = France,
+                adjective = French
+    &lt;/mkr:Data&gt;
+</pre></td></tr><table>

@@ -1,0 +1,28 @@
+# 1999/4/15
+
+#=======#
+# ideas #
+#=======#
+
+1. choose idea
+
+2. look for proof
+    (Peikoff) reduce to observations
+    (Rand) check your premises
+    I see
+    I infer
+    I feel
+    John says
+    Bible says
+    ...
+
+3. look for contradiction
+    (Peikoff) integrate with context of all knowledge
+    check your conclusions
+    ...
+
+4. decide
+    arbitrary (no evidence)
+    possible (some evidence, no contradiction)
+    probable (substantial evidence, no contradiction)
+    certain (conclusive evidence)

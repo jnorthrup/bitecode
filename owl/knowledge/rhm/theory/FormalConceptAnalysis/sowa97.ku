@@ -1,0 +1,88 @@
+# 7:30 pm 12/28/97
+
+# Sowa context examples
+# ICCS'97 proceedings
+# page 41-64
+
+# NOTES:
+# 1. In general terms, the context of a statement
+#    is the set of definitions of the words in the
+#    statement.
+#    That is, the context is the knowledge required
+#    to understand the statement.
+#    This implies finite backtracking of definitions 
+#    to cover all words.
+# 2. The end of this backtracking is the general
+#    context (view = tabula_rasa) which includes
+#    the axiomatic concepts
+#	existent
+#	entity
+#	attribute
+#	man
+#	knowledge
+# 3. In each of the examples, I have identified
+#    the first layer of words which must be defined.
+
+# page 42
+# "You are a good girl" is much to be wished.
+#============================================
+at view=tabula_rasa  at view="good girl"
+girl is person with sex=female
+I isa person
+you isa girl
+good isa attribute
+wish isa action
+I do wish "you has good"
+
+# page 43
+# If a farmer owns a donkey, then he beats it.
+#=============================================
+at view=tabula_rasa  at view = farmer-donkey
+farmer isa person
+donkey isa animal
+own, beat isa action
+if farmer do own donkey then farmer do beat donkey fi
+
+# page 44
+# You can lead a horse to water, but you can't make him drink.
+#=============================================================
+at view=tabula_rasa  at view=man-horse
+you isa person
+horse isa animal
+lead, make, drink isa action
+you do lead horse to space=water-location
+you do not make "horse do drink water"
+
+# page 51
+# A plumber is carrying a pipe.
+#==============================
+at view=tabula_rasa  at view=v_plumbing
+person_1 isa person
+person_1 has profession=plumber
+pipe isa object
+pipe_2 isa pipe
+carry isa action
+person_1 do carry pipe_2
+
+# page 52
+# ist(contextOf("Sherlock Holmes stories"), Holmes is a detective.
+# ist(contextOf("U.S. legal history"), Holmes is a Supreme Court Justice.
+#========================================================================
+at view=tabula_rasa  at view="Sherlock Holmes stories"
+"Sherlock Holmes" is person with profession=detective
+Holmes is "Sherlock Holmes"
+
+at view=tabula_rasa  at view="U.S. legal history"
+"Oliver Wendell Holmes, Jr." is person with profession="Supreme Court Justtice"
+Holmes is "Oliver Wendell Holmes, Jr."
+
+# page 53
+# Mary imagines that Mary believes proposition_1.
+# John imagines that John believes proposition_1.
+#==============================================
+at view=tabula_rasa  at view=Mary-John
+Mary, John isa person
+imagine, believe isa action
+proposition_1 isa proposition
+Mary do imagine "Mary do believe proposition_1"
+John do imagine "John do believe proposition_1"

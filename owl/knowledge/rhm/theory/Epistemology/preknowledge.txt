@@ -1,0 +1,84 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: <latimer1@att.net>
+Subject: Re: Insight Re: Differing "Knowledge" Concepts
+Date: Sunday, July 28, 2002 7:42 PM
+
+I should have answered your question more directly.
+Yes, it does make sense to me.
+
+The reason I keep leaning towards calling pre-knowledge
+propositions is that I think of all the processing that goes
+on inside our heads/bodies as implicit propositions.
+
+When I was first trying to decompose "identify" three years
+ago, I broke it down as follows
+
+    sensation := man do sense od entity done
+    percept := man do remember od sensation done
+    concept := man do classify od percept done
+    measurement := man do measure od entity done
+    name := man do choose od symbol done
+    definition := man do define od name done
+
+    newconcept := man do integrate od concept with characteristic done
+    newconcept := man do differentiate od concept with characteristic done
+
+I think your pre-knowledge is percepts,
+and some pre-concepts (entity isa genus),
+and some pre-characteristics (entity has measurement).
+
+Focusing on (identifying) this pre-knowledge eventually yields
+the knowledge (propositions)
+
+    name isa genus
+    name has characteristic=measurement
+    name is genus with essential characteristic
+============ 
+Dick McCullough 
+knowledge := man do identify od existent done 
+
+
+
+  ----- Original Message ----- 
+  From: Richard S. Latimer 
+  To: McCullough, Ph. D., Richard H. 
+  Cc: Merlin Jetton ; Paul Stout ; George Lyons ; Potts, David ; iLynn ; Premise Checker ; Don Parrish Jr ; Enright, John &| Marsha ; Robert B. McCullough ; Theodore R. McCullough ; Steven V. Cates ; Deborah G. Cates ; Virginia McCullough ; Sheila M. Faber ; Rhonda Cates ; Campbell, Renee & Niall & Keara & Declan ; Jason & Nata ; Knight R. N., Dagny ; Toby Latimer 
+  Sent: Friday, January 01, 1904 8:28 PM
+  Subject: Insight Re: Differing "Knowledge" Concepts
+
+
+  Hello, Dick -- 
+  In regards to our early dialogue(s) on the claim that "All knowledge is propositional.":  A potential resolution (in my mind) has occurred, as follows: 
+
+  I can agree with a claim that:  "In order to be conveyed [to another], knowledge must be represented in a propositional form" [either explicitly or implicitly, as you say].  Hence, in order for computers to process "knowledge", or claims to knowledge, that knowledge (or claim to it) must first be put into a propositional form (that can be de/coded by humans).  However, in order for humans to put knowledge into a propositional form [e. g., for the first time], the basis for such an action must be a knowing that is not-yet in a propositional form, -- i. e. Pre-propositional knowledge is a prerequisite for propositional knowledge's coming into existence. 
+
+  Also, this conception of "knowledge", leaves room to reason about non humans' "knowing" (or "grasping") facts of reality.  Since non humans can learn about new aspects of reality (in some form{?}) and since they do not have the power to create propositions, they must have the power to acquire another form of knowledge, -- namely 'non-propositional knowledge', or i. e. 'pre-propositional knowledge'.  Similarly, young and/or disabled humans, who are unable  to form propositions (i. e. having not-yet developed their power to form propositions), can learn facts of reality, holding these facts as pre-/non-propositional knowledge. 
+
+  Finally, we all hold vast amounts of knowledge about many aspects of reality that we never bother to represent in the form of propositions.  It would seem that we only need to put our knowledge into prepositional form, iff and when we want to convey parts of our knowledge to others, or to encode that knowledge so that computers can perform algorithms on the resulting encoded bits, or to reason/evaluate  in a structured/logical  way for ourselves. 
+
+  Does this make any sense to you?  [For me it seems to clarify the issue, and to resolve any differences that we had between our "knowledge" concepts.{?}]. 
+
+  Toward Mutual Understanding,    Richard 
+
+  P. S. 
+
+  First:   knowledge := man do identify od existent done 
+
+  Then:  representation (ala KR) := man do create od propositions done 
+
+  Then:  evaluation (ala KE) := man do process od propositions done 
+
+  Then:  creativity (ala KR/KE) := Dick do create od KR/KE with excellence done [reiterate this step ;-] 
+
+  Then:  simulation/emulation := KR/KE do process od encoded data with speed via Dick's algorithms done 
+
+  Suggested Renaming: 
+
+  Explanation:  Propositions are claims, to be knowledge, and not necessarily knowledge;  Hence, your current "KR" is more accurately Claims Representation (as Propositions), or CR. 
+  Then, your current "KE" evaluates these claims (in their form of encoded propositions), applies rules of logic, and then determines if the claims are logically consistent, and hence "logically valid" (but NOT necessarily true, or actual knowledge).  Hence, your current "KE" is actually a PE, i. e. a Proposition Evaluator. 
+
+  Conclusion:  process := "KR/KE" do process od claims done, . therefore "CR/PE" is a more accurate name.  Not quite as jazzy or "promising" as KR/KE, but on the other hand it's reassuring to this "man" that only living organisms can actually KR/KE, and humankind's seems to excel among the various forms of with that "power". 
+
+  Finally:  limitation := man/computer do process od information with GIGO done    ;-) 
+
+

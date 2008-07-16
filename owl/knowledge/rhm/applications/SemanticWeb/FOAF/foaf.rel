@@ -1,0 +1,69 @@
+# KEHOME/knowledge/application/SemanticWeb/FOAF/foaf.rel
+# Dec/20/2002
+
+comment,domain,range iss Property
+
+r_class is relation with
+	label=[Class name, comment],
+	format=[Class:1, comment:2],
+	meaning={$1 has comment = "$2"}
+
+r_property is relation with
+	label=[Property name, comment, domain, range],
+	format=[Property:1, comment:2, domain:3, range:4],
+	meaning={
+		$1 has comment="$2";
+		$3 has $1;
+		}
+
+r_class is begin relation
+Organization; an organisation 
+Project; a project 
+Person; a person 
+Document; a document 
+end relation r_class
+
+r_property is begin relation
+
+name; A name for some thing; not specified; Literal 
+givenname; The given name of some agent.; not specified; not specified 
+nick; A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).; not specified; not specified 
+title; Title (Mr, Mrs, Ms, Dr. etc); not specified; not specified 
+phone; A fully qualified international phone number, specified using the tel: URL scheme (refs: 'http://www.w3.org/Addressing/schemes.html#tel'); not specified; not specified 
+homepage; A homepage for some thing; not specified; Document 
+mbox_sha1sum; the sha1sum of the URI of a web-identifiable Internet mailbox associated with exactly one owner, the first owner of this mailbox.; not specified; not specified 
+dnaChecksum; A checksum for the DNA of some (presumably living) thing. Joke.; not specified; not specified 
+
+id; an identifier for this thing; Resource; Resource 
+page; a page or document about this thing; Resource; Document 
+theme; theme; Resource; Resource 
+fundedBy; an organisation funding a project or person; Resource; Resource 
+linkedWith; generic link; Resource; Resource 
+depiction; a depiction of some thing; Resource; Image 
+logo; a logo representing some thing; Resource; Resource 
+
+firstName; the first name of a person; Person; Literal 
+surname; The surname of some agent.; Person; Literal 
+knows; a person known by this person; Person; Person 
+mbox; A web-identifiable Internet mailbox associated with exactly one owner, the first owner of this mailbox. This property is a 'static unambiguous property', in that there is (across time and change) at most one individual that has any particular personal mailbox.; not specified; not specified 
+schoolHomepage; a homepage of a school attended by the person; Person; Document 
+interest; a page about a topic of interest to this person; Person; Document 
+publications; a link to the publications of this person; Person; Resource 
+currentProject; a current project this person works on; Person; Resource 
+pastProject; a project this person has previously worked on; Person; Resource 
+img; an image that can be used to represent some thing; Person; Image 
+workplaceHomepage; a workplace homepage of some person, the homepage of an organisation they work for.; Person; Document 
+workInfoHomepage; a work info homepage of some person, a page about their work for some organisation.; Person; Document 
+geekcode; a textual geekcode for this person; Person; not specified 
+
+topic; a topic of some page or document; Document; Resource 
+
+end relation r_property
+
+# see also: rdf schema signature and html doc signature
+
+# output
+Class isc* ?
+Property isc* ?
+every class isa domain { $class has ? }
+

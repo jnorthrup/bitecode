@@ -1,0 +1,18 @@
+# KEHOME/knowledge/family/newmarriage.mkr
+# 1999/Aug/6
+# new syntax Jun/26/2005
+
+# update r_marriage relation
+#   from r_divorce relation
+
+set echo=off;
+do read from marriage.rel done;
+do read from divorce.rel done;
+
+every x isa family {
+  set . = $x;
+  do print od "$x, $husband, $wife, $marriagetype, $marriagedate, $marriageplace, $divorcedate, $divorceplace;" done;
+};
+
+set echo=on;
+exit;

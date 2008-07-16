@@ -1,0 +1,180 @@
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "Patrick J. Hayes" <phayes@ai.uwf.edu>
+Cc: "RDF-Interest" <www-rdf-interest@w3.org>,
+	"Richard S. Latimer" <latimer1@att.net>
+Subject: space,time in KR: context, initial, final
+Date: Sat, 14 Dec 2002 05:51:16 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_000B_01C2A334.D18EAA90"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000B_01C2A334.D18EAA90
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+1. general context=20
+The basic KR proposition has the form=20
+    at context { statement }=20
+Including space,time in context permits making statements which isolate =
+& focus on space-time-independent properties.  Some statements are =
+space-time-dependent.  The distinction is important because =
+space-time-independent statements have wider implications.=20
+Example statements:=20
+a. Jane has sex=3Dfemale=20
+b. Jane isa person=20
+c. John do walk with a limp done=20
+d. John do walk to the store done=20
+a and b are attribute and relation statements which are independent of =
+space-time.=20
+c is an action statement which is independent of space-time.=20
+d is an action statement which depends on space-time.=20
+
+2. action initial and final characteristics=20
+The fundamental characteristics of all actions are:=20
+a. they change the properties of existents;=20
+b. they are performed by an entity.=20
+KR specifies the changes by a set of initial characteristics which exist =
+before the action, and a set of final characteristics which exist after =
+the action.  Initial and final characteristics may include space-time.=20
+Example statements:=20
+c. water do change from temperature=3Dpositive to temperature=3D0 done =
+causes water do change from phase=3Dliquid to phase=3Dsolid done=20
+d. John do walk from his house to the store done=20
+c is a causality statement which is independent of space-time.=20
+d is an action statement which depends on space-time.=20
+
+3. action contexts=20
+space,time specifies where,when an action occurs.  Typically, they =
+specify the initial space,time of the action.  For some actions, they =
+specify the final space,time.=20
+Example propositions:=20
+a. at 8 am { John do go to the store done }=20
+b. at 5 pm { John do finish od work done }=20
+a is a proposition with a context specifying the initiation of an =
+action.=20
+b is a proposition with a context specifying the completion of an =
+action.=20
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart proposition list
+
+------=_NextPart_000_000B_01C2A334.D18EAA90
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>1. general context </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>The basic KR proposition has the form =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>&nbsp;&nbsp;&nbsp; <STRONG>at</STRONG> =
+context=20
+<STRONG>{</STRONG> statement <STRONG>}</STRONG> </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Including space,time in context permits =
+making=20
+statements which isolate &amp; focus on space-time-independent =
+properties.&nbsp;=20
+Some statements are space-time-dependent.&nbsp; The distinction is =
+important=20
+because space-time-independent statements have wider implications. =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Example statements: </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a. Jane <STRONG>has</STRONG> =
+sex=3Dfemale=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>b. Jane <STRONG>isa</STRONG> person =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>c. John <STRONG>do</STRONG> walk=20
+<STRONG>with</STRONG> a limp <STRONG>done </STRONG></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>d. John <STRONG>do</STRONG> walk=20
+<STRONG>to</STRONG> the store <STRONG>done </STRONG></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a and b are attribute and relation =
+statements which=20
+are independent of space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>c is an action statement which is =
+independent of=20
+space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>d is an action statement which depends =
+on=20
+space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>2. action initial and final =
+characteristics=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>The fundamental characteristics of all =
+actions are:=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a. they change the properties of =
+existents;=20
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>b. they are performed by an entity. =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>KR specifies the changes by a set of =
+initial=20
+characteristics which exist before the action, and a set of final=20
+characteristics which exist after the action.&nbsp; Initial and final=20
+characteristics may include space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Example statements: </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>c. water <STRONG>do</STRONG> change=20
+<STRONG>from</STRONG> temperature=3Dpositive&nbsp;<STRONG>to=20
+</STRONG>temperature=3D0 =
+<STRONG>done</STRONG>&nbsp;<STRONG>causes</STRONG> water=20
+<STRONG>do</STRONG> change <STRONG>from</STRONG> phase=3Dliquid=20
+<STRONG>to</STRONG> phase=3Dsolid <STRONG>done </STRONG></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>d. John <STRONG>do</STRONG> walk=20
+<STRONG>from</STRONG> his house <STRONG>to</STRONG> the store =
+<STRONG>done=20
+</STRONG></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>c is a causality&nbsp;statement which =
+is=20
+independent of space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>d is an action statement which depends =
+on=20
+space-time. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>3. action contexts </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>space,time specifies where,when an =
+action=20
+occurs.&nbsp; Typically, they specify the initial space,time of the=20
+action.&nbsp; For some actions, they specify the final space,time. =
+</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>Example propositions: </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a. <STRONG>at</STRONG>&nbsp;8 am =
+<STRONG>{</STRONG>=20
+John <STRONG>do</STRONG> go <STRONG>to</STRONG> the store =
+<STRONG>done</STRONG>=20
+<STRONG>}</STRONG> </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>b. <STRONG>at</STRONG> 5 pm =
+<STRONG>{</STRONG> John=20
+<STRONG>do</STRONG> finish <STRONG>od</STRONG> work =
+<STRONG>done</STRONG>=20
+<STRONG>}</STRONG> </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a is a proposition with a&nbsp;context =
+specifying=20
+the initiation of an action. </FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>b is a proposition with a context =
+specifying the=20
+completion of an action. </FONT><BR>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D =
+<BR>Dick McCullough <BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> proposition=20
+list<BR></DIV></BODY></HTML>
+
+------=_NextPart_000_000B_01C2A334.D18EAA90--

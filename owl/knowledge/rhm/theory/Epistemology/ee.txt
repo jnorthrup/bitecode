@@ -1,0 +1,163 @@
+# 1999/5/3
+
+#==================#
+# existence exists #
+#==================#
+
+"existence exists" is an intuitively appealing statement.
+It is an analogy which helps us to grasp a difficult concept,
+but it is an invalid statement, as I will demonstrate.
+
+The context for all statements (except under NOTE below)
+is this concept-hierarchy:
+
+    existent
+        entity
+        characteristic
+            attribute
+            action
+            relationship
+                isa
+                is
+                has
+                do
+                isin
+                haspart
+                all
+        part
+        relation
+
+entity
+#====#
+Let's start with a simpler concept, "entity".
+Consider the following statements (in KR)
+1. entity isa existent
+2. entity is entity
+3. entity has identity
+4. entity has characteristic
+5. entity has part
+6. entity has attribute
+7. entity do action
+8. entity do exist
+9. entity isin relationship
+10. entity haspart part
+
+Remarks re statements:
+1. valid -- best translation of English "an entity exists"
+2. valid -- best translation of English "an entity is what it is"
+3. invalid -- intuitively appealing, but identity is not an attribute
+4. invalid -- intuitively appealing, but characteristic is not an attribute
+5. invalid -- intuitively appealing, but part is not an attribute
+6. valid -- best translation of English such as
+		"the ball is red" <=> KR "the ball has red"
+7. valid -- best translation of English such as
+		"Dutchess barks" <=> KR "Dutchess do bark"
+8. valid -- if you view "exist" as an action
+9. valid -- best translation of English such as
+		"Dick is in the phonebook" <=> KR "Dick isin the phonebook"
+		(where "the phonebook" is viewed as a relationship between
+		a phone and a person)
+10. valid -- best translation of English such as
+		"a man has a brain" <=> KR "man haspart brain"
+
+existent
+#======#
+Moving on to a more complex concept, "existent",
+consider the following statements (in KR).
+1. existent is existent
+2. existent has identity
+3. existent has existence
+4. existent has attribute
+5. existent do action
+6. existent do exist
+7. existent isin relationship
+8. existent haspart part
+
+Remarks:
+1. valid -- it is what it is
+2. invalid -- identity is not an attribute
+3. invalid -- existence is not an attribute
+4. valid -- e.g.: action has attribute
+5. invalid -- only entities do actions
+6. invalid -- only entities do actions
+7. valid -- e.g.: relationship isin genus-species relationship
+		(relationship isa characteristic)
+8. valid -- e.g.: concept-hierarchy haspart concept
+
+existence
+#=======#
+Finally, the group (universal collective concept), "existence".
+Consider the following statements (in KR).
+1. existence is existence
+2. existence is identity
+3. existence has identity
+4. existence has existence
+5. existence do exist
+
+Remarks:
+1. valid -- it is what it is
+2. false -- in the context of the concept-hierarchy given above
+		existence is all existent
+		identity is all relation
+		(but see NOTE below)
+3. invalid -- identity is not an attribute
+4. invalid -- existence is not an attribute
+5. invalid -- best translation of English "existence exists",
+		but only entities do actions
+		(but see NOTE below)
+
+
+#======#
+# NOTE #
+#======#
+In the context
+    existent
+	[existent is existent]
+	[entity isa existent]
+	[characteristic isa existent]
+	[part isa existent]
+	[attribute isa characteristic]
+	[action isa characteristic]
+	[relationship isa characteristic]
+	[entity has attribute]
+	[entity do action]
+	[entity isin relationship]
+	[entity haspart part]
+	...
+
+the statements (in KR)
+1. relation is existent
+2. existence is all existent
+3. identity is all relation
+4. existence is identity
+5. existence do exist
+are
+1. true
+2. true
+3. true
+4. true
+5. false  (only entities do actions)
+
+In the context
+    everything
+	existent
+	    entity
+	characteristic
+	    attribute
+	    action
+	    relationship
+	part
+	relation
+
+the statements (in KR)
+1. relation is existent
+2. existence is all existent
+3. identity is all relation
+4. existence is identity
+5. existence do exist
+are
+1. false  (relation isa everything)
+2. true
+3. true
+4. false
+5. true   (entity do exist)

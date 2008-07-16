@@ -1,0 +1,97 @@
+# Jul/26/2002
+
+# definition of proposition, assert, express
+# David Kelley, "The Art of Reasoning", Second Expanded Edition,
+# W.W. Norton & Company, 1994.
+# chapter 4
+
+at view=tabula_rasa
+at view=Kelley
+#==================================
+# page 65
+proposition is "something we can assert" with form=statement
+concept := man do identify od "certain class of things" done
+proposition do assert "something about class"
+concept isa framework
+"unit of thought and speech" isa proposition
+
+# page 66
+either proposition has true
+or     proposition has false
+endeither
+sentence means proposition
+sentence haspart subject, predicate
+sentence ise
+	"interrogative sentence",
+	"imperative sentence",
+	"declarative sentence"
+"interrogative sentence" asks question
+"imperative sentence" issues command
+"declarative sentence" asserts "something is a fact"
+"interrogative sentence" ise
+	"Have you finished your term paper yet?"
+"imperative sentence" ise
+	"Finish your term paper!"
+"declarative sentence" ise
+	"Jack is a Baptist.",
+	"Some birds fly south for the winter.",
+	"I would like a Jaguar XJ-S for Christmas."
+
+# page 67
+word is "linguistic vehicle" with purpose="to express concept"
+sentence is "linguistic vehicle" with purpose="to express proposition"
+
+# page 73
+either sentence asserts proposition
+or     sentence expresses proposition
+endeither
+
+# page 74
+sentence asserts proposition
+speaker do say od "proposition has true" done
+# page 75
+sentence expresses proposition
+speaker do not assert od "proposition has true" done
+sentence not asserts proposition
+
+# page 83
+proposition isa statement
+proposition makes assertion
+either assertion has true
+or     assertion has false
+endeither
+"declarative sentence" asserts proposition
+"declarative sentence" haspart subject, predicate
+# page 84
+"complex sentence" asserts "set of proposition"
+either sentence expresses proposition
+or     sentence asserts proposition
+endeither
+
+
+at view=tabula_rasa
+at view=McCullough
+#===================
+concept means group of existent
+proposition means relationship of existent
+thought is relation with
+	format=statement,
+	meaning=proposition
+
+word means concept
+statement means proposition
+
+statement is "declarative sentence"
+sentence haspart clause
+clause haspart subject, predicate
+clause means simple-proposition
+
+
+proposition has truth-value, format=statement
+truth-value has vtype=boolean
+boolean isany true,false
+
+speaker do assert od proposition done means
+  at view=v_speaker proposition has truth-value=true
+speaker do express od proposition done means
+  at view=v_speaker proposition has truth-value # truth-value unspecified

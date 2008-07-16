@@ -1,0 +1,13 @@
+# 4:00 pm 1998/2/10
+
+# The Find-It-Faster Master List
+# Bensenville Public Library
+# 200 S. Church Road
+# Bensenville, IL 60106
+
+dsubject is relation with \
+	format="ddcn:1; subject:2",
+	meaning="$2 has ddcn=$1"
+
+!read dsubject.rel
+# Dewey Decimal call number; subject heading

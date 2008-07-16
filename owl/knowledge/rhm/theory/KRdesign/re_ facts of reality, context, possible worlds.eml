@@ -1,0 +1,265 @@
+X-From_: www-rdf-interest-request@w3.org  Fri Dec  6 09:18:26 2002
+Return-Path: <www-rdf-interest-request@w3.org>
+Received: from frink.w3.org (frink.w3.org [18.29.1.71])
+	by mail21.megamailservers.com (8.12.5/8.12.0.Beta10) with ESMTP id gB6EIQsD054087
+	for <rhm@cdepot.net>; Fri, 6 Dec 2002 09:18:26 -0500 (EST)
+Received: (from lists@localhost)
+	by frink.w3.org (8.11.6+Sun/8.11.6) id gB6E9OJ07711;
+	Fri, 6 Dec 2002 09:09:24 -0500 (EST)
+Resent-Date: Fri, 6 Dec 2002 09:09:24 -0500 (EST)
+Resent-Message-Id: <200212061409.gB6E9OJ07711@frink.w3.org>
+Received: from tux.w3.org (tux.w3.org [18.29.0.27])
+	by frink.w3.org (8.11.6+Sun/8.11.6) with ESMTP id gB6E9KA07648
+	for <www-rdf-interest@frink.w3.org>; Fri, 6 Dec 2002 09:09:20 -0500 (EST)
+Received: from weird-jeep.neonova.net (mail.volcano.net [137.118.129.9])
+	by tux.w3.org (8.9.3/8.9.3) with ESMTP id JAA19422
+	for <www-rdf-interest@w3.org>; Fri, 6 Dec 2002 09:09:20 -0500
+Received: from [63.170.118.160] (HELO rhm8200)
+  by weird-jeep.neonova.net (CommuniGate Pro SMTP 4.0.1)
+  with SMTP id 131572438; Fri, 06 Dec 2002 09:09:19 -0500
+Message-ID: <002201c29d31$11848110$bd7ba8c0@rhm8200>
+From: "Richard H. McCullough" <rhm@cdepot.net>
+To: "Patrick J. Hayes" <phayes@ai.uwf.edu>
+Cc: "RDF-Interest" <www-rdf-interest@w3.org>,
+   "Richard S. Latimer" <latimer1@att.net>
+Date: Fri, 6 Dec 2002 06:09:17 -0800
+Organization: retired from Bell Labs
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_001F_01C29CEE.0253EFC0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1106
+X-MIMEOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+Subject: re: facts of reality, context, possible worlds
+X-Archived-At: http://www.w3.org/mid/002201c29d31$11848110$bd7ba8c0@rhm8200
+Resent-From: www-rdf-interest@w3.org
+X-Mailing-List: <www-rdf-interest@w3.org> archive/latest/7689
+X-Loop: www-rdf-interest@w3.org
+Sender: www-rdf-interest-request@w3.org
+Resent-Sender: www-rdf-interest-request@w3.org
+Precedence: list
+List-Id: <www-rdf-interest.w3.org>
+List-Help: <http://www.w3.org/Mail/>
+List-Unsubscribe: <mailto:www-rdf-interest-request@w3.org?subject=unsubscribe>
+
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_001F_01C29CEE.0253EFC0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+I think our emails are getting too long (8 pages for the last one).  =
+Therefore, I am temporarily ignoring most of the questions in your last =
+email, and focusing on the most important issues.
+
+1. RDF triples and facts of reality
+a. I said
+I tried to bridge the gap between the RDF document and the KR document =
+by associating RDF "sets of triples" with KR "proposition list" with =
+"facts of reality".
+b. You said
+I think that association might be mistaken, which may be giving us so =
+much trouble. Certainly one should not identify RDF triples with 'facts =
+of reality'.
+c. My response
+If RDF triples are not related to the facts of reality, then they have =
+no value for anyone.  The purpose of the Semantic Web is to provide man =
+and machine with easy access to the facts of reality.
+
+2. context
+a. I said
+You are not getting rid of the context, you are making it explicit.
+b. You said
+Then it is no longer contextual. If I say 'it is raining' at 3 pm on 5 =
+Dec 2002, then the time of my utterance is part of its context. If I say =
+'it is raining at 3pm on 5 Dec 2002', then my utterance needs no =
+temporal context, and in fact it would be meaningless to ask what its =
+temporal context was, ie when it was true. As far as time is concerned, =
+it has been removed from the context space: its just simply true or =
+false. Making information explicit *removes* it from the context.
+c. My paraphrase of 2b
+Context is all relevant knowledge not explicitly given in the statement.
+d. the KR alternative
+Context is all relevant knowledge, and is explicitly specified in the =
+proposition.  The details of "proposition" are given in [1],]2].  For =
+now, think of a proposition as
+    at context { statement }
+For this particular example, here is an outline of the context [3],[4] =
+(you can add yourself to the context)
+    at view=3Dtabula rasa {
+        definition of rain
+        definition of fall
+        at space=3Dsome city, time=3D3 pm on 5 Dec 2002 {
+            rain do fall done
+        }
+    }
+
+3. possible worlds
+a. You said
+Of course there IS only one world, but semantics has to be concerned not =
+just with the way the world actually is, but with the ways that it COULD =
+be given what we are able to say about it. It is impossible ever to say =
+enough to pin down the actual world in full detail; and since a reasoner =
+has no access to the actual world other than through sentences of the =
+formal language, it has to as it were survey the possible ways that the =
+world might be, given what is said about it. (You might find Tarski and =
+Quine good authors to read on this topic, they both have the issues very =
+clear. I speak of course as a disciple of theirs ;-))
+b. My paraphrase of 3a
+The real world is too hard, so we'll deal with imaginary worlds.
+c. the KR alternative
+It is not necessary to pin down the actual world in full detail.  You =
+can select the appropriate level of detail, depending on your purpose, =
+and express it in KR propositions.
+
+References
+[1] http://rhm.cdepot.net/doc/KRgrammar.txt
+[2] http://rhm/cdepot.net/doc/KEtutorial.txt
+[3] http://rhm.cdepot.net/kb/tabrasa.ku
+[4] http://rhm.cdepot.net/kb/tabrasa.def   =20
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+Dick McCullough=20
+knowledge :=3D man do identify od existent done
+knowledge haspart proposition list
+
+------=_NextPart_000_001F_01C29CEE.0253EFC0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2800.1126" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>I think our emails are getting too long =
+(8 pages=20
+for the last one).&nbsp; Therefore, I am temporarily ignoring most of =
+the=20
+questions in your last email, and focusing on the most important=20
+issues.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>1. RDF triples and facts of =
+reality</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a. I said</FONT></DIV>
+<DIV>I tried to bridge the gap between the RDF document and the KR =
+document by=20
+associating RDF "sets of triples" with KR "proposition list" with "facts =
+of=20
+reality".</DIV>
+<DIV>b. You said</DIV>
+<DIV>
+<DIV>I think that association might be mistaken, which may be giving us =
+so much=20
+trouble. Certainly one should not identify RDF triples with 'facts of=20
+reality'.</DIV>
+<DIV>c. My response</DIV>
+<DIV>If RDF triples are not related to the facts of reality, then they =
+have no=20
+value for anyone.&nbsp; The purpose of the Semantic Web is to provide =
+man and=20
+machine with easy access to the facts of reality.</DIV>
+<DIV><FONT face=3DArial size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>2. context</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>a. I said</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>You are not getting rid of the context, =
+you are=20
+making it explicit.
+<DIV>b. You said</DIV>
+<DIV>
+<DIV>Then it is no longer contextual. If I say 'it is raining' at 3 pm =
+on 5 Dec=20
+2002, then the time of my utterance is part of its context. If I say 'it =
+is=20
+raining at 3pm on 5 Dec 2002', then my utterance needs no temporal =
+context, and=20
+in fact it would be meaningless to ask what its temporal context was, ie =
+when it=20
+was true. As far as time is concerned, it has been removed from the =
+context=20
+space: its just simply true or false. Making information explicit =
+*removes* it=20
+from the context.</DIV>
+<DIV>c. My paraphrase of 2b</DIV>
+<DIV>Context is all relevant knowledge not explicitly given in the=20
+statement.</DIV>
+<DIV>d. the KR alternative</DIV>
+<DIV>Context is all relevant knowledge, and is explicitly specified in =
+the=20
+proposition.&nbsp; The details of "proposition" are given in =
+[1],]2].&nbsp; For=20
+now, think of a proposition as</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; <STRONG>at</STRONG> context <STRONG>{</STRONG> =
+statement=20
+<STRONG>}</STRONG></DIV>
+<DIV>For this particular example, here is an outline of the context=20
+[3],[4]&nbsp;(you can add yourself to the context)</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; <STRONG>at</STRONG> view=3Dtabula rasa=20
+<STRONG>{</STRONG></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; definition of rain</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; definition of fall</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <STRONG>at</STRONG> =
+space=3Dsome city,=20
+time=3D3 pm on 5 Dec 2002 <STRONG>{</STRONG></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; rain=20
+<STRONG>do</STRONG> fall <STRONG>done</STRONG></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <STRONG>}</STRONG></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; <STRONG>}</STRONG></DIV>
+<DIV>&nbsp;</DIV>
+<DIV>3. possible worlds</DIV>
+<DIV>a. You said</DIV>
+<DIV>
+<DIV>Of course there IS only one world, but semantics has to be =
+concerned not=20
+just with the way the world actually is, but with the ways that it COULD =
+be=20
+given what we are able to say about it. It is impossible ever to say =
+enough to=20
+pin down the actual world in full detail; and since a reasoner has no =
+access to=20
+the actual world other than through sentences of the formal language, it =
+has to=20
+as it were survey the possible ways that the world might be, given what =
+is said=20
+about it. (You might find Tarski and Quine good authors to read on this =
+topic,=20
+they both have the issues very clear. I speak of course as a disciple of =
+theirs=20
+;-))</DIV>
+<DIV>b. My paraphrase of 3a</DIV>
+<DIV>The real world is too hard, so we'll deal with imaginary =
+worlds.</DIV>
+<DIV>c. the KR alternative</DIV>
+<DIV>It is not necessary to pin down the actual world in full=20
+detail.&nbsp;&nbsp;You can select the appropriate level of detail, =
+depending on=20
+your purpose, and express it in KR propositions.<BR></DIV></DIV>
+<DIV></FONT><FONT face=3DArial size=3D2>References</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>[1] <A=20
+href=3D"http://rhm.cdepot.net/doc/KRgrammar.txt">http://rhm.cdepot.net/do=
+c/KRgrammar.txt</A></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>[2] <A=20
+href=3D"http://rhm/cdepot.net/doc/KEtutorial.txt">http://rhm/cdepot.net/d=
+oc/KEtutorial.txt</A></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>[3] <A=20
+href=3D"http://rhm.cdepot.net/kb/tabrasa.ku">http://rhm.cdepot.net/kb/tab=
+rasa.ku</A></FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>[4] <A=20
+href=3D"http://rhm.cdepot.net/kb/tabrasa.def">http://rhm.cdepot.net/kb/ta=
+brasa.def</A>&nbsp;&nbsp;&nbsp;=20
+</FONT><BR>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D <BR>Dick McCullough =
+<BR><A=20
+href=3D"http://rhm.cdepot.net/">knowledge</A> <B>:=3D</B> man <B>do</B> =
+identify=20
+<B>od</B> existent <B>done</B><BR>knowledge <B>haspart</B> proposition=20
+list<BR></DIV></DIV></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_001F_01C29CEE.0253EFC0--
+
+

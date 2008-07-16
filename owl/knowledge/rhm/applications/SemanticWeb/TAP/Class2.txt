@@ -1,0 +1,3 @@
+set echo=off,kbmode=tap;
+Class isc**2 ?;
+exit;

@@ -1,0 +1,153 @@
+<HTML><XMP>
+# KEHOME/knowledge/application/SemanticWeb/RDF/rdfs.ho
+# Dec/28/2002
+
+# "http://www.w3.org/TR/2002/WD-rdf-schema-20021112/"
+
+# RDFS-MKR identities
+#====================
+rdf:Statement  is statement
+rdf:Property   is characteristic
+rdf:Container  is group
+rdf:Bag        is bag
+rdf:Seq        is list
+rdf:Alt        is enumeration
+rdfs:Resource  is existent
+rdfs:Class     is concepts
+
+# "RDF Schema Overview"
+#======================
+RDF classes is relation with
+    automatic=none,
+    label=[Class name,comment],
+    format=[existent:1,comment:2],
+    meaning={$1 has comment="$2"}
+RDF classes is begin relation
+#============================
+# Class name; comment 
+rdf:Property; The concept of a property. 
+rdf:Statement; The class of RDF statements. 
+rdf:List; The class of RDF Lists 
+rdf:Bag; An unordered collection. 
+rdf:Seq; An ordered collection. 
+rdf:Alt; A collection of alternatives. 
+rdfs:Resource; The class resource, everything. 
+rdfs:Literal; This represents the set of atomic values, eg. textual strings. 
+rdfs:XMLLiteral; The class of XML literals. 
+rdfs:Class; The concept of Class 
+rdfs:Datatype; The class of datatypes. 
+rdfs:Container; This represents the set Containers. 
+rdfs:ContainerMembershipProperty; The container membership properties, rdf:1, rdf:2, ..., all of which are sub-properties of 'member'. 
+end relation RDF classes
+ 
+Property isg
+    comment,
+    domain,
+    range
+RDF properties is relation with
+    automatic=none,
+    label=[Property name,comment,domain,range],
+    format=[Property:1,comment:2,domain:3,range:4],
+    meaning={
+	$1 has comment="$2";
+	$1 has domain=$3;
+	$1 has range=$4;
+	#$3 has $1 = $4;
+    }
+RDF properties is begin relation
+#===============================
+# Property name; comment; domain; range 
+rdf:type; Indicates membership of a class; rdfs:Resource; rdfs:Class 
+rdf:subject; The subject of an RDF statement.; rdf:Statement; rdfs:Resource 
+rdf:predicate; the predicate of an RDF statement.; rdf:Statement; rdf:Property 
+rdf:object; The object of an RDF statement.; rdf:Statement; not specified 
+rdf:value; Identifies the principal value (usually a string) of a property when the property value is a structured resource; rdfs:Resource; not specified 
+rdf:first; The first item in an RDF list. Also often called the head.; rdf:List; not specified 
+rdf:rest; The rest of an RDF list after the first item. Also often called the tail.; rdf:List; rdf:List 
+
+rdfs:subClassOf; Indicates membership of a class; rdfs:Class; rdfs:Class 
+rdfs:subPropertyOf; Indicates specialization of properties; rdf:Property; rdf:Property 
+rdfs:domain; A domain class for a property type; rdf:Property; rdfs:Class 
+rdfs:range; A range class for a property type; rdf:Property; rdfs:Class 
+rdfs:label; Provides a human-readable version of a resource name.; rdfs:Resource; rdfs:Literal 
+rdfs:comment; Use this for descriptions; rdfs:Resource; rdfs:Literal 
+rdfs:member; a member of a container; rdfs:Container; not specified 
+rdfs:seeAlso; A resource that provides information about the subject resource; rdfs:Resource; rdfs:Resource 
+rdfs:isDefinedBy; Indicates the namespace of a resource; rdfs:Resource; rdfs:Resource 
+end relation RDF properties
+
+at view=vocabulary hierarchy
+#===========================
+rdfsVocabulary is begin hierarchy
+Class 		  # concepts
+/   Resource	  # existent
+/   Literal
+/   XMLLiteral
+/   Class 	  # concepts
+/   Property
+/   Datatype
+/   Statement
+/   Container 	  # group
+/   Bag 	  # multiset
+/   Seq 	  # list
+/   Alt 	  # enumeration
+/   ContainerMembershipProperty  # 1, 2, ...
+/   List	  # Seq plus properties: first, rest, nil
+
+Property
+/   type	  # genus
+/   subClassOf    # iss*
+/   subPropertyOf # iss*
+/   domain	  # property subject Class
+/   range	  # property object  Class
+/   label
+/   comment
+/   member	  # ismem
+/   first	  # List property
+/   rest	  # List property
+/   nil		  # List property
+/   seeAlso
+/   isDefinedBy
+/   subject	  # Statement property
+/   predicate	  # Statement property
+/   object	  # Statement property
+/   value
+end hierarchy rdfsVocabulary
+
+at view=meaning hierarchy
+#========================
+rdfshi is begin hierarchy
+Resource  # existent
+/   Class  # entity
+//	Container  # group
+///	    Bag  # multiset
+///	    Seq  # list
+////		List  # Seq plus properties: first, rest, nil
+///	    Alt  # enumeration
+//	Datatype
+///	    Literal
+///	    XMLLiteral
+/   Property
+/   Statement
+
+Property
+/   type           # genus
+/   subClassOf     # iss*
+/   subPropertyOf  # iss*
+/   domain         # property subject Class
+/   range          # property object  Class
+/   label
+/   comment
+/   member         # ismem
+//	ContainerMembershipProperty  # 1, 2, ...
+/   first	   # List property
+/   rest	   # List property
+/   nil		   # List property
+/   seeAlso
+//	isDefinedBy
+/   subject	   # Statement property
+/   predicate	   # Statement property
+/   object	   # Statement property
+/   value
+end hierarchy rdfshi
+</XMP></HTML>

@@ -1,0 +1,44 @@
+#<html><xmp>
+# KEHOME/knowledge/theory/OWL/Restriction.html
+# Oct/13/2005
+
+# genus-differentia definitions
+
+# NOTE:
+# OWL syntax could be shortened by omitting
+#  <subClassOf><Restriction>
+#  </Restriction></subClassOf>
+  
+
+
+
+# OWL declaration		# MKR declaration
+#---------------#		#---------------#
+<Class ... "subject">		subject HAS prop; # not necessary
+  <Property ... "prop"/>
+</Class>
+
+# OWL definition		# MKR definition
+#--------------#		#--------------#
+<Class ... "subject">		subject is
+  <subClassOf ... "genus"/>	  genus with
+  <subClassOf><Restriction>	  differentia, # comma-separated list
+  <onProperty ... "prop">	  ...;
+     <... ... .../>
+  </Restriction></subClassOf>
+  ...
+</Class>
+
+# OWL Restriction		# MKR differentia
+#---------------#		#---------------#
+allValuesFrom	class		prop isu class
+someValuesFrom	class	   some prop isu class
+hasValue	value		prop +=  value
+
+cardinality	card		no prop  # card = 0
+				prop     # card >= 1
+minCardinality	card		prop     # card >= 1
+maxCardinality	card		no prop  # card = 0
+				prop     # card >= 1
+
+#</xmp></html>

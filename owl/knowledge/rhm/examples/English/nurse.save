@@ -1,0 +1,2318 @@
+# INFO: myopen: command line files: ke arg(list[1]) <nurse.cu>
+# INFO: input  file <nurse.cu>
+# INFO: output file <nurse.out>
+# INFO: error  file <nurse.err>
+# INFO: log    file <nurse.log>
+# INFO: kversion = "McCullough Knowledge Explorer version 6.5  October 24, 2003"
+# INFO: iversion = "Unicon Version 11.0 (beta).  July 8, 2003"
+# INFO: wexplore = C:/WINDOWS/EXPLORER.EXE
+# INFO: iexplore = C:/Program Files/Internet Explorer/iexplore.exe
+# INFO: systype = Cygwin
+# INFO: kehome = /home/ke
+# clock <2003/10/24 10:38:30> # finished opening files
+
+########## McCullough Knowledge Explorer ##########
+# debug <NO> kformat <ku> hoseparator </> relseparator <,> nvseparator <=>
+
+##### loading knowledge base #####
+# INFO: ke: TABRASA(string[3]) <mkr>
+# INFO: new_knit: creating newview(string[11]) <tabula rasa>
+##### read_knit kb/tabrasa.html  KFORMAT <ku> #####
+##### read_knit kb/ke.html  KFORMAT <ku> #####
+# clock <2003/10/24 10:38:37> # finished loading tabula rasa
+# command <do read from kb/initial.mkr done;>
+##### read_knit kb/initial.mkr  KFORMAT <ku> #####
+# assignment <set echo = off;>
+##### read_knit kb/kvalue.ku  KFORMAT <ku> #####
+# assignment <set echo = on;>
+# command <do check od unknown done;>
+
+##### check unknown <view = tabula rasa> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         17 initial
+# classify <enum_formattype isu enumeration>
+# classify <kb/initial.mkr isu file>
+# can't classify <nose isu unknown>
+# classify <kb/tabrasa.html isu file>
+# can't classify <finger isu unknown>
+# classify <kb/kvalue.ku isu file>
+# classify <man iss ANIMAL>
+# can't classify <tongue isu unknown>
+# classify <enum_automatic isu enumeration>
+# classify <action iss characteristic>
+# classify <purpose iss attribute>
+# classify <attribute iss characteristic>
+# classify <sentence iss proposition>
+# classify <kb/ke.html isu file>
+# can't classify <eye isu unknown>
+# classify <enum_meaningtype isu enumeration>
+# can't classify <ear isu unknown>
+# classify count:        12
+# unknown count:         5 final
+# clock <2003/10/24 10:38:38> # finished user initialization script
+# INFO: kbmode = mke
+# INFO: kbdata = &null
+# INFO: kbfile = &null
+
+##### ready for new knowledge #####
+##### use <do menu done;> for MKE input menu #####
+##### use <exit;> or <EOF> to exit ke #####
+# s_html << HTML >>
+# s_html << XMP >>
+# assignment <set hfocus = [newword,newstatement,person,chit,s_action,variable];>
+# statement <allege is action with ktype = say ;>
+
+# context <at space = Cairo,time = 1997/12/18,view = v_news_story ;>
+# INFO: new_knit: v_news_story copied from oldview(string[11]) <tabula rasa>
+# statement <news_story has headline = "Nurse charged with killing patient",time = 1997/12/18,source = Reuters ;>
+# statement <person isg the doctors,his patients,prosecutors ;>
+# s_hierarchy <person isg the doctors,his patients,prosecutors ;>
+# statement <doctor1 isu the doctors ;>
+# s_hierarchy <doctor1 isu the doctors ;>
+# statement <nurse1 isu person ;>
+# s_hierarchy <nurse1 isu person ;>
+# statement <patient1 isu his patients ;>
+# s_hierarchy <patient1 isu his patients ;>
+# statement <further29 iss his patients ;>
+# s_hierarchy <further29 iss his patients ;>
+# statement <doctor1 has patient = his patients ;>
+# statement <nurse1 has Egyptian,sex = female ;>
+# statement <prosecutors do charge od nurse1 done;>
+# statement <prosecutors do say od { nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;} done;>
+
+# context <at view = say_prosecutors ;>
+# INFO: new_knit: say_prosecutors copied from oldview(string[12]) <v_news_story>
+# statement <nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done;>
+# statement <nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <nurse1 is Aida Nourredin Mohammed Abu Zeid ;>
+# statement <nurse1 has age = 25 ;>
+# statement <prosecutors do say od { nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;} done;>
+
+# context <at view = say_prosecutors ;>
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# statement <nurse1 do steal od medicine,drugs done;>
+# statement <nurse1 do forge od hospital documents with purpose = cover up stealing done;>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <nurse1 is Abu Zeid ;>
+
+# context <at time = t_interrogation ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <prosecutors do interrogate od nurse1 done;>
+# statement <prosecutors do say od {Abu Zeid do confess done;} done;>
+
+# context <at view = say_prosecutors ;>
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# statement <Abu Zeid do confess done;>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+
+# context <at time = 1997/12/18 ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <security sources iss person ;>
+# s_hierarchy <security sources iss person ;>
+# statement <she means nurse1 ;>
+# statement <security sources do say od {if she has guilty ; then the maximum penalty is death by hanging ; fi;} done;>
+
+# context <at view = say_security sources ;>
+# INFO: new_knit: say_security sources copied from oldview(string[12]) <v_news_story>
+# if <if she has guilty ; then the maximum penalty is death by hanging ; fi;>
+{ she has guilty ; } has truth_value = false;
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <prosecutors do say od {at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;} done;>
+
+# context <at view = say_prosecutors ;>
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+
+# context <at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;>
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# statement <nurse1 do work done;>
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <they means prosecutors ;>
+# statement <her victims is his patients ;>
+# statement <they do say od {at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;} done;>
+
+# context <at view = say_they ;>
+# INFO: new_knit: say_they copied from oldview(string[12]) <v_news_story>
+
+# context <at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# statement <{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <they do say od { they do investigate done; at time = during her shift {her victims has respiratory failure ;} ;} done;>
+
+# context <at view = say_they ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# statement <they do investigate done;>
+
+# context <at time = during her shift {her victims has respiratory failure ;} ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# statement <her victims has respiratory failure ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <doctor1 has sex = male ;>
+# statement <he means doctor1 ;>
+# statement <they do say od { she do love od he done; he do not love od she done;} done;>
+
+# context <at view = say_they ;>
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# statement <she do love od he done;>
+# statement <he do not love od she done;>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <local newspapers iss person ;>
+# s_hierarchy <local newspapers iss person ;>
+# statement <Alexandria University Hospital isu space ;>
+# s_hierarchy <Alexandria University Hospital isu space ;>
+# statement <the hospital is Alexandria University Hospital ;>
+
+# context <at time = "time of her arrest earlier this year" ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# statement <they do arrest od she done;>
+# statement <Abu Zeid do say to local newspapers od {the doctors do blame od she with purpose = cover up their mistakes done;} done;>
+
+# context <at view = say_nurse1 ;>
+# INFO: new_knit: say_nurse1 copied from oldview(string[12]) <v_news_story>
+# statement <the doctors do blame od she with purpose = cover up their mistakes done;>
+
+# context <at view = v_news_story ;>
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# command <vdo exec od {events isall* ? ;} done;>
+# INFO: new_knit: resuming newview(string[10]) <say_nurse1>
+# at view = say_nurse1 {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  arrest_504
+\  blame_509
+\  charge_412
+\  identify_017
+\  interrogate_436
+\  say_414
+\  say_425
+\  say_438
+\  say_450
+\  say_457
+\  say_469
+\  say_478
+\  say_491
+\  say_506
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# at view = say_prosecutors {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  charge_412
+\  confess_441
+\  forge_430
+\  identify_017
+\  kill_417
+\  say_414
+\  steal_428
+\  try kill_419
+\  work_461
+# INFO: new_knit: resuming newview(string[20]) <say_security sources>
+# at view = say_security sources {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  charge_412
+\  identify_017
+\  interrogate_436
+\  say_414
+\  say_425
+\  say_438
+\  say_450
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# at view = say_they {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  charge_412
+\  identify_017
+\  interrogate_436
+\  investigate_481
+\  love_494
+\  not love_496
+\  say_414
+\  say_425
+\  say_438
+\  say_450
+\  say_457
+\  say_469
+# INFO: new_knit: resuming newview(string[11]) <tabula rasa>
+# at view = tabula rasa {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  identify_017
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# at view = v_news_story {events isall* ? ;}
+# question <events isall* ? ;>
+events
+\  arrest_504
+\  charge_412
+\  identify_017
+\  interrogate_436
+\  say_414
+\  say_425
+\  say_438
+\  say_450
+\  say_457
+\  say_469
+\  say_478
+\  say_491
+\  say_506
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# command <vdo exec od {kobject isc* ? ;} done;>
+# INFO: new_knit: resuming newview(string[10]) <say_nurse1>
+# at view = say_nurse1 {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+/  kobject_415 # " nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+/  kobject_426 # " nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;"
+/  kobject_439 # "Abu Zeid do confess done;"
+/  kobject_451 # "if she has guilty ; then the maximum penalty is death by hanging ; fi;"
+/  kobject_458 # "at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;"
+/  kobject_470 # "at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;"
+/  kobject_479 # " they do investigate done; at time = during her shift {her victims has respiratory failure ;} ;"
+/  kobject_492 # " she do love od he done; he do not love od she done;"
+/  kobject_507 # "the doctors do blame od she with purpose = cover up their mistakes done;"
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# at view = say_prosecutors {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+/  kobject_415 # " nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+# INFO: new_knit: resuming newview(string[20]) <say_security sources>
+# at view = say_security sources {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+/  kobject_415 # " nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+/  kobject_426 # " nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;"
+/  kobject_439 # "Abu Zeid do confess done;"
+/  kobject_451 # "if she has guilty ; then the maximum penalty is death by hanging ; fi;"
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# at view = say_they {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+/  kobject_415 # " nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+/  kobject_426 # " nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;"
+/  kobject_439 # "Abu Zeid do confess done;"
+/  kobject_451 # "if she has guilty ; then the maximum penalty is death by hanging ; fi;"
+/  kobject_458 # "at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;"
+/  kobject_470 # "at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;"
+# INFO: new_knit: resuming newview(string[11]) <tabula rasa>
+# at view = tabula rasa {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# at view = v_news_story {kobject isc* ? ;}
+# question <kobject isc* ? ;>
+kobject
+/  kobject_415 # " nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+/  kobject_426 # " nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;"
+/  kobject_439 # "Abu Zeid do confess done;"
+/  kobject_451 # "if she has guilty ; then the maximum penalty is death by hanging ; fi;"
+/  kobject_458 # "at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;"
+/  kobject_470 # "at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;"
+/  kobject_479 # " they do investigate done; at time = during her shift {her victims has respiratory failure ;} ;"
+/  kobject_492 # " she do love od he done; he do not love od she done;"
+/  kobject_507 # "the doctors do blame od she with purpose = cover up their mistakes done;"
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# s_html << /XMP >>
+# s_html << /HTML >>
+# clock <2003/10/24 10:38:41> # finished reading knowledge
+# command <do read from kb/final.mkr done;>
+##### read_knit kb/final.mkr  KFORMAT <ku> #####
+# command <do kbcheck done;>
+############################################################
+################### CHECKING KNOWLEDGE UNITS ###################
+# knitlog
+#   knit_say_nurse1
+#   knit_say_prosecutors
+#   knit_say_security sources
+#   knit_say_they
+#   knit_tabula rasa
+#   knit_v_news_story
+# chitlog
+#   chit_Alexandria University Hospital/intensive care unit_past seven years_say_prosecutors
+#   chit_Alexandria University Hospital/intensive care unit_past seven years_v_news_story
+#   chit_Cairo_"time of her arrest earlier this year"_say_nurse1
+#   chit_Cairo_"time of her arrest earlier this year"_v_news_story
+#   chit_Cairo_1997/12/18_say_prosecutors
+#   chit_Cairo_1997/12/18_say_they
+#   chit_Cairo_1997/12/18_v_news_story
+#   chit_Cairo_during her shift_v_news_story
+#   chit_Cairo_past_v_news_story
+#   chit_Cairo_t_interrogation_say_prosecutors
+#   chit_Cairo_t_interrogation_v_news_story
+#   chit_here_now_tabula rasa
+
+# INFO: new_knit: resuming newview(string[10]) <say_nurse1>
+# ============================================================
+# ========== CHECKING KNIT view <say_nurse1> ==========
+
+##### count knit <view = say_nurse1> #####
+# nonexistent       count:     0
+# unknown           count:    34
+# newproposition    count:     0
+# concept           count:   403
+# primitive         count:    45
+# unit              count:   733
+# alternative       count:     0
+# member            count:     0
+# group type        count:     6
+# group             count:    43
+# file              count:     8
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = say_nurse1> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         34 initial
+# can't classify <fi; isu unknown>
+# can't classify <nose isu unknown>
+# can't classify <the maximum penalty isu unknown>
+# can't classify <death by hanging isu unknown>
+# can't classify <substances isu unknown>
+# can't classify <investigate isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <past seven years isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <love isu unknown>
+# can't classify <drugs isu unknown>
+# can't classify <respiratory failure isu unknown>
+# can't classify <male isu unknown>
+# can't classify <news_story isu unknown>
+# can't classify <cover up stealing isu unknown>
+# can't classify <kill isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <during her shift isu unknown>
+# can't classify <confess isu unknown>
+# can't classify <guilty isu unknown>
+# can't classify <female isu unknown>
+# can't classify <forge isu unknown>
+# can't classify <Reuters isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <medicine isu unknown>
+# can't classify <hospital documents isu unknown>
+# can't classify <steal isu unknown>
+# can't classify <ear isu unknown>
+# can't classify <Alexandria University Hospital/intensive care unit isu unknown>
+# can't classify <cover up their mistakes isu unknown>
+# can't classify <work isu unknown>
+# can't classify <inject isu unknown>
+# can't classify <avenge her unrequited love for doctor1 isu unknown>
+# can't classify <try kill isu unknown>
+# classify count:        0
+# unknown count:         34 final
+
+##### check genus <view = say_nurse1> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus error: (2) say_nurse1 iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_prosecutors iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_security sources iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_they iss (set[2]) <[tabula rasa,v_news_story]>
+# genus count: 1287 items, 127 no genus (116 alternatives, 3 members)
+# genus count: 1287 items, 6 errors (0 alternatives, 4 members)
+
+##### check unit-species contradiction <view = say_nurse1> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    746 units, 2 units with species contradiction
+# species count: 416 species, 2 species with unit contradiction
+
+##### check link <view = say_nurse1> #####
+# link count:  1288 items, 0 items with broken genus or species links
+# link count:  1288 items, 0 items with broken primitive or unit links
+# link count:  1288 items, 0 items with broken exgroup or alternative links
+# link count:  1288 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = say_nurse1> #####
+# loop count:  1288 items, 0 items with species-genus loops
+# loop count:  1288 items, 0 items with species-genus multiple paths
+# loop count:  1288 items, 0 items with unit-primitive loops
+# loop count:  1288 items, 0 items with unit-primitive multiple paths
+# loop count:  1288 items, 0 items with alternative-exgroup loops
+# loop count:  1288 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1288 items, 0 items with member-ingroup loops
+# loop count:  1288 items, 0 items with member-ingroup multiple paths
+# loop count:  1288 items, 0 items with genlmt-specmt loops
+# loop count:  1288 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1288 items, 0 items with symbol-referent loops
+# loop count:  1288 items, 0 items with symbol-referent multiple paths
+# loop count:  1288 items, 0 items with cause-effect loops
+# loop count:  1288 items, 0 items with cause-effect multiple paths
+# loop count:  1288 items, 0 items with before-after loops
+# loop count:  1288 items, 0 items with before-after multiple paths
+# loop count:  1288 items, 0 items with below-above loops
+# loop count:  1288 items, 0 items with below-above multiple paths
+# loop count:  1288 items, 0 items with beside loops
+# loop count:  1288 items, 0 items with beside multiple paths
+# loop count:  1288 items, 0 items with inside loops
+# loop count:  1288 items, 0 items with inside multiple paths
+# loop count:  1288 items, 0 items with outside loops
+# loop count:  1288 items, 0 items with outside multiple paths
+# loop count:  1288 items, 0 items with like loops
+# loop count:  1288 items, 0 items with like multiple paths
+# loop count:  1288 items, 0 items with happento loops
+# loop count:  1288 items, 0 items with happento multiple paths
+
+##### check definition <view = say_nurse1> #####
+# nonexistent <nonexistent>
+# definition count: 1288 items, 1287 concepts with 0 bad genus, 1269 undefined
+# definition count: 1288 items, 1287 concepts, 149 alternatives, 23 members
+# definition count: 1288 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1288 items, 1 units, 0 alternatives, 0 members
+# definition count: 1288 items, 0 negated items
+# alias count:      1288 items, 7 items have 8 aliases
+# xmlns count:      1288 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <say_nurse1> =====
+# nonexistent count:     1288 items, 0 contradictions
+# newproposition count:  0
+# chit count:            8
+# event count:           14
+# attribute count:       5 attribute primitives, 132 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          6 action primitives, 151 used, 0 unused
+# action count:          6 action primitives, 0 methods, 0 commands
+# relation count:        1288 items, 2 relations, 6 infons
+# value count:           47 char. total, 47 char. have 0 values
+# group count:           1288 items, 43 groups
+# file count:            1288 items, 8 files
+# enumeration count:     1288 items, 21 enumerations
+# requisite count:       1288 items, 0 requisites
+# list count:            1288 items, 0 lists
+# set count:             1288 items, 7 Sets
+# sequence count:        1288 items, 0 sequences
+# hierarchy count:       1288 items, 4 hierarchies
+# lattice count:         1288 items, 0 lattices
+# person count:          1288 items, 3 persons
+# family count:          1288 items, 0 families
+# ========== END KNIT view <say_nurse1> ==========
+# ============================================================
+# clock <2003/10/24 10:39:07> # finished checking knit: view = say_nurse1
+
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+# ============================================================
+# ========== CHECKING KNIT view <say_prosecutors> ==========
+
+##### count knit <view = say_prosecutors> #####
+# nonexistent       count:     0
+# unknown           count:    15
+# newproposition    count:     0
+# concept           count:   399
+# primitive         count:    44
+# unit              count:   675
+# alternative       count:     0
+# member            count:     0
+# group type        count:     5
+# group             count:    42
+# file              count:     8
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = say_prosecutors> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         15 initial
+# can't classify <Abu Zeid isu unknown>
+# can't classify <nose isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <drugs isu unknown>
+# can't classify <news_story isu unknown>
+# can't classify <cover up stealing isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <female isu unknown>
+# can't classify <Reuters isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <medicine isu unknown>
+# can't classify <hospital documents isu unknown>
+# can't classify <ear isu unknown>
+# can't classify <avenge her unrequited love for doctor1 isu unknown>
+# classify count:        0
+# unknown count:         15 final
+
+##### check genus <view = say_prosecutors> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus error: (2) say_prosecutors iss (set[2]) <[tabula rasa,v_news_story]>
+# genus count: 1211 items, 127 no genus (116 alternatives, 3 members)
+# genus count: 1211 items, 3 errors (0 alternatives, 1 members)
+
+##### check unit-species contradiction <view = say_prosecutors> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    685 units, 2 units with species contradiction
+# species count: 401 species, 2 species with unit contradiction
+
+##### check link <view = say_prosecutors> #####
+# link count:  1212 items, 0 items with broken genus or species links
+# link count:  1212 items, 0 items with broken primitive or unit links
+# link count:  1212 items, 0 items with broken exgroup or alternative links
+# link count:  1212 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = say_prosecutors> #####
+# loop count:  1212 items, 0 items with species-genus loops
+# loop count:  1212 items, 0 items with species-genus multiple paths
+# loop count:  1212 items, 0 items with unit-primitive loops
+# loop count:  1212 items, 0 items with unit-primitive multiple paths
+# loop count:  1212 items, 0 items with alternative-exgroup loops
+# loop count:  1212 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1212 items, 0 items with member-ingroup loops
+# loop count:  1212 items, 0 items with member-ingroup multiple paths
+# loop count:  1212 items, 0 items with genlmt-specmt loops
+# loop count:  1212 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1212 items, 0 items with symbol-referent loops
+# loop count:  1212 items, 0 items with symbol-referent multiple paths
+# loop count:  1212 items, 0 items with cause-effect loops
+# loop count:  1212 items, 0 items with cause-effect multiple paths
+# loop count:  1212 items, 0 items with before-after loops
+# loop count:  1212 items, 0 items with before-after multiple paths
+# loop count:  1212 items, 0 items with below-above loops
+# loop count:  1212 items, 0 items with below-above multiple paths
+# loop count:  1212 items, 0 items with beside loops
+# loop count:  1212 items, 0 items with beside multiple paths
+# loop count:  1212 items, 0 items with inside loops
+# loop count:  1212 items, 0 items with inside multiple paths
+# loop count:  1212 items, 0 items with outside loops
+# loop count:  1212 items, 0 items with outside multiple paths
+# loop count:  1212 items, 0 items with like loops
+# loop count:  1212 items, 0 items with like multiple paths
+# loop count:  1212 items, 0 items with happento loops
+# loop count:  1212 items, 0 items with happento multiple paths
+
+##### check definition <view = say_prosecutors> #####
+# nonexistent <nonexistent>
+# definition count: 1212 items, 1211 concepts with 0 bad genus, 1195 undefined
+# definition count: 1212 items, 1211 concepts, 149 alternatives, 15 members
+# definition count: 1212 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1212 items, 1 units, 0 alternatives, 0 members
+# definition count: 1212 items, 0 negated items
+# alias count:      1212 items, 4 items have 4 aliases
+# xmlns count:      1212 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <say_prosecutors> =====
+# nonexistent count:     1212 items, 0 contradictions
+# newproposition count:  0
+# chit count:            5
+# event count:           9
+# attribute count:       5 attribute primitives, 125 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          9 action primitives, 153 used, 1 unused
+# action count:          9 action primitives, 0 methods, 0 commands
+# relation count:        1212 items, 0 relations, 0 infons
+# value count:           33 char. total, 33 char. have 0 values
+# group count:           1212 items, 42 groups
+# file count:            1212 items, 8 files
+# enumeration count:     1212 items, 21 enumerations
+# requisite count:       1212 items, 0 requisites
+# list count:            1212 items, 0 lists
+# set count:             1212 items, 7 Sets
+# sequence count:        1212 items, 0 sequences
+# hierarchy count:       1212 items, 4 hierarchies
+# lattice count:         1212 items, 0 lattices
+# person count:          1212 items, 3 persons
+# family count:          1212 items, 0 families
+# ========== END KNIT view <say_prosecutors> ==========
+# ============================================================
+# clock <2003/10/24 10:39:31> # finished checking knit: view = say_prosecutors
+
+# INFO: new_knit: resuming newview(string[20]) <say_security sources>
+# ============================================================
+# ========== CHECKING KNIT view <say_security sources> ==========
+
+##### count knit <view = say_security sources> #####
+# nonexistent       count:     0
+# unknown           count:    20
+# newproposition    count:     0
+# concept           count:   400
+# primitive         count:    44
+# unit              count:   688
+# alternative       count:     0
+# member            count:     0
+# group type        count:     6
+# group             count:    43
+# file              count:     8
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = say_security sources> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         20 initial
+# can't classify <nose isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <drugs isu unknown>
+# can't classify <news_story isu unknown>
+# can't classify <cover up stealing isu unknown>
+# can't classify <kill isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <confess isu unknown>
+# can't classify <guilty isu unknown>
+# can't classify <female isu unknown>
+# can't classify <forge isu unknown>
+# can't classify <Reuters isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <medicine isu unknown>
+# can't classify <hospital documents isu unknown>
+# can't classify <steal isu unknown>
+# can't classify <ear isu unknown>
+# can't classify <avenge her unrequited love for doctor1 isu unknown>
+# can't classify <try kill isu unknown>
+# classify count:        0
+# unknown count:         20 final
+
+##### check genus <view = say_security sources> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus error: (2) say_prosecutors iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_security sources iss (set[2]) <[tabula rasa,v_news_story]>
+# genus count: 1227 items, 127 no genus (116 alternatives, 3 members)
+# genus count: 1227 items, 4 errors (0 alternatives, 2 members)
+
+##### check unit-species contradiction <view = say_security sources> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    696 units, 2 units with species contradiction
+# species count: 406 species, 2 species with unit contradiction
+
+##### check link <view = say_security sources> #####
+# link count:  1228 items, 0 items with broken genus or species links
+# link count:  1228 items, 0 items with broken primitive or unit links
+# link count:  1228 items, 0 items with broken exgroup or alternative links
+# link count:  1228 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = say_security sources> #####
+# loop count:  1228 items, 0 items with species-genus loops
+# loop count:  1228 items, 0 items with species-genus multiple paths
+# loop count:  1228 items, 0 items with unit-primitive loops
+# loop count:  1228 items, 0 items with unit-primitive multiple paths
+# loop count:  1228 items, 0 items with alternative-exgroup loops
+# loop count:  1228 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1228 items, 0 items with member-ingroup loops
+# loop count:  1228 items, 0 items with member-ingroup multiple paths
+# loop count:  1228 items, 0 items with genlmt-specmt loops
+# loop count:  1228 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1228 items, 0 items with symbol-referent loops
+# loop count:  1228 items, 0 items with symbol-referent multiple paths
+# loop count:  1228 items, 0 items with cause-effect loops
+# loop count:  1228 items, 0 items with cause-effect multiple paths
+# loop count:  1228 items, 0 items with before-after loops
+# loop count:  1228 items, 0 items with before-after multiple paths
+# loop count:  1228 items, 0 items with below-above loops
+# loop count:  1228 items, 0 items with below-above multiple paths
+# loop count:  1228 items, 0 items with beside loops
+# loop count:  1228 items, 0 items with beside multiple paths
+# loop count:  1228 items, 0 items with inside loops
+# loop count:  1228 items, 0 items with inside multiple paths
+# loop count:  1228 items, 0 items with outside loops
+# loop count:  1228 items, 0 items with outside multiple paths
+# loop count:  1228 items, 0 items with like loops
+# loop count:  1228 items, 0 items with like multiple paths
+# loop count:  1228 items, 0 items with happento loops
+# loop count:  1228 items, 0 items with happento multiple paths
+
+##### check definition <view = say_security sources> #####
+# nonexistent <nonexistent>
+# definition count: 1228 items, 1227 concepts with 0 bad genus, 1209 undefined
+# definition count: 1228 items, 1227 concepts, 149 alternatives, 14 members
+# definition count: 1228 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1228 items, 1 units, 0 alternatives, 0 members
+# definition count: 1228 items, 0 negated items
+# alias count:      1228 items, 5 items have 6 aliases
+# xmlns count:      1228 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <say_security sources> =====
+# nonexistent count:     1228 items, 0 contradictions
+# newproposition count:  0
+# chit count:            3
+# event count:           7
+# attribute count:       5 attribute primitives, 132 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          4 action primitives, 149 used, 0 unused
+# action count:          4 action primitives, 0 methods, 0 commands
+# relation count:        1228 items, 2 relations, 2 infons
+# value count:           34 char. total, 34 char. have 0 values
+# group count:           1228 items, 43 groups
+# file count:            1228 items, 8 files
+# enumeration count:     1228 items, 21 enumerations
+# requisite count:       1228 items, 0 requisites
+# list count:            1228 items, 0 lists
+# set count:             1228 items, 7 Sets
+# sequence count:        1228 items, 0 sequences
+# hierarchy count:       1228 items, 4 hierarchies
+# lattice count:         1228 items, 0 lattices
+# person count:          1228 items, 3 persons
+# family count:          1228 items, 0 families
+# ========== END KNIT view <say_security sources> ==========
+# ============================================================
+# clock <2003/10/24 10:39:56> # finished checking knit: view = say_security sources
+
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+# ============================================================
+# ========== CHECKING KNIT view <say_they> ==========
+
+##### count knit <view = say_they> #####
+# nonexistent       count:     0
+# unknown           count:    29
+# newproposition    count:     0
+# concept           count:   405
+# primitive         count:    48
+# unit              count:   720
+# alternative       count:     0
+# member            count:     0
+# group type        count:     6
+# group             count:    43
+# file              count:     8
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = say_they> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         29 initial
+# can't classify <fi; isu unknown>
+# can't classify <nose isu unknown>
+# can't classify <the maximum penalty isu unknown>
+# can't classify <death by hanging isu unknown>
+# can't classify <substances isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <past seven years isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <drugs isu unknown>
+# can't classify <respiratory failure isu unknown>
+# can't classify <news_story isu unknown>
+# can't classify <cover up stealing isu unknown>
+# can't classify <kill isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <confess isu unknown>
+# can't classify <guilty isu unknown>
+# can't classify <female isu unknown>
+# can't classify <forge isu unknown>
+# can't classify <Reuters isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <medicine isu unknown>
+# can't classify <hospital documents isu unknown>
+# can't classify <steal isu unknown>
+# can't classify <ear isu unknown>
+# can't classify <Alexandria University Hospital/intensive care unit isu unknown>
+# can't classify <work isu unknown>
+# can't classify <inject isu unknown>
+# can't classify <avenge her unrequited love for doctor1 isu unknown>
+# can't classify <try kill isu unknown>
+# classify count:        0
+# unknown count:         29 final
+
+##### check genus <view = say_they> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus error: (2) say_prosecutors iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_security sources iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_they iss (set[2]) <[tabula rasa,v_news_story]>
+# genus count: 1271 items, 129 no genus (116 alternatives, 3 members)
+# genus count: 1271 items, 5 errors (0 alternatives, 3 members)
+
+##### check unit-species contradiction <view = say_they> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    730 units, 2 units with species contradiction
+# species count: 414 species, 2 species with unit contradiction
+
+##### check link <view = say_they> #####
+# link count:  1272 items, 0 items with broken genus or species links
+# link count:  1272 items, 0 items with broken primitive or unit links
+# link count:  1272 items, 0 items with broken exgroup or alternative links
+# link count:  1272 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = say_they> #####
+# loop count:  1272 items, 0 items with species-genus loops
+# loop count:  1272 items, 0 items with species-genus multiple paths
+# loop count:  1272 items, 0 items with unit-primitive loops
+# loop count:  1272 items, 0 items with unit-primitive multiple paths
+# loop count:  1272 items, 0 items with alternative-exgroup loops
+# loop count:  1272 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1272 items, 0 items with member-ingroup loops
+# loop count:  1272 items, 0 items with member-ingroup multiple paths
+# loop count:  1272 items, 0 items with genlmt-specmt loops
+# loop count:  1272 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1272 items, 0 items with symbol-referent loops
+# loop count:  1272 items, 0 items with symbol-referent multiple paths
+# WARNING: get_symbol(list/,=): unknown token pattern: tline(string[12]) <{wDwPwPwwd;}>
+# loop count:  1272 items, 0 items with cause-effect loops
+# loop count:  1272 items, 0 items with cause-effect multiple paths
+# loop count:  1272 items, 0 items with before-after loops
+# loop count:  1272 items, 0 items with before-after multiple paths
+# loop count:  1272 items, 0 items with below-above loops
+# loop count:  1272 items, 0 items with below-above multiple paths
+# loop count:  1272 items, 0 items with beside loops
+# loop count:  1272 items, 0 items with beside multiple paths
+# loop count:  1272 items, 0 items with inside loops
+# loop count:  1272 items, 0 items with inside multiple paths
+# loop count:  1272 items, 0 items with outside loops
+# loop count:  1272 items, 0 items with outside multiple paths
+# loop count:  1272 items, 0 items with like loops
+# loop count:  1272 items, 0 items with like multiple paths
+# loop count:  1272 items, 0 items with happento loops
+# loop count:  1272 items, 0 items with happento multiple paths
+
+##### check definition <view = say_they> #####
+# nonexistent <nonexistent>
+# negation <not love> of <love>
+# negation <not love_496> of <love_496>
+# INFO: check_def: checking(string[8]) <love_496>
+# definition count: 1273 items, 1272 concepts with 0 bad genus, 1252 undefined
+# definition count: 1273 items, 1272 concepts, 149 alternatives, 19 members
+# definition count: 1273 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1273 items, 1 units, 0 alternatives, 0 members
+# definition count: 1273 items, 2 negated items
+# alias count:      1274 items, 6 items have 7 aliases
+# xmlns count:      1274 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <say_they> =====
+# nonexistent count:     1274 items, 0 contradictions
+# newproposition count:  0
+# chit count:            5
+# event count:           12
+# attribute count:       5 attribute primitives, 133 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          7 action primitives, 152 used, 0 unused
+# action count:          7 action primitives, 0 methods, 0 commands
+# relation count:        1274 items, 4 relations, 6 infons
+# value count:           44 char. total, 44 char. have 0 values
+# group count:           1274 items, 43 groups
+# file count:            1274 items, 8 files
+# enumeration count:     1274 items, 21 enumerations
+# requisite count:       1274 items, 0 requisites
+# list count:            1274 items, 0 lists
+# set count:             1274 items, 7 Sets
+# sequence count:        1274 items, 0 sequences
+# hierarchy count:       1274 items, 4 hierarchies
+# lattice count:         1274 items, 0 lattices
+# person count:          1274 items, 3 persons
+# family count:          1274 items, 0 families
+# ========== END KNIT view <say_they> ==========
+# ============================================================
+# clock <2003/10/24 10:40:21> # finished checking knit: view = say_they
+
+# INFO: new_knit: resuming newview(string[11]) <tabula rasa>
+# ============================================================
+# ========== CHECKING KNIT view <tabula rasa> ==========
+
+##### count knit <view = tabula rasa> #####
+# nonexistent       count:     0
+# unknown           count:     6
+# newproposition    count:     0
+# concept           count:   384
+# primitive         count:    32
+# unit              count:   632
+# alternative       count:     0
+# member            count:     0
+# group type        count:     5
+# group             count:    42
+# file              count:     8
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = tabula rasa> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         6 initial
+# can't classify <nose isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <ear isu unknown>
+# classify count:        0
+# unknown count:         6 final
+
+##### check genus <view = tabula rasa> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus count: 1144 items, 126 no genus (116 alternatives, 2 members)
+# genus count: 1144 items, 2 errors (0 alternatives, 0 members)
+
+##### check unit-species contradiction <view = tabula rasa> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    636 units, 2 units with species contradiction
+# species count: 384 species, 2 species with unit contradiction
+
+##### check link <view = tabula rasa> #####
+# link count:  1145 items, 0 items with broken genus or species links
+# link count:  1145 items, 0 items with broken primitive or unit links
+# link count:  1145 items, 0 items with broken exgroup or alternative links
+# link count:  1145 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = tabula rasa> #####
+# loop count:  1145 items, 0 items with species-genus loops
+# loop count:  1145 items, 0 items with species-genus multiple paths
+# loop count:  1145 items, 0 items with unit-primitive loops
+# loop count:  1145 items, 0 items with unit-primitive multiple paths
+# loop count:  1145 items, 0 items with alternative-exgroup loops
+# loop count:  1145 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1145 items, 0 items with member-ingroup loops
+# loop count:  1145 items, 0 items with member-ingroup multiple paths
+# loop count:  1145 items, 0 items with genlmt-specmt loops
+# loop count:  1145 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1145 items, 0 items with symbol-referent loops
+# loop count:  1145 items, 0 items with symbol-referent multiple paths
+# loop count:  1145 items, 0 items with cause-effect loops
+# loop count:  1145 items, 0 items with cause-effect multiple paths
+# loop count:  1145 items, 0 items with before-after loops
+# loop count:  1145 items, 0 items with before-after multiple paths
+# loop count:  1145 items, 0 items with below-above loops
+# loop count:  1145 items, 0 items with below-above multiple paths
+# loop count:  1145 items, 0 items with beside loops
+# loop count:  1145 items, 0 items with beside multiple paths
+# loop count:  1145 items, 0 items with inside loops
+# loop count:  1145 items, 0 items with inside multiple paths
+# loop count:  1145 items, 0 items with outside loops
+# loop count:  1145 items, 0 items with outside multiple paths
+# loop count:  1145 items, 0 items with like loops
+# loop count:  1145 items, 0 items with like multiple paths
+# loop count:  1145 items, 0 items with happento loops
+# loop count:  1145 items, 0 items with happento multiple paths
+
+##### check definition <view = tabula rasa> #####
+# nonexistent <nonexistent>
+# definition count: 1145 items, 1144 concepts with 0 bad genus, 1128 undefined
+# definition count: 1145 items, 1144 concepts, 149 alternatives, 5 members
+# definition count: 1145 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1145 items, 1 units, 0 alternatives, 0 members
+# definition count: 1145 items, 0 negated items
+# alias count:      1145 items, 4 items have 4 aliases
+# xmlns count:      1145 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <tabula rasa> =====
+# nonexistent count:     1145 items, 0 contradictions
+# newproposition count:  0
+# chit count:            1
+# event count:           1
+# attribute count:       5 attribute primitives, 120 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          1 action primitives, 146 used, 0 unused
+# action count:          1 action primitives, 0 methods, 0 commands
+# relation count:        1145 items, 0 relations, 0 infons
+# value count:           23 char. total, 23 char. have 0 values
+# group count:           1145 items, 42 groups
+# file count:            1145 items, 8 files
+# enumeration count:     1145 items, 21 enumerations
+# requisite count:       1145 items, 0 requisites
+# list count:            1145 items, 0 lists
+# set count:             1145 items, 7 Sets
+# sequence count:        1145 items, 0 sequences
+# hierarchy count:       1145 items, 4 hierarchies
+# lattice count:         1145 items, 0 lattices
+# person count:          1145 items, 0 persons
+# family count:          1145 items, 0 families
+# ========== END KNIT view <tabula rasa> ==========
+# ============================================================
+# clock <2003/10/24 10:40:46> # finished checking knit: view = tabula rasa
+
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+# ============================================================
+# ========== CHECKING KNIT view <v_news_story> ==========
+
+##### count knit <view = v_news_story> #####
+# nonexistent       count:     0
+# unknown           count:    36
+# newproposition    count:     0
+# concept           count:   402
+# primitive         count:    44
+# unit              count:   741
+# alternative       count:     0
+# member            count:     0
+# group type        count:     6
+# group             count:    44
+# file              count:     9
+# hierarchy         count:     4
+# unithierarchy     count:     2
+# lattice           count:     0
+# enumeration       count:    21
+# requisite         count:     0
+# list              count:     0
+# sequence          count:     0
+# Set               count:     7
+# multiset          count:     0
+# union             count:     0
+# intersection      count:     0
+# owl:Restriction   count:     0
+# mkr:Enumeration   count:     0
+# mkr:Union         count:     0
+# mkr:Intersection  count:     0
+
+##### check unknown <view = v_news_story> #####
+# INFO: check_unknown: try to classify each unknown
+# unknown count:         36 initial
+# can't classify <fi; isu unknown>
+# can't classify <nose isu unknown>
+# can't classify <the maximum penalty isu unknown>
+# can't classify <death by hanging isu unknown>
+# can't classify <substances isu unknown>
+# classify <kb/final.mkr isu file>
+# can't classify <investigate isu unknown>
+# can't classify <finger isu unknown>
+# can't classify <past seven years isu unknown>
+# can't classify <kobject isu unknown>
+# can't classify <love isu unknown>
+# can't classify <drugs isu unknown>
+# can't classify <respiratory failure isu unknown>
+# can't classify <male isu unknown>
+# can't classify <news_story isu unknown>
+# can't classify <cover up stealing isu unknown>
+# can't classify <kill isu unknown>
+# can't classify <tongue isu unknown>
+# can't classify <during her shift isu unknown>
+# can't classify <confess isu unknown>
+# can't classify <guilty isu unknown>
+# can't classify <female isu unknown>
+# can't classify <forge isu unknown>
+# can't classify <Reuters isu unknown>
+# can't classify <eye isu unknown>
+# can't classify <medicine isu unknown>
+# can't classify <blame isu unknown>
+# can't classify <hospital documents isu unknown>
+# can't classify <steal isu unknown>
+# can't classify <ear isu unknown>
+# can't classify <Alexandria University Hospital/intensive care unit isu unknown>
+# can't classify <cover up their mistakes isu unknown>
+# can't classify <work isu unknown>
+# can't classify <inject isu unknown>
+# can't classify <avenge her unrequited love for doctor1 isu unknown>
+# can't classify <try kill isu unknown>
+# classify count:        1
+# unknown count:         35 final
+
+##### check genus <view = v_news_story> #####
+# genus error: (1) bad iss (set[1]) <attribute>
+#              (1) bad isu (set[1]) <quantifier>
+# genus error: (1) good iss (set[1]) <attribute>
+#              (1) good isu (set[1]) <quantifier>
+# genus error: (2) say_nurse1 iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_prosecutors iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_security sources iss (set[2]) <[tabula rasa,v_news_story]>
+# genus error: (2) say_they iss (set[2]) <[tabula rasa,v_news_story]>
+# genus count: 1291 items, 127 no genus (116 alternatives, 3 members)
+# genus count: 1291 items, 6 errors (0 alternatives, 4 members)
+
+##### check unit-species contradiction <view = v_news_story> #####
+# unit-species contradiction: bad isu (set[1]) <quantifier>
+#                             bad iss (set[1]) <attribute>
+# unit-species contradiction: good isu (set[1]) <quantifier>
+#                             good iss (set[1]) <attribute>
+# unit count:    751 units, 2 units with species contradiction
+# species count: 415 species, 2 species with unit contradiction
+
+##### check link <view = v_news_story> #####
+# link count:  1292 items, 0 items with broken genus or species links
+# link count:  1292 items, 0 items with broken primitive or unit links
+# link count:  1292 items, 0 items with broken exgroup or alternative links
+# link count:  1292 items, 0 items with broken ingroup or member links
+# WARNING: check__link: not implemented: verb(string[5]) <means>
+# WARNING: check__link: not implemented: verb(string[7]) <because>
+# WARNING: check__link: not implemented: verb(string[6]) <before>
+# WARNING: check__link: not implemented: verb(string[5]) <below>
+# WARNING: check__link: not implemented: verb(string[6]) <beside>
+# WARNING: check__link: not implemented: verb(string[6]) <inside>
+# WARNING: check__link: not implemented: verb(string[7]) <outside>
+# WARNING: check__link: not implemented: verb(string[4]) <like>
+# WARNING: check__link: not implemented: verb(string[8]) <happento>
+
+##### check loop <view = v_news_story> #####
+# loop count:  1292 items, 0 items with species-genus loops
+# loop count:  1292 items, 0 items with species-genus multiple paths
+# loop count:  1292 items, 0 items with unit-primitive loops
+# loop count:  1292 items, 0 items with unit-primitive multiple paths
+# loop count:  1292 items, 0 items with alternative-exgroup loops
+# loop count:  1292 items, 0 items with alternative-exgroup multiple paths
+# loop count:  1292 items, 0 items with member-ingroup loops
+# loop count:  1292 items, 0 items with member-ingroup multiple paths
+# loop count:  1292 items, 0 items with genlmt-specmt loops
+# loop count:  1292 items, 0 items with genlmt-specmt multiple paths
+# loop count:  1292 items, 0 items with symbol-referent loops
+# loop count:  1292 items, 0 items with symbol-referent multiple paths
+# loop count:  1292 items, 0 items with cause-effect loops
+# loop count:  1292 items, 0 items with cause-effect multiple paths
+# loop count:  1292 items, 0 items with before-after loops
+# loop count:  1292 items, 0 items with before-after multiple paths
+# loop count:  1292 items, 0 items with below-above loops
+# loop count:  1292 items, 0 items with below-above multiple paths
+# loop count:  1292 items, 0 items with beside loops
+# loop count:  1292 items, 0 items with beside multiple paths
+# loop count:  1292 items, 0 items with inside loops
+# loop count:  1292 items, 0 items with inside multiple paths
+# loop count:  1292 items, 0 items with outside loops
+# loop count:  1292 items, 0 items with outside multiple paths
+# loop count:  1292 items, 0 items with like loops
+# loop count:  1292 items, 0 items with like multiple paths
+# loop count:  1292 items, 0 items with happento loops
+# loop count:  1292 items, 0 items with happento multiple paths
+
+##### check definition <view = v_news_story> #####
+# nonexistent <nonexistent>
+# definition count: 1292 items, 1291 concepts with 0 bad genus, 1273 undefined
+# definition count: 1292 items, 1291 concepts, 149 alternatives, 22 members
+# definition count: 1292 items, 1 units with 0 bad genus, 1 undefined
+# definition count: 1292 items, 1 units, 0 alternatives, 0 members
+# definition count: 1292 items, 0 negated items
+# alias count:      1292 items, 7 items have 8 aliases
+# xmlns count:      1292 items, 0 items with multiple xmlns qualifiers
+
+# ===== more counts view <v_news_story> =====
+# nonexistent count:     1292 items, 0 contradictions
+# newproposition count:  0
+# chit count:            7
+# event count:           13
+# attribute count:       5 attribute primitives, 132 used, 2 unused
+# part count:            1 part species, 1 used, 0 unused
+# action count:          5 action primitives, 150 used, 0 unused
+# action count:          5 action primitives, 0 methods, 0 commands
+# relation count:        1292 items, 2 relations, 6 infons
+# value count:           46 char. total, 46 char. have 0 values
+# group count:           1292 items, 44 groups
+# file count:            1292 items, 9 files
+# enumeration count:     1292 items, 21 enumerations
+# requisite count:       1292 items, 0 requisites
+# list count:            1292 items, 0 lists
+# set count:             1292 items, 7 Sets
+# sequence count:        1292 items, 0 sequences
+# hierarchy count:       1292 items, 4 hierarchies
+# lattice count:         1292 items, 0 lattices
+# person count:          1292 items, 3 persons
+# family count:          1292 items, 0 families
+# ========== END KNIT view <v_news_story> ==========
+# ============================================================
+# clock <2003/10/24 10:41:15> # finished checking knit: view = v_news_story
+# command <do kbwrite done;>
+############################################################
+################### PROCESSING KNOWLEDGE ###################
+# knitlog
+#   knit_say_nurse1
+#   knit_say_prosecutors
+#   knit_say_security sources
+#   knit_say_they
+#   knit_tabula rasa
+#   knit_v_news_story
+# chitlog
+#   chit_Alexandria University Hospital/intensive care unit_past seven years_say_prosecutors
+#   chit_Alexandria University Hospital/intensive care unit_past seven years_v_news_story
+#   chit_Cairo_"time of her arrest earlier this year"_say_nurse1
+#   chit_Cairo_"time of her arrest earlier this year"_v_news_story
+#   chit_Cairo_1997/12/18_say_prosecutors
+#   chit_Cairo_1997/12/18_say_they
+#   chit_Cairo_1997/12/18_v_news_story
+#   chit_Cairo_during her shift_v_news_story
+#   chit_Cairo_past_v_news_story
+#   chit_Cairo_t_interrogation_say_prosecutors
+#   chit_Cairo_t_interrogation_v_news_story
+#   chit_here_now_tabula rasa
+
+# INFO: new_knit: resuming newview(string[10]) <say_nurse1>
+############################################################
+########## WRITING KNIT  view = say_nurse1 ##########
+# INFO: write_hierarchy: hfocus(BSE) <BSE(,,[,[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)],])>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+/  his patients
+//    further29
+//    patient1
+/  local newspapers
+/  prosecutors
+/  security sources
+/  the doctors
+//    doctor1
+/  nurse1
+chit
+/  chit_Alexandria University Hospital/intensive care unit_past seven years_v_news_story
+/  chit_Cairo_"time of her arrest earlier this year"_say_nurse1
+/  chit_Cairo_"time of her arrest earlier this year"_v_news_story
+/  chit_Cairo_1997/12/18_v_news_story
+/  chit_Cairo_during her shift_v_news_story
+/  chit_Cairo_past_v_news_story
+/  chit_Cairo_t_interrogation_v_news_story
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+/  fact_413 # "prosecutors do charge od nurse1 done;"
+/  fact_422 # "prosecutors do say od { nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;} done;"
+/  fact_433 # "prosecutors do say od { nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;} done;"
+/  fact_437 # "prosecutors do interrogate od nurse1 done;"
+/  fact_444 # "prosecutors do say od {Abu Zeid do confess done;} done;"
+/  fact_456 # "security sources do say od {if she has guilty ; then the maximum penalty is death by hanging ; fi;} done;"
+/  fact_464 # "prosecutors do say od {at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;} done;"
+/  fact_477 # "they do say od {at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;} done;"
+/  fact_486 # "they do say od { they do investigate done; at time = during her shift {her victims has respiratory failure ;} ;} done;"
+/  fact_499 # "they do say od { she do love od he done; he do not love od she done;} done;"
+/  fact_505 # "they do arrest od she done;"
+/  fact_510 # "the doctors do blame od she with purpose = cover up their mistakes done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  $1
+/  $2
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = say_nurse1 ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = say_nurse1 ##########
+at space = Cairo, time = "time of her arrest earlier this year", view = v_news_story {
+[] := they do arrest = arrest_504 od [] done
+}
+at space = Cairo, time = "time of her arrest earlier this year", view = say_nurse1 {
+[] := the doctors do blame = blame_509 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do charge = charge_412 od [] done
+}
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do interrogate = interrogate_436 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_414 od kobject_415 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_425 od kobject_426 done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do say = say_438 od kobject_439 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := security sources do say = say_450 od kobject_451 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_457 od kobject_458 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_469 od kobject_470 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_478 od kobject_479 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_491 od kobject_492 done
+}
+at space = Cairo, time = "time of her arrest earlier this year", view = v_news_story {
+[] := [] do say = say_506 od [] done
+}
+#========== END CHIT  view = say_nurse1 ==========
+#============================================================
+# clock <2003/10/24 10:41:16> # finished writing knit: view = say_nurse1
+
+# INFO: new_knit: resuming newview(string[15]) <say_prosecutors>
+############################################################
+########## WRITING KNIT  view = say_prosecutors ##########
+# INFO: write_hierarchy: hfocus(BSE) <BSE(,,[,[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)],])>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+/  his patients
+//    further29
+//    patient1
+/  prosecutors
+/  the doctors
+//    doctor1
+/  nurse1
+chit
+/  chit_Alexandria University Hospital/intensive care unit_past seven years_say_prosecutors
+/  chit_Cairo_1997/12/18_say_prosecutors
+/  chit_Cairo_1997/12/18_v_news_story
+/  chit_Cairo_t_interrogation_say_prosecutors
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+/  fact_413 # "prosecutors do charge od nurse1 done;"
+/  fact_418 # "nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done;"
+/  fact_420 # "nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;"
+/  fact_429 # "nurse1 do steal od medicine,drugs done;"
+/  fact_431 # "nurse1 do forge od hospital documents with purpose = cover up stealing done;"
+/  fact_442 # "Abu Zeid do confess done;"
+/  fact_462 # "nurse1 do work done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = say_prosecutors ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = say_prosecutors ##########
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do charge = charge_412 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = say_prosecutors {
+[] := Abu Zeid do confess = confess_441 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = say_prosecutors {
+[] := nurse1 do forge = forge_430 od [] done
+}
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = say_prosecutors {
+[] := nurse1 do kill = kill_417 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := [] do say = say_414 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = say_prosecutors {
+[] := nurse1 do steal = steal_428 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = say_prosecutors {
+[] := nurse1 do try kill = try kill_419 od [] done
+}
+at space = Alexandria University Hospital/intensive care unit, time = past seven years, view = say_prosecutors {
+[] := nurse1 do work = work_461 od [] done
+}
+#========== END CHIT  view = say_prosecutors ==========
+#============================================================
+# clock <2003/10/24 10:41:16> # finished writing knit: view = say_prosecutors
+
+# INFO: new_knit: resuming newview(string[20]) <say_security sources>
+############################################################
+########## WRITING KNIT  view = say_security sources ##########
+# INFO: write_hierarchy: hfocus(BSE) <BSE(,,[,[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)],])>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+/  his patients
+//    further29
+//    patient1
+/  prosecutors
+/  security sources
+/  the doctors
+//    doctor1
+/  nurse1
+chit
+/  chit_Cairo_1997/12/18_v_news_story
+/  chit_Cairo_t_interrogation_v_news_story
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+/  fact_413 # "prosecutors do charge od nurse1 done;"
+/  fact_422 # "prosecutors do say od { nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;} done;"
+/  fact_433 # "prosecutors do say od { nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;} done;"
+/  fact_437 # "prosecutors do interrogate od nurse1 done;"
+/  fact_444 # "prosecutors do say od {Abu Zeid do confess done;} done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  $1
+/  $2
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = say_security sources ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = say_security sources ##########
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do charge = charge_412 od [] done
+}
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do interrogate = interrogate_436 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_414 od kobject_415 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_425 od kobject_426 done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do say = say_438 od kobject_439 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := [] do say = say_450 od [] done
+}
+#========== END CHIT  view = say_security sources ==========
+#============================================================
+# clock <2003/10/24 10:41:16> # finished writing knit: view = say_security sources
+
+# INFO: new_knit: resuming newview(string[8]) <say_they>
+############################################################
+########## WRITING KNIT  view = say_they ##########
+# INFO: write_hierarchy: hfocus(BSE) <BSE(,,[,[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)],])>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+/  his patients
+//    further29
+//    patient1
+/  prosecutors
+/  security sources
+/  the doctors
+//    doctor1
+/  nurse1
+chit
+/  chit_Alexandria University Hospital/intensive care unit_past seven years_v_news_story
+/  chit_Cairo_1997/12/18_say_they
+/  chit_Cairo_1997/12/18_v_news_story
+/  chit_Cairo_t_interrogation_v_news_story
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+/  fact_413 # "prosecutors do charge od nurse1 done;"
+/  fact_422 # "prosecutors do say od { nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;} done;"
+/  fact_433 # "prosecutors do say od { nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;} done;"
+/  fact_437 # "prosecutors do interrogate od nurse1 done;"
+/  fact_444 # "prosecutors do say od {Abu Zeid do confess done;} done;"
+/  fact_456 # "security sources do say od {if she has guilty ; then the maximum penalty is death by hanging ; fi;} done;"
+/  fact_464 # "prosecutors do say od {at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;} done;"
+/  fact_482 # "they do investigate done;"
+/  fact_495 # "she do love od he done;"
+/  fact_497 # "he do not love od she done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  $1
+/  $2
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = say_they ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = say_they ##########
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do charge = charge_412 od [] done
+}
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do interrogate = interrogate_436 od [] done
+}
+at space = Cairo, time = past, view = say_they {
+[] := they do investigate = investigate_481 od [] done
+}
+at space = Cairo, time = during her shift, view = say_they {
+[] := she do love = love_494 od [] done
+}
+at space = Cairo, time = during her shift, view = say_they {
+[] := he do not love = not love_496 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_414 od kobject_415 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_425 od kobject_426 done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do say = say_438 od kobject_439 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := security sources do say = say_450 od kobject_451 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_457 od kobject_458 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := [] do say = say_469 od [] done
+}
+#========== END CHIT  view = say_they ==========
+#============================================================
+# clock <2003/10/24 10:41:16> # finished writing knit: view = say_they
+
+# INFO: new_knit: resuming newview(string[11]) <tabula rasa>
+############################################################
+########## WRITING KNIT  view = tabula rasa ##########
+# INFO: write_hierarchy: hfocus(BSE) <BSE(,,[,[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)],])>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+chit
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = tabula rasa ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = tabula rasa ##########
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+#========== END CHIT  view = tabula rasa ==========
+#============================================================
+# clock <2003/10/24 10:41:16> # finished writing knit: view = tabula rasa
+
+# INFO: new_knit: resuming newview(string[12]) <v_news_story>
+############################################################
+########## WRITING KNIT  view = v_news_story ##########
+# INFO: write_hierarchy: hfocus(set[6]) <[PHRASE(newword),PHRASE(newstatement),PHRASE(person),PHRASE(chit),PHRASE(s_action),PHRASE(variable)]>
+
+begin hierarchy focushi;
+newword
+newstatement
+man
+/  his patients
+//    further29
+//    patient1
+/  local newspapers
+/  prosecutors
+/  security sources
+/  the doctors
+//    doctor1
+/  nurse1
+chit
+/  chit_Alexandria University Hospital/intensive care unit_past seven years_v_news_story
+/  chit_Cairo_"time of her arrest earlier this year"_v_news_story
+/  chit_Cairo_1997/12/18_v_news_story
+/  chit_Cairo_during her shift_v_news_story
+/  chit_Cairo_past_v_news_story
+/  chit_Cairo_t_interrogation_v_news_story
+/  chit_here_now_tabula rasa
+s_action
+/  fact_018 # "man do identify od entity with purpose done;"
+/  fact_413 # "prosecutors do charge od nurse1 done;"
+/  fact_422 # "prosecutors do say od { nurse1 do kill od patient1 with purpose = avenge her unrequited love for doctor1 done; nurse1 do try kill od further29 with purpose = avenge her unrequited love for doctor1 done;} done;"
+/  fact_433 # "prosecutors do say od { nurse1 do steal od medicine,drugs done; nurse1 do forge od hospital documents with purpose = cover up stealing done;} done;"
+/  fact_437 # "prosecutors do interrogate od nurse1 done;"
+/  fact_444 # "prosecutors do say od {Abu Zeid do confess done;} done;"
+/  fact_456 # "security sources do say od {if she has guilty ; then the maximum penalty is death by hanging ; fi;} done;"
+/  fact_464 # "prosecutors do say od {at space = Alexandria University Hospital/intensive care unit,time = past seven years {nurse1 do work done;} ;} done;"
+/  fact_477 # "they do say od {at time = past {{she do inject od substances to her victims done;} causes {her victims has respiratory failure ;} ;} ;} done;"
+/  fact_486 # "they do say od { they do investigate done; at time = during her shift {her victims has respiratory failure ;} ;} done;"
+/  fact_499 # "they do say od { she do love od he done; he do not love od she done;} done;"
+/  fact_505 # "they do arrest od she done;"
+/  fact_512 # "Abu Zeid do say to local newspapers od {the doctors do blame od she with purpose = cover up their mistakes done;} done;"
+variable
+/  .
+/  ..
+/  ...
+/  Assignment
+/  BaseQualifier
+/  BaseUri
+/  CheckComment
+/  Command
+/  CommentCharacter
+/  CommentMode
+/  DefaultQualifier
+/  DefaultUri
+/  DisplayName
+/  Every
+/  If
+/  Product
+/  Question
+/  Sentence
+/  TypeComment
+/  UniqueName
+/  charformat
+/  cname
+/  dbmode
+/  debug
+/  echo
+/  fd
+/  fmode
+/  fname
+/  hchar
+/  hcheck
+/  hfocus
+/  hformat
+/  hmaxcount
+/  hmaxlevel
+/  hmethod
+/  hminfactid
+/  hop
+/  hoseparator
+/  hpad
+/  hquote
+/  hreduce
+/  hrelation
+/  htab
+/  iversion
+/  kbdata
+/  kbfile
+/  kbmode
+/  kcase
+/  kedb
+/  kehome
+/  kerror
+/  keview
+/  kformat
+/  klastid
+/  kmapword
+/  kname
+/  kquote
+/  kscdebug
+/  kversion
+/  menuwindow
+/  mseparator
+/  nvseparator
+/  pronoun
+//    I
+//    he
+//    it
+//    none
+//    people
+//    she
+//    someone
+//    something
+//    they
+//    we
+//    you
+/  pseparator
+/  qseparator
+/  relseparator
+/  removehtml
+/  roleseparator
+/  savehref
+/  submethod
+/  systype
+/  tapformat
+/  $1
+/  $2
+/  nameformat
+end hierarchy focushi;
+
+#========== END KNIT  view = v_news_story ==========
+#============================================================
+############################################################
+########## WRITING CHIT  view = v_news_story ##########
+at space = Cairo, time = "time of her arrest earlier this year", view = v_news_story {
+[] := they do arrest = arrest_504 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do charge = charge_412 od [] done
+}
+at space = here, time = now, view = tabula rasa {
+[] := man do identify = identify_017 od [] done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do interrogate = interrogate_436 od [] done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_414 od kobject_415 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_425 od kobject_426 done
+}
+at space = Cairo, time = t_interrogation, view = v_news_story {
+[] := prosecutors do say = say_438 od kobject_439 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := security sources do say = say_450 od kobject_451 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := prosecutors do say = say_457 od kobject_458 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_469 od kobject_470 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_478 od kobject_479 done
+}
+at space = Cairo, time = 1997/12/18, view = v_news_story {
+[] := they do say = say_491 od kobject_492 done
+}
+at space = Cairo, time = "time of her arrest earlier this year", view = v_news_story {
+[] := Abu Zeid do say = say_506 od kobject_507 done
+}
+#========== END CHIT  view = v_news_story ==========
+#============================================================
+# clock <2003/10/24 10:41:17> # finished writing knit: view = v_news_story
+# clock <2003/10/24 10:41:17> # finished user termination script
+# clock <2003/10/24 10:41:17> # exiting ke
+#####  exit  #####
+# INFO: db_close: dbdir(string[20]) </home/ke/db/netscape>
+
+##### MKE statistics #####
+# lines:                  1037
+# propositions:            184
+#   newpropositions:           0
+#   productions:               1
+#   contexts:                 25
+#   nullpropositions:          1
+#   ku sentences:            158
+#     ku statements:           102
+#     questions:                12
+#     commands:                 10
+#     assignments:              27
+#     conditionals:              1
+#     everys:                    0
+#     whiles:                    0
+#     whens:                     0
+#     foralls:                   0
+#     forsomes:                  0
+#     groups:                    6
+# ho   statements:         305
+# rel  statements:           0
+# dir  statements:           0
+# html statements:          20
+# mcf  statements:           0
+# nt   statements:           0
+# owl  statements:           0
+# rdf  statements:           0
+# xml  statements:           0

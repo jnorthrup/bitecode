@@ -1,0 +1,158 @@
+# KEHOME/knowledge/ApplicationInternet/ikeyword.txt
+# Oct/7/2002
+
+#========================#
+# keyword classification #
+#========================#
+# The typical internet directory is an
+# ad-hoc lattice implicitly based on
+# keyword characteristics.
+#
+# By examining some typical directories
+# (Yahoo, Excite, InfoSeek, Google)
+# I have explicitly identified the 
+# keyword attributes and actions
+# shown below.
+#
+# NOTE:
+# The Knowledge Explorer isd command
+# can automatically generate a
+# classification lattice from a list
+# of web pages with keywords.
+
+
+keyobject isall
+    knowledge,	# identify
+    family,	# nurture
+    club,	# play
+    company,	# work,product,service,contract
+    government,	# protect
+    product,	# buy,sell
+    money,	# buy,sell
+    contract	# buy,sell
+
+keyaction isall
+    event,	# instance of action
+    search,	# specific
+    browse,	# knowledge
+    chat,	# play
+    buy,	# trade
+    sell,	# trade
+    work,	# money
+    play,	# fun
+    nurture,	# family
+    service	# buy,sell
+
+keyattribute isall
+    age,	# of person
+    health,	# of person
+    target	# of iresource: person/intended user
+
+keycategory isall # high level from google.ho
+    arts,		# play/arts
+    business,		# work,money,company
+    computers,		# product=computer,knowledge
+    games,		# play/games
+    health,		# health
+    home,		# space=home,family
+    kids and teens,	# target=[person with age=kids and teens]
+    news,		# event,time=today
+    recreation,		# play/recreation
+    reference,		# knowledge/reference
+    regional,		# space=regional
+    science,		# knowledge/science
+    shopping,		# product,buy,browse
+    society,		# play,person
+    sports,		# play/sports
+    world		# language
+
+keycategory isall # low level
+    Apple,		# company
+    Linux,		# operating system
+    Mac,		# operating system
+    McAfee,		# company
+    Microsoft,		# company
+    Norton,		# company
+    RedHat,		# company
+    UNIX,		# operating system
+    Windows,		# operating system
+    airfare,		# travel
+    airline,		# travel
+    anti-virus,		# software
+    auction,		# buy,sell,product
+    automotive,		# product
+    banking,		# money
+    basketball,		# sports
+    beer,		# product
+    boats,		# product
+    books,		# product
+    browser,		# software
+    career,		# company
+    cars,		# product
+    children,		# family,target=[person with age=children]
+    city guide,		# space=city,knowledge
+    city,		# space=city
+    company,		# company
+    crossword,		# play/games
+    culture,		# person
+    dining,		# play
+    directions,		# knowledge
+    directory,		# knowledge
+    disease,		# health
+    download,		# software
+    drugs,		# health,product
+    economy,		# money
+    education,		# knowledge
+    email,		# software
+    entertainment,	# play/arts
+    finance,		# money
+    firewall,		# software
+    fitness,		# health
+    food,		# health,product
+    football,		# sports
+    freeware,		# software
+    games,		# play/games
+    gifts,		# product
+    golf,		# sports
+    government,		# government
+    guide,		# knowledge
+    hardware,		# computers
+    horoscope,		# knowledge
+    hotel,		# travel
+    international,	# space
+    internet,		# computers
+    intranet,		# computers
+    investing,		# money
+    jobs,		# work,company
+    life style,		# person,play
+    local,		# space
+    maps,		# knowledge,space
+    media,		# knowledge,news
+    money,		# money
+    movies,		# arts
+    music,		# arts
+    mutual funds,	# money
+    operating system,	# software
+    parenting,		# family
+    person,		# person
+    personal finance,	# money
+    product,		# company
+    real estate,	# business
+    rental car,		# travel,product
+    reservation,	# travel
+    service,		# company,action
+    shareware,		# software
+    social science,	# knowledge/science
+    software,		# computers
+    state,		# space=state
+    stock quotes,	# money
+    taxes,		# money,government
+    technology,		# knowledge,product
+    television,		# arts
+    tennis,		# sports
+    travel,		# work,play
+    vacation,		# play
+    weather,		# knowledge,space
+    white pages,	# knowledge,person,company,government
+    wine,		# product
+    yellow pages	# knowledge,product,service

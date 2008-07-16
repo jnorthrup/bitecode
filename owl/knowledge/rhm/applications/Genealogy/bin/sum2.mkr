@@ -1,0 +1,30 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/sum2.mkr
+# 1999/7/21
+# new syntax Jun/26/2005
+
+# Summary by person
+
+set charformat = column;
+#set hrelation = NO;
+
+do clock od "read,parse,process infon" done;
+do read from family.ku done;
+
+let echo=off;
+do clock od "generate summary using questions" done;
+let echo=off;
+do print od "#------------------------------------------------#" done;
+every x isa person {
+	$x is ?;
+	$x has ?;
+	$x do ? done;
+	$x isin ?;
+	do print od "#------------------------------------------------#" done;
+};
+do clock od "done" done;
+let echo=on;
+
+exit;
+
+# </xmp></html>

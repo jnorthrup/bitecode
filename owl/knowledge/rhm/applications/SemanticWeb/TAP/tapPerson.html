@@ -1,0 +1,43 @@
+<html><pre>
+# KEHOME/knowledge/applications/SemanticWeb/TAP/tapPerson.html
+# Sep/14/2003
+</pre>
+
+<title> TAP: Person isa* ?; </title>
+<h1> TAP: Person isa* ?; </h1>
+
+<h3> Notes </h3>
+<ul>
+<li> "x isa* y" means "x iss* y" if x is a concept.
+<br> "x isa* y" means "x isu* y" if x is a unit.
+</li>
+<li> The TAP KB contains a contradiction;
+<br> it considers Person to be both a concept
+<br>	Person iss Agent;
+<br> and a unit
+<br>	Person isu Class;
+</li>
+</ul>
+
+<h2> Person iss* ?; </h2>
+
+<pre>
+ke$ Person iss* ?;
+Person
+\  Agent
+\\    Resource
+ke$
+</pre>
+
+<h2> Person isu* ?; </h2>
+<pre>
+ke$ Person isu* ?;
+Person
+\  Class
+\\    Resource
+ke$
+</pre>
+
+
+<a href="../../../../index.html">MKE home</a>
+</html>

@@ -1,0 +1,495 @@
+
+
+working paper
+Context in Knowledge Representation and Natural Language
+AAAI 1997 Fall Symposium, MIT, November 8-10
+
+
+What is Context?
+================
+Richard H. McCullough
+organization = "Richard H. McCullough, Knowledge Engineer"
+hometown = USA/California/Pioneer/95666-9586
+email = rhm@cdepot.net
+homepage = "http://www2.cdepot.net/~rhm"
+phone = 209-295-1365
+
+
+Outline
+=======
+Who am I?
+What is context?
+Principles of Knowledge
+Tabula Rasa
+
+KR Design Philosophy
+KR vs. English grammar
+KR vs. Formal Concept Analysis
+
+Examples
+  I is man1
+  Amati & Pirri Italy
+
+What is Knowledge Explorer?
+Where can you get more information?
+
+References
+
+Who am I?
+=========
+I am Richard H. McCullough.
+I am an engineer/philosopher.
+I studied theory of knowledge.
+I designed Knowledge Representation language.
+I implemented Knowledge Explorer tool.
+
+What is context?
+================
+Context is all knowledge currently available.
+
+v := man do identify existent
+at space=s,time=t,view=v statement
+
+context of statement is
+  s  where action occurs
+  t  when  action occurs
+  v  knowledge unit of man
+	that makes statement
+
+
+Principles of Knowledge
+=======================
+
+What is knowledge?
+
+How do I organize it?
+
+How do I describe it?
+
+
+
+What is Knowledge?
+==================
+
+Knowledge is personal
+	primarily a tool of thought
+	secondarily a tool of communication
+
+Knowledge consists of true concepts
+                  and true propositions
+	NOTES:
+	A concept, like a proposition, is true if it
+	has referents in reality; otherwise it is false.
+	Truth is a combination of experience and logic
+	with no contradictions.
+	(Logic is the art of non-contradictory identification.)
+	Possible worlds which contradict this world
+	are not possible unless they involve men
+	making choices.
+	See Leonard Peikoff "The Analytic-Synthetic Dichotomy"
+
+Words and sentences are the concrete symbols
+   which denote concepts and propositions
+
+
+How do I organize it?
+=====================
+
+How do I minimize the size?	(Rand)
+
+	unit economy (regard)	=> unit-hierarchy
+
+What's important to me?		(McCullough)
+
+	purpose (view)		=> concept-hierarchy
+
+
+How do I describe it?
+=====================
+
+Rand
+====
+	entity
+	characteristic
+		attribute
+		part
+		action
+		event
+		phenomenon
+		relationship
+
+	unit-hierarchy
+	A concept is a mental integration of two or more units
+	possessing the same distinguishing characteristic(s),
+	with their particular measurements omitted.
+
+	definition
+		genus-differentia
+		ostensive
+
+	context is all knowledge currently available
+
+McCullough
+==========
+	entity has attribute=value
+	entity haspart part=count
+	entity do action=event
+	event changes eobject
+		from attribute=intial to attribute=final
+	event1 causes event2
+	relationship has \
+		r_format = "class:1; class:2; ...; class:n",
+		r_meaning = " translation into primitive statements "
+
+	concept isa genus; concept ise unit
+
+	concept is alias
+	concept is genus with differentia
+	concept ise unit1, unit2, ...
+	# NOTE: this is a disjunction of units, not a set of units
+	# A concept is a percept or an integration of
+	# two or more concepts.
+
+	v := I do identify existent
+	at space=s, time=t, view=v
+
+
+axiomatic concepts
+==================
+at view = tabula_rasa
+
+existent
+	entity
+		animal
+			man is person
+				I
+		plant
+		object
+	characteristic
+		attribute
+		part
+		action
+			identify
+		event
+		phenomenon
+		relationship
+			"tabula_rasa := I do identify existent"
+			"concept isa genus; concept ise unit"
+			"concept is alias"
+			"concept is genus with differentia"
+			"entity has attribute=value"
+			"entity haspart part=count" 
+			"entity do action=event object"
+			"event changes object \
+				from attribute=initial \
+				to attribute=final"
+			"event1 causes event2"
+			"class:1; class:2; ...; class:n"
+
+
+#============================================#
+# Knowledge Representation Design Philosophy #
+#============================================#
+
+
+consistent theory of knowledge
+==============================
+    axiomatic concepts
+    personal concept-hierarchy
+    dynamic concept-formation
+    genus-differentia definitions
+    logic
+    permit lattice for error checking
+
+English-like with very simple grammar
+=====================================
+    statements, commands, questions
+    no ambiguity
+    no inflections
+    no word order inversion for questions
+    user-friendly
+    allow lists everywhere it makes sense
+
+Knowledge Explorer interaction
+==============================
+    extensive error checks
+    powerful search capability (questions)
+    flexible input/output
+    external relations
+    user-adjustable parameters
+    self knowledge
+
+
+#========================#
+# KR vs. English grammar #
+#========================#
+
+concept names
+=============
+	always use singular form
+	action - use infinitive form
+	event - use gerund form
+
+Basic KR statements
+===================
+(concept-formation operators not listed here)
+	at space=s,time=t,view=v
+
+	entity has attribute=value
+	entity haspart part=count
+	entity do action=event
+	event changes eobject \
+		from attribute=intial \
+		to attribute=final
+	event1 causes event2
+
+	concept is genus with differentia
+	alias is concept
+	concept isa genus
+	concept ise unit
+
+	if sentence1 then sentence2 else sentence3 fi
+
+	product := entity do method object
+
+mapping: English grammar -> KR
+==============================
+	declarative sentence -> statement
+	interrogative sentence -> question
+	imperative sentence -> command
+	exclamatory sentence -> explicit only with action (e.g. I do feel)
+
+	noun -> concept
+	pronoun -> alias
+	verb -> has
+	     -> do action
+	modifier/adjective -> attribute
+	modifier/adverb -> attribute
+	preposition -> at, from, to, with
+	conjunction -> if-then-else-fi, and-or-not, causes
+	complement/adjective -> attribute
+	complement/object -> eobject
+
+	verbal/gerund -> event
+	verbal/participle -> attribute
+	verbal/infinitive -> action
+
+	inflection -> NONE (by design)
+	subject person -> explicit only with alias (e.g. I,you,she)
+	subject number -> quantifier, size
+	verb voice (active/passive) -> operator/inverse  (e.g. ise/isa)
+	verb tense -> at time=t
+	verb mood -> explicit only with action (e.g. I do wish)
+
+
+#================================#
+# KR vs. Formal Concept Analysis #
+#================================#
+
+1. isomorphic context
+=====================
+For the simplest case, the contexts are isomorphic.
+FCA
+  A context, x, is a triple (object,attribute,relation)
+  where
+  object is a set {g, ...}
+  attribute is a set {m, ...}
+  relation is a map {g has m, ...}
+KR
+  # context x is a concept-hierarchy
+  at view=x
+  existent ise object,attribute,relation  #concept
+  object ise g, ...                       #concept
+  attribute ise m, ...                    #concept
+  relation ise "g has m", ...             #concept
+
+2. new concepts
+===============
+FCA
+  Match attributes
+  to determine lattice of all possible concepts.
+KR
+  Match attributes (integrate/differentiate)
+  to determine new hierarchy.
+  This new hierarchy is a new context.
+
+3. algebraic variables
+======================
+FCA
+  ?
+KR
+  Concepts may be viewed as simple algebraic variables
+  in the usual sense.  For example, given
+    Dutchess, Reno isa dog
+    Dutchess has color=black; Dutchess do bark
+    Reno has color=white; Reno do bark
+  then the statements
+    dog has color
+    dog do bark
+  are both meaningful.  The meaning is obtained
+  by substituting
+    dog -> Dutchess
+  or
+    dog -> Reno
+
+Example: "I is man1"
+====================
+
+at space=here, time=now, view=context_I
+existent
+    entity
+        animal
+            man is person
+                man1
+        plant
+        object
+    characteristic
+        attribute
+            space
+            time
+            view
+        action
+            identify
+        relationship
+            context_I := man1 do identify existent
+
+Integrating "I is man1" gives the updated knowledge unit.
+
+existent
+    entity
+        animal
+            man is person
+                I is man1
+        plant
+        object
+    characteristic
+        attribute
+            space
+            time
+            view
+        action
+            identify
+        relationship
+            context_I := man1 do identify existent
+            "I is man1"
+# 5:00 pm 10/31/97
+
+# Gianni Amati and Fiora Pirri example
+# AAAI 1997 context symposium
+# interaction with Knowledge Explorer 1.5
+
+# Italians go to church on Sunday,
+#	love soccer and
+#	eat pasta for dinner.
+# Neapolitans eat pizza for dinner.
+# No one eats pasta and pizza for dinner.
+# Neapolitans are Italians.
+
+# NOTES:
+# 1. The statements listed above are contradictory,
+#    and therefore are NOT knowledge.
+# 2. The contexts listed below are very primitive.
+#    Full integration of knowledge requires
+#    many more concepts and definitions.
+
+# general context
+#================
+at view = tabula_rasa
+existent ise* ?
+# see the file KEHOME/context/tabrasa.txt
+
+hfocus = "newstatement, newword, person, event"
+at view = v_general from view = tabula_rasa
+person has livingplace
+person do go,love,eat
+Italy,Italy/Naples,church isa space
+Sunday,dinner isa time
+soccer isa event
+pasta,pizza isa object
+
+# Italy context
+#==============
+at view = v_Italy from view = v_general
+Italian is person with livingplace=Italy
+at time=Sunday Italian do go to space=church
+Italian do love soccer
+at time=dinner Italian do eat pasta
+
+# Naples context
+#===============
+at view = v_Naples from view = v_Italy 
+Neapolitan is Italian with livingplace=Italy/Naples
+at time=dinner Neapolitan do eat pizza
+
+# false context
+#==============
+at view = v_nonexistent from view = v_general
+at time=dinner no person do eat pasta,pizza
+#at time=dinner person do not eat pasta,pizza
+
+What is Knowledge Explorer?
+===========================
+
+Knowledge Explorer is an interactive tool for organizing knowledge.
+It helps the user to record, change and search knowledge,
+and provides extensive error checking to ensure
+the internal consistency of the knowledge.
+Interaction with Knowledge Explorer uses simple
+English-like statements, commands and questions.
+
+
+Knowledge is an identification of a fact of reality,
+using words and sentences.
+The internal knowledge structure consists of concept-hierarchies
+and space-time-dependent events.
+The principal external knowledge structures are relational databases
+and transliterated English.
+
+Where can you get more information?
+===================================
+Knowledge Explorer Home Page
+http://www2.cdepot.net/~rhm
+
+simple examples
+my published papers (text format)
+references to important books (epistemology & Icon)
+links to web pages (Objectivism & Icon & concept search)
+Knowledge Explorer User Manual (rich text format or Windows help file)
+download of Knowledge Explorer 1.5 (Windows or UNIX)
+
+
+References
+==========
+1. David Kelley, "The Art of Reasoning", Second Expanded
+Edition, W. W. Norton & Company, 1993.
+
+2. David Kelley, "The Evidence of the Senses:
+A Realist Theory of Perception", Lousiana State Press,
+1988.
+
+3. Ayn Rand, "Introduction to Objectivist Epistemology",
+Expanded Second Edition, Meridian, 1990.
+
+4. Leonard Peikoff, "Objectivism: The Philosophy of Ayn
+Rand", Dutton, 1991.
+
+5. Harry Binswanger, "The Ayn Rand Lexicon", Meridian,
+1986.
+
+6. Ralph E. Griswold and Madge T. Griswold, "The Icon
+Programming Language", Third Edition, Peer-to-Peer
+Communications, Inc., 1996.
+
+7. Ralph E. Griswold, Clinton L. Jeffery, and Gregg M. Townsend,
+"Graphics Programming in Icon", Peer-to-Peer Communications, Inc.,
+to be published 1997.
+
+8. Richard H. McCullough, "Knowledge Explorer",
+The Icon Newsletter, No. 52, April 1, 1997.
+
+9. Richard H. McCullough, "Knowledge Explorer User Manual",
+Internet, http://www2.cdepot.net/~rhm/ke.rtf, October 1997.
+Internet, http://www2.cdepot.net/~rhm/ke.hlp, October 1997.
+
+10. Richard H. McCullough, "Knowledge Explorer Home Page",
+Internet, http://www2.cdepot.net/~rhm, November 1997.

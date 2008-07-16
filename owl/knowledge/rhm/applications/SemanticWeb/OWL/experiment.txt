@@ -1,0 +1,17 @@
+are xmlns qualifiers necessary?
+
+I have been thinking about ways to avoid using xmlns qualifiers,
+in order to improve readability of RDF/OWL files.
+
+I expect that many practical cases will have unique names
+without using qualifiers.  To test this idea, I have added
+two experimental features to MKE (http://rhm.cdepot.net/).
+1. make q:name the same as name, for all q
+2. check command option to detect multiple q for a name
+
+Here is an illustration of these features.
+input
+
+output
+
+

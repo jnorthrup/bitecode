@@ -1,0 +1,19 @@
+# 4:00 pm 1998/2/10
+
+# Dewey Decimal Classification
+# define & load subject/ddcn relation
+
+at view=v_dewey
+#--------------#
+book isa hierarchy
+#book has ddcn,subject
+subject isa lattice
+
+
+at view=v_dewey  at view=subject/ddcn
+#------------------------------------#
+# define and load subject/ddcn relation
+dsubject is relation with \
+	format = "ddcn:1; subject:2",
+	meaning = "$2 has ddcn=$1"
+!read dsubject.rel

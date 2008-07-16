@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY a 'http://protege.stanford.edu/system#'>
+	 <!ENTITY tabula_rasa 'http://protege.stanford.edu/tabula_rasa#'>
+	 <!ENTITY rdfs 'http://www.w3.org/TR/1999/PR-rdf-schema-19990303#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:a="&a;"
+	 xmlns:tabula_rasa="&tabula_rasa;"
+	 xmlns:rdfs="&rdfs;">
+<a:OverridingProperty rdf:about="&a;OBJECT_live"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;OBJECT"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;live"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<rdf:Property rdf:about="&a;_name"
+	 rdfs:label=":NAME">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;cat"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;dog"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;person"/>
+</rdf:Property>
+<a:OverridingProperty rdf:about="&a;action_dynamic"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;action"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;dynamic"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;action_separable"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;action"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;separable"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;animal_move"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;animal"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;move"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;attribute_dynamic"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;attribute"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;dynamic"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;attribute_separable"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;attribute"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;separable"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;cat_rational"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;cat"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;rational"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;directory_order"
+	 a:maxCardinality="1"
+	 a:values="none">
+	<a:domain rdf:resource="&tabula_rasa;directory"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;directory_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;directory"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;dog_rational"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;dog"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;rational"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;enumeration_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;enumeration"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;enumeration_order"
+	 a:maxCardinality="1"
+	 a:values="none">
+	<a:domain rdf:resource="&tabula_rasa;enumeration"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;enumeration_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;enumeration"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;file_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;file"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;file_order"
+	 a:maxCardinality="1"
+	 a:values="space">
+	<a:domain rdf:resource="&tabula_rasa;file"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;file_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;file"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;hierarchy_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;hierarchy"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;hierarchy_order"
+	 a:maxCardinality="1"
+	 a:values="isa">
+	<a:domain rdf:resource="&tabula_rasa;hierarchy"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;lattice_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;lattice"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;lattice_order"
+	 a:maxCardinality="1"
+	 a:values="isa">
+	<a:domain rdf:resource="&tabula_rasa;lattice"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;list_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;list"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;list_order"
+	 a:maxCardinality="1"
+	 a:values="space">
+	<a:domain rdf:resource="&tabula_rasa;list"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;list_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;list"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;multiset_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;multiset"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;multiset_order"
+	 a:maxCardinality="1"
+	 a:values="isa">
+	<a:domain rdf:resource="&tabula_rasa;multiset"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;multiset_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;multiset"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;part_separable"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;part"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;separable"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;person_rational"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:domain rdf:resource="&tabula_rasa;person"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;rational"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;person_weight"
+	 a:maxCardinality="1"
+	 a:maxValue="1000"
+	 a:minValue="1"
+	 a:range="integer"
+	 rdfs:comment="pounds">
+	<a:domain rdf:resource="&tabula_rasa;person"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;weight"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;plant_move"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;move"/>
+	<a:domain rdf:resource="&tabula_rasa;plant"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;relation_separable"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:domain rdf:resource="&tabula_rasa;relation"/>
+	<a:overriddenProperty rdf:resource="&tabula_rasa;separable"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;sequence_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;sequence"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;sequence_order"
+	 a:maxCardinality="1"
+	 a:values="time">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<a:domain rdf:resource="&tabula_rasa;sequence"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;sequence_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<a:domain rdf:resource="&tabula_rasa;sequence"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;set_exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;exclusive"/>
+	<a:domain rdf:resource="&tabula_rasa;set"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;set_order"
+	 a:maxCardinality="1"
+	 a:values="isa">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;order"/>
+	<a:domain rdf:resource="&tabula_rasa;set"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<a:OverridingProperty rdf:about="&a;set_repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="false">
+	<a:overriddenProperty rdf:resource="&tabula_rasa;repetition"/>
+	<a:domain rdf:resource="&tabula_rasa;set"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</a:OverridingProperty>
+<rdf:Property rdf:about="&tabula_rasa;KB_8879_00020"
+	 a:maxCardinality="1"
+	 rdfs:label="KB_8879_00020"/>
+<rdf:Property rdf:about="&tabula_rasa;KB_8879_00021"
+	 a:maxCardinality="1"
+	 rdfs:label="KB_8879_00021">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;OBJECT"
+	 a:role="abstract"
+	 rdfs:comment="not live, not move"
+	 rdfs:label="OBJECT">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;entity"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;action"
+	 rdfs:comment="inseparable, dynamic"
+	 rdfs:label="action">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;characteristic"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;animal"
+	 a:role="abstract"
+	 rdfs:comment="live, move"
+	 rdfs:label="animal">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;entity"/>
+	<a:_slot_constraints rdf:resource="&tabula_rasa;tabula rasa_00062"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;assignment"
+	 a:role="abstract"
+	 rdfs:label="assignment">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;sentence"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;attribute"
+	 a:role="abstract"
+	 rdfs:comment="inseparable, static"
+	 rdfs:label="attribute">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;characteristic"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;cat"
+	 rdfs:label="cat">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;animal"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;characteristic"
+	 a:role="abstract"
+	 rdfs:comment="identity of entity"
+	 rdfs:label="characteristic">
+	<a:_slot_constraints rdf:resource="&tabula_rasa;tabula rasa_00059"/>
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;command"
+	 a:role="abstract"
+	 rdfs:label="command">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;sentence"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;context"
+	 rdfs:comment="space,time, view"
+	 rdfs:label="context">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;proposition"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;directory"
+	 rdfs:label="directory">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;file"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;dog"
+	 rdfs:label="dog">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;animal"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;dynamic"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="dynamic">
+	<rdfs:domain rdf:resource="&tabula_rasa;attribute"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;characteristic"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;entity"
+	 a:role="abstract"
+	 rdfs:comment="that which exists"
+	 rdfs:label="entity">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;enumeration"
+	 a:role="abstract"
+	 rdfs:label="enumeration">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;exclusive"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="exclusive">
+	<rdfs:domain rdf:resource="&tabula_rasa;group"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;file"
+	 a:role="abstract"
+	 rdfs:label="file">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;group"
+	 a:role="abstract"
+	 rdfs:label="group">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;OBJECT"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;height"
+	 a:maxCardinality="1"
+	 a:maxValue="120"
+	 a:minValue="10"
+	 a:range="integer"
+	 rdfs:comment="inches"
+	 rdfs:label="height">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;hierarchy"
+	 a:role="abstract"
+	 rdfs:label="hierarchy">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;internet resource"
+	 a:role="abstract"
+	 rdfs:label="internet resource">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;OBJECT"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;ke"
+	 rdfs:label="ke">
+	<rdfs:comment>Knowledge Explorer
+records, changes, searches
+knowledge</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;OBJECT"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;knowledge"
+	 a:role="abstract"
+	 rdfs:comment="knowledge := man do identify od existent done"
+	 rdfs:label="knowledge">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;OBJECT"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;lattice"
+	 a:role="abstract"
+	 rdfs:label="lattice">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;list"
+	 a:role="abstract"
+	 rdfs:label="list">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;live"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 a:values="true"
+	 rdfs:label="live">
+	<rdfs:domain rdf:resource="&tabula_rasa;OBJECT"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;entity"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;plant"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;move"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="move">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;entity"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;plant"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;multiset"
+	 a:role="abstract"
+	 rdfs:label="multiset">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;object"
+	 a:maxCardinality="1"
+	 rdfs:label="object">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;order"
+	 a:maxCardinality="1"
+	 a:values="time"
+	 rdfs:label="order">
+	<rdfs:domain rdf:resource="&tabula_rasa;group"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>isa</a:values>
+	<a:values>isa*</a:values>
+	<a:values>none</a:values>
+	<a:values>space</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;part"
+	 a:role="abstract"
+	 rdfs:comment="separable"
+	 rdfs:label="part">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;characteristic"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;person"
+	 rdfs:comment="rational animal"
+	 rdfs:label="person">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;animal"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;plant"
+	 a:role="abstract"
+	 rdfs:comment="live, not move"
+	 rdfs:label="plant">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;entity"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;predicate"
+	 a:maxCardinality="1"
+	 rdfs:label="predicate">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;proposition"
+	 a:role="abstract"
+	 rdfs:comment="identification of entity"
+	 rdfs:label="proposition">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;question"
+	 a:role="abstract"
+	 rdfs:label="question">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;sentence"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;rational"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="rational">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;relation"
+	 a:role="abstract"
+	 rdfs:comment="inseparable, interentity"
+	 rdfs:label="relation">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;characteristic"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;repetition"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="repetition">
+	<rdfs:domain rdf:resource="&tabula_rasa;group"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;s_action"
+	 rdfs:label="s_action">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;statement"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;s_attribute"
+	 rdfs:label="s_attribute">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;statement"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;s_definition"
+	 rdfs:label="s_definition">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;statement"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;s_hierarchy"
+	 rdfs:label="s_hierarchy">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;statement"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;s_relation"
+	 rdfs:label="s_relation">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;statement"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;sentence"
+	 a:role="abstract"
+	 rdfs:label="sentence">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;proposition"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;separable"
+	 a:maxCardinality="1"
+	 a:range="boolean"
+	 rdfs:label="separable">
+	<rdfs:domain rdf:resource="&tabula_rasa;characteristic"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>false</a:values>
+	<a:values>true</a:values>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;sequence"
+	 rdfs:label="sequence">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&tabula_rasa;set"
+	 rdfs:label="set">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;group"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;sex"
+	 a:maxCardinality="1"
+	 rdfs:label="sex">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:values>female</a:values>
+	<a:values>male</a:values>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;space"
+	 a:maxCardinality="1"
+	 rdfs:label="space">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&tabula_rasa;statement"
+	 a:role="abstract"
+	 rdfs:label="statement">
+	<rdfs:subClassOf rdf:resource="&tabula_rasa;sentence"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&tabula_rasa;subject"
+	 a:maxCardinality="1"
+	 rdfs:label="subject">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;time"
+	 a:maxCardinality="1"
+	 rdfs:label="time">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;view"
+	 a:maxCardinality="1"
+	 rdfs:label="view">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&tabula_rasa;weight"
+	 a:maxCardinality="1"
+	 a:maxValue="1000"
+	 a:minValue="1"
+	 a:range="integer"
+	 rdfs:comment="pounds"
+	 rdfs:label="weight">
+	<rdfs:domain rdf:resource="&tabula_rasa;animal"/>
+	<rdfs:domain rdf:resource="&tabula_rasa;person"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+</rdf:RDF>

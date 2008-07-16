@@ -1,0 +1,96 @@
+# KEHOME/knowledge/application/Internet/idirectory.txt
+# Nov/12/2002
+
+#=======================#
+# Internet Directory    #
+#                       #
+# Richard H. McCullough #
+#=======================#
+
+# Here's my idea of a good internet directory
+#
+# 1. permit user to specify his/her own hierarchy
+#
+# 2. permit dynamic filtering of these characteristics
+#    at any level
+#	language
+#	space
+#	time
+#	attribute
+#	part
+#	action
+#	relation
+#
+
+
+# Here's my idea of a good initial directory hierarchy
+#
+idirhi is begin hierarchy
+Top
+/	person
+/	group
+/	event
+/	money
+/	product  # object
+/	service  # action
+/	reference
+
+
+person
+/	actor
+/	teacher
+/	engineer
+/	scientist
+/	businessman
+/	politician
+/	...
+
+group
+/	family
+/	friend
+/	club
+/	church
+/	school
+/	company
+/	government
+/	...
+
+event
+/	birth
+/	death
+/	auction
+/	election
+/	concert
+/	war
+/	...
+
+money
+/	mortgage
+/	mutual fund
+/	stocks
+/	real estate
+/	...
+
+product
+/	computer
+/	software
+/	car
+/	...
+
+service
+/	internet access
+/	web site hosting
+/	cleaning
+/	...
+
+reference
+/	dictionary
+/	encyclopedia
+/	map
+/	phone book
+/	internet address book
+/	yellow pages
+/	city guide
+/	...
+
+end hierarchy idirhi

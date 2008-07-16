@@ -1,0 +1,117 @@
+# 7:30 pm 12/28/97
+
+# Wille example
+# ICCS'97 page 290
+# interaction with Knowledge Explorer 1.5
+
+# NOTES:
+# 1. I have used my own identification of concepts,
+# which is similar to Wille's identification.
+# 2. I have not bothered to make some final abstraction
+# steps which are appropriate for integrating this
+# knowledge into a broader context.  For example,
+# it should be obvious that
+#	building has small
+# really means
+#	building has size=small
+
+# general context
+#================
+at view = tabula_rasa
+existent ise* ?
+# see the file "general.txt"
+
+# district context
+#=================
+at view = tabula_rasa  at view = v_district
+#hfocus = [district, building, person]
+
+object ise district, building
+"Seattle's central business district" isa district
+"Central Business" is "Seattle's central business district"
+
+district has boundary
+district haspart district_building
+
+architect, engineer isa person
+architect do design building
+at space=location, time=construct_date \
+	engineer do construct building
+building has \
+	design_architect,
+	construct_date,
+	location,
+	design_style,
+	material
+building haspart decoration
+
+#------------------------------------------------------------
+# Seattle's central business district, bounded by Yesler Way,
+# Route 5, Stewart Street, and the waterfront, has among its
+# sleek glass monoliths smaller buildings with gargoyles and
+# other lively early-twentieth-century decorations that give
+# it an interesting texture.
+#------------------------------------------------------------
+"Central Business" has \
+	boundary = "Yesler Way, Route 5, Stewart Street, waterfront",
+	"interesting texture"
+building_1, building_2 isa building
+"Central Business" haspart building_1, building_2
+building_1 has design_style = "sleek glass monolith"
+building_2 has small
+building_2 haspart gargoyle, "lively early-twentieth-century decoration"
+
+building_2 causes "Central Business" has "interesting texture"
+#building_2 => "Central Business" has "interesting texture"
+
+#------------------------------------------------------------
+# The restored Arctic Building (1917), on the corner of Third
+# Avenue and Cherry Street, is a Renaissance Revival palazzo
+# in terra-cotta decorated with a set of walrus heads.
+#------------------------------------------------------------
+"Arctic Building" isa building
+"Central Business" haspart "Arctic Building"
+"Arctic Building" has \
+	restored,
+	construct_date = 1917,
+	location = "corner of Third Avenue and Cherry Street",
+	design_style = "Renaissance Revival palazzo",
+	material = terra-cotta
+"Arctic Building" haspart "walrus head"=set
+
+#------------------------------------------------------------
+# Eight Indian heads distinguish an upper-story frieze of the
+# brick-and-terra-cotta Cobb Building (1910), on the corner of
+# Fourth and University Street, which reflects the Beaux-Arts
+# orientation of its New York architects, Howells and Stokes.
+#------------------------------------------------------------
+"Cobb Building" isa building
+"Central Business" haspart "Cobb Building"
+"Cobb Building" has \
+	construct_date = 1910,
+	material = "brick-and-terra-cotta",
+	location = "corner of Fourth and University Street",
+	design_architect += "Howells, Stokes"
+"Cobb Building" haspart "upper-story frieze"
+"upper-story frieze" haspart "Indian head"=8
+Howells, Stokes isa architect
+Howells, Stokes has \
+	orientation = Beaux-Arts,
+	location = "New York"
+
+Howells, Stokes has orientation=Beaux-Arts causes "Cobb Building" haspart "upper-story frieze"
+#Howells, Stokes has orientation=Beaux-Arts => "Cobb Building" haspart "upper-story frieze"
+
+#------------------------------------------------------------
+# The Seattle Tower (1928-1929), 1218 Third Avenue, has a lobby
+# of dark marble walls and a gilt ceiling.
+#------------------------------------------------------------
+"Seattle Tower" isa building
+"Central Business" haspart "Seattle Tower"
+"Seattle Tower" has \
+	construction_date = 1928-1929,
+	location = "1218 Third Avenue"
+"Seattle Tower" haspart lobby
+lobby haspart lobby_wall=4, lobby_ceiling
+lobby_wall has material = "dark marble"
+lobby_ceiling has color = gilt

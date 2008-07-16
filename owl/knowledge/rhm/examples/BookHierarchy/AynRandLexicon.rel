@@ -1,0 +1,496 @@
+# KEHOME/knowledge/examples/BookHierarchy/AynRandLexicon.rel
+# Nov/4/2002
+
+topic isu set of existent
+
+xref_see is relation with
+	automatic = ISMEM,
+	label = [topic,See],
+	format = [topic:1, topic:2],
+	meaning = {
+		$1 has See = [$2];
+	}
+xref_seealso is relation with
+	automatic = ISMEM,
+	label = [topic,See Also],
+	format = [topic:1, topic:2],
+	meaning = {
+		$1 has See Also = [$2];
+	}
+
+set echo=off
+
+xref_see is begin relation
+acting; performing arts
+associations; cooperation
+awareness; consciousness
+'blanking out'; evasion
+coercion; physical force
+concretes; abstractions and concretes
+confidence; courage and confidence, self-esteem
+copyrights; patents and copyrights
+"crow-epistemology"; unit-economy
+deontological theory of ethics; "duty"
+distinguishing characteristic; concept-formation
+egoism; selfishness
+'end in itself'; ultimate value
+environmentalism; ecology/environmental movement
+equality (social-political); egalitarianism
+essence/essential characteristic; definitions
+ethics; morality
+Greece; ancient Greece
+'hatred of the good for being the good'; 'envy/hatred of the good for being the good'
+immorality; evil
+important; metaphysical value-judgments
+innate ideas; tabula rasa
+judgment; moral judgment
+leftists; rightists vs. leftists
+military conscription; draft
+mind-body dichotomy; soul-body dichotomy
+Nazism; fascism/Nazism
+non-contradiction; contradictions
+objective; objectivity
+obligation; responsibility/obligation
+parts of speech; grammar
+political power; economic power vs. political power
+reality; existence
+reification of the zero; 'zero, reification of'
+right to life; 'life, right to'
+rights; individual rights
+self-sacrifice; altruism, sacrifice, selflessness
+singing; performing arts
+standard of measurement; measurement
+teleology; goal-directed action
+unemployment; unions
+U.S.S.R.; Soviet Russia
+volition; free will
+xenophobia; anti-conceptual mentality
+end relation xref_see
+
+xref_seealso is begin relation
+abortion; birth control, individual rights, 'life, right to', man, sex
+absolutes; axioms, compromise, metaphysical vs. man-made, pragmatism, primacy of existence vs. primacy of consciousness
+abstraction (process of); concept-formation, concepts, integration (mental)
+abstractions and concretes; concepts, entity, perception, Platonic realism
+agnosticism; arbitrary, atheism, certainty, "open mind" and "closed mind", skepticism
+altruism; charity, collectivism, "duty", 'Kant, Immanuel', morality, mysticism, sacrifice, selfishness, selflessness, Soviet Russia, suffering, tribalism
+ambition; career, productiveness, purpose, values
+America; Aristotle, capitalism, constitution, 'Enlightenment, Age of', founding fathers, individualism, individual rights, republic
+amoralism; anti-conceptual mentality, morality, selfishness, self, self-esteem, tribalism
+analytic-synthetic dichotomy; causality, concept-formation, concepts, definitions, meaning (of concepts), metaphysical vs. man-made, necessity
+anarchism; competition, government, economic power vs. political power, 'law, objective and non-objective', objectivity, retaliatory force, whims/whim-worship
+ancient Greece; art, history, mysticism, reason, philosophy
+"anti-concepts"; argument from intimidation, concepts, definitions, invalid concepts, '"package-dealing", fallacy of'
+anti-conceptual mentality; concepts, perception, psycho-epistemology, racism, reason, tribalism
+antitrust laws; capitalism, competition, economic power vs. political power, free market, 'law, objective and non-objective', monopoly, property rights
+appeasement; compromise, evil, integrity, moral cowardice, moral judgment, tactfulness
+"a priori"; analytic-synthetic dichotomy, logic, truth
+arbitrary; agnosticism, certainty, objectivity, possible, proof, skepticism, truth
+argument from intimidation; certainty, logic, moral cowardice, "psychologizing"
+Aristotle; ancient Greece, definitions, identity, logic, Objectivism, pride, Renaissance, romanticism, science, tabula rasa
+art; Conceptual Index: esthetics
+artistic creation; art, creation, emotions, psycho-epistemology, sense of life, stylization
+atheism; agnosticism, existence, God, miracles, nature, religion, supernaturalism
+automatization; integration (mental), learning, psycho-epistemology, subconscious
+axiomatic concepts; axioms, concepts, consciousness, corollaries, existence, hierarchy of knowledge, identity, implicit knowledge, irreducible primaries, objectivity, primacy of existence vs. primacy of consciousness, '"stolen concept", fallacy of'
+axioms; axiomatic concepts, consciousness, corollaries, existence, hierarchy of knowledge, identity, implicit knowledge, objectivity, primacy of existence vs. primacy of consciousness, self-evident, '"stolen concept", fallacy of'
+
+ballet; art, choreographer, dance, music, performing arts
+beauty; art, esthetics, integration (mental), objectivity
+behaviorism; consciousness, determinism, free will, Freud, man, psychology
+benevolent universe premise; evil, malevolent universe premise, metaphysical value-judgments, sense of life, suffering
+birth control; abortion, life, man, religion, sex
+businessmen; antitrust laws, businessmen vs. bureaucrats, capitalism, competition, creators, 'law, objective and non-objective', managerial work, pragmatism, retroactive law
+businessmen vs. bureaucrats; businessmen, capitalism, economic power vs. political power, physical force
+Byronic view of existence; art, free will, malevolent universe premise, romanticism, sense of life
+
+capitalism; America, "conservatives", free market, freedom, individual rights, individualism, interventionism (economic), justice, mixed economy, nineteenth century, physical force, politics, property rights, trader principle, tribal premise (in economics), statism, taxation, welfare state
+career; ambition, productiveness, purpose
+causality; change, final causation, free will, identity, miracles, necessity
+censorship; "conservatives" vs. "liberals", dictatorship, free speech, government, government grants and scholarships, property rights
+certainty; absolutes, agnosticism, arbitrary, axioms, context, knowledge, "open mind" and "closed mind", possible, reason
+chance; causality, free will, identity, possible
+change; causality, entity, identity, motion, '"stolen concept", fallacy of'
+character; automatization, free will, identity, morality, values
+characterization; character, literature, motivation
+charity; altruism, "duty", emergencies, poverty, sacrifice, selfishness, virtue, welfare state
+choreographer; art, ballet, dance, director, performing arts
+Christmas; America, atheism, mysticism, religion, Thanksgiving
+civil disobedience; individual rights, 'law, objective and non-objective', New Left, physical force
+civilization; culture, freedom, individual rights, physical force
+classicism; abstractions and concretes, art, naturalism, principles, romanticism
+"collective rights"; collectivism, foreign policy, individual rights, morality, national rights, self-determination of nations
+collectivism; altruism, "collective rights", "common good", dictatorship, individual rights, individualism, selfishness, social system, society, statism, tribalism, tribal premise (in economics)
+"common good"; altruism, collectivism, democracy, individual rights, minority rights, '"public interest", the', Soviet Russia, tribalism
+common sense; America, Aristotle, logic
+communication; concepts, language, physical force, reason
+communism; collectivism, dictatorship, egalitarianism, fascism and communism/socialism, human rights and property rights, "McCarthyism", polylogism, property rights, socialism, Soviet Russia, statism
+compassion; altruism, justice, mercy, pity
+competition; antitrust laws, capitalism, compromise, free market, freedom, monopoly, productiveness
+compromise; absolutes, appeasement, cooperation, integrity, justice, moral cowardice, moral judgment, pragmatism, principles
+concept-formation; abstraction (process of), abstractions and concretes, conceptual common denominator, concepts, definitions, genus and species, integration (mental), language, measurement, unit, words
+concepts; "anti-concepts", anti-conceptual mentality, axiomatic concepts, communication, definitions, esthetic abstractions, '"frozen abstraction", fallacy of', integration (mental), invalid concepts, language, 'materials, concepts of', meaning (of concepts), 'method, concepts of', normative abstractions, '"package-dealing", fallacy of', perception, Platonic realism, "Rand's razor", reason, '"stolen concept", fallacy of', unit, unit-economy, words
+conceptual common denominator; axiomatic concepts, concept-formation, definitions, genus and species, measurement, unit
+consciousness; axiomatic concepts, emotions, focus, free will, introspection, perception, primacy of existence vs. primacy of consciousness, prior certainty of consciousness, psychology, reason, self, sensations, soul-body dichotomy, subconscious, tabula rasa, understanding
+"conservatives"; altruism, capitalism, compromise, "conservatives" vs. "liberals", faith, individual rights, "liberals", "libertarians", original sin, religion, statism, tradition
+"conservatives" vs. "liberals"; censorship, "conservatives", freedom, "liberals", 'mystics of spirit and of muscle', property rights, religion, rightists vs. leftists, soul-body dichotomy, "window dressing"
+constitution; America, founding fathers, government, individual rights, 'law, objective and non-objective', physical force
+"consumerism"; "anti-concepts", consumption, fraud, government, individual rights, production, service, tribal premise (in economics)
+consumption; "consumerism", final causation, investment, production, purchasing power, savings
+context; certainty, context-dropping, contradictions, definitions, hierarchy of knowledge, integration (mental), knowledge, principles
+context-dropping; context, evasion, self-interest
+contracts; cooperation, government, individual rights, physical force, property rights
+contradictions; Aristotle, axiomatic concepts, axioms, causality, existence, identity, integration (mental), logic
+cooperation; independence, individual rights, individualism, tribalism
+corollaries; axioms, logic, proof, self-evident, validation
+corporations; businessmen, contracts, cooperation, freedom, individual rights
+courage and confidence; integrity, morality, rationality, truth, virtue
+creation; artistic creation, existence, imagination, matter, metaphysical vs. man-made
+creators; altruism, cooperation, independence, individualism, intelligence, productiveness, pyramid of ability, second-handers, selfishness
+credit; consumption, deficit financing, interest (on loans), investment, money, purchasing power, savings
+crime; fraud, individual rights, physical force, retroactive law, rights of the accused, society
+culture; civilization, collectivism, "ethnicity", individualism, tradition
+cynicism; amoralism, appeasement, benevolent universe premise, honor, malevolent universe premise, moral cowardice, moral-practical dichotomy, morality, values, virtue
+
+dance; art, ballet, choreographer, music, performing arts, stylization
+Dark Ages; history, Middle Ages, mysticism, philosophy, reason, Renaissance
+decorative arts; art, beauty, esthetics, psycho-epistemology, visual arts
+dificit financing; credit, gold standard, government, inflation, money, taxation, welfare state
+definitions; analytic-synthetic dichotomy, Aristotle, communication, concepts, conceptual common denominator, context, genus and species, hierarchy of knowledge, language, ostensive definition, sensations, unit, unit-economy, words
+democracy; collectivism, dictatorship, freedom, government, individual rights, minority rights, representative government, republic, socialism, statism, tyranny, voting
+determinism; axioms, causality, dictatorship, emotions, free will, metaphysical vs. man-made, naturalism, necessity
+dictator; compromise, dictatorship, mysticism, physical force, second-handers, statism, tyranny
+dictatorship; collectivism, communism, determinism, dictator, fascism/Nazism, fascism and communism/socialism, foreign policy, freedom, government, individual rights, Soviet Russia, self-determination of nations, statism, tyranny
+director; art, choreographer, integration (mental), motion pictures, performing arts
+dogma; faith, logic, mysticism, Objectivism, proof, reason, religion
+draft; collectivism, "duty", freedom, individual rights, 'life, right to', responsibility/obligation, war
+"duty"; altruism, "anti-concepts", free will, 'Kant, Immanuel', morality, mystical ethics, rationality, religion, responsibility/obligation, sacrifice, self-esteem, self-interest, selfishness, selflessness
+
+ecology/environmental movement; capitalism, man, New Left, pollution, production, science, technology
+economic good; market value, property rights
+economic growth; capitalism, ecology/environmental movement, New Left, production, technology
+economic power vs. political power; businessmen vs. bureaucrats, capitalism, free market, freedom, government, individual rights, money, motivation by love vs. by fear, '"package-dealing", fallacy of', physical force, statism
+education; concepts, integration (mental), learning, understanding
+egalitarianism; altruism, 'envy/hatred of the good for being the good', free will, justice, metaphysical vs. man-made, statism
+emergencies; benevolent universe premise, charity, poverty, selfishness, suffering
+emotions; automatization, 'envy/hatred of the good for being the good', Freud, happiness, hostility, introspection, loneliness, love, motivation, motivation by love vs. by fear, pleasure and pain, psycho-epistemology, rationality, rationalization, reason, sense of life, soul-body dichotomy, subconscious, values, whims/whim-worship
+'Enlightenment, Age of'; America, Aristotle, Dark Ages, founding fathers, history, Middle Ages, nature, reason, religion, Renaissance
+entity; causality, change, existence, existent, identity, motion, universe
+'envy/hatred of the good for being the good'; amoralism, anti-conceptual mentality, appeasement, emotions, evil, 'good, the', hostility, values
+epistemology; Conceptual Index: epistemology
+errors of knowledge vs. breaches of morality; evasion, evil, free will, 'good, the', irrationality, knowledge, morality, standard of value
+esthetic abstractions; abstractions and concretes, art, concepts, esthetics, metaphysical value-judgments, normative abstractions, sense of life
+esthetic judgment; art, esthetics, moral judgment, sense of life
+esthetics; absolutes, amoralism, appeasement, compromise, cynicism, 'envy/hatred of the good for being the good', errors of knowledge vs. breaches of morality, evasion, free will, 'good, the', irrationality, moral cowardice, moral judgment, morality, original sin, standard of value, virtue
+existence; absolutes, abstractions and concretes, atheism, axiomatic concepts, axioms, existent, identity, infinity, metaphysics, metaphysical, nature, primacy of existence vs. primacy of consciousness, space, time, universe, 'zero, reification of'
+existent; concept-formation, entity, existence, identity, implicit knowledge, sensations, unit
+
+faith; atheism, dogma, God, knowledge, logic, mysticism, physical force, reason, religion, statism, supernaturalism
+falsehood; analytic-synthetic dichotomy, arbitrary, contradictions, identity, truth
+fascism/Nazism; altruism, capitalism, collectivism, dictatorship, fascism and communism/socialism, human rights and property rights, individual rights, individualism, property rights, racism, rightists vs. leftists, statism, tyranny, war
+fascism and communism/socialism; altruism, capitalism, collectivism, communism, dictatorship, fascism/Nazism, 'mystics of spirit and of muscle', polylogism, rightists vs. leftists, socialism, Soviet Russia, statism
+femininity; career, independence, love, sex, virtue
+final causation; "anti-concepts", context-dropping, "duty", goal-directed action, 'Kant, Immanuel', purpose, standard of value, teleological measurement
+focus; consciousness, evasion, free will, morality, rationality, thought/thinking
+foreign policy; "collective rights", communism, dictatorship, draft, freedom, government, ideology, "isolationism", national rights, pacifism, peace movements, self-defense, self-determination of nations, Soviet Russia, United Nations, war
+founding fathers; America, Aristotle, constitution, 'Enlightenment, Age of', freedom, individualism, individual rights, 'life, right to', 'pursuit of happiness, right to', religion, republic, soul-body dichotomy
+fraud; contracts, physical force
+free market; capitalism, interventionism (economic), market value
+free speech; censorship, human rights and property rights, individual rights, property rights
+free will; causality, consciousness, determinism, evasion, focus, metaphysical vs. man-made, morality, perception, romanticism, reason, thought/thinking, sensations, standard of value, volitional
+freedom; capitalism, dictatorship, economic power vs. political power, free market, government, mixed economy, physical force, retaliatory force, statism
+Freud; behaviorism, emotions, 'Kant, Immanuel', man, psychology, rationalization, self, subconscious
+'"frozen abstraction", fallacy of'; abstractions and concretes, altruism, morality, principles
+'fundamentality, rule of'; concepts, definitions, identity
+
+genocide; crime, individualism, 'life, right to', war
+genus and species; concept-formation, definitions
+goal-directed action; life, ultimate value, values
+God; agnosticism, atheism, faith, identity, mysticism, 'mystics of spirit and of muscle', nature, reason, religion, supernaturalism, universe
+gold standard; deficit financing, freedom, inflation, money, property rights, savings, welfare state
+'good, the'; evil, intrinsic theory of values, life, morality, mystical ethics, social theory of ethics, standard of value, subjectivism
+government; anarchism, capitalism, constitution, dictatorship, economic power vs. political power, freedom, individual rights, 'law, objective and non-objective', pacifism, physical force, property rights, retaliatory force, self-defense, statism, war
+government grants and scholarships; altruism, censorship, charity, free speech, welfare state
+grammar; communication, concepts, language, linguistic analysis, propositions, words
+guild socialism; altruism, collectivism, fascism/Nazism, mediocrity, New Left, socialism, statism
+
+happiness; benevolent universe premise, emotions, hedonism, life, pleasure and pain, suffering, ultimate value, values, whims/whim-worship
+hedonism; emotions, happiness, pleasure and pain, utilitarianism, standard of value, subjectivism
+hierarchy of knowledge; axiomatic concepts, axioms, genus and species, irreducible primaries, knowledge, logic, perception, '"stolen concept", fallacy of', tabula rasa
+history; ancient Greece, civilization, culture, Dark Ages, 'Enlightenment, Age of', intellectuals, Middle Ages, nineteenth century, philosophy, Renaissance, tradition
+honesty; evasion, independence, integrity, morality, rationality, truth, virtue
+honor; morality, pride, self-esteem, values
+hostility; amoralism, emotions, 'envy/hatred of the good for being the good', evasion
+human rights and property rights; fascism and communism/socialism, freedom, individual rights, property rights, soul-body dichotomy
+humility; altruism, morality, pride, sacrifice, self-esteem
+humor; metaphysical, moral cowardice, self-esteem, virtue
+
+identity; Aristotle, axiomatic concepts, axioms, causality, character, entity, existence, implicit knowledge, infinity, logic, subjectivism, 'zero, reification of'
+ideology; politics, philosophy, principles, revolution vs. putsch
+imagination; consciousness, creation, knowledge, mental health
+implicit knowledge; concepts, existent, knowledge, perception, unit
+inalienability; absolutes, collectivism, compromise, individual rights, principles
+independence; creators, integrity, rationality, second-handers, selfishness, virtue
+individual rights; America, capitalism, collectivism, dictatorship, freedom, human rights and property rights, inalienability, individualism, 'life, right to', permission (vs. rights), 'pursuit of happiness, right to', retaliatory force, self-defense, statism, tyranny
+individualism; capitalism, collectivism, "common good", cooperation, free will, freedom, independence, individual rights, 'Nietzsche, Friedrich', reason, sacrifice, selfishness, social system, society
+induction and deduction; concept-formation, logic, propositions, rationalism vs. empiricism
+infinity; identity, mathematics, numbers, universe
+inflation; capitalism, deficit financing, gold standard, money, savings
+"instinct"; emotions, free will, Freud, goal-directed action, tabula rasa
+integration (mental); concept-formation, concepts, consciousness, learning, psycho-epistemology, sensations, understanding
+integrity; compromise, honesty, rationality, subjectivism, sacrifice, virtue, whims/whim-worship
+intellectuals; businessmen, culture, history, philosophy
+intelligence; abstractions and concretes, automatization, concepts, integration (mental), primacy of existence vs. primacy of consciousness, reason, understanding
+interest (on loans); credit, investment, money, savings
+interventionism (economic); capitalism, free market, government, lobbying, mixed economy, '"public interest", the', welfare state
+intrinsic theory of values; 'good, the', morality, mystical ethics, objective theory of values, objectivity, physical force, social theory of ethics, subjectivism
+introspection; behaviorism, concepts, consciousness, emotions, psychology, rationalization, values
+invalid concepts; "anti-concepts", concepts, integration (mental), mysticism, '"stolen concept", fallacy of'
+investment; consumption, credit, production, savings
+irrationalism; irrationality, mysticism, reason, skepticism
+irrationality; contradictions, emotions, evasion, evil, focus, rationality, reason, whims/whim-worship
+irreducible primaries; axiomatic concepts, axioms, corollaries, hierarchy of knowledge, ostensive definition, self-evident
+"is"-"ought" dichotomy; goal-directed action, 'good, the', life, morality, standard of value, ultimate value, values
+"isolationism"; "anti-concepts", communism, foreign policy, Soviet Russia
+
+justice; capitalism, compassion, egalitarianism, honesty, mercy, moral judgment, morality, objectivity, rationality, trader principle, virtue
+
+'Kant, Immanuel'; altruism, concepts, "duty", faith, identity, knowledge, linguistic analysis, logic, logical positivism, modern art, mysticism, objectivity, pragmatism, primacy of existence vs. primacy of consciousness, rationalization, reason, religion, sacrifice, self, selfishness, selflessness, subjectivism
+knowledge; certainty, epistemology, logic, perception, reason
+
+language; communication, concept-formation, concepts, grammar, linguistic analysis, perception, psycho-epistemology, reason,words
+'law, objective and non-objective'; anarchism, antitrust laws, constitution, crime, dictatorship, government, individual rights, retaliatory force, retroactive law, statism
+learning; automatization, concepts, education, integration (mental), subconscious, understanding
+"liberals"; capitalism, collectivism, compromise, "conservatives", "conservatives" vs. "liberals", cynicism, individual rights, mixed economy, New Left, pragmatism, socialism, Soviet Russia, statism, welfare state
+"libertarians"; anarchism, compromise, context-dropping, government, physical force, subjectivism, whims/whim-worship
+life; happiness, 'life, right to', man, morality, standard of value, ultimate value, values
+'life, right to'; individual rights, life
+linguistic analysis; analytic-synthetic dichotomy, grammar, integration (mental), 'Kant, Immanuel', language, logical positivism, meaning (of concepts), philosophy, pragmatism, principles, '"stolen concept", fallacy of', words
+literature; Aristotle, art, characterization, classicism, concepts, determinism, modern art, naturalism, novel, plot, plot-theme, popular literature, psycho-epistemology, romanticism, sense of life, style, theme (literary), thrillers
+lobbying; interventionism (economic), mixed economy, welfare state
+logic; analytic-synthetic dichotomy, Aristotle, axioms, contradictions, epistemology, identity, induction and deduction, 'method, concepts of', mysticism, objectivity, proof, reason, validation
+logical positivism; analytic-synthetic dichotomy, behaviorism, certainty, 'Kant, Immanuel', meaning (of concepts), philosophy, pragmatism, science, subjectivism, words
+loneliness; emotions, independence, rationality, second-handers
+love; altruism, character, emotions, femininity, marriage, philosophy, sacrifice, self-esteem, selfishness, selflessness, sense of life, sex, teleological measurement, values, virtue
+
+malevolent universe premise; altruism, benevolent universe premise, evil, happiness, man, metaphysical value-judgments, sense of life, suffering
+man; concepts, emotions, free will, history, man-worship, metaphysical vs. man-made, morality, Objectivism, perception, physical force, production, reason, soul-body dichotomy, thought/thinking
+man-worship; femininity, man, happiness, religion, sacred, self-esteem, sense of life
+managerial work; businessmen, career
+market value; capitalism, competition, free market, money, purchasing power, trader principle
+marriage; love, sex
+'materials, concepts of'; concept-formation, concepts, matter
+mathematics; epistemology, measurement, 'method, concepts of', numbers, psycho-epistemology, science, unit, unit-economy
+matter; existence, free will, life, 'materials, concepts of', universe
+"McCarthyism"; "anti-concepts", communism, Soviet Russia
+meaning (of concepts); analytic-synthetic dichotomy, concepts, unit, words
+measurement; identity, mathematics, teleological measurement, unit
+mediocrity; guild socialism, intelligence, pyramid of ability
+mental health; behaviorism, evasion, Freud, imagination, neurosis vs. psychosis, psycho-epistemology, psychology, self-esteem, subconscious
+mercy; justice, moral judgment
+"meritocracy"; "anti-concepts", democracy, economic power vs. political power, freedom, individual rights, justice, '"package-dealing", fallacy of', tyranny
+metaphysical; existence, metaphysical value-judgments, metaphysical vs. man-made, metaphysics
+metaphysical value-judgments; art, benevolent universe premise, malevolent universe premise, metaphysics, morality, philosophy, sense of life, subconscious
+metaphysical vs. man-made; absolutes, character, creation, free will, identity, moral judgment, nature, necessity, physical force, universe
+metaphysics; absolutes, abstractions and concretes, causality, consciousness, existence, identity, metaphysical value-judgments, metaphysical vs. man-made, primacy of existence vs. primacy of consciousness, subjectivism
+'method, concepts of'; concept-formation, concepts, consciousness, epistemology, logic, mathematics
+Middle Ages; Aristotle, Dark Ages, faith, history, individualism, miracles, mysticism, religion, Renaissance
+middle class; capitalism, inflation
+'Mill, John Stuart'; agnosticism, altruism, capitalism, collectivism, "conservatives", free speech, happiness, hedonism, individual rights, pleasure and pain, '"public interest", the', utilitarianism, values
+minority rights; businessmen, democracy, "ethnicity", individual rights, racism
+miracles; causality, God, mysticism, religion, supernaturalism
+mixed economy; capitalism, compromise, freedom, government, individual rights, interventionism (economic), lobbying, physical force, statism
+modern art; argument from intimidation, art, definitions, genus and species, integration (mental), objectivity, perception, philosophy, reason, sensations, subjectivism, whims/whim-worship
+money; consumption, credit, gold standard, inflation, market value, objective theory of values, physical force, production, purchasing power, sanction of the victim, savings, selfishness, trader principle
+monopoly; antitrust laws, competition, economic power vs. political power, free market, interventionism (economic)
+moral cowardice; appeasement, compromise, courage and confidence, evil, moral judgment, morality
+moral judgment; absolutes, character, compromise, errors of knowledge vs. breaches of morality, moral cowardice, "psychologizing", rationality, standard of value, virtue
+moral-practical dichotomy; altruism, "duty", evil, 'good, the', morality, original sin, pleasure and pain, rationality, sacrifice, selfishness, standard of value
+morality; Conceptual Index: ethics
+motion; change, entity, hierarchy of knowledge, '"stolen concept", fallacy of'
+motion pictures; art, director, literature, romanticism, sense of life
+motivation; art, free will, literature, motivation by love vs. by fear, psychology, values
+motivation by love vs. by fear; motivation, happiness, pleasure and pain, suffering, values, 'zero, reification of'
+music; art, ballet, concept-formation, dance, emotions, psycho-epistemology, opera and operetta, performing arts, sensations, sense of life
+mystical ethics; God, intrinsic theory of values, morality, religion, sacrifice, standard of value, supernaturalism, values
+mysticism; axioms, causality, consciousness, dictator, emotions, epistemology, God, faith, 'Kant, Immanuel', knowledge, logic, 'mystics of spirit and of muscle', objectivity, perception, physical force, proof, reason, religion, second-handers, skepticism, supernaturalism
+'mystics of spirit and of muscle'; mysticism
+
+national rights; collectivism, democracy, foreign policy, freedom, individual rights, secession, self-determination of nations
+naturalism; art, characterization, determinism, free will, literature, plot, romanticism, sense of life, stylization, values
+nature; atheism, causality, existence, supernaturalism, universe
+necessity; analytic-synthetic dichotomy, causality, identity, free will, metaphysical vs. man-made, '"package-dealing", fallacy of', primacy of existence vs. primacy of consciousness
+neurosis vs. psychosis; free will, mental health, "psychologizing", psychology, rationality
+New Left; altruism, capitalism, civil disobedience, collectivism, communism, ecology/environmental movement, economic growth, guild socialism, mysticism, physical force, socialism
+'Nietzsche, Friedrich'; altruism, Byronic view of existence, collectivism, "instinct", irrationalism, malevolent universe premise, principles, reason, selfishness, whims/whim-worship
+nineteenth century; America, capitalism, freedom, history, physical force, war
+nominalism; abstractions and concretes, analytic-synthetic dichotomy, arbitrary, concept-formation, concepts, integration (mental), language, linguistic analysis, logical positivism, meaning (of concepts), mysticism, skepticism, words
+non-existence; existence, 'zero, reification of'
+normative abstractions; abstraction (process of), abstractions and concretes, concept-formation, concepts, 'good, the', learning, morality, values
+novel; art, characterization, literature, plot, popular literature, style, theme (literary), thrillers
+numbers; concepts, mathematics, measurement, unit, unit-economy
+
+objective theory of values; capitalism, context-dropping, free market, intrinsic theory of values, market value, mystical ethics, objectivity, physical force, reason, social theory of ethics, '"stolen concept", fallacy of', subjectivism (in ethics), values
+#####Objectivism; ""
+objectivity; axiomatic concepts, axioms, concepts, definitions, epistemology, identity, 'Kant, Immanuel', knowledge, logic, metaphysics, morality, mysticism, "open mind" and "closed mind", primacy of existence vs. primacy of consciousness, proof, reason, subjectivism, truth
+"open mind" and "closed mind"; absolutes, agnosticism, "anti-concepts", certainty, objectivity, proof, reason, skepticism
+opera and operetta; art, music, performing arts
+original sin; atheism, contradictions, evil, free will, man, morality, mysticism, productiveness, rationality, religion, responsibility/obligation, selfishness, sex, virtue
+ostensive definition; axiomatic concepts, axioms, definitions, irreducible primaries, perception, self-evident, sensations
+
+pacifism; anarchism, government, peace movements, physical force, retaliatory force, self-defense, war
+'"package-dealing", fallacy of'; "anti-concepts", definitions, economic power vs. political power, 'fundamentality, rule of', necessity, "Rand's razor", statism
+painting; abstractions and concretes, art, beauty, concepts, context, esthetics, modern art, sense of life, style, subject (in art), visual arts
+patents and copyrights; creation, government, individual rights, property rights
+peace movements; capitalism, dictatorship, foreign policy, genocide, pacifism, physical force, retaliatory force, self-defense, Soviet Russia, statism, war
+perception; axioms, concepts, consciousness, entity, epistemology, free will, hierarchy of knowledge, integration (mental), ostensive definition, primacy of existence vs. primacy of consciousness, reason, self-evident, sensations, '"stolen concept", fallacy of', unit-economy
+performing arts; art, ballet, dance, esthetics, integration (mental), metaphysical value-judgments, music, opera and operetta, psycho-epistemology
+permission (vs. rights); contracts, inalienability, individual rights
+philosophy; Aristotle, common sense, culture, epistemology, esthetics, history, ideology, intellectuals, linguistic analysis, logical positivism, man, metaphysics, 'Mill, John Stuart', morality, 'Nietzsche, Friedrich', Objectivism, politics, pragmatism, principles, rationalism vs. empiricism, rationalization, reason, religion, science, self-evident
+photography; art, esthetics
+physical force; altruism, crime, dictatorship, economic power vs. political power, fraud, freedom, government, individual rights, justice, 'law, objective and non-objective', morality, objective theory of values, production, reason, retaliatory force, self-defense, selfishness, statism, war
+pity; compassion, compromise, mercy, moral cowardice, moral judgment
+Platonic realism; abstraction (process of), abstractions and concretes, Aristotle, collectivism, concept-formation, concepts, objectivity, primacy of existence vs. primacy of consciousness, rationalism vs. empiricism, reason
+pleasure and pain; emotions, happiness, hedonism, life, 'Mill, John Stuart', standard of value, sensations, subconscious, suffering, utilitarianism, values, whims/whim-worship
+plot; art, literature, motivation, naturalism, novel, plot-theme, romanticism, theme (literary), thrillers
+plot-theme; plot, theme (litery)
+politics; Conceptual Index: politics
+pollution; ecology/environmental movement, economic growth, 'law, objective and non-objective', New Left, technology
+polylogism; communism, fascism/Nazism, 'Kant, Immanuel', logic, objectivity, racism
+popular literature; literature, romanticism, thrillers
+possible; agnosticism, arbitrary, certainty, chance, context, knowledge, skepticism
+poverty; altruism, capitalism, charity, freedom, nineteenth century, sacrifice, selfishness
+pragmatism; absolutes, altruism, America, anti-conceptual mentality, certainty, compromise, education, 'Kant, Immanuel', moral-practical dichotomy, morality, objectivity, primacy of existence vs. primacy of consciousness, principles, theory-practice dichotomy, truth, whims/whim-worship
+prestige; altruism, collectivism, second-handers
+pride; ambition, Aristotle, character, emotions, free will, honor, rationality, sacrifice, self-esteem, selfishness, virtue
+primacy of existence vs. primacy of consciousness; absolutes, axiomatic concepts, axioms, consciousness, creation, evasion, existence, God, identity, imagination, 'Kant, Immanuel', metaphysics, mysticism, nature, objectivity, philosophy, Platonic realism, pragmatism, prior certainty of consciousness, subjectivism, universe
+principles; anti-conceptual mentality, compromise, concepts, integration (mental), philosophy, pragmatism, reason, truth
+prior certainty of consciousness; axioms, consciousness, existence, irreducible primaries, primacy of existence vs. primacy of consciousness, sensations
+production; consumption, creation, creators, economic good, economic growth, money, physical force, productiveness, pyramid of ability, reason, statism
+productiveness; ambition, career, competition, creators, life, morality, production, purpose, pride, rationality, reason, virtue
+proof; axiomatic concepts, axioms, corollaries, irreducible primaries, logic, objectivity, perception, reason, self-evident, validation
+property rights; capitalism, causality, communism, contracts, fascism/Nazism, free speech, freedom, human rights and property rights, individual rights, patents and copyrights, production, socialism, statism
+propositions; concepts, definitions, grammar, induction and deduction, language, meaning (of concepts), numbers, thought/thinking
+psycho-epistemology; anti-conceptual mentality, automatization, consciousness, epistemology, free will, integration (mental), learning, psychology, rationality, style, subconscious
+"psychologizing"; argument from intimidation, character, moral judgment, mysticism, psychology, rationalization, subconscious
+psychology; Conceptual Index: psychology
+'"public interest", the'; capitalism, collectivism, "common good", freedom, individual rights, lobbying, mixed economy, sacrifice, society, welfare state
+public property; collectivism, government, property rights
+purchasing power; capitalism, consumption, credit, economic power vs. political power, free market, inflation, money, production, trader principle
+purpose; career, pride, productiveness, rationality, reason, standard of value, ultimate value, values
+'pursuit of happiness, right to'; founding fathers, happiness, individual rights, selfishness
+pyramid of ability; capitalism, competition, creators, free market, investment, mediocrity, production, productiveness, technology
+
+quotas; "ethnicity", property rights, racism, tribalism
+
+racism; anti-conceptual mentality, collectivism, determinism, "ethnicity", fascism/Nazism, free will, individualism, polylogism, reason, self-esteem, Soviet Russia, tribalism
+"Rand's razor"; "anti-concepts", concept-formation, concepts, definitions, integration (mental), invalid concepts, objectivity, '"package-dealing", fallacy of', unit-economy
+rationality; absolutes, existence, evasion, evil, focus, honesty, independence, integrity, justice, logic, morality, mysticism, pride, primacy of existence vs. primacy of consciousness, productiveness, reason, thought/thinking, virtue
+rationalism vs. empiricism; concepts, epistemology, induction and deduction, 'Kant, Immanuel', knowledge, logic, perception, philosophy, reason
+rationalization; emotions, logic, moral judgment, morality, objectivity, philosophy, proof, rationality, subconscious
+reason; art, axioms, capitalism, concepts, emotions, epistemology, free will, history, individual rights, 'Kant, Immanuel', knowledge, logic, man, morality, Objectivism, objectivity, perception, physical force, production, rationalism vs. empiricism, self-esteem, selfishness, thought/thinking
+"redistribution" of wealth; collectivism, communism, money, property rights, sacrifice
+religion; abortion, agnosticism, altruism, art, atheism, birth control, communism, "conservatives", Dark Ages, faith, God, man, man-worship, morality, mysticism, original sin, philosophy, primacy of existence vs. primacy of consciousness, reason, sacred, sacrifice, sex, soul-body dichotomy, supernaturalism
+Renaissance; Aristotle, art, Dark Ages, 'Enlightenment, Age of', freedom, history, humility, Middle Ages, mysticism, reason, religion, tyranny
+representative government; constitution, democracy, government, individual rights, politics, republic, voting
+republic; America, collectivism, constitution, democracy, individual rights, politics, representative government, voting
+responsibility/obligation; contracts, "duty", free will, 'Kant, Immanuel', life, morality, rationality, selfishness, values
+retaliatory force; anarchism, civil disobedience, government, individual rights, justice, pacifism, peace movements, physical force, self-defense, war
+retroactive law; antitrust laws, businessmen, constitution, government, 'law, objective and non-objective'
+revolution vs. putsch; America, dictatorship, individual rights, New Left, physical force, statism
+"rewriting reality"; absolutes, axioms, causality, existence, identity, metaphysical vs. man-made
+rightists vs. leftists; capitalism, collectivism, "conservatives" vs. "liberals", individual rights, individualism, politics, socialism, statism
+rights of the accused; crime, individual rights, statism
+romanticism; altruism, Aristotle, art, classicism, emotions, free will, 'fundamentality, rule of', literature, metaphysical value-judgments, morality, naturalism, plot, popular literature, reason, thrillers, values
+
+sacred; mysticism, pride, religion, understanding, values
+sacrifice; altruism, "duty", integrity, 'Kant, Immanuel', morality, mysticism, pride, selfishness, selflessness, standard of value, statism, ultimate value, values
+sanction; appeasement, evil, moral cowardice, moral judgment, morality, physical force, sanction of the victim, Soviet Russia
+sanction of the victim; appeasement, businessmen, collectivism, compromise, evil, 'good, the', money, moral cowardice, morality, sanction, Soviet Russia
+savings; consumption, credit, final causation, gold standard, inflation, interest (on loans), investment, middle class, money, production
+science; Aristotle, behaviorism, epistemology, logic, mysticism, philosophy, reason, technology, tribal premise (in economics)
+sculpture; ancient Greece, art, determinism, esthetics, free will, man, metaphysics, painting, philosophy, psycho-epistemology, visual arts
+secession; dictatorship, "ethnicity", freedom, individual rights, national rights, self-determination of nations
+second-handers; altruism, collectivism, competition, creators, dictator, emotions, faith, independence, individualism, loneliness, mysticism, psychology, reason, self, self-esteem, selfishness, selflessness
+self; reason, self-esteem, self-interest, selfishness, selflessness, thought/thinking, values
+self-defense; draft, foreign policy, government, individual rights, 'life, right to', pacifism, retaliatory force, war
+self-determination of nations; "collective rights", democracy, dictatorship, foreign policy, freedom, government, individual rights, national rights, sacrifice, secession, statism
+self-esteem; altruism, free will, humility, love, mental health, pride, psychology, reason, sacrifice, self, selfishness, sex, values
+self-evident; axioms, corollaries, ostensive definition, perception, proof, sensations, validation
+self-interest; emotions, 'good, the', life, morality, Objectivism, principles, rationality, sacrifice, selfishness, selflessness, values
+selfishness; altruism, amoralism, capitalism, charity, collectivism, creators, "duty", emotions, 'good, the', happiness, independence, individualism, life, love, man, morality, 'Nietzsche, Friedrich', '"package-dealing", fallacy of', pride, productiveness, rationality, reason, responsibility/obligation, sacrifice, second-handers, self, self-esteem, self-interest, selflessness, standard of value, trader principle, values, virtue, whims/whim-worship
+selflessness; altruism, love, second-handers, self, selfishness, self-esteem
+sensations; concepts, entity, integration (mental), ostensive definition, perception, pleasure and pain
+sense of life; America, art, artistic creation, benevolent universe premise, emotions, 'Enlightenment, Age of', 'envy/hatred of the good for being the good', esthetic abstractions, esthetic judgment, love, malevolent universe premise, metaphysical value-judgments, metaphysics, philosophy, sex, subconscious
+service; altruism, capitalism, collectivism, '"package-dealing", fallacy of', sacrifice, selfishness, trader principle
+sex; abortion, birth control, emotions, femininity, Freud, love, marriage, philosophy, religion, self-esteem, selfishness, sense of life, soul-body dichotomy, values
+similarity; concept-formation, measurement, perception
+skepticism; absolutes, agnosticism, arbitrary, axioms, certainty, context, epistemology, falsehood, 'Kant, Immanuel', mysticism, "open mind" and "closed mind", perception, possible, proof, reason, self-evident, '"stolen concept", fallacy of', subjectivism, truth
+social system; capitalism, collectivism, government, ideology, individualism, morality, politics, society
+social theory of ethics; God, 'good, the', individualism, intrinsic theory of values, morality, mystical ethics, objective theory of values, society, standard of value, statism, values
+socialism; altruism, capitalism, collectivism, dictatorship, economic power vs. political power, egalitarianism, fascism and communism/socialism, guild socialism, human rights and property rights, individual rights, "liberals", New Left, poverty, property rights, "public property", "redistribution" of wealth, society, Soviet Russia, statism, tribalism, tyranny
+society; collectivism, individualism
+soul-body dichotomy; analytic-synthetic dichotomy, consciousness, emotions, existence, human rights and property rights, life, man, moral-practical dichotomy, 'mystics of spirit and of muscle', rationalism vs. empiricism, religion, reason, theory-practice dichotomy
+Soviet Russia; altruism, America, collectivism, communism, compromise, dictatorship, fascism and communism/socialism, foreign policy, individualism, "liberals", property rights, sacrifice, sanction, socialism, statism, tyranny, United Nations
+space; entity, existence, metaphysics, time, universe
+standard of value; abstractions and concretes, life, man, morality, Objectivism, rationality, reason, teleological measurement, ultimate value, values, virtue
+states' rights; "collective rights", "conservatives", constitution, government, individual rights
+statism; altruism, capitalism, collectivism, communism, "conservatives", dictatorship, fascism/Nazism, government, individual rights, individualism, interventionism (economic), "liberals", physical force, tribalism, tyranny, war, welfare state
+'"stolen concept", fallacy of'; axiomatic concepts, axioms, concepts, hierarchy of knowledge, invalid concepts, 'Kant, Immanuel', logic, perception, truth
+style; art, focus, identity, metaphysics, psycho-epistemology, sense of life, stylization, subject (in art)
+stylization; art, dance, metaphysical value-judgments, painting, style
+subconscious; automatization, consciousness, context, emotions, free will, Freud, integration (mental), introspection, logic, philosophy, psycho-epistemology, "psychologizing", psychology, sense of life, values
+subject (in art); art, literature, metaphysics, painting, psycho-epistemology, sculpture, sense of life, style
+subjectivism; amoralism, anarchism, arbitrary, art, axioms, causality, consciousness, existence, God, identity, emotions, intrinsic theory of values, 'Kant, Immanuel', "libertarians", modern art, morality, objective theory of values, Objectivism, objectivity, pragmatism, primacy of existence vs. primacy of consciousness, prior certainty of consciousness, reason, skepticism, whims/whim-worship
+subjectivism (psychological); amoralism, psycho-epistemology, psychology
+suffering; altruism, benevolent universe premise, compassion, emotions, happiness, malevolent universe premise, mercy, pleasure and pain, virtue
+supernaturalism; atheism, causality, definitions, existence, faith, God, identity, metaphysics, miracles, mysticism, nature, reason
+tabula rasa; Aristotle, consciousness, hierarchy of knowledge, "instinct", perception, rationalism vs. empiricism, values
+tactfulness; appeasement, compromise, justice
+taxation; capitalism, deficit financing, freedom, government, individual rights, inflation, investment, physical force, property rights, "redistribution" of wealth, savings
+technology; ecology/environmental movement, economic growth, New Left, pollution, science, soul-body dichotomy
+teleological measurement; consciousness, life, measurement, money, morality, principles, standard of value, ultimate value, values
+Thanksgiving; America, Christmas, production, religion
+theme (literary); art, characterization, integration (mental), literature, plot, plot-theme, soul-body dichotomy, style, subject (in art)
+theory-practice dichotomy; Platonic realism, pragmatism, principles, rationalism vs. empiricism, soul-body dichotomy
+thought/thinking; causality, concept-formation, concepts, creation, evasion, focus, free will, identity, imagination, integration (mental), irrationality, logic, rationality, reason, selfishness, understanding, virtue
+thrillers; literature, popular literature, romanticism, values
+time; existence, measurement, motion, space, universe
+trader principle; altruism, capitalism, economic power vs. political power, free market, freedom, justice, love, market value, physical force, purchasing power, selfishness, service, soul-body dichotomy, values,war
+tradition; America, anti-conceptual mentality, "conservatives", culture, "ethnicity", faith, history, individualism, tribalism
+tribal premise (in economics); capitalism, collectivism, "common good", individualism, man, production, "redistribution" of wealth, service, tribalism
+tribalism; altruism, America, amoralism, anti-conceptual mentality, collectivism, "ethnicity", individualism, irrationalism, 'Kant, Immanuel', language, psycho-epistemology, racism, reason, self, self-esteem, selfishness, statism
+truth; analytic-synthetic dichotomy, concepts, contradictions, definitions, existence, falsehood, honesty, identity, logic, metaphysical vs. man-made, necessity, objectivity, primacy of existence vs. primacy of consciousness, propositions, reason
+tyranny; dictatorship, government, individual rights, physical force, politics, property rights, statism
+
+ultimate value; emotions, goal-directed action, happiness, hierarchy of knowledge, life, metaphysical, standard of value, '"stolen concept", fallacy of', values
+understanding; concepts, education, integration (mental), knowledge, learning, perception, reason
+unions; capitalism, free market, inflation, middle class, money, poverty
+unit; concept-formation, concepts, epistemology, implicit knowledge, integration (mental), measurement, metaphysics, numbers, unit-economy, words
+unit-economy; automatization, consciousness, definitions, identity, meaning (of concepts), psycho-epistemology, "Rand's razor", words
+United Nations; communism, compromise, foreign policy, sanction, Soviet Russia, war
+universe; causality, existence, identity, infinity, metaphysical vs. man-made, metaphysics, nature, space, time
+utilitarianism; altruism, collectivism, 'good, the', happiness, hedonism, individual rights, 'Mill, John Stuart', morality, pleasure and pain, sacrifice, selfishness
+
+validation; axioms, corollaries, epistemology, induction and deduction, logic, objectivity, proof, self-evident
+values; ambition, character, cynicism, "duty", emotions, 'envy/hatred of the good for being the good', evil, goal-directed action, 'good, the', happiness, "instinct", intrinsic theory of values, "is"-"ought" dichotomy, life, love, man, market value, morality, motivation, motivation by love vs. by fear, normative abstractions, objective theory of values, physical force,  pleasure and pain, purpose, romanticism, second-handers, self-interest, selfishness, sex, standard of value, '"stolen concept", fallacy of', subconscious, subjectivism, teleological measurement, trader principle, ultimate value, virtue
+virtue; character, charity, "duty", evil, free will, happiness, honesty, honor, independence, integrity, justice, morality, pride, productiveness, rationality, values
+visual arts; abstraction (process of), art, artistic creation, concepts, decorative arts, integration (mental), painting, perception, photography, sculpture, stylization
+volitional; free will
+voting; constitution, democracy, economic power vs. political power, government, individual rights, representative government, republic, statism, tyranny
+
+war; capitalism, dictatorship, draft, foreign policy, freedom, genocide, nineteenth century, peace movements, physical force, Soviet Russia, statism, trader principle, tribalism, United Nations
+welfare state; altruism, charity, compassion, fascism and communism/socialism, gold standard, individual rights, inflation, interventionism (economic), lobbying, minority rights, pity, poverty, pragmatism, principles, property rights, racism, "redistribution" of wealth, sacrifice, selfishness, statism, taxation
+whims/whim-worship; amoralism, emotions, final causation, hedonism, irrationality, mysticism, rationality, subjectivism
+"window dressing"; capitalism, "conservatives", "conservatives" vs. "liberals", rightists vs. leftists
+words; communication, concept-formation, concepts, definitions, grammar, language, linguistic analysis, meaning (of concepts), nominalism, perception, psycho-epistemology, unit, unit-economy
+
+'zero, reification of'; axiomatic concepts, axioms, existence, identity, non-existence, '"stolen concept", fallacy of'
+end relation xref_seealso
+
+set echo=on
+
+
+# print topics
+#do size_member od topic done
+#topic isall* ?

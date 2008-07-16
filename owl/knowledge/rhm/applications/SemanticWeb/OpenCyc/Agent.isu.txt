@@ -1,0 +1,37 @@
+ke$ #$Agent isu ?x;
+#$Agent
+\  #$Collection
+\  #$CycLAtomicTerm
+\  #$CycLClosedAtomicTerm
+\  #$CycLClosedDenotationalTerm
+\  #$CycLClosedExpression
+\  #$CycLConstant
+\  #$CycLDenotationalTerm
+\  #$CycLExpression
+\  #$CycLIndexedTerm
+\  #$CycLReifiableDenotationalTerm
+\  #$CycLReifiedDenotationalTerm
+\  #$CycLRepresentedAtomicTerm
+\  #$CycLRepresentedTerm
+\  #$CycLTerm
+\  #$ELExpression
+\  #$ExistingObjectType
+\  #$FirstOrderCollection
+\  #$FixedOrderCollection
+\  #$HLExpression
+\  #$HLIndexedTerm
+\  #$HLReifiedDenotationalTerm
+\  #$Intangible
+\  #$MathematicalOrComputationalThing
+\  #$MathematicalThing
+\  #$ObjectType
+\  #$PartiallyIntangible
+\  #$PublicConstant
+\  #$PublicConstant-CommentOK
+\  #$PublicConstant-DefinitionalGAFsOK
+\  #$SetOrCollection
+\  #$StuffType
+\  #$SubLExpression
+\  #$TemporalStuffType
+\  #$Thing
+ke$

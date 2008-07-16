@@ -1,0 +1,1532 @@
+<HTML>
+<XMP>
+# KEHOME/knowledge/application/SemanticWeb/TAP/tap3full.ho
+# Jan/10/2003
+
+#=======================================#
+# Knowledge Explorer output 		#
+#---------------------------------------#
+# <> existent isc* ?  #	full hierarchy 	#
+#=======================================#
+
+# question <existent isc* ?>
+existent
+/  characteristic
+//    action
+///      COMMAND
+////        ExtractData
+////        altlist
+////        altsize
+////        cd
+////        check
+////        class
+////        clist
+////        clock
+////        csize
+////        date
+////        day
+////        delete
+////        dir
+////        dump
+////        dump/ged
+////        dump/hidden
+////        dump/kb
+////        entropy
+////        exec
+////        explorer
+////        unit:factlist
+////        unit:factsize
+////        find
+////        first-name
+////        flist
+////        fsize
+////        fstatus
+////        ftype
+////        genus_list
+////        genus_path
+////        getenv
+////        given-name
+////        glb
+////        gpath
+////        group_list
+////        group_path
+////        hdepth
+////        help
+////        hlevel
+////        hwalk
+////        interpret_line
+////        isa_exp
+////        isc_exp
+////        kdepth
+////        klevel
+////        klist
+////        ksize
+////        last-name
+////        load/ged
+////        load/kb
+////        ls
+////        lub
+////        max
+////        member_list
+////        member_path
+////        memlist
+////        memsize
+////        menu
+////        middle-name
+////        min
+////        mkdir
+////        month
+////        nvsub
+////        nvtab
+////        path2list
+////        plist
+////        print
+////        psize
+////        pwd
+////        read
+////        read directory
+////        replace
+////        rmdir
+////        sh
+////        size_act
+////        size_alias
+////        size_attr
+////        size_echar
+////        size_eobj
+////        size_fact
+////        size_genus
+////        size_group
+////        size_member
+////        size_part
+////        size_rel
+////        size_unit
+////        suffix-name
+////        sum
+////        surname
+////        title-name
+////        ulist
+////        unique
+////        unit_list
+////        unit_path
+////        upath
+////        usize
+////        vpop
+////        vpush
+////        write
+////        write directory
+////        year
+///      a:producesFood
+///      ask
+///      believe
+///      classify
+///      desire
+///      identify
+////        unit:identify_022
+///      intend
+///      know
+///      live
+////        unit:live_128*
+////        unit:live_125*
+///      measure
+////        unit:measure_026
+///      method
+///      move
+////        unit:move_126*
+///      not live
+////        unit:not live_131*
+///      not move
+////        unit:not move_129*
+///      perceive
+///      performedBy
+///      say
+///      sense
+///      want
+///      event
+//    attribute
+///      FieldOfStudy
+///      Genre
+///      Material
+///      Ontology
+///      PropertyType
+////        ReflexivePropertyType
+////        TaxonomicPropertyType
+////        TitlePropertyType
+////        TransitivePropertyType
+///      Quantity
+///      SpatialDirection
+///      StateOfMatter
+///      UnitOfMeasure
+///      a:ActivityType
+///      a:AttributeValueType
+///      a:EventType
+///      a:TaxonomicPropertyType
+///      a:TitlePropertyType
+///      a:plural
+///      a_dirobject
+///      a_event
+///      a_instrument
+///      a_pplist
+///      a_product
+///      a_purpose
+///      a_subject
+///      a_value
+///      alias
+///      alternative
+///      argclass
+///      argno
+///      argument
+///      automatic
+///      cache name
+///      cconcept
+///      cgenus
+///      cknit
+///      classified
+///      classname
+///      comment
+///      context
+///      cprimitive
+///      cspecies
+///      ctype
+///      cunit
+///      domain
+///      e_action
+///      e_at
+///      e_cause
+///      e_effect
+///      e_from
+///      e_object
+///      e_product
+///      e_subject
+///      e_to
+///      eobject
+///      exlusive
+///      fact
+///      format
+///      fpath
+///      genus
+///      gtype
+///      icache
+///      iconcept
+///      inclusive
+///      inseparable
+///      internal name
+///      ktype
+///      label
+///      meaning
+///      meantype
+///      member
+///      name
+///      nickname
+///      object
+///      order
+///      p_cause
+///      p_event
+///      predicate
+///      primitive
+///      product
+///      propertyTypeCardinality
+///      ptype
+///      purpose
+///      range
+///      rdf:type
+///      role
+///      rootname
+///      sentence
+////        assignment
+/////          unit:fact_102 # {set hformat = hounit}
+/////          unit:fact_115 # {set echo = on}
+/////          unit:fact_331 # {set removehtml = YES}
+/////          unit:fact_107 # {set hcheck = YES}
+/////          unit:fact_112 # {set hreduce = NO}
+/////          unit:fact_336 # {set hfocus += [ person ]}
+/////          unit:fact_098 # {set hfocus += [ nonexistent ]}
+/////          unit:fact_104 # {set hpad = 10}
+/////          unit:fact_333 # {set hfocus += [ chit ]}
+/////          unit:fact_002 # {set . = existent}
+/////          unit:fact_028 # {set measurement = $Sentence}
+/////          unit:fact_101 # {set hminfactid = $klastid}
+/////          unit:fact_109 # {set hchar = YES}
+/////          unit:fact_338 # {set echo = on}
+/////          unit:fact_106 # {set hmaxlevel = 20}
+/////          unit:fact_111 # {set hrelation = YES}
+/////          unit:fact_335 # {set hfocus += [ group ]}
+/////          unit:fact_097 # {set debug = NO}
+/////          unit:fact_103 # {set htab = 2}
+/////          unit:fact_332 # {set savehref = YES}
+/////          unit:fact_001 # {set echo = off}
+/////          unit:fact_100 # {set hfocus += [ newproposition ]}
+/////          unit:fact_108 # {set hop = YES}
+/////          unit:fact_337 # {set nameformat = shortname}
+/////          unit:fact_024 # {set knowledge = $Sentence}
+/////          unit:fact_099 # {set hfocus += [ unknown ]}
+/////          unit:fact_105 # {set charformat = column}
+/////          unit:fact_110 # {set hmethod = YES}
+/////          unit:fact_118 # {set echo = off}
+/////          unit:fact_334 # {set hfocus += [ interaction ]}
+////        command
+/////          unit:fact_003 # {do read from kb/tabrasa.ku done}
+/////          unit:fact_209 # {do read from kb/ke.def done}
+/////          unit:fact_339 # {do read from tapscript.mkr done}
+/////          unit:fact_117 # {do read from kb/init.ku done}
+/////          unit:fact_854 # {do read from tapid1.mkr done}
+/////          unit:fact_330 # {do clock od "finished loading definitions" done}
+/////          unit:fact_864 # {do read from tapid2.mkr done}
+/////          unit:fact_043 # {do read from kb/ke.ku done}
+/////          unit:fact_119 # {do read from kb/tabrasa.def done}
+/////          unit:fact_079 # {do read from kb/kvalue.ku done}
+/////          unit:fact_342 # {do read from tap1.mkr done}
+////        production
+/////          unit:fact_021 # {knowledge := man do identify od existent done}
+/////          unit:fact_025 # {measurement := man do measure od characteristic done}
+////        question
+/////          unit:fact_853 # {existent isc**2 ?}
+/////          unit:fact_863 # {existent isc**3 ?}
+/////          unit:fact_891 # {existent isc* ?}
+////        statement
+/////          definition
+/////          s_action
+//////            s_differentiation
+///////              unit:fact_870 # {PLANT isd Tangible}
+///////              unit:fact_872 # {Class isd Set}
+///////              unit:fact_874 # {BodyPart isd part}
+///////              unit:fact_868 # {person isd Agent}
+///////              unit:fact_873 # {Literal isd group}
+///////              unit:fact_886 # {FoodActivity isd Activity}
+//////            s_identification
+//////            s_integration
+///////              unit:fact_857 # {entity isi Agent,Tangible}
+///////              unit:fact_875 # {attribute isi FieldOfStudy,Genre,Material,PropertyType,Quantity,SpatialDirection,StateOfMatter,UnitOfMeasure}
+///////              unit:fact_885 # {action isi a:producesFood,performedBy}
+///////              unit:fact_859 # {attribute isi PropertyType}
+///////              unit:fact_882 # {relation isi subClassOf,subPropertyOf,locatedIn}
+///////              unit:fact_858 # {OBJECT isi Class,Intangible,Literal}
+///////              unit:fact_860 # {interaction isi Activity,Event}
+//////            unit:fact_130 # {PLANT do* live,not move done}
+//////            unit:fact_023 # {man do identify od existent done}
+//////            unit:fact_127 # {ANIMAL do* live,move done}
+//////            unit:fact_132 # {OBJECT do* not live done}
+//////            unit:fact_027 # {man do measure od characteristic done}
+/////          s_attribute
+//////            unit:fact_075 # {event has e_action,e_product,e_subject,e_object,e_at,e_from,e_to,e_cause,e_effect}
+//////            unit:fact_521 # {UnitOfMeasure has characteristic += [ amazonMap ]}
+//////            unit:fact_633 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_745 # {UnitOfMeasure has range += [ TimeOfDay ]}
+//////            unit:fact_382 # {BodyPart has label += [ body part ]}
+//////            unit:fact_539 # {UnitOfMeasure has characteristic += [ bioEventBodyPart ]}
+//////            unit:fact_510 # {UnitOfMeasure has domain += [ MediaObject ]}
+//////            unit:fact_622 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_734 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_846 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_528 # {UnitOfMeasure has characteristic += [ arg3Type ]}
+//////            unit:fact_595 # {UnitOfMeasure has range += [ Country ]}
+//////            unit:fact_611 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_723 # {UnitOfMeasure has domain += [ Corporation ]}
+//////            unit:fact_790 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_835 # {UnitOfMeasure has range += [ Product ]}
+//////            unit:fact_517 # {UnitOfMeasure has range += [ ProductType ]}
+//////            unit:fact_584 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_629 # {UnitOfMeasure has range += [ WebSite ]}
+//////            unit:fact_696 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_600 # {UnitOfMeasure has range += [ ProductType ]}
+//////            unit:fact_712 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_824 # {UnitOfMeasure has range += [ Organization ]}
+//////            unit:fact_506 # {UnitOfMeasure has a:plural += [ Unit Of Measures ]}
+//////            unit:fact_573 # {UnitOfMeasure has range += [ TimeQuantity ]}
+//////            unit:fact_618 # {UnitOfMeasure has range += [ HumanName ]}
+//////            unit:fact_685 # {UnitOfMeasure has domain += [ Auction ]}
+//////            unit:fact_797 # {UnitOfMeasure has range += [ Cuisine ]}
+//////            unit:fact_367 # {AttributeValueType has label += [ Auction ]}
+//////            unit:fact_701 # {UnitOfMeasure has range += [ MediaObject ]}
+//////            unit:fact_813 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_562 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_607 # {UnitOfMeasure has domain += [ Movie ]}
+//////            unit:fact_674 # {UnitOfMeasure has characteristic += [ hasStateOfMatter ]}
+//////            unit:fact_719 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_786 # {UnitOfMeasure has characteristic += [ relevantBrand ]}
+//////            unit:fact_356 # {Animal has a:plural += [ Animals ]}
+//////            unit:fact_802 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_551 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_663 # {UnitOfMeasure has domain += [ Movie ]}
+//////            unit:fact_708 # {UnitOfMeasure has domain += [ Country ]}
+//////            unit:fact_775 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_345 # {kb/ke.ku has Ontology += [  ]}
+//////            unit:fact_569 # {UnitOfMeasure has domain += [ Activity ]}
+//////            unit:fact_540 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_652 # {UnitOfMeasure has range += [ Person ]}
+//////            unit:fact_764 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_809 # {UnitOfMeasure has range += [ Brand ]}
+//////            unit:fact_558 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_641 # {UnitOfMeasure has characteristic += [ hasLongitude ]}
+//////            unit:fact_753 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_547 # {UnitOfMeasure has characteristic += [ chiefExecutive ]}
+//////            unit:fact_659 # {UnitOfMeasure has domain += [ Tangible ]}
+//////            unit:fact_630 # {UnitOfMeasure has characteristic += [ hasIngredient ]}
+//////            unit:fact_742 # {UnitOfMeasure has range += [ Date ]}
+//////            unit:fact_536 # {UnitOfMeasure has characteristic += [ awardWinner ]}
+//////            unit:fact_648 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_731 # {UnitOfMeasure has domain += [ Organization ]}
+//////            unit:fact_843 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_480 # {SpatialDirection has a:plural += [ Spatial Directions ]}
+//////            unit:fact_525 # {UnitOfMeasure has characteristic += [ animalProduces ]}
+//////            unit:fact_592 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_637 # {UnitOfMeasure has range += [ HumanName ]}
+//////            unit:fact_749 # {UnitOfMeasure has characteristic += [ performedBy ]}
+//////            unit:fact_720 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_832 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_068 # {relation has label,format,meaning,automatic,separator}
+//////            unit:fact_402 # {Cuisine has a:plural += [ Cuisines ]}
+//////            unit:fact_514 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_581 # {UnitOfMeasure has characteristic += [ eventUsesTool ]}
+//////            unit:fact_626 # {UnitOfMeasure has range += [ Gender ]}
+//////            unit:fact_693 # {UnitOfMeasure has characteristic += [ inOffice ]}
+//////            unit:fact_738 # {UnitOfMeasure has domain += [ Auction ]}
+//////            unit:fact_599 # {UnitOfMeasure has range += [ Product ]}
+//////            unit:fact_821 # {UnitOfMeasure has range += [ Genre ]}
+//////            unit:fact_570 # {UnitOfMeasure has domain += [ Movie ]}
+//////            unit:fact_615 # {UnitOfMeasure has range += [ EmailAddress ]}
+//////            unit:fact_682 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_727 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_794 # {UnitOfMeasure has range += [ Place ]}
+//////            unit:fact_839 # {UnitOfMeasure has range += [ Activity ]}
+//////            unit:fact_364 # {AttributeValueType has label += [ Attribute Value Type ]}
+//////            unit:fact_476 # {Service has label += [ Service ]}
+//////            unit:fact_588 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_810 # {UnitOfMeasure has a:TaxonomicPropertyType += [ subClassOf ]}
+//////            unit:fact_604 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_671 # {UnitOfMeasure has characteristic += [ hasSocialSecurityNumber ]}
+//////            unit:fact_716 # {UnitOfMeasure has range += [ Material ]}
+//////            unit:fact_783 # {UnitOfMeasure has domain += [ PropertyType ]}
+//////            unit:fact_828 # {UnitOfMeasure has characteristic += [ title ]}
+//////            unit:fact_577 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_689 # {UnitOfMeasure has range += [ WebPage ]}
+//////            unit:fact_660 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_705 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_817 # {UnitOfMeasure has range += [ Event ]}
+//////            unit:fact_566 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_678 # {UnitOfMeasure has domain += [ SportsTeam ]}
+//////            unit:fact_761 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_806 # {UnitOfMeasure has range += [ Date ]}
+//////            unit:fact_555 # {UnitOfMeasure has label += [ data Code ]}
+//////            unit:fact_667 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_779 # {UnitOfMeasure has characteristic += [ quantityMeasuredIn ]}
+//////            unit:fact_750 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_544 # {UnitOfMeasure has characteristic += [ biography ]}
+//////            unit:fact_768 # {UnitOfMeasure has range += [ Food ]}
+//////            unit:fact_421 # {Genre has label += [ Genre ]}
+//////            unit:fact_533 # {UnitOfMeasure has range += [ MediaObject ]}
+//////            unit:fact_645 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_757 # {UnitOfMeasure has domain += [ SportsTeam ]}
+//////            unit:fact_394 # {Concert has label += [ Concert ]}
+//////            unit:fact_439 # {Number has a:plural += [ Numbers ]}
+//////            unit:fact_840 # {UnitOfMeasure has range += [ ActivityType ]}
+//////            unit:fact_522 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_634 # {UnitOfMeasure has range += [ Food ]}
+//////            unit:fact_746 # {UnitOfMeasure has characteristic += [ ownsBrand ]}
+//////            unit:fact_065 # {knit has view,cconcept,cgenus,cspecies,cprimitive,cunit}
+//////            unit:fact_511 # {UnitOfMeasure has range += [ Node ]}
+//////            unit:fact_623 # {UnitOfMeasure has range += [ Food ]}
+//////            unit:fact_690 # {UnitOfMeasure has characteristic += [ imageURL ]}
+//////            unit:fact_735 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_847 # {UnitOfMeasure has characteristic += [ hasCapitalCity ]}
+//////            unit:fact_417 # {FoodActivity has label += [ Gender ]}
+//////            unit:fact_529 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_596 # {UnitOfMeasure has characteristic += [ hasComponent ]}
+//////            unit:fact_612 # {UnitOfMeasure has range += [ PreparedFood ]}
+//////            unit:fact_724 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_791 # {UnitOfMeasure has range += [ Brand ]}
+//////            unit:fact_836 # {UnitOfMeasure has characteristic += [ usedInActivity ]}
+//////            unit:fact_518 # {UnitOfMeasure has characteristic += [ activityOfEvent ]}
+//////            unit:fact_585 # {UnitOfMeasure has range += [ Tool ]}
+//////            unit:fact_697 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_713 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_780 # {UnitOfMeasure has domain += [ QuantityType ]}
+//////            unit:fact_825 # {UnitOfMeasure has characteristic += [ subPropertyOf ]}
+//////            unit:fact_574 # {UnitOfMeasure has characteristic += [ ebayMap ]}
+//////            unit:fact_619 # {UnitOfMeasure has characteristic += [ hasFoodAccessory ]}
+//////            unit:fact_686 # {UnitOfMeasure has range += [ MoneyQuantity ]}
+//////            unit:fact_798 # {UnitOfMeasure has characteristic += [ singular ]}
+//////            unit:fact_032 # {proposition has context,sentence}
+//////            unit:fact_702 # {UnitOfMeasure has characteristic += [ locatedIn ]}
+//////            unit:fact_814 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_451 # {Place has label += [ Place ]}
+//////            unit:fact_563 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_608 # {UnitOfMeasure has range += [ Person ]}
+//////            unit:fact_675 # {UnitOfMeasure has domain += [ Material ]}
+//////            unit:fact_787 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_357 # {Animal has a:producesFood += [ Sausage ]}
+//////            unit:fact_803 # {UnitOfMeasure has range += [ Integer ]}
+//////            unit:fact_552 # {UnitOfMeasure has range += [ Event ]}
+//////            unit:fact_664 # {UnitOfMeasure has range += [ Person ]}
+//////            unit:fact_709 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_776 # {UnitOfMeasure has characteristic += [ publishDate ]}
+//////            unit:fact_346 # {kb/ke.ku has comment += [ TAP KB Fragment on existent ]}
+//////            unit:fact_541 # {UnitOfMeasure has domain += [ HealthDisorder ]}
+//////            unit:fact_653 # {UnitOfMeasure has characteristic += [ hasParticipant ]}
+//////            unit:fact_765 # {UnitOfMeasure has range += [ MoneyQuantity ]}
+//////            unit:fact_447 # {Person has label += [ Person ]}
+//////            unit:fact_559 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_530 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_642 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_754 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_548 # {UnitOfMeasure has domain += [ Organization ]}
+//////            unit:fact_073 # {action has a_event,a_product,a_subject,a_dirobject,a_pplist,a_purpose,a_instrument}
+//////            unit:fact_631 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_743 # {UnitOfMeasure has characteristic += [ occurrenceTimeOfDay ]}
+//////            unit:fact_380 # {BodyPart has a:plural += [ body parts ]}
+//////            unit:fact_537 # {UnitOfMeasure has domain += [ Award ]}
+//////            unit:fact_649 # {UnitOfMeasure has range += [ Corporation ]}
+//////            unit:fact_398 # {Convention has a:plural += [ Conventions ]}
+//////            unit:fact_620 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_732 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_844 # {UnitOfMeasure has characteristic += [ worksFor ]}
+//////            unit:fact_526 # {UnitOfMeasure has domain += [ Animal ]}
+//////            unit:fact_593 # {UnitOfMeasure has characteristic += [ hasCitizenship ]}
+//////            unit:fact_638 # {UnitOfMeasure has characteristic += [ hasLatitude ]}
+//////            unit:fact_721 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_833 # {UnitOfMeasure has characteristic += [ toolUsedToMake ]}
+//////            unit:fact_069 # {method has label,format,meaning,meantype,automatic,separator}
+//////            unit:fact_515 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_582 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_627 # {UnitOfMeasure has characteristic += [ hasHomePage ]}
+//////            unit:fact_694 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_739 # {UnitOfMeasure has range += [ Integer ]}
+//////            unit:fact_376 # {BiologicalEvent has label += [ biological event ]}
+//////            unit:fact_710 # {UnitOfMeasure has characteristic += [ looksmartMap ]}
+//////            unit:fact_822 # {UnitOfMeasure has characteristic += [ subOrganization ]}
+//////            unit:fact_504 # {TransitivePropertyType has label += [ Travel ]}
+//////            unit:fact_571 # {UnitOfMeasure has domain += [ MusicAlbum ]}
+//////            unit:fact_616 # {UnitOfMeasure has characteristic += [ hasFirstName ]}
+//////            unit:fact_683 # {UnitOfMeasure has range += [ ZipCode ]}
+//////            unit:fact_728 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_795 # {UnitOfMeasure has characteristic += [ servesCuisine ]}
+//////            unit:fact_365 # {AttributeValueType has a:EventType += [ Auction ]}
+//////            unit:fact_589 # {UnitOfMeasure has range += [ GeoAddress ]}
+//////            unit:fact_811 # {UnitOfMeasure has rdf:type += [ TransitivePropertyType ]}
+//////            unit:fact_560 # {UnitOfMeasure has characteristic += [ dmozMap ]}
+//////            unit:fact_605 # {UnitOfMeasure has range += [ Date ]}
+//////            unit:fact_672 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_717 # {UnitOfMeasure has characteristic += [ manufacturerModelName ]}
+//////            unit:fact_784 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_829 # {UnitOfMeasure has rdf:type += [ TitlePropertyType ]}
+//////            unit:fact_578 # {UnitOfMeasure has characteristic += [ endingDate ]}
+//////            unit:fact_800 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_661 # {UnitOfMeasure has range += [ Tangible ]}
+//////            unit:fact_706 # {UnitOfMeasure has range += [ Place ]}
+//////            unit:fact_773 # {UnitOfMeasure has characteristic += [ propertyTypeCardinality ]}
+//////            unit:fact_818 # {UnitOfMeasure has characteristic += [ subGenreOf ]}
+//////            unit:fact_455 # {Plant has label += [ Plant ]}
+//////            unit:fact_567 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_679 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_650 # {UnitOfMeasure has characteristic += [ hasMember ]}
+//////            unit:fact_762 # {UnitOfMeasure has characteristic += [ price ]}
+//////            unit:fact_807 # {UnitOfMeasure has characteristic += [ subBrand ]}
+//////            unit:fact_556 # {UnitOfMeasure has characteristic += [ description ]}
+//////            unit:fact_668 # {UnitOfMeasure has characteristic += [ hasResidence ]}
+//////            unit:fact_751 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_545 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_657 # {UnitOfMeasure has characteristic += [ hasPhysicalPart ]}
+//////            unit:fact_769 # {UnitOfMeasure has characteristic += [ projectPrincipal ]}
+//////            unit:fact_740 # {UnitOfMeasure has characteristic += [ occurrenceDate ]}
+//////            unit:fact_534 # {UnitOfMeasure has range += [ Product ]}
+//////            unit:fact_646 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_758 # {UnitOfMeasure has range += [ ActivityType ]}
+//////            unit:fact_841 # {UnitOfMeasure has characteristic += [ versionNumber ]}
+//////            unit:fact_077 # {phenomenon has p_event,p_cause}
+//////            unit:fact_523 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_590 # {UnitOfMeasure has characteristic += [ hasAuthor ]}
+//////            unit:fact_635 # {UnitOfMeasure has characteristic += [ hasLastName ]}
+//////            unit:fact_747 # {UnitOfMeasure has domain += [ Corporation ]}
+//////            unit:fact_830 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_066 # {chit has space,time,view}
+//////            unit:fact_400 # {Convention has label += [ Convention ]}
+//////            unit:fact_512 # {UnitOfMeasure has characteristic += [ accessoryOf ]}
+//////            unit:fact_624 # {UnitOfMeasure has characteristic += [ hasGender ]}
+//////            unit:fact_691 # {UnitOfMeasure has domain += [ Animal ]}
+//////            unit:fact_736 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_485 # {Sport has label += [ Sport ]}
+//////            unit:fact_597 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_613 # {UnitOfMeasure has a:TitlePropertyType += [ hasEmailAddress ]}
+//////            unit:fact_680 # {UnitOfMeasure has characteristic += [ hasZipCode ]}
+//////            unit:fact_725 # {UnitOfMeasure has range += [ Product ]}
+//////            unit:fact_792 # {UnitOfMeasure has characteristic += [ representsPlace ]}
+//////            unit:fact_837 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_519 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_586 # {UnitOfMeasure has characteristic += [ hasAddress ]}
+//////            unit:fact_698 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_602 # {UnitOfMeasure has characteristic += [ hasDateOfBirth ]}
+//////            unit:fact_714 # {UnitOfMeasure has characteristic += [ madeOfMaterial ]}
+//////            unit:fact_781 # {UnitOfMeasure has range += [ UnitOfMeasure ]}
+//////            unit:fact_826 # {UnitOfMeasure has domain += [ PropertyType ]}
+//////            unit:fact_508 # {UnitOfMeasure has label += [ Unit Of Measure ]}
+//////            unit:fact_575 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_687 # {UnitOfMeasure has characteristic += [ homePage ]}
+//////            unit:fact_799 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_369 # {Award has a:plural += [ Awards ]}
+//////            unit:fact_703 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_770 # {UnitOfMeasure has domain += [ Project ]}
+//////            unit:fact_815 # {UnitOfMeasure has characteristic += [ subEvent ]}
+//////            unit:fact_564 # {UnitOfMeasure has characteristic += [ domain ]}
+//////            unit:fact_609 # {UnitOfMeasure has characteristic += [ hasDish ]}
+//////            unit:fact_676 # {UnitOfMeasure has range += [ StateOfMatter ]}
+//////            unit:fact_788 # {UnitOfMeasure has range += [ Brand ]}
+//////            unit:fact_804 # {UnitOfMeasure has characteristic += [ startingDate ]}
+//////            unit:fact_441 # {Number has label += [ Number ]}
+//////            unit:fact_553 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_665 # {UnitOfMeasure has characteristic += [ hasPublisher ]}
+//////            unit:fact_777 # {UnitOfMeasure has domain += [ MediaObject ]}
+//////            unit:fact_123 # {context has space,time,view}
+//////            unit:fact_430 # {Material has label += [ Material ]}
+//////            unit:fact_542 # {UnitOfMeasure has range += [ BodyPart ]}
+//////            unit:fact_654 # {UnitOfMeasure has domain += [ Project ]}
+//////            unit:fact_766 # {UnitOfMeasure has characteristic += [ producesFood ]}
+//////            unit:fact_531 # {UnitOfMeasure has characteristic += [ auctionItem ]}
+//////            unit:fact_643 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_755 # {UnitOfMeasure has characteristic += [ plays ]}
+//////            unit:fact_392 # {Concert has a:plural += [ Concerts ]}
+//////            unit:fact_549 # {UnitOfMeasure has range += [ Person ]}
+//////            unit:fact_520 # {UnitOfMeasure has range += [ ActivityType ]}
+//////            unit:fact_632 # {UnitOfMeasure has domain += [ Food ]}
+//////            unit:fact_744 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_538 # {UnitOfMeasure has range += [ Person ]}
+//////            unit:fact_621 # {UnitOfMeasure has domain += [ Food ]}
+//////            unit:fact_733 # {UnitOfMeasure has characteristic += [ notes ]}
+//////            unit:fact_845 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_415 # {FoodActivity has a:AttributeValueType += [ Gender ]}
+//////            unit:fact_482 # {SpatialDirection has label += [ Spatial Direction ]}
+//////            unit:fact_527 # {UnitOfMeasure has range += [ Tangible ]}
+//////            unit:fact_594 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_639 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_610 # {UnitOfMeasure has domain += [ Cuisine ]}
+//////            unit:fact_722 # {UnitOfMeasure has characteristic += [ manufacturerOf ]}
+//////            unit:fact_834 # {UnitOfMeasure has domain += [ Tangible ]}
+//////            unit:fact_404 # {Cuisine has label += [ Cuisine ]}
+//////            unit:fact_516 # {UnitOfMeasure has range += [ Product ]}
+//////            unit:fact_583 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_628 # {UnitOfMeasure has domain += [ Agent ]}
+//////            unit:fact_695 # {UnitOfMeasure has a:TaxonomicPropertyType += [ instanceOf ]}
+//////            unit:fact_711 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_823 # {UnitOfMeasure has domain += [ Organization ]}
+//////            unit:fact_572 # {UnitOfMeasure has domain += [ Song ]}
+//////            unit:fact_617 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_684 # {UnitOfMeasure has characteristic += [ highestBid ]}
+//////            unit:fact_729 # {UnitOfMeasure has range += [ MoneyQuantity ]}
+//////            unit:fact_796 # {UnitOfMeasure has domain += [ RestaurantOrganization ]}
+//////            unit:fact_700 # {UnitOfMeasure has domain += [ MediaCopy ]}
+//////            unit:fact_812 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_561 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_606 # {UnitOfMeasure has characteristic += [ hasDirector ]}
+//////            unit:fact_673 # {UnitOfMeasure has range += [ Integer ]}
+//////            unit:fact_718 # {UnitOfMeasure has rdf:type += [ TitlePropertyType ]}
+//////            unit:fact_785 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_579 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_801 # {UnitOfMeasure has characteristic += [ sortPriority ]}
+//////            unit:fact_550 # {UnitOfMeasure has characteristic += [ creationIncludesEvent ]}
+//////            unit:fact_662 # {UnitOfMeasure has characteristic += [ hasProducer ]}
+//////            unit:fact_707 # {UnitOfMeasure has a:TitlePropertyType += [ longFormName ]}
+//////            unit:fact_774 # {UnitOfMeasure has domain += [ PropertyType ]}
+//////            unit:fact_819 # {UnitOfMeasure has rdf:type += [ TaxonomicPropertyType ]}
+//////            unit:fact_568 # {UnitOfMeasure has characteristic += [ duration ]}
+//////            unit:fact_651 # {UnitOfMeasure has domain += [ EntertainmentOrganization ]}
+//////            unit:fact_763 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_808 # {UnitOfMeasure has domain += [ Brand ]}
+//////            unit:fact_445 # {Person has a:plural += [ People ]}
+//////            unit:fact_557 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_669 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_640 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_752 # {UnitOfMeasure has characteristic += [ placeLetterCode ]}
+//////            unit:fact_546 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_658 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_071 # {attribute has a_subject,a_value}
+//////            unit:fact_741 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_535 # {UnitOfMeasure has range += [ ProductType ]}
+//////            unit:fact_647 # {UnitOfMeasure has propertyTypeCardinality += [ single ]}
+//////            unit:fact_759 # {UnitOfMeasure has characteristic += [ plural ]}
+//////            unit:fact_730 # {UnitOfMeasure has characteristic += [ memberOf ]}
+//////            unit:fact_842 # {UnitOfMeasure has domain += [ Software ]}
+//////            unit:fact_524 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_591 # {UnitOfMeasure has domain += [ MediaObject ]}
+//////            unit:fact_636 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_748 # {UnitOfMeasure has range += [ Brand ]}
+//////            unit:fact_497 # {TaxonomicPropertyType has label += [ Taxonomic Property Type ]}
+//////            unit:fact_831 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_067 # {file has fname,ftype,fsize,fstatus,file system,fpath,cknit,cconcept,kformat,hformat,hoseparator,relseparator,nvseparator,removehtml,savehref,kerror}
+//////            unit:fact_513 # {UnitOfMeasure has domain += [ AccessoryType ]}
+//////            unit:fact_580 # {UnitOfMeasure has range += [ Date ]}
+//////            unit:fact_625 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_692 # {UnitOfMeasure has range += [ UniformResourceLocator ]}
+//////            unit:fact_737 # {UnitOfMeasure has characteristic += [ numberOfBids ]}
+//////            unit:fact_849 # {UnitOfMeasure has characteristic += [ processorType ]}
+//////            unit:fact_374 # {BiologicalEvent has a:plural += [ biological events ]}
+//////            unit:fact_419 # {Genre has a:plural += [ Genres ]}
+//////            unit:fact_486 # {Sport has label += [ Sports ]}
+//////            unit:fact_598 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_820 # {UnitOfMeasure has domain += [ Genre ]}
+//////            unit:fact_502 # {TransitivePropertyType has a:ActivityType += [ Travel ]}
+//////            unit:fact_614 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_681 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_726 # {UnitOfMeasure has characteristic += [ manufacturerSuggestedRetailPrice ]}
+//////            unit:fact_793 # {UnitOfMeasure has domain += [ Politician ]}
+//////            unit:fact_838 # {UnitOfMeasure has domain += [ ProductType ]}
+//////            unit:fact_587 # {UnitOfMeasure has domain += [ Place ]}
+//////            unit:fact_699 # {UnitOfMeasure has characteristic += [ isCopyOf ]}
+//////            unit:fact_603 # {UnitOfMeasure has domain += [ Person ]}
+//////            unit:fact_670 # {UnitOfMeasure has range += [ Place ]}
+//////            unit:fact_715 # {UnitOfMeasure has domain += [ Product ]}
+//////            unit:fact_782 # {UnitOfMeasure has characteristic += [ range ]}
+//////            unit:fact_827 # {UnitOfMeasure has range += [ PropertyType ]}
+//////            unit:fact_509 # {UnitOfMeasure has characteristic += [ about ]}
+//////            unit:fact_576 # {UnitOfMeasure has propertyTypeCardinality += [ multi ]}
+//////            unit:fact_688 # {UnitOfMeasure has domain += [ Node ]}
+//////            unit:fact_704 # {UnitOfMeasure has domain += [ Organization ]}
+//////            unit:fact_771 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_816 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_453 # {Plant has a:plural += [ Plants ]}
+//////            unit:fact_565 # {UnitOfMeasure has domain += [ PropertyType ]}
+//////            unit:fact_677 # {UnitOfMeasure has characteristic += [ hasTeamCode ]}
+//////            unit:fact_789 # {UnitOfMeasure has characteristic += [ relevantSecondaryBrand ]}
+//////            unit:fact_359 # {Animal has label += [ Animal ]}
+//////            unit:fact_760 # {UnitOfMeasure has domain += [ Class ]}
+//////            unit:fact_805 # {UnitOfMeasure has domain += [ Event ]}
+//////            unit:fact_554 # {UnitOfMeasure has range += [ String ]}
+//////            unit:fact_666 # {UnitOfMeasure has domain += [ MediaObject ]}
+//////            unit:fact_778 # {UnitOfMeasure has range += [ Date ]}
+//////            unit:fact_543 # {UnitOfMeasure has range += [ Class ]}
+//////            unit:fact_655 # {UnitOfMeasure has range += [ Agent ]}
+//////            unit:fact_767 # {UnitOfMeasure has domain += [ Tangible ]}
+//////            unit:fact_449 # {Place has a:plural += [ Places ]}
+//////            unit:fact_532 # {UnitOfMeasure has domain += [ Auction ]}
+//////            unit:fact_644 # {UnitOfMeasure has characteristic += [ hasManufacturer ]}
+//////            unit:fact_756 # {UnitOfMeasure has domain += [ Person ]}
+/////          s_begin
+//////            unit:fact_008 # {tabhi is begin hierarchy}
+//////            unit:fact_054 # {keprim is begin unithierarchy}
+//////            unit:fact_046 # {kehi is begin hierarchy}
+//////            unit:fact_012 # {tabprim is begin unithierarchy}
+/////          s_causality
+/////          s_change
+/////          s_conditional
+/////          s_definition
+//////            unit:fact_159 # {LATTICE iss group with order = "isa"}
+//////            unit:fact_214 # {method iss action with subject = ke,user defined}
+//////            unit:fact_281 # {echo iss variable with purpose = "change echo of ke input"}
+//////            unit:fact_326 # {s_relation iss statement with meaning = { existent:1 isin relation:2 = infon:3 }}
+//////            unit:fact_187 # {space iss attribute with event location}
+//////            unit:fact_242 # {klevel iss COMMAND with purpose = "display distance from top to bottom of hierarchy"}
+//////            unit:fact_299 # {kformat iss variable with purpose = "change input format"}
+//////            unit:fact_148 # {family iss group of person with inclusive,husband,wife}
+//////            unit:fact_203 # {know iss action with ktype = know}
+//////            unit:fact_270 # {pattern iss variable with wildcard}
+//////            unit:fact_315 # {s_definition iss statement with meaning = { concept:1 is genus:2 with differentia:3 }}
+//////            unit:fact_176 # {proposition iss existent with identification of relations between existents}
+//////            unit:fact_231 # {fstatus iss COMMAND with purpose = "display type and rwx permissions of file",format = [ file:1 ]}
+//////            unit:fact_288 # {hminfactid iss variable with purpose = "change hierarchy output minimum fact id"}
+//////            unit:fact_137 # {characteristic iss existent with identity of entity}
+//////            unit:fact_249 # {min iss COMMAND with purpose = "calculate minimum of numeric list"}
+//////            unit:fact_304 # {nvseparator iss variable with purpose = "change name value separator",default = "="}
+//////            unit:fact_165 # {measure iss action with purpose = quantify characteristic}
+//////            unit:fact_220 # {delete iss COMMAND with purpose = "delete unit from concept"}
+//////            unit:fact_277 # {Sentence iss variable with purpose = "record output of last sentence"}
+//////            unit:fact_193 # {VERB iss word with subject,object}
+//////            unit:fact_238 # {hlevel iss COMMAND with purpose = "display distance to top of hierarchy"}
+//////            unit:fact_154 # {identify iss action with specify characteristic}
+//////            unit:fact_266 # {vpush iss COMMAND with purpose = "push current view name on view stack"}
+//////            unit:fact_321 # {s_identity iss statement with meaning = { alias:1 is concept:2 }}
+//////            unit:fact_070 # {r_attribute is relation with format = [ subject:1,attribute:2,value:3 ],meaning = { $1 has $2 = $3 }}
+//////            unit:fact_182 # {role iss attribute with purpose = "define relation meaning"}
+//////            unit:fact_227 # {factsize iss COMMAND with purpose = "display number of facts"}
+//////            unit:fact_294 # {htab iss variable with purpose = "change hierarchy output indent"}
+//////            unit:fact_143 # {directory iss file with file list}
+//////            unit:fact_255 # {pwd iss COMMAND with purpose = "display current directory name (UNIX)"}
+//////            unit:fact_310 # {s_action iss statement with meaning = { entity:1 do action:2 = event:3 od aobject:4 done }}
+//////            unit:fact_171 # {part iss characteristic with separable,single entity,not space,not time}
+//////            unit:fact_216 # {check iss COMMAND with purpose = "check for error"}
+//////            unit:fact_283 # {hcheck iss variable with purpose = "change error check processing"}
+//////            unit:fact_189 # {symbol iss OBJECT with referent}
+//////            unit:fact_244 # {ksize iss COMMAND with purpose = "display number of concepts in knit"}
+//////            unit:fact_160 # {lattice iss LATTICE with ambiguous genus}
+//////            unit:fact_205 # {ask iss action with ktype = say}
+//////            unit:fact_272 # {automatic iss attribute with subject = [ relation,method,group ],purpose = "change automatic declarations"}
+//////            unit:fact_317 # {s_event iss statement with meaning = { event:1 changes eobject:2 from attribute:3 = initial:4 to attribute:3 = final:5 }}
+//////            unit:fact_178 # {quantifier iss word with specify number}
+//////            unit:fact_233 # {getenv iss COMMAND with purpose = "get value of environment variable",format = [ variable:1 ]}
+//////            unit:fact_139 # {command iss sentence with purpose = { do process od knit done },subject = [ ke,sh ]}
+//////            unit:fact_261 # {unique iss COMMAND with purpose = "create unique name"}
+//////            unit:fact_306 # {relseparator iss variable with purpose = "change relation separator",default = ";"}
+//////            unit:fact_167 # {multiset iss group with inclusive,order = none,repetition}
+//////            unit:fact_222 # {dump iss COMMAND with purpose = "print concept record"}
+//////            unit:fact_279 # {cname iss variable with purpose = "change concept name for input file"}
+//////            unit:fact_195 # {word iss symbol with referent = concept,visual-auditory}
+//////            unit:fact_250 # {mkdir iss COMMAND with purpose = "create new directory"}
+//////            unit:fact_156 # {interaction iss characteristic with inseparable,multiple entity,space,time}
+//////            unit:fact_268 # {write directory iss COMMAND with purpose = "write directory hierarchy"}
+//////            unit:fact_323 # {s_iteration iss statement with meaning = "every sentence:1 {proposition list:2}"}
+//////            unit:fact_072 # {r_action is relation with format = [ existent:1,subject:2,action:3,event:4,dirobject:5,pplist:6 ],meaning = { $1 := $2 do $3 = $4 od $5 $6 done }}
+//////            unit:fact_184 # {separator iss symbol with purpose = partition sentence}
+//////            unit:fact_229 # {factlist iss COMMAND with purpose = "list facts"}
+//////            unit:fact_296 # {kehome iss variable with purpose = "change location of ke files"}
+//////            unit:fact_145 # {entity iss existent with primary thing which exists}
+//////            unit:fact_200 # {believe iss action with ktype = believe}
+//////            unit:fact_257 # {read directory iss COMMAND with purpose = "read directory hierarchy"}
+//////            unit:fact_312 # {s_causality iss statement with meaning = { sentence:1 causes sentence:2 ; event:1 causes event:2 }}
+//////            unit:fact_173 # {preposition iss word with existent-attribute relation}
+//////            unit:fact_218 # {clist iss COMMAND with purpose = "list concepts in hierarchy"}
+//////            unit:fact_285 # {hformat iss variable with purpose = "change hierarchy output format"}
+//////            unit:fact_134 # {ANIMAL iss entity with live,move}
+//////            unit:fact_246 # {lub iss COMMAND with purpose = "display least upper bound of concepts"}
+//////            unit:fact_301 # {kmapword iss variable with purpose = "change mapping of rdf words"}
+//////            unit:fact_162 # {live iss action with event = [ birth,death ]}
+//////            unit:fact_274 # {Command iss variable with purpose = "record output of last command"}
+//////            unit:fact_319 # {s_hierarchy iss statement with meaning = { concept:1 isa genus:2 ; concept:1 isc species:3 }}
+//////            unit:fact_190 # {time iss attribute with event sequence}
+//////            unit:fact_235 # {gpath iss COMMAND with purpose = "display genus path to top of hierarchy"}
+//////            unit:fact_029 # {knit iss knowledge with view}
+//////            unit:fact_151 # {exgroup iss group with exclusive mental integration}
+//////            unit:fact_263 # {upath iss COMMAND with purpose = "display species path to bottom of hierarchy"}
+//////            unit:fact_308 # {roleseparator iss variable with purpose = "change role separator",default = ":"}
+//////            unit:fact_169 # {number iss concept with integrate unit}
+//////            unit:fact_224 # {dump/hidden iss COMMAND with purpose = "print hidden concept record"}
+//////            unit:fact_291 # {hreduce iss variable with purpose = "change reduce processing"}
+//////            unit:fact_140 # {concept iss group with mental integration}
+//////            unit:fact_252 # {plist iss COMMAND with purpose = "list primitive concepts in hierarchy"}
+//////            unit:fact_867 # {Agent iss entity with purpose}
+//////            unit:fact_158 # {knit iss knowledge with view}
+//////            unit:fact_213 # {COMMAND iss action with subject = ke,predefined}
+//////            unit:fact_280 # {debug iss variable with purpose = "change debug output"}
+//////            unit:fact_325 # {s_part iss statement with meaning = "existent:1 haspart existent:2 pplist:3"}
+//////            unit:fact_074 # {r_change is relation with format = [ event:1,eobject:2,initial:3,final:4,pplist:5 ],meaning = { $1 do change od $2 from $3 to $4 $5 done }}
+//////            unit:fact_186 # {Set iss group with inclusive,order = none}
+//////            unit:fact_241 # {kdepth iss COMMAND with purpose = "display distance from top to bottom of hierarchy"}
+//////            unit:fact_298 # {kerror iss variable with purpose = "count input file errors"}
+//////            unit:fact_147 # {event isu action with instance}
+//////            unit:fact_202 # {intend iss action with ktype = intend}
+//////            unit:fact_259 # {rmdir iss COMMAND with purpose = "remove empty directory"}
+//////            unit:fact_314 # {s_conditional iss statement with meaning = "if sentence:1 then sentence:2 else sentence:3 fi"}
+//////            unit:fact_175 # {production iss sentence with meaning = "product:1 := sentence:2"}
+//////            unit:fact_230 # {fsize iss COMMAND with purpose = "count bytes in file",format = [ file:1 ]}
+//////            unit:fact_287 # {hmethod iss variable with purpose = "change method processing"}
+//////            unit:fact_136 # {attribute iss characteristic with inseparable,single existent,not space,not time}
+//////            unit:fact_248 # {menu iss COMMAND with purpose = "generate correct sentence syntax for user"}
+//////            unit:fact_303 # {mseparator iss variable with purpose = "change method separator",default = ",",readonly}
+//////            unit:fact_164 # {meaning iss attribute with purpose = define MKR translation}
+//////            unit:fact_276 # {Question iss variable with purpose = "record output of last question"}
+//////            unit:fact_192 # {unknown iss existent with not classified}
+//////            unit:fact_237 # {hdepth iss COMMAND with purpose = "display distance to bottom of hierarchy"}
+//////            unit:fact_153 # {hierarchy iss LATTICE with unique genus}
+//////            unit:fact_265 # {vpop iss COMMAND with purpose = "pop current view name off view stack"}
+//////            unit:fact_320 # {s_identification iss s_action with meaning = { knowledge:1 := man:2 do identify:3 od existent:4 done }}
+//////            unit:fact_181 # {requisite iss group with inclusive,order = none}
+//////            unit:fact_226 # {explorer iss COMMAND with purpose = "edit file system",format = [ directory:1 ]}
+//////            unit:fact_293 # {hpad iss variable with purpose = "change hierarchy output name pad"}
+//////            unit:fact_142 # {differentia iss characteristic with essential}
+//////            unit:fact_254 # {psize iss COMMAND with purpose = "count primitive concepts in hierarchy"}
+//////            unit:fact_170 # {OBJECT iss entity with not live}
+//////            unit:fact_215 # {cd iss COMMAND with purpose = "change directory"}
+//////            unit:fact_282 # {hchar iss variable with purpose = "change characteristic processing"}
+//////            unit:fact_327 # {s_meaning iss statement with meaning = { symbol:1 means referent:2 }}
+//////            unit:fact_076 # {r_causality is relation with format = [ event:1,event:2 ],meaning = { $1 causes $2 }}
+//////            unit:fact_188 # {statement iss sentence with purpose = { do record od knit done }}
+//////            unit:fact_243 # {klist iss COMMAND with purpose = "display list of all concepts in knit"}
+//////            unit:fact_149 # {file iss group with inclusive,input/output knowledge}
+//////            unit:fact_204 # {say iss action with ktype = say}
+//////            unit:fact_271 # {pronoun iss variable with antecedent subject}
+//////            unit:fact_316 # {s_differentiation iss s_action with meaning = { concept:1 isd genus:2 }}
+//////            unit:fact_177 # {purpose iss attribute with man-made}
+//////            unit:fact_232 # {ftype iss COMMAND with purpose = "display type of file",format = [ file:1 ]}
+//////            unit:fact_289 # {hop iss variable with purpose = "change hierarchy verb processing"}
+//////            unit:fact_138 # {classify iss action with product = genus}
+//////            unit:fact_260 # {sum iss COMMAND with purpose = "calculate sum of numeric list"}
+//////            unit:fact_305 # {pseparator iss variable with purpose = "change phrase separator",default = " ",readonly}
+//////            unit:fact_166 # {move iss action with purpose = change space}
+//////            unit:fact_221 # {dir iss COMMAND with purpose = "list files in directory (DOS)"}
+//////            unit:fact_278 # {charformat iss variable with purpose = "change characteristic output format"}
+//////            unit:fact_194 # {view iss attribute with previous knowledge}
+//////            unit:fact_239 # {hwalk iss COMMAND with purpose = "execute action on path in hierarchy",format = [ action:1,concept:2,path:3 ]}
+//////            unit:fact_155 # {infon isu relation with instance}
+//////            unit:fact_267 # {write iss COMMAND with purpose = "write knowledge to file"}
+//////            unit:fact_322 # {s_integration iss s_action with meaning = { concept:1 isi unit:2 }}
+//////            unit:fact_183 # {sentence iss attribute of proposition with purpose = { do record,search,process od knit done }}
+//////            unit:fact_228 # {find iss COMMAND with purpose = "find concepts matching wildcard pattern"}
+//////            unit:fact_295 # {kcase iss variable with purpose = "change lower case input option"}
+//////            unit:fact_144 # {context iss attribute of proposition with space,time,view}
+//////            unit:fact_256 # {read iss COMMAND with purpose = "read knowledge from file"}
+//////            unit:fact_311 # {s_attribute iss statement with meaning = { concept:1 has attribute:2 = value:3 }}
+//////            unit:fact_172 # {PLANT iss entity with live,not move}
+//////            unit:fact_217 # {clock iss COMMAND with purpose = "print date,time,message"}
+//////            unit:fact_284 # {hfocus iss variable with purpose = "change hierarchy output concepts"}
+//////            unit:fact_078 # {r_part is relation with format = [ subject:1,part:2,value:3 ],meaning = { $1 haspart $2 = $3 }}
+//////            unit:fact_133 # {action iss characteristic with inseparable,single entity,space,time}
+//////            unit:fact_245 # {ls iss COMMAND with purpose = "list files in directory (UNIX)"}
+//////            unit:fact_300 # {klastid iss variable with purpose = "record last new id number (readonly)"}
+//////            unit:fact_161 # {list iss group with inclusive,order = space}
+//////            unit:fact_206 # {want iss action with ktype = desire}
+//////            unit:fact_273 # {Assignment iss variable with purpose = "record output of last assignment"}
+//////            unit:fact_318 # {s_group iss statement with meaning = { unit:1 ismem group:2 ; group:3 isany unit:4 }}
+//////            unit:fact_179 # {question iss sentence with purpose = { do search od knit done }}
+//////            unit:fact_234 # {glb iss COMMAND with purpose = "display greatest lower bound of concepts"}
+//////            unit:fact_150 # {group iss OBJECT with mental integration}
+//////            unit:fact_262 # {ulist iss COMMAND with purpose = "list units in hierarchy"}
+//////            unit:fact_307 # {removehtml iss variable with purpose = "change remove HTML commands option"}
+//////            unit:fact_168 # {newproposition iss proposition with format = unknown}
+//////            unit:fact_223 # {dump/ged iss COMMAND with purpose = "print standard GED genealogy file"}
+//////            unit:fact_290 # {hoseparator iss variable with purpose = "change hierarchy separator",default = "/"}
+//////            unit:fact_251 # {nvsub iss COMMAND with purpose = "substitute using pattern-replacement table",label = [ subject,pattern-replacement table ],format = [ string:1,table:2 ]}
+//////            unit:fact_157 # {ke isu OBJECT with purpose = "interpret sentence"}
+//////            unit:fact_269 # {variable iss attribute with subject = ke}
+//////            unit:fact_324 # {s_kaction iss statement with meaning = { entity:1 do kaction:2 = event:3 od aobject:4 done }}
+//////            unit:fact_185 # {sequence iss group with inclusive,order = time}
+//////            unit:fact_240 # {interpret_line iss COMMAND with purpose = "process knit",format = [ proposition list:1 ]}
+//////            unit:fact_297 # {keview iss variable with purpose = "change location of ke file systems"}
+//////            unit:fact_146 # {enumeration iss group with exclusive,order = none}
+//////            unit:fact_201 # {desire iss action with ktype = desire}
+//////            unit:fact_258 # {replace iss COMMAND with purpose = "substitute replacement string for pattern",label = [ subject,pattern,replacement ],format = [ string:1,string:2,string:3 ]}
+//////            unit:fact_313 # {s_class iss s_hierarchy with meaning = { concept:1 isa* existent:2 }}
+//////            unit:fact_174 # {product iss attribute with sentence output}
+//////            unit:fact_219 # {csize iss COMMAND with purpose = "count concepts in hierarchy"}
+//////            unit:fact_286 # {hmaxlevel iss variable with purpose = "change hierarchy maximum level up/down"}
+//////            unit:fact_135 # {assignment iss sentence with purpose = { do modify od ke method done },subject = ke}
+//////            unit:fact_247 # {max iss COMMAND with purpose = "calculate maximum of numeric list"}
+//////            unit:fact_302 # {nameformat iss variable with purpose = "change output format of concept name"}
+//////            unit:fact_163 # {man iss ANIMAL with rational}
+//////            unit:fact_275 # {If iss variable with purpose = "record output of last conditional"}
+//////            unit:fact_191 # {unithierarchy iss group with order = "isu",unique genus}
+//////            unit:fact_236 # {help iss COMMAND with purpose = "display help topic"}
+//////            unit:fact_152 # {ingroup iss group with inclusive mental integration}
+//////            unit:fact_264 # {usize iss COMMAND with purpose = "count units in hierarchy"}
+//////            unit:fact_309 # {context iss attribute with meaning = { at space = space:1,time = time:2,view = view:3 }}
+//////            unit:fact_180 # {relation iss characteristic with inseparable,multiple existent,not space,not time}
+//////            unit:fact_225 # {entropy iss COMMAND with purpose = "count words in file and calculate entropy"}
+//////            unit:fact_292 # {hrelation iss variable with purpose = "change relation processing"}
+//////            unit:fact_019 # {causality relation is proposition with format = { event:1 causes event:2 }}
+//////            unit:fact_141 # {conjunction iss word with statement relation}
+//////            unit:fact_253 # {print iss COMMAND with purpose = "display concept",format = [ concept:* ]}
+/////          s_end
+//////            unit:fact_015 # {end unithierarchy tabprim}
+//////            unit:fact_053 # {end hierarchy kehi}
+//////            unit:fact_011 # {end hierarchy tabhi}
+//////            unit:fact_060 # {end unithierarchy keprim}
+/////          s_event
+/////          s_exit
+/////          s_group
+/////          s_hierarchy
+//////            s_class
+//////            s_hostatement
+///////              unit:fact_047 # {group/enumeration/requisite/family/file system/file//directory}
+///////              unit:fact_052 # {attribute/product/label/format/automatic/meaning/argument/argclass/argno/role/rootname/classname/shortname/name/nickname/alias/internal name/cache name/sex}
+///////              unit:fact_013 # {OBJECT/ke}
+///////              unit:fact_057 # {quantifier/a/all/any/either/no/non/not/some/the}
+///////              unit:fact_010 # {OBJECT/group//enumeration//list//multiset//Set//sequence//concept///number///individual concept///collective concept//LATTICE///lattice///hierarchy//unithierarchy/symbol//separator//word}
+///////              unit:fact_049 # {action/method/COMMAND//class}
+///////              unit:fact_051 # {statement/s_identity/s_definition/s_relation//s_relstatement/s_hierarchy//s_hostatement/s_attribute/s_part/s_action/s_change/s_conditional/s_iteration/s_begin/s_end/s_exit/s_html}
+///////              unit:fact_059 # {conjunction/causes/means/and/or/iff/implies/supports}
+///////              unit:fact_056 # {VERB/is/has/haspart/isapart/isin/do/do*/vdo/set/vset/unset/in/isa/isc/isd/isi/isg/iss/isp/isu/isall/ismem/isany/isalt}
+///////              unit:fact_048 # {attribute/variable//pronoun}
+///////              unit:fact_009 # {existent/entity//ANIMAL///person//PLANT//OBJECT///knowledge////knit///measurement/characteristic//part///chit//attribute///purpose///format///meaning///fact///context///space///time///view///sentence///product///subject///predicate///object//action///sense///perceive///measure///identify//interaction//relation/proposition//newproposition/unknown}
+///////              unit:fact_014 # {space/here/there/everywhere}
+///////              unit:fact_050 # {word/VERB/quantifier/preposition/conjunction/control}
+///////              unit:fact_058 # {preposition/at/out/of/with/od/from/to}
+///////              unit:fact_055 # {separator/comment mark/quote mark/blank/tab/vertical tab/return/newline/newpage/;/&/|/~/{/}/[/]/(/)}
+//////            unit:fact_388 # {Class iss* Node}
+//////            unit:fact_393 # {Concert iss* Event}
+//////            unit:fact_438 # {Number ismem Class}
+//////            unit:fact_443 # {Organization iss* Agent}
+//////            unit:fact_080 # {enumeration isp boolean,enum_automatic,enum_charformat,enum_check,enum_debug,enum_echo,enum_hformat,enum_kformat,enum_menuwindow,enum_nameformat,enum_substitute,enum_systype,yes_no}
+//////            unit:fact_349 # {Activity ismem Class}
+//////            unit:fact_354 # {Agent iss* Node}
+//////            unit:fact_466 # {PropertyType ismem Class}
+//////            unit:fact_471 # {QuantityType iss* Class}
+//////            unit:fact_036 # {existence,identity,identification iss collective concept}
+//////            unit:fact_377 # {Bitmap ismem Class}
+//////            unit:fact_427 # {Literal iss* Node}
+//////            unit:fact_432 # {MediaObject iss* Intangible}
+//////            unit:fact_489 # {StateOfMatter ismem Class}
+//////            unit:fact_494 # {Tangible iss* Node}
+//////            unit:fact_656 # {UnitOfMeasure iss* performedBy}
+//////            unit:fact_064 # {units isu Set}
+//////            unit:fact_460 # {ProductType ismem Class}
+//////            unit:fact_505 # {UnitOfMeasure ismem Class}
+//////            unit:fact_087 # {enum_menuwindow isany inputmenu,console}
+//////            unit:fact_092 # {enum_check isany knit,genus,species,unit,primitive,loop,link,nonexistent,unknown,newproposition,chit,event,definition,alias,characteristic,attribute,part,action,relation,value}
+//////            unit:fact_199 # {ktype iss attribute}
+//////            unit:fact_366 # {AttributeValueType iss* Event}
+//////            unit:fact_371 # {BeliefSystem ismem Class}
+//////            unit:fact_416 # {FoodActivity iss* Intangible}
+//////            unit:fact_478 # {SocioReligiousEvent iss* Event}
+//////            unit:fact_483 # {Sport ismem Class}
+//////            unit:fact_389 # {CommunicationMedium ismem Class}
+//////            unit:fact_444 # {Person ismem Class}
+//////            unit:fact_081 # {boolean isany true,false}
+//////            unit:fact_355 # {Animal ismem Class}
+//////            unit:fact_360 # {Array ismem Class}
+//////            unit:fact_405 # {CyberPlace ismem Class}
+//////            unit:fact_410 # {EventType iss* Class}
+//////            unit:fact_467 # {PropertyType iss* Node}
+//////            unit:fact_472 # {ReflexivePropertyType ismem Class}
+//////            unit:fact_378 # {Bitmap iss* Literal}
+//////            unit:fact_383 # {Brand ismem Class}
+//////            unit:fact_428 # {Material ismem Class}
+//////            unit:fact_433 # {MediaObjectType ismem Class}
+//////            unit:fact_495 # {TaxonomicPropertyType ismem Class}
+//////            unit:fact_456 # {PopularCharacter ismem Class}
+//////            unit:fact_461 # {ProductType iss* Class}
+//////            unit:fact_088 # {enum_nameformat isany shortname,rootname,classname,alias,internal name,cache name,nickname}
+//////            unit:fact_093 # {enum_check isany count,group,file,enumeration,requisite,list,sequence,set,hierarchy,lattice,person,family}
+//////            unit:fact_372 # {BeliefSystem iss* Intangible}
+//////            unit:fact_422 # {HistoricEvent ismem Class}
+//////            unit:fact_479 # {SpatialDirection ismem Class}
+//////            unit:fact_484 # {Sport iss* Activity}
+//////            unit:fact_395 # {ConflictEvent ismem Class}
+//////            unit:fact_450 # {Place iss* Tangible}
+//////            unit:fact_500 # {TransitivePropertyType ismem Class}
+//////            unit:fact_082 # {enum_automatic isany NONE,ISA*,ISA,ISS,ISU,ISALT,ISMEM}
+//////            unit:fact_361 # {Array iss* Literal}
+//////            unit:fact_406 # {CyberPlace iss* Intangible}
+//////            unit:fact_411 # {FieldOfStudy ismem Class}
+//////            unit:fact_468 # {Quantity ismem Class}
+//////            unit:fact_473 # {ReflexivePropertyType iss* PropertyType}
+//////            unit:fact_379 # {BodyPart ismem Class}
+//////            unit:fact_384 # {Brand iss* Intangible}
+//////            unit:fact_429 # {Material iss* Tangible}
+//////            unit:fact_434 # {MediaObjectType iss* Class}
+//////            unit:fact_496 # {TaxonomicPropertyType iss* PropertyType}
+//////            unit:fact_601 # {UnitOfMeasure iss* hasPhysicalPart}
+//////            unit:fact_350 # {Activity iss* Node}
+//////            unit:fact_457 # {PopularCharacter iss* Agent}
+//////            unit:fact_462 # {ProfessionalType ismem Class}
+//////            unit:fact_507 # {UnitOfMeasure iss* Intangible}
+//////            unit:fact_848 # {UnitOfMeasure iss* locatedIn}
+//////            unit:fact_089 # {enum_substitute isany none,slow,fast}
+//////            unit:fact_094 # {enum_debug isany ACTION,ALIAS,ARITY,ASSIGN,ATTR,CHAR,CHANGE,CHARNEST,CLASSIFY,COMMAND,CONCEPT,CONJ,CONTINUE,COUNT,DEDUCE,DELETE,DIR,DOLLAR,EVENT,GLB,GROUP,HOP}
+//////            unit:fact_368 # {Award ismem Class}
+//////            unit:fact_373 # {BiologicalEvent ismem Class}
+//////            unit:fact_418 # {Genre ismem Class}
+//////            unit:fact_423 # {HistoricEvent iss* Event}
+//////            unit:fact_490 # {StateOfMatter iss* Intangible}
+//////            unit:fact_396 # {ConflictEvent iss* Event}
+//////            unit:fact_446 # {Person iss* Agent}
+//////            unit:fact_501 # {TransitivePropertyType iss* PropertyType}
+//////            unit:fact_083 # {enum_charformat isany line,column}
+//////            unit:fact_362 # {AttributeValueType ismem Class}
+//////            unit:fact_407 # {Event ismem Class}
+//////            unit:fact_412 # {FieldOfStudy iss* Intangible}
+//////            unit:fact_469 # {Quantity iss* Intangible}
+//////            unit:fact_474 # {Service ismem Class}
+//////            unit:fact_385 # {Broadcast ismem Class}
+//////            unit:fact_390 # {CommunicationMedium iss* Intangible}
+//////            unit:fact_435 # {Node ismem Class}
+//////            unit:fact_440 # {Number iss* Literal}
+//////            unit:fact_888 # {Auction iss Event}
+//////            unit:fact_122 # {attribute isg separable,inseparable,exlusive,inclusive,order,genus,species,primitive,unit,context,sentence,subject,predicate,object,verb,classified,purpose}
+//////            unit:fact_351 # {ActivityType ismem Class}
+//////            unit:fact_401 # {Cuisine ismem Class}
+//////            unit:fact_458 # {Product ismem Class}
+//////            unit:fact_463 # {ProfessionalType iss* Class}
+//////            unit:fact_095 # {enum_debug isany HTML,ISD,KACTION,LOOP,LUB,MAP,MEANING,MENU,METHOD,NAME,NEWWORD,NEXT,NO,NULL,NUMERIC,PARSE,PATH,PRODUCT,PROP,QUANTIFIER,QUESTION}
+//////            unit:fact_424 # {Intangible ismem Class}
+//////            unit:fact_491 # {String ismem Class}
+//////            unit:fact_061 # {infons isu Set}
+//////            unit:fact_397 # {Convention ismem Class}
+//////            unit:fact_452 # {Plant ismem Class}
+//////            unit:fact_084 # {enum_echo isany on,off}
+//////            unit:fact_358 # {Animal iss* Tangible}
+//////            unit:fact_363 # {AttributeValueType iss* Class}
+//////            unit:fact_408 # {Event iss* Node}
+//////            unit:fact_413 # {FoodActivity ismem Class}
+//////            unit:fact_475 # {Service iss* Activity}
+//////            unit:fact_212 # {attribute isg ctype,gtype,utype,ptype,ktype,meantype,subject,verb,object}
+//////            unit:fact_386 # {Broadcast iss* Event}
+//////            unit:fact_391 # {Concert ismem Class}
+//////            unit:fact_498 # {TitlePropertyType ismem Class}
+//////            unit:fact_347 # {Account ismem Class}
+//////            unit:fact_352 # {ActivityType iss* Class}
+//////            unit:fact_459 # {Product iss* Tangible}
+//////            unit:fact_464 # {Project ismem Class}
+//////            unit:fact_096 # {enum_debug isany READ,RELATION,ROLE,SEMICOLON,SIZE,SPLIT,SYMBOL,TOKEN,UNPARSE,VALUE,WINDOW,YES}
+//////            unit:fact_375 # {BiologicalEvent iss* Event}
+//////            unit:fact_425 # {Intangible iss* Node}
+//////            unit:fact_487 # {SportsEvent ismem Class}
+//////            unit:fact_492 # {String iss* Literal}
+//////            unit:fact_062 # {values isu Set}
+//////            unit:fact_448 # {Place ismem Class}
+//////            unit:fact_503 # {TransitivePropertyType iss* Activity}
+//////            unit:fact_085 # {enum_hformat isany ku,ho,hounit,rel,dir,alpha,outline,xml}
+//////            unit:fact_090 # {yes_no isany YES,NO}
+//////            unit:fact_409 # {EventType ismem Class}
+//////            unit:fact_414 # {FoodActivity iss* activity}
+//////            unit:fact_481 # {SpatialDirection iss* Intangible}
+//////            unit:fact_387 # {Class ismem Class}
+//////            unit:fact_442 # {Organization ismem Class}
+//////            unit:fact_499 # {TitlePropertyType iss* PropertyType}
+//////            unit:fact_124 # {action isg perceive,identify,measure,classify}
+//////            unit:fact_348 # {Account iss* Intangible}
+//////            unit:fact_353 # {Agent ismem Class}
+//////            unit:fact_403 # {Cuisine iss* Intangible}
+//////            unit:fact_465 # {Project iss* Event}
+//////            unit:fact_470 # {QuantityType ismem Class}
+//////            unit:fact_040 # {perceive iss action}
+//////            unit:fact_381 # {BodyPart iss* Tangible}
+//////            unit:fact_426 # {Literal ismem Class}
+//////            unit:fact_431 # {MediaObject ismem Class}
+//////            unit:fact_488 # {SportsEvent iss* Event}
+//////            unit:fact_493 # {Tangible ismem Class}
+//////            unit:fact_772 # {UnitOfMeasure iss* performedBy}
+//////            unit:fact_063 # {events isu Set}
+//////            unit:fact_399 # {Convention iss* Event}
+//////            unit:fact_454 # {Plant iss* Tangible}
+//////            unit:fact_850 # {UnitOfMeasure iss* hasComponent}
+//////            unit:fact_086 # {enum_kformat isany ku,ho,hounit,rel,dir,xml,mcf,rdf}
+//////            unit:fact_091 # {enum_systype isany "X Windows","UNIX","NT Console","MS Windows","Windows XP","Windows 98","DOS"}
+//////            unit:fact_370 # {Award iss* Intangible}
+//////            unit:fact_420 # {Genre iss* Intangible}
+//////            unit:fact_477 # {SocioReligiousEvent ismem Class}
+/////          s_html
+//////            unit:fact_120 # {< HTML >}
+//////            unit:fact_344 # {< XMP >}
+//////            unit:fact_852 # {< /HTML >}
+//////            unit:fact_865 # {< HTML >}
+//////            unit:fact_044 # {< HTML >}
+//////            unit:fact_211 # {< XMP >}
+//////            unit:fact_341 # {< XMP >}
+//////            unit:fact_862 # {< /HTML >}
+//////            unit:fact_005 # {< TITLE >}
+//////            unit:fact_041 # {< /XMP >}
+//////            unit:fact_328 # {< /XMP >}
+//////            unit:fact_890 # {< /HTML >}
+//////            unit:fact_114 # {< /HTML >}
+//////            unit:fact_208 # {< /HTML >}
+//////            unit:fact_343 # {< HTML >}
+//////            unit:fact_851 # {< /XMP >}
+//////            unit:fact_007 # {< XMP >}
+//////            unit:fact_210 # {< HTML >}
+//////            unit:fact_340 # {< HTML >}
+//////            unit:fact_856 # {< XMP >}
+//////            unit:fact_861 # {< /XMP >}
+//////            unit:fact_004 # {< HTML >}
+//////            unit:fact_121 # {< XMP >}
+//////            unit:fact_866 # {< XMP >}
+//////            unit:fact_045 # {< XMP >}
+//////            unit:fact_113 # {< /XMP >}
+//////            unit:fact_207 # {< /XMP >}
+//////            unit:fact_889 # {< /XMP >}
+//////            unit:fact_006 # {< /TITLE >}
+//////            unit:fact_042 # {< /HTML >}
+//////            unit:fact_329 # {< /HTML >}
+//////            unit:fact_855 # {< HTML >}
+/////          s_identity
+//////            unit:fact_016 # {man is person}
+//////            unit:fact_039 # {identification is all proposition}
+//////            unit:fact_018 # {relationship is relation}
+//////            unit:fact_197 # {CONJUNCTION is requisite}
+//////            unit:fact_038 # {identity is all characteristic}
+//////            unit:fact_869 # {person is Person}
+//////            unit:fact_017 # {phenomenon is interaction}
+//////            unit:fact_196 # {bag is multiset}
+//////            unit:fact_871 # {PLANT is Plant}
+//////            unit:fact_037 # {existence is all entity}
+//////            unit:fact_198 # {DISJUNCTION is enumeration}
+/////          s_iteration
+/////          s_kaction
+/////          s_meaning
+//////            unit:fact_034 # {word means concept}
+//////            unit:fact_033 # {sentence means relation}
+//////            unit:fact_035 # {concept means existent}
+/////          s_part
+//////            unit:fact_031 # {chit haspart event Set}
+//////            unit:fact_020 # {interaction haspart event Set,causality-relation Set}
+//////            unit:fact_030 # {knit haspart entity-characteristic-proposition hierarchy,chit}
+/////          s_relation
+//////            s_relstatement
+///      separable
+///      sex
+///      shortname
+///      space
+////        unit:here
+////        unit:everywhere
+////        unit:there
+///      species
+///      stv
+///      subject
+///      time
+////        unit:past
+////        unit:present
+////        unit:now
+////        unit:future
+///      uid
+///      unit
+///      utype
+///      variable
+////        .
+////        ..
+////        ...
+////        Assignment
+////        Command
+////        If
+////        Question
+////        Sentence
+////        charformat
+////        cname
+////        debug
+////        echo
+////        fd
+////        fmode
+////        fname
+////        hchar
+////        hcheck
+////        hfocus
+////        hformat
+////        hmaxcount
+////        hmaxlevel
+////        hmethod
+////        hminfactid
+////        hop
+////        hoseparator
+////        hpad
+////        hquote
+////        hreduce
+////        hrelation
+////        htab
+////        iversion
+////        kcase
+////        kehome
+////        kerror
+////        keview
+////        kformat
+////        klastid
+////        kmapword
+////        kname
+////        kquote
+////        kversion
+////        menuwindow
+////        mseparator
+////        nameformat
+////        nvseparator
+////        pattern
+////        pronoun
+/////          unit:you
+/////          unit:we
+/////          unit:they
+/////          unit:he
+/////          unit:she
+/////          unit:none
+/////          unit:I
+/////          unit:it
+////        pseparator
+////        qseparator
+////        relseparator
+////        removehtml
+////        roleseparator
+////        savehref
+////        submethod
+////        systype
+///      verb
+///      view
+////        unit:tabula_rasa
+///      wexplore
+//    differentia
+///      ambiguous genus
+///      antecedent subject
+///      default
+///      essential
+///      event location
+///      event sequence
+///      exclusive
+///      exclusive mental integration
+///      existent-attribute relation
+///      file list
+///      husband
+///      inclusive mental integration
+///      input/output knowledge
+///      instance
+///      integrate unit
+///      man-made
+///      mental integration
+///      multiple entity
+///      multiple existent
+///      not classified
+///      not space
+///      not time
+///      predefined
+///      previous knowledge
+///      primary thing which exists
+///      rational
+///      readonly
+///      referent
+///      repetition
+///      sentence output
+///      single entity
+///      single existent
+///      specify characteristic
+///      specify number
+///      statement relation
+///      unique genus
+///      user defined
+///      visual-auditory
+///      wife
+///      wildcard
+//    interaction
+///      Activity
+////        FoodActivity
+////        Service
+////        Sport
+////        TransitivePropertyType
+///      Event
+////        AttributeValueType
+////        Auction
+////        BiologicalEvent
+////        Broadcast
+////        Concert
+////        ConflictEvent
+////        Convention
+////        HistoricEvent
+////        Project
+////        SocioReligiousEvent
+////        SportsEvent
+//    part
+///      BodyPart
+///      causality-relation Set
+///      chit
+////        unit:chit_here_now_tabula_rasa
+///      entity-characteristic-proposition hierarchy
+///      event Set
+//    relation
+///      locatedIn
+///      r_action
+///      r_attribute
+///      r_causality
+///      r_change
+///      r_hierarchy
+///      r_part
+///      subClassOf
+///      subPropertyOf
+///      infon
+/  entity
+//    ANIMAL
+//    Agent
+///      Organization
+///      firstlevel:person
+///      PopularCharacter
+//    OBJECT
+///      Intangible
+////        Account
+////        Award
+////        BeliefSystem
+////        Brand
+////        CommunicationMedium
+////        Cuisine
+////        CyberPlace
+////        MediaObject
+///      group
+////        LATTICE
+/////          hierarchy
+//////            unit:tabhi
+//////            unit:kehi
+/////          lattice
+////        Literal
+/////          Array
+/////          Bitmap
+/////          Number
+/////          String
+////        Set
+/////          Class
+//////            ActivityType
+//////            AttributeValueType
+//////            EventType
+//////            MediaObjectType
+//////            ProductType
+//////            ProfessionalType
+//////            QuantityType
+/////          unit:values
+/////          unit:infons
+/////          unit:units
+/////          unit:events
+////        concept
+/////          collective concept
+//////            existence
+//////            identification
+//////            identity
+/////          individual concept
+/////          number
+//////            unit:3
+//////            unit:0
+//////            unit:2
+//////            unit:10
+//////            unit:20
+//////            unit:4
+//////            unit:1
+////        enumeration
+/////          unit:enum_hformat
+/////          unit:enum_echo
+/////          unit:enum_nameformat
+/////          unit:enum_charformat
+/////          unit:enum_menuwindow
+/////          unit:enum_automatic
+/////          unit:enum_check
+/////          unit:enum_substitute
+/////          unit:enum_systype
+/////          unit:enum_debug
+/////          unit:boolean
+/////          unit:enum_kformat
+/////          unit:yes_no
+////        exgroup
+////        family
+////        file
+/////          directory
+/////          unit:kb/tabrasa.def
+/////          unit:tap1.mkr
+/////          unit:kb/kvalue.ku
+/////          unit:tapid2.mkr
+/////          unit:kb/ke.ku
+/////          unit:kb/init.ku
+/////          unit:tapscript.out
+/////          unit:tapscript.err
+/////          unit:tapscript.log
+/////          unit:tapscript.mkr
+/////          unit:tapid1.mkr
+/////          unit:kb/ke.def
+/////          unit:kb/tabrasa.ku
+////        file system
+////        ingroup
+////        list
+////        multiset
+////        requisite
+////        sequence
+////        unithierarchy
+/////          unit:tabprim
+/////          unit:keprim
+///      knowledge # {knowledge := man do identify od existent done}
+////        knit
+/////          unit:knit_tabula_rasa
+///      measurement # {measurement := man do measure od characteristic done}
+///      symbol
+////        separator
+/////          unit:#
+/////          unit:;
+/////          unit:[
+/////          unit:{
+/////          unit:-=
+/////          unit:::=
+/////          unit:(
+/////          unit:comment mark
+/////          unit:=
+/////          unit:]
+/////          unit:}
+/////          unit:tab
+/////          unit:vertical tab
+/////          unit:newpage
+/////          unit:"
+/////          unit:'
+/////          unit:,
+/////          unit:<
+/////          unit:|
+/////          unit:*=
+/////          unit::=
+/////          unit:blank
+/////          unit:newline
+/////          unit:)
+/////          unit:+=
+/////          unit:return
+/////          unit:&
+/////          unit:>
+/////          unit:~
+/////          unit:quote mark
+////        word
+/////          VERB
+//////            unit:do*
+//////            unit:isi
+//////            unit:vdo
+//////            unit:isany*
+//////            unit:isc**?
+//////            unit:changes
+//////            unit:do
+//////            unit:isc*
+//////            unit:iss*
+//////            unit:isall*
+//////            unit:is
+//////            unit:isc
+//////            unit:iss
+//////            unit:vset
+//////            unit:isalt
+//////            unit:has
+//////            unit:isp
+//////            unit:isu*
+//////            unit:isa+
+//////            unit:unset
+//////            unit:isg*
+//////            unit:isg
+//////            unit:isc+
+//////            unit:isp*
+//////            unit:isd
+//////            unit:isa
+//////            unit:isc**
+//////            unit:in
+//////            unit:isalt*
+//////            unit:haspart
+//////            unit:isall
+//////            unit:set
+//////            unit:isin
+//////            unit:ismem*
+//////            unit:isu
+//////            unit:ismem
+//////            unit:isany
+//////            unit:isa**?
+//////            unit:isa**
+//////            unit:isa*
+//////            unit:isapart
+/////          conjunction
+//////            unit:supports
+//////            unit:and
+//////            unit:or
+//////            unit:iff
+//////            unit:means
+//////            unit:causes
+//////            unit:implies
+/////          control
+//////            unit:if
+//////            unit:else
+//////            unit:done
+//////            unit:while
+//////            unit:then
+//////            unit:every
+//////            unit:fi
+//////            unit:end
+//////            unit:exit
+//////            unit:when
+//////            unit:begin
+/////          preposition
+//////            unit:to
+//////            unit:from
+//////            unit:with
+//////            unit:od
+//////            unit:at
+//////            unit:of
+//////            unit:out
+/////          quantifier
+//////            unit:all
+//////            unit:the
+//////            unit:some
+//////            unit:no
+//////            unit:any
+//////            unit:either
+//////            unit:not
+//////            unit:a
+//////            unit:non
+///      unit:ke
+//    Tangible
+///      Animal
+///      Place
+///      PLANT
+///      Product
+/  proposition
+//    causality relation
+//    newproposition
+///      unit:fact_437 # {Node has label += [ Root of the taxonomy ]}
+///      unit:fact_887 # {AttributeValueType notiss Event}
+///      unit:fact_436 # {Node has a:description += [ Root of the taxonomy ]}
+/  unknown
+//    unit:a:description
+//    unit:Root
+//    unit:isc**3
+//    unit:isc**2
+//    unit:taxonomy
+
+</XMP>
+</HTML>

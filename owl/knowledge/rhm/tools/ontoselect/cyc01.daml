@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns="http://opencyc.sourceforge.net/daml/cyc#"
+>
+    <daml:Ontology about="">
+        <daml:versionInfo>$Id$</daml:versionInfo>
+        <rdfs:comment>The Cyc Upper Ontology</rdfs:comment>
+    </daml:Ontology>
+    <daml:UniqueProperty rdf:ID="guid">
+        <rdfs:label>guid</rdfs:label>
+        <rdfs:comment>Permanent Global Unique ID for the associated
+            concept -- which enables concept renaming.  Users should not
+            depend upon the DAML ID nor label as fixed for all time.</rdfs:comment>
+        <daml:domain rdf:resource="http://www.daml.org/2001/03/daml+oil#Thing"/>
+        <daml:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </daml:UniqueProperty>
+    <Time-Quantity rdf:ID="AFewDaysDuration">
+        <rdfs:label>a few days duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 days</rdfs:comment>
+        <guid>bd58f6ee-9c29-11b1-9dad-c379636f7270</guid>
+    </Time-Quantity>
+    <OrderOfMagnitudeInterval rdf:ID="AFewDecadesDuration">
+        <rdfs:label>a few decades duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 decades</rdfs:comment>
+        <guid>bd58af72-9c29-11b1-9dad-c379636f7270</guid>
+    </OrderOfMagnitudeInterval>
+    <OrderOfMagnitudeInterval rdf:ID="AFewHoursDuration">
+        <rdfs:label>a few hours duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 hours</rdfs:comment>
+        <guid>bd58fded-9c29-11b1-9dad-c379636f7270</guid>
+    </OrderOfMagnitudeInterval>
+    <OrderOfMagnitudeInterval rdf:ID="AFewMinutesDuration">
+        <rdfs:label>a few minutes duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 minutes</rdfs:comment>
+        <guid>bd5899f0-9c29-11b1-9dad-c379636f7270</guid>
+    </OrderOfMagnitudeInterval>
+    <Time-Quantity rdf:ID="AFewMonthsDuration">
+        <rdfs:label>a few months duration</rdfs:label>
+        <rdfs:comment>A few months 2-10</rdfs:comment>
+        <guid>bd59008b-9c29-11b1-9dad-c379636f7270</guid>
+    </Time-Quantity>
+    <OrderOfMagnitudeInterval rdf:ID="AFewSecondsDuration">
+        <rdfs:label>a few seconds duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 30 seconds</rdfs:comment>
+        <guid>bd589ecf-9c29-11b1-9dad-c379636f7270</guid>
+    </OrderOfMagnitudeInterval>
+    <Time-Quantity rdf:ID="AFewWeeksDuration">
+        <rdfs:label>a few weeks duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 weeks</rdfs:comment>
+        <guid>bd58ddfa-9c29-11b1-9dad-c379636f7270</guid>
+    </Time-Quantity>
+    <Time-Quantity rdf:ID="AFewYearsDuration">
+        <rdfs:label>a few years duration</rdfs:label>
+        <rdfs:comment>Duration of 2 to 10 years</rdfs:comment>
+        <guid>bd589ddb-9c29-11b1-9dad-c379636f7270</guid>
+    </Time-Quantity>
+    <daml:Class rdf:ID="AbandoningSomething">
+        <rdfs:label>abandonments</rdfs:label>
+        <rdfs:comment>The collection of events in which some #$Agent
+            deliberately gives up possession of something, without
+            giving it to another.</rdfs:comment>
+        <guid>bd67b7de-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdfs:subClassOf rdf:resource="#LosingUserRights"/>
+        <rdfs:subClassOf rdf:resource="#PurposefulAction"/>
+        <daml:disjointWith rdf:resource="#GainingUserRights"/>
+    </daml:Class>
+    <daml:Class rdf:ID="Ablation">
+        <rdfs:label>ablations</rdfs:label>
+        <rdfs:comment>A collection of events.  In an #$Ablation, a
+            (usually relatively thin) layer of material is removed from
+            the surface of an object.</rdfs:comment>
+        <guid>bd58b6b3-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#DefaultDisjointScriptType"/>
+        <rdf:type rdf:resource="#TemporalStuffType"/>
+        <rdfs:subClassOf rdf:resource="#Separation-Complete"/>
+        <rdfs:subClassOf rdf:resource="#RemovingSomething"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AboveGroundLevelInAConstruction">
+        <rdfs:label>above ground levels</rdfs:label>
+        <rdfs:comment>A specialization of #$LevelOfAConstruction whose
+            instances are at or above ground level.  See also
+            #$BasementLevelInAConstruction and #$BalconyLevelInAConstruction.</rdfs:comment>
+        <guid>bd588bb2-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#ExistingObjectType"/>
+        <rdfs:subClassOf rdf:resource="#LevelOfAConstruction"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AbradingSomething">
+        <rdfs:label>abrading events</rdfs:label>
+        <rdfs:comment>A collection of events.  In an #$AbradingSomething
+            event, the surface of some object is gradually worn away by
+            scraping or similar physical contact involving friction.
+            Devices used in elements of #$AbradingSomething include
+            files and sand paper; elements of #$AbradingSomething would
+            include the event in which Howard Hughes sanded down the
+            Spruce Goose for the last time, the event in which Lucy
+            Ricardo filed her fingernails just before her singing debut
+            at Rickie&apos;s club, etc.</rdfs:comment>
+        <guid>bd5899e7-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#DefaultDisjointScriptType"/>
+        <rdfs:subClassOf rdf:resource="#Ablation"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AbstractInformationalThing">
+        <rdfs:label>data</rdfs:label>
+        <rdfs:comment>A heterogeneous collection of abstract objects
+            that pertain to information. Subsumes not only
+            #$Proposition, but also the collections #$Sentence,
+            #$CharacterString, #$AtomicSymbol-Abstract, #$Microtheory,
+            #$PropositionalInformationThing, and #$ConceptualWork. Note
+            that while all #$AbstractInformationalThings are abstract
+            objects (this collection is disjoint with
+            #$SpatialThing-Localized), most instances of this collection
+            can have multiple concrete &apos;embodiments&apos;. A single
+            instance of #$Sentence can be written on several peices of
+            paper (see #$instantiationOfAIS); a
+            #$PropositionalInformationThing may be the content of
+            several concrete documents, such as instances of #$BookCopy
+            (see #$containsInfoPropositional-IBT); and several events,
+            such as spoken utterances, may have a certain #$Proposition
+            as their content (see #$containsInformation). Note that some
+            instances of #$AbstractInformationalThing have temporal
+            extent. Examples include all instances of #$Novel-CW and
+            #$Movie-CW. Others specs are disjoint with #$TemporalThing.
+            Examples include all instances of #$Character-Abstract and #$Proposition.</rdfs:comment>
+        <guid>bdff6c64-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#StuffType"/>
+        <rdf:type rdf:resource="http://www.daml.org/2001/03/daml+oil#Class"/>
+        <rdfs:subClassOf rdf:resource="#IntangibleIndividual"/>
+        <daml:disjointWith rdf:resource="#SpatialThing"/>
+        <daml:disjointWith rdf:resource="#Agent"/>
+        <daml:disjointWith rdf:resource="#Event"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AbstractProgrammingLanguage">
+        <rdfs:label>programming languages</rdfs:label>
+        <rdfs:comment>The collection of languages invented for use by
+            computers. This includes both command languages and others
+            which one doesn&apos;t really `program&apos; in.</rdfs:comment>
+        <guid>bd58c2ea-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#ObjectType"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AbstractShapeType">
+        <rdfs:label>abstract shape type</rdfs:label>
+        <rdfs:comment>A collection of collections. An instance SHAPE of
+            #$ShapeType (q.v.) is also an instance of
+            #$AbstractShapeType if and only if SHAPE is a spec of
+            #$GeometricThing-Abstract. It is distinguished from
+            #$GenericShapeType (q.v.), which is the collection of those
+            collections that are instances of #$ShapeType, some of whose
+            instances are abstract, and some of whose instances are
+            localized. There is no &apos;#$LocalizedShapeType&apos;. The
+            instances of #$AbstractShapeType are the acceptable
+            second-arguments of the predicate #$shape. So, if you have
+            have a spherical ball, BALL001, it is true that (#$shape
+            BALL001 (#$AbstractFn #$SphereShape)), but false (in fact,
+            undefined) that (#$shape BALL001 #$SphereShape).</rdfs:comment>
+        <guid>c0f46e32-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="http://www.daml.org/2001/03/daml+oil#Class"/>
+        <rdf:type rdf:resource="#CollectionType"/>
+        <rdfs:subClassOf rdf:resource="#ShapeType"/>
+        <daml:disjointWith rdf:resource="#GenericShapeType"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AcademicProfessional">
+        <rdfs:label>academics</rdfs:label>
+        <rdfs:comment>A collection of persons; a subset of
+            #$Professional.  Each element of #$AcademicProfessional is a
+            person whose job is to educate and/or to perform research as
+            an affiliate of an academic institution.  This includes
+            members of the teaching and/or research staff of schools,
+            colleges, universities, and research institutes.</rdfs:comment>
+        <guid>bd589db6-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#OccupationType"/>
+        <rdfs:subClassOf rdf:resource="#Professional"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AcademicQuarter">
+        <rdfs:label>academic quarters</rdfs:label>
+        <rdfs:comment>Each instance of this collection is a
+            #$TimeInterval defined by some educational institution: one
+            quarter of their #$AcademicYear.  Since the start dates, end
+            dates, and duration may all vary depending on the
+            institution, the year, etc., instances of this collection
+            must unfortunately be time intervals like StanfordSpringQuarter1991.</rdfs:comment>
+        <guid>bd589441-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdfs:subClassOf rdf:resource="#TimeInterval"/>
+        <daml:disjointWith rdf:resource="#TimePoint"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AcademicSemester">
+        <rdfs:label>semesters</rdfs:label>
+        <rdfs:comment>Each instance of this collection is a
+            #$TimeInterval defined by some educational institution: one
+            half of their #$AcademicYear. Since the start dates, end
+            dates and duration may vary depending on the institution and
+            year, instances will be time intervals such as ``StanfordSpringSemester1990-91&apos;&apos;.</rdfs:comment>
+        <guid>bd58ea30-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdfs:subClassOf rdf:resource="#TimeInterval"/>
+        <daml:disjointWith rdf:resource="#TimePoint"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AcademicTrimester">
+        <rdfs:label>trimesters</rdfs:label>
+        <rdfs:comment>Each instance of this collection is a
+            #$TimeInterval defined by some educational institution: one
+            third of their #$AcademicYear. Since the start dates, end
+            dates, and duration may all vary depending on the
+            institution and year, instances of this collection must
+            unfortunately be time intervals like UCLASpringTrimester1990-91.</rdfs:comment>
+        <guid>bd58ea73-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdfs:subClassOf rdf:resource="#TimeInterval"/>
+        <daml:disjointWith rdf:resource="#TimePoint"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AcademicYear">
+        <rdfs:label>academic years</rdfs:label>
+        <rdfs:comment>Each instance of this collection is an annually
+            recurring #$TimeInterval defined by an educational
+            institution.  Since the start dates, end dates, and duration
+            may all vary depending on the institution, the year, etc.,
+            instances of this collection must unfortunately be time
+            intervals like Stanford1989-90AcademicYear.</rdfs:comment>
+        <guid>bd58f188-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdfs:subClassOf rdf:resource="#TimeInterval"/>
+        <daml:disjointWith rdf:resource="#TimePoint"/>
+    </daml:Class>
+    <daml:Class rdf:ID="Acceleration">
+        <rdfs:label>accelerations</rdfs:label>
+        <rdfs:comment>Acceleration is the change in speed of an object
+            per unit time.  It is a measurable physical quantity,
+            measured in units such as MilesPerHourPerSecond.</rdfs:comment>
+        <guid>bd58dc89-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#DerivedNumericAttributeType"/>
+        <rdfs:subClassOf rdf:resource="#ScalarInterval"/>
+        <rdfs:subClassOf rdf:resource="#PhysicalAttribute"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AccessNumber">
+        <rdfs:label>access numbers</rdfs:label>
+        <rdfs:comment>A collection of #$PhoneNumbers. Each element of
+            #$AccessNumber is a string that a user with #$Internet
+            connections uses to connect to his/her #$InternetServiceProvider.</rdfs:comment>
+        <guid>bf796ce3-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#IDStringType"/>
+        <rdfs:subClassOf rdf:resource="#PhoneNumber"/>
+    </daml:Class>
+    <daml:Class rdf:ID="AccessingAnIBT">
+        <rdfs:label>information-accessing events</rdfs:label>
+        <rdfs:comment>A collection of information transfer events.  Each
+            element of #$AccessingAnIBT is an action by which an agent
+            accesses the content of some IBT (i.e., an element of
+            #$InformationBearingThing).  Examples include (getting
+            information from) reading a newspaper, watching a film,
+            listening to a musical performance, decoding an encrypted
+            message, seeing a traffic police officer wave you on, or
+            hearing your roommate ask you to take out the trash.  Of
+            course, communication conventions play a role here.  In the
+            #$NaiveInformationMt, Cyc simply assumes that an agent who
+            accesses an IBT understands its content afterwards.  In the
+            #$InformationGMt, Cyc makes the more complicated inference
+            that an agent who accesses an IBT understands its content
+            afterwards only if the agent is able to get the encoded
+            information using a convention familiar to that agent.  See
+            also #$CommunicationConvention, #$hasCommConvention, #$usesCommConventionForInfo.</rdfs:comment>
+        <guid>bd58d61f-9c29-11b1-9dad-c379636f7270</guid>
+        <rdf:type rdf:resource="#TemporalObjectType"/>
+        <rdf:type rdf:resource="#DefaultDisjointScriptType"/>
+        <rdfs:subClassOf rdf:resource="#TransferIn"/>
+        <rdfs:subClassOf rdf:resource="#PurposefulAction"/>
+        <rdfs:subClassOf rdf:resource="#InformationTransferEvent"/>
+    </daml:Class>

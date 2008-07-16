@@ -1,0 +1,21 @@
+# <html><xmp>
+# KEHOME/knowledge/rhm/applications/Genealogy/bin/newmarry.mkr
+# 1999/Aug/6
+# new syntax Jun/26/2005
+
+# update r_marry relation
+#   from r_divorce relation
+
+let echo=off;
+do read from marry.rel done;
+do read from divorce.rel done;
+
+every x isa family {
+  set . = $x;
+  do print od "$x, $husband, $wife, $marriagetype, $marriagedate, $marriageplace, $divorcedate, $divorceplace;" done;
+};
+
+let echo=on;
+exit;
+
+# </xmp></html>

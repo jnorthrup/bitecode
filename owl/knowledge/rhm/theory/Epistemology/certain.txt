@@ -1,0 +1,28 @@
+# 1999/4/6
+
+#========================#
+# certainty of knowledge #
+#========================#
+
+# Reference:
+# Peikoff, OPAR, chapter 5
+
+# NOTE: proposition is False
+#	if not(proposition) is True
+
+
+proposition	:= person do think
+evidence	:= person do test proposition
+validity	:= person do evaluate evidence
+decision	:= person do decide proposition with validity
+			
+
+# person:
+# 
+# proposition:	(Deduction/Induction from Sensedata) or Emotion or Imagination
+# 
+# evidence:	Sensedata or Emotion
+# evaluate:	with Reason or Faith
+# validity:	Arbitrary or Possible or Probable or Certain
+# 
+# decision:	Arbitrary or Possible or Probable or True

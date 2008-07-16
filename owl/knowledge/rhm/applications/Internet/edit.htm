@@ -1,0 +1,47 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+</head>
+<body>
+
+<pre>
+# KEHOME/knowledge/ApplicationInternet/edit.htm
+# 1999/2/7
+# new syntax Sep/29/2002
+
+#===========================#
+# edit Internet Hierarchies #
+#===========================#
+# NOTE: you can also edit .ho files
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with your favorite text editor
+
+set hfocus = Directory
+delete is method with
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format=[existent:1],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; meaning={$1 isd nonexistent}
+move is method with
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format=[existent:1,existent:2],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; meaning={$1 isd $2}
+
+
+#do read od <a href="compare.htm">compare.htm</a> done
+
+do read from dir1.ho done
+
+#
+# edit using isi, isd, move, delete
+#
+
+do check od knit done
+
+do write to dir2.ho done
+
+exit
+
+
+</pre>
+
+</body>
+</html>

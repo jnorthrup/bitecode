@@ -1,0 +1,48 @@
+# KEHOME/knowledge/ExamplesLogic/AEIOproposition.ku
+# Jul/26/2002
+
+#==========================#
+# categorical propositions #
+#   standard forms         #
+#==========================#
+# S,P are sets of existents
+# with specific characteristics
+
+
+# two terms
+#----------
+# all	S is P       # A    implies	some P     is S
+# no	S is P       # E    implies	no   P     is S
+# some	S is P       # I    implies	some P     is S
+# some	S is not P   # O    implies	some not P is S
+
+
+# direct KR translation
+#----------------------
+all   S1 isa* P1	# A
+no    S2 isa* P2	# E
+some  S3 isa* P3	# I
+some  S4 isa* not P4	# O
+
+
+# equivalent KR translation
+#--------------------------
+S1            isa* P1		  # A
+S2 and P2     is   nonexistent	  # E
+S3 and P3     isa* existent	  # I
+S4 and not P4 isa* existent	  # O
+
+
+# equivalent KR translation
+#--------------------------
+nonexistent is    S1 and not P1			# A
+nonexistent is    S2 and P2			# E
+existent    isall S3 and P3     and other3	# I
+existent    isall S4 and not P4 and other4	# O
+
+
+
+# output
+#-------
+existent    ise**1 ?
+nonexistent ise*   ?

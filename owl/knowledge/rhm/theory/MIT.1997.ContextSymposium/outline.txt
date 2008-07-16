@@ -1,0 +1,36 @@
+
+
+working paper
+Context in Knowledge Representation and Natural Language
+AAAI 1997 Fall Symposium, MIT, November 8-10
+
+
+What is Context?
+================
+Richard H. McCullough
+organization = "Richard H. McCullough, Knowledge Engineer"
+hometown = USA/California/Pioneer/95666-9586
+email = rhm@cdepot.net
+homepage = "http://www2.cdepot.net/~rhm"
+phone = 209-295-1365
+
+
+Outline
+=======
+Who am I?
+What is context?
+Principles of Knowledge
+Tabula Rasa
+
+KR Design Philosophy
+KR vs. English grammar
+KR vs. Formal Concept Analysis
+
+Examples
+  I is man1
+  Amati & Pirri Italy
+
+What is Knowledge Explorer?
+Where can you get more information?
+
+References

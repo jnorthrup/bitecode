@@ -1,0 +1,110 @@
+# input  file <GED.KU>
+# output file <ged.out>
+# error  file <ged.err>
+# log    file <ged.log>
+# INFO: kehome = /home/ke
+# INFO: systype = DOS
+# INFO: iversion = Icon Version 9.3.  November 25, 1996
+# INFO: kversion = Knowledge Explorer version 3.8  1999/7/31
+# clock <1999/07/31 04:11:45> # finished opening files
+
+##### Hello. I am ke. #####
+##### Don't forget to register. #####
+##### Please wait while I load the tabula_rasa knowledge base. #####
+# clock <1999/07/31 04:11:48> # finished loading tabula_rasa
+# command <!read kb/init.ku>
+# clock <1999/07/31 04:11:48> # loading tabula_rasa definitions
+# clock <1999/07/31 04:11:50> # loading ke definitions
+# clock <1999/07/31 04:11:52> # finished loading definitions
+# clock <1999/07/31 04:11:53> # finished !menu
+# command <!read GED.KU>
+# statement <person has sex,family_child,family_spouse,note,prefername,birthday,birthplace,deathday,deathplace,deathcause>
+# statement <family has husband,wife,child,note,marriageday,marriageplace,divorceday,divorceplace>
+# statement <note has text>
+# command <!read family.ku>
+# clock <1999/07/31 04:11:53> # loading family history
+# clock <1999/07/31 04:12:24> # checking family history
+12 # !psize person
+4 # !psize family
+############################################################
+########## CHECKING KNIT view = v_input ##########
+# genus error <2> <209-295-1365 isa [fax,
+    phone]>
+# genus error <2> <CA isa [space,
+    state]>
+# genus error <0> <school isa []>
+# genus count:        1091 units, 3 errors
+# loop count:         1091 units, 0 units with loops
+# link count:         1091 units, 0 units with broken genus or unit links
+# link count:         1091 units, 0 units with broken group or member links
+# newstatement count: 0
+# newword count:      7
+# chit count:         11
+# event count:        18
+# concept undefined: adopt is action with unknown differentia
+# concept undefined: city is attribute with unknown differentia
+# concept undefined: company is attribute with unknown differentia
+# concept undefined: country is attribute with unknown differentia
+# concept undefined: degree is attribute with unknown differentia
+# concept undefined: die is action with unknown differentia
+# concept undefined: divorce is action with unknown differentia
+# concept undefined: email is attribute with unknown differentia
+# concept undefined: family is group with unknown differentia
+# concept undefined: fax is attribute with unknown differentia
+# concept undefined: graduate is action with unknown differentia
+# concept undefined: identify is action with unknown differentia
+# concept undefined: job is attribute with unknown differentia
+# concept undefined: list is action with unknown differentia
+# concept undefined: marry is action with unknown differentia
+# concept undefined: measure is action with unknown differentia
+# concept undefined: not live is action with unknown differentia
+# concept undefined: not move is action with unknown differentia
+# concept undefined: phone is attribute with unknown differentia
+# concept undefined: sex is attribute with unknown differentia
+# concept undefined: state is attribute with unknown differentia
+# concept undefined: street is attribute with unknown differentia
+# concept undefined: type is attribute with unknown differentia
+# concept undefined: work for is action with unknown differentia
+# concept undefined: zip is attribute with unknown differentia
+# definition count:   1091 units, 263 concepts with 0 bad genus, 25 undefined
+# definition count:   1091 units, 829 prim. units with 0 bad genus, 711 undefined
+# alias count:        1091 units, 21 units have 23 aliases
+# attribute count:    246 attributes total, 227 prim. with 143 unused
+# action count:       124 actions total, 110 prim.
+# value count:        448 char. total, 448 char. have 6 values
+# part count:         1 parts total, 1 prim. with 1 unused
+# enumeration count:  1091 units, 10 enumerations
+# requisite count:    1091 units, 0 requisites
+# set count:          1091 units, 8 sets
+# sequence count:     1091 units, 1 sequences
+# group count:        1091 units, 7 groups
+# hierarchy count:    1091 units, 0 hierarchies
+# lattice count:      1091 units, 0 lattices
+#========== END KNIT view = v_input ==========
+#============================================================
+# clock <1999/07/31 04:12:27> # finished family history
+# assignment <hfocus = [ person , family , newstatement , newword ]>
+# clock <1999/07/31 04:12:27> # generating GEDCOM file
+# clock <1999/07/31 04:12:27> # finished GEDCOM file
+# command <!exit []>
+# clock <1999/07/31 04:12:27> # finished reading knowledge
+
+##### Goodbye. #####
+# clock <1999/07/31 04:12:27> # closing files
+# lines:         1004
+# sentences:     530
+#   nullsentences: 1
+#   newstatements: 0
+#   context:       11
+#   productions:   2
+#   kusentences:   356
+#     kustatements:  254
+#     commands:      61
+#     assignments:   31
+#     questions:     0
+#     condtionals:   0
+#     iterations:    0
+#   hosentences:   143
+#     hostatements:  143
+#   relsentences:  17
+#     relstatements: 17 infons

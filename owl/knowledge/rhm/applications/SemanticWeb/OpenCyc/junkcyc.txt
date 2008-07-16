@@ -1,0 +1,24 @@
+(((?MT . #$BritishEnglishMt)) ((?MT . #$CommonWealthEnglishMt)) ((?MT . #$Ameri
+canEnglishCompositionalPhrasesLexicalMt)) ((?MT . #$CommonWealthEnglishCompositi
+onalPhrasesLexicalMt)) ((?MT . #$EnglishCompositionalPhrasesLexicalMt)) ((?MT .
+#$NonAmericanEnglishMt)) ((?MT . #$EnglishMt)) ((?MT . #$DiseaseLexicalMt)) ((?M
+T . #$GeneralEnglishMt)) ((?MT . #$EnglishLexiconMt)) ((?MT . #$NameLexicalMt))
+((?MT . #$NegationTemplateMt)) ((?MT . #$RTPVBarTemplateMt)) ((?MT . #$AuxInvers
+ionTemplateMt)) ((?MT . #$CopulaConstructionTemplateMt)) ((?MT . #$AuxVerbTempla
+teMt)) ((?MT . #$DeepCoverageTemplateMt)) ((?MT . #$RelativeClausesTemplateMt))
+((?MT . #$GenFormatTemplateMt)) ((?MT . #$GrammarInUseTemplateMt)) ((?MT . #$Nee
+dsOELexicalMt)) ((?MT . #$AllLanguageLexicalNonParaphraseMicrotheoryPSC)) ((?MT
+. #$EnglishTemplateMt)) ((?MT . #$GappedNPTemplateParsingMt)) ((?MT . #$EnglishG
+rammarTemplateMt)) ((?MT . #$TemplateParsingMt)) ((?MT . #$GeneralScientificLexi
+calMt)) ((?MT . #$RelationParaphraseMt)) ((?MT . #$CyclishParaphraseMt)) ((?MT .
+ #$TemporaryEnglishParaphraseMt)) ((?MT . #$EnglishParaphraseMt)) ((?MT . #$Para
+phraseMt)) ((?MT . #$ParaphraseVocabularyMt)) ((?MT . #$TemporaryLexicalAssertio
+nsMt)) ((?MT . #$TemporaryLexicalAssertions-GuessedMt)) ((?MT . #$AllEnglishVali
+datedLexicalMicrotheoryPSC)) ((?MT . #$AllEnglishLexicalMicrotheoryPSC)) ((?MT .
+ #$AllEnglishTemplateMt)) ((?MT . #$MostEnglishTemplateMt)) ((?MT . #$AnthraxTem
+plateMt)) ((?MT . #$AllLexicalNonParaphraseMicrotheoryPSC)) ((?MT . #$AllLexical
+MicrotheoryPSC)) ((?MT . #$GeneralMilitaryLexicalMt)) ((?MT . #$GeneralLexiconMt
+)) ((?MT . #$BookkeepingMt)) ((?MT . #$DataForNLMt)) ((?MT . #$WorldLikeOursColl
+ectorMt)) ((?MT . #$VulnerabilityMt)) ((?MT . #$HumanSocialLifeMt)) ((?MT . #$Hu
+manActivitiesMt)) ((?MT . #$ProductUsageMt)) ((?MT . #$AnimalActivitiesMt)) ((?M
+T . #$AnimalMovementMt)))
