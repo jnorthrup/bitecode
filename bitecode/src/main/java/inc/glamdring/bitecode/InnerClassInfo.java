@@ -4,57 +4,59 @@ import java.nio.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td>short</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>inner_nameIndex</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link inc.glamdring.bitecode.AccessFlagsValue}</td></tr>
- * 
- * @see inc.glamdring.bitecode.InnerClassInfo#InnerClassInfoIndex
- * @see inc.glamdring.bitecode.InnerClassInfo#OuterClassInfoIndex
- * @see inc.glamdring.bitecode.InnerClassInfo#inner_nameIndex
- * @see inc.glamdring.bitecode.InnerClassInfo#AccessFlagsValue
- * </table>
+ * <tr><td>InnerClassInfoIndex</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link InnerClassInfoVisitor#InnerClassInfoIndex(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>OuterClassInfoIndex</td><td>0x2</td><td>0x2</td><td>short</td><td>{@link InnerClassInfoVisitor#OuterClassInfoIndex(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>inner_nameIndex</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link InnerClassInfoVisitor#inner_nameIndex(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>AccessFlagsValue</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link AccessFlagsValue}</td></tr>
+ *
+ * @see InnerClassInfo#InnerClassInfoIndex
+ * @see InnerClassInfo#OuterClassInfoIndex
+ * @see InnerClassInfo#inner_nameIndex
+ * @see InnerClassInfo#AccessFlagsValue
+ *      </table>
  */
-public enum InnerClassInfo { 
-InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFlagsValue(0x2)	{{
-		subRecord=inc.glamdring.bitecode.AccessFlagsValue.class;
-	}}
-;
-	public java.lang.Class clazz;
+public enum InnerClassInfo {
+    InnerClassInfoIndex(0x2), OuterClassInfoIndex(0x2), inner_nameIndex(0x2), AccessFlagsValue(0x2) {{
+    subRecord = AccessFlagsValue.class;
+}};
+    public Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
-     * the size per field, if any
-     */
-	public final int size;
-	/**
-     * the offset from record-start of the field
-     */
-	public final int seek;
-	/**
+    public static int recordLen;
+    /**
+ * the size per field, if any
+ */
+    public final int ___size___;
+    /**
+ * the offset from record-start of the field
+ */
+    public final int ___seek___;
+    /**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=true;
-    /** InnerClassInfo templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = true;
+
+    /**
+     * InnerClassInfo templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	InnerClassInfo (int... dimensions) {
+    InnerClassInfo(int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -68,11 +70,11 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
                 try {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -84,7 +86,8 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
                 if (valueClazz != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
-                    for (String aPackage1 : new String[]{"",
+                    for (String aPackage1 : new String[]{
+                            "",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
                             "java.util.",
@@ -93,17 +96,18 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+        //;
+        recordLen += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -132,13 +136,13 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    //register[TopLevelRecord.TableRecord.ordinal()] + ___table.seek___) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
@@ -147,5 +151,6 @@ InnerClassInfoIndex(0x2),OuterClassInfoIndex(0x2),inner_nameIndex(0x2),AccessFla
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endInnerClassInfo

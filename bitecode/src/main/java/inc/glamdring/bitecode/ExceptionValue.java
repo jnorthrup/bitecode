@@ -4,54 +4,57 @@ import java.nio.*;
 /**
  * <p>recordSize: 8
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>start_pc</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link ExceptionValueVisitor#start_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>end_pc</td><td>0x2</td><td>0x2</td><td>short</td><td>{@link ExceptionValueVisitor#end_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>handler_pc</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link ExceptionValueVisitor#handler_pc(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>catch_type</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link ExceptionValueVisitor#catch_type(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
- * @see inc.glamdring.bitecode.ExceptionValue#start_pc
- * @see inc.glamdring.bitecode.ExceptionValue#end_pc
- * @see inc.glamdring.bitecode.ExceptionValue#handler_pc
- * @see inc.glamdring.bitecode.ExceptionValue#catch_type
- * </table>
+ * <tr><td>start_pc</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link ExceptionValueVisitor#start_pc(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>end_pc</td><td>0x2</td><td>0x2</td><td>short</td><td>{@link ExceptionValueVisitor#end_pc(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>handler_pc</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link ExceptionValueVisitor#handler_pc(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>catch_type</td><td>0x2</td><td>0x6</td><td>short</td><td>{@link ExceptionValueVisitor#catch_type(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ *
+ * @see ExceptionValue#start_pc
+ * @see ExceptionValue#end_pc
+ * @see ExceptionValue#handler_pc
+ * @see ExceptionValue#catch_type
+ *      </table>
  */
-public enum ExceptionValue { 
-start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
-	public java.lang.Class clazz;
+public enum ExceptionValue {
+    start_pc(0x2), end_pc(0x2), handler_pc(0x2), catch_type(0x2);
+    public Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
-     * the size per field, if any
-     */
-	public final int size;
-	/**
-     * the offset from record-start of the field
-     */
-	public final int seek;
-	/**
+    public static int recordLen;
+    /**
+ * the size per field, if any
+ */
+    public final int ___size___;
+    /**
+ * the offset from record-start of the field
+ */
+    public final int ___seek___;
+    /**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=true;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** ExceptionValue templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = true;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * ExceptionValue templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	ExceptionValue (int... dimensions) {
+    ExceptionValue(int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -65,11 +68,11 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
                 try {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -81,7 +84,8 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
                 if (valueClazz != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
-                    for (String aPackage1 : new String[]{"",
+                    for (String aPackage1 : new String[]{
+                            "",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
                             "java.util.",
@@ -90,17 +94,18 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+        //;
+        recordLen += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -129,13 +134,13 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    //register[TopLevelRecord.TableRecord.ordinal()] + ___table.seek___) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
@@ -144,5 +149,6 @@ start_pc(0x2),end_pc(0x2),handler_pc(0x2),catch_type(0x2);
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endExceptionValue

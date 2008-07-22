@@ -32,34 +32,34 @@ public class EnumPackageAssemblyUtil {
         bBufWrap.put(float.class, new Pair<String, Pair<String, String>>("Float", new Pair<String, String>("float", "")));
         bBufWrap.put(byte[].class, new Pair<String, Pair<String, String>>("", new Pair<String, String>("byte", " & 0xff")));
         bBufWrap.put(byte.class, new Pair<String, Pair<String, String>>("", new Pair<String, String>("byte", " & 0xff")));
-        INTRINSICS.put("recordLen",
+        INTRINSICS.put("___recordlen___",
                 "/**\n" +
                         "     * the length of one record\n" +
                         "     */\n\t" +
-                        Modifier.toString(Modifier.STATIC | Modifier.PUBLIC) + " int recordLen;");
-        INTRINSICS.put("size",
+                        Modifier.toString(Modifier.STATIC | Modifier.PUBLIC) + " int ___recordlen___;");
+        INTRINSICS.put("___size___",
                 "/**\n" +
                         "     * the size per field, if any\n" +
                         "     */\n\t" +
-                        Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int size;");
-        INTRINSICS.put("seek",
+                        Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int ___size___;");
+        INTRINSICS.put("___seek___",
                 "/**\n" +
                         "     * the offset from record-start of the field\n" +
                         "     */\n\t" +
-                        Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int seek;");
-        INTRINSICS.put("subRecord",
+                        Modifier.toString(Modifier.FINAL | Modifier.PUBLIC) + " int ___seek___;");
+        INTRINSICS.put("___subrecord___",
                 "/**\n" +
                         "     * a delegate class which will perform sub-indexing on behalf of a field once it has marked its initial starting\n" +
                         "     * offset into the stack.\n" +
                         "     */\n" +
-                        "\tpublic Class<? extends Enum> subRecord;");
-        INTRINSICS.put("valueClazz",
+                        "\tpublic Class<? extends Enum> ___subrecord___;");
+        INTRINSICS.put("___valueclass___",
                 "/**\n" +
                         "     * a hint class for bean-wrapper access to data contained.\n" +
                         "     */\n" +
-                        "\tpublic Class valueClazz;");
+                        "\tpublic Class ___valueclass___;");
         for (String isaref : ISAREFS)
-            INTRINSICS.put("is" + isaref, "");
+            INTRINSICS.put("___is" + isaref+"___", "");
     }
 
     public String getEnumsStructsForPackage() throws Exception {
@@ -97,12 +97,12 @@ public class EnumPackageAssemblyUtil {
         display += "public enum " + enumName + " { " + EOL;
 
 
-        display += getConstantFields(enumClazz) + ";\n";
-        String result = getBaseEnumFields(enumClazz);
+        display += renderConstantFields(enumClazz) + ";\n";
+        String result = renderBaseEnumFields(enumClazz);
 
         final String trClass = TableRecord.class.getCanonicalName();
         display += result + "    /** " + enumName + " templated Byte Struct \n" +
-                "     * @param dimensions [0]=size,[1]= forced seek\n" +
+                "     * @param dimensions [0]=___size___,[1]= forced ___seek___\n" +
                 "     */\n";
 
 
@@ -110,22 +110,22 @@ public class EnumPackageAssemblyUtil {
 
         display += "(int... dimensions) {\n" +
                 "        int[] dim = init(dimensions);\n" +
-                "        size = dim[0];\n" +
-                "        seek = dim[1];\n" +
+                "        ___size___ = dim[0];\n" +
+                "        ___seek___ = dim[1];\n" +
                 "\n" +
                 "    }\n" +
                 "\n" +
                 "    int[] init(int... dimensions) {\n" +
                 "        int size = dimensions.length > 0 ? dimensions[0] : 0,\n" +
-                "                seek = dimensions.length > 1 ? dimensions[1] : 0;\n" +
+                "                seek= dimensions.length > 1 ? dimensions[1] : 0;\n" +
                 "\n" +
-                "        if (subRecord == null) {\n" +
+                "        if (___subrecord___ == null) {\n" +
                 "            final String[] indexPrefixes = {\"\", \"s\", \"_\", \"Index\", \"Length\", \"Ref\", \"Header\", \"Info\", \"Table\"};\n" +
                 "            for (String indexPrefix : indexPrefixes) {\n" +
                 "                try {\n" +
-                "                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);\n" +
+                "                    ___subrecord___ = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);\n" +
                 "                    try {\n" +
-                "                        size = subRecord.getField(\"recordLen\").getInt(null);\n" +
+                "                        size = ___subrecord___.getField(\"___recordlen___\").getInt(null);\n" +
                 "                    } catch (Exception e) {\n" +
                 "                    }\n" +
                 "                    break;\n" +
@@ -135,10 +135,10 @@ public class EnumPackageAssemblyUtil {
                 "        }\n" +
                 "\n" +
                 "        for (String vPrefixe1 : new String[]{\"_\", \"\", \"$\", \"Value\",}) {\n" +
-                "            if (valueClazz != null) break;\n" +
+                "            if (___valueclass___ != null) break;\n" +
                 "            String suffix = vPrefixe1;\n" +
                 "            for (String name1 : new String[]{name().toLowerCase(), name(),}) {\n" +
-                "                if (valueClazz != null) break;\n" +
+                "                if (___valueclass___ != null) break;\n" +
                 "                final String trailName = name1;\n" +
                 "                if (trailName.endsWith(suffix)) {\n" +
                 "                    for (String aPackage1 : new String[]{\"\",\n" +
@@ -146,18 +146,18 @@ public class EnumPackageAssemblyUtil {
                 "                            \"java.lang.\",\n" +
                 "                            \"java.util.\",\n" +
                 "                    })\n" +
-                "                        if (valueClazz == null) break;\n" +
+                "                        if (___valueclass___ == null) break;\n" +
                 "                        else\n" +
                 "                            try {\n" +
-                "                                valueClazz = Class.forName(aPackage1 + name().replace(suffix, \"\"));\n" +
+                "                                ___valueclass___ = Class.forName(aPackage1 + name().replace(suffix, \"\"));\n" +
                 "                            } catch (ClassNotFoundException e) {\n" +
                 "                            }\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
                 "\n" +
-                "        seek = recordLen;\n" +
-                "        recordLen += size;\n" +
+                "        seek = ___recordlen___;\n" +
+                "        ___recordlen___ += size;\n" +
                 "\n" +
                 "        return new int[]{size, seek};\n" +
                 "    }" +
@@ -179,7 +179,7 @@ public class EnumPackageAssemblyUtil {
                 "    }\n" +
                 "\n" +
                 "    /**\n" +
-                "     * Each of the Enums can override thier deault behavior of \"seek-past\"\n" +
+                "     * Each of the Enums can override thier deault behavior of \"___seek___-past\"\n" +
                 "     *\n" +
                 "     * @param src      the ByteBuffer of the input file\n" +
                 "     * @param register array holding values pointing to Stack offsets\n" +
@@ -190,20 +190,21 @@ public class EnumPackageAssemblyUtil {
                 "        int begin = src.position();\n" +
                 "        int stackPtr = stack.position();\n" +
                 "        stack.put(begin);\n" +
-                "        if (isRecord && subRecord != null) { \n" +
-                "            try {\n" +
-                "                final " + tableRecordClass.getCanonicalName() + " table = " + tableRecordClass.getCanonicalName() + ".valueOf(subRecord.getSimpleName());\n" +
+                "        if (___isRecord___ && ___subrecord___ != null) { \n" +
+                "            /* " +
+                "                try {\n" +
+                "                final " + tableRecordClass.getCanonicalName() + " table = " + tableRecordClass.getCanonicalName() + ".valueOf(___subrecord___.getSimpleName());\n" +
                 "                if (table != null) {\n" +
                 "                    //stow the original location\n" +
                 "                    int mark = stack.position();\n" +
-                "                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);\n" +
-                "                    subRecord.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);\n" +
+                "                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.___seek___) / 4);\n" +
+                "                    ___subrecord___.getMethod(\"index\", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);\n" +
                 "                    //resume the lower stack activities\n" +
                 "                    stack.position(mark);\n" +
                 "                }\n" +
                 "            } catch (Exception e) {\n" +
                 "                throw new Error(e.getMessage());\n" +
-                "            }\n" +
+                "            }\n*/" +
                 "        }\n" +
                 "    }";
 
@@ -231,7 +232,7 @@ public class EnumPackageAssemblyUtil {
         return display;
     }
 
-    private static String getBaseEnumFields(Class<? extends Enum> enumClazz) {
+    private static String renderBaseEnumFields(Class<? extends Enum> enumClazz) {
         String result = "";
 
         try {
@@ -249,7 +250,7 @@ public class EnumPackageAssemblyUtil {
                 result += s1 + EOL;
 
             for (String isaref : ISAREFS) {
-                INTRINSICS.put("is" + isaref, ISA_MODS + " boolean " + "is" + isaref + "=" + enumClazz.getSimpleName().endsWith(isaref) + ';');
+                INTRINSICS.put("is" + isaref, ISA_MODS + " boolean " + "___is" + isaref + "___=" + enumClazz.getSimpleName().endsWith(isaref) + ';');
             }
 
 
@@ -265,7 +266,7 @@ public class EnumPackageAssemblyUtil {
         return result;
     }
 
-    static String getConstantFields(Class<? extends Enum> enumClazz) {
+    static String renderConstantFields(Class<? extends Enum> enumClazz) {
         boolean first = true;
 
         String result = "";
@@ -281,8 +282,17 @@ public class EnumPackageAssemblyUtil {
                     final Field[] fields = enumClazz.getFields();
                     String tmpString = "";
                     for (Field field : fields) {
+                        try {
+                            Field doc = enumClazz.getField("___doc___");
+                            Object o1 = doc.get(enumClazz);
+                            if (null != o1) {
+                                tmpString += o1.toString();
+                            }
+                        } catch (Exception e) {
+                         }
+
                         String attrName = field.getName().replaceAll(enumClazz.getCanonicalName(), "");
-                        if (attrName.equals("size")) {
+                        if (attrName.equals("___size___")) {
                             final Integer integer = (Integer) field.get(instance);
                             if (integer != 0)
                                 result = result + "(0x" + Integer.toHexString(integer) + ")";
@@ -317,7 +327,7 @@ public class EnumPackageAssemblyUtil {
 
         int recordLen = 0;
         try {
-            recordLen = (Integer) docEnum.getDeclaredField("recordLen").get(null);
+            recordLen = (Integer) docEnum.getDeclaredField("___recordlen___").get(null);
         } catch (Exception e) {
             recordLen = 0;
         }
@@ -337,7 +347,7 @@ public class EnumPackageAssemblyUtil {
             Class subRecord = null;
             Class valClazz = null;
 
-            final String[] strings = {"subRecord", "valueClazz", "size", "seek", "docString"};
+            final String[] strings = {"___subrecord___", "___valueclass___", "___size___", "___seek___", "___doc___"};
 
             final Object[] objects = new Object[strings.length];
             for (int i = 0; i < strings.length; i++) {
@@ -378,7 +388,7 @@ public class EnumPackageAssemblyUtil {
                     "<td>" + name + "</td>" +
                     "<td>0x" + Integer.toHexString(size) + "</td>" +
                     "<td>0x" + Integer.toHexString(seek) + "</td>" +
-                    "<td>" + (docString==null?"":docString )+ "</td>" +
+                    "<td>" + (docString == null ? "" : docString) + "</td>" +
                     "<td>" + ((valClazz == null) ? (" (" + pair.getSecond().getFirst() + ") " +
                     name + "=src.get" + pair.getFirst()
                     + "(0x" + Integer.toHexString(seek) + ")"
@@ -409,7 +419,7 @@ public class EnumPackageAssemblyUtil {
                 final String p = enum_.getDeclaringClass().getPackage().getName();
                 final String name = p + '.' + enum_.name() + indexPrefix;
                 final Class<?> aClass = Class.forName(name);
-                final int anInt = aClass.getField("recordLen").getInt(null);
+                final int anInt = aClass.getField("___recordlen___").getInt(null);
                 if (aClass != null)
                     return new Object[]{aClass, anInt};
 
@@ -461,7 +471,7 @@ public class EnumPackageAssemblyUtil {
 
     public static void main(String... args) throws Exception {
         final String dirName = args.length > 0 ? "target/classes" : args[0];
-        final String indexName = (String) ((args.length < 1) ?
+        final String indexName = (String)   ((args.length < 1) ?
                 new File(createTempFile("__BC__" + currentTimeMillis(), "rw"), "bitecode").getAbsolutePath() : args[1]);
 
         File index = getIndexFile(indexName);

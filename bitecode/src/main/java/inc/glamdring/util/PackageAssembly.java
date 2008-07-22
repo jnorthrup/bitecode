@@ -91,7 +91,7 @@ public class PackageAssembly {
                 }
             }
         }
-        catch (ClassNotFoundException ex) {
+        catch (Exception ex) {
             Logger.getLogger(this.getClass().getCanonicalName()).log(Level.SEVERE, null, ex);
         }
 
@@ -114,7 +114,7 @@ public class PackageAssembly {
                     }
                 } while (discovered != null);
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getAnonymousLogger().log(Level.SEVERE, null, ex);
         }
         return classList;

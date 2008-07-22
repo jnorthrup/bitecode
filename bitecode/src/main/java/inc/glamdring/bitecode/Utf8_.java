@@ -11,29 +11,29 @@ import java.nio.*;
  */
 public enum Utf8_ { 
 length(0x2);
-	public java.lang.Class clazz;
+	public java.lang.Class ___proxy___;
 
 	/**
      * the length of one record
      */
-	public static int recordLen;
+	public static int ___recordlen___;
 	/**
      * the size per field, if any
      */
-	public final int size;
+	public final int ___size___;
 	/**
      * the offset from record-start of the field
      */
-	public final int seek;
+	public final int ___seek___;
 	/**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
+	public Class<? extends Enum> ___subrecord___;
 	/**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
+	public Class ___valueclass___;
 	public static final boolean isRecord=false;
 	public static final boolean isValue=false;
 	public static final boolean isHeader=false;
@@ -44,8 +44,8 @@ length(0x2);
      */
 	Utf8_ (int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -53,26 +53,26 @@ length(0x2);
         int size = dimensions.length > 0 ? dimensions[0] : 0,
                 seek = dimensions.length > 1 ? dimensions[1] : 0;
 
-        if (subRecord == null) {
+        if (___subrecord___ == null) {
             final String[] indexPrefixes = {"", "s", "_", "Index", "Length", "Ref", "Header", "Info", "Table"};
             for (String indexPrefix : indexPrefixes) {
                 try {
-                    subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
+                    //<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
 
         for (String vPrefixe1 : new String[]{"_", "", "$", "Value",}) {
-            if (valueClazz != null) break;
+            if (___valueclass___ != null) break;
             String suffix = vPrefixe1;
             for (String name1 : new String[]{name().toLowerCase(), name(),}) {
-                if (valueClazz != null) break;
+                if (___valueclass___ != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
                     for (String aPackage1 : new String[]{"",
@@ -80,20 +80,20 @@ length(0x2);
                             "java.lang.",
                             "java.util.",
                     })
-                        if (valueClazz == null) break;
+                        if (___valueclass___ == null) break;
                         else
                             try {
-                                valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                                ___valueclass___ = Class.forName(aPackage1 + name().replace(suffix, ""));
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+        //;
+        ___recordlen___ += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
@@ -123,14 +123,14 @@ length(0x2);
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && ___subrecord___ != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(___subrecord___.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
-                    subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
+                    //register[TopLevelRecord.TableRecord.ordinal()] + ___table.seek___) / 4);
+                    ___subrecord___.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
                 }

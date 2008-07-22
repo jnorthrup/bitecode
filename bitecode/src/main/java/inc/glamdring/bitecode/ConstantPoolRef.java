@@ -4,87 +4,85 @@ import java.nio.*;
 /**
  * <p>recordSize: 54
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>INVALID</td><td>0x4</td><td>0x0</td><td>int</td><td>{@link ConstantPoolRefVisitor#INVALID(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Utf8_</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link inc.glamdring.bitecode.Utf8_}</td></tr>
- * <tr><td>UNUSED</td><td>0x4</td><td>0x6</td><td>int</td><td>{@link ConstantPoolRefVisitor#UNUSED(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Integer_</td><td>0x4</td><td>0xa</td><td>int</td><td>{@link ConstantPoolRefVisitor#Integer_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Float_</td><td>0x4</td><td>0xe</td><td>int</td><td>{@link ConstantPoolRefVisitor#Float_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Long_</td><td>0x8</td><td>0x12</td><td>long</td><td>{@link ConstantPoolRefVisitor#Long_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Double_</td><td>0x8</td><td>0x1a</td><td>long</td><td>{@link ConstantPoolRefVisitor#Double_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Class_</td><td>0x2</td><td>0x22</td><td>short</td><td>{@link ConstantPoolRefVisitor#Class_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>String_</td><td>0x2</td><td>0x24</td><td>short</td><td>{@link ConstantPoolRefVisitor#String_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>Field_</td><td>0x4</td><td>0x26</td><td>int</td><td>{@link inc.glamdring.bitecode.Field_}</td></tr>
- * <tr><td>Method_</td><td>0x4</td><td>0x2a</td><td>int</td><td>{@link inc.glamdring.bitecode.Method_}</td></tr>
- * <tr><td>InterfaceMethod_</td><td>0x4</td><td>0x2e</td><td>int</td><td>{@link inc.glamdring.bitecode.InterfaceMethod_}</td></tr>
- * <tr><td>NameAndType_</td><td>0x4</td><td>0x32</td><td>int</td><td>{@link inc.glamdring.bitecode.NameAndType_}</td></tr>
- * 
- * @see inc.glamdring.bitecode.ConstantPoolRef#INVALID
- * @see inc.glamdring.bitecode.ConstantPoolRef#Utf8_
- * @see inc.glamdring.bitecode.ConstantPoolRef#UNUSED
- * @see inc.glamdring.bitecode.ConstantPoolRef#Integer_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Float_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Long_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Double_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Class_
- * @see inc.glamdring.bitecode.ConstantPoolRef#String_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Field_
- * @see inc.glamdring.bitecode.ConstantPoolRef#Method_
- * @see inc.glamdring.bitecode.ConstantPoolRef#InterfaceMethod_
- * @see inc.glamdring.bitecode.ConstantPoolRef#NameAndType_
- * </table>
+ * <tr><td>INVALID</td><td>0x4</td><td>0x0</td><td>int</td><td>{@link ConstantPoolRefVisitor#INVALID(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Utf8_</td><td>0x2</td><td>0x4</td><td>short</td><td>{@link Utf8_}</td></tr>
+ * <tr><td>UNUSED</td><td>0x4</td><td>0x6</td><td>int</td><td>{@link ConstantPoolRefVisitor#UNUSED(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Integer_</td><td>0x4</td><td>0xa</td><td>int</td><td>{@link ConstantPoolRefVisitor#Integer_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Float_</td><td>0x4</td><td>0xe</td><td>int</td><td>{@link ConstantPoolRefVisitor#Float_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Long_</td><td>0x8</td><td>0x12</td><td>long</td><td>{@link ConstantPoolRefVisitor#Long_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Double_</td><td>0x8</td><td>0x1a</td><td>long</td><td>{@link ConstantPoolRefVisitor#Double_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Class_</td><td>0x2</td><td>0x22</td><td>short</td><td>{@link ConstantPoolRefVisitor#Class_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>String_</td><td>0x2</td><td>0x24</td><td>short</td><td>{@link ConstantPoolRefVisitor#String_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>Field_</td><td>0x4</td><td>0x26</td><td>int</td><td>{@link Field_}</td></tr>
+ * <tr><td>Method_</td><td>0x4</td><td>0x2a</td><td>int</td><td>{@link Method_}</td></tr>
+ * <tr><td>InterfaceMethod_</td><td>0x4</td><td>0x2e</td><td>int</td><td>{@link InterfaceMethod_}</td></tr>
+ * <tr><td>NameAndType_</td><td>0x4</td><td>0x32</td><td>int</td><td>{@link NameAndType_}</td></tr>
+ *
+ * @see ConstantPoolRef#INVALID
+ * @see ConstantPoolRef#Utf8_
+ * @see ConstantPoolRef#UNUSED
+ * @see ConstantPoolRef#Integer_
+ * @see ConstantPoolRef#Float_
+ * @see ConstantPoolRef#Long_
+ * @see ConstantPoolRef#Double_
+ * @see ConstantPoolRef#Class_
+ * @see ConstantPoolRef#String_
+ * @see ConstantPoolRef#Field_
+ * @see ConstantPoolRef#Method_
+ * @see ConstantPoolRef#InterfaceMethod_
+ * @see ConstantPoolRef#NameAndType_
+ *      </table>
  */
-public enum ConstantPoolRef { 
-INVALID(0x4),Utf8_(0x2)	{{
-		subRecord=inc.glamdring.bitecode.Utf8_.class;
-	}}
-,UNUSED(0x4),Integer_(0x4),Float_(0x4),Long_(0x8),Double_(0x8),Class_(0x2),String_(0x2),Field_(0x4)	{{
-		subRecord=inc.glamdring.bitecode.Field_.class;
-	}}
-,Method_(0x4)	{{
-		subRecord=inc.glamdring.bitecode.Method_.class;
-	}}
-,InterfaceMethod_(0x4)	{{
-		subRecord=inc.glamdring.bitecode.InterfaceMethod_.class;
-	}}
-,NameAndType_(0x4)	{{
-		subRecord=inc.glamdring.bitecode.NameAndType_.class;
-	}}
-;
-	public java.lang.Class clazz;
+public enum ConstantPoolRef {
+    INVALID(0x4), Utf8_(0x2) {{
+    subRecord = Utf8_.class;
+}}, UNUSED(0x4), Integer_(0x4), Float_(0x4), Long_(0x8), Double_(0x8), Class_(0x2), String_(0x2), Field_(0x4) {{
+    subRecord = Field_.class;
+}}, Method_(0x4) {{
+    subRecord = Method_.class;
+}}, InterfaceMethod_(0x4) {{
+    subRecord = InterfaceMethod_.class;
+}}, NameAndType_(0x4) {{
+    subRecord = NameAndType_.class;
+}};
+    public Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
-     * the size per field, if any
-     */
-	public final int size;
-	/**
-     * the offset from record-start of the field
-     */
-	public final int seek;
-	/**
+    public static int recordLen;
+    /**
+ * the size per field, if any
+ */
+    public final int ___size___;
+    /**
+ * the offset from record-start of the field
+ */
+    public final int ___seek___;
+    /**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=true;
-	public static final boolean isInfo=false;
-    /** ConstantPoolRef templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = true;
+    public static final boolean isInfo = false;
+
+    /**
+     * ConstantPoolRef templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	ConstantPoolRef (int... dimensions) {
+    ConstantPoolRef(int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -98,11 +96,11 @@ INVALID(0x4),Utf8_(0x2)	{{
                 try {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -114,7 +112,8 @@ INVALID(0x4),Utf8_(0x2)	{{
                 if (valueClazz != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
-                    for (String aPackage1 : new String[]{"",
+                    for (String aPackage1 : new String[]{
+                            "",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
                             "java.util.",
@@ -123,17 +122,18 @@ INVALID(0x4),Utf8_(0x2)	{{
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+        //;
+        recordLen += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -162,13 +162,13 @@ INVALID(0x4),Utf8_(0x2)	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    //register[TopLevelRecord.TableRecord.ordinal()] + ___table.seek___) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
@@ -177,5 +177,6 @@ INVALID(0x4),Utf8_(0x2)	{{
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endConstantPoolRef

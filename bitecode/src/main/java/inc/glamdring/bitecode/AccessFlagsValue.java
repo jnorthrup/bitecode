@@ -4,96 +4,89 @@ import java.nio.*;
 /**
  * <p>recordSize: 2
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>public_</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link AccessFlagsValueVisitor#public_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>private_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#private_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>protected_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#protected_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>static_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#static_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>final_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#final_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>super_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#super_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>volatile_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#volatile_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>transient_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#transient_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>interface_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#interface_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>abstract_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#abstract_(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
- * @see inc.glamdring.bitecode.AccessFlagsValue#public_
- * @see inc.glamdring.bitecode.AccessFlagsValue#private_
- * @see inc.glamdring.bitecode.AccessFlagsValue#protected_
- * @see inc.glamdring.bitecode.AccessFlagsValue#static_
- * @see inc.glamdring.bitecode.AccessFlagsValue#final_
- * @see inc.glamdring.bitecode.AccessFlagsValue#super_
- * @see inc.glamdring.bitecode.AccessFlagsValue#volatile_
- * @see inc.glamdring.bitecode.AccessFlagsValue#transient_
- * @see inc.glamdring.bitecode.AccessFlagsValue#interface_
- * @see inc.glamdring.bitecode.AccessFlagsValue#abstract_
- * </table>
+ * <tr><td>public_</td><td>0x2</td><td>0x0</td><td>short</td><td>{@link AccessFlagsValueVisitor#public_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>private_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#private_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>protected_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#protected_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>static_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#static_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>final_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#final_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>super_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#super_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>volatile_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#volatile_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>transient_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#transient_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>interface_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#interface_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>abstract_</td><td>0x0</td><td>0x2</td><td>byte[]</td><td>{@link AccessFlagsValueVisitor#abstract_(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ *
+ * @see AccessFlagsValue#public_
+ * @see AccessFlagsValue#private_
+ * @see AccessFlagsValue#protected_
+ * @see AccessFlagsValue#static_
+ * @see AccessFlagsValue#final_
+ * @see AccessFlagsValue#super_
+ * @see AccessFlagsValue#volatile_
+ * @see AccessFlagsValue#transient_
+ * @see AccessFlagsValue#interface_
+ * @see AccessFlagsValue#abstract_
+ *      </table>
  */
-public enum AccessFlagsValue { 
-public_(0x2)	{{
-		flag=1;
-	}}
-,private_	{{
-		flag=2;
-	}}
-,protected_	{{
-		flag=4;
-	}}
-,static_	{{
-		flag=8;
-	}}
-,final_	{{
-		flag=16;
-	}}
-,super_	{{
-		flag=32;
-	}}
-,volatile_	{{
-		flag=64;
-	}}
-,transient_	{{
-		flag=128;
-	}}
-,interface_	{{
-		flag=512;
-	}}
-,abstract_	{{
-		flag=1024;
-	}}
-;
-	public int flag;
+public enum AccessFlagsValue {
+    public_(0x2) {{
+        flag = 1;
+    }}, private_ {{
+    flag = 2;
+}}, protected_ {{
+    flag = 4;
+}}, static_ {{
+    flag = 8;
+}}, final_ {{
+    flag = 16;
+}}, super_ {{
+    flag = 32;
+}}, volatile_ {{
+    flag = 64;
+}}, transient_ {{
+    flag = 128;
+}}, interface_ {{
+    flag = 512;
+}}, abstract_ {{
+    flag = 1024;
+}};
+    public int flag;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
-     * the size per field, if any
-     */
-	public final int size;
-	/**
-     * the offset from record-start of the field
-     */
-	public final int seek;
-	/**
+    public static int recordLen;
+    /**
+ * the size per field, if any
+ */
+    public int ___size___;
+    /**
+ * the offset from record-start of the field
+ */
+    public final int ___seek___;
+    /**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=false;
-	public static final boolean isValue=true;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** AccessFlagsValue templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = false;
+    public static final boolean isValue = true;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * AccessFlagsValue templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	AccessFlagsValue (int... dimensions) {
+    AccessFlagsValue(int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -107,11 +100,11 @@ public_(0x2)	{{
                 try {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -123,7 +116,8 @@ public_(0x2)	{{
                 if (valueClazz != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
-                    for (String aPackage1 : new String[]{"",
+                    for (String aPackage1 : new String[]{
+                            "",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
                             "java.util.",
@@ -132,17 +126,18 @@ public_(0x2)	{{
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+//        //
+        recordLen += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -171,14 +166,13 @@ public_(0x2)	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
-                    subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
+                    //                    subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
                 }
@@ -186,5 +180,6 @@ public_(0x2)	{{
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endAccessFlagsValue

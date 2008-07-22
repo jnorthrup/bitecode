@@ -4,57 +4,59 @@ import java.nio.*;
 /**
  * <p>recordSize: 58
  * <table><tr> <th>name</th><th>size</th><th>seek</th><th>Value Class</th><th>Sub-Index</th></tr>
- * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td>byte[]</td><td>{@link inc.glamdring.bitecode.ConstantPoolRef}</td></tr>
- * <tr><td>subType</td><td>0x2</td><td>0x36</td><td>short</td><td>{@link ConstantPoolRecordVisitor#subType(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(ByteBuffer, int[], IntBuffer)}</td></tr>
- * <tr><td>tag</td><td>0x1</td><td>0x39</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#tag(ByteBuffer, int[], IntBuffer)}</td></tr>
- * 
- * @see inc.glamdring.bitecode.ConstantPoolRecord#ConstantPoolRef
- * @see inc.glamdring.bitecode.ConstantPoolRecord#subType
- * @see inc.glamdring.bitecode.ConstantPoolRecord#utf8Bitmap
- * @see inc.glamdring.bitecode.ConstantPoolRecord#tag
- * </table>
+ * <tr><td>ConstantPoolRef</td><td>0x36</td><td>0x0</td><td>byte[]</td><td>{@link ConstantPoolRef}</td></tr>
+ * <tr><td>subType</td><td>0x2</td><td>0x36</td><td>short</td><td>{@link ConstantPoolRecordVisitor#subType(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>utf8Bitmap</td><td>0x1</td><td>0x38</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#utf8Bitmap(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ * <tr><td>tag</td><td>0x1</td><td>0x39</td><td>byte</td><td>{@link ConstantPoolRecordVisitor#tag(java.nio.ByteBuffer, int[], java.nio.IntBuffer)}</td></tr>
+ *
+ * @see ConstantPoolRecord#ConstantPoolRef
+ * @see ConstantPoolRecord#subType
+ * @see ConstantPoolRecord#utf8Bitmap
+ * @see ConstantPoolRecord#tag
+ *      </table>
  */
-public enum ConstantPoolRecord { 
-ConstantPoolRef(0x36)	{{
-		subRecord=inc.glamdring.bitecode.ConstantPoolRef.class;
-	}}
-,subType(0x2),utf8Bitmap(0x1),tag(0x1);
-	public java.lang.Class clazz;
+public enum ConstantPoolRecord {
+    ConstantPoolRef(0x36) {{
+        subRecord = ConstantPoolRef.class;
+    }}, subType(0x2), utf8Bitmap(0x1), tag(0x1);
+    public Class clazz;
 
-	/**
+    /**
      * the length of one record
      */
-	public static int recordLen;
-	/**
-     * the size per field, if any
-     */
-	public final int size;
-	/**
-     * the offset from record-start of the field
-     */
-	public final int seek;
-	/**
+    public static int recordLen;
+    /**
+ * the size per field, if any
+ */
+    public final int ___size___;
+    /**
+ * the offset from record-start of the field
+ */
+    public final int ___seek___;
+    /**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
      */
-	public Class<? extends Enum> subRecord;
-	/**
+    public Class<? extends Enum> subRecord;
+    /**
      * a hint class for bean-wrapper access to data contained.
      */
-	public Class valueClazz;
-	public static final boolean isRecord=true;
-	public static final boolean isValue=false;
-	public static final boolean isHeader=false;
-	public static final boolean isRef=false;
-	public static final boolean isInfo=false;
-    /** ConstantPoolRecord templated Byte Struct 
+    public Class valueClazz;
+    public static final boolean isRecord = true;
+    public static final boolean isValue = false;
+    public static final boolean isHeader = false;
+    public static final boolean isRef = false;
+    public static final boolean isInfo = false;
+
+    /**
+     * ConstantPoolRecord templated Byte Struct
+     *
      * @param dimensions [0]=size,[1]= forced seek
      */
-	ConstantPoolRecord (int... dimensions) {
+    ConstantPoolRecord(int... dimensions) {
         int[] dim = init(dimensions);
-        size = dim[0];
-        seek = dim[1];
+        ___size___ = dim[0];
+        ___seek___ = dim[1];
 
     }
 
@@ -68,11 +70,11 @@ ConstantPoolRef(0x36)	{{
                 try {
                     subRecord = (Class<? extends Enum>) Class.forName(getClass().getPackage().getName() + '.' + name() + indexPrefix);
                     try {
-                        size = subRecord.getField("recordLen").getInt(null);
+                        //.getField("___recordlen___").getInt(null);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -84,7 +86,8 @@ ConstantPoolRef(0x36)	{{
                 if (valueClazz != null) break;
                 final String trailName = name1;
                 if (trailName.endsWith(suffix)) {
-                    for (String aPackage1 : new String[]{"",
+                    for (String aPackage1 : new String[]{
+                            "",
                             getClass().getPackage().getName() + ".",
                             "java.lang.",
                             "java.util.",
@@ -93,17 +96,18 @@ ConstantPoolRef(0x36)	{{
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
         }
 
-        seek = recordLen;
-        recordLen += size;
+        //;
+        recordLen += ___size___;
 
-        return new int[]{size, seek};
+        return new int[]{___size___, ___seek___};
     }
+
     /**
      * The struct's top level method for indexing 1 record. Each Enum field will call SubIndex
      *
@@ -132,13 +136,13 @@ ConstantPoolRef(0x36)	{{
         int begin = src.position();
         int stackPtr = stack.position();
         stack.put(begin);
-        if (isRecord && subRecord != null) { 
+        if (isRecord && subRecord != null) {
             try {
-                final inc.glamdring.bitecode.TableRecord table = inc.glamdring.bitecode.TableRecord.valueOf(subRecord.getSimpleName());
+                final TableRecord table = TableRecord.valueOf(subRecord.getSimpleName());
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[TopLevelRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    //register[TopLevelRecord.TableRecord.ordinal()] + ___table.seek___) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
@@ -147,5 +151,6 @@ ConstantPoolRef(0x36)	{{
                 throw new Error(e.getMessage());
             }
         }
-    }}
+    }
+}
 //@@ #endConstantPoolRecord

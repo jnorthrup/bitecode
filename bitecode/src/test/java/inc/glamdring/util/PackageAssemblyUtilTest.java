@@ -55,7 +55,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 			ClassNode cn = new ClassNode();
 			classReader.accept(cn, ClassReader.EXPAND_FRAMES);
 
-			/*		final MethodNode[] methodNodes = (MethodNode[]) cn.methods.toArray(new MethodNode[cn.methods.size()]);
+			/*		final MethodNode[] methodNodes = (MethodNode[]) cn.methods.toArray(new MethodNode[cn.methods.___size___()]);
 			for (MethodNode method : methodNodes) {
 
 				if(method!=null)method.accept(new MethodNode());
@@ -150,7 +150,7 @@ public class PackageAssemblyUtilTest extends TestCase {
 			charSequenceByteBufferSortedMap.put(s, entry.getValue());
 		}
 		//random-populace
-//		final ByteBuffer[] rpop = byteBuffers.toArray(new ByteBuffer[byteBuffers.size()]);
+//		final ByteBuffer[] rpop = byteBuffers.toArray(new ByteBuffer[byteBuffers.___size___()]);
 
 //		ByteBuffer buffer = rpop[ i1 ];
 

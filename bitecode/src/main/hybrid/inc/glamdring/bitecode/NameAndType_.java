@@ -23,11 +23,11 @@ Utf8Index(0x2),DescriptorIndex(0x2);
 	/**
      * the size per field, if any
      */
-	public final int size;
+	//
 	/**
      * the offset from record-start of the field
      */
-	public final int seek;
+	//;
 	/**
      * a delegate class wihch will perform sub-indexing on behalf of a field once it has marked its initial stating
      * offset into the stack.
@@ -66,7 +66,7 @@ Utf8Index(0x2),DescriptorIndex(0x2);
                     } catch (Exception e) {
                     }
                     break;
-                } catch (ClassNotFoundException e) {
+                } catch (Exception e) {
                 }
             }
         }
@@ -87,7 +87,7 @@ Utf8Index(0x2),DescriptorIndex(0x2);
                         else
                             try {
                                 valueClazz = Class.forName(aPackage1 + name().replace(suffix, ""));
-                            } catch (ClassNotFoundException e) {
+                            } catch (Exception e) {
                             }
                 }
             }
@@ -132,7 +132,7 @@ Utf8Index(0x2),DescriptorIndex(0x2);
                 if (table != null) {
                     //stow the original location
                     int mark = stack.position();
-                    stack.position((register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
+                    //register[ClassFileRecord.TableRecord.ordinal()] + table.seek) / 4);
                     subRecord.getMethod("index", ByteBuffer.class, int[].class, IntBuffer.class).invoke(null);
                     //resume the lower stack activities
                     stack.position(mark);
